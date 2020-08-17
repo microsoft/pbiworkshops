@@ -1,3 +1,5 @@
+![Power BI](./Asset%20Library/PowerBI_Yellow.png)
+
 
 # Contributing
 
