@@ -1,0 +1,54 @@
+StateProvinceID,State/Province,StateProvinceName,Sales Territory,Recorded Population
+1,"AL","Alabama","Southeast",5437278
+2,"AK","Alaska","Far West",735132
+3,"AZ","Arizona","Southwest",6891688
+4,"AR","Arkansas","Southeast",3077747
+5,"CA","California","Far West",41460453
+6,"CO","Colorado","Rocky Mountain",5698265
+7,"CT","Connecticut","New England",3739923
+8,"DE","Delaware","Mideast",1001289
+9,"DC","District of Columbia","Mideast",685248
+10,"FL","Florida","Southeast",21148372
+11,"GA","Georgia","Southeast",9992167
+12,"HI","Hawaii","Far West",1404054
+13,"ID","Idaho","Rocky Mountain",1612136
+14,"IL","Illinois","Great Lakes",13397420
+15,"IN","Indiana","Great Lakes",6570902
+16,"IA","Iowa","Plains",3214032
+17,"KS","Kansas","Plains",2893957
+18,"KY","Kentucky","Southeast",4571106
+19,"LA","Louisiana","Southeast",4810488
+20,"ME","Maine","New England",1381434
+21,"MD","Maryland","Mideast",5928814
+22,"MA","Massachusetts[E]","New England",6960536
+23,"MI","Michigan","Great Lakes",9895622
+24,"MN","Minnesota","Plains",5637195
+25,"MS","Mississippi","Southeast",2991207
+26,"MO","Missouri","Plains",6262867
+27,"MT","Montana","Rocky Mountain",1187597
+28,"NE","Nebraska","Plains",1943256
+29,"NV","Nevada","Far West",2790136
+30,"NH","New Hampshire","New England",1376397
+31,"NJ","New Jersey","Mideast",8899339
+32,"NM","New Mexico","Southwest",2345662
+33,"NY","New York","Mideast",20437172
+34,"NC","North Carolina","Southeast",10241982
+35,"ND","North Dakota","Plains",723393
+36,"OH","Ohio","Great Lakes",12514985
+37,"OK","Oklahoma","Southwest",3850568
+38,"OR","Oregon","Far West",4250757
+39,"PA","Pennsylvania","Mideast",13284753
+40,"PR","Puerto Rico (US Territory)","External",3613149
+41,"RI","Rhode Island","New England",1051511
+42,"SC","South Carolina","Southeast",4774839
+43,"SD","South Dakota","Plains",844877
+44,"TN","Tennessee","Southeast",6495978
+45,"TX","Texas","Southwest",27506120
+46,"UT","Utah","Rocky Mountain",3016906
+47,"VT","Vermont","New England",677762
+48,"VI","Virgin Islands (US Territory)","External",104737
+49,"VA","Virginia","Southeast",8260405
+50,"WA","Washington","Far West",7540272
+51,"WV","West Virginia","Southeast",2085839
+52,"WI","Wisconsin","Great Lakes",6211317
+53,"WY","Wyoming","Rocky Mountain",605964
