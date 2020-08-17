@@ -30,7 +30,6 @@ ___
 # Setup
 
 ## Instructions
-### [Optional: Guided Video]()
 
 ### Power BI Desktop
 1. Ensure the Power BI preview feature [Store datasets using enhanced metadata format](https://docs.microsoft.com/en-us/power-bi/connect-data/desktop-enhanced-dataset-metadata) is enabled.
@@ -70,8 +69,7 @@ ___
 
 # Comparison
 
-Source
-Target
+Deployment of tabular models normally employs an all-or-nothing, or partial-metadata deployment strategy. Some organizations may choose to use a combination; for example, partial-metadata deployment for bug fixes, but not features. With ALM Toolkit modelers can perform merging across models that are in development (Source) to their destination (Target) supporthing both approaches.
 
 ### Supported Connections:
 - Dataset
@@ -87,10 +85,10 @@ Target
 **Important Note:** The target model compatibility level must be greater than or equal to the compatibility level of the source
 model.
 
+
 ### Objective: Compare schema differences after a change has been made.
 
 ## Instructions
-### [Optional: Guided Video]()
 
 ### Power BI Desktop
 1. Open the Sales Demo (PBIX) file, navigate to the External Tools ribbon in Power BI Desktop and select ALM Toolkit.
@@ -110,9 +108,6 @@ model.
     1. **Source** is the Power BI Desktop file Sales Demo that is currently open.
     2. Within the **Target** select **File** and navigate to the downloaded **Sales Demo.pbit**
 2. Navigate to the **Home** tab and select **Select Actions** and the **Hide Skip Objects with Same Definition** option.
-
-![SelectActions](./Images/SelectActions.png)
-
 3. Select the row containing the Table object named **Calendar** to compare the differences.
 
 ![Comparison](./Images/Comparison.png)
