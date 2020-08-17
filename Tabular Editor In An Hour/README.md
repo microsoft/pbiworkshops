@@ -10,7 +10,7 @@ ___
 **Follow Along:**
 - [Download and Install Tabular Editor](https://github.com/otykier/TabularEditor/releases)
     - <a href="https://www.youtube.com/watch?v=7Cb7ZuK5EZA&list=PLKW7XPyNDgRCOiC69kZWfRQdOxcnQy2yA&index=1" target="_blank">Optional: Guided Video</a>
-- [Download and open the Sales Demo PBIX File](https://github.com/itsnotaboutthecell/Power-BI-Sessions/raw/master/An%20Introduction%20to%20Tabular%20Editor/Sales%20Demo.pbix)
+- [Download and open the Sales Demo PBIX File](https://github.com/Microsoft/Tabular%20Editor%20In%20An%20Hour/raw/master/An%20Introduction%20to%20Tabular%20Editor/Sales%20Demo.pbix)
 
 ___
 
@@ -340,7 +340,3 @@ ___
 [SQLBI - Creating calculation groups in Power BI Desktop using Tabular Editor](https://www.youtube.com/watch?v=a4zYT-N-zsU)
 
 [SQLBI - Calculation Groups (Blog)](https://www.sqlbi.com/calculation-groups/)
-
-___
-
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
