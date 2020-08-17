@@ -14,8 +14,8 @@ ___
 **Follow Along:**
 - [Download and Install ALM Tookit](http://alm-toolkit.com/)
     - <a href="" target="_blank">Optional: Guided Video</a>
-- [Download and open the Sales Demo PBIX File](https://github.com/itsnotaboutthecell/Power-BI-Sessions/raw/master/ALM%20Toolkit%20In%20An%20Hour/Sales%20Demo.pbix)
-- [Download the Sales Demo PBIT File]()
+- [Download and open the Sales Demo PBIX File](https://github.com/microsoft/pbiworkshops/raw/main/ALM%20Toolkit%20In%20An%20Hour/Sales%20Demo.pbix)
+- [Download the Sales Demo PBIT File](https://github.com/microsoft/pbiworkshops/raw/main/ALM%20Toolkit%20In%20An%20Hour/Sales%20Demo.pbit)
 
 ___
 
