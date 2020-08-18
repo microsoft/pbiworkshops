@@ -1,0 +1,3661 @@
+{
+  "name": "c243ac84-e952-4ae9-b14c-4ec0c0ec97d0",
+  "compatibilityLevel": 1520,
+  "model": {
+    "culture": "en-US",
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "Orders",
+        "columns": [
+          {
+            "name": "OrderID",
+            "dataType": "int64",
+            "sourceColumn": "OrderID",
+            "formatString": "0",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "OrderID"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "CustomerID",
+            "dataType": "int64",
+            "sourceColumn": "CustomerID",
+            "formatString": "0",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "CustomerID"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "SalespersonPersonID",
+            "dataType": "int64",
+            "sourceColumn": "SalespersonPersonID",
+            "formatString": "0",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "SalespersonPersonID"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Comments",
+            "dataType": "string",
+            "sourceColumn": "Comments",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Comments"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Order Date",
+            "dataType": "dateTime",
+            "sourceColumn": "Order Date",
+            "formatString": "General Date",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeGeneralPattern\"><DateTimes><DateTime LCID=\"1033\" Group=\"GeneralDateTimeLong\" FormatString=\"G\" /></DateTimes></Format>"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "DateTime#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Order Date"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Expected Delivery Date",
+            "dataType": "dateTime",
+            "sourceColumn": "Expected Delivery Date",
+            "formatString": "General Date",
+            "summarizeBy": "none",
+            "variations": [
+              {
+                "name": "Variation",
+                "relationship": "c71ae31e-c566-442a-b1d7-6d03374e9fd7",
+                "defaultHierarchy": {
+                  "table": "LocalDateTable_122364ee-5ea2-43c9-bd59-313817f8dc61",
+                  "hierarchy": "Date Hierarchy"
+                },
+                "isDefault": true
+              }
+            ],
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeGeneralPattern\"><DateTimes><DateTime LCID=\"1033\" Group=\"GeneralDateTimeLong\" FormatString=\"G\" /></DateTimes></Format>"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "DateTime#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Expected Delivery Date"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Customer Purchase Order Number",
+            "dataType": "int64",
+            "sourceColumn": "Customer Purchase Order Number",
+            "formatString": "0",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Customer Purchase Order Number"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Delivery Instructions",
+            "dataType": "string",
+            "sourceColumn": "Delivery Instructions",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Delivery Instructions"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Internal Comments",
+            "dataType": "string",
+            "sourceColumn": "Internal Comments",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Internal Comments"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Orders-96a163bb-b7a8-456f-9818-79265dce5075",
+            "mode": "import",
+            "queryGroup": "Data Load",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Orders = fxSourceCsv(\"Orders\"),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Orders,{{\"OrderID\", Int64.Type}, {\"CustomerID\", Int64.Type}, {\"SalespersonPersonID\", Int64.Type}, {\"Order Date\", type datetime}, {\"Expected Delivery Date\", type datetime}, {\"Customer Purchase Order Number\", Int64.Type}, {\"Comments\", type text}, {\"Delivery Instructions\", type text}, {\"Internal Comments\", type text}})",
+                "in",
+                "    #\"Changed Type\""
+              ]
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "PBI_Id",
+            "value": "489f9dd5-bcec-4bad-83b0-c6a6ec0da967"
+          },
+          {
+            "name": "LinkedQueryName",
+            "value": "Orders"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ]
+      },
+      {
+        "name": "DateTableTemplate_a27b6794-ad8b-48ce-bfb9-1d05f7960e4c",
+        "isHidden": true,
+        "isPrivate": true,
+        "columns": [
+          {
+            "type": "calculatedTableColumn",
+            "name": "Date",
+            "dataType": "dateTime",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "sourceColumn": "[Date]",
+            "dataCategory": "PaddedDateTableDates",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeGeneralPattern\"><DateTimes><DateTime LCID=\"1033\" Group=\"GeneralDateTimeLong\" FormatString=\"G\" /></DateTimes></Format>"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "DateTime#####not a type"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Year",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "YEAR([Date])",
+            "dataCategory": "Years",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "MonthNo",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "MONTH([Date])",
+            "dataCategory": "MonthOfYear",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Month",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "sortByColumn": "MonthNo",
+            "dataCategory": "Months",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "QuarterNo",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "dataCategory": "QuarterOfYear",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Quarter",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "sortByColumn": "QuarterNo",
+            "dataCategory": "Quarters",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Day",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "DAY([Date])",
+            "dataCategory": "DayOfMonth",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DateTableTemplate_a27b6794-ad8b-48ce-bfb9-1d05f7960e4c-eef7b45c-df54-41b3-b68c-495bfe163979",
+            "mode": "import",
+            "source": {
+              "type": "calculated",
+              "expression": "Calendar(Date(2015,1,1), Date(2015,1,1))"
+            }
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "levels": [
+              {
+                "name": "Year",
+                "ordinal": 0,
+                "column": "Year"
+              },
+              {
+                "name": "Quarter",
+                "ordinal": 1,
+                "column": "Quarter"
+              },
+              {
+                "name": "Month",
+                "ordinal": 2,
+                "column": "Month"
+              },
+              {
+                "name": "Day",
+                "ordinal": 3,
+                "column": "Day"
+              }
+            ],
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "__PBI_TemplateDateTable",
+            "value": "true"
+          },
+          {
+            "name": "DefaultItem",
+            "value": "DateHierarchy"
+          }
+        ]
+      },
+      {
+        "name": "Customers",
+        "columns": [
+          {
+            "name": "CustomerID",
+            "dataType": "int64",
+            "sourceColumn": "CustomerID",
+            "formatString": "0",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "CustomerID"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "StateProvinceCode",
+            "dataType": "string",
+            "sourceColumn": "StateProvinceCode",
+            "dataCategory": "StateOrProvince",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "StateProvinceCode"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "StateProvinceName",
+            "dataType": "string",
+            "sourceColumn": "StateProvinceName",
+            "dataCategory": "StateOrProvince",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "StateProvinceName"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Longitude",
+            "dataType": "double",
+            "sourceColumn": "Longitude",
+            "dataCategory": "Longitude",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"General\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Double#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Longitude"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Latitude",
+            "dataType": "double",
+            "sourceColumn": "Latitude",
+            "dataCategory": "Latitude",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"General\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Double#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Latitude"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Customer Name",
+            "dataType": "string",
+            "sourceColumn": "Customer Name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Customer Name"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Phone Number",
+            "dataType": "string",
+            "sourceColumn": "Phone Number",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Phone Number"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Website URL",
+            "dataType": "string",
+            "sourceColumn": "Website URL",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Website URL"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Delivery Address Line 1",
+            "dataType": "string",
+            "sourceColumn": "Delivery Address Line 1",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Delivery Address Line 1"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Delivery Address Line 2",
+            "dataType": "string",
+            "sourceColumn": "Delivery Address Line 2",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Delivery Address Line 2"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Delivery Postal Code",
+            "dataType": "int64",
+            "sourceColumn": "Delivery Postal Code",
+            "formatString": "0",
+            "summarizeBy": "count",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Delivery Postal Code"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "City",
+            "dataType": "string",
+            "sourceColumn": "City",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "City"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Sales Territory",
+            "dataType": "string",
+            "sourceColumn": "Sales Territory",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Sales Territory"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Customers-6c6b52dd-9c7e-4078-9652-9b868aa04116",
+            "mode": "import",
+            "queryGroup": "Data Load",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Customers = fxSourceCsv(\"Customers\"),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Customers,{{\"CustomerID\", Int64.Type}, {\"Customer Name\", type text}, {\"Phone Number\", type text}, {\"Website URL\", type text}, {\"Delivery Address Line 1\", type text}, {\"Delivery Address Line 2\", type text}, {\"Delivery Postal Code\", Int64.Type}, {\"City\", type text}, {\"StateProvinceCode\", type text}, {\"StateProvinceName\", type text}, {\"Sales Territory\", type text}, {\"Longitude\", type number}, {\"Latitude\", type number}})",
+                "in",
+                "    #\"Changed Type\""
+              ]
+            }
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Location Hierarchy",
+            "levels": [
+              {
+                "name": "State Province Code",
+                "ordinal": 0,
+                "column": "StateProvinceCode"
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "PBI_Id",
+            "value": "b7f4dcde-6e92-48a2-aa06-cd220825eb75"
+          },
+          {
+            "name": "LinkedQueryName",
+            "value": "Customers"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ]
+      },
+      {
+        "name": "Employees",
+        "columns": [
+          {
+            "name": "PersonID",
+            "dataType": "int64",
+            "sourceColumn": "PersonID",
+            "formatString": "0",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "PersonID"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Full Name",
+            "dataType": "string",
+            "sourceColumn": "Full Name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Full Name"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Preferred Name",
+            "dataType": "string",
+            "sourceColumn": "Preferred Name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Preferred Name"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Is Employee",
+            "dataType": "boolean",
+            "sourceColumn": "Is Employee",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Boolean\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Boolean#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Is Employee"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Is Salesperson",
+            "dataType": "boolean",
+            "sourceColumn": "Is Salesperson",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Boolean\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Boolean#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Is Salesperson"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Phone Number",
+            "dataType": "string",
+            "sourceColumn": "Phone Number",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Phone Number"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Email Address",
+            "dataType": "string",
+            "sourceColumn": "Email Address",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Email Address"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Employees-5d2ba09d-1e65-4ceb-8ccd-3675056ce108",
+            "mode": "import",
+            "queryGroup": "Data Load",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Employees = fxSourceCsv(\"Employees\"),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Employees,{{\"PersonID\", Int64.Type}, {\"Full Name\", type text}, {\"Preferred Name\", type text}, {\"Is Employee\", type logical}, {\"Is Salesperson\", type logical}, {\"Phone Number\", type text}, {\"Email Address\", type text}})",
+                "in",
+                "    #\"Changed Type\""
+              ]
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "PBI_Id",
+            "value": "2c1d3ce2-dc1f-4c2a-9aa3-62c56ee6a515"
+          },
+          {
+            "name": "LinkedQueryName",
+            "value": "Employees"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ]
+      },
+      {
+        "name": "Customer Transactions",
+        "columns": [
+          {
+            "name": "CustomerTransactionID",
+            "dataType": "int64",
+            "sourceColumn": "CustomerTransactionID",
+            "formatString": "0",
+            "summarizeBy": "count",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "CustomerTransactionID"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "CustomerID",
+            "dataType": "int64",
+            "sourceColumn": "CustomerID",
+            "formatString": "0",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "CustomerID"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "TransactionTypeID",
+            "dataType": "int64",
+            "sourceColumn": "TransactionTypeID",
+            "formatString": "0",
+            "summarizeBy": "count",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "TransactionTypeID"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "InvoiceID",
+            "dataType": "string",
+            "sourceColumn": "InvoiceID",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "InvoiceID"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Amount Excluding Tax",
+            "dataType": "int64",
+            "sourceColumn": "Amount Excluding Tax",
+            "formatString": "0",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Amount Excluding Tax"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Tax Amount",
+            "dataType": "int64",
+            "sourceColumn": "Tax Amount",
+            "formatString": "0",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Tax Amount"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Outstanding Balance",
+            "dataType": "int64",
+            "sourceColumn": "Outstanding Balance",
+            "formatString": "0",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Outstanding Balance"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Customer Transactions-1526857c-ddf0-4f31-b401-ddd703429193",
+            "mode": "import",
+            "queryGroup": "Data Load",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    #\"Customer Transactions\" = fxSourceCsv(\"Customer_Transactions\"),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Customer Transactions\",{{\"CustomerTransactionID\", Int64.Type}, {\"CustomerID\", Int64.Type}, {\"TransactionTypeID\", Int64.Type}, {\"InvoiceID\", type text}, {\"Amount Excluding Tax\", Int64.Type}, {\"Tax Amount\", Int64.Type}, {\"Outstanding Balance\", Int64.Type}})",
+                "in",
+                "    #\"Changed Type\""
+              ]
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "PBI_Id",
+            "value": "b106f76d-27df-4181-b447-04024df849a4"
+          },
+          {
+            "name": "LinkedQueryName",
+            "value": "Customer Transactions"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ]
+      },
+      {
+        "name": "Sales Invoices",
+        "columns": [
+          {
+            "name": "CustomerID",
+            "dataType": "int64",
+            "sourceColumn": "CustomerID",
+            "formatString": "0",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "CustomerID"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "BillToCustomerID",
+            "dataType": "int64",
+            "sourceColumn": "BillToCustomerID",
+            "formatString": "0",
+            "summarizeBy": "count",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "BillToCustomerID"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "SalespersonPersonID",
+            "dataType": "int64",
+            "sourceColumn": "SalespersonPersonID",
+            "formatString": "0",
+            "summarizeBy": "count",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "SalespersonPersonID"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "InvoiceDate",
+            "dataType": "dateTime",
+            "sourceColumn": "InvoiceDate",
+            "formatString": "dddd\\, mmmm d\\, yyyy",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeGeneralPattern\"><DateTimes><DateTime LCID=\"1033\" Group=\"LongDate\" FormatString=\"dddd, MMMM dd, yyyy\" /></DateTimes></Format>"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "DateTime#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "InvoiceDate"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Invoice ID",
+            "dataType": "int64",
+            "sourceColumn": "Invoice ID",
+            "formatString": "0",
+            "summarizeBy": "count",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Invoice ID"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Customer Purchase Order Number",
+            "dataType": "int64",
+            "sourceColumn": "Customer Purchase Order Number",
+            "formatString": "0",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Customer Purchase Order Number"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Sales Invoices-cf3c3123-046d-4ff2-946c-952c458ee5d3",
+            "mode": "import",
+            "queryGroup": "Data Load",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    #\"Sales Invoices\" = fxSourceCsv(\"Sales_Invoices\"),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Sales Invoices\",{{\"Invoice ID\", Int64.Type}, {\"CustomerID\", Int64.Type}, {\"BillToCustomerID\", Int64.Type}, {\"SalespersonPersonID\", Int64.Type}, {\"InvoiceDate\", type datetime}, {\"Customer Purchase Order Number\", Int64.Type}})",
+                "in",
+                "    #\"Changed Type\""
+              ]
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "PBI_Id",
+            "value": "b3cfb61b-0624-4ddd-b0b8-70320118c141"
+          },
+          {
+            "name": "LinkedQueryName",
+            "value": "Sales Invoices"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ]
+      },
+      {
+        "name": "Sales Order Lines",
+        "columns": [
+          {
+            "name": "OrderLineID",
+            "dataType": "int64",
+            "sourceColumn": "OrderLineID",
+            "formatString": "0",
+            "summarizeBy": "count",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "OrderLineID"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "OrderID",
+            "dataType": "int64",
+            "sourceColumn": "OrderID",
+            "formatString": "0",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "OrderID"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Description",
+            "dataType": "string",
+            "sourceColumn": "Description",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Description"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Quantity",
+            "dataType": "int64",
+            "sourceColumn": "Quantity",
+            "formatString": "#,0",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" ThousandSeparator=\"True\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Quantity"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "StockItemID",
+            "dataType": "int64",
+            "sourceColumn": "StockItemID",
+            "formatString": "0",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "StockItemID"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Unit Price",
+            "dataType": "int64",
+            "sourceColumn": "Unit Price",
+            "formatString": "0",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Unit Price"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Tax Rate",
+            "dataType": "int64",
+            "sourceColumn": "Tax Rate",
+            "formatString": "0",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Tax Rate"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Picked Quantity",
+            "dataType": "int64",
+            "sourceColumn": "Picked Quantity",
+            "formatString": "0",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Picked Quantity"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Sales Order Lines-761f2bb4-31bf-4e3e-8871-42cc011a1951",
+            "mode": "import",
+            "queryGroup": "Data Load",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    #\"Sales Order Lines\" = fxSourceCsv(\"Sales_Order_Lines\"),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Sales Order Lines\",{{\"OrderLineID\", Int64.Type}, {\"OrderID\", Int64.Type}, {\"Description\", type text}, {\"Quantity\", Int64.Type}, {\"Unit Price\", Int64.Type}, {\"Tax Rate\", Int64.Type}, {\"Picked Quantity\", Int64.Type}, {\"StockItemID\", Int64.Type}})",
+                "in",
+                "    #\"Changed Type\""
+              ]
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Total Unit Price",
+            "expression": "SUM ( 'Sales Order Lines'[Unit Price] )"
+          }
+        ],
+        "annotations": [
+          {
+            "name": "PBI_Id",
+            "value": "3e661d12-8d43-4795-9e32-b7132c965884"
+          },
+          {
+            "name": "LinkedQueryName",
+            "value": "Sales Order Lines"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ]
+      },
+      {
+        "name": "State/Provinces",
+        "columns": [
+          {
+            "name": "StateProvinceID",
+            "dataType": "int64",
+            "sourceColumn": "StateProvinceID",
+            "formatString": "0",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "StateProvinceID"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "StateProvinceName",
+            "dataType": "string",
+            "sourceColumn": "StateProvinceName",
+            "dataCategory": "StateOrProvince",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "StateProvinceName"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "State/Province",
+            "dataType": "string",
+            "sourceColumn": "State/Province",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "State/Province"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Sales Territory",
+            "dataType": "string",
+            "sourceColumn": "Sales Territory",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Sales Territory"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "State/Provinces-db605615-2421-4153-9997-70dfb6f586ff",
+            "mode": "import",
+            "queryGroup": "Data Load",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    #\"State/Provinces\" = fxSourceCsv(\"State_Provinces\"),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"State/Provinces\",{{\"StateProvinceID\", Int64.Type}, {\"State/Province\", type text}, {\"StateProvinceName\", type text}, {\"Sales Territory\", type text}, {\"Recorded Population\", Int64.Type}}),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Changed Type\",{\"Recorded Population\"})",
+                "in",
+                "    #\"Removed Columns\""
+              ]
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "PBI_Id",
+            "value": "5d40a37d-ab43-4a12-b787-c39692df5984"
+          },
+          {
+            "name": "LinkedQueryName",
+            "value": "State/Provinces"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ]
+      },
+      {
+        "name": "Warehouse Items",
+        "columns": [
+          {
+            "name": "StockItemID",
+            "dataType": "int64",
+            "sourceColumn": "StockItemID",
+            "formatString": "0",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "StockItemID"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "TaxRate",
+            "dataType": "string",
+            "sourceColumn": "TaxRate",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "TaxRate"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "UnitPrice",
+            "dataType": "string",
+            "sourceColumn": "UnitPrice",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "UnitPrice"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "TypicalWeightPerUnit",
+            "dataType": "string",
+            "sourceColumn": "TypicalWeightPerUnit",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "TypicalWeightPerUnit"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Stock Item Name",
+            "dataType": "string",
+            "sourceColumn": "Stock Item Name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Stock Item Name"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Suggested Retail Price",
+            "dataType": "string",
+            "sourceColumn": "Suggested Retail Price",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Suggested Retail Price"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Warehouse Items-54ea7107-6ca1-4ada-9f82-969857c07af5",
+            "mode": "import",
+            "queryGroup": "Data Load",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    #\"Warehouse Items\" = fxSourceCsv(\"Warehouse_Items\"),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Warehouse Items\",{{\"StockItemID\", Int64.Type}})",
+                "in",
+                "    #\"Changed Type\""
+              ]
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "PBI_Id",
+            "value": "cbfb4c66-ab45-4273-9b35-2fb0fe5e7fb8"
+          },
+          {
+            "name": "LinkedQueryName",
+            "value": "Warehouse Items"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ]
+      },
+      {
+        "name": "Calendar",
+        "columns": [
+          {
+            "type": "calculatedTableColumn",
+            "name": "Date",
+            "dataType": "dateTime",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[Date]",
+            "formatString": "General Date",
+            "summarizeBy": "none",
+            "variations": [
+              {
+                "name": "Variation",
+                "relationship": "a64f0687-9e3d-4422-9591-1e31a4591485",
+                "defaultHierarchy": {
+                  "table": "LocalDateTable_c74ac4c7-a466-488a-ba83-126c0cd546e8",
+                  "hierarchy": "Date Hierarchy"
+                },
+                "isDefault": true
+              }
+            ],
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeGeneralPattern\"><DateTimes><DateTime LCID=\"1033\" Group=\"GeneralDateTimeLong\" FormatString=\"G\" /></DateTimes></Format>"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "DateTime#####not a type"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Month Number",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "expression": "MONTH([Date])",
+            "formatString": "0",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Month",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "sortByColumn": "Month Number",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Year",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "expression": "YEAR([Date])",
+            "formatString": "0",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Weekday Number",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "expression": "WEEKDAY([Date])",
+            "formatString": "0",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Weekday",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "FORMAT([Date], \"DDDD\")",
+            "sortByColumn": "Weekday Number",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Calendar-b0546815-817b-4de0-ba46-48d04f6bce27",
+            "mode": "import",
+            "source": {
+              "type": "calculated",
+              "expression": "CALENDARAUTO()"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "PBI_Id",
+            "value": "6c982964ada04d18b88a2ae7e526ddb5"
+          }
+        ]
+      },
+      {
+        "name": "LocalDateTable_c74ac4c7-a466-488a-ba83-126c0cd546e8",
+        "isHidden": true,
+        "showAsVariationsOnly": true,
+        "columns": [
+          {
+            "type": "calculatedTableColumn",
+            "name": "Date",
+            "dataType": "dateTime",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "sourceColumn": "[Date]",
+            "dataCategory": "PaddedDateTableDates",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeGeneralPattern\"><DateTimes><DateTime LCID=\"1033\" Group=\"GeneralDateTimeLong\" FormatString=\"G\" /></DateTimes></Format>"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "DateTime#####not a type"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Year",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "YEAR([Date])",
+            "dataCategory": "Years",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "MonthNo",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "MONTH([Date])",
+            "dataCategory": "MonthOfYear",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Month",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "sortByColumn": "MonthNo",
+            "dataCategory": "Months",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "QuarterNo",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "dataCategory": "QuarterOfYear",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Quarter",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "sortByColumn": "QuarterNo",
+            "dataCategory": "Quarters",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Day",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "DAY([Date])",
+            "dataCategory": "DayOfMonth",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "LocalDateTable_c74ac4c7-a466-488a-ba83-126c0cd546e8-a6b8b5ca-e963-4c69-b5a5-51eae0520cfa",
+            "mode": "import",
+            "source": {
+              "type": "calculated",
+              "expression": "Calendar(Date(Year(MIN('Calendar'[Date])), 1, 1), Date(Year(MAX('Calendar'[Date])), 12, 31))"
+            }
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "levels": [
+              {
+                "name": "Year",
+                "ordinal": 0,
+                "column": "Year"
+              },
+              {
+                "name": "Quarter",
+                "ordinal": 1,
+                "column": "Quarter"
+              },
+              {
+                "name": "Month",
+                "ordinal": 2,
+                "column": "Month"
+              },
+              {
+                "name": "Day",
+                "ordinal": 3,
+                "column": "Day"
+              }
+            ],
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true"
+          }
+        ]
+      },
+      {
+        "name": "LocalDateTable_122364ee-5ea2-43c9-bd59-313817f8dc61",
+        "isHidden": true,
+        "showAsVariationsOnly": true,
+        "columns": [
+          {
+            "type": "calculatedTableColumn",
+            "name": "Date",
+            "dataType": "dateTime",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "sourceColumn": "[Date]",
+            "dataCategory": "PaddedDateTableDates",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeGeneralPattern\"><DateTimes><DateTime LCID=\"1033\" Group=\"GeneralDateTimeLong\" FormatString=\"G\" /></DateTimes></Format>"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "DateTime#####not a type"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Year",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "YEAR([Date])",
+            "dataCategory": "Years",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "MonthNo",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "MONTH([Date])",
+            "dataCategory": "MonthOfYear",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Month",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "sortByColumn": "MonthNo",
+            "dataCategory": "Months",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "QuarterNo",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "dataCategory": "QuarterOfYear",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Quarter",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "sortByColumn": "QuarterNo",
+            "dataCategory": "Quarters",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Day",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "DAY([Date])",
+            "dataCategory": "DayOfMonth",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "LocalDateTable_122364ee-5ea2-43c9-bd59-313817f8dc61-39924bb6-edf5-4c0c-9ba4-ed7ef5667fda",
+            "mode": "import",
+            "source": {
+              "type": "calculated",
+              "expression": "Calendar(Date(Year(MIN('Orders'[Expected Delivery Date])), 1, 1), Date(Year(MAX('Orders'[Expected Delivery Date])), 12, 31))"
+            }
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "levels": [
+              {
+                "name": "Year",
+                "ordinal": 0,
+                "column": "Year"
+              },
+              {
+                "name": "Quarter",
+                "ordinal": 1,
+                "column": "Quarter"
+              },
+              {
+                "name": "Month",
+                "ordinal": 2,
+                "column": "Month"
+              },
+              {
+                "name": "Day",
+                "ordinal": 3,
+                "column": "Day"
+              }
+            ],
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "fe5d546e-e46d-4731-9fcb-29a54d122103",
+        "fromTable": "Orders",
+        "fromColumn": "CustomerID",
+        "toTable": "Customers",
+        "toColumn": "CustomerID"
+      },
+      {
+        "name": "fd896763-7c6b-4fbc-ac7b-a19213eaa859",
+        "fromTable": "Customer Transactions",
+        "fromColumn": "CustomerID",
+        "toTable": "Customers",
+        "toColumn": "CustomerID"
+      },
+      {
+        "name": "108cc19b-978c-46d8-818b-255d1b973cfb",
+        "fromTable": "Sales Order Lines",
+        "fromColumn": "OrderID",
+        "toTable": "Orders",
+        "toColumn": "OrderID"
+      },
+      {
+        "name": "98e07445-4ae6-4ed2-a0a7-303bb0137213",
+        "fromTable": "Orders",
+        "fromColumn": "SalespersonPersonID",
+        "toTable": "Employees",
+        "toColumn": "PersonID"
+      },
+      {
+        "name": "b4088290-372b-4204-9ed3-108b686e0d1b",
+        "fromTable": "Sales Invoices",
+        "fromColumn": "CustomerID",
+        "toTable": "Customers",
+        "toColumn": "CustomerID"
+      },
+      {
+        "name": "b8d38e22-098f-4060-a685-530cd392c1ce",
+        "fromTable": "Sales Order Lines",
+        "fromColumn": "StockItemID",
+        "toTable": "Warehouse Items",
+        "toColumn": "StockItemID"
+      },
+      {
+        "name": "a64f0687-9e3d-4422-9591-1e31a4591485",
+        "fromTable": "Calendar",
+        "fromColumn": "Date",
+        "toTable": "LocalDateTable_c74ac4c7-a466-488a-ba83-126c0cd546e8",
+        "toColumn": "Date",
+        "joinOnDateBehavior": "datePartOnly"
+      },
+      {
+        "name": "c71ae31e-c566-442a-b1d7-6d03374e9fd7",
+        "fromTable": "Orders",
+        "fromColumn": "Expected Delivery Date",
+        "toTable": "LocalDateTable_122364ee-5ea2-43c9-bd59-313817f8dc61",
+        "toColumn": "Date",
+        "joinOnDateBehavior": "datePartOnly"
+      },
+      {
+        "name": "d8d6a811-0437-4e40-bd30-a94092c9cc0b",
+        "fromTable": "Customers",
+        "fromColumn": "StateProvinceCode",
+        "toTable": "State/Provinces",
+        "toColumn": "State/Province"
+      },
+      {
+        "name": "ba6d7dfb-4dd0-4a99-99a0-a0a7d242a831",
+        "fromTable": "Orders",
+        "fromColumn": "Order Date",
+        "toTable": "Calendar",
+        "toColumn": "Date"
+      },
+      {
+        "name": "a1f319b0-8220-4c0d-ac13-e84fc23d341a",
+        "fromTable": "Sales Invoices",
+        "fromColumn": "InvoiceDate",
+        "toTable": "Calendar",
+        "toColumn": "Date"
+      }
+    ],
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "Version": "1.0.0",
+            "Language": "en-US",
+            "DynamicImprovement": "HighConfidence",
+            "Entities": {
+              "sales_order": {
+                "Binding": {
+                  "ConceptualEntity": "Orders"
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "sales order": {}
+                  }
+                ]
+              },
+              "sales_order.comment": {
+                "Binding": {
+                  "ConceptualEntity": "Orders",
+                  "ConceptualProperty": "Comments"
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "comment": {}
+                  }
+                ]
+              },
+              "sales_order.customer_ID": {
+                "Binding": {
+                  "ConceptualEntity": "Orders",
+                  "ConceptualProperty": "CustomerID"
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "customer ID": {}
+                  }
+                ]
+              },
+              "sales_order.order_ID": {
+                "Binding": {
+                  "ConceptualEntity": "Orders",
+                  "ConceptualProperty": "OrderID"
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "order ID": {}
+                  }
+                ]
+              },
+              "sales_order.salesperson_person_ID": {
+                "Binding": {
+                  "ConceptualEntity": "Orders",
+                  "ConceptualProperty": "SalespersonPersonID"
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "salesperson person ID": {}
+                  }
+                ]
+              },
+              "sales_OrderLine": {
+                "Binding": {
+                  "ConceptualEntity": "Sales Order Lines"
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "sales OrderLine": {}
+                  }
+                ]
+              },
+              "sales_OrderLine.description": {
+                "Binding": {
+                  "ConceptualEntity": "Sales Order Lines",
+                  "ConceptualProperty": "Description"
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "description": {}
+                  }
+                ]
+              },
+              "sales_OrderLine.order_ID": {
+                "Binding": {
+                  "ConceptualEntity": "Sales Order Lines",
+                  "ConceptualProperty": "OrderID"
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "order ID": {}
+                  }
+                ]
+              },
+              "sales_OrderLine.order_line_ID": {
+                "Binding": {
+                  "ConceptualEntity": "Sales Order Lines",
+                  "ConceptualProperty": "OrderLineID"
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "order line ID": {}
+                  }
+                ]
+              },
+              "sales_OrderLine.quantity": {
+                "Binding": {
+                  "ConceptualEntity": "Sales Order Lines",
+                  "ConceptualProperty": "Quantity"
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "quantity": {}
+                  }
+                ]
+              },
+              "warehouse_StockItem": {
+                "Binding": {
+                  "ConceptualEntity": "Warehouse Items"
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "warehouse StockItem": {}
+                  }
+                ]
+              },
+              "warehouse_StockItem.stock_item_ID": {
+                "Binding": {
+                  "ConceptualEntity": "Warehouse Items",
+                  "ConceptualProperty": "StockItemID"
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "stock item ID": {}
+                  },
+                  {
+                    "sku": {}
+                  }
+                ]
+              },
+              "warehouse_StockItem.tax_rate": {
+                "Binding": {
+                  "ConceptualEntity": "Warehouse Items",
+                  "ConceptualProperty": "TaxRate"
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "tax rate": {}
+                  }
+                ]
+              },
+              "warehouse_StockItem.typical_weight_per_unit": {
+                "Binding": {
+                  "ConceptualEntity": "Warehouse Items",
+                  "ConceptualProperty": "TypicalWeightPerUnit"
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "typical weight per unit": {}
+                  }
+                ]
+              },
+              "warehouse_StockItem.unit_price": {
+                "Binding": {
+                  "ConceptualEntity": "Warehouse Items",
+                  "ConceptualProperty": "UnitPrice"
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "unit price": {}
+                  }
+                ]
+              },
+              "sales_invoice": {
+                "Binding": {
+                  "ConceptualEntity": "Sales Invoices"
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "sales invoice": {}
+                  }
+                ]
+              },
+              "sales_invoice.bill_to_customer_ID": {
+                "Binding": {
+                  "ConceptualEntity": "Sales Invoices",
+                  "ConceptualProperty": "BillToCustomerID"
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "bill to customer ID": {}
+                  }
+                ]
+              },
+              "sales_invoice.customer_ID": {
+                "Binding": {
+                  "ConceptualEntity": "Sales Invoices",
+                  "ConceptualProperty": "CustomerID"
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "customer ID": {}
+                  }
+                ]
+              },
+              "sales_invoice.invoice_date": {
+                "Binding": {
+                  "ConceptualEntity": "Sales Invoices",
+                  "ConceptualProperty": "InvoiceDate"
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "invoice date": {}
+                  }
+                ]
+              },
+              "sales_invoice.salesperson_person_ID": {
+                "Binding": {
+                  "ConceptualEntity": "Sales Invoices",
+                  "ConceptualProperty": "SalespersonPersonID"
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "salesperson person ID": {}
+                  }
+                ]
+              },
+              "sales_OrderLine.stock_item_ID": {
+                "Binding": {
+                  "ConceptualEntity": "Sales Order Lines",
+                  "ConceptualProperty": "StockItemID"
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "stock item ID": {}
+                  }
+                ]
+              },
+              "employee": {
+                "Binding": {
+                  "ConceptualEntity": "Employees"
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "employee": {}
+                  }
+                ]
+              },
+              "employee.person_ID": {
+                "Binding": {
+                  "ConceptualEntity": "Employees",
+                  "ConceptualProperty": "PersonID"
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "person ID": {}
+                  }
+                ]
+              },
+              "customer": {
+                "Binding": {
+                  "ConceptualEntity": "Customers"
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "customer": {}
+                  }
+                ]
+              },
+              "customer.customer_ID": {
+                "Binding": {
+                  "ConceptualEntity": "Customers",
+                  "ConceptualProperty": "CustomerID"
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "customer ID": {}
+                  }
+                ]
+              },
+              "customer.latitude": {
+                "Binding": {
+                  "ConceptualEntity": "Customers",
+                  "ConceptualProperty": "Latitude"
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "latitude": {}
+                  }
+                ]
+              },
+              "customer.longitude": {
+                "Binding": {
+                  "ConceptualEntity": "Customers",
+                  "ConceptualProperty": "Longitude"
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "longitude": {}
+                  }
+                ]
+              },
+              "customer.state_province_code": {
+                "Binding": {
+                  "ConceptualEntity": "Customers",
+                  "ConceptualProperty": "StateProvinceCode"
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "state province code": {}
+                  }
+                ]
+              },
+              "customer.state_province_name": {
+                "Binding": {
+                  "ConceptualEntity": "Customers",
+                  "ConceptualProperty": "StateProvinceName"
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "state province name": {}
+                  }
+                ]
+              },
+              "state_province": {
+                "Binding": {
+                  "ConceptualEntity": "State/Provinces"
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "state/province": {}
+                  },
+                  {
+                    "state": {}
+                  },
+                  {
+                    "province": {}
+                  }
+                ]
+              },
+              "state_province.state_province_ID": {
+                "Binding": {
+                  "ConceptualEntity": "State/Provinces",
+                  "ConceptualProperty": "StateProvinceID"
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "state province ID": {}
+                  }
+                ]
+              },
+              "state_province.state_province_name": {
+                "Binding": {
+                  "ConceptualEntity": "State/Provinces",
+                  "ConceptualProperty": "StateProvinceName"
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "state province name": {}
+                  }
+                ]
+              },
+              "customer_transaction": {
+                "Binding": {
+                  "ConceptualEntity": "Customer Transactions"
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "customer transaction": {}
+                  }
+                ]
+              },
+              "customer_transaction.customer_ID": {
+                "Binding": {
+                  "ConceptualEntity": "Customer Transactions",
+                  "ConceptualProperty": "CustomerID"
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "customer ID": {}
+                  }
+                ]
+              },
+              "customer_transaction.customer_transaction_ID": {
+                "Binding": {
+                  "ConceptualEntity": "Customer Transactions",
+                  "ConceptualProperty": "CustomerTransactionID"
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "customer transaction ID": {}
+                  }
+                ]
+              },
+              "customer_transaction.invoice_ID": {
+                "Binding": {
+                  "ConceptualEntity": "Customer Transactions",
+                  "ConceptualProperty": "InvoiceID"
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "invoice ID": {}
+                  }
+                ]
+              },
+              "customer_transaction.transaction_type_ID": {
+                "Binding": {
+                  "ConceptualEntity": "Customer Transactions",
+                  "ConceptualProperty": "TransactionTypeID"
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "transaction type ID": {}
+                  }
+                ]
+              }
+            }
+          },
+          "contentType": "json"
+        },
+        "translations": {
+          "model": {
+            "name": "Model",
+            "tables": [
+              {
+                "name": "Sales Order Lines",
+                "measures": [
+                  {
+                    "name": "Total Unit Price",
+                    "translatedCaption": "Total Unit Price"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "roles": [
+      {
+        "name": "Florida Sales Reps",
+        "modelPermission": "read",
+        "tablePermissions": [
+          {
+            "name": "State/Provinces",
+            "filterExpression": "[State/Province] = \"FL\""
+          }
+        ],
+        "annotations": [
+          {
+            "name": "PBI_Id",
+            "value": "b6620fa1b3244d539f16130963a5b86c"
+          }
+        ]
+      }
+    ],
+    "expressions": [
+      {
+        "name": "fxSourceCsv",
+        "kind": "m",
+        "expression": [
+          "(fName as text) as table =>",
+          "let",
+          "    Source = Csv.Document(Web.Contents(\"https://raw.githubusercontent.com/itsnotaboutthecell/Power-BI-Sessions/master/An%20Introduction%20to%20Tabular%20Editor/Source%20Files/\" & fName & \".csv\"),[Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.None]),",
+          "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true])",
+          "in",
+          "    #\"Promoted Headers\""
+        ],
+        "queryGroup": "Functions and Parameters",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Function"
+          }
+        ]
+      },
+      {
+        "name": "Repository",
+        "description": "GitHub Repoistory for Sample Files",
+        "kind": "m",
+        "expression": "\"https://raw.githubusercontent.com/microsoft/pbiworkshops/main/An%20Introduction%20to%20Tabular%20Editor/Source%20Files/\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]",
+        "queryGroup": "Functions and Parameters",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Text"
+          }
+        ]
+      }
+    ],
+    "queryGroups": [
+      {
+        "folder": "Functions and Parameters",
+        "annotations": [
+          {
+            "name": "PBI_QueryGroupOrder",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "folder": "Data Load",
+        "annotations": [
+          {
+            "name": "PBI_QueryGroupOrder",
+            "value": "0"
+          }
+        ]
+      }
+    ],
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "1"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.83.5894.961 (20.07)"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "Orders.Customers.Employees.Customer Transactions.Sales Invoices.Sales Order Lines.State/Provinces.Warehouse Items.fxSourceCsv.Repository"
+      },
+      {
+        "name": "TabularEditor_SerializeOptions",
+        "value": "{\"IgnoreInferredObjects\":true,\"IgnoreInferredProperties\":true,\"IgnoreTimestamps\":true,\"SplitMultilineStrings\":true,\"PrefixFilenames\":false,\"LocalTranslations\":false,\"LocalPerspectives\":false,\"LocalRelationships\":false,\"Levels\":[\"Data Sources\",\"Perspectives\",\"Relationships\",\"Roles\",\"Tables\",\"Tables/Columns\",\"Tables/Hierarchies\",\"Tables/Measures\",\"Tables/Partitions\",\"Translations\"]}"
+      }
+    ]
+  }
+}
