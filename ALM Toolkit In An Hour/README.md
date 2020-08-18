@@ -103,6 +103,8 @@ model.
     1. **Source** is the Power BI Desktop file Sales Demo that is currently open.
     2. Within the **Target** select **File** and navigate to the downloaded **Model.bim**
 
+# FIX CONNECTIONS IMAGE
+
 ![Connections](./Images/Connections.png)
 
 ### Power BI Desktop
