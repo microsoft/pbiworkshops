@@ -15,7 +15,7 @@ ___
 - [Download and Install ALM Tookit](http://alm-toolkit.com/)
     - <a href="" target="_blank">Optional: Guided Video</a>
 - [Download the Sales Demo PBIX File](https://github.com/microsoft/pbiworkshops/raw/main/ALM%20Toolkit%20In%20An%20Hour/Sales%20Demo.pbix)
-- [Download the Sales Demo PBIT File](https://github.com/microsoft/pbiworkshops/raw/main/ALM%20Toolkit%20In%20An%20Hour/Sales%20Demo.pbit)
+- [Download the Model BIM File](https://github.com/microsoft/pbiworkshops/raw/main/ALM%20Toolkit%20In%20An%20Hour/Model.bim)
 
 ___
 
@@ -101,7 +101,7 @@ model.
 ### ALM Toolkit
 1. Within the Connections dialog box confirm the following and press **OK** when complete.
     1. **Source** is the Power BI Desktop file Sales Demo that is currently open.
-    2. Within the **Target** select **File** and navigate to the downloaded **Sales Demo.pbit**
+    2. Within the **Target** select **File** and navigate to the downloaded **Model.bim**
 
 ![Connections](./Images/Connections.png)
 
@@ -111,16 +111,32 @@ model.
 ### ALM Toolkit
 1. Press Compare and confirm the following remain unchanged.
     1. **Source** is the Power BI Desktop file Sales Demo that is currently open.
-    2. Within the **Target** select **File** and navigate to the downloaded **Sales Demo.pbit**
+    2. Within the **Target** select **File** and navigate to the downloaded **Model.bim**
 2. Navigate to the **Home** tab and select **Select Actions** and the **Hide Skip Objects with Same Definition** option.
-3. Select the row containing the Table object named **Calendar** to compare the differences.
+3. Select the row containing the Table object Source Name **Calendar** to compare the differences.
 
 ![Comparison](./Images/Comparison.png)
 ___
 
 # Actions
 
-### Available Actions
-Create
-Update
-Delete
+Within ALM Toolkit modelers can Create, Update, Delete or Skip items that are in development (**Source**) before deploying changes to their intended destination (**Target**).
+
+### Objective: Choose the appropriate actions to update the target.
+
+### Power BI Desktop
+1. Within the Sales Demo (PBIX) file, navigate to the **Fields** pane and alternate click the **Warehouse Items** table and select **Edit query**.
+2. With the Power Query Editor
+    1. Hold shift and select the columns **TaxRate, UnitPrice, Suggested Retail Price and TypicalWeightPerUnit**.
+    2. Navigate to the **Transform** tab and select the **Detect Data Type** option.
+    3. Navigate to the **Home** tab and select **Close & Apply**.
+3. Open the Sales Demo (PBIX) file, navigate to the External Tools ribbon in Power BI Desktop and select ALM Toolkit.
+
+### ALM Toolkit
+1. Press Compare and confirm the following remain unchanged.
+    1. **Source** is the Power BI Desktop file Sales Demo that is currently open.
+    2. Within the **Target** select **File** and navigate to the downloaded **Model.bim**
+2. Navigate to the **Home** tab and select **Select Actions** and the **Hide Skip Objects with Same Definition** option.
+3. Select the row containing the Expression Source Name **Repository** to compare the differences and set the **Action** to **Skip**.
+4. Select the row containing the Table object Source Name **Warehouse Items** to compare the differences and set the **Action** to **Update**.
+5. 
