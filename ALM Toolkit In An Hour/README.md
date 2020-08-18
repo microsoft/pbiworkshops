@@ -14,7 +14,7 @@ ___
 **Follow Along:**
 - [Download and Install ALM Tookit](http://alm-toolkit.com/)
     - <a href="" target="_blank">Optional: Guided Video</a>
-- [Download and open the Sales Demo PBIX File](https://github.com/microsoft/pbiworkshops/raw/main/ALM%20Toolkit%20In%20An%20Hour/Sales%20Demo.pbix)
+- [Download the Sales Demo PBIX File](https://github.com/microsoft/pbiworkshops/raw/main/ALM%20Toolkit%20In%20An%20Hour/Sales%20Demo.pbix)
 - [Download the Sales Demo PBIT File](https://github.com/microsoft/pbiworkshops/raw/main/ALM%20Toolkit%20In%20An%20Hour/Sales%20Demo.pbit)
 
 ___
@@ -36,6 +36,12 @@ ___
 ### ALM Toolkit
 1. Navigate to the **External Tools** ribbon in Power BI Desktop and select **ALM Toolkit**.
 2. Select **Options** and enable the following options:
+    - Include roles
+    - Consider partitions when comparing tables
+    - For table updates, retain partitions
+        - Retain only refresh-policy based partitions
+    - Display warnings for measure dependencies (DAX reference to missing measure/column)
+    - Process only affected tables
 
 ![Options](./Images/Options.png)
 
@@ -69,7 +75,7 @@ ___
 
 # Comparison
 
-Deployment of tabular models normally employs an all-or-nothing, or partial-metadata deployment strategy. Some organizations may choose to use a combination; for example, partial-metadata deployment for bug fixes, but not features. With ALM Toolkit modelers can perform merging across models that are in development (Source) to their destination (Target) supporthing both approaches.
+Deployment of tabular models normally employs an all-or-nothing (**Power BI Desktop - Publish to Web**), or partial-metadata deployment strategy. With ALM Toolkit modelers can compare tabular object differences and perform merging across models that are in development (**Source**) to their intended destination (**Target**) supporthing both approaches.
 
 ### Supported Connections:
 - Dataset
@@ -84,7 +90,6 @@ Deployment of tabular models normally employs an all-or-nothing, or partial-meta
 
 **Important Note:** The target model compatibility level must be greater than or equal to the compatibility level of the source
 model.
-
 
 ### Objective: Compare schema differences after a change has been made.
 
