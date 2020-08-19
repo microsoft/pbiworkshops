@@ -14,8 +14,8 @@ ___
 **Follow Along:**
 - [Download and Install ALM Tookit](http://alm-toolkit.com/)
     - <a href="" target="_blank">Optional: Guided Video</a>
-- [Download the Sales Demo PBIX File](https://github.com/microsoft/pbiworkshops/raw/main/ALM%20Toolkit%20In%20An%20Hour/Sales%20Demo.pbix)
-- [Download the Model BIM File](https://github.com/microsoft/pbiworkshops/raw/main/ALM%20Toolkit%20In%20An%20Hour/Model.bim)
+- [Download the Sales Demo_DEV.pbix File](https://github.com/microsoft/pbiworkshops/raw/main/ALM%20Toolkit%20In%20An%20Hour/Sales%20Demo_DEV.pbix)
+- [Download the Sales Demo_FINAL.pbix File](https://github.com/microsoft/pbiworkshops/raw/main/ALM%20Toolkit%20In%20An%20Hour/Sales%20Demo_FINAL.pbix)
 
 ___
 
@@ -103,6 +103,8 @@ model.
 1. Within the Connections dialog box confirm the following and press **OK** when complete.
     1. **Source** is the Power BI Desktop file **Sales Demo_DEV.pbix** that is currently open.
     2. **Target** is the Power BI Desktop file **Sales Demo_FINAL.pbix** that is currently open.
+    
+![Connections](./Images/Connections.png)
 
 ### Power BI Desktop
 1. Within the **Sales Demo_DEV.pbix** file, navigate to **File**, **Options and Settings**, **Options**, the **CURRENT FILE** sections **Data Load** properties and disable **Auto date/time**.
