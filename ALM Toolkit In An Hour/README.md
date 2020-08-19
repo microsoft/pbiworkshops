@@ -123,6 +123,8 @@ model.
 6. Within the **Deploy** dialog box press **Close**
 7. Within the **ALM Toolkit** dialog box press **Yes** to refresh the comparison.
 
+**Note:** If Power BI Desktop prompts with an dialog box stating **Something went wrong** press Cancel. This is due to Auto time intelligence still being enabled in the **CURRENT FILE** sections **Data Load** properties which is causing conflict with the missing objects.
+
 ___
 
 # Actions
