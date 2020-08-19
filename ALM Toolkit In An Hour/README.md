@@ -96,28 +96,31 @@ model.
 ## Instructions
 
 ### Power BI Desktop
-1. Open the Sales Demo (PBIX) file, navigate to the External Tools ribbon in Power BI Desktop and select ALM Toolkit.
+1. Open the **Sales Demo_DEV.pbix** and the **Sales Demo_FINAL.pbix** files.
+2. Navigate to the External Tools ribbon in either Power BI Desktop instance and select **ALM Toolkit**.
 
 ### ALM Toolkit
 1. Within the Connections dialog box confirm the following and press **OK** when complete.
-    1. **Source** is the Power BI Desktop file Sales Demo that is currently open.
-    2. Within the **Target** select **File** and navigate to the downloaded **Model.bim**
-
-# FIX CONNECTIONS IMAGE
-
-![Connections](./Images/Connections.png)
+    1. **Source** is the Power BI Desktop file **Sales Demo_DEV.pbix** that is currently open.
+    2. **Target** is the Power BI Desktop file **Sales Demo_FINAL.pbix** that is currently open.
 
 ### Power BI Desktop
-1. Navigate to File, Options and Settings, Options and the **CURRENT FILE** sections **Data Load** properties and disable **Auto date/time**.
+1. Within the **Sales Demo_DEV.pbix** file, navigate to **File**, **Options and Settings**, **Options**, the **CURRENT FILE** sections **Data Load** properties and disable **Auto date/time**.
 
 ### ALM Toolkit
 1. Press Compare and confirm the following remain unchanged.
-    1. **Source** is the Power BI Desktop file Sales Demo that is currently open.
-    2. Within the **Target** select **File** and navigate to the downloaded **Model.bim**
+    1. **Source** is the Power BI Desktop file **Sales Demo_DEV.pbix**.
+    2. **Target** is the Power BI Desktop file **Sales Demo_FINAL.pbix**.
 2. Navigate to the **Home** tab and select **Select Actions** and the **Hide Skip Objects with Same Definition** option.
 3. Select the row containing the Table object Source Name **Calendar** to compare the differences.
 
 ![Comparison](./Images/Comparison.png)
+
+4. Navigate to the **Home** tab and select **Validate Selection** to review the applicable changes in the **Warning List** dialog box before pressing **OK**
+5. Navigate to the **Home** tab, select **Update** and within the ALM Toolkit diablog box press **Yes** to confirm updating the target.
+6. Within the **Deploy** dialog box press **Close**
+7. Within the **ALM Toolkit** dialog box press **Yes** to refresh the comparison.
+
 ___
 
 # Actions
