@@ -12,7 +12,7 @@ Website: http://alm-toolkit.com/
 ___
 
 **Follow Along:**
-- [Download and Install ALM Tookit](http://alm-toolkit.com/)
+- [Download and Install ALM Toolkit](http://alm-toolkit.com/)
     - <a href="" target="_blank">Optional: Guided Video</a>
 - [Download the Sales Demo_DEV.pbix File](https://github.com/microsoft/pbiworkshops/raw/main/ALM%20Toolkit%20In%20An%20Hour/Sales%20Demo_DEV.pbix)
 - [Download the Sales Demo_FINAL.pbix File](https://github.com/microsoft/pbiworkshops/raw/main/ALM%20Toolkit%20In%20An%20Hour/Sales%20Demo_FINAL.pbix)
@@ -189,8 +189,8 @@ ___
 
 # Continue Your Journey
 
-### An indepth walk through of ALM ToolKit
-[PowerBI.Tips - Tutorial - ALM ToolKit](https://www.youtube.com/watch?v=yKvMrQlUrCU)
+### An indepth walk through of ALM Toolkit
+[PowerBI.Tips - Tutorial - ALM Toolkit](https://www.youtube.com/watch?v=yKvMrQlUrCU)
 
 ### Whitepaper
 [Model Comparison and Merging for Analysis Services](https://github.com/microsoft/Analysis-Services/blob/master/BismNormalizer/Model%20Comparison%20and%20Merging%20for%20Analysis%20Services.pdf)
