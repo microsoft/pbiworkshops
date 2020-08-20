@@ -195,4 +195,4 @@ ___
 ### Whitepaper
 [Model Comparison and Merging for Analysis Services](https://github.com/microsoft/Analysis-Services/blob/master/BismNormalizer/Model%20Comparison%20and%20Merging%20for%20Analysis%20Services.pdf)
 
-**Note:** BISM Normalizer is a Visual Studio Plugin whereas ALM ToolKit is the same underlying technology but in a standalone application.
+**Note:** BISM Normalizer is a Visual Studio Plugin whereas ALM Toolkit is the same underlying technology in a standalone application.
