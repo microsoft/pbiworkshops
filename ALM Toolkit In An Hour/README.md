@@ -33,6 +33,7 @@ ___
 
 ### Power BI Desktop
 1. Ensure the Power BI preview feature [Store datasets using enhanced metadata format](https://docs.microsoft.com/en-us/power-bi/connect-data/desktop-enhanced-dataset-metadata) is enabled.
+
 ### ALM Toolkit
 1. Navigate to the **External Tools** ribbon in Power BI Desktop and select **ALM Toolkit**.
 2. Select **Options** and enable the following options:
@@ -89,7 +90,7 @@ Deployment of tabular models normally employs an all-or-nothing (**Power BI Desk
     - Business Intelligence Model (BIM)
 
 **Important Note:** The target model compatibility level must be greater than or equal to the compatibility level of the source
-model.
+model. **Currently not all properties are supported within Power BI Desktop for merging.**
 
 ### Objective: Compare schema differences after a change has been made.
 
@@ -137,15 +138,61 @@ Within ALM Toolkit modelers can Create, Update, Delete or Skip items that are in
 1. Within the Sales Demo (PBIX) file, navigate to the **Fields** pane and alternate click the **Warehouse Items** table and select **Edit query**.
 2. With the Power Query Editor
     1. Hold shift and select the columns **TaxRate, UnitPrice, Suggested Retail Price and TypicalWeightPerUnit**.
-    2. Navigate to the **Transform** tab and select the **Detect Data Type** option.
+    2. Navigate to the **Transform** tab and select the **Detect Data Type** option to classify the column types.
     3. Navigate to the **Home** tab and select **Close & Apply**.
-3. Open the Sales Demo (PBIX) file, navigate to the External Tools ribbon in Power BI Desktop and select ALM Toolkit.
+3. Navigate to the **Report** option and select the **[State/Province]** field from the **State/Provinces** table.
+4. Navigate to the **Modeling** tab
+    1. Select the **View as** option to view as the **Florida Sales Reps** role and select **OK**.
+    2. Select **Stop viewing** within the notification bar.
+    3. Select the **Manage roles** option and navigate to the **State/Provinces** table to review the current DAX filter expression.
+
+    ```[State/Province] = "FLORIDA"```
+
+5. Navigate to the **Data** option and select the **[State/Province]** field from the **State/Provinces** table to review the current items.
+6. Navigate to the **Modeling** tab and select the **Manage roles** option and navigate to the **State/Provinces** table to update the current DAX filter expression.
+
+    ```[State/Province] = "FL"```
+
+7. Navigate to the **Report** option
+    1. Select the **[OrderID]** field from the **Sales Order Lines** table, alternate click and select **Hide**.
+    2. Alternate select the **Sales Order Lines** table and select **New Measure** to create the following measures
+        1. ```Total Quantity = SUM('Sales Order Lines'[Quantity])```
+        2. ```Total Quantity MTD = TOTALMTD([Total Quantity], 'Calendar'[Date])```
+    3. Select the **Total Unit Price** measure and update to the following DAX expression and set the **Format** property to **Currency**.
+    
+        ```Total Unit Price = SUMX('Sales Order Lines', [Quantity] * [Unit Price])```
 
 ### ALM Toolkit
 1. Press Compare and confirm the following remain unchanged.
     1. **Source** is the Power BI Desktop file Sales Demo that is currently open.
     2. Within the **Target** select **File** and navigate to the downloaded **Model.bim**
-2. Navigate to the **Home** tab and select **Select Actions** and the **Hide Skip Objects with Same Definition** option.
-3. Select the row containing the Expression Source Name **Repository** to compare the differences and set the **Action** to **Skip**.
-4. Select the row containing the Table object Source Name **Warehouse Items** to compare the differences and set the **Action** to **Update**.
-5. 
+2. Navigate to the **Home** tab and select **Report Differenes** to output an Excel file for version history.
+3. Navigate to the **Home** tab and select **Select Actions** and the **Hide Skip Objects with Same Definition** option.
+4. Select the following rows to compare teh differences and confirm or change the **Action**
+    1. **Table** objects
+        1. Source Name **Warehouse Items** and set the **Action** to **Update**.
+        2. Source Name **Sales Order Lines** and set the **Action** to **Update**.
+    2. **Role** objects
+        1. Source Name **Florida Sales Rep** and set the **Action** to **Update**.
+    3. **Measure** objects
+        1. Source Name **Total Unit Price** and set the **Action** to **Update**.
+        2. Source Name **Total Quantity** and **Total Quantity MTD** set the **Action** to **Skip**.
+        
+![Comparison](./Images/SkipObjects.png)
+
+5. Navigate to the **Home** tab and select **Validate Selection** to review the applicable changes in the **Warning List** dialog box before pressing **OK**
+6. Navigate to the **Home** tab, select **Update** and within the ALM Toolkit diablog box press **Yes** to confirm updating the target.
+7. Within the **Deploy** dialog box press **Close**
+8. Within the **ALM Toolkit** dialog box press **Yes** to refresh the comparison.
+
+___
+
+# Continue Your Journey
+
+### An indepth walk through of ALM ToolKit
+[PowerBI.Tips - Tutorial - ALM ToolKit](https://www.youtube.com/watch?v=yKvMrQlUrCU)
+
+### Whitepaper
+[Model Comparison and Merging for Analysis Services](https://github.com/microsoft/Analysis-Services/blob/master/BismNormalizer/Model%20Comparison%20and%20Merging%20for%20Analysis%20Services.pdf)
+
+**Note:** Ignore BISM Normalizer terminology as this is a Visual Studio Plugin. ALM ToolKit is the same underlying technology/concepts as a standalone application.
