@@ -1,4 +1,4 @@
-![Power BI](./Asset%20Library/PowerBI_Yellow.png)
+![Power BI](./_Asset%20Library/PowerBI_Yellow.png)
 
 
 # Contributing
