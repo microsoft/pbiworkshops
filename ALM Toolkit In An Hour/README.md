@@ -164,8 +164,8 @@ Within ALM Toolkit modelers can Create, Update, Delete or Skip items that are in
 
 ### ALM Toolkit
 1. Press Compare and confirm the following remain unchanged.
-    1. **Source** is the Power BI Desktop file Sales Demo that is currently open.
-    2. Within the **Target** select **File** and navigate to the downloaded **Model.bim**
+    1. **Source** is the Power BI Desktop file **Sales Demo_DEV.pbix** that is currently open.
+    2. **Target** is the Power BI Desktop file **Sales Demo_FINAL.pbix** that is currently open.
 2. Navigate to the **Home** tab and select **Report Differenes** to output an Excel file for version history.
 3. Navigate to the **Home** tab and select **Select Actions** and the **Hide Skip Objects with Same Definition** option.
 4. Select the following rows to compare teh differences and confirm or change the **Action**
