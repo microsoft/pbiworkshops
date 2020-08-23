@@ -262,6 +262,8 @@ foreach(var column in Selected.Columns) {
 
 }
 ```
+**🏆 Challenge:** Update the above code to include variables.
+
 7. Select the following columns in the **Sales Order Lines** table and then press the **Run script (selection only) F5** button. ▶
     1. **Quantity**
     2. **Unit Price**
@@ -328,6 +330,12 @@ ___
 
 ### An indepth walk through of Tabular Editor
 [PowerBI.Tips - Tabular Editor Playlist](https://www.youtube.com/watch?v=c-jZMzsvKnM&list=PLZjKz7bVsqV1mmA48wXqrSDPbDSGBvLdL)
+
+Includes:
+- Intro to Tabular Editor (1:03:33)
+- Using Scripts (1:09:31)
+- Best Practice Analyzer (1:05:42)
+- Using Devops (1:24:05)
 
 ### Advanced Scripting
 [Script Snippets](https://github.com/otykier/TabularEditor/wiki/Useful-script-snippets)
