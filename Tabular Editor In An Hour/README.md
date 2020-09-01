@@ -10,7 +10,7 @@ ___
 **Follow Along:**
 - [Download and Install Tabular Editor](https://github.com/otykier/TabularEditor/releases)
     - <a href="https://www.youtube.com/watch?v=7Cb7ZuK5EZA&list=PLKW7XPyNDgRCOiC69kZWfRQdOxcnQy2yA&index=1" target="_blank">Optional: Guided Video</a>
-- [Download and open the Sales Demo PBIX File](https://github.com/Microsoft/Tabular%20Editor%20In%20An%20Hour/raw/main/An%20Introduction%20to%20Tabular%20Editor/Sales%20Demo.pbix)
+- [Download and open the Sales Demo PBIX File](https://github.com/microsoft/pbiworkshops/Tabular%20Editor%20In%20An%20Hour/raw/main/An%20Introduction%20to%20Tabular%20Editor/Sales%20Demo.pbix)
 
 ___
 
