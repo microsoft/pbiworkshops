@@ -1,4 +1,4 @@
-# DAX Studio In An Hour ![Tabular Editor](./Images/tabular_editor.png)
+# DAX Studio In An Hour ![DAX Studio](./Images/dax_studio.png)
 
 ### About:
 DAX Studio is a tool to write, execute, and analyze DAX queries in Power BI Designer, Power Pivot for Excel, and Analysis Services Tabular.
