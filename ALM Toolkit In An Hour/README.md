@@ -12,7 +12,7 @@ Website: http://alm-toolkit.com/
 ___
 
 **Follow Along:**
-- [Download and Install ALM Tookit](http://alm-toolkit.com/)
+- [Download and Install ALM Toolkit](http://alm-toolkit.com/)
     - <a href="" target="_blank">Optional: Guided Video</a>
 - [Download the Sales Demo_DEV.pbix File](https://github.com/microsoft/pbiworkshops/raw/main/ALM%20Toolkit%20In%20An%20Hour/Sales%20Demo_DEV.pbix)
 - [Download the Sales Demo_FINAL.pbix File](https://github.com/microsoft/pbiworkshops/raw/main/ALM%20Toolkit%20In%20An%20Hour/Sales%20Demo_FINAL.pbix)
@@ -164,8 +164,8 @@ Within ALM Toolkit modelers can Create, Update, Delete or Skip items that are in
 
 ### ALM Toolkit
 1. Press Compare and confirm the following remain unchanged.
-    1. **Source** is the Power BI Desktop file Sales Demo that is currently open.
-    2. Within the **Target** select **File** and navigate to the downloaded **Model.bim**
+    1. **Source** is the Power BI Desktop file **Sales Demo_DEV.pbix** that is currently open.
+    2. **Target** is the Power BI Desktop file **Sales Demo_FINAL.pbix** that is currently open.
 2. Navigate to the **Home** tab and select **Report Differenes** to output an Excel file for version history.
 3. Navigate to the **Home** tab and select **Select Actions** and the **Hide Skip Objects with Same Definition** option.
 4. Select the following rows to compare teh differences and confirm or change the **Action**
@@ -189,10 +189,10 @@ ___
 
 # Continue Your Journey
 
-### An indepth walk through of ALM ToolKit
-[PowerBI.Tips - Tutorial - ALM ToolKit](https://www.youtube.com/watch?v=yKvMrQlUrCU)
+### An indepth walk through of ALM Toolkit
+[PowerBI.Tips - Tutorial - ALM Toolkit](https://www.youtube.com/watch?v=yKvMrQlUrCU)
 
 ### Whitepaper
 [Model Comparison and Merging for Analysis Services](https://github.com/microsoft/Analysis-Services/blob/master/BismNormalizer/Model%20Comparison%20and%20Merging%20for%20Analysis%20Services.pdf)
 
-**Note:** BISM Normalizer is a Visual Studio Plugin whereas ALM ToolKit is the same underlying technology but in a standalone application.
+**Note:** BISM Normalizer is a Visual Studio Plugin whereas ALM Toolkit is the same underlying technology in a standalone application.
