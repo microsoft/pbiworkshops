@@ -1,0 +1,664 @@
+CustomerID,Customer Name,Phone Number,Website URL,Delivery Address Line 1,Delivery Address Line 2,Delivery Postal Code,City,StateProvinceCode,StateProvinceName,Sales Territory,Longitude,Latitude
+841,"Camille Authier","(252) 555-0100","http://www.microsoft.com/CamilleAuthier/","Shop 10","516 Bojin Road","90692","Abbottsburg","NC","North Carolina","Southeast",-78.7250179,34.517114
+115,"Tailspin Toys (Bethania, NC)","(252) 555-0100","http://www.tailspintoys.com/Bethania","Unit 281","49 Vitols Crescent","90368","Bethania","NC","North Carolina","Southeast",-80.3381077,36.1823602
+824,"Risto Valbe","(205) 555-0100","http://www.microsoft.com/RistoValbe/","Suite 22","530 Kellnerova Lane","90146","Bazemore","AL","Alabama","Southeast",-87.7000188,33.8945496
+146,"Tailspin Toys (Belgreen, AL)","(205) 555-0100","http://www.tailspintoys.com/Belgreen","Suite 118","469 Formanek Street","90735","Belgreen","AL","Alabama","Southeast",-87.8664241,34.474818
+38,"Tailspin Toys (Airport Drive, MO)","(314) 555-0100","http://www.tailspintoys.com/AirportDrive","Unit 115","232 Abbasi Avenue","90211","Airport Drive","MO","Missouri","Plains",-94.5107824,37.1425588
+141,"Tailspin Toys (Arrow Rock, MO)","(314) 555-0100","http://www.tailspintoys.com/ArrowRock","Shop 181","1190 Syme Street","90639","Arrow Rock","MO","Missouri","Plains",-92.9465808,39.0697466
+108,"Tailspin Toys (Bernie, MO)","(314) 555-0100","http://www.tailspintoys.com/Bernie","Unit 142","848 Kommineni Street","90045","Bernie","MO","Missouri","Plains",-89.9687021,36.6689446
+537,"Wingtip Toys (Akhiok, AK)","(907) 555-0100","http://www.wingtiptoys.com/Akhiok","Unit 246","1280 Tran Boulevard","90197","Akhiok","AK","Alaska","Far West",-154.1702778,56.9455556
+853,"Caterina Pinto","(907) 555-0100","http://www.microsoft.com/CaterinaPinto/","Suite 13","1278 Lam Street","90112","Akhiok","AK","Alaska","Far West",-154.1702778,56.9455556
+1022,"Nadir Seddigh","(907) 555-0100","http://www.microsoft.com/","Shop 30","283 Panit Road","90067","Biorka","AK","Alaska","Far West",-166.2080556,53.8269444
+83,"Tailspin Toys (Absecon, NJ)","(201) 555-0100","http://www.tailspintoys.com/Absecon","Unit 148","1161 Chang Lane","90540","Absecon","NJ","New Jersey","Mideast",-74.4957076,39.4284503
+566,"Wingtip Toys (Amado, AZ)","(480) 555-0100","http://www.wingtiptoys.com/Amado","Unit 175","593 Mokkapati Road","90107","Amado","AZ","Arizona","Southwest",-111.0645359,31.7078658
+151,"Tailspin Toys (Antares, AZ)","(480) 555-0100","http://www.tailspintoys.com/Antares","Unit 148","307 Raju Street","90385","Antares","AZ","Arizona","Southwest",-113.8085563,35.419715
+595,"Wingtip Toys (Accomac, VA)","(276) 555-0100","http://www.wingtiptoys.com/Accomac","Shop 65","1268 Gonzales Road","90378","Accomac","VA","Virginia","Southeast",-75.6654845,37.7195742
+84,"Tailspin Toys (Aceitunas, PR)","(787) 555-0100","http://www.tailspintoys.com/Aceitunas","Suite 243","328 Bhat Street","90213","Aceitunas","PR","Puerto Rico (US Territory)","External",-67.0649026,18.4432783
+968,"Anca Gogean","(209) 555-0100","http://www.microsoft.com/AncaGogean/","Shop 14","198 Brasseur Avenue","90558","Arrowbear Lake","CA","California","Far West",-117.0833709,34.2108413
+961,"Rani Ganguly","(209) 555-0100","http://www.microsoft.com/RaniGanguly/","Unit 23","1552 Srbova Road","90567","Arrowhead Highlands","CA","California","Far West",-117.2628206,34.2300069
+25,"Tailspin Toys (Avenal, CA)","(209) 555-0100","http://www.tailspintoys.com/Avenal","Shop 37","1143 Caune Crescent","90352","Avenal","CA","California","Far West",-120.1290272,36.0041223
+1034,"Aishwarya Dantuluri","(209) 555-0100","http://www.microsoft.com/","Suite 13","1167 Femke Lane","90735","Biggs","CA","California","Far West",-121.7127513,39.4123876
+91,"Tailspin Toys (Alstead, NH)","(603) 555-0100","http://www.tailspintoys.com/Alstead","Suite 50","520 Walkky Boulevard","90073","Alstead","NH","New Hampshire","New England",-72.3606431,43.1489663
+1030,"Chompoo Atitarn","(603) 555-0100","http://www.microsoft.com/","Unit 16","1605 Anuj Avenue","90794","Ashland","NH","New Hampshire","New England",-71.6306325,43.6953512
+85,"Tailspin Toys (Andrix, CO)","(303) 555-0100","http://www.tailspintoys.com/Andrix","Shop 173","1155 Antunes Crescent","90653","Andrix","CO","Colorado","Rocky Mountain",-103.1927114,37.2794624
+199,"Tailspin Toys (Antonito, CO)","(303) 555-0100","http://www.tailspintoys.com/Antonito","Shop 109","487 Rusl Street","90346","Antonito","CO","Colorado","Rocky Mountain",-106.0086329,37.079179
+161,"Tailspin Toys (Aspen Park, CO)","(303) 555-0100","http://www.tailspintoys.com/AspenPark","Unit 227","1611 Alfred Lane","90644","Aspen Park","CO","Colorado","Rocky Mountain",-105.2947148,39.539155
+509,"Wingtip Toys (Bergen Park, CO)","(303) 555-0100","http://www.wingtiptoys.com/BergenPark","Unit 234","1737 Cheema Avenue","90278","Bergen Park","CO","Colorado","Rocky Mountain",-105.3616598,39.6913769
+589,"Wingtip Toys (Alcester, SD)","(605) 555-0100","http://www.wingtiptoys.com/Alcester","Shop 273","631 Valbe Boulevard","90797","Alcester","SD","South Dakota","Plains",-96.6308708,43.0213783
+892,"Bahaar Asef zade","(225) 555-0100","http://www.microsoft.com/BahaarAsefzade/","Shop 30","1759 Srbova Crescent","90557","Alden Bridge","LA","Louisiana","Southeast",-93.720178,32.7751427
+913,"Violetta KlanCisar","(225) 555-0100","http://www.microsoft.com/ViolettaKlanCisar/","Shop 25","130 Molnar Avenue","90777","Bayou Cane","LA","Louisiana","Southeast",-90.7512023,29.624102
+174,"Tailspin Toys (Astor Park, FL)","(239) 555-0100","http://www.tailspintoys.com/AstorPark","Unit 37","440 Spousta Street","90179","Astor Park","FL","Florida","Southeast",-81.5720175,29.1535911
+854,"Daakshaayaani Kommineni","(239) 555-0100","http://www.microsoft.com/DaakshaayaaniKommineni/","Unit 14","987 Nadar Boulevard","90760","Bakers Mill","FL","Florida","Southeast",-82.939302,30.5796601
+44,"Tailspin Toys (Amanda Park, WA)","(206) 555-0100","http://www.tailspintoys.com/AmandaPark","Unit 117","254 Celmina Street","90258","Amanda Park","WA","Washington","Far West",-123.8860114,47.4631419
+125,"Tailspin Toys (Annamoriah, WV)","(304) 555-0100","http://www.tailspintoys.com/Annamoriah","Unit 280","1394 Ankitham Crescent","90485","Annamoriah","WV","West Virginia","Southeast",-81.227061,38.9406392
+155,"Tailspin Toys (Arbor Vitae, WI)","(262) 555-0100","http://www.tailspintoys.com/ArborVitae","Suite 45","234 Benda Crescent","90333","Arbor Vitae","WI","Wisconsin","Great Lakes",-89.6634802,45.9205077
+178,"Tailspin Toys (Armstrong Creek, WI)","(262) 555-0100","http://www.tailspintoys.com/ArmstrongCreek","Suite 139","902 Rozitis Crescent","90397","Armstrong Creek","WI","Wisconsin","Great Lakes",-88.4462301,45.6582937
+148,"Tailspin Toys (Baraboo, WI)","(262) 555-0100","http://www.tailspintoys.com/Baraboo","Unit 170","1951 Rozitis Lane","90165","Baraboo","WI","Wisconsin","Great Lakes",-89.7442907,43.4710944
+423,"Wingtip Toys (Baldwin City, KS)","(316) 555-0100","http://www.wingtiptoys.com/BaldwinCity","Unit 30","295 Rosberg Avenue","90351","Baldwin City","KS","Kansas","Plains",-95.1863603,38.775007
+889,"Sointu Savonheimo","(701) 555-0100","http://www.microsoft.com/SointuSavonheimo/","Suite 9","1606 Lill Avenue","90328","Argusville","ND","North Dakota","Plains",-96.9345275,47.0521927
+42,"Tailspin Toys (Arietta, NY)","(212) 555-0100","http://www.tailspintoys.com/Arietta","Unit 61","474 Tran Lane","90124","Arietta","NY","New York","Mideast",-74.5176433,43.246181
+427,"Wingtip Toys (Athol Springs, NY)","(212) 555-0100","http://www.wingtiptoys.com/AtholSprings","Shop 205","840 Rezaei Lane","90285","Athol Springs","NY","New York","Mideast",-78.8664229,42.769781
+526,"Wingtip Toys (Beekmantown, NY)","(212) 555-0100","http://www.wingtiptoys.com/Beekmantown","Unit 152","285 Kovacevic Boulevard","90800","Beekmantown","NY","New York","Mideast",-73.4920802,44.7708742
+81,"Tailspin Toys (Big Moose, NY)","(212) 555-0100","http://www.tailspintoys.com/BigMoose","Suite 157","274 Poddar Lane","90798","Big Moose","NY","New York","Mideast",-74.9151774,43.8183991
+490,"Wingtip Toys (Beals, ME)","(207) 555-0100","http://www.wingtiptoys.com/Beals","Shop 61","327 Trivedi Lane","90772","Beals","ME","Maine","New England",-67.6149935,44.5198009
+981,"Mahmut ozbek","(339) 555-0100","http://www.microsoft.com/Mahmutozbek/","Unit 5","662 Ornlamai Boulevard","90358","Bernardston","MA","Massachusetts[E]","New England",-72.5495336,42.6709176
+443,"Wingtip Toys (Berville, MI)","(231) 555-0100","http://www.wingtiptoys.com/Berville","Unit 38","824 Padilla Crescent","90628","Berville","MI","Michigan","Great Lakes",-82.8829846,42.9083621
+440,"Wingtip Toys (Asher, OK)","(405) 555-0100","http://www.wingtiptoys.com/Asher","Suite 121","1277 Almeida Street","90683","Asher","OK","Oklahoma","Southwest",-96.9474152885,34.9934707006
+433,"Wingtip Toys (Balko, OK)","(405) 555-0100","http://www.wingtiptoys.com/Balko","Shop 262","430 Paulet Crescent","90584","Balko","OK","Oklahoma","Southwest",-100.708656688,36.6339746006
+425,"Wingtip Toys (Bethel Acres, OK)","(405) 555-0100","http://www.wingtiptoys.com/BethelAcres","Shop 203","631 Zahradnicek Avenue","90530","Bethel Acres","OK","Oklahoma","Southwest",-97.0493628885,35.3126284006
+864,"Mikhail Degtyarev","(218) 555-0100","http://www.microsoft.com/MikhailDegtyarev/","Unit 3","411 Ganguly Lane","90307","Beaver Bay","MN","Minnesota","Plains",-91.3004437,47.2577003
+143,"Tailspin Toys (Ashtabula, OH)","(216) 555-0100","http://www.tailspintoys.com/Ashtabula","Shop 237","612 Gill Crescent","90119","Ashtabula","OH","Ohio","Great Lakes",-80.7898089,41.8650534
+1036,"Erik Malk","(406) 555-0100","http://www.microsoft.com/","Suite 18","923 Gilbert Avenue","90538","Basin","MT","Montana","Rocky Mountain",-112.2636205,46.2713177
+15,"Tailspin Toys (Batson, TX)","(210) 555-0100","http://www.tailspintoys.com/Batson","Shop 124","671 Mudigonda Boulevard","90631","Batson","TX","Texas","Southwest",-94.6071417,30.2493767
+857,"Clarissa Manfrin","(210) 555-0100","http://www.microsoft.com/ClarissaManfrin/","Shop 17","298 Benipal Road","90714","Ben Arnold","TX","Texas","Southwest",-96.988043,30.9637973
+410,"Wingtip Toys (Bernstein, TX)","(210) 555-0100","http://www.wingtiptoys.com/Bernstein","Shop 130","1921 Bose Boulevard","90314","Bernstein","TX","Texas","Southwest",-101.3571044,36.3941959
+578,"Wingtip Toys (Bell Acres, PA)","(215) 555-0100","http://www.wingtiptoys.com/BellAcres","Suite 8","1761 Nastase Avenue","90526","Bell Acres","PA","Pennsylvania","Mideast",-80.1664479,40.5900673
+492,"Wingtip Toys (Birds, IL)","(217) 555-0100","http://www.wingtiptoys.com/Birds","Shop 146","520 Matos Lane","90393","Birds","IL","Illinois","Great Lakes",-87.6678032,38.8369899
+12,"Tailspin Toys (Biscay, MN)","(218) 555-0100","http://www.tailspintoys.com/Biscay","Suite 67","413 Keskkula Lane","90054","Biscay","MN","Minnesota","Plains",-94.2749801,44.8274625
+402,"Wingtip Toys (Black Lick, PA)","(215) 555-0100","http://www.wingtiptoys.com/BlackLick","Shop 64","581 Koppel Lane","90477","Black Lick","PA","Pennsylvania","Mideast",-79.1997569,40.4792348
+840,"Rodrigo Figueiredo","(803) 555-0100","http://www.microsoft.com/RodrigoFigueiredo/","Unit 23","1155 Kanepa Road","90331","Blackville","SC","South Carolina","Southeast",-81.2706606,33.3579297
+818,"Liia Orav","(252) 555-0100","http://www.microsoft.com/LiiaOrav/","Unit 16","1077 Gunes Boulevard","90489","Bladenboro","NC","North Carolina","Southeast",-78.7875209,34.5387799
+495,"Wingtip Toys (Boalsburg, PA)","(215) 555-0100","http://www.wingtiptoys.com/Boalsburg","Suite 185","122 ozcan Lane","90247","Boalsburg","PA","Pennsylvania","Mideast",-77.7924992,40.7756184
+905,"Sara Huiting","(218) 555-0100","http://www.microsoft.com/SaraHuiting/","Shop 30","1476 Poddar Lane","90490","Bock","MN","Minnesota","Plains",-93.5569028,45.7849627
+474,"Wingtip Toys (Bokeelia, FL)","(239) 555-0100","http://www.wingtiptoys.com/Bokeelia","Shop 102","1019 Hoa Avenue","90757","Bokeelia","FL","Florida","Southeast",-82.1589815,26.7056266
+960,"Edgar Jogi","(209) 555-0100","http://www.microsoft.com/EdgarJogi/","Shop 6","1317 Desforges Street","90451","Bombay Beach","CA","California","Far West",-115.7297152,33.3508667
+485,"Wingtip Toys (Bonner Springs, KS)","(316) 555-0100","http://www.wingtiptoys.com/BonnerSprings","Suite 14","1632 Bose Street","90715","Bonner Springs","KS","Kansas","Plains",-94.8835754,39.059726
+405,"Wingtip Toys (Bourbonnais, IL)","(217) 555-0100","http://www.wingtiptoys.com/Bourbonnais","Suite 139","510 Dumina Boulevard","90582","Bourbonnais","IL","Illinois","Great Lakes",-87.8750429,41.1416991
+558,"Wingtip Toys (Bourneville, OH)","(216) 555-0100","http://www.wingtiptoys.com/Bourneville","Unit 10","158 Lieu Lane","90164","Bourneville","OH","Ohio","Great Lakes",-83.1565742,39.2820094
+8,"Tailspin Toys (Bow Mar, CO)","(303) 555-0100","http://www.tailspintoys.com/BowMar","Shop 282","752 Shaker Doust Boulevard","90484","Bow Mar","CO","Colorado","Rocky Mountain",-105.0499841,39.628321
+955,"Raghu Sandhu","(240) 555-0100","http://www.microsoft.com/RaghuSandhu/","Suite 22","459 Popov Lane","90305","Bowleys Quarters","MD","Maryland","Mideast",-76.3902375,39.3353857
+27,"Tailspin Toys (Bowlus, MN)","(218) 555-0100","http://www.tailspintoys.com/Bowlus","Shop 13","575 Pandit Crescent","90703","Bowlus","MN","Minnesota","Plains",-94.4094468,45.8194098
+1056,"Kalyani Benjaree","(212) 555-0100","http://www.microsoft.com/","Shop 20","429 Viljo Lane","90650","Bowmansville","NY","New York","Mideast",-78.6847515,42.9383918
+33,"Tailspin Toys (Boyden Arbor, SC)","(803) 555-0100","http://www.tailspintoys.com/BoydenArbor","Shop 151","799 Karnik Boulevard","90497","Boyden Arbor","SC","South Carolina","Southeast",-80.9456453,34.0240436
+519,"Wingtip Toys (Boynton, OK)","(405) 555-0100","http://www.wingtiptoys.com/Boynton","Shop 23","710 Rahimi Avenue","90760","Boynton","OK","Oklahoma","Southwest",-95.6798780885,35.6526593006
+412,"Wingtip Toys (Bozeman Hot Springs, MT)","(406) 555-0100","http://www.wingtiptoys.com/BozemanHotSprings","Suite 252","1639 Deb Lane","90708","Bozeman Hot Springs","MT","Montana","Rocky Mountain",-111.185003389,45.6661472137
+817,"Agrita Kanepa","(201) 555-0100","http://www.microsoft.com/AgritaKanepa/","Unit 7","1482 Ibrahimagic Street","90215","Branchburg Park","NJ","New Jersey","Mideast",-74.6848824,40.5723251
+508,"Wingtip Toys (Branson West, MO)","(314) 555-0100","http://www.wingtiptoys.com/BransonWest","Suite 173","1633 Sonkar Boulevard","90016","Branson West","MO","Missouri","Plains",-93.3693524,36.6970059
+120,"Tailspin Toys (Bratenahl, OH)","(216) 555-0100","http://www.tailspintoys.com/Bratenahl","Unit 149","889 Usenuly Street","90154","Bratenahl","OH","Ohio","Great Lakes",-81.626238,41.5425502
+970,"Isidora Urias","(239) 555-0100","http://www.microsoft.com/IsidoraUrias/","Suite 16","900 Cu Avenue","90239","Bratt","FL","Florida","Southeast",-87.4274794,30.9657386
+1023,"Farzana Habibi","(219) 555-0100","http://www.microsoft.com/","Suite 12","430 Mina Street","90772","Brookville","IN","Indiana","Great Lakes",-85.0127376,39.4231065
+544,"Wingtip Toys (Broomtown, AL)","(205) 555-0100","http://www.wingtiptoys.com/Broomtown","Unit 39","1028 Carrillo Boulevard","90717","Broomtown","AL","Alabama","Southeast",-85.5216276,34.3606453
+187,"Tailspin Toys (Brown City, MI)","(231) 555-0100","http://www.tailspintoys.com/BrownCity","Suite 85","1297 Hrdlickova Boulevard","90503","Brown City","MI","Michigan","Great Lakes",-82.9896604,43.2122486
+523,"Wingtip Toys (Bruceton Mills, WV)","(304) 555-0100","http://www.wingtiptoys.com/BrucetonMills","Shop 64","36 Klaus Boulevard","90269","Bruceton Mills","WV","West Virginia","Southeast",-79.6411594,39.6586918
+915,"Ana Florea","(210) 555-0100","http://www.microsoft.com/AnaFlorea/","Shop 3","1898 Pokorna Boulevard","90140","Buchanan Lake Village","TX","Texas","Southwest",-98.4494766,30.8507331
+198,"Tailspin Toys (Buell, MO)","(314) 555-0100","http://www.tailspintoys.com/Buell","Shop 35","804 Nantakarn Road","90113","Buell","MO","Missouri","Plains",-91.4390477,39.0342075
+1024,"Arka Chatterjee","(303) 555-0100","http://www.microsoft.com/","Unit 13","1644 Archer Lane","90675","Byers","CO","Colorado","Rocky Mountain",-104.2277358,39.7113708
+584,"Wingtip Toys (Cache, OK)","(405) 555-0100","http://www.wingtiptoys.com/Cache","Unit 250","75 Min Road","90770","Cache","OK","Oklahoma","Southwest",-98.6524571885,34.6334639006
+437,"Wingtip Toys (Cadogan, PA)","(215) 555-0100","http://www.wingtiptoys.com/Cadogan","Shop 111","1266 Aggarwal Road","90357","Cadogan","PA","Pennsylvania","Mideast",-79.5811576,40.7539533
+475,"Wingtip Toys (Cale, AR)","(479) 555-0100","http://www.wingtiptoys.com/Cale","Unit 12","1235 Oh Crescent","90643","Cale","AR","Arkansas","Southeast",-93.2404457,33.6262263
+927,"Matyas Sedlar","(270) 555-0100","http://www.microsoft.com/MatyasSedlar/","Shop 31","603 Nechita Road","90609","Calvert City","KY","Kentucky","Southeast",-88.3500362,37.0333896
+802,"Cosmina Vlad","(505) 555-0100","http://www.microsoft.com/CosminaVlad/","Suite 9","908 Nadar Lane","90602","Cañon","NM","New Mexico","Southwest",-106.735591,35.6569716
+899,"Chin-Sun Chang","(605) 555-0100","http://www.microsoft.com/Chin-SunChang/","Suite 2","1417 Mercier Boulevard","90093","Capa","SD","South Dakota","Plains",-100.9781948,44.1088749
+504,"Wingtip Toys (Cape Neddick, ME)","(207) 555-0100","http://www.wingtiptoys.com/CapeNeddick","Shop 186","1369 Atluri Crescent","90296","Cape Neddick","ME","Maine","New England",-70.6208862,43.1936986
+137,"Tailspin Toys (Carbonville, UT)","(385) 555-0100","http://www.tailspintoys.com/Carbonville","Suite 272","931 Han Crescent","90339","Carbonville","UT","Utah","Rocky Mountain",-110.8343268,39.6199647
+600,"Wingtip Toys (Caro, MI)","(231) 555-0100","http://www.wingtiptoys.com/Caro","Unit 159","489 Ganguly Road","90043","Caro","MI","Michigan","Great Lakes",-83.396897,43.4911322
+906,"Ajitaab Pakalapati","(209) 555-0100","http://www.microsoft.com/AjitaabPakalapati/","Shop 11","1892 Clark Avenue","90494","Caruthers","CA","California","Far West",-119.8331965,36.5427271
+180,"Tailspin Toys (Caselton, NV)","(702) 555-0100","http://www.tailspintoys.com/Caselton","Suite 206","1839 Hadrabova Crescent","90747","Caselton","NV","Nevada","Far West",-114.4852707,37.9191297
+821,"Kwanjai Saowaluk","(787) 555-0100","http://www.microsoft.com/KwanjaiSaowaluk/","Shop 24","643 Logan Lane","90642","Cataño","PR","Puerto Rico (US Territory)","External",-66.1182218,18.4413351
+1000,"Krishnam Allu","(405) 555-0100","http://www.microsoft.com/KrishnamAllu/","Unit 20","1253 Rahimi Lane","90495","Catesby","OK","Oklahoma","Southwest",-99.9866879885,36.4970385006
+482,"Wingtip Toys (Caton, NY)","(212) 555-0100","http://www.wingtiptoys.com/Caton","Unit 122","1187 Baruah Crescent","90250","Caton","NY","New York","Mideast",-77.0277448,42.0561853
+887,"Baran Jonsson","(458) 555-0100","http://www.microsoft.com/BaranJonsson/","Shop 9","1349 Lukstina Road","90119","Cave Junction","OR","Oregon","Far West",-123.6481235,42.1628912
+501,"Wingtip Toys (Cavendish, VT)","(802) 555-0100","http://www.wingtiptoys.com/Cavendish","Shop 295","62 Berggren Road","90672","Cavendish","VT","Vermont","New England",-72.608149,43.3820171
+831,"Bhaavan Rai","(308) 555-0100","http://www.microsoft.com/BhaavanRai/","Shop 28","387 Heikkinen Boulevard","90474","Chalco","NE","Nebraska","Plains",-96.1502969,41.1838878
+547,"Wingtip Toys (Chaseley, ND)","(701) 555-0100","http://www.wingtiptoys.com/Chaseley","Suite 211","1666 Semjonov Lane","90066","Chaseley","ND","North Dakota","Plains",-99.8201206,47.4502759
+862,"Lana Goransson","(212) 555-0100","http://www.microsoft.com/LanaGoransson/","Suite 27","1818 Buecek Boulevard","90239","Chateaugay","NY","New York","Mideast",-74.0796081,44.9264337
+1012,"Urve Kasesalu","(319) 555-0100","http://www.microsoft.com/","Unit 17","987 Amarendra Road","90140","Cherokee","IA","Iowa","Plains",-95.551674,42.7494277
+114,"Tailspin Toys (Cherry Grove Beach, SC)","(803) 555-0100","http://www.tailspintoys.com/CherryGroveBeach","Unit 9","406 Malakar Lane","90146","Cherry Grove Beach","SC","South Carolina","Southeast",-78.6427922,33.8273947
+943,"Drazenka Jelic","(803) 555-0100","http://www.microsoft.com/DrazenkaJelic/","Unit 23","1577 Lam Lane","90577","Cherry Grove Beach","SC","South Carolina","Southeast",-78.6427922,33.8273947
+577,"Wingtip Toys (Cherryplain, NY)","(212) 555-0100","http://www.wingtiptoys.com/Cherryplain","Shop 170","1688 Madhunapantula Avenue","90779","Cherryplain","NY","New York","Mideast",-73.3581648,42.6292474
+417,"Wingtip Toys (Chetek, WI)","(262) 555-0100","http://www.wingtiptoys.com/Chetek","Shop 144","310 Benipal Lane","90193","Chetek","WI","Wisconsin","Great Lakes",-91.6510007,45.3141273
+94,"Tailspin Toys (Cheyenne Wells, CO)","(303) 555-0100","http://www.tailspintoys.com/CheyenneWells","Unit 150","617 Pornpipatpong Lane","90449","Cheyenne Wells","CO","Colorado","Rocky Mountain",-102.3532435,38.8213951
+966,"Sara Walkky","(303) 555-0100","http://www.microsoft.com/SaraWalkky/","Shop 29","934 Borgen Street","90192","Chipita Park","CO","Colorado","Rocky Mountain",-105.0066477,38.9244346
+1020,"Hai Banh","(252) 555-0100","http://www.microsoft.com/","Shop 24","1983 Chandrakanta Street","90492","Claremont","NC","North Carolina","Southeast",-81.1461917,35.7145776
+525,"Wingtip Toys (Claycomo, MO)","(314) 555-0100","http://www.wingtiptoys.com/Claycomo","Suite 255","1668 Nechita Boulevard","90501","Claycomo","MO","Missouri","Plains",-94.492453,39.202503
+93,"Tailspin Toys (Clewiston, FL)","(239) 555-0100","http://www.tailspintoys.com/Clewiston","Suite 80","351 Lill Crescent","90354","Clewiston","FL","Florida","Southeast",-80.9336753,26.7542312
+524,"Wingtip Toys (Cloquet, MN)","(218) 555-0100","http://www.wingtiptoys.com/Cloquet","Unit 271","336 Kasesalu Lane","90639","Cloquet","MN","Minnesota","Plains",-92.4593566,46.7216102
+997,"Nada Ana Slosar","(239) 555-0100","http://www.microsoft.com/NadaAnaSlosar/","Unit 7","1746 Das Avenue","90389","Cloud Lake","FL","Florida","Southeast",-80.0739309,26.6761772
+909,"Dena Glissen","(316) 555-0100","http://www.microsoft.com/DenaGlissen/","Unit 13","1331 Sen Street","90665","Coffeyville","KS","Kansas","Plains",-95.6163665,37.0373005
+447,"Wingtip Toys (Coin, IA)","(319) 555-0100","http://www.wingtiptoys.com/Coin","Unit 133","1197 Nastase Avenue","90458","Coin","IA","Iowa","Plains",-95.2302597,40.6544393
+73,"Tailspin Toys (Cokato, MN)","(218) 555-0100","http://www.tailspintoys.com/Cokato","Shop 194","591 Avotina Road","90311","Cokato","MN","Minnesota","Plains",-94.1899799,45.0757967
+458,"Wingtip Toys (Coker, AL)","(205) 555-0100","http://www.wingtiptoys.com/Coker","Shop 23","1813 Koppel Crescent","90364","Coker","AL","Alabama","Southeast",-87.6877882,33.2459512
+1043,"Raj Verma","(203) 555-0100","http://www.microsoft.com/","Shop 9","678 Sang Crescent","90799","Colebrook","CT","Connecticut","New England",-73.0956646,41.9895388
+20,"Tailspin Toys (College Place, WA)","(206) 555-0100","http://www.tailspintoys.com/CollegePlace","Shop 151","1536 Bhutia Avenue","90050","College Place","WA","Washington","Far West",-118.3883012,46.0493026
+419,"Wingtip Toys (Compass Lake, FL)","(239) 555-0100","http://www.wingtiptoys.com/CompassLake","Suite 150","1050 Tu Boulevard","90212","Compass Lake","FL","Florida","Southeast",-85.3927045,30.5926937
+879,"Jitka Necesana","(212) 555-0100","http://www.microsoft.com/JitkaNecesana/","Suite 10","1511 Ilic Boulevard","90400","Conesus Lake","NY","New York","Mideast",-77.7135072,42.7756477
+921,"Victoria Lacusta","(212) 555-0100","http://www.microsoft.com/VictoriaLacusta/","Suite 12","415 Omidzadeh Road","90632","Conewango","NY","New York","Mideast",-79.0311516,42.2386716
+16,"Tailspin Toys (Coney Island, MO)","(314) 555-0100","http://www.tailspintoys.com/ConeyIsland","Suite 111","27 Vidovic Boulevard","90467","Coney Island","MO","Missouri","Plains",-93.3971299,36.5931192
+579,"Wingtip Toys (Connoquenessing, PA)","(215) 555-0100","http://www.wingtiptoys.com/Connoquenessing","Suite 199","854 Kotadia Crescent","90775","Connoquenessing","PA","Pennsylvania","Mideast",-80.0142257,40.8178427
+979,"Melani Ravlen","(405) 555-0100","http://www.microsoft.com/MelaniRavlen/","Unit 7","340 Lucchesi Street","90303","Cookietown","OK","Oklahoma","Southwest",-98.4771715885,34.2790367006
+852,"Bhagavaan Atluri","(229) 555-0100","http://www.microsoft.com/BhagavaanAtluri/","Suite 16","1382 Wintle Road","90747","Coosa","GA","Georgia","Southeast",-85.3544002,34.2545377
+1002,"Stefan Selezeanu","(212) 555-0100","http://www.microsoft.com/","Unit 2","1683 Zala Avenue","90053","Copake","NY","New York","Mideast",-73.5501211,42.1034238
+454,"Wingtip Toys (Corcovado, PR)","(787) 555-0100","http://www.wingtiptoys.com/Corcovado","Suite 191","1924 Spousta Lane","90498","Corcovado","PR","Puerto Rico (US Territory)","External",-66.7762868,18.4585569
+150,"Tailspin Toys (Corfu, NY)","(212) 555-0100","http://www.tailspintoys.com/Corfu","Suite 153","1989 Utjesenovic Road","90690","Corfu","NY","New York","Mideast",-78.4055767,42.9600595
+1017,"David Novacek","(423) 555-0100","http://www.microsoft.com/","Shop 10","588 Danielle  Lane","90064","Corryton","TN","Tennessee","Southeast",-83.7824062,36.1536937
+72,"Tailspin Toys (Cortaro, AZ)","(480) 555-0100","http://www.tailspintoys.com/Cortaro","Suite 231","1809 Ioveanu Lane","90351","Cortaro","AZ","Arizona","Southwest",-111.0884337,32.3561848
+596,"Wingtip Toys (Cos Cob, CT)","(203) 555-0100","http://www.wingtiptoys.com/CosCob","Suite 283","1014 Wattanasin Avenue","90675","Cos Cob","CT","Connecticut","New England",-73.5995698,41.0334305
+896,"Leonardo Folliero","(339) 555-0100","http://www.microsoft.com/LeonardoFolliero/","Unit 22","349 Berggren Street","90759","Cotuit","MA","Massachusetts[E]","New England",-70.4369703,41.6167766
+876,"Marie LeBatelier","(210) 555-0100","http://www.microsoft.com/MarieLeBatelier/","Unit 19","1178 Persson Boulevard","90160","Coupland","TX","Texas","Southwest",-97.3886085,30.4599264
+463,"Wingtip Toys (Cowlington, OK)","(405) 555-0100","http://www.wingtiptoys.com/Cowlington","Shop 57","521 Arslan Street","90524","Cowlington","OK","Oklahoma","Southwest",-94.7897384014,35.3058311009
+868,"Laura Sykorova","(316) 555-0100","http://www.microsoft.com/LauraSykorova/","Shop 2","1225 Gormanston Boulevard","90608","Coyville","KS","Kansas","Plains",-95.8974859,37.6861525
+930,"Shantanu Huq","(252) 555-0100","http://www.microsoft.com/ShantanuHuq/","Shop 27","1274 Lundin Street","90146","Cramerton","NC","North Carolina","Southeast",-81.0750757,35.2387504
+160,"Tailspin Toys (Crary, ND)","(701) 555-0100","http://www.tailspintoys.com/Crary","Suite 181","522 Longo Lane","90248","Crary","ND","North Dakota","Plains",-98.6384434,48.0708347
+848,"Alvin Bollinger","(270) 555-0100","http://www.microsoft.com/AlvinBollinger/","Suite 31","1091 KlanCisar Crescent","90623","Creelsboro","KY","Kentucky","Southeast",-85.1974583,36.8850648
+462,"Wingtip Toys (Crossroads, NM)","(505) 555-0100","http://www.wingtiptoys.com/Crossroads","Unit 288","1925 Ankitham Road","90068","Crossroads","NM","New Mexico","Southwest",-103.3396737,33.5123245
+101,"Tailspin Toys (Cundiyo, NM)","(505) 555-0100","http://www.tailspintoys.com/Cundiyo","Suite 117","1940 Shim Avenue","90515","Cundiyo","NM","New Mexico","Southwest",-105.8964091,35.9591922
+991,"Valter Viiding","(216) 555-0100","http://www.microsoft.com/ValterViiding/","Suite 10","129 Jo Road","90005","Cuyahoga Heights","OH","Ohio","Great Lakes",-81.6573501,41.4353301
+593,"Wingtip Toys (Cuyamungue, NM)","(505) 555-0100","http://www.wingtiptoys.com/Cuyamungue","Suite 51","1342 Gajula Boulevard","90540","Cuyamungue","NM","New Mexico","Southwest",-106.0041892,35.8697483
+439,"Wingtip Toys (Cylon, WI)","(262) 555-0100","http://www.wingtiptoys.com/Cylon","Suite 36","1673 Pokorna Avenue","90266","Cylon","WI","Wisconsin","Great Lakes",-92.352969,45.1221865
+894,"Gabriela Hernandes","(239) 555-0100","http://www.microsoft.com/GabrielaHernandes/","Suite 31","632 Sokk Lane","90114","Cypress Quarters","FL","Florida","Southeast",-80.8139491,27.2519902
+445,"Wingtip Toys (Dacono, CO)","(303) 555-0100","http://www.wingtiptoys.com/Dacono","Shop 54","541 Shergill Street","90289","Dacono","CO","Colorado","Rocky Mountain",-104.9394216,40.0847062
+113,"Tailspin Toys (Dahlia, NM)","(505) 555-0100","http://www.tailspintoys.com/Dahlia","Shop 52","1566 Holy Road","90264","Dahlia","NM","New Mexico","Southwest",-105.2769498,35.1214409
+34,"Tailspin Toys (Dallardsville, TX)","(210) 555-0100","http://www.tailspintoys.com/Dallardsville","Unit 103","1734 Jovicevic Crescent","90041","Dallardsville","TX","Texas","Southwest",-94.6318698,30.6285363
+903,"Bing Han","(228) 555-0100","http://www.microsoft.com/BingHan/","Unit 29","1170 Nguyen Avenue","90402","Darling","MS","Mississippi","Southeast",-90.2742605,34.3589978
+1010,"Serdar ozCelik","(210) 555-0100","http://www.microsoft.com/","Unit 2","473 Mani Avenue","90481","Dawn","TX","Texas","Southwest",-102.1999199,34.9103368
+842,"Biju Deb","(218) 555-0100","http://www.microsoft.com/BijuDeb/","Suite 20","1104 Podnieks Road","90241","Deer River","MN","Minnesota","Plains",-93.7927173,47.3330045
+538,"Wingtip Toys (Deeson, MS)","(228) 555-0100","http://www.wingtiptoys.com/Deeson","Unit 247","391 Lanctot Lane","90338","Deeson","MS","Mississippi","Southeast",-90.8595487,34.0231639
+515,"Wingtip Toys (Del Valle, TX)","(210) 555-0100","http://www.wingtiptoys.com/DelValle","Shop 21","1064 Vulpes Street","90612","Del Valle","TX","Texas","Southwest",-97.6547243,30.2107669
+449,"Wingtip Toys (Delray, WV)","(304) 555-0100","http://www.wingtiptoys.com/Delray","Suite 120","1400 Kongpaisarn Street","90317","Delray","WV","West Virginia","Southeast",-78.6041789,39.1945484
+816,"Harsha Huq","(314) 555-0100","http://www.microsoft.com/HarshaHuq/","Suite 13","868 Prikrylova Street","90051","Dennis Acres","MO","Missouri","Plains",-94.5055021,37.0467281
+11,"Tailspin Toys (Devault, PA)","(215) 555-0100","http://www.tailspintoys.com/Devault","Unit 250","1432 Pullela Street","90185","Devault","PA","Pennsylvania","Mideast",-75.5351981,40.0745503
+39,"Tailspin Toys (Diablock, KY)","(270) 555-0100","http://www.tailspintoys.com/Diablock","Shop 240","282 Barajas Street","90158","Diablock","KY","Kentucky","Southeast",-83.1721162,37.2284289
+522,"Wingtip Toys (Dickerson, MD)","(240) 555-0100","http://www.wingtiptoys.com/Dickerson","Unit 116","1760 Gummadi Road","90783","Dickerson","MD","Maryland","Mideast",-77.424153,39.220104
+599,"Wingtip Toys (Dickworsham, TX)","(210) 555-0100","http://www.wingtiptoys.com/Dickworsham","Unit 210","811 Benjaree Road","90704","Dickworsham","TX","Texas","Southwest",-98.1155976,33.7514907
+1014,"Narendra Tickoo","(803) 555-0100","http://www.microsoft.com/","Shop 13","1608 Volkan Boulevard","90053","Dillon","SC","South Carolina","Southeast",-79.3711579,34.4165505
+158,"Tailspin Toys (Donner, LA)","(225) 555-0100","http://www.tailspintoys.com/Donner","Suite 255","299 Gill Boulevard","90567","Donner","LA","Louisiana","Southeast",-90.9442629,29.6957647
+1001,"Dinh Mai","(210) 555-0100","http://www.microsoft.com/","Suite 22","1787 Hele Avenue","90423","Dorchester","TX","Texas","Southwest",-96.6894367,33.5303861
+1029,"Veronika Necesana","(218) 555-0100","http://www.microsoft.com/","Shop 10","767 Gopalgobinda Crescent","90090","Dover","MN","Minnesota","Plains",-92.139051,43.9735748
+507,"Wingtip Toys (Downingtown, PA)","(215) 555-0100","http://www.wingtiptoys.com/Downingtown","Unit 25","1353 YÄ±lmaz Street","90133","Downingtown","PA","Pennsylvania","Mideast",-75.7032742,40.0064958
+88,"Tailspin Toys (Dracut, MA)","(339) 555-0100","http://www.tailspintoys.com/Dracut","Shop 226","609 Sidhu Crescent","90519","Dracut","MA","Massachusetts[E]","New England",-71.3020052,42.6703687
+812,"Celica Barajas","(270) 555-0100","http://www.microsoft.com/CelicaBarajas/","Suite 24","1997 Purins Lane","90002","Drakesboro","KY","Kentucky","Southeast",-87.0488847,37.2175425
+933,"Joel Carrillo","(405) 555-0100","http://www.microsoft.com/JoelCarrillo/","Unit 18","227 Paruchuri Boulevard","90340","Drumright","OK","Oklahoma","Southwest",-96.6249124885,35.9923487006
+856,"Satish Mittal","(215) 555-0100","http://www.microsoft.com/SatishMittal/","Shop 13","972 Vassiljev Street","90367","Dry Run","PA","Pennsylvania","Mideast",-77.7538812,40.1675853
+901,"Adrian Andreasson","(217) 555-0100","http://www.microsoft.com/AdrianAndreasson/","Unit 21","837 Walker Road","90392","Du Quoin","IL","Illinois","Great Lakes",-89.2361935,38.0114393
+24,"Tailspin Toys (Dundarrach, NC)","(252) 555-0100","http://www.tailspintoys.com/Dundarrach","Shop 181","818 Paulet Avenue","90758","Dundarrach","NC","North Carolina","Southeast",-79.155033,34.9293315
+592,"Wingtip Toys (Dunkerton, IA)","(319) 555-0100","http://www.wingtiptoys.com/Dunkerton","Suite 226","30 Mitra Street","90141","Dunkerton","IA","Iowa","Plains",-92.1604569,42.5699858
+863,"Jakub Lukes","(212) 555-0100","http://www.microsoft.com/JakubLukes/","Shop 9","1501 Tuntayakul Crescent","90219","Eagle Valley","NY","New York","Mideast",-74.226814,41.1548173
+60,"Tailspin Toys (East Dailey, WV)","(304) 555-0100","http://www.tailspintoys.com/EastDailey","Unit 188","838 Lucescu Street","90548","East Dailey","WV","West Virginia","Southeast",-79.8909006,38.7803866
+17,"Tailspin Toys (East Fultonham, OH)","(216) 555-0100","http://www.tailspintoys.com/EastFultonham","Unit 278","224 Hinojosa Road","90416","East Fultonham","OH","Ohio","Great Lakes",-82.1220868,39.8500679
+499,"Wingtip Toys (East Fultonham, OH)","(216) 555-0100","http://www.wingtiptoys.com/EastFultonham","Shop 20","1046 Saucier Road","90032","East Fultonham","OH","Ohio","Great Lakes",-82.1220868,39.8500679
+530,"Wingtip Toys (East Mountain, TX)","(210) 555-0100","http://www.wingtiptoys.com/EastMountain","Unit 249","1636 Monty Road","90353","East Mountain","TX","Texas","Southwest",-94.8554918,32.593754
+128,"Tailspin Toys (East Portal, CO)","(303) 555-0100","http://www.tailspintoys.com/EastPortal","Shop 92","999 Kasesalu Road","90432","East Portal","CO","Colorado","Rocky Mountain",-105.6444469,39.9033204
+170,"Tailspin Toys (Eastchester, NY)","(212) 555-0100","http://www.tailspintoys.com/Eastchester","Unit 109","1568 Srisati Boulevard","90031","Eastchester","NY","New York","Mideast",-73.8281895,40.8884329
+154,"Tailspin Toys (Eden Valley, MN)","(218) 555-0100","http://www.tailspintoys.com/EdenValley","Unit 248","226 Auzina Lane","90367","Eden Valley","MN","Minnesota","Plains",-94.5461074,45.3260745
+59,"Tailspin Toys (Edgartown, MA)","(339) 555-0100","http://www.tailspintoys.com/Edgartown","Suite 157","659 Hybl Boulevard","90684","Edgartown","MA","Massachusetts[E]","New England",-70.5133599,41.3890052
+959,"Dhaatri Chavva","(207) 555-0100","http://www.microsoft.com/DhaatriChavva/","Suite 4","438 Desforges Road","90686","Edgecomb","ME","Maine","New England",-69.630602,43.9584129
+411,"Wingtip Toys (Edmund, WI)","(262) 555-0100","http://www.wingtiptoys.com/Edmund","Suite 96","910 Hrdlickova Crescent","90777","Edmund","WI","Wisconsin","Great Lakes",-90.264568,42.9674944
+36,"Tailspin Toys (Ekron, KY)","(270) 555-0100","http://www.tailspintoys.com/Ekron","Shop 2","155 Goransson Lane","90603","Ekron","KY","Kentucky","Southeast",-86.1794145,37.9292349
+805,"Ratan Poddar","(907) 555-0100","http://www.microsoft.com/RatanPoddar/","Shop 16","1071 Goransson Crescent","90457","Ekwok","AK","Alaska","Far West",-157.4752778,59.3497222
+98,"Tailspin Toys (El Centro, CA)","(209) 555-0100","http://www.tailspintoys.com/ElCentro","Unit 30","1437 Ahmadian Avenue","90573","El Centro","CA","California","Far West",-115.5630514,32.792
+990,"Andris Saulitis","(210) 555-0100","http://www.microsoft.com/AndrisSaulitis/","Unit 28","370 Rallapalli Street","90073","El Refugio","TX","Texas","Southwest",-98.755859,26.340345
+829,"Jack Walker","(316) 555-0100","http://www.microsoft.com/JackWalker/","Shop 3","1188 Krastins Avenue","90032","Elbing","KS","Kansas","Plains",-97.1278103,38.0527925
+867,"Jasna Cerkez","(304) 555-0100","http://www.microsoft.com/JasnaCerkez/","Unit 11","1004 Mukherjee Street","90174","Elk Garden","WV","West Virginia","Southeast",-79.154201,39.3834313
+815,"Libuse Valentova","(270) 555-0100","http://www.microsoft.com/LibuseValentova/","Unit 22","1354 Szolosy Crescent","90100","Elkatawa","KY","Kentucky","Southeast",-83.4268483,37.5570338
+1059,"Jibek Juniskyzy","(217) 555-0100","http://www.microsoft.com/","Shop 23","80 Hudson Boulevard","90073","Ellisville","IL","Illinois","Great Lakes",-90.3051249,40.6267064
+121,"Tailspin Toys (Elrosa, MN)","(218) 555-0100","http://www.tailspintoys.com/Elrosa","Shop 251","835 Bach Crescent","90079","Elrosa","MN","Minnesota","Plains",-94.9472391,45.5627429
+487,"Wingtip Toys (Elverson, PA)","(215) 555-0100","http://www.wingtiptoys.com/Elverson","Unit 288","732 Nakhtare Boulevard","90147","Elverson","PA","Pennsylvania","Mideast",-75.8327088,40.1567641
+928,"Arijit Bhuiyan","(212) 555-0100","http://www.microsoft.com/ArijitBhuiyan/","Shop 15","1758 Naicker Boulevard","90186","Esopus","NY","New York","Mideast",-73.9651379,41.8278707
+29,"Tailspin Toys (Eulaton, AL)","(205) 555-0100","http://www.tailspintoys.com/Eulaton","Shop 16","1606 Ahmadian Road","90571","Eulaton","AL","Alabama","Southeast",-85.9124671,33.6456587
+962,"Bhagavati Vinjamuri","(319) 555-0100","http://www.microsoft.com/BhagavatiVinjamuri/","Suite 22","1774 Bohuslav Boulevard","90629","Ewart","IA","Iowa","Plains",-92.6104663,41.641109
+860,"Marcela Lucescu","(231) 555-0100","http://www.microsoft.com/MarcelaLucescu/","Unit 5","201 Glissen Lane","90538","Ewen","MI","Michigan","Great Lakes",-89.2812556,46.535222
+61,"Tailspin Toys (Fairfield Glade, TN)","(423) 555-0100","http://www.tailspintoys.com/FairfieldGlade","Shop 233","1695 Hudecova Avenue","90050","Fairfield Glade","TN","Tennessee","Southeast",-84.8863395,36.0003475
+493,"Wingtip Toys (Federalsburg, MD)","(240) 555-0100","http://www.wingtiptoys.com/Federalsburg","Suite 249","981 Cattaneo Road","90373","Federalsburg","MD","Maryland","Mideast",-75.7721551,38.6942809
+536,"Wingtip Toys (Ferney, SD)","(605) 555-0100","http://www.wingtiptoys.com/Ferney","Shop 270","289 Ahmadi Crescent","90461","Ferney","SD","South Dakota","Plains",-98.0978733,45.3305156
+102,"Tailspin Toys (Fieldbrook, CA)","(209) 555-0100","http://www.tailspintoys.com/Fieldbrook","Suite 287","1455 Grgic Crescent","90205","Fieldbrook","CA","California","Far West",-124.0356196,40.9656826
+147,"Tailspin Toys (Fishtail, MT)","(406) 555-0100","http://www.tailspintoys.com/Fishtail","Unit 49","469 Patel Avenue","90432","Fishtail","MT","Montana","Rocky Mountain",-109.5043343,45.4535539
+952,"Chuan Wattanasin","(217) 555-0100","http://www.microsoft.com/ChuanWattanasin/","Suite 8","1774 Yadav Crescent","90097","Flanagan","IL","Illinois","Great Lakes",-88.8611818,40.8780891
+570,"Wingtip Toys (Flomaton, AL)","(205) 555-0100","http://www.wingtiptoys.com/Flomaton","Suite 168","145 Weitzer Boulevard","90134","Flomaton","AL","Alabama","Southeast",-87.2608071,31.000182
+1042,"Nguyen Banh","(239) 555-0100","http://www.microsoft.com/","Unit 7","1885 William Boulevard","90744","Florahome","FL","Florida","Southeast",-81.8834269,29.7327446
+473,"Wingtip Toys (Floriston, CA)","(209) 555-0100","http://www.wingtiptoys.com/Floriston","Suite 203","229 Cao Lane","90298","Floriston","CA","California","Far West",-120.021308,39.3946303
+890,"Olya Izmaylov","(210) 555-0100","http://www.microsoft.com/OlyaIzmaylov/","Suite 4","1129 Hulsegge Boulevard","90659","Flowella","TX","Texas","Southwest",-98.0644475,27.2164329
+923,"Tai Bach","(219) 555-0100","http://www.microsoft.com/TaiBach/","Suite 14","1831 Vulpes Crescent","90429","Fortville","IN","Indiana","Great Lakes",-85.8480354,39.9322625
+126,"Tailspin Toys (Francis Mills, NJ)","(201) 555-0100","http://www.tailspintoys.com/FrancisMills","Shop 167","772 Naicker Road","90743","Francis Mills","NJ","New Jersey","Mideast",-74.3973717,40.1348354
+7,"Tailspin Toys (Frankewing, TN)","(423) 555-0100","http://www.tailspintoys.com/Frankewing","Shop 27","904 Kellnerova Street","90761","Frankewing","TN","Tennessee","Southeast",-86.8511135,35.19258
+520,"Wingtip Toys (Frenchburg, KY)","(270) 555-0100","http://www.wingtiptoys.com/Frenchburg","Suite 169","1392 Tuntayakul Lane","90218","Frenchburg","KY","Kentucky","Southeast",-83.6257452,37.950916
+140,"Tailspin Toys (Furley, KS)","(316) 555-0100","http://www.tailspintoys.com/Furley","Suite 199","1096 Poursokh Crescent","90416","Furley","KS","Kansas","Plains",-97.2128162,37.8791795
+1019,"Dhanishta Pullela","(304) 555-0100","http://www.microsoft.com/","Suite 6","304 Olly Lane","90267","Gallipolis Ferry","WV","West Virginia","Southeast",-82.1987576,38.7706371
+68,"Tailspin Toys (Gardere, LA)","(225) 555-0100","http://www.tailspintoys.com/Gardere","Unit 72","1195 Rozitis Road","90136","Gardere","LA","Louisiana","Southeast",-91.1401055,30.3457487
+837,"Anil Sarkar","(215) 555-0100","http://www.microsoft.com/AnilSarkar/","Shop 3","747 Mihajlovik Boulevard","90659","Gardners","PA","Pennsylvania","Mideast",-77.2069266,40.0056483
+436,"Wingtip Toys (Gargatha, VA)","(276) 555-0100","http://www.wingtiptoys.com/Gargatha","Shop 233","1362 Gajula Road","90752","Gargatha","VA","Virginia","Southeast",-75.5979836,37.8001273
+886,"Debbie Molina","(270) 555-0100","http://www.microsoft.com/DebbieMolina/","Suite 28","508 De Avenue","90703","Garlin","KY","Kentucky","Southeast",-85.2521825,37.1139534
+5,"Tailspin Toys (Gasport, NY)","(212) 555-0100","http://www.tailspintoys.com/Gasport","Unit 176","1674 Skujins Boulevard","90261","Gasport","NY","New York","Mideast",-78.5761394,43.1992244
+859,"Shah Alizadeh","(304) 555-0100","http://www.microsoft.com/ShahAlizadeh/","Shop 4","551 Linna Street","90553","Gassaway","WV","West Virginia","Southeast",-80.7748218,38.6731544
+514,"Wingtip Toys (Gilford, NH)","(603) 555-0100","http://www.wingtiptoys.com/Gilford","Unit 20","231 Kaulina Street","90418","Gilford","NH","New Hampshire","New England",-71.4067385,43.5475771
+477,"Wingtip Toys (Glancy, MS)","(228) 555-0100","http://www.wingtiptoys.com/Glancy","Shop 232","856 Sarkar Street","90294","Glancy","MS","Mississippi","Southeast",-90.4964839,31.8184955
+107,"Tailspin Toys (Glen Avon, CA)","(209) 555-0100","http://www.tailspintoys.com/GlenAvon","Unit 32","917 Morgan Boulevard","90782","Glen Avon","CA","California","Far West",-117.4847714,34.0116799
+162,"Tailspin Toys (Glen Park, NY)","(212) 555-0100","http://www.tailspintoys.com/GlenPark","Unit 69","1219 Van Groesen Avenue","90026","Glen Park","NY","New York","Mideast",-75.9663138,44.0011701
+464,"Wingtip Toys (Glen Ullin, ND)","(701) 555-0100","http://www.wingtiptoys.com/GlenUllin","Unit 91","710 Barbosa Lane","90380","Glen Ullin","ND","North Dakota","Plains",-101.829877,46.8150051
+832,"Aakriti Byrraju","(216) 555-0100","http://www.microsoft.com/AakritiByrraju/","Suite 24","1345 Jun Avenue","90607","Glenwillow","OH","Ohio","Great Lakes",-81.4695602,41.3617214
+18,"Tailspin Toys (Goffstown, NH)","(603) 555-0100","http://www.tailspintoys.com/Goffstown","Unit 166","1822 Gruber Lane","90321","Goffstown","NH","New Hampshire","New England",-71.600349,43.0203609
+910,"Elina Kaleja","(225) 555-0100","http://www.microsoft.com/ElinaKaleja/","Unit 18","469 Valbe Road","90395","Golden Meadow","LA","Louisiana","Southeast",-90.2600787,29.3791112
+935,"Daevasree Samavedam","(201) 555-0100","http://www.microsoft.com/DaevasreeSamavedam/","Suite 25","1690 Poddar Avenue","90503","Golf View","NJ","New Jersey","Mideast",-75.4693628,39.7006692
+71,"Tailspin Toys (Good Hart, MI)","(231) 555-0100","http://www.tailspintoys.com/GoodHart","Shop 80","2001 Rajanala Road","90466","Good Hart","MI","Michigan","Great Lakes",-85.113118,45.5672308
+576,"Wingtip Toys (Goodings Grove, IL)","(217) 555-0100","http://www.wingtiptoys.com/GoodingsGrove","Shop 156","1428 Mercier Avenue","90512","Goodings Grove","IL","Illinois","Great Lakes",-87.9308893,41.6291984
+510,"Wingtip Toys (Grabill, IN)","(219) 555-0100","http://www.wingtiptoys.com/Grabill","Suite 187","1015 Chowdary Boulevard","90032","Grabill","IN","Indiana","Great Lakes",-84.9669112,41.2108829
+983,"Sabine Alksne","(479) 555-0100","http://www.microsoft.com/SabineAlksne/","Unit 27","767 Jun Avenue","90618","Grannis","AR","Arkansas","Southeast",-94.3349306,34.2406665
+985,"Roko Ilic","(262) 555-0100","http://www.microsoft.com/RokoIlic/","Unit 17","1653 Huq Crescent","90658","Grantsburg","WI","Wisconsin","Great Lakes",-92.6827041,45.7763419
+1046,"Christian Couet","(212) 555-0100","http://www.microsoft.com/","Unit 29","315 Caterina Lane","90370","Great Neck","NY","New York","Mideast",-73.7284647,40.8006567
+62,"Tailspin Toys (Great Neck Estates, NY)","(212) 555-0100","http://www.tailspintoys.com/GreatNeckEstates","Shop 263","551 Enestam Crescent","90240","Great Neck Estates","NY","New York","Mideast",-73.7367983,40.7870459
+839,"Juan Morse","(423) 555-0100","http://www.microsoft.com/JuanMorse/","Suite 13","51 Nechita Crescent","90523","Greenback","TN","Tennessee","Southeast",-84.1721357,35.6611904
+1009,"Bhagavateeprasaad Malladi","(479) 555-0100","http://www.microsoft.com/","Shop 18","1386 Elnaz Avenue","90471","Greenfield","AR","Arkansas","Southeast",-90.712611999999993,35.6323013
+919,"Kertu Sokk","(212) 555-0100","http://www.microsoft.com/KertuSokk/","Shop 11","965 Horackova Lane","90718","Greig","NY","New York","Mideast",-75.3546233,43.681458
+900,"Lilli Sokk","(229) 555-0100","http://www.microsoft.com/LilliSokk/","Suite 24","793 Thai Boulevard","90357","Gresston","GA","Georgia","Southeast",-83.2523765,32.286281
+1018,"Nils Kaulins","(406) 555-0100","http://www.microsoft.com/","Unit 13","432 Ebru Road","90545","Greycliff","MT","Montana","Rocky Mountain",-109.7846289,45.7632707
+888,"Jai Lamble","(479) 555-0100","http://www.microsoft.com/JaiLamble/","Suite 3","1957 Pena Lane","90749","Grider","AR","Arkansas","Southeast",-89.9806435,35.6386903
+529,"Wingtip Toys (Griswoldville, GA)","(229) 555-0100","http://www.wingtiptoys.com/Griswoldville","Suite 270","1281 Kalejs Crescent","90110","Griswoldville","GA","Georgia","Southeast",-83.4887852,32.8706936
+99,"Tailspin Toys (Guin, AL)","(205) 555-0100","http://www.tailspintoys.com/Guin","Unit 92","1742 Bender Boulevard","90779","Guin","AL","Alabama","Southeast",-87.9147494,33.9656594
+55,"Tailspin Toys (Gum Branch, GA)","(229) 555-0100","http://www.tailspintoys.com/GumBranch","Suite 220","1500 Utjesenovic Lane","90559","Gum Branch","GA","Georgia","Southeast",-81.7267801,31.8582642
+984,"Kamala Nishad","(201) 555-0100","http://www.microsoft.com/KamalaNishad/","Suite 5","1233 Jantunen Street","90003","Haddon Heights","NJ","New Jersey","Mideast",-75.0646165,39.8773356
+77,"Tailspin Toys (Hahira, GA)","(229) 555-0100","http://www.tailspintoys.com/Hahira","Unit 176","1675 Ribeiro Street","90706","Hahira","GA","Georgia","Southeast",-83.3726575,30.9913064
+849,"Sabine Zalite","(210) 555-0100","http://www.microsoft.com/SabineZalite/","Shop 11","1924 Shim Avenue","90404","Haltom City","TX","Texas","Southwest",-97.2691817,32.7995738
+50,"Tailspin Toys (Hambleton, WV)","(304) 555-0100","http://www.tailspintoys.com/Hambleton","Unit 257","1715 Samaniego Street","90087","Hambleton","WV","West Virginia","Southeast",-79.6453386,39.0820511
+967,"Meera Patel","(217) 555-0100","http://www.microsoft.com/MeeraPatel/","Shop 9","1034 Kellnerova Boulevard","90737","Hanaford","IL","Illinois","Great Lakes",-88.835635,37.9579449
+1013,"Annette  Hetu","(405) 555-0100","http://www.microsoft.com/","Unit 30","1595 Anima Avenue","90069","Hanna","OK","Oklahoma","Southwest",-95.9140580885,35.2090451006
+124,"Tailspin Toys (Hanoverton, OH)","(216) 555-0100","http://www.tailspintoys.com/Hanoverton","Suite 157","1419 Hadrabova Avenue","90770","Hanoverton","OH","Ohio","Great Lakes",-80.937032,40.7511704
+908,"Sumati Bhat","(206) 555-0100","http://www.microsoft.com/SumatiBhat/","Shop 13","885 Das Street","90789","Harbour Pointe","WA","Washington","Far West",-122.3051342,47.8856515
+139,"Tailspin Toys (Hardeeville, SC)","(803) 555-0100","http://www.tailspintoys.com/Hardeeville","Shop 31","478 KlanCisar Lane","90005","Hardeeville","SC","South Carolina","Southeast",-81.0806665,32.2871413
+516,"Wingtip Toys (Harkers Island, NC)","(252) 555-0100","http://www.wingtiptoys.com/HarkersIsland","Shop 216","726 Matos Lane","90175","Harkers Island","NC","North Carolina","Southeast",-76.5593693,34.6951628
+944,"Ida Celma","(319) 555-0100","http://www.microsoft.com/IdaCelma/","Suite 28","893 Habibi Lane","90577","Hawarden","IA","Iowa","Plains",-96.4853085,42.9958216
+597,"Wingtip Toys (Haycock, AK)","(907) 555-0100","http://www.wingtiptoys.com/Haycock","Suite 183","796 Zvaigzne Boulevard","90603","Haycock","AK","Alaska","Far West",-161.1655556,65.2097222
+459,"Wingtip Toys (Haydenville, OH)","(216) 555-0100","http://www.wingtiptoys.com/Haydenville","Shop 69","801 Dzene Street","90519","Haydenville","OH","Ohio","Great Lakes",-82.3282074,39.482013
+182,"Tailspin Toys (Hayes Center, NE)","(308) 555-0100","http://www.tailspintoys.com/HayesCenter","Shop 190","1059 Kamasamudram Avenue","90352","Hayes Center","NE","Nebraska","Plains",-101.0196016,40.5108385
+424,"Wingtip Toys (Heartwell, NE)","(308) 555-0100","http://www.wingtiptoys.com/Heartwell","Unit 77","1910 Stavinohova Crescent","90298","Heartwell","NE","Nebraska","Plains",-98.787853,40.5705702
+26,"Tailspin Toys (Hedrick, IA)","(319) 555-0100","http://www.tailspintoys.com/Hedrick","Shop 119","1022 Folliero Street","90331","Hedrick","IA","Iowa","Plains",-92.3087945,41.1725134
+181,"Tailspin Toys (Heilwood, PA)","(215) 555-0100","http://www.tailspintoys.com/Heilwood","Suite 25","1846 Hudecova Crescent","90300","Heilwood","PA","Pennsylvania","Mideast",-78.915029,40.6209007
+553,"Wingtip Toys (Helotes, TX)","(210) 555-0100","http://www.wingtiptoys.com/Helotes","Unit 237","1534 Milano Lane","90119","Helotes","TX","Texas","Southwest",-98.6897451,29.5780056
+420,"Wingtip Toys (Herlong, CA)","(209) 555-0100","http://www.wingtiptoys.com/Herlong","Suite 127","1386 Lucescu Lane","90358","Herlong","CA","California","Far West",-120.1346519,40.1435142
+421,"Wingtip Toys (Highland Home, AL)","(205) 555-0100","http://www.wingtiptoys.com/HighlandHome","Unit 17","1985 Flamand Lane","90035","Highland Home","AL","Alabama","Southeast",-86.3138546,31.9534835
+924,"Eva Schulteisz","(252) 555-0100","http://www.microsoft.com/EvaSchulteisz/","Shop 11","1783 Escobar Crescent","90609","Hightsville","NC","North Carolina","Southeast",-77.9316542,34.2696139
+179,"Tailspin Toys (Hiteman, IA)","(319) 555-0100","http://www.tailspintoys.com/Hiteman","Unit 138","284 Paulet Street","90212","Hiteman","IA","Iowa","Plains",-92.8921428,41.0588945
+64,"Tailspin Toys (Hodgdon, ME)","(207) 555-0100","http://www.tailspintoys.com/Hodgdon","Shop 133","967 Alizadeh Boulevard","90673","Hodgdon","ME","Maine","New England",-67.8666846,46.0539429
+1003,"Hue Ton","(252) 555-0100","http://www.microsoft.com/","Unit 17","1634 Eugen Lane","90337","Holden Beach","NC","North Carolina","Southeast",-78.3038892,33.9135061
+554,"Wingtip Toys (Hollandsburg, IN)","(219) 555-0100","http://www.wingtiptoys.com/Hollandsburg","Unit 234","1014 Shuler Avenue","90683","Hollandsburg","IN","Indiana","Great Lakes",-87.0722345,39.760321
+156,"Tailspin Toys (Hollywood Park, TX)","(210) 555-0100","http://www.tailspintoys.com/HollywoodPark","Unit 178","1948 Podnieks Road","90405","Hollywood Park","TX","Texas","Southwest",-98.48724,29.6005047
+442,"Wingtip Toys (Homer City, PA)","(215) 555-0100","http://www.wingtiptoys.com/HomerCity","Suite 149","1993 TunC Street","90713","Homer City","PA","Pennsylvania","Mideast",-79.1622566,40.5434007
+196,"Tailspin Toys (Howells, NE)","(308) 555-0100","http://www.tailspintoys.com/Howells","Unit 241","6 Nandamuri Road","90444","Howells","NE","Nebraska","Plains",-97.0028133,41.7250059
+855,"Anna Mazzanti","(314) 555-0100","http://www.microsoft.com/AnnaMazzanti/","Shop 31","1552 Johansson Lane","90446","Humansville","MO","Missouri","Plains",-93.5779815,37.7944806
+551,"Wingtip Toys (Huntingburg, IN)","(219) 555-0100","http://www.wingtiptoys.com/Huntingburg","Unit 7","833 Pasek Boulevard","90434","Huntingburg","IN","Indiana","Great Lakes",-86.9549972,38.2989422
+950,"Emily Whittle","(231) 555-0100","http://www.microsoft.com/EmilyWhittle/","Unit 6","1108 Enestam Crescent","90330","Huntington Woods","MI","Michigan","Great Lakes",-83.1668713,42.4805913
+591,"Wingtip Toys (Idaho City, ID)","(208) 555-0100","http://www.wingtiptoys.com/IdahoCity","Shop 259","1817 Abola Lane","90426","Idaho City","ID","Idaho","Rocky Mountain",-115.8345537,43.8285046
+52,"Tailspin Toys (Idria, CA)","(209) 555-0100","http://www.tailspintoys.com/Idria","Shop 99","1189 Malakar Road","90556","Idria","CA","California","Far West",-120.6743379,36.4169007
+23,"Tailspin Toys (Ikatan, AK)","(907) 555-0100","http://www.tailspintoys.com/Ikatan","Unit 300","1467 Chang Lane","90019","Ikatan","AK","Alaska","Far West",-163.3083333,54.75
+971,"Dhanishta Mokkapati","(907) 555-0100","http://www.microsoft.com/DhanishtaMokkapati/","Shop 23","1827 Kustrin Boulevard","90555","Iliamna","AK","Alaska","Far West",-154.9110837,59.7567965
+51,"Tailspin Toys (Imlaystown, NJ)","(201) 555-0100","http://www.tailspintoys.com/Imlaystown","Suite 12","1305 Kaleja Street","90051","Imlaystown","NJ","New Jersey","Mideast",-74.5151531,40.1676117
+40,"Tailspin Toys (Impact, TX)","(210) 555-0100","http://www.tailspintoys.com/Impact","Unit 249","760 Trung Crescent","90326","Impact","TX","Texas","Southwest",-99.7459225,32.4998459
+548,"Wingtip Toys (Indian Creek, IL)","(217) 555-0100","http://www.wingtiptoys.com/IndianCreek","Unit 40","63 Celmina Road","90610","Indian Creek","IL","Illinois","Great Lakes",-87.9797968,42.2269684
+74,"Tailspin Toys (Indios, PR)","(787) 555-0100","http://www.tailspintoys.com/Indios","Unit 50","519 Jogi Street","90193","Indios","PR","Puerto Rico (US Territory)","External",-66.8193421,17.9941326
+149,"Tailspin Toys (Inguadona, MN)","(218) 555-0100","http://www.tailspintoys.com/Inguadona","Suite 157","196 Kubat Street","90245","Inguadona","MN","Minnesota","Plains",-94.1302482,46.9832886
+488,"Wingtip Toys (Isabela, PR)","(787) 555-0100","http://www.wingtiptoys.com/Isabela","Shop 110","1211 Mazumdar Avenue","90320","Isabela","PR","Puerto Rico (US Territory)","External",-67.0243462,18.500776
+1051,"Sylvie Laramee","(787) 555-0100","http://www.microsoft.com/","Shop 16","1279 Annette Crescent","90443","Isabela","PR","Puerto Rico (US Territory)","External",-67.0243462,18.500776
+527,"Wingtip Toys (Islip Terrace, NY)","(212) 555-0100","http://www.wingtiptoys.com/IslipTerrace","Suite 7","1820 Sedlar Crescent","90778","Islip Terrace","NY","New York","Mideast",-73.192615,40.7431539
+545,"Wingtip Toys (Jamison, IA)","(319) 555-0100","http://www.wingtiptoys.com/Jamison","Unit 90","1984 Esposito Road","90010","Jamison","IA","Iowa","Plains",-93.7249413,41.1216623
+948,"Richard Zahradnicek","(314) 555-0100","http://www.microsoft.com/RichardZahradnicek/","Shop 7","401 Bhowmick Avenue","90311","Jane","MO","Missouri","Plains",-94.3052108,36.5472962
+46,"Tailspin Toys (Jemison, AL)","(205) 555-0100","http://www.tailspintoys.com/Jemison","Suite 31","589 Sagese Lane","90683","Jemison","AL","Alabama","Southeast",-86.7466522,32.9598451
+567,"Wingtip Toys (Jeromesville, OH)","(216) 555-0100","http://www.wingtiptoys.com/Jeromesville","Suite 42","1876 Bhamidipati Crescent","90184","Jeromesville","OH","Ohio","Great Lakes",-82.195712,40.8042239
+951,"Eliza Persson","(209) 555-0100","http://www.microsoft.com/ElizaPersson/","Unit 16","1520 Auzina Lane","90500","Jesmond Dene","CA","California","Far West",-117.1091988,33.1803157
+6,"Tailspin Toys (Jessie, ND)","(701) 555-0100","http://www.tailspintoys.com/Jessie","Shop 196","483 Raut Lane","90298","Jessie","ND","North Dakota","Plains",-98.2381519,47.542218
+469,"Wingtip Toys (Johnetta, KY)","(270) 555-0100","http://www.wingtiptoys.com/Johnetta","Unit 280","1314 Arvidsson Boulevard","90699","Johnetta","KY","Kentucky","Southeast",-84.191877,37.4156408
+823,"Francisca Laureano","(319) 555-0100","http://www.microsoft.com/FranciscaLaureano/","Unit 9","266 Shenoy Road","90067","Jolley","IA","Iowa","Plains",-94.7188696,42.4788677
+949,"Seo-yun Paik","(210) 555-0100","http://www.microsoft.com/Seo-yunPaik/","Suite 7","493 Bjorklund Road","90259","Jones Creek","TX","Texas","Southwest",-95.4552208,28.9685817
+103,"Tailspin Toys (Kalvesta, KS)","(316) 555-0100","http://www.tailspintoys.com/Kalvesta","Unit 246","813 Habibi Lane","90130","Kalvesta","KS","Kansas","Plains",-100.2862511,38.0594637
+938,"Anna Gyarmathi","(252) 555-0100","http://www.microsoft.com/AnnaGyarmathi/","Suite 15","809 Alva Boulevard","90250","Kannapolis","NC","North Carolina","Southeast",-80.6217341,35.4873613
+598,"Wingtip Toys (Kapa'a, HI)","(808) 555-0100","http://www.wingtiptoys.com/Kapa'a","Unit 219","207 Negi Lane","90796","Kapa'a","HI","Hawaii","Far West",-159.318143113,22.0749700304
+476,"Wingtip Toys (Karthaus, PA)","(215) 555-0100","http://www.wingtiptoys.com/Karthaus","Suite 106","272 Stojkovic Avenue","90362","Karthaus","PA","Pennsylvania","Mideast",-78.1138962,41.1208924
+441,"Wingtip Toys (Keosauqua, IA)","(319) 555-0100","http://www.wingtiptoys.com/Keosauqua","Suite 292","830 Sal Crescent","90281","Keosauqua","IA","Iowa","Plains",-91.9623949,40.730305799999996
+37,"Tailspin Toys (Kerby, OR)","(458) 555-0100","http://www.tailspintoys.com/Kerby","Unit 16","339 Dwivedi Lane","90686","Kerby","OR","Oregon","Far West",-123.651735,42.1942798
+546,"Wingtip Toys (Key Biscayne, FL)","(239) 555-0100","http://www.wingtiptoys.com/KeyBiscayne","Shop 226","1642 Jantunen Crescent","90085","Key Biscayne","FL","Florida","Southeast",-80.1628248,25.693713
+865,"Bijoya Thakur","(225) 555-0100","http://www.microsoft.com/BijoyaThakur/","Unit 17","1509 Dzene Avenue","90212","Kinder","LA","Louisiana","Southeast",-92.850703,30.485479
+142,"Tailspin Toys (King Cove, AK)","(907) 555-0100","http://www.tailspintoys.com/KingCove","Suite 268","433 Reddy Street","90457","King Cove","AK","Alaska","Far West",-162.3102778,55.0616667
+193,"Tailspin Toys (Knifley, KY)","(270) 555-0100","http://www.tailspintoys.com/Knifley","Shop 112","1591 Bhowmick Street","90298","Knifley","KY","Kentucky","Southeast",-85.1894035,37.2428449
+583,"Wingtip Toys (Knights Landing, CA)","(209) 555-0100","http://www.wingtiptoys.com/KnightsLanding","Suite 62","1404 Molnar Road","90400","Knights Landing","CA","California","Far West",-121.718297,38.7996238
+1033,"Cuneyt Arslan","(405) 555-0100","http://www.microsoft.com/","Unit 15","1400 Johanna Street","90287","Komalty","OK","Oklahoma","Southwest",-99.0141345885,35.0515040006
+30,"Tailspin Toys (Koontzville, WA)","(206) 555-0100","http://www.tailspintoys.com/Koontzville","Suite 144","1907 Naicker Boulevard","90288","Koontzville","WA","Washington","Far West",-118.9472435,48.0157092
+974,"Emil Roman","(210) 555-0100","http://www.microsoft.com/EmilRoman/","Suite 13","1301 Bhutia Street","90580","Kopperl","TX","Texas","Southwest",-97.5039076,32.0698734
+131,"Tailspin Toys (Kwethluk, AK)","(907) 555-0100","http://www.tailspintoys.com/Kwethluk","Shop 162","486 Spirlea Avenue","90759","Kwethluk","AK","Alaska","Far West",-161.4358333,60.8122222
+804,"Aleksandrs Riekstins","(605) 555-0100","http://www.microsoft.com/AleksandrsRiekstins/","Shop 20","498 Bagheri Lane","90797","La Bolt","SD","South Dakota","Plains",-96.6751631,45.0490377
+82,"Tailspin Toys (La Cueva, NM)","(505) 555-0100","http://www.tailspintoys.com/LaCueva","Suite 166","1708 Ankitham Street","90253","La Cueva","NM","New Mexico","Southwest",-105.2491779,35.941705
+869,"Abel Tatarescu","(217) 555-0100","http://www.microsoft.com/AbelTatarescu/","Suite 6","1432 Alksne Road","90579","La Grange Park","IL","Illinois","Great Lakes",-87.861726,41.8347535
+872,"Katerina Hadrabova","(219) 555-0100","http://www.microsoft.com/KaterinaHadrabova/","Shop 14","1783 ozkan Boulevard","90533","La Paz","IN","Indiana","Great Lakes",-86.3083403,41.4597686
+941,"Bishwa Chatterjee","(239) 555-0100","http://www.microsoft.com/BishwaChatterjee/","Unit 17","1466 Deilami Road","90087","Lake Clarke Shores","FL","Florida","Southeast",-80.0758754,26.6453449
+897,"Allan Mannik","(218) 555-0100","http://www.microsoft.com/AllanMannik/","Shop 26","791 Lill Lane","90181","Lake Crystal","MN","Minnesota","Plains",-94.2188494,44.1057973
+452,"Wingtip Toys (Lake Davis, CA)","(209) 555-0100","http://www.wingtiptoys.com/LakeDavis","Suite 75","605 Roman Street","90719","Lake Davis","CA","California","Far West",-120.4788267,39.8726783
+133,"Tailspin Toys (Lake Erie Beach, NY)","(212) 555-0100","http://www.tailspintoys.com/LakeErieBeach","Unit 174","1755 De Road","90186","Lake Erie Beach","NY","New York","Mideast",-79.066983,42.6242257
+47,"Tailspin Toys (Lake Hughes, CA)","(209) 555-0100","http://www.tailspintoys.com/LakeHughes","Unit 91","1371 Saarijarvi Avenue","90358","Lake Hughes","CA","California","Far West",-118.4453598,34.6769294
+1039,"Bhaamini Palagummi","(212) 555-0100","http://www.microsoft.com/","Unit 29","1035 Clarissa Avenue","90459","Lake Mohegan","NY","New York","Mideast",-73.8462467,41.3178717
+549,"Wingtip Toys (Lake Ronkonkoma, NY)","(212) 555-0100","http://www.wingtiptoys.com/LakeRonkonkoma","Suite 131","576 Sedlar Road","90437","Lake Ronkonkoma","NY","New York","Mideast",-73.1312222,40.8350983
+31,"Tailspin Toys (Lake Stevens, WA)","(206) 555-0100","http://www.tailspintoys.com/LakeStevens","Shop 238","1584 Hadrabova Street","90394","Lake Stevens","WA","Washington","Far West",-122.0637425,48.015098
+57,"Tailspin Toys (Lakemore, OH)","(216) 555-0100","http://www.tailspintoys.com/Lakemore","Unit 136","1331 Dutta Crescent","90347","Lakemore","OH","Ohio","Great Lakes",-81.4359458,41.0208896
+1047,"Ivana Hadrabova","(603) 555-0100","http://www.microsoft.com/","Shop 12","849 Kristophe  Street","90347","Lancaster","NH","New Hampshire","New England",-71.569251,44.4889465
+144,"Tailspin Toys (Larose, LA)","(225) 555-0100","http://www.tailspintoys.com/Larose","Suite 156","859 Thota Lane","90342","Larose","LA","Louisiana","Southeast",-90.3817483,29.572437999999998
+844,"Durdanah Abbasi","(201) 555-0100","http://www.microsoft.com/DurdanahAbbasi/","Shop 26","1489 Shetty Crescent","90279","Laurence Harbor","NJ","New Jersey","Mideast",-74.2465338,40.4567735
+95,"Tailspin Toys (Lavon, TX)","(210) 555-0100","http://www.tailspintoys.com/Lavon","Suite 258","771 Kidambi Road","90310","Lavon","TX","Texas","Southwest",-96.4341524,33.0276193
+415,"Wingtip Toys (Leathersville, GA)","(229) 555-0100","http://www.wingtiptoys.com/Leathersville","Unit 77","1555 Negi Crescent","90402","Leathersville","GA","Georgia","Southeast",-82.4398499,33.7167949
+19,"Tailspin Toys (Lemeta, AK)","(907) 555-0100","http://www.tailspintoys.com/Lemeta","Unit 174","1507 Izmaylov Crescent","90303","Lemeta","AK","Alaska","Far West",-147.7322222,64.8597222
+195,"Tailspin Toys (Lesslie, SC)","(803) 555-0100","http://www.tailspintoys.com/Lesslie","Unit 180","1683 Stojkovic Crescent","90771","Lesslie","SC","South Carolina","Southeast",-80.9564659,34.890701
+543,"Wingtip Toys (Lexington Heights, MI)","(231) 555-0100","http://www.wingtiptoys.com/LexingtonHeights","Shop 234","390 Korjus Road","90067","Lexington Heights","MI","Michigan","Great Lakes",-82.5246458,43.2250269
+555,"Wingtip Toys (Liberty Grove, MD)","(240) 555-0100","http://www.wingtiptoys.com/LibertyGrove","Shop 177","1754 Kaskar Avenue","90204","Liberty Grove","MD","Maryland","Mideast",-76.1199511,39.6559424
+1052,"Ian Olofsson","(339) 555-0100","http://www.microsoft.com/","Suite 24","1327 Donald Street","90342","Liberty Plain","MA","Massachusetts[E]","New England",-70.882822,42.1889895
+517,"Wingtip Toys (Licking, MO)","(314) 555-0100","http://www.wingtiptoys.com/Licking","Shop 64","279 Walkky Crescent","90280","Licking","MO","Missouri","Plains",-91.8570984,37.4994884
+429,"Wingtip Toys (Lilbourn, MO)","(314) 555-0100","http://www.wingtiptoys.com/Lilbourn","Shop 191","435 Vladu Crescent","90025","Lilbourn","MO","Missouri","Plains",-89.6153571,36.5922816
+434,"Wingtip Toys (Lime Lake, NY)","(212) 555-0100","http://www.wingtiptoys.com/LimeLake","Unit 111","983 Cavalcante Street","90667","Lime Lake","NY","New York","Mideast",-78.4797427,42.4345078
+1053,"Luis Saucedo","(210) 555-0100","http://www.microsoft.com/","Suite 23","117 Bhaagyalakshmi Road","90755","Linden","TX","Texas","Southwest",-94.3654707,33.0123537
+1,"Tailspin Toys (Head Office)","(308) 555-0100","http://www.tailspintoys.com","Shop 38","1877 Mittal Road","90410","Lisco","NE","Nebraska","Plains",-102.6201979,41.4972022
+972,"Lakshmi Benipal","(209) 555-0100","http://www.microsoft.com/LakshmiBenipal/","Suite 23","1017 Juniskyzy Boulevard","90718","Lompoc","CA","California","Far West",-120.4579409,34.6391501
+1061,"Agrita Abele","(206) 555-0100","http://www.microsoft.com/","Shop 12","652 Victoria Lane","90243","Long Beach","WA","Washington","Far West",-124.0543234,46.3523219
+14,"Tailspin Toys (Long Meadow, MD)","(240) 555-0100","http://www.tailspintoys.com/LongMeadow","Unit 221","151 Vasiljevic Road","90633","Long Meadow","MD","Maryland","Mideast",-77.7122154,39.6862063
+988,"Maksims Krastins","(304) 555-0100","http://www.microsoft.com/MaksimsKrastins/","Shop 23","292 Desai Boulevard","90610","Lorentz","WV","West Virginia","Southeast",-80.3023077,39.0109301
+430,"Wingtip Toys (Lost River, ID)","(208) 555-0100","http://www.wingtiptoys.com/LostRiver","Unit 63","506 Dikshit Lane","90272","Lost River","ID","Idaho","Rocky Mountain",-113.614571,43.68691
+563,"Wingtip Toys (Lostine, OR)","(458) 555-0100","http://www.wingtiptoys.com/Lostine","Shop 82","931 Mitra Lane","90287","Lostine","OR","Oregon","Far West",-117.4296256,45.4873692
+486,"Wingtip Toys (Lowellville, OH)","(216) 555-0100","http://www.wingtiptoys.com/Lowellville","Unit 143","1197 Debeljak Avenue","90737","Lowellville","OH","Ohio","Great Lakes",-80.5364593,41.0353371
+438,"Wingtip Toys (Lucasville, OH)","(216) 555-0100","http://www.wingtiptoys.com/Lucasville","Unit 47","857 Bose Avenue","90391","Lucasville","OH","Ohio","Great Lakes",-82.9968419,38.879518
+980,"Om Yadav","(262) 555-0100","http://www.microsoft.com/OmYadav/","Shop 13","419 Brkic Crescent","90268","Lunds","WI","Wisconsin","Great Lakes",-88.5453795,44.6994307
+586,"Wingtip Toys (Lynne, FL)","(239) 555-0100","http://www.wingtiptoys.com/Lynne","Shop 204","167 Kubatova Lane","90009","Lynne","FL","Florida","Southeast",-81.9173071,29.1924772
+466,"Wingtip Toys (Lytle, TX)","(210) 555-0100","http://www.wingtiptoys.com/Lytle","Unit 95","882 Bhuiyan Crescent","90706","Lytle","TX","Texas","Southwest",-98.7964137,29.233294
+69,"Tailspin Toys (Lytle Creek, CA)","(209) 555-0100","http://www.tailspintoys.com/LytleCreek","Unit 134","1204 Grgic Lane","90795","Lytle Creek","CA","California","Far West",-117.5000512,34.2591728
+66,"Tailspin Toys (Madaket, MA)","(339) 555-0100","http://www.tailspintoys.com/Madaket","Suite 2","1052 Hoa Lane","90614","Madaket","MA","Massachusetts[E]","New England",-70.1980734,41.2729019
+820,"Knut Svensson","(201) 555-0100","http://www.microsoft.com/KnutSvensson/","Unit 30","305 Lepp Street","90048","Madison Park","NJ","New Jersey","Mideast",-74.3079248,40.4514954
+172,"Tailspin Toys (Madrone, NM)","(505) 555-0100","http://www.tailspintoys.com/Madrone","Shop 283","1520 Podnieks Road","90617","Madrone","NM","New Mexico","Southwest",-106.7330813,34.5939498
+197,"Tailspin Toys (Magalia, CA)","(209) 555-0100","http://www.tailspintoys.com/Magalia","Suite 176","103 Pulido Road","90226","Magalia","CA","California","Far West",-121.5783059,39.8121058
+467,"Wingtip Toys (Mahaffey, PA)","(215) 555-0100","http://www.wingtiptoys.com/Mahaffey","Shop 93","1947 ozCelik Road","90361","Mahaffey","PA","Pennsylvania","Mideast",-78.724196,40.8728411
+878,"Miriam House","(701) 555-0100","http://www.microsoft.com/MiriamHouse/","Shop 18","604 Klaus Street","90128","Makoti","ND","North Dakota","Plains",-101.8046105,47.9611214
+176,"Tailspin Toys (Malott, WA)","(206) 555-0100","http://www.tailspintoys.com/Malott","Shop 287","680 Kallas Boulevard","90015","Malott","WA","Washington","Far West",-119.7067271,48.2826495
+874,"Daniel Martensson","(225) 555-0100","http://www.microsoft.com/DanielMartensson/","Shop 21","622 Pavel Boulevard","90365","Mamou","LA","Louisiana","Southeast",-92.4192993,30.6338092
+145,"Tailspin Toys (Manahawkin, NJ)","(201) 555-0100","http://www.tailspintoys.com/Manahawkin","Suite 203","726 Roy Boulevard","90686","Manahawkin","NJ","New Jersey","Mideast",-74.2587527,39.695397
+97,"Tailspin Toys (Manchester Center, VT)","(802) 555-0100","http://www.tailspintoys.com/ManchesterCenter","Shop 264","611 Todorovic Avenue","90179","Manchester Center","VT","Vermont","New England",-73.0570488,43.1770206
+130,"Tailspin Toys (Maple Shade, NJ)","(201) 555-0100","http://www.tailspintoys.com/MapleShade","Suite 271","81 Banerjee Crescent","90549","Maple Shade","NJ","New Jersey","Mideast",-74.9923915,39.9526127
+58,"Tailspin Toys (Mappsburg, VA)","(276) 555-0100","http://www.tailspintoys.com/Mappsburg","Shop 177","1736 Han Avenue","90678","Mappsburg","VA","Virginia","Southeast",-75.7635403,37.5776335
+153,"Tailspin Toys (Marcell, MN)","(218) 555-0100","http://www.tailspintoys.com/Marcell","Suite 130","1952 Laramee Street","90729","Marcell","MN","Minnesota","Plains",-93.6907581,47.5929997
+877,"Leyla Siavashi","(201) 555-0100","http://www.microsoft.com/LeylaSiavashi/","Suite 14","1187 L'Angelier Road","90462","Marcella","NJ","New Jersey","Mideast",-74.4743222,40.9870425
+594,"Wingtip Toys (Marfa, TX)","(210) 555-0100","http://www.wingtiptoys.com/Marfa","Shop 55","607 Szolosy Street","90235","Marfa","TX","Texas","Southwest",-104.0190718,30.3079384
+843,"Marija Justina Pasek","(215) 555-0100","http://www.microsoft.com/MarijaJustinaPasek/","Unit 23","360 Formanek Crescent","90321","Marguerite","PA","Pennsylvania","Mideast",-79.463371,40.2636811
+573,"Wingtip Toys (Marin City, CA)","(209) 555-0100","http://www.wingtiptoys.com/MarinCity","Unit 64","1320 Mittal Boulevard","90449","Marin City","CA","California","Far West",-122.5091404,37.868538
+996,"Laszlo Gardenier","(215) 555-0100","http://www.microsoft.com/LaszloGardenier/","Unit 6","1739 Matos Lane","90366","Marion Hill","PA","Pennsylvania","Mideast",-80.2958956,40.7303435
+561,"Wingtip Toys (Marion Junction, AL)","(205) 555-0100","http://www.wingtiptoys.com/MarionJunction","Shop 88","1444 Leigh Crescent","90078","Marion Junction","AL","Alabama","Southeast",-87.2388839,32.437358
+836,"Abel Spirlea","(218) 555-0100","http://www.microsoft.com/AbelSpirlea/","Unit 19","1446 Jelic Crescent","90447","Markville","MN","Minnesota","Plains",-92.3307496,46.091888
+954,"Nasrin Omidzadeh","(239) 555-0100","http://www.microsoft.com/NasrinOmidzadeh/","Suite 12","588 Cirulis Lane","90290","Mary Esther","FL","Florida","Southeast",-86.6630098,30.4099215
+953,"Linh Dao","(228) 555-0100","http://www.microsoft.com/LinhDao/","Shop 4","1407 Kommineni Street","90147","Mashulaville","MS","Mississippi","Southeast",-88.7442171,33.0867933
+484,"Wingtip Toys (Mauldin, SC)","(803) 555-0100","http://www.wingtiptoys.com/Mauldin","Suite 250","261 Celmina Street","90243","Mauldin","SC","South Carolina","Southeast",-82.310119,34.77873
+460,"Wingtip Toys (Mayhill, NM)","(505) 555-0100","http://www.wingtiptoys.com/Mayhill","Suite 11","898 Kim Boulevard","90741","Mayhill","NM","New Mexico","Southwest",-105.4780381,32.8895419
+32,"Tailspin Toys (Maypearl, TX)","(210) 555-0100","http://www.tailspintoys.com/Maypearl","Suite 157","1119 Friar Boulevard","90087","Maypearl","TX","Texas","Southwest",-97.0116691,32.3132003
+590,"Wingtip Toys (McAdenville, NC)","(252) 555-0100","http://www.wingtiptoys.com/McAdenville","Shop 214","1654 Duong Lane","90644","McAdenville","NC","North Carolina","Southeast",-81.0753535,35.2593056
+965,"Phoung Cu","(208) 555-0100","http://www.microsoft.com/PhoungCu/","Shop 10","1380 Kalnina Crescent","90180","McCall","ID","Idaho","Rocky Mountain",-116.0987364,44.911006
+166,"Tailspin Toys (McCamey, TX)","(210) 555-0100","http://www.tailspintoys.com/McCamey","Suite 116","1556 Barua Boulevard","90434","McCamey","TX","Texas","Southwest",-102.2243041,31.1359813
+880,"Edmee Glissen","(208) 555-0100","http://www.microsoft.com/EdmeeGlissen/","Shop 9","1092 Pavlovic Lane","90076","McCammon","ID","Idaho","Rocky Mountain",-112.1930226,42.6504719
+122,"Tailspin Toys (McClave, CO)","(303) 555-0100","http://www.tailspintoys.com/McClave","Unit 23","1748 Aalto Crescent","90439","McClave","CO","Colorado","Rocky Mountain",-102.8504765,38.1375074
+883,"Radha Barua","(405) 555-0100","http://www.microsoft.com/RadhaBarua/","Unit 7","1949 Kotadia Road","90446","McQueen","OK","Oklahoma","Southwest",-99.7255445885,34.6706795006
+870,"In-Su Bae","(206) 555-0100","http://www.microsoft.com/In-SuBae/","Shop 10","353 Gomes Avenue","90761","Meadowdale","WA","Washington","Far West",-122.3334669,47.852874
+1044,"Hanita Nookala","(225) 555-0100","http://www.microsoft.com/","Shop 27","835 Kamala Lane","90229","Meaux","LA","Louisiana","Southeast",-92.1826264,30.0207608
+4,"Tailspin Toys (Medicine Lodge, KS)","(316) 555-0100","http://www.tailspintoys.com/MedicineLodge","Suite 164","967 Riutta Boulevard","90152","Medicine Lodge","KS","Kansas","Plains",-98.580361,37.2811339
+559,"Wingtip Toys (Mendoza, TX)","(210) 555-0100","http://www.wingtiptoys.com/Mendoza","Unit 42","1448 Brasseur Boulevard","90420","Mendoza","TX","Texas","Southwest",-97.6861117,30.00494
+541,"Wingtip Toys (Mickleton, NJ)","(201) 555-0100","http://www.wingtiptoys.com/Mickleton","Unit 107","1679 Modi Lane","90751","Mickleton","NJ","New Jersey","Mideast",-75.2376834,39.7901134
+973,"Kumar Kamei","(304) 555-0100","http://www.microsoft.com/KumarKamei/","Suite 25","1742 Valbe Avenue","90019","Middleway","WV","West Virginia","Southeast",-77.9827756,39.3034346
+1060,"Anand Mudaliyar","(206) 555-0100","http://www.microsoft.com/","Shop 10","1235 Lana Lane","90669","Midland","WA","Washington","Far West",-122.4048441,47.1670439
+479,"Wingtip Toys (Mier, IN)","(219) 555-0100","http://www.wingtiptoys.com/Mier","Unit 41","257 Gunes Avenue","90474","Mier","IN","Indiana","Great Lakes",-85.8255386,40.5753176
+502,"Wingtip Toys (Miesville, MN)","(218) 555-0100","http://www.wingtiptoys.com/Miesville","Shop 156","1785 Narkbunnum Road","90728","Miesville","MN","Minnesota","Plains",-92.8129802,44.6005227
+129,"Tailspin Toys (Mineral Hills, MI)","(231) 555-0100","http://www.tailspintoys.com/MineralHills","Unit 38","1421 Radoncis Road","90442","Mineral Hills","MI","Michigan","Great Lakes",-88.6479102,46.1132871
+132,"Tailspin Toys (Minidoka, ID)","(208) 555-0100","http://www.tailspintoys.com/Minidoka","Suite 84","585 Dao Lane","90324","Minidoka","ID","Idaho","Rocky Mountain",-113.4902829,42.7537967
+574,"Wingtip Toys (Molalla, OR)","(458) 555-0100","http://www.wingtiptoys.com/Molalla","Suite 207","550 Alexandrova Lane","90761","Molalla","OR","Oregon","Far West",-122.5770322,45.1473445
+582,"Wingtip Toys (Montoya, NM)","(505) 555-0100","http://www.wingtiptoys.com/Montoya","Shop 299","780 Rusl Boulevard","90683","Montoya","NM","New Mexico","Southwest",-104.0638615,35.0997794
+407,"Wingtip Toys (Mooringsport, LA)","(225) 555-0100","http://www.wingtiptoys.com/Mooringsport","Unit 248","104 Nutiu Crescent","90387","Mooringsport","LA","Louisiana","Southeast",-93.961015,32.6876455
+873,"Hana Hlouskova","(505) 555-0100","http://www.microsoft.com/HanaHlouskova/","Suite 10","1826 Semjonov Boulevard","90552","Moquino","NM","New Mexico","Southwest",-107.3689356,35.1725399
+556,"Wingtip Toys (Morita, TX)","(210) 555-0100","http://www.wingtiptoys.com/Morita","Suite 54","598 Ilic Road","90222","Morita","TX","Texas","Southwest",-101.6337386,32.1845661
+1032,"Som Mukherjee","(385) 555-0100","http://www.microsoft.com/","Suite 13","263 Meredith Crescent","90747","Moroni","UT","Utah","Rocky Mountain",-111.5904725,39.5249615
+550,"Wingtip Toys (Morrison Bluff, AR)","(479) 555-0100","http://www.wingtiptoys.com/MorrisonBluff","Shop 284","645 Khalsa Boulevard","90682","Morrison Bluff","AR","Arkansas","Southeast",-93.5285202,35.387863
+491,"Wingtip Toys (Morton Grove, IL)","(217) 555-0100","http://www.wingtiptoys.com/MortonGrove","Unit 165","1284 Lovric Lane","90336","Morton Grove","IL","Illinois","Great Lakes",-87.7825621,42.0405853
+136,"Tailspin Toys (Mount Montgomery, NV)","(702) 555-0100","http://www.tailspintoys.com/MountMontgomery","Shop 284","1909 Cosic Crescent","90302","Mount Montgomery","NV","Nevada","Far West",-118.3215086,37.9796525
+866,"Jay Bhuiyan","(215) 555-0100","http://www.microsoft.com/JayBhuiyan/","Suite 22","130 Seleznyov Street","90081","Mount Pocono","PA","Pennsylvania","Mideast",-75.3646282,41.1220337
+450,"Wingtip Toys (Mount Summit, IN)","(219) 555-0100","http://www.wingtiptoys.com/MountSummit","Suite 94","1033 Lindqvist Road","90142","Mount Summit","IN","Indiana","Great Lakes",-85.3846928,40.0044908
+49,"Tailspin Toys (Muir, MI)","(231) 555-0100","http://www.tailspintoys.com/Muir","Shop 37","1148 Khalsa Boulevard","90717","Muir","MI","Michigan","Great Lakes",-84.9425013,42.9958661
+581,"Wingtip Toys (Munich, ND)","(701) 555-0100","http://www.wingtiptoys.com/Munich","Shop 283","1167 Thota Street","90334","Munich","ND","North Dakota","Plains",-98.8326307,48.669174
+422,"Wingtip Toys (Naches, WA)","(206) 555-0100","http://www.wingtiptoys.com/Naches","Unit 42","323 Buecek Crescent","90729","Naches","WA","Washington","Far West",-120.699516,46.730958
+939,"Ioana Florea","(339) 555-0100","http://www.microsoft.com/IoanaFlorea/","Suite 28","999 Dumina Avenue","90414","Nahant","MA","Massachusetts[E]","New England",-70.9189371,42.4264859
+53,"Tailspin Toys (Nanafalia, AL)","(205) 555-0100","http://www.tailspintoys.com/Nanafalia","Suite 217","1729 Dey Road","90783","Nanafalia","AL","Alabama","Southeast",-87.9880691,32.1129257
+194,"Tailspin Toys (Naples Park, FL)","(239) 555-0100","http://www.tailspintoys.com/NaplesPark","Shop 172","1724 Chatterjee Avenue","90386","Naples Park","FL","Florida","Southeast",-81.8092543,26.2617534
+138,"Tailspin Toys (Navassa, NC)","(252) 555-0100","http://www.tailspintoys.com/Navassa","Suite 231","333 Shasthri Road","90535","Navassa","NC","North Carolina","Southeast",-78.0074906,34.2554474
+416,"Wingtip Toys (Necedah, WI)","(262) 555-0100","http://www.wingtiptoys.com/Necedah","Unit 41","1732 Diaz Road","90049","Necedah","WI","Wisconsin","Great Lakes",-90.0740181,44.0260775
+916,"Pinja Jantunen","(308) 555-0100","http://www.microsoft.com/PinjaJantunen/","Shop 26","660 Mottola Avenue","90091","Nehawka","NE","Nebraska","Plains",-95.9916752,40.8294461
+914,"Chandana Shasthri","(803) 555-0100","http://www.microsoft.com/ChandanaShasthri/","Unit 8","813 Seleznyov Avenue","90125","Nesmith","SC","South Carolina","Southeast",-79.5133935,33.6590552
+9,"Tailspin Toys (Netcong, NJ)","(201) 555-0100","http://www.tailspintoys.com/Netcong","Shop 33","25 Kasesalu Street","90129","Netcong","NJ","New Jersey","Mideast",-74.7065516,40.8989877
+70,"Tailspin Toys (New Baden, IL)","(217) 555-0100","http://www.tailspintoys.com/NewBaden","Unit 7","98 Cetinkaya Street","90235","New Baden","IL","Illinois","Great Lakes",-89.7006499,38.5350488
+838,"Pavel Bogdanov","(339) 555-0100","http://www.microsoft.com/PavelBogdanov/","Unit 4","613 senturk Lane","90629","New Braintree","MA","Massachusetts[E]","New England",-72.1259114,42.3167581
+557,"Wingtip Toys (New Laguna, NM)","(505) 555-0100","http://www.wingtiptoys.com/NewLaguna","Suite 185","1687 Ornlamai Lane","90761","New Laguna","NM","New Mexico","Southwest",-107.4219909,35.0408767
+86,"Tailspin Toys (New Lexington, OH)","(216) 555-0100","http://www.tailspintoys.com/NewLexington","Unit 102","902 Ganguly Street","90637","New Lexington","OH","Ohio","Great Lakes",-82.2084805,39.7139579
+885,"Chandrashekhar Dasgupta","(208) 555-0100","http://www.microsoft.com/ChandrashekharDasgupta/","Suite 8","1375 Rusl Boulevard","90467","New Plymouth","ID","Idaho","Rocky Mountain",-116.81904,43.9698864
+845,"Emilie Hrdlickova","(803) 555-0100","http://www.microsoft.com/EmilieHrdlickova/","Unit 27","1873 Dewangan Avenue","90239","New Zion","SC","South Carolina","Southeast",-80.0292406,33.8443276
+1007,"Irma Berzina","(458) 555-0100","http://www.microsoft.com/","Suite 29","932 Deeptendu Crescent","90150","Newberg","OR","Oregon","Far West",-122.9731565,45.3001179
+957,"Hee-Young Suh","(209) 555-0100","http://www.microsoft.com/Hee-YoungSuh/","Suite 23","617 Polaskova Boulevard","90414","Nicasio","CA","California","Far West",-122.6985975,38.0615885
+533,"Wingtip Toys (Nichols Hills, OK)","(405) 555-0100","http://www.wingtiptoys.com/NicholsHills","Shop 131","880 Mannik Lane","90128","Nichols Hills","OK","Oklahoma","Southwest",-97.5727123885,35.5548377006
+1045,"Matteo Cattaneo","(229) 555-0100","http://www.microsoft.com/","Shop 2","1319 Kristiina Lane","90439","Nicholson","GA","Georgia","Southeast",-83.4315488,34.1139993
+819,"Santiago Vera","(304) 555-0100","http://www.microsoft.com/SantiagoVera/","Suite 17","1864 Havzija Crescent","90721","Nitro","WV","West Virginia","Southeast",-81.8440197,38.4148146
+506,"Wingtip Toys (North Beach Haven, NJ)","(201) 555-0100","http://www.wingtiptoys.com/NorthBeachHaven","Shop 54","659 Mookjai Road","90311","North Beach Haven","NJ","New Jersey","Mideast",-74.2315292,39.5731739
+861,"Amarasimha Vinjamuri","(339) 555-0100","http://www.microsoft.com/AmarasimhaVinjamuri/","Shop 5","1078 Hosseini Boulevard","90713","North Brookfield","MA","Massachusetts[E]","New England",-72.0828545,42.2667587
+65,"Tailspin Toys (North Cowden, TX)","(210) 555-0100","http://www.tailspintoys.com/NorthCowden","Suite 18","402 Nan Road","90406","North Cowden","TX","Texas","Southwest",-102.5129264,32.0045624
+110,"Tailspin Toys (North Crows Nest, IN)","(219) 555-0100","http://www.tailspintoys.com/NorthCrowsNest","Suite 73","1191 Min Avenue","90792","North Crows Nest","IN","Indiana","Great Lakes",-86.1633214,39.8658742
+926,"Richard Friar","(339) 555-0100","http://www.microsoft.com/RichardFriar/","Shop 21","80 Gupta Avenue","90067","North Eastham","MA","Massachusetts[E]","New England",-69.9911305,41.8651071
+977,"Mauno Laurila","(216) 555-0100","http://www.microsoft.com/MaunoLaurila/","Suite 2","1906 Shenoy Lane","90226","North Eaton","OH","Ohio","Great Lakes",-81.9812516,41.3133839
+511,"Wingtip Toys (North Manitou, MI)","(231) 555-0100","http://www.wingtiptoys.com/NorthManitou","Unit 115","1745 Penttila Road","90251","North Manitou","MI","Michigan","Great Lakes",-85.979256,45.1202637
+922,"Sumati Chatterjee","(231) 555-0100","http://www.microsoft.com/SumatiChatterjee/","Unit 10","1643 Mitra Avenue","90254","North Muskegon","MI","Michigan","Great Lakes",-86.26756,43.2561251
+28,"Tailspin Toys (North Ridge, NY)","(212) 555-0100","http://www.tailspintoys.com/NorthRidge","Unit 40","890 Hlouskova Avenue","90024","North Ridge","NY","New York","Mideast",-78.8258709,43.2125562
+931,"Nada Jovanovic","(215) 555-0100","http://www.microsoft.com/NadaJovanovic/","Shop 19","926 Shakiba Crescent","90764","North York","PA","Pennsylvania","Mideast",-76.7330223,39.9781536
+934,"Ivan Sepulveda","(218) 555-0100","http://www.microsoft.com/IvanSepulveda/","Shop 7","548 Bures Crescent","90647","Northrop","MN","Minnesota","Plains",-94.4363592,43.7363438
+539,"Wingtip Toys (Nuangola, PA)","(215) 555-0100","http://www.wingtiptoys.com/Nuangola","Shop 258","148 Dellucci Boulevard","90156","Nuangola","PA","Pennsylvania","Mideast",-75.978256,41.1550825
+588,"Wingtip Toys (Oak Point, TX)","(210) 555-0100","http://www.wingtiptoys.com/OakPoint","Unit 90","1648 Mitra Lane","90380","Oak Point","TX","Texas","Southwest",-96.991674,33.1901194
+911,"Liidia Lepp","(276) 555-0100","http://www.microsoft.com/LiidiaLepp/","Suite 7","824 Omelkova Street","90137","Oakpark","VA","Virginia","Southeast",-78.1600014,38.3667957
+1006,"Taj Syme","(216) 555-0100","http://www.microsoft.com/","Unit 27","1864 Rohan Road","90216","Oakshade","OH","Ohio","Great Lakes",-84.1521691,41.6689399
+498,"Wingtip Toys (Obetz, OH)","(216) 555-0100","http://www.wingtiptoys.com/Obetz","Shop 241","1168 Jovicevic Boulevard","90143","Obetz","OH","Ohio","Great Lakes",-82.9507363,39.8789527
+500,"Wingtip Toys (Obion, TN)","(423) 555-0100","http://www.wingtiptoys.com/Obion","Shop 113","1041 Khalsa Crescent","90451","Obion","TN","Tennessee","Southeast",-89.1917353,36.2589567
+995,"Kumar Naicker","(262) 555-0100","http://www.microsoft.com/KumarNaicker/","Suite 11","1012 Sidhu Street","90515","Oconto Falls","WI","Wisconsin","Great Lakes",-88.1428798,44.8738805
+811,"Surendra Sahu","(210) 555-0100","http://www.microsoft.com/SurendraSahu/","Shop 2","1118 Hanak Lane","90334","Old River-Winfree","TX","Texas","Southwest",-94.8327007,29.8682764
+925,"Can ozcan","(215) 555-0100","http://www.microsoft.com/Canozcan/","Suite 10","618 Cervenkova Boulevard","90079","Oley","PA","Pennsylvania","Mideast",-75.7896403,40.3875936
+41,"Tailspin Toys (Olivette, MO)","(314) 555-0100","http://www.tailspintoys.com/Olivette","Suite 262","1638 Couet Street","90042","Olivette","MO","Missouri","Plains",-90.3759499,38.6653297
+531,"Wingtip Toys (Omer, MI)","(231) 555-0100","http://www.wingtiptoys.com/Omer","Shop 261","1855 Mitra Avenue","90228","Omer","MI","Michigan","Great Lakes",-83.8544333,44.0475198
+465,"Wingtip Toys (Oologah, OK)","(405) 555-0100","http://www.wingtiptoys.com/Oologah","Shop 214","176 Zvirbule Crescent","90439","Oologah","OK","Oklahoma","Southwest",-95.7320981885,36.4509861006
+192,"Tailspin Toys (Optimo, NM)","(505) 555-0100","http://www.tailspintoys.com/Optimo","Shop 264","978 Edden Street","90080","Optimo","NM","New Mexico","Southwest",-104.8036063,35.8903166
+191,"Tailspin Toys (Orchard Hill, GA)","(229) 555-0100","http://www.tailspintoys.com/OrchardHill","Suite 169","946 Reddy Street","90698","Orchard Hill","GA","Georgia","Southeast",-84.2113095,33.1865071
+401,"Wingtip Toys (Head Office)","(303) 555-0100","http://www.wingtiptoys.com","Shop 294","1263 Kwak Lane","90625","Orchard Mesa","CO","Colorado","Rocky Mountain",-108.5523153,39.0430375
+409,"Wingtip Toys (Orick, CA)","(209) 555-0100","http://www.wingtiptoys.com/Orick","Unit 301","1612 TunC Avenue","90329","Orick","CA","California","Far West",-124.0597937,41.2867896
+111,"Tailspin Toys (Oriole Beach, FL)","(239) 555-0100","http://www.tailspintoys.com/OrioleBeach","Suite 223","53 Jeon Boulevard","90436","Oriole Beach","FL","Florida","Southeast",-87.0913555,30.3738103
+1057,"Ganesh Majumdar","(217) 555-0100","http://www.microsoft.com/","Shop 25","162 Stern Crescent","90760","Orland Hills","IL","Illinois","Great Lakes",-87.8431078,41.5853107
+898,"Gopalgobinda Sikdar","(307) 555-0100","http://www.microsoft.com/GopalgobindaSikdar/","Shop 17","1928 Kask Crescent","90495","Orpha","WY","Wyoming","Rocky Mountain",-105.5035999,42.8546892
+177,"Tailspin Toys (Orrtanna, PA)","(215) 555-0100","http://www.tailspintoys.com/Orrtanna","Suite 93","185 Saikkonen Avenue","90008","Orrtanna","PA","Pennsylvania","Mideast",-77.3608197,39.8450942
+171,"Tailspin Toys (Ortley Beach, NJ)","(201) 555-0100","http://www.tailspintoys.com/OrtleyBeach","Shop 83","834 Mookjai Avenue","90179","Ortley Beach","NJ","New Jersey","Mideast",-74.074303,39.9556738
+1025,"Tuulikki Linna","(217) 555-0100","http://www.microsoft.com/","Suite 20","25 Darakhshan Road","90608","Otterville","IL","Illinois","Great Lakes",-90.3984486,39.0506032
+895,"Geza Roman","(215) 555-0100","http://www.microsoft.com/GezaRoman/","Suite 24","368 Tatarescu Street","90005","Oval","PA","Pennsylvania","Mideast",-77.1691356,41.1511863
+568,"Wingtip Toys (Ovilla, TX)","(210) 555-0100","http://www.wingtiptoys.com/Ovilla","Suite 158","519 Deslauriers Street","90683","Ovilla","TX","Texas","Southwest",-96.8863898,32.5265264
+79,"Tailspin Toys (Page City, KS)","(316) 555-0100","http://www.tailspintoys.com/PageCity","Suite 4","1000 Sykorova Boulevard","90316","Page City","KS","Kansas","Plains",-101.1462666,39.0897299
+834,"Cong Hoa","(212) 555-0100","http://www.microsoft.com/CongHoa/","Unit 21","580 Poddar Lane","90396","Palatine Bridge","NY","New York","Mideast",-74.5740296,42.9109064
+560,"Wingtip Toys (Palmas del Mar, PR)","(787) 555-0100","http://www.wingtiptoys.com/PalmasdelMar","Suite 72","148 ChÃ¡vez Street","90167","Palmas del Mar","PR","Puerto Rico (US Territory)","External",-65.797939,18.0819088
+1050,"Amrita Ganguly","(787) 555-0100","http://www.microsoft.com/","Suite 5","1064 Eugen Lane","90003","Palmas del Mar","PR","Puerto Rico (US Territory)","External",-65.797939,18.0819088
+163,"Tailspin Toys (Panaca, NV)","(702) 555-0100","http://www.tailspintoys.com/Panaca","Shop 236","155 Jantunen Boulevard","90297","Panaca","NV","Nevada","Far West",-114.3894336,37.79052
+809,"Madhu Dwivedi","(802) 555-0100","http://www.microsoft.com/MadhuDwivedi/","Shop 5","1808 Sagese Crescent","90756","Panton","VT","Vermont","New England",-73.340402,44.1486654
+998,"Mahavir Sonkar","(505) 555-0100","http://www.microsoft.com/MahavirSonkar/","Unit 7","732 Petrov Avenue","90398","Pastura","NM","New Mexico","Southwest",-104.9447168,34.7828401
+428,"Wingtip Toys (Paw Paw Lake, MI)","(231) 555-0100","http://www.wingtiptoys.com/PawPawLake","Shop 245","1097 Grabensek Street","90635","Paw Paw Lake","MI","Michigan","Great Lakes",-86.2719674,42.2122597
+571,"Wingtip Toys (Pawlet, VT)","(802) 555-0100","http://www.wingtiptoys.com/Pawlet","Unit 55","279 Flamand Boulevard","90472","Pawlet","VT","Vermont","New England",-73.1762182,43.34674
+3,"Tailspin Toys (Peeples Valley, AZ)","(480) 555-0100","http://www.tailspintoys.com/PeeplesValley","Unit 217","1970 Khandke Road","90205","Peeples Valley","AZ","Arizona","Southwest",-112.7271223,34.2689145
+404,"Wingtip Toys (Penns Creek, PA)","(215) 555-0100","http://www.wingtiptoys.com/PennsCreek","Suite 191","834 Poddar Avenue","90195","Penns Creek","PA","Pennsylvania","Mideast",-77.0552539,40.8598045
+814,"Johanna Hoornstra","(210) 555-0100","http://www.microsoft.com/JohannaHoornstra/","Suite 13","285 Dupuy Street","90650","Petronila","TX","Texas","Southwest",-97.6358282,27.671975
+958,"Valentin Tirlea","(210) 555-0100","http://www.microsoft.com/ValentinTirlea/","Suite 23","1356 Dao Avenue","90648","Pharr","TX","Texas","Southwest",-98.1836216,26.1947962
+969,"Staffan Persson","(314) 555-0100","http://www.microsoft.com/StaffanPersson/","Suite 8","1532 Dewangan Street","90068","Phelps City","MO","Missouri","Plains",-95.5985986,40.4033346
+512,"Wingtip Toys (Philip, SD)","(605) 555-0100","http://www.wingtiptoys.com/Philip","Suite 115","761 Kellnerova Avenue","90438","Philip","SD","South Dakota","Plains",-101.6651441,44.0394329
+494,"Wingtip Toys (Pikeview, CO)","(303) 555-0100","http://www.wingtiptoys.com/Pikeview","Suite 297","1726 Zahradnicek Crescent","90478","Pikeview","CO","Colorado","Rocky Mountain",-104.8221988,38.9152705
+186,"Tailspin Toys (Placer, OR)","(458) 555-0100","http://www.tailspintoys.com/Placer","Unit 222","1151 De Boulevard","90628","Placer","OR","Oregon","Far West",-123.3153394,42.6320633
+534,"Wingtip Toys (Plaquemine, LA)","(225) 555-0100","http://www.wingtiptoys.com/Plaquemine","Shop 79","384 Yadav Boulevard","90520","Plaquemine","LA","Louisiana","Southeast",-91.2342744,30.2890833
+587,"Wingtip Toys (Plata, TX)","(210) 555-0100","http://www.wingtiptoys.com/Plata","Unit 167","904 Saucier Road","90374","Plata","TX","Texas","Southwest",-104.0176921,29.8762836
+483,"Wingtip Toys (Plum Branch, SC)","(803) 555-0100","http://www.wingtiptoys.com/PlumBranch","Suite 275","593 Huq Avenue","90631","Plum Branch","SC","South Carolina","Southeast",-82.259846,33.8487376
+127,"Tailspin Toys (Point Roberts, WA)","(206) 555-0100","http://www.tailspintoys.com/PointRoberts","Unit 187","70 Nishad Avenue","90504","Point Roberts","WA","Washington","Far West",-123.077974,48.9853824
+940,"Lorin Astrom","(210) 555-0100","http://www.microsoft.com/LorinAstrom/","Shop 19","487 PrabhupÄda Lane","90327","Port Alto","TX","Texas","Southwest",-96.4133057,28.6599945
+929,"Vladimir Henzl","(907) 555-0100","http://www.microsoft.com/VladimirHenzl/","Shop 15","250 Torres Road","90521","Port Chilkoot","AK","Alaska","Far West",-135.4377778,59.2288889
+496,"Wingtip Toys (Port Hueneme, CA)","(209) 555-0100","http://www.wingtiptoys.com/PortHueneme","Shop 27","1171 Sikdar Avenue","90726","Port Hueneme","CA","California","Far West",-119.1951074,34.1477829
+457,"Wingtip Toys (Portales, NM)","(505) 555-0100","http://www.wingtiptoys.com/Portales","Unit 133","349 Kozakova Boulevard","90304","Portales","NM","New Mexico","Southwest",-103.3343978,34.1861922
+188,"Tailspin Toys (Premont, TX)","(210) 555-0100","http://www.tailspintoys.com/Premont","Unit 296","54 Matos Street","90375","Premont","TX","Texas","Southwest",-98.1236151,27.3605947
+978,"Baalaamjali Devulapalli","(505) 555-0100","http://www.microsoft.com/BaalaamjaliDevulapalli/","Shop 14","1123 Thakur Road","90011","Puerto de Luna","NM","New Mexico","Southwest",-104.6221654,34.829682
+403,"Wingtip Toys (Queen Valley, AZ)","(480) 555-0100","http://www.wingtiptoys.com/QueenValley","Suite 56","1750 Lampsa Road","90588","Queen Valley","AZ","Arizona","Southwest",-111.2895709,33.2986656
+116,"Tailspin Toys (Rafael Capó, PR)","(787) 555-0100","http://www.tailspintoys.com/RafaelCapó","Unit 129","1268 Pakalapati Street","90685","Rafael Capó","PR","Puerto Rico (US Territory)","External",-66.7908004,18.3997792
+808,"Jackson Kolios","(209) 555-0100","http://www.microsoft.com/JacksonKolios/","Shop 21","1567 Couet Road","90693","Rail Road Flat","CA","California","Far West",-120.5121479,38.3432471
+54,"Tailspin Toys (Railroad, PA)","(215) 555-0100","http://www.tailspintoys.com/Railroad","Suite 158","1032 Duperre Street","90586","Railroad","PA","Pennsylvania","Mideast",-76.6983049,39.7606585
+518,"Wingtip Toys (Raton, NM)","(505) 555-0100","http://www.wingtiptoys.com/Raton","Unit 7","1652 Goransson Lane","90687","Raton","NM","New Mexico","Southwest",-104.4391532,36.9033581
+825,"Jayanta Thakur","(276) 555-0100","http://www.microsoft.com/JayantaThakur/","Suite 17","279 Nakhtare Boulevard","90375","Raven","VA","Virginia","Southeast",-81.8551195,37.0870572
+1026,"Daniella Cavalcante","(405) 555-0100","http://www.microsoft.com/","Shop 22","854 Chin-Sun Street","90104","Ravia","OK","Oklahoma","Southwest",-96.7751760885,34.2457087006
+1008,"Vedrana Kovacevic","(479) 555-0100","http://www.microsoft.com/","Shop 31","1195 Sophia Crescent","90070","Reader","AR","Arkansas","Southeast",-93.1051664,33.752053
+956,"Nhung Thach","(480) 555-0100","http://www.microsoft.com/NhungThach/","Suite 4","198 Benjaree Road","90211","Red Mesa","AZ","Arizona","Southwest",-109.356435046,36.9613024198
+528,"Wingtip Toys (Rich Creek, VA)","(276) 555-0100","http://www.wingtiptoys.com/RichCreek","Suite 238","727 Yavuz Street","90588","Rich Creek","VA","Virginia","Southeast",-80.8225774,37.3823434
+1027,"Serdar ozden","(319) 555-0100","http://www.microsoft.com/","Shop 16","1045 Margherita Lane","90654","Richland","IA","Iowa","Plains",-91.992953,41.1855708
+471,"Wingtip Toys (Ridgemark, CA)","(209) 555-0100","http://www.wingtiptoys.com/Ridgemark","Shop 179","1795 Pullela Street","90667","Ridgemark","CA","California","Far West",-121.3657673,36.8124564
+1037,"David Jaramillo","(803) 555-0100","http://www.microsoft.com/","Shop 12","1951 Victoria Avenue","90727","Ridgeway","SC","South Carolina","Southeast",-80.9603643,34.3076471
+942,"Chaayaadaevi Sonti","(217) 555-0100","http://www.microsoft.com/ChaayaadaeviSonti/","Suite 13","701 Sedlar Boulevard","90593","Roachtown","IL","Illinois","Great Lakes",-90.0409403,38.4631066
+1055,"Adriana Pena","(252) 555-0100","http://www.microsoft.com/","Shop 17","121 Valentina Road","90055","Roberta Mill","NC","North Carolina","Southeast",-80.6359013,35.3573633
+882,"Maryann Huddleston","(304) 555-0100","http://www.microsoft.com/MaryannHuddleston/","Unit 9","1722 Dixit Road","90559","Robertsburg","WV","West Virginia","Southeast",-81.9512481,38.6553637
+521,"Wingtip Toys (Robertsdale, AL)","(205) 555-0100","http://www.wingtiptoys.com/Robertsdale","Shop 276","1856 Poddar Street","90580","Robertsdale","AL","Alabama","Southeast",-87.7119324,30.5538048
+167,"Tailspin Toys (Rockwall, TX)","(210) 555-0100","http://www.tailspintoys.com/Rockwall","Unit 211","1492 Lanctot Crescent","90294","Rockwall","TX","Texas","Southwest",-96.4597089,32.9312336
+408,"Wingtip Toys (Rockwall, TX)","(210) 555-0100","http://www.wingtiptoys.com/Rockwall","Shop 141","1414 Correa Road","90500","Rockwall","TX","Texas","Southwest",-96.4597089,32.9312336
+123,"Tailspin Toys (Roe Park, NY)","(212) 555-0100","http://www.tailspintoys.com/RoePark","Shop 219","528 Persson Road","90775","Roe Park","NY","New York","Mideast",-73.8834702,41.3064828
+1054,"Emma Salpa","(205) 555-0100","http://www.microsoft.com/","Suite 4","105 Jitka Street","90069","Rogersville","AL","Alabama","Southeast",-87.2947417,34.8256425
+431,"Wingtip Toys (Rosa Sánchez, PR)","(787) 555-0100","http://www.wingtiptoys.com/RosaSánchez","Unit 193","583 Aluri Road","90726","Rosa Sánchez","PR","Puerto Rico (US Territory)","External",-65.909286,18.0597925
+414,"Wingtip Toys (Rose Tree, PA)","(215) 555-0100","http://www.wingtiptoys.com/RoseTree","Unit 212","1837 Vasiljevic Boulevard","90710","Rose Tree","PA","Pennsylvania","Mideast",-75.3901933,39.934278
+164,"Tailspin Toys (Rothsville, PA)","(215) 555-0100","http://www.tailspintoys.com/Rothsville","Unit 88","1840 Roman Road","90538","Rothsville","PA","Pennsylvania","Mideast",-76.2510654,40.1512059
+56,"Tailspin Toys (Royal City, WA)","(206) 555-0100","http://www.tailspintoys.com/RoyalCity","Shop 20","1098 Tatarescu Lane","90398","Royal City","WA","Washington","Far West",-119.6305912,46.9009701
+601,"Wingtip Toys (Ruthsburg, MD)","(240) 555-0100","http://www.wingtiptoys.com/Ruthsburg","Unit 123","688 senturk Crescent","90451","Ruthsburg","MD","Maryland","Mideast",-75.9579945,39.0031683
+986,"Neil Farrelly","(215) 555-0100","http://www.microsoft.com/NeilFarrelly/","Suite 17","730 Gungor Boulevard","90355","Sabinsville","PA","Pennsylvania","Mideast",-77.525262,41.8678482
+446,"Wingtip Toys (Saint Landry, LA)","(225) 555-0100","http://www.wingtiptoys.com/SaintLandry","Unit 160","782 Chakraborty Road","90033","Saint Landry","LA","Louisiana","Southeast",-92.257905,30.8443611
+159,"Tailspin Toys (Saint Louis Park, MN)","(218) 555-0100","http://www.tailspintoys.com/SaintLouisPark","Shop 258","565 Singh Lane","90401","Saint Louis Park","MN","Minnesota","Plains",-93.3480051,44.9482979
+157,"Tailspin Toys (Saks, AL)","(205) 555-0100","http://www.tailspintoys.com/Saks","Suite 187","1962 Celik Road","90362","Saks","AL","Alabama","Southeast",-85.8396879,33.6987135
+112,"Tailspin Toys (Sallyards, KS)","(316) 555-0100","http://www.tailspintoys.com/Sallyards","Unit 192","473 Kaulins Road","90706","Sallyards","KS","Kansas","Plains",-96.5072359,37.8214116
+448,"Wingtip Toys (Salt Wells, NV)","(702) 555-0100","http://www.wingtiptoys.com/SaltWells","Unit 20","1175 Moresby Street","90058","Salt Wells","NV","Nevada","Far West",-118.5829202,39.3751976
+175,"Tailspin Toys (San Acacia, NM)","(505) 555-0100","http://www.tailspintoys.com/SanAcacia","Shop 128","435 Lucchesi Boulevard","90445","San Acacia","NM","New Mexico","Southwest",-106.8994726,34.2553446
+472,"Wingtip Toys (San Jacinto, CA)","(209) 555-0100","http://www.wingtiptoys.com/SanJacinto","Shop 170","820 Kubatova Road","90017","San Jacinto","CA","California","Far West",-116.958635,33.7839084
+891,"Taneli Riutta","(276) 555-0100","http://www.microsoft.com/TaneliRiutta/","Unit 21","22 Thakur Boulevard","90019","Sandy Level","VA","Virginia","Southeast",-79.7192007,36.5687491
+92,"Tailspin Toys (Sans Souci, SC)","(803) 555-0100","http://www.tailspintoys.com/SansSouci","Shop 104","1889 Smirnov Road","90553","Sans Souci","SC","South Carolina","Southeast",-82.4240114,34.8778952
+580,"Wingtip Toys (Sarversville, PA)","(215) 555-0100","http://www.wingtiptoys.com/Sarversville","Shop 55","64 Jaramillo Avenue","90201","Sarversville","PA","Pennsylvania","Mideast",-79.7556061,40.7195095
+87,"Tailspin Toys (Sauquoit, NY)","(212) 555-0100","http://www.tailspintoys.com/Sauquoit","Shop 282","1484 Wintle Lane","90199","Sauquoit","NY","New York","Mideast",-75.2598859,43.0042365
+1015,"Isa Hulsegge","(252) 555-0100","http://www.microsoft.com/","Suite 11","599 Margherita Boulevard","90320","Saxapahaw","NC","North Carolina","Southeast",-79.321962,35.9473614
+489,"Wingtip Toys (Sayner, WI)","(262) 555-0100","http://www.wingtiptoys.com/Sayner","Unit 28","1960 Pak Street","90541","Sayner","WI","Wisconsin","Great Lakes",-89.5326435,45.9860625
+987,"Akhil Nadar","(479) 555-0100","http://www.microsoft.com/AkhilNadar/","Shop 6","372 Ghatak Crescent","90680","Schaal","AR","Arkansas","Southeast",-93.961022,33.8262286
+542,"Wingtip Toys (Schererville, IN)","(219) 555-0100","http://www.wingtiptoys.com/Schererville","Unit 147","147 Hadrabova Street","90457","Schererville","IN","Indiana","Great Lakes",-87.4547605,41.4789246
+932,"Nicolo Cattaneo","(212) 555-0100","http://www.microsoft.com/NicoloCattaneo/","Unit 22","1126 Chakraborty Crescent","90273","Schoharie","NY","New York","Mideast",-74.3095787,42.6659088
+1031,"Dipti Shah","(216) 555-0100","http://www.microsoft.com/","Unit 3","381 Hai Crescent","90234","Scioto Furnace","OH","Ohio","Great Lakes",-82.76489,38.7986875
+117,"Tailspin Toys (Scofield, UT)","(385) 555-0100","http://www.tailspintoys.com/Scofield","Suite 176","298 Bucco Lane","90237","Scofield","UT","Utah","Rocky Mountain",-111.1607272,39.7241289
+1040,"Damodar Shenoy","(229) 555-0100","http://www.microsoft.com/","Suite 7","1337 Koknesis Avenue","90673","Scott","GA","Georgia","Southeast",-82.6668019,32.5518326
+976,"Alinne Matos","(229) 555-0100","http://www.microsoft.com/AlinneMatos/","Suite 6","244 Lieu Crescent","90647","Sea Island","GA","Georgia","Southeast",-81.3498179,31.1835648
+168,"Tailspin Toys (Seagraves, TX)","(210) 555-0100","http://www.tailspintoys.com/Seagraves","Suite 228","1216 Nilsson Crescent","90453","Seagraves","TX","Texas","Southwest",-102.564915,32.9442651
+810,"Alena Kellnerova","(303) 555-0100","http://www.microsoft.com/AlenaKellnerova/","Shop 29","101 Jonsson Lane","90143","Segundo","CO","Colorado","Rocky Mountain",-104.7555468,37.1252983
+851,"Ebru Erdogan","(405) 555-0100","http://www.microsoft.com/EbruErdogan/","Shop 18","1528 Dikshit Crescent","90560","Seiling","OK","Oklahoma","Southwest",-98.9480445885,36.1520431006
+78,"Tailspin Toys (Sekiu, WA)","(206) 555-0100","http://www.tailspintoys.com/Sekiu","Suite 54","1302 Jaunzems Lane","90686","Sekiu","WA","Washington","Far West",-124.3013299,48.2622995
+67,"Tailspin Toys (Sentinel Butte, ND)","(701) 555-0100","http://www.tailspintoys.com/SentinelButte","Unit 18","1240 Utjesenovic Street","90422","Sentinel Butte","ND","North Dakota","Plains",-103.8388108,46.9183469
+45,"Tailspin Toys (Severna Park, MD)","(240) 555-0100","http://www.tailspintoys.com/SevernaPark","Shop 214","384 Ang Road","90326","Severna Park","MD","Maryland","Mideast",-76.5452409,39.070388
+907,"Eugen Agafitei","(252) 555-0100","http://www.microsoft.com/EugenAgafitei/","Suite 5","1627 Jakobsson Lane","90026","Shawboro","NC","North Carolina","Southeast",-76.0940962,36.4054333
+552,"Wingtip Toys (Shay, PA)","(215) 555-0100","http://www.wingtiptoys.com/Shay","Suite 140","1587 Olofsson Boulevard","90759","Shay","PA","Pennsylvania","Mideast",-79.4547654,40.7364533
+801,"Eric Torres","(307) 555-0100","http://www.microsoft.com/EricTorres/","Unit 26","1772 Allu Street","90218","Shell","WY","Wyoming","Rocky Mountain",-107.7798127,44.5355158
+993,"Gasper Havzija","(314) 555-0100","http://www.microsoft.com/GasperHavzija/","Suite 31","978 Saowaluk Crescent","90670","Shell Knob","MO","Missouri","Plains",-93.6343588,36.6322872
+920,"Gayatri Gajula","(212) 555-0100","http://www.microsoft.com/GayatriGajula/","Unit 19","1281 Lo Duca Avenue","90157","Shenorock","NY","New York","Mideast",-73.7381876,41.3317606
+904,"Olafs Rozitis","(316) 555-0100","http://www.microsoft.com/OlafsRozitis/","Unit 2","1114 Nakhtare Crescent","90241","Sherwin","KS","Kansas","Plains",-94.9477381,37.1800624
+1058,"Jaroslav Fisar","(215) 555-0100","http://www.microsoft.com/","Suite 30","1999 Ethan Road","90708","Sigel","PA","Pennsylvania","Mideast",-79.1130938,41.275063
+505,"Wingtip Toys (Silver Plume, CO)","(303) 555-0100","http://www.wingtiptoys.com/SilverPlume","Unit 34","1304 Hrdlickova Crescent","90797","Silver Plume","CO","Colorado","Rocky Mountain",-105.7258386,39.6960983
+169,"Tailspin Toys (Sinclair, WY)","(307) 555-0100","http://www.tailspintoys.com/Sinclair","Unit 88","391 Cindric Boulevard","90401","Sinclair","WY","Wyoming","Rocky Mountain",-107.113103,41.7749592
+806,"Shi Tu","(307) 555-0100","http://www.microsoft.com/ShiTu/","Suite 13","808 Riutta Street","90673","Sinclair","WY","Wyoming","Rocky Mountain",-107.113103,41.7749592
+201,"Tailspin Toys (Skyway, WA)","(206) 555-0100","http://www.tailspintoys.com/Skyway","Unit 38","658 Azevedo Lane","90588","Skyway","WA","Washington","Far West",-122.2542892,47.4914884
+35,"Tailspin Toys (Slanesville, WV)","(304) 555-0100","http://www.tailspintoys.com/Slanesville","Suite 150","1959 Sarma Road","90601","Slanesville","WV","West Virginia","Southeast",-78.5227886,39.3731537
+451,"Wingtip Toys (Smoot, WY)","(307) 555-0100","http://www.wingtiptoys.com/Smoot","Unit 16","1854 Ankitham Avenue","90071","Smoot","WY","Wyoming","Rocky Mountain",-110.9143626,42.6204847
+917,"Pari Hosseini","(505) 555-0100","http://www.microsoft.com/PariHosseini/","Unit 24","1164 Samaniego Avenue","90549","Soham","NM","New Mexico","Southwest",-105.4941797,35.4155984
+184,"Tailspin Toys (South Euclid, OH)","(216) 555-0100","http://www.tailspintoys.com/SouthEuclid","Unit 31","862 Tomek Avenue","90551","South Euclid","OH","Ohio","Great Lakes",-81.5184553,41.5231076
+96,"Tailspin Toys (South La Paloma, TX)","(210) 555-0100","http://www.tailspintoys.com/SouthLaPaloma","Shop 2","1377 Tirlea Avenue","90792","South La Paloma","TX","Texas","Southwest",-97.9685259,27.8946157
+109,"Tailspin Toys (South Laguna, CA)","(209) 555-0100","http://www.tailspintoys.com/SouthLaguna","Unit 174","939 Sanyal Crescent","90247","South Laguna","CA","California","Far West",-117.7431097,33.5005827
+937,"Manca Hrastovsek","(205) 555-0100","http://www.microsoft.com/MancaHrastovsek/","Unit 15","685 Pavel Road","90012","Southside","AL","Alabama","Southeast",-86.0224718,33.9245425
+826,"Leila Carvalho","(217) 555-0100","http://www.microsoft.com/LeilaCarvalho/","Suite 24","1051 Nutiu Road","90502","Spillertown","IL","Illinois","Great Lakes",-88.9195138,37.7664385
+850,"Daakshaayaani Sankaramanchi","(319) 555-0100","http://www.microsoft.com/DaakshaayaaniSankaramanchi/","Unit 12","1529 Gupta Lane","90024","Spillville","IA","Iowa","Plains",-91.9509965,43.2049718
+1021,"Fabrice Cloutier","(252) 555-0100","http://www.microsoft.com/","Suite 14","667 Sandhya Lane","90765","Staley","NC","North Carolina","Southeast",-79.551412,35.7959711
+63,"Tailspin Toys (Stallion Springs, CA)","(209) 555-0100","http://www.tailspintoys.com/StallionSprings","Unit 175","1199 Cerkez Street","90076","Stallion Springs","CA","California","Far West",-118.6425912,35.0888553
+453,"Wingtip Toys (Stanardsville, VA)","(276) 555-0100","http://www.wingtiptoys.com/Stanardsville","Suite 124","1316 Agafitei Road","90739","Stanardsville","VA","Virginia","Southeast",-78.4400099,38.2973519
+119,"Tailspin Toys (Statenville, GA)","(229) 555-0100","http://www.tailspintoys.com/Statenville","Shop 44","974 Javan Avenue","90504","Statenville","GA","Georgia","Southeast",-83.0276398,30.7032675
+478,"Wingtip Toys (Stoneboro, PA)","(215) 555-0100","http://www.wingtiptoys.com/Stoneboro","Suite 105","393 Williams Avenue","90542","Stoneboro","PA","Pennsylvania","Mideast",-80.1050604,41.3392232
+13,"Tailspin Toys (Stonefort, IL)","(217) 555-0100","http://www.tailspintoys.com/Stonefort","Suite 185","1492 Shah Road","90685","Stonefort","IL","Illinois","Great Lakes",-88.7081133,37.6142165
+513,"Wingtip Toys (Straughn, IN)","(219) 555-0100","http://www.wingtiptoys.com/Straughn","Suite 265","299 Bae Road","90771","Straughn","IN","Indiana","Great Lakes",-85.2913559,39.8089351
+152,"Tailspin Toys (Sun River, MT)","(406) 555-0100","http://www.tailspintoys.com/SunRiver","Unit 249","1229 Bordelon Lane","90309","Sun River","MT","Montana","Rocky Mountain",-111.7213719,47.5332872
+468,"Wingtip Toys (Sunburg, MN)","(218) 555-0100","http://www.wingtiptoys.com/Sunburg","Unit 234","1356 Molina Crescent","90477","Sunburg","MN","Minnesota","Plains",-95.2383563,45.3477401
+884,"Anindya Ghatak","(219) 555-0100","http://www.microsoft.com/AnindyaGhatak/","Unit 17","1957 Nantakarn Avenue","90197","Switz City","IN","Indiana","Great Lakes",-87.053,39.035
+2,"Tailspin Toys (Sylvanite, MT)","(406) 555-0100","http://www.tailspintoys.com/Sylvanite","Shop 245","705 Dita Lane","90216","Sylvanite","MT","Montana","Rocky Mountain",-115.8743507,48.7163356
+455,"Wingtip Toys (Taft Heights, CA)","(209) 555-0100","http://www.wingtiptoys.com/TaftHeights","Shop 121","1772 Fallaci Crescent","90304","Taft Heights","CA","California","Far West",-119.4726196,35.1346895
+827,"Crina Grasu","(308) 555-0100","http://www.microsoft.com/CrinaGrasu/","Shop 14","1538 Lampsa Road","90594","Tamora","NE","Nebraska","Plains",-97.2250424,40.8938986
+1038,"Damodara Trivedi","(210) 555-0100","http://www.microsoft.com/","Shop 23","682 Shantanu Boulevard","90350","Tarzan","TX","Texas","Southwest",-101.9751408,32.3053922
+134,"Tailspin Toys (Tavares, FL)","(239) 555-0100","http://www.tailspintoys.com/Tavares","Shop 82","1687 Valbe Avenue","90467","Tavares","FL","Florida","Southeast",-81.725632,28.8041579
+444,"Wingtip Toys (Tea, SD)","(605) 555-0100","http://www.wingtiptoys.com/Tea","Shop 228","1362 Chu Crescent","90641","Tea","SD","South Dakota","Plains",-96.8358847,43.4463668
+936,"Ludmila Smidova","(480) 555-0100","http://www.microsoft.com/LudmilaSmidova/","Unit 31","413 Wattanasin Boulevard","90248","Tempe","AZ","Arizona","Southwest",-111.9093095,33.414768
+813,"Shyam Poddar","(218) 555-0100","http://www.microsoft.com/ShyamPoddar/","Unit 19","130 Gallo Avenue","90695","Tenstrike","MN","Minnesota","Plains",-94.6747007,47.6566206
+803,"Bala Dixit","(209) 555-0100","http://www.microsoft.com/BalaDixit/","Unit 7","844 Magnusson Lane","90676","Termo","CA","California","Far West",-120.4602262,40.8657308
+135,"Tailspin Toys (Terre du Lac, MO)","(314) 555-0100","http://www.tailspintoys.com/TerreduLac","Suite 93","171 Bite Lane","90145","Terre du Lac","MO","Missouri","Plains",-90.6254052,37.9117174
+190,"Tailspin Toys (Teutopolis, IL)","(217) 555-0100","http://www.tailspintoys.com/Teutopolis","Unit 103","1171 Lukstina Road","90591","Teutopolis","IL","Illinois","Great Lakes",-88.4719918,39.1330967
+435,"Wingtip Toys (Teutopolis, IL)","(217) 555-0100","http://www.wingtiptoys.com/Teutopolis","Unit 83","1871 Grabensek Road","90269","Teutopolis","IL","Illinois","Great Lakes",-88.4719918,39.1330967
+902,"Kamila Michnova","(210) 555-0100","http://www.microsoft.com/KamilaMichnova/","Unit 19","729 Van Lier Street","90418","The Colony","TX","Texas","Southwest",-96.8863922,33.0890094
+183,"Tailspin Toys (Tierra Verde, FL)","(239) 555-0100","http://www.tailspintoys.com/TierraVerde","Unit 286","927 Yadav Street","90195","Tierra Verde","FL","Florida","Southeast",-82.7234337,27.6919746
+822,"Suparna Bhattacharya","(314) 555-0100","http://www.microsoft.com/SuparnaBhattacharya/","Unit 30","680 Parkar Lane","90696","Tiff City","MO","Missouri","Plains",-94.617168,36.668405
+564,"Wingtip Toys (Tilleda, WI)","(262) 555-0100","http://www.wingtiptoys.com/Tilleda","Suite 174","1968 Necesana Street","90240","Tilleda","WI","Wisconsin","Great Lakes",-88.9112178,44.8155317
+871,"Darshana Madhunapantula","(240) 555-0100","http://www.microsoft.com/DarshanaMadhunapantula/","Shop 6","374 Cheema Street","90299","Tolchester Beach","MD","Maryland","Mideast",-76.2425293218,39.2170720564
+90,"Tailspin Toys (Tolna, ND)","(701) 555-0100","http://www.tailspintoys.com/Tolna","Unit 91","777 Vassiljev Street","90089","Tolna","ND","North Dakota","Plains",-98.4401019,47.8272203
+828,"Sercan Celik","(217) 555-0100","http://www.microsoft.com/SercanCelik/","Shop 23","802 Mokkapati Road","90592","Tolono","IL","Illinois","Great Lakes",-88.2589387,39.9861415
+105,"Tailspin Toys (Tomnolen, MS)","(228) 555-0100","http://www.tailspintoys.com/Tomnolen","Unit 60","1158 Hrastovsek Boulevard","90400","Tomnolen","MS","Mississippi","Southeast",-89.3606259,33.4848451
+200,"Tailspin Toys (Tooele, UT)","(385) 555-0100","http://www.tailspintoys.com/Tooele","Suite 264","691 Sonkar Avenue","90100","Tooele","UT","Utah","Rocky Mountain",-112.29828,40.5307776
+165,"Tailspin Toys (Topstone, CT)","(203) 555-0100","http://www.tailspintoys.com/Topstone","Suite 271","1399 Mukherjee Avenue","90675","Topstone","CT","Connecticut","New England",-73.4490109,41.2959287
+946,"David safranek","(215) 555-0100","http://www.microsoft.com/Davidsafranek/","Shop 7","974 Mazzanti Avenue","90204","Toughkenamon","PA","Pennsylvania","Mideast",-75.757439,39.8314987
+585,"Wingtip Toys (Towaco, NJ)","(201) 555-0100","http://www.wingtiptoys.com/Towaco","Unit 12","747 Acar Crescent","90406","Towaco","NJ","New Jersey","Mideast",-74.3454282,40.922043
+1041,"Tomo Vidovic","(207) 555-0100","http://www.microsoft.com/","Shop 14","296 Anima Boulevard","90085","Tremont","ME","Maine","New England",-68.4155746,44.2667467
+48,"Tailspin Toys (Trentwood, WA)","(206) 555-0100","http://www.tailspintoys.com/Trentwood","Shop 40","197 Jaramillo Street","90615","Trentwood","WA","Washington","Far West",-117.2107634,47.6965622
+21,"Tailspin Toys (Tresckow, PA)","(215) 555-0100","http://www.tailspintoys.com/Tresckow","Shop 147","640 Chakraborty Street","90790","Tresckow","PA","Pennsylvania","Mideast",-75.9665916,40.9134194
+535,"Wingtip Toys (Triadelphia, WV)","(304) 555-0100","http://www.wingtiptoys.com/Triadelphia","Suite 212","599 Huiting Lane","90747","Triadelphia","WV","West Virginia","Southeast",-80.6284097,40.0525734
+964,"Ingrida Zeltina","(239) 555-0100","http://www.microsoft.com/IngridaZeltina/","Suite 24","1300 Sonkar Road","90042","Trilby","FL","Florida","Southeast",-82.1948076,28.4624986
+572,"Wingtip Toys (Trout Run, PA)","(215) 555-0100","http://www.wingtiptoys.com/TroutRun","Unit 190","787 Sarkar Street","90257","Trout Run","PA","Pennsylvania","Mideast",-77.0569132,41.3861872
+575,"Wingtip Toys (Trumansburg, NY)","(212) 555-0100","http://www.wingtiptoys.com/Trumansburg","Shop 227","178 Bhogireddy Boulevard","90482","Trumansburg","NY","New York","Mideast",-76.6660589,42.5422939
+413,"Wingtip Toys (Truscott, TX)","(210) 555-0100","http://www.wingtiptoys.com/Truscott","Suite 14","1572 Mudaliyar Lane","90010","Truscott","TX","Texas","Southwest",-99.8112042,33.7542544
+975,"Prabodh Nair","(605) 555-0100","http://www.microsoft.com/PrabodhNair/","Suite 30","1977 Du Road","90115","Tschetter Colony","SD","South Dakota","Plains",-97.6861778,43.3702642
+106,"Tailspin Toys (Tumacacori, AZ)","(480) 555-0100","http://www.tailspintoys.com/Tumacacori","Unit 23","1991 Clark Street","90662","Tumacacori","AZ","Arizona","Southwest",-111.052307129,31.5687255859
+100,"Tailspin Toys (Tunnelhill, PA)","(215) 555-0100","http://www.tailspintoys.com/Tunnelhill","Shop 6","301 Nechita Avenue","90788","Tunnelhill","PA","Pennsylvania","Mideast",-78.5408491,40.4781265
+406,"Wingtip Toys (Tuscaloosa, AL)","(205) 555-0100","http://www.wingtiptoys.com/Tuscaloosa","Suite 287","581 Ioveanu Crescent","90011","Tuscaloosa","AL","Alabama","Southeast",-87.5691735,33.2098407
+835,"Dominic Davignon","(209) 555-0100","http://www.microsoft.com/DominicDavignon/","Suite 16","1384 Dupuy Street","90192","Twin Peaks","CA","California","Far West",-117.2336533,34.2388955
+918,"Isidora Morales","(406) 555-0100","http://www.microsoft.com/IsidoraMorales/","Shop 12","1633 Kanaparthi Lane","90670","Twodot","MT","Montana","Rocky Mountain",-110.072964,46.4243971
+470,"Wingtip Toys (Universal City, TX)","(210) 555-0100","http://www.wingtiptoys.com/UniversalCity","Unit 40","1521 Phan Crescent","90500","Universal City","TX","Texas","Southwest",-98.2911235,29.5480071
+43,"Tailspin Toys (Upper Preston, WA)","(206) 555-0100","http://www.tailspintoys.com/UpperPreston","Suite 105","980 Preda Crescent","90687","Upper Preston","WA","Washington","Far West",-121.907615,47.5051019
+461,"Wingtip Toys (Vair, TX)","(210) 555-0100","http://www.wingtiptoys.com/Vair","Shop 59","75 Chang Crescent","90707","Vair","TX","Texas","Southwest",-94.9135442,31.2810176
+80,"Tailspin Toys (Valdese, NC)","(252) 555-0100","http://www.tailspintoys.com/Valdese","Suite 127","199 Das Street","90541","Valdese","NC","North Carolina","Southeast",-81.563149,35.7406864
+503,"Wingtip Toys (Valhalla, NC)","(252) 555-0100","http://www.wingtiptoys.com/Valhalla","Suite 66","1127 Vosnik Road","90310","Valhalla","NC","North Carolina","Southeast",-76.6577239,36.1371028
+846,"Malorie Bousquet","(209) 555-0100","http://www.microsoft.com/MalorieBousquet/","Suite 16","852 Ribeiro Avenue","90005","Valley View Park","CA","California","Far West",-117.3081,34.2350067
+432,"Wingtip Toys (Vamo, FL)","(239) 555-0100","http://www.wingtiptoys.com/Vamo","Unit 102","1523 Lukes Lane","90333","Vamo","FL","Florida","Southeast",-82.4978748,27.2219951
+994,"Libuse Kuchtova","(210) 555-0100","http://www.microsoft.com/LibuseKuchtova/","Unit 31","364 Thai Lane","90729","Van Alstyne","TX","Texas","Southwest",-96.5772109,33.4214995
+118,"Tailspin Toys (Vassalboro, ME)","(207) 555-0100","http://www.tailspintoys.com/Vassalboro","Unit 234","900 Thota Boulevard","90546","Vassalboro","ME","Maine","New England",-69.6775451,44.4592341
+947,"Svetlana Todorovic","(206) 555-0100","http://www.microsoft.com/SvetlanaTodorovic/","Suite 14","731 Szolosy Crescent","90468","Venersborg","WA","Washington","Far West",-122.4245395,45.7737266
+497,"Wingtip Toys (Verdery, SC)","(803) 555-0100","http://www.wingtiptoys.com/Verdery","Shop 144","1774 ChÃ¡vez Road","90108","Verdery","SC","South Carolina","Southeast",-82.2492911,34.1092876
+89,"Tailspin Toys (Victory Gardens, NJ)","(201) 555-0100","http://www.tailspintoys.com/VictoryGardens","Shop 7","249 Arvidsson Avenue","90461","Victory Gardens","NJ","New Jersey","Mideast",-74.5423796,40.8759325
+185,"Tailspin Toys (Vidrine, LA)","(225) 555-0100","http://www.tailspintoys.com/Vidrine","Suite 174","920 Nesic Street","90272","Vidrine","LA","Louisiana","Southeast",-92.3981875,30.6926971
+1016,"Aive Petrov","(316) 555-0100","http://www.microsoft.com/","Unit 26","1377 Marten Street","90134","Virgil","KS","Kansas","Plains",-96.01027,37.9808617
+992,"Amarakumaar Gadiyaram","(303) 555-0100","http://www.microsoft.com/AmarakumaarGadiyaram/","Shop 10","1575 Bhattacharya Lane","90381","Vollmar","CO","Colorado","Rocky Mountain",-104.8388616,40.1349833
+875,"Philip Walker","(216) 555-0100","http://www.microsoft.com/PhilipWalker/","Suite 12","1555 Penttila Road","90056","Waite Hill","OH","Ohio","Great Lakes",-81.3840001,41.6186592
+982,"Yves Belisle","(480) 555-0100","http://www.microsoft.com/YvesBelisle/","Unit 22","1530 Ngo Boulevard","90606","Walapai","AZ","Arizona","Southwest",-113.8841137,35.3444389
+1048,"Abhra Ganguly","(212) 555-0100","http://www.microsoft.com/","Unit 31","1841 Marcello Crescent","90351","Walker Valley","NY","New York","Mideast",-74.377932,41.6337047
+104,"Tailspin Toys (Wallagrass, ME)","(207) 555-0100","http://www.tailspintoys.com/Wallagrass","Unit 206","1898 Kasesalu Boulevard","90579","Wallagrass","ME","Maine","New England",-68.5972677,47.1294837
+807,"Gunnar Lohmus","(201) 555-0100","http://www.microsoft.com/GunnarLohmus/","Shop 31","31 Bagchi Avenue","90130","Wanaque","NJ","New Jersey","Mideast",-74.2940378,41.0381526
+480,"Wingtip Toys (Wapinitia, OR)","(458) 555-0100","http://www.wingtiptoys.com/Wapinitia","Shop 119","1525 Benjaree Crescent","90173","Wapinitia","OR","Oregon","Far West",-121.2564517,45.1142837
+565,"Wingtip Toys (Wapiti, WY)","(307) 555-0100","http://www.wingtiptoys.com/Wapiti","Shop 266","899 Valentova Road","90344","Wapiti","WY","Wyoming","Rocky Mountain",-109.4376625,44.4685604
+173,"Tailspin Toys (Wappingers Falls, NY)","(212) 555-0100","http://www.tailspintoys.com/WappingersFalls","Unit 235","822 Shasthri Road","90681","Wappingers Falls","NY","New York","Mideast",-73.91097,41.5964825
+22,"Tailspin Toys (Ward Ridge, FL)","(239) 555-0100","http://www.tailspintoys.com/WardRidge","Shop 26","73 Berg Crescent","90784","Ward Ridge","FL","Florida","Southeast",-85.2849181,29.7885429
+562,"Wingtip Toys (Ware Shoals, SC)","(803) 555-0100","http://www.wingtiptoys.com/WareShoals","Suite 47","940 Rosberg Street","90181","Ware Shoals","SC","South Carolina","Southeast",-82.2467853,34.3984511
+1011,"Rajeev Sandhu","(458) 555-0100","http://www.microsoft.com/","Shop 9","1768 Suniti Road","90658","Wasco","OR","Oregon","Far West",-120.698113,45.5917918
+963,"Be Trang","(405) 555-0100","http://www.microsoft.com/BeTrang/","Unit 26","33 Rezaei Boulevard","90072","Watonga","OK","Oklahoma","Southwest",-98.4369110885,35.8487128006
+532,"Wingtip Toys (Waycross, GA)","(229) 555-0100","http://www.wingtiptoys.com/Waycross","Suite 98","1275 Haldar Street","90743","Waycross","GA","Georgia","Southeast",-82.3540178,31.2135511
+830,"Jana Fialova","(215) 555-0100","http://www.microsoft.com/JanaFialova/","Unit 20","1261 Lo Road","90087","Weigelstown","PA","Pennsylvania","Mideast",-76.8224701,39.9837084
+540,"Wingtip Toys (Weld, ME)","(207) 555-0100","http://www.wingtiptoys.com/Weld","Shop 237","540 Buresova Road","90031","Weld","ME","Maine","New England",-70.4214543,44.6986707
+1005,"Bhadram Kamasamudram","(802) 555-0100","http://www.microsoft.com/","Shop 3","94 Selma Road","90167","Wells","VT","Vermont","New England",-73.2042744,43.4172937
+1004,"Drishti Bose","(479) 555-0100","http://www.microsoft.com/","Shop 12","262 Seo-yun Boulevard","90534","Wesson","AR","Arkansas","Southeast",-92.7626597,33.1154128
+893,"Leyla Asef zade","(216) 555-0100","http://www.microsoft.com/LeylaAsefzade/","Suite 12","11 Mihajlovik Crescent","90110","West Elkton","OH","Ohio","Great Lakes",-84.5543932,39.5878325
+569,"Wingtip Toys (West Frostproof, FL)","(239) 555-0100","http://www.wingtiptoys.com/WestFrostproof","Shop 39","692 Barney Lane","90126","West Frostproof","FL","Florida","Southeast",-81.5831327,27.733641
+456,"Wingtip Toys (West Hempstead, NY)","(212) 555-0100","http://www.wingtiptoys.com/WestHempstead","Unit 2","1605 Leigh Road","90799","West Hempstead","NY","New York","Mideast",-73.6501295,40.7048242
+833,"Devraj Rao","(385) 555-0100","http://www.microsoft.com/DevrajRao/","Unit 12","611 Shasthri Avenue","90566","Westwater","UT","Utah","Rocky Mountain",-109.1123346,39.0783178
+481,"Wingtip Toys (White Church, MO)","(314) 555-0100","http://www.wingtiptoys.com/WhiteChurch","Suite 283","1410 Shergill Lane","90184","White Church","MO","Missouri","Plains",-91.7862581,36.8503352
+945,"Hoc Tran","(339) 555-0100","http://www.microsoft.com/HocTran/","Shop 19","1634 Sen Street","90588","White Horse Beach","MA","Massachusetts[E]","New England",-70.5578093,41.9309375
+189,"Tailspin Toys (Wilkes-Barre, PA)","(215) 555-0100","http://www.tailspintoys.com/Wilkes-Barre","Suite 49","1847 Alladi Street","90766","Wilkes-Barre","PA","Pennsylvania","Mideast",-75.8813075,41.2459149
+426,"Wingtip Toys (Willow Valley, AZ)","(480) 555-0100","http://www.wingtiptoys.com/WillowValley","Unit 294","2001 Lee Boulevard","90041","Willow Valley","AZ","Arizona","Southwest",-114.6066314,34.9119475
+10,"Tailspin Toys (Wimbledon, ND)","(701) 555-0100","http://www.tailspintoys.com/Wimbledon","Unit 67","372 Joo Lane","90061","Wimbledon","ND","North Dakota","Plains",-98.4598177,47.1697143
+75,"Tailspin Toys (Windsor Locks, CT)","(203) 555-0100","http://www.tailspintoys.com/WindsorLocks","Unit 276","605 Prieditis Lane","90456","Windsor Locks","CT","Connecticut","New England",-72.6273124,41.9292639
+847,"Kristiina Ivanov","(605) 555-0100","http://www.microsoft.com/KristiinaIvanov/","Unit 6","1505 Stojkovic Street","90297","Wounded Knee","SD","South Dakota","Plains",-102.365715,43.1405442
+881,"Magdalena Michnova","(907) 555-0100","http://www.microsoft.com/MagdalenaMichnova/","Unit 13","464 Mutlu Lane","90641","Wrangell","AK","Alaska","Far West",-132.3766667,56.4708333
+1028,"Emma Van Zant","(303) 555-0100","http://www.microsoft.com/","Shop 21","1197 Uma Road","90400","Wray","CO","Colorado","Rocky Mountain",-102.2232495,40.0758231
+1035,"Manjunatha Karnik","(405) 555-0100","http://www.microsoft.com/","Suite 8","1768 Kwanjai Crescent","90286","Wright City","OK","Oklahoma","Southwest",-95.0270640885,34.0640539006
+912,"Volkan senturk","(276) 555-0100","http://www.microsoft.com/Volkansenturk/","Suite 27","283 Berzins Avenue","90525","Wyndham","VA","Virginia","Southeast",-77.6124884,37.6984781
+418,"Wingtip Toys (Yaak, MT)","(406) 555-0100","http://www.wingtiptoys.com/Yaak","Unit 144","1588 Kohout Crescent","90284","Yaak","MT","Montana","Rocky Mountain",-115.7087944,48.8330088
+1049,"Amet Shergill","(303) 555-0100","http://www.microsoft.com/","Suite 19","1527 Milada Lane","90638","Yampa","CO","Colorado","Rocky Mountain",-106.9086582,40.1524837
+999,"Kristi Part","(702) 555-0100","http://www.microsoft.com/KristiPart/","Unit 26","348 Putkonen Avenue","90162","Yerington","NV","Nevada","Far West",-119.1629309,38.9857508
+858,"Bimla PrabhupÄda","(209) 555-0100","http://www.microsoft.com/BimlaPrabhupÄda/","Shop 7","138 Jandhyala Lane","90313","Yermo","CA","California","Far West",-116.8203127,34.9049849
+76,"Tailspin Toys (Yewed, OK)","(405) 555-0100","http://www.tailspintoys.com/Yewed","Unit 266","210 safranek Lane","90308","Yewed","OK","Oklahoma","Southwest",-98.4338585885,36.6862008006
+989,"Milinka Zujovic","(316) 555-0100","http://www.microsoft.com/MilinkaZujovic/","Shop 13","1941 Piili Lane","90574","Zurich","KS","Kansas","Plains",-99.4381608,39.2344536
