@@ -1,9 +1,7 @@
 # DAX Studio In An Hour ![DAX Studio](./Images/daxstudio.png)
 
 ### About:
-DAX Studio is a tool to write, execute, and analyze DAX queries in Power BI Designer, Power Pivot for Excel, and Analysis Services Tabular.
-
-It includes an Object Browser, query editing and execution, formula and measure editing, syntax highlighting and formatting, integrated tracing and query execution breakdowns.
+DAX Studio is a tool to write, execute, and analyze DAX queries in Power BI Designer, Power Pivot for Excel, and Analysis Services Tabular. It includes an Object Browser, query editing and execution, formula and measure editing, syntax highlighting and formatting, integrated tracing and query execution breakdowns.
 
 Website: https://daxstudio.org/
 ___
@@ -16,13 +14,8 @@ ___
 
 # Table of Contents
 - [Setup](#setup)
-- [Tabular Object Model Hierarchy](#tabular-object-model-hierarchy)
-- [Best Practice Analyzer](#best-practice-analyzer)
-- [Advanced Scripting](#advanced-scripting-automation)
-    - [Tables](#tables)
-    - [Columns](#columns)
-- [Calculation Groups](#calculation-groups)
-- [Continue Your Journey](#continue-your-journey)
+- [DAX Queries](#dax-queries)
+- [DAX Formulas](#dax-formulas)
     
 ___
 
@@ -36,7 +29,6 @@ ___
 
 **Important Note:** Always create a backup of your PBIX file prior to editing to avoid any issues in the event of a corrupted model.
 
-
 # Data Analysis Expressions (DAX)
 **Source:** Microsoft Docs
 
@@ -46,18 +38,14 @@ Data Analysis Expressions (DAX) is the native formula and query language for 
 
 ___
 
-# Best Practice Analyzer
-
-### About:
-The best practices rules are a collection of community contributions for Tabular Model development. They let you define global or model-specific rules using a simple expression language. At any time, you can check whether objects in your model satisfy the rules.
-
-Website: https://github.com/TabularEditor/BestPracticeRules
+# DAX Queries
 
 
-### Objective: Import the Best Practice Rules collection and apply to the model.
+
+### Objective: Return tables, single column tables (list) and scalar values leveraging DAX as a query language.
 
 ## Instructions
-### [Optional: Guided Video](https://www.youtube.com/watch?v=PrgPo6Cccfs&list=PLKW7XPyNDgRCOiC69kZWfRQdOxcnQy2yA&index=4)
+### [Optional: Guided Video]()
 1. Navigate to the repository, https://github.com/TabularEditor/BestPracticeRules
 2. Navigate to the [BPARules-standard.json](https://github.com/TabularEditor/BestPracticeRules/blob/master/BPARules-standard.json) file and press the Raw button.
     1. Copy the web address in your browser (must match the below with the prefix raw) - 
