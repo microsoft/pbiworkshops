@@ -101,6 +101,8 @@ ORDER BY CustomerID ASC
 | ASC | Ascending (Optional Default) |
 | DESC   | Descending |
 
+___
+
 3. Include a filter condition:
 
 ```
@@ -114,6 +116,7 @@ SELECT *
 FROM Customers 
 WHERE StateProvinceCode = 'IL'
 ```
+___
 
 4. Select a single column:
 ```
@@ -127,6 +130,8 @@ SELECT CustomerName
 FROM Customers 
 ```
 - Update the above statement to include the **ORDER BY** clause for the CustomerID column. 🏆 **Challenge**
+
+___
 
 5. Enter the below query to count all rows in the customer table:
 
@@ -148,6 +153,8 @@ FROM Customers
 EVALUATE
 { COUNTROWS( Customers ) }
 ```
+___
+
 
 ___
 
