@@ -27,6 +27,13 @@ ___
 ### Power BI Desktop
 1. Ensure the Power BI preview feature [Store datasets using enhanced metadata format](https://docs.microsoft.com/en-us/power-bi/connect-data/desktop-enhanced-dataset-metadata) is enabled.
 
+### DAX Studio
+1. Navigate to the File menu and select Options
+2. Enable the setting:
+    Set 'Clear Cache and Run' as the default
+
+![Clear Cache](./Images/ClearCache.png)
+
 **Important Note:** Always create a backup of your PBIX file prior to editing to avoid any issues in the event of a corrupted model.
 
 ___
