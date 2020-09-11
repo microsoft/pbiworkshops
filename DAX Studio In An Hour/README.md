@@ -28,8 +28,10 @@ ___
 1. Ensure the Power BI preview feature [Store datasets using enhanced metadata format](https://docs.microsoft.com/en-us/power-bi/connect-data/desktop-enhanced-dataset-metadata) is enabled.
 
 ### DAX Studio
-1. Navigate to the File menu and select Options
-2. Enable the setting: **Set 'Clear Cache and Run' as the default**
+1. Open **DAX Studio**.
+2. Navigate to the File menu and select Options
+3. Within the **Standard** tab and the **Defaults** group, enable the setting: **Set 'Clear Cache and Run' as the default**
+4. Close **DAX Studio**
 
 ![Clear Cache](./Images/ClearCache.png)
 
@@ -52,18 +54,100 @@ With DAX queries, you can query and return data defined by a table expression. R
 
 [Learn More About DAX Queries](https://docs.microsoft.com/en-us/dax/dax-queries)
 
-### Objective: Return tables, columns and scalar values.
+### Objective: Return tables, single column table (list) and scalar values.
 
 ## Instructions
 ### [Optional: Guided Video]()
+### Power BI Desktop
 1. Open the Sales Demo (PBIX) file, navigate to the **External Tools** ribbon in Power BI Desktop and select **DAX Studio**.
-2. Witin DAX Studio enter the below query
 
+### DAX Studio
+In the query Editor section enter the below queries and review their output in the **Results** section (as displayed below), after pressing the **Run (F5)** command.
+
+1. Select all from the customers table:
 ```
 EVALUATE
 Customers
 ```
+**Note:** The above DAX query could be comparable to the output of the T-SQL statement:
 
+```
+-- Select all from the customers table
+SELECT * 
+FROM Customers
+```
+
+![Editor Results](./Images/EditorResults.png)
+
+2. Update the above statement, including an **ORDER BY** clause and sort order modifier:
+
+```
+EVALUATE
+Customers
+ORDER BY [CustomerID] ASC
+```
+**Note:** The above DAX query could be comparable to the output of the T-SQL statement:
+```
+-- Select all from the Customers table in ascending order by the CustomerID
+SELECT * 
+FROM Customers 
+ORDER BY CustomerID ASC
+```
+
+**Additional Information:**
+
+| Sort Modifiers | Description |
+| :------------- | :---------- |
+| ASC | Ascending (Optional Default) |
+| DESC   | Descending |
+
+3. Include a filter condition:
+
+```
+EVALUATE
+FILTER ( Customers, Customers[StateProvinceCode] = "IL" )
+```
+**Note:** The above DAX query could be comparable to the output of the T-SQL statement:
+```
+-- Select all from the Customers table where the StateProvinceCode equals IL
+SELECT * 
+FROM Customers 
+WHERE StateProvinceCode = 'IL'
+```
+
+4. Select a single column:
+```
+EVALUATE
+VALUES( Customers[CustomerName] )
+```
+**Note:** The above DAX query could be comparable to the output of the T-SQL statement:
+```
+-- Select the CustomerName from the Customers table
+SELECT CustomerName 
+FROM Customers 
+```
+- Update the above statement to include the **ORDER BY** clause for the CustomerID column. 🏆 **Challenge**
+
+5. Enter the below query to count all rows in the customer table:
+
+```
+EVALUATE
+COUNTROWS( Customers )
+```
+**Note:** The above DAX query could be comparable to the output of the T-SQL statement:
+```
+-- Count all from the Customers table.
+SELECT COUNT(*)
+FROM Customers
+```
+- Review the following error in the **Output**.
+![Table Error](./Images/TableError.png)
+
+- Update the above query to store the returned results in a list using curly brackets.
+```
+EVALUATE
+{ COUNTROWS( Customers ) }
+```
 
 ___
 
