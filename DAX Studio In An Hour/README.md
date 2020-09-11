@@ -29,12 +29,11 @@ ___
 
 ### DAX Studio
 1. Navigate to the File menu and select Options
-2. Enable the setting:
-    Set 'Clear Cache and Run' as the default
+2. Enable the setting: **Set 'Clear Cache and Run' as the default**
 
 ![Clear Cache](./Images/ClearCache.png)
 
-**Important Note:** Always create a backup of your PBIX file prior to editing to avoid any issues in the event of a corrupted model.
+**Important Note:** For performance testing utilizing **'Clear Cache and Run'** will ensure that you are executing queries against uncached data.
 
 ___
 
@@ -85,23 +84,12 @@ ___
 
 # Continue Your Journey
 
-### An indepth walk through of Tabular Editor
-[PowerBI.Tips - Tabular Editor Playlist](https://www.youtube.com/watch?v=c-jZMzsvKnM&list=PLZjKz7bVsqV1mmA48wXqrSDPbDSGBvLdL)
+### An indepth walk through of DAX Studio
+[PowerBI.Tips - Introduction to DAX Studio Playlist](https://www.youtube.com/watch?v=jpZnCHRauPU&list=PLn1m_aBmgsbGDZb7ydd8_LS1AfosdRndQ)
 
 Includes:
-- Intro to Tabular Editor (1:03:33)
-- Using Scripts (1:09:31)
-- Best Practice Analyzer (1:05:42)
-- Using Devops (1:24:05)
-
-### Advanced Scripting
-[Script Snippets](https://github.com/otykier/TabularEditor/wiki/Useful-script-snippets)
-
-[Community Scripts](https://github.com/TabularEditor/Scripts)
-
-### Calculation Groups
-[Microsoft Docs](https://docs.microsoft.com/en-us/analysis-services/tabular-models/calculation-groups?view=asallproducts-allversions)
-
-[SQLBI - Creating calculation groups in Power BI Desktop using Tabular Editor](https://www.youtube.com/watch?v=a4zYT-N-zsU)
-
-[SQLBI - Calculation Groups (Blog)](https://www.sqlbi.com/calculation-groups/)
+- Introduction to DAX Studio (1:00:44)
+- Model Performance Tuning in DAX Studio (1:09:02)
+- DAX Studio Full Features Review (1:23:11)
+- DAX Studio Query Performance Tuning - Marco Russo; SQLBI (1:00:59)
+- DAX Studio Release 2.11.1 (51:32)
