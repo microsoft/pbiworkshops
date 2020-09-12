@@ -64,6 +64,8 @@ With DAX queries, you can query and return data defined by a table expression. R
 ### DAX Studio
 In the query Editor section enter the below queries and review their output in the **Results** section (as displayed below), after pressing the **Run (F5)** command.
 
+#### SELECT Statement
+
 1. Select all from the customers table:
 ```
 EVALUATE
@@ -101,9 +103,25 @@ ORDER BY CustomerID ASC
 | ASC | Ascending (Optional Default) |
 | DESC   | Descending |
 
+
+3. Select a single column:
+```
+EVALUATE
+VALUES( Customers[CustomerName] )
+```
+**Note:** The above DAX query could be comparable to the output of the T-SQL statement:
+```
+-- Select the CustomerName from the Customers table
+SELECT CustomerName 
+FROM Customers 
+```
+- Update the above statement to include the **ORDER BY** clause for the CustomerID column. 🏆 **Challenge**
+
 ___
 
-3. Include a filter condition:
+#### WHERE Statement
+
+4. Include a filter condition:
 
 ```
 EVALUATE
@@ -118,20 +136,6 @@ WHERE StateProvinceCode = 'IL'
 ```
 ___
 
-4. Select a single column:
-```
-EVALUATE
-VALUES( Customers[CustomerName] )
-```
-**Note:** The above DAX query could be comparable to the output of the T-SQL statement:
-```
--- Select the CustomerName from the Customers table
-SELECT CustomerName 
-FROM Customers 
-```
-- Update the above statement to include the **ORDER BY** clause for the CustomerID column. 🏆 **Challenge**
-
-___
 
 5. Enter the below query to count all rows in the customer table:
 
@@ -153,8 +157,6 @@ FROM Customers
 EVALUATE
 { COUNTROWS( Customers ) }
 ```
-___
-
 
 ___
 
