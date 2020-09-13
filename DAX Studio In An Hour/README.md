@@ -15,7 +15,15 @@ ___
 # Table of Contents
 - [Setup](#setup)
 - [Query Language](#query-language)
+  - [SELECT Statement](#select-statement)
+  - [WHERE Clause](#where-clause)
+  - [Aggregate Functions](#aggregate-functions)
+  - [GROUP BY Statement](#group-by-statement)
+  - [JOIN Clause](#join-clause)
 - [Formula Language](#formula-language)
+- [Server Timings](#server-timings)
+- [VertiPaq Analyzer](#vertipaq-analyzer)
+
 
 ___
 
@@ -71,12 +79,12 @@ In the query Editor section enter the below queries and review their output in t
 EVALUATE
 Customers
 ```
-**Note:** The above DAX query could be comparable to the output of the T-SQL statement:
+**SQL Equivalent:**
 
 ```
 -- Select all from the customers table
 SELECT * 
-FROM Customers
+FROM Customers;
 ```
 
 ![Editor Results](./Images/EditorResults.png)
@@ -88,12 +96,12 @@ EVALUATE
 Customers
 ORDER BY [CustomerID] ASC
 ```
-**Note:** The above DAX query could be comparable to the output of the T-SQL statement:
+**SQL Equivalent:**
 ```
 -- Select all from the Customers table in ascending order by the CustomerID
 SELECT * 
 FROM Customers 
-ORDER BY CustomerID ASC
+ORDER BY CustomerID ASC;
 ```
 
 **Additional Information:**
@@ -109,17 +117,17 @@ ORDER BY CustomerID ASC
 EVALUATE
 VALUES( Customers[CustomerName] )
 ```
-**Note:** The above DAX query could be comparable to the output of the T-SQL statement:
+**SQL Equivalent:**
 ```
 -- Select the CustomerName from the Customers table
 SELECT CustomerName 
-FROM Customers 
+FROM Customers;
 ```
-- Update the above statement to include the **ORDER BY** clause for the CustomerID column. 🏆 **Challenge**
+🏆 **Challenge:** Attempt the above DAX query to include the **ORDER BY** clause for the CustomerID column. What is the result?
 
 ___
 
-#### WHERE Statement
+#### WHERE Clause
 
 4. Include a filter condition:
 
@@ -127,51 +135,155 @@ ___
 EVALUATE
 FILTER ( Customers, Customers[StateProvinceCode] = "IL" )
 ```
-**Note:** The above DAX query could be comparable to the output of the T-SQL statement:
+**SQL Equivalent:**
 ```
 -- Select all from the Customers table where the StateProvinceCode equals IL
 SELECT * 
 FROM Customers 
-WHERE StateProvinceCode = 'IL'
+WHERE StateProvinceCode = 'IL';
 ```
 ___
 
+#### Aggregate Functions
 
-5. Enter the below query to count all rows in the customer table:
+5. Enter the below expression to count all rows in the customer table:
 
 ```
 EVALUATE
 COUNTROWS( Customers )
 ```
-**Note:** The above DAX query could be comparable to the output of the T-SQL statement:
+**SQL Equivalent:**
 ```
 -- Count all from the Customers table.
 SELECT COUNT(*)
-FROM Customers
+FROM Customers;
 ```
 - Review the following error in the **Output**.
 ![Table Error](./Images/TableError.png)
 
-- Update the above query to store the returned results in a list using curly brackets.
+- Update the above expression to store the returned results in a list using curly brackets.
 ```
 EVALUATE
 { COUNTROWS( Customers ) }
 ```
+___
 
+#### GROUP BY Statement
+
+6. Enter the below query to count the rows in the customer table based on the StateProvinceCode column:
+
+```
+EVALUATE
+SUMMARIZECOLUMNS (
+	Customers[StateProvinceCode],
+	"CustomerCount", COUNTROWS( Customers )
+) ORDER BY [Customers] DESC
+```
+**SQL Equivalent:**
+```
+-- Count all from the Customers table.
+SELECT
+StateProvinceCode
+, COUNT(*) as CustomerCount
+FROM Customers
+GROUP BY StateProvinceCode
+ORDER BY [Customers] DESC;
+```
+___
+
+#### JOIN Clause
+
+7. Enter the below query to return all columns from the Customers table where a transaction exists in the Customer Transactions table.
+
+```
+EVALUATE
+CALCULATETABLE ( Customers, 'Customer Transactions' )
+```
+**SQL Equivalent:**
+```
+-- Select all from Customers where a Customer Transcation exists.
+SELECT *
+FROM Customers
+INNER JOIN Customer_Transactions
+  ON Customers.CustomerID = Customer_Transcations.CustomerID;
+```
 ___
 
 # Formula Language
 
+DAX formulas are used in measures, calculated columns, calculated tables, and row-level security. Measures are dynamic calculation formulas where the results change depending on context. Measures are used in reporting that support combining and filtering model data by using multiple attributes.
 
-
-[Learn More About DAX](https://docs.microsoft.com/en-us/dax/dax-queries)
+[Learn More About DAX Formulas](https://docs.microsoft.com/en-us/dax/dax-overview)
 
 ### Objective: 
 
 ## Instructions
 ### [Optional: Guided Video]()
-1. Open the Sales Demo (PBIX) file, navigate to the **External Tools** ribbon in Power BI Desktop and select **DAX Studio**.
-2. 
+
+### DAX Studio
+In the query Editor section enter the below queries and review their output in the **Results** section, after pressing the **Run (F5)** command.
+
+1. Enter the below expression to return the average unit price from the Sales Order Lines table:
+```
+EVALUATE
+{ AVERAGE ( 'Sales Order Lines'[Unit Price] ) }
+```
+- Update the statement to provide a column name for the returned value.
+```
+EVALUATE
+ROW ("Average Unit Price", AVERAGE ( 'Sales Order Lines'[Unit Price] ) )
+```
+
+2. Enter the below expression to return the count of orders by CustomerID 841.
+
+```
+EVALUATE
+{ CALCULATE ( COUNT ( Orders[OrderID] ), Customers[CustomerID] = 841 ) }
+```
+
+- The CALCULATE function has both an expression and filter.
+CALCULATE(«Expression»,«Filter»)
+
+3. Enter the below query to return the Total Unit Price from the Sales Order Lines table for each row in the Calendar table where the Total Unit Price is greater than zero:
+
+```
+EVALUATE
+FILTER (
+    ADDCOLUMNS (
+        'Calendar',
+        "Total Unit Price", SUM ( 'Sales Order Lines'[Unit Price] )
+    ),
+    [Total Unit Price] > 0
+)
+```
+🏆 **Challenge:** Update the above statement to provide the correct results based on the calendar tables row __context__.
+
+4. Enter the below query to return the Total Unit Price from the Sales Order Lines table for each row in the Calendar table where the Total Unit Price is greater than zero:
+
+```
+EVALUATE
+FILTER (
+    SUMMARIZECOLUMNS (
+        'Calendar'[Date],
+        "Total Unit Price", SUM ( 'Sales Order Lines'[Unit Price] ) ,
+        "Total Quantity", SUM ( 'Sales Order Lines'[Quantity] ) 
+    ),
+    [Total Unit Price] > 0
+)
+```
+
+[Learn More About Extension Columns](https://www.sqlbi.com/articles/best-practices-using-summarize-and-addcolumns/)
+
+___
+
+# Server Timings
+
+
+___
+
+# VertiPaq Analyzer
+
+
 
 ___
 
