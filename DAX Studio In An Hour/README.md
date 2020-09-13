@@ -275,7 +275,9 @@ FILTER (
 | Calendar | Date | >= | 1/1/2016 |
 
 6. Select the **➕New** button and enter the measure name **Total Quantity** and the formula **SUM ( 'Sales Order Lines'[Quantity] )** and press **OK** when complete.
-7. 
+7. Press **Run Query**.
+
+![Query Builder](./Images/QueryBuilder.png)
 
 [Learn More About Extension Columns](https://www.sqlbi.com/articles/best-practices-using-summarize-and-addcolumns/)
 
