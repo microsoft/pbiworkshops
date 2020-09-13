@@ -257,19 +257,25 @@ FILTER (
 ```
 🏆 **Challenge:** Update the above statement to provide the correct results based on the calendar tables row __context__.
 
-4. Enter the below query to return the Total Unit Price from the Sales Order Lines table for each row in the Calendar table where the Total Unit Price is greater than zero:
+4. Select the **Query Builder** and return the Total Unit Price and Total Quantity from the Sales Order Lines table for each row in the Calendar table.
+5. Expand the following tables and drag the fields/measures into the **Columns/Measures** group.
 
-```
-EVALUATE
-FILTER (
-    SUMMARIZECOLUMNS (
-        'Calendar'[Date],
-        "Total Unit Price", SUM ( 'Sales Order Lines'[Unit Price] ) ,
-        "Total Quantity", SUM ( 'Sales Order Lines'[Quantity] ) 
-    ),
-    [Total Unit Price] > 0
-)
-```
+
+| Table | Object |
+| :------------- | :---------- |
+| Calendar | Date |
+| Sales Order Lines   | Total Unit Price |
+
+
+6. Expand the following tables and drag the fields/measures into the **Filters** group.
+
+
+| Table | Object | Comparison Operator | Value  |
+| :------------- | :---------- | :---------- | :---------- |
+| Calendar | Date | >= | 1/1/2016 |
+
+6. Select the **➕New** button and enter the measure name **Total Quantity** and the formula **SUM ( 'Sales Order Lines'[Quantity] )** and press **OK** when complete.
+7. 
 
 [Learn More About Extension Columns](https://www.sqlbi.com/articles/best-practices-using-summarize-and-addcolumns/)
 
