@@ -75,12 +75,12 @@ In the query Editor section enter the below queries and review their output in t
 EVALUATE
 Customers
 ```
-**Note:** The above DAX query could be comparable to the output of the T-SQL statement:
+**Note:** The above DAX query could be comparable to the output of the SQL statement:
 
 ```
 -- Select all from the customers table
 SELECT * 
-FROM Customers
+FROM Customers;
 ```
 
 ![Editor Results](./Images/EditorResults.png)
@@ -92,12 +92,12 @@ EVALUATE
 Customers
 ORDER BY [CustomerID] ASC
 ```
-**Note:** The above DAX query could be comparable to the output of the T-SQL statement:
+**Note:** The above DAX query could be comparable to the output of the SQL statement:
 ```
 -- Select all from the Customers table in ascending order by the CustomerID
 SELECT * 
 FROM Customers 
-ORDER BY CustomerID ASC
+ORDER BY CustomerID ASC;
 ```
 
 **Additional Information:**
@@ -113,13 +113,13 @@ ORDER BY CustomerID ASC
 EVALUATE
 VALUES( Customers[CustomerName] )
 ```
-**Note:** The above DAX query could be comparable to the output of the T-SQL statement:
+**Note:** The above DAX query could be comparable to the output of the SQL statement:
 ```
 -- Select the CustomerName from the Customers table
 SELECT CustomerName 
 FROM Customers;
 ```
-- Update the above statement to include the **ORDER BY** clause for the CustomerID column. 🏆 **Challenge**
+🏆 **Challenge:** Attempt to update the above statement to include the **ORDER BY** clause for the CustomerID column.
 
 ___
 
@@ -131,7 +131,7 @@ ___
 EVALUATE
 FILTER ( Customers, Customers[StateProvinceCode] = "IL" )
 ```
-**Note:** The above DAX query could be comparable to the output of the T-SQL statement:
+**Note:** The above DAX query could be comparable to the output of the SQL statement:
 ```
 -- Select all from the Customers table where the StateProvinceCode equals IL
 SELECT * 
@@ -148,7 +148,7 @@ ___
 EVALUATE
 COUNTROWS( Customers )
 ```
-**Note:** The above DAX query could be comparable to the output of the T-SQL statement:
+**Note:** The above DAX query could be comparable to the output of the SQL statement:
 ```
 -- Count all from the Customers table.
 SELECT COUNT(*)
@@ -175,7 +175,7 @@ SUMMARIZECOLUMNS (
 	"CustomerCount", COUNTROWS( Customers )
 ) ORDER BY [Customers] DESC
 ```
-**Note:** The above DAX query could be comparable to the output of the T-SQL statement:
+**Note:** The above DAX query could be comparable to the output of the SQL statement:
 ```
 -- Count all from the Customers table.
 SELECT
@@ -185,21 +185,64 @@ FROM Customers
 GROUP BY StateProvinceCode
 ORDER BY [Customers] DESC;
 ```
+___
 
+#### JOIN Statement
+
+7. Enter the below query to return all columns from the Customers table where a transaction exists in the Customer Transactions table.
+
+```
+EVALUATE
+CALCULATETABLE ( Customers, 'Customer Transactions' )
+```
+**Note:** The above DAX query could be comparable to the output of the SQL statement:
+```
+-- Select all from Customers where a Customer Transcation exists.
+SELECT *
+FROM Customers
+INNER JOIN Customer_Transactions
+  ON Customers.CustomerID = Customer_Transcations.CustomerID;
+```
+
+8. Enter the below query to 
+
+```
+EVALUATE
+FILTER ( Customers, ISEMPTY ( RELATEDTABLE( 'Customer Transactions' ) ) )
+```
+**Note:** The above DAX query could be comparable to the output of the SQL statement:
+```
+
+```
 ___
 
 # Formula Language
 
+DAX formulas are used in measures, calculated columns, calculated tables, and row-level security. Measures are dynamic calculation formulas where the results change depending on context. Measures are used in reporting that support combining and filtering model data by using multiple attributes.
 
-
-[Learn More About DAX](https://docs.microsoft.com/en-us/dax/dax-queries)
+[Learn More About DAX Formulas](https://docs.microsoft.com/en-us/dax/dax-overview)
 
 ### Objective: 
 
 ## Instructions
 ### [Optional: Guided Video]()
-1. Open the Sales Demo (PBIX) file, navigate to the **External Tools** ribbon in Power BI Desktop and select **DAX Studio**.
-2. 
+
+### DAX Studio
+In the query Editor section enter the below queries and review their output in the **Results** section, after pressing the **Run (F5)** command.
+
+1. Select all from the customers table:
+```
+EVALUATE
+Customers
+```
+**Note:** The above DAX query could be comparable to the output of the SQL statement:
+
+```
+-- Select all from the customers table
+SELECT * 
+FROM Customers;
+```
+
 
 ___
 
