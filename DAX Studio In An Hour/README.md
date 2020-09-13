@@ -21,6 +21,7 @@ ___
   - [GROUP BY Statement](#group-by-statement)
   - [JOIN Clause](#join-clause)
 - [Formula Language](#formula-language)
+- [Query Builder](#query-builder)
 - [Server Timings](#server-timings)
 - [VertiPaq Analyzer](#vertipaq-analyzer)
 
@@ -257,8 +258,13 @@ FILTER (
 ```
 🏆 **Challenge:** Update the above statement to provide the correct results based on the calendar tables row __context__.
 
-4. Select the **Query Builder** and return the Total Unit Price and Total Quantity from the Sales Order Lines table for each row in the Calendar table.
-5. Expand the following tables and drag the fields/measures into the **Columns/Measures** group.
+[Learn More About Extension Columns](https://www.sqlbi.com/articles/best-practices-using-summarize-and-addcolumns/)
+___
+
+# Query Language
+
+1. Select the **Query Builder** and return the Total Unit Price and Total Quantity from the Sales Order Lines table for each row in the Calendar table.
+2. Expand the following tables and drag the fields/measures into the **Columns/Measures** group.
 
 
 | Table | Object |
@@ -267,19 +273,17 @@ FILTER (
 | Sales Order Lines   | Total Unit Price |
 
 
-6. Expand the following tables and drag the fields/measures into the **Filters** group.
+3. Expand the following tables and drag the fields/measures into the **Filters** group.
 
 
 | Table | Object | Comparison Operator | Value  |
 | :------------- | :---------- | :---------- | :---------- |
 | Calendar | Date | >= | 1/1/2016 |
 
-6. Select the **➕New** button and enter the measure name **Total Quantity** and the formula **SUM ( 'Sales Order Lines'[Quantity] )** and press **OK** when complete.
-7. Press **Run Query**.
+4. Select the **➕New** button and enter the measure name **Total Quantity** and the formula **SUM ( 'Sales Order Lines'[Quantity] )** and press **OK** when complete.
+5. Press **Run Query**.
 
 ![Query Builder](./Images/QueryBuilder.png)
-
-[Learn More About Extension Columns](https://www.sqlbi.com/articles/best-practices-using-summarize-and-addcolumns/)
 
 ___
 
