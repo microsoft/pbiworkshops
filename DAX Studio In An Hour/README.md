@@ -261,10 +261,10 @@ FILTER (
 [Learn More About Extension Columns](https://www.sqlbi.com/articles/best-practices-using-summarize-and-addcolumns/)
 ___
 
-# Query Language
+# Query Builder
 
-1. Select the **Query Builder** and return the Total Unit Price and Total Quantity from the Sales Order Lines table for each row in the Calendar table.
-2. Expand the following tables and drag the fields/measures into the **Columns/Measures** group.
+1. From the **Home** tab select **Query Builder**.
+2. Expand the following tables and drag the fields/measures into the **Columns/Measures** group in the **Builder**.
 
 
 | Table | Object |
@@ -273,7 +273,7 @@ ___
 | Sales Order Lines   | Total Unit Price |
 
 
-3. Expand the following tables and drag the fields/measures into the **Filters** group.
+3. Expand the following tables and drag the fields/measures into the **Filters** group in the **Builder**.
 
 
 | Table | Object | Comparison Operator | Value  |
@@ -284,6 +284,25 @@ ___
 5. Press **Run Query**.
 
 ![Query Builder](./Images/QueryBuilder.png)
+
+6. Press **Edit Query** to view the generated query.
+7. Update the query by adding a **Filter** where the **[Total Quantity] > 16000** as displayed below.
+
+```
+ 1 // START QUERY BUILDER
+ 2 DEFINE
+ 3 MEASURE 'Calendar'[Total Quantity] = SUM ( 'Sales Order Lines'[Quantity] )
+ 4 EVALUATE
+ 5 FILTER(
+ 6 SUMMARIZECOLUMNS(
+ 7     'Calendar'[Date],
+ 8     FILTER(KEEPFILTERS(VALUES( 'Calendar'[Date] )), 'Calendar'[Date] >= DATE(2016,1,1)),
+ 9     "Total Unit Price", [Total Unit Price],
+10     "Total Quantity", [Total Quantity]
+11 ), [Total Quantity] > 16000)
+12 // END QUERY BUILDER
+```
+8. Press the **Format Query** option.
 
 ___
 
