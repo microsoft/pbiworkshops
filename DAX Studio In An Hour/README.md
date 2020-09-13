@@ -21,6 +21,9 @@ ___
   - [GROUP BY Statement](#group-by-statement)
   - [JOIN Clause](#join-clause)
 - [Formula Language](#formula-language)
+- [Server Timings](#server-timings)
+- [VertiPaq Analyzer](#vertipaq-analyzer)
+
 
 ___
 
@@ -278,7 +281,8 @@ ___
 
 ___
 
-# Vertipaq Analyzer
+# VertiPaq Analyzer
+
 
 
 ___
