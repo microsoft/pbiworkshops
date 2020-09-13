@@ -256,7 +256,7 @@ FILTER (
     [Total Unit Price] > 0
 )
 ```
-🏆 **Challenge:** Update the above statement to provide the correct results based on the calendar tables row context.
+🏆 **Challenge:** Update the above statement to provide the correct results based on the calendar tables row __context__.
 
 4. Enter the below query to return the Total Unit Price from the Sales Order Lines table for each row in the Calendar table where the Total Unit Price is greater than zero:
 
