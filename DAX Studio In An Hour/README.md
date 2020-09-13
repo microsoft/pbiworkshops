@@ -76,7 +76,7 @@ In the query Editor section enter the below queries and review their output in t
 EVALUATE
 Customers
 ```
-**Note:** The above DAX query could be comparable to the output of the SQL statement:
+**SQL Equivalent:**
 
 ```
 -- Select all from the customers table
@@ -93,7 +93,7 @@ EVALUATE
 Customers
 ORDER BY [CustomerID] ASC
 ```
-**Note:** The above DAX query could be comparable to the output of the SQL statement:
+**SQL Equivalent:**
 ```
 -- Select all from the Customers table in ascending order by the CustomerID
 SELECT * 
@@ -114,13 +114,13 @@ ORDER BY CustomerID ASC;
 EVALUATE
 VALUES( Customers[CustomerName] )
 ```
-**Note:** The above DAX query could be comparable to the output of the SQL statement:
+**SQL Equivalent:**
 ```
 -- Select the CustomerName from the Customers table
 SELECT CustomerName 
 FROM Customers;
 ```
-🏆 **Challenge:** Attempt to update the above statement to include the **ORDER BY** clause for the CustomerID column.
+🏆 **Challenge:** Attempt the above DAX query to include the **ORDER BY** clause for the CustomerID column. What is the result?
 
 ___
 
@@ -132,7 +132,7 @@ ___
 EVALUATE
 FILTER ( Customers, Customers[StateProvinceCode] = "IL" )
 ```
-**Note:** The above DAX query could be comparable to the output of the SQL statement:
+**SQL Equivalent:**
 ```
 -- Select all from the Customers table where the StateProvinceCode equals IL
 SELECT * 
@@ -143,13 +143,13 @@ ___
 
 #### Aggregate Functions
 
-5. Enter the below query to count all rows in the customer table:
+5. Enter the below expression to count all rows in the customer table:
 
 ```
 EVALUATE
 COUNTROWS( Customers )
 ```
-**Note:** The above DAX query could be comparable to the output of the SQL statement:
+**SQL Equivalent:**
 ```
 -- Count all from the Customers table.
 SELECT COUNT(*)
@@ -158,7 +158,7 @@ FROM Customers;
 - Review the following error in the **Output**.
 ![Table Error](./Images/TableError.png)
 
-- Update the above query to store the returned results in a list using curly brackets.
+- Update the above expression to store the returned results in a list using curly brackets.
 ```
 EVALUATE
 { COUNTROWS( Customers ) }
@@ -176,7 +176,7 @@ SUMMARIZECOLUMNS (
 	"CustomerCount", COUNTROWS( Customers )
 ) ORDER BY [Customers] DESC
 ```
-**Note:** The above DAX query could be comparable to the output of the SQL statement:
+**SQL Equivalent:**
 ```
 -- Count all from the Customers table.
 SELECT
@@ -196,7 +196,7 @@ ___
 EVALUATE
 CALCULATETABLE ( Customers, 'Customer Transactions' )
 ```
-**Note:** The above DAX query could be comparable to the output of the SQL statement:
+**SQL Equivalent:**
 ```
 -- Select all from Customers where a Customer Transcation exists.
 SELECT *
@@ -220,17 +220,72 @@ DAX formulas are used in measures, calculated columns, calculated tables, and ro
 ### DAX Studio
 In the query Editor section enter the below queries and review their output in the **Results** section, after pressing the **Run (F5)** command.
 
-1. Select all from the customers table:
+1. Enter the below expression to return the average unit price from the Sales Order Lines table:
 ```
 EVALUATE
-Customers
+{ AVERAGE ( 'Sales Order Lines'[Unit Price] ) }
 ```
-**Note:** The above DAX query could be comparable to the output of the SQL statement:
+- Update the statement to provide a column name for the returned value.
+```
+EVALUATE
+ROW ("Average Unit Price", AVERAGE ( 'Sales Order Lines'[Unit Price] ) )
+```
+
+2. Enter the below expression to return the count of orders by CustomerID 841.
 
 ```
--- Select all from the customers table
-SELECT * 
-FROM Customers;
+EVALUATE
+{ CALCULATE ( COUNT ( Orders[OrderID] ), Customers[CustomerID] = 841 ) }
+```
+
+- The CALCULATE function has both an expression and filter.
+CALCULATE(«Expression»,«Filter»)
+
+3. Enter the below query to return the Total Unit Price from the Sales Order Lines table for each row in the Calendar table where the Total Unit Price is greater than zero:
+
+```
+EVALUATE
+FILTER (
+    ADDCOLUMNS (
+        'Calendar',
+        "Total Unit Price", SUM ( 'Sales Order Lines'[Unit Price] )
+    ),
+    [Total Unit Price] > 0
+)
+```
+🏆 **Challenge:** Update the above statement to provide the correct results based on the calendar tables row context.
+
+4. Enter the below query to return the Total Unit Price from the Sales Order Lines table for each row in the Calendar table where the Total Unit Price is greater than zero:
+
+```
+EVALUATE
+FILTER (
+    SUMMARIZECOLUMNS (
+        'Calendar'[Date],
+        "Total Unit Price", SUM ( 'Sales Order Lines'[Unit Price] ) ,
+        "Total Quantity", SUM ( 'Sales Order Lines'[Quantity] ) 
+    ),
+    [Total Unit Price] > 0
+)
+```
+
+https://www.sqlbi.com/articles/best-practices-using-summarize-and-addcolumns/
+
+5. 
+
+```
+EVALUATE
+ADDCOLUMNS (
+    FILTER (
+        SUMMARIZECOLUMNS (
+            'Calendar'[Date],
+            "Total Unit Price", SUM ( 'Sales Order Lines'[Unit Price] ),
+            "Total Quantity", SUM ( 'Sales Order Lines'[Quantity] )
+        ),
+        [Total Unit Price] > 0
+    ),
+    "Total Overall", [Total Unit Price] * [Total Quantity]
+)
 ```
 
 
