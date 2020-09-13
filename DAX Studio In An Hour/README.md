@@ -19,6 +19,7 @@ ___
   - [WHERE Clause](#where-clause)
   - [Aggregate Functions](#aggregate-functions)
   - [GROUP BY Statement](#group-by-statement)
+  - [JOIN Clause](#join-clause)
 - [Formula Language](#formula-language)
 
 ___
@@ -187,7 +188,7 @@ ORDER BY [Customers] DESC;
 ```
 ___
 
-#### JOIN Statement
+#### JOIN Clause
 
 7. Enter the below query to return all columns from the Customers table where a transaction exists in the Customer Transactions table.
 
@@ -202,17 +203,6 @@ SELECT *
 FROM Customers
 INNER JOIN Customer_Transactions
   ON Customers.CustomerID = Customer_Transcations.CustomerID;
-```
-
-8. Enter the below query to 
-
-```
-EVALUATE
-FILTER ( Customers, ISEMPTY ( RELATEDTABLE( 'Customer Transactions' ) ) )
-```
-**Note:** The above DAX query could be comparable to the output of the SQL statement:
-```
-
 ```
 ___
 
