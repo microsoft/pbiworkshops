@@ -15,6 +15,10 @@ ___
 # Table of Contents
 - [Setup](#setup)
 - [Query Language](#query-language)
+  - [SELECT Statement](#select-statement)
+  - [WHERE Clause](#where-clause)
+  - [Aggregate Functions](#aggregate-functions)
+  - [GROUP BY Statement](#group-by-statement)
 - [Formula Language](#formula-language)
 
 ___
@@ -113,13 +117,13 @@ VALUES( Customers[CustomerName] )
 ```
 -- Select the CustomerName from the Customers table
 SELECT CustomerName 
-FROM Customers 
+FROM Customers;
 ```
 - Update the above statement to include the **ORDER BY** clause for the CustomerID column. 🏆 **Challenge**
 
 ___
 
-#### WHERE Statement
+#### WHERE Clause
 
 4. Include a filter condition:
 
@@ -132,10 +136,11 @@ FILTER ( Customers, Customers[StateProvinceCode] = "IL" )
 -- Select all from the Customers table where the StateProvinceCode equals IL
 SELECT * 
 FROM Customers 
-WHERE StateProvinceCode = 'IL'
+WHERE StateProvinceCode = 'IL';
 ```
 ___
 
+#### Aggregate Functions
 
 5. Enter the below query to count all rows in the customer table:
 
@@ -147,7 +152,7 @@ COUNTROWS( Customers )
 ```
 -- Count all from the Customers table.
 SELECT COUNT(*)
-FROM Customers
+FROM Customers;
 ```
 - Review the following error in the **Output**.
 ![Table Error](./Images/TableError.png)
@@ -157,7 +162,28 @@ FROM Customers
 EVALUATE
 { COUNTROWS( Customers ) }
 ```
+___
 
+#### GROUP BY Statement
+
+6. Enter the below query to count the rows in the customer table based on the StateProvinceCode column:
+
+```
+EVALUATE
+SUMMARIZECOLUMNS (
+	Customers[StateProvinceCode],
+	"CustomerCount", COUNTROWS( Customers )
+) ORDER BY [Customers] DESC
+```
+**Note:** The above DAX query could be comparable to the output of the T-SQL statement:
+```
+-- Count all from the Customers table.
+SELECT
+StateProvinceCode
+, COUNT(*) as CustomerCount
+FROM Customers
+GROUP BY StateProvinceCode
+ORDER BY [Customers] DESC;
 ___
 
 # Formula Language
