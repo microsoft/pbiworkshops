@@ -269,24 +269,16 @@ FILTER (
 )
 ```
 
-https://www.sqlbi.com/articles/best-practices-using-summarize-and-addcolumns/
+[Learn More About Extension Columns](https://www.sqlbi.com/articles/best-practices-using-summarize-and-addcolumns/)
 
-5. 
+___
 
-```
-EVALUATE
-ADDCOLUMNS (
-    FILTER (
-        SUMMARIZECOLUMNS (
-            'Calendar'[Date],
-            "Total Unit Price", SUM ( 'Sales Order Lines'[Unit Price] ),
-            "Total Quantity", SUM ( 'Sales Order Lines'[Quantity] )
-        ),
-        [Total Unit Price] > 0
-    ),
-    "Total Overall", [Total Unit Price] * [Total Quantity]
-)
-```
+# Server Timings
+
+
+___
+
+# Vertipaq Analyzer
 
 
 ___
