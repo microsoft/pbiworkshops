@@ -184,6 +184,8 @@ StateProvinceCode
 FROM Customers
 GROUP BY StateProvinceCode
 ORDER BY [Customers] DESC;
+```
+
 ___
 
 # Formula Language
