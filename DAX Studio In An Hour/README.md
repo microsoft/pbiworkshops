@@ -274,7 +274,12 @@ ___
 | :------------- | :---------- | :---------- | :---------- |
 | Calendar | Date | >= | 1/1/2016 |
 
-4. Select the **➕New** button and enter the measure name **Total Quantity** and the formula **SUM ( 'Sales Order Lines'[Quantity] )** and press **OK** when complete.
+4. Select the **➕New** button and enter the measure name **Total Quantity**, the below measure and press **OK** when complete.
+
+```
+SUM ( 'Sales Order Lines'[Quantity] )
+```
+
 5. Press **Run Query**.
 
 ![Query Builder](./Images/QueryBuilder.png)
