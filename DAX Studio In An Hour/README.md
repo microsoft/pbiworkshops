@@ -74,7 +74,7 @@ In the query Editor section enter the below queries and review their output in t
 
 #### SELECT Statement
 
-1. Select all from the customers table:
+**Description:** Select all from the customers table:
 ```
 EVALUATE
 Customers
@@ -89,7 +89,7 @@ FROM Customers;
 
 ![Editor Results](./Images/EditorResults.png)
 
-2. Update the above statement, including an **ORDER BY** clause and sort order modifier:
+**Description:** Update the above statement, including an **ORDER BY** clause and sort order modifier:
 
 ```
 EVALUATE
@@ -112,7 +112,7 @@ ORDER BY CustomerID ASC;
 | DESC   | Descending |
 
 
-3. Select a single column:
+**Description:** Select a single column:
 ```
 EVALUATE
 VALUES( Customers[CustomerName] )
@@ -129,7 +129,7 @@ ___
 
 #### WHERE Clause
 
-4. Include a filter condition:
+**Description:** Include a filter condition:
 
 ```
 EVALUATE
@@ -146,7 +146,7 @@ ___
 
 #### Aggregate Functions
 
-5. Enter the below expression to count all rows in the customer table:
+**Description:** Enter the below expression to count all rows in the customer table:
 
 ```
 EVALUATE
@@ -170,7 +170,7 @@ ___
 
 #### GROUP BY Statement
 
-6. Enter the below query to count the rows in the customer table based on the StateProvinceCode column:
+**Description:** Enter the below query to count the rows in the customer table based on the StateProvinceCode column:
 
 ```
 EVALUATE
@@ -193,7 +193,7 @@ ___
 
 #### JOIN Clause
 
-7. Enter the below query to return all columns from the Customers table where a transaction exists in the Customer Transactions table.
+**Description:** Enter the below query to return all columns from the Customers table where a transaction exists in the Customer Transactions table.
 
 ```
 EVALUATE
@@ -223,7 +223,7 @@ DAX formulas are used in measures, calculated columns, calculated tables, and ro
 ### DAX Studio
 In the query Editor section enter the below queries and review their output in the **Results** section, after pressing the **Run (F5)** command.
 
-1. Enter the below expression to return the average unit price from the Sales Order Lines table:
+**Description:** Enter the below expression to return the average unit price from the Sales Order Lines table:
 ```
 EVALUATE
 { AVERAGE ( 'Sales Order Lines'[Unit Price] ) }
@@ -234,7 +234,7 @@ EVALUATE
 ROW ("Average Unit Price", AVERAGE ( 'Sales Order Lines'[Unit Price] ) )
 ```
 
-2. Enter the below expression to return the count of orders by CustomerID 841.
+**Description:** Enter the below expression to return the count of orders by CustomerID 841.
 
 ```
 EVALUATE
@@ -244,7 +244,7 @@ EVALUATE
 - The CALCULATE function has both an expression and filter.
 CALCULATE(«Expression»,«Filter»)
 
-3. Enter the below query to return the Total Unit Price from the Sales Order Lines table for each row in the Calendar table where the Total Unit Price is greater than zero:
+**Description:** Enter the below query to return the Total Unit Price from the Sales Order Lines table for each row in the Calendar table where the Total Unit Price is greater than zero:
 
 ```
 EVALUATE
