@@ -74,12 +74,12 @@ In the query Editor section enter the below queries and review their output in t
 
 #### SELECT Statement
 
-**Description:** Select all from the customers table:
+**DAX Query**
 ```
 EVALUATE
 Customers
 ```
-**SQL Equivalent:**
+**SQL Equivalent**
 
 ```
 -- Select all from the customers table
@@ -89,14 +89,13 @@ FROM Customers;
 
 ![Editor Results](./Images/EditorResults.png)
 
-**Description:** Update the above statement, including an **ORDER BY** clause and sort order modifier:
-
+**DAX Query**
 ```
 EVALUATE
 Customers
 ORDER BY [CustomerID] ASC
 ```
-**SQL Equivalent:**
+**SQL Equivalent**
 ```
 -- Select all from the Customers table in ascending order by the CustomerID
 SELECT * 
@@ -111,13 +110,12 @@ ORDER BY CustomerID ASC;
 | ASC | Ascending (Optional Default) |
 | DESC   | Descending |
 
-
-**Description:** Select a single column:
+**DAX Query**
 ```
 EVALUATE
 VALUES( Customers[CustomerName] )
 ```
-**SQL Equivalent:**
+**SQL Equivalent**
 ```
 -- Select the CustomerName from the Customers table
 SELECT CustomerName 
@@ -129,13 +127,12 @@ ___
 
 #### WHERE Clause
 
-**Description:** Include a filter condition:
-
+**DAX Query**
 ```
 EVALUATE
 FILTER ( Customers, Customers[StateProvinceCode] = "IL" )
 ```
-**SQL Equivalent:**
+**SQL Equivalent**
 ```
 -- Select all from the Customers table where the StateProvinceCode equals IL
 SELECT * 
@@ -146,13 +143,12 @@ ___
 
 #### Aggregate Functions
 
-**Description:** Enter the below expression to count all rows in the customer table:
-
+**DAX Query**
 ```
 EVALUATE
 COUNTROWS( Customers )
 ```
-**SQL Equivalent:**
+**SQL Equivalent**
 ```
 -- Count all from the Customers table.
 SELECT COUNT(*)
@@ -170,8 +166,7 @@ ___
 
 #### GROUP BY Statement
 
-**Description:** Enter the below query to count the rows in the customer table based on the StateProvinceCode column:
-
+**DAX Query**
 ```
 EVALUATE
 SUMMARIZECOLUMNS (
@@ -179,7 +174,7 @@ SUMMARIZECOLUMNS (
 	"CustomerCount", COUNTROWS( Customers )
 ) ORDER BY [Customers] DESC
 ```
-**SQL Equivalent:**
+**SQL Equivalent**
 ```
 -- Count all from the Customers table.
 SELECT
@@ -193,13 +188,12 @@ ___
 
 #### JOIN Clause
 
-**Description:** Enter the below query to return all columns from the Customers table where a transaction exists in the Customer Transactions table.
-
+**DAX Query**
 ```
 EVALUATE
 CALCULATETABLE ( Customers, 'Customer Transactions' )
 ```
-**SQL Equivalent:**
+**SQL Equivalent**
 ```
 -- Select all from Customers where a Customer Transcation exists.
 SELECT *
