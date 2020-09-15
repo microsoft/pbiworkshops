@@ -38,7 +38,8 @@ ___
 ### DAX Studio
 1. Open **DAX Studio**.
 2. Navigate to the File menu and select Options
-3. Within the **Standard** tab and the **Defaults** group, enable the setting: **Set 'Clear Cache and Run' as the default**
+3. Within the **Standard** tab, in the **Defaults** group, enable the setting: **Set 'Clear Cache and Run' as the default**
+3. Within the **Advanced** tab, in the **Preview Features** group, enable the settings: **Show External Tools**, **Show Query Builder Button**, and **Show Benchmark Button**.
 4. Close **DAX Studio**
 
 ![Clear Cache](./Images/ClearCache.png)
@@ -209,7 +210,7 @@ DAX formulas are used in measures, calculated columns, calculated tables, and ro
 
 [Learn More About DAX Formulas](https://docs.microsoft.com/en-us/dax/dax-overview)
 
-### Objective: 
+### Objective: Aggregate data by writing DAX formulas and the graphical user interface of Query Builder.
 
 ## Instructions
 ### [Optional: Guided Video]()
@@ -307,8 +308,6 @@ ___
 
 # Server Timings
 
-The following excerpt is from [Exam Ref 70-768 Developing SQL Data Models](https://www.microsoftpressstore.com/store/exam-ref-70-768-developing-sql-data-models-9781509305155) authored by [Stacia Varga](http://blog.datainspirations.com/)
-
 ## In-memory tabular query monitoring
 Before considering how to monitor query performance for in-memory tabular models, it is important to first understand the query architecture for in-memory tabular models. Analysis Services processes queries for this model type by following these steps:
 
@@ -323,6 +322,17 @@ Before considering how to monitor query performance for in-memory tabular models
 5. The storage engine returns its results to the formula engine which compiles the data and returns the query results to the client application. It maintains a short-term VertiPaq cache to benefit multiple requests for the same data in the same query. An ancillary benefit is the availability of this data for subsequent queries for a period of time.
 
 ![Vertipaq Engine](./Images/VertipaqEngine.png)
+
+The above excerpt is from [Exam Ref 70-768 Developing SQL Data Models](https://www.microsoftpressstore.com/store/exam-ref-70-768-developing-sql-data-models-9781509305155) authored by [Stacia Varga](http://blog.datainspirations.com/)
+
+### Objective: 
+
+## Instructions
+### [Optional: Guided Video]()
+
+### DAX Studio
+1. From the **Home** tab select **Server Timings**.
+2. 
 
 
 ___
