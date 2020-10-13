@@ -2,7 +2,7 @@
 
 To begin press the Launch Binder button below to create a web-based interactive development environment for the Jupyter notebook.
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/microsoft/pbiworkshops/tree/main/Admin%20in%20an%20Hour/main?urlpath=lab)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/microsoft/pbiworkshops/main?urlpath=lab)
 </br>
 </br>
 
