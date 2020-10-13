@@ -49,7 +49,7 @@ RUN dotnet_sdk_version=3.1.301 \
     && dotnet help
 
 # Copy notebooks
-COPY ./notebooks/ ${HOME}/Admin in an Hour/Notebooks/
+COPY ./notebooks/ ${HOME}/Notebooks/
 
 # Copy package sources
 COPY ./NuGet.config ${HOME}/nuget.config
@@ -73,4 +73,4 @@ RUN dotnet interactive jupyter install
 ENV DOTNET_TRY_CLI_TELEMETRY_OPTOUT=false
 
 # Set root to Notebooks
-WORKDIR ${HOME}/Admin in an Hour/notebooks/
+WORKDIR ${HOME}/Notebooks/
