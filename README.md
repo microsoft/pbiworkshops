@@ -1,4 +1,6 @@
-![Power BI](./_Asset%20Library/PowerBI_Yellow.png)
+![Power BI](./_Asset%20Library/powerbi.svg)
+
+# Power BI Workshops
 
 
 # Contributing
