@@ -1,7 +1,0 @@
-*.credential
-*.creds
-.ipynb_checkpoints
-.ipynb_checkpoints\*
-Testing
-Testing\*
-Quick Reference
