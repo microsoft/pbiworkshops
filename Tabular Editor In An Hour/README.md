@@ -33,6 +33,8 @@ ___
 
 ### Power BI Desktop [Only applicable to July and August 2020 Versions]
 1. Ensure the Power BI preview feature [Store datasets using enhanced metadata format](https://docs.microsoft.com/en-us/power-bi/connect-data/desktop-enhanced-dataset-metadata) is enabled.
+2. Navigate to the **File** menu and select **Options and Settings** and then **Options**
+3. Navigate to **Preview features** and enable **Store datasets using enhanced metadata format**
 
 ### Tabular Editor
 1. Navigate to the **File** menu and select **Preferences**
