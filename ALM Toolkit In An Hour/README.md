@@ -30,7 +30,7 @@ ___
 
 ## Instructions
 
-### Power BI Desktop
+### Power BI Desktop [Only applicable to July and August 2020 Versions]
 1. Ensure the Power BI preview feature [Store datasets using enhanced metadata format](https://docs.microsoft.com/en-us/power-bi/connect-data/desktop-enhanced-dataset-metadata) is enabled.
 
 ### ALM Toolkit
