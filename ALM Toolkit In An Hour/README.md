@@ -13,7 +13,6 @@ ___
 
 **Follow Along:**
 - [Download and Install ALM Toolkit](http://alm-toolkit.com/)
-    - <a href="" target="_blank">Optional: Guided Video</a>
 - [Download the Sales Demo_DEV.pbix File](https://github.com/microsoft/pbiworkshops/raw/main/ALM%20Toolkit%20In%20An%20Hour/Sales%20Demo_DEV.pbix)
 - [Download the Sales Demo_FINAL.pbix File](https://github.com/microsoft/pbiworkshops/raw/main/ALM%20Toolkit%20In%20An%20Hour/Sales%20Demo_FINAL.pbix)
 
