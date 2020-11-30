@@ -141,9 +141,12 @@ model. **Currently not all properties are supported within Power BI Desktop for 
 4. Navigate to the **Home** tab and complete the following:
     - Select the **Report Differences** option to receive an Excel output for retention purposes.
     - Select the **Validate Selection** option to review the applicable changes in the **Warning List** dialog box before pressing **OK**
+        - After the **Validate Selection** has been completed, the **Update** and **Generate Script** options will now be enabled.
     - Select the **Update** option and within the ALM Toolkit diablog box press **Yes** to confirm updating the target.
         - Within the **Deploy** dialog box press **Close**
         - Within the **ALM Toolkit** dialog box press **Yes** to refresh the comparison.
+
+![Home Options](./Images/Home_Options.png)
 
 ___
 
