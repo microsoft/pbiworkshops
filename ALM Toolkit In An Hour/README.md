@@ -11,9 +11,12 @@ In readiness for [XMLA endpoint read/write](https://docs.microsoft.com/en-us/pow
 Website: http://alm-toolkit.com/
 ___
 
+# Prerequisites
+
+For this workshop a **Power BI Pro** license is required for publishing and a workspace backed by either **Premium Capacity** or **Premium Per User** with XMLA endpoints enabled.
+
 **Follow Along:**
 - [Download and Install ALM Toolkit](http://alm-toolkit.com/)
-    - <a href="" target="_blank">Optional: Guided Video</a>
 - [Download the Sales Demo_DEV.pbix File](https://github.com/microsoft/pbiworkshops/raw/main/ALM%20Toolkit%20In%20An%20Hour/Sales%20Demo_DEV.pbix)
 - [Download the Sales Demo_FINAL.pbix File](https://github.com/microsoft/pbiworkshops/raw/main/ALM%20Toolkit%20In%20An%20Hour/Sales%20Demo_FINAL.pbix)
 
@@ -31,12 +34,23 @@ ___
 
 ## Instructions
 
-### Power BI Desktop
+### Power BI Desktop [Only applicable to July and August 2020 Versions]
 1. Ensure the Power BI preview feature [Store datasets using enhanced metadata format](https://docs.microsoft.com/en-us/power-bi/connect-data/desktop-enhanced-dataset-metadata) is enabled.
+2. Navigate to the **File** menu and select Options and Settings and then **Options**.
+3. Navigate to **Preview features** and enable **Store datasets using enhanced metadata format**.
+
+### Power BI service
+1. Navigate to the [Power BI service](https://app.powerbi.com).
+2. Within the Power BI service, select the Workspaces option within the navigation menu and locate a workspace that is backed by either Premium Capacity or Premium Per User.
+3. Within the Workspace:
+    - Select **New** and the **Upload a file** option
+    - Within **Create new content**, select **Local file** and upload the **Sales Demo_FINAL.pbix**
+    - Within the workspace, select **Settings**, then the **Premium** tab and press the **Copy** button below the **Workspace Connection** address.
 
 ### ALM Toolkit
-1. Navigate to the **External Tools** ribbon in Power BI Desktop and select **ALM Toolkit**.
-2. Select **Options** and enable the following options:
+1. Navigate to the **External Tools** ribbon in Power BI Desktop and select **ALM Toolkit**. 
+2. Press **Cancel** to exit the Connections dialogue window.
+3. Within the **Home** tab, select **Options** and enable the following options:
     - Include roles
     - Consider partitions when comparing tables
     - For table updates, retain partitions
@@ -97,13 +111,18 @@ model. **Currently not all properties are supported within Power BI Desktop for 
 ## Instructions
 
 ### Power BI Desktop
-1. Open the **Sales Demo_DEV.pbix** and the **Sales Demo_FINAL.pbix** files.
-2. Navigate to the External Tools ribbon in either Power BI Desktop instance and select **ALM Toolkit**.
+1. Open the **Sales Demo_DEV.pbix** file.
+2. Navigate to the **External Tools** tab and select the option **ALM Toolkit**.
 
 ### ALM Toolkit
 1. Within the Connections dialog box confirm the following and press **OK** when complete.
     1. **Source** is the Power BI Desktop file **Sales Demo_DEV.pbix** that is currently open.
-    2. **Target** is the Power BI Desktop file **Sales Demo_FINAL.pbix** that is currently open.
+    2. **Target** is the **Sales Demo_FINAL.pbix** file that has been uploaded to the Power BI service
+        - Select the **Dataset** option
+        - **Workspace** - paste the **Workspace Connection** string. (Pro Tip: Windows+V - to bring up Clipboard)
+            - Authenticate using your organizational credentials
+        - **Dataset** - select **Sales Demo_Final**
+        
     
 ![Connections](./Images/Connections.png)
 
@@ -113,7 +132,7 @@ model. **Currently not all properties are supported within Power BI Desktop for 
 ### ALM Toolkit
 1. Press Compare and confirm the following remain unchanged.
     1. **Source** is the Power BI Desktop file **Sales Demo_DEV.pbix**.
-    2. **Target** is the Power BI Desktop file **Sales Demo_FINAL.pbix**.
+    2. **Target** is the **Workspace Connection** address for the **Sales Demo_FINAL.pbix**.
 2. Navigate to the **Home** tab and select **Select Actions** and the **Hide Skip Objects with Same Definition** option.
 3. Select the row containing the Table object Source Name **Calendar** to compare the differences.
 
