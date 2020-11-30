@@ -116,34 +116,34 @@ model. **Currently not all properties are supported within Power BI Desktop for 
 
 ### ALM Toolkit
 1. Within the Connections dialog box confirm the following and press **OK** when complete.
-    1. **Source** is the Power BI Desktop file **Sales Demo_DEV.pbix** that is currently open.
-    2. **Target** is the **Sales Demo_FINAL.pbix** file that has been uploaded to the Power BI service
-        - Select the **Dataset** option
-        - **Workspace** - paste the **Workspace Connection** string. (Pro Tip: Windows+V - to bring up Clipboard)
-            - Authenticate using your organizational credentials
-        - **Dataset** - select **Sales Demo_Final**
-        
+    - **Source** is the Power BI Desktop file **Sales Demo_DEV.pbix** that is currently open.
+2. **Target** will be the **Sales Demo_FINAL.pbix** file that has been uploaded to the Power BI service
+    - Select the **Dataset** option
+    - **Workspace** - paste the **Workspace Connection** string. (Pro Tip: Windows+V - to bring up Clipboard)
+        - Authenticate using your organizational credentials
+    - **Dataset** - select **Sales Demo_Final**    
     
 ![Connections](./Images/Connections.png)
 
 ### Power BI Desktop
 1. Within the **Sales Demo_DEV.pbix** file, navigate to **File**, **Options and Settings**, **Options**, the **CURRENT FILE** sections **Data Load** properties and disable **Auto date/time**.
+2. [Optional] Press the **Save** icon to save your changes. (Pro Tip: Ctrl+S)
 
 ### ALM Toolkit
 1. Press Compare and confirm the following remain unchanged.
     1. **Source** is the Power BI Desktop file **Sales Demo_DEV.pbix**.
-    2. **Target** is the **Workspace Connection** address for the **Sales Demo_FINAL.pbix**.
+    2. **Target** is the Datset option including the **Workspace Connection** address and the **Sales Demo_FINAL** dataset.
 2. Navigate to the **Home** tab and select **Select Actions** and the **Hide Skip Objects with Same Definition** option.
-3. Select the row containing the Table object Source Name **Calendar** to compare the differences.
+3. Select the row containing the Table object Source Name **Calendar** to compare the differences between the **Source** and **Target**.
 
 ![Comparison](./Images/Comparison.png)
 
-4. Navigate to the **Home** tab and select **Validate Selection** to review the applicable changes in the **Warning List** dialog box before pressing **OK**
-5. Navigate to the **Home** tab, select **Update** and within the ALM Toolkit diablog box press **Yes** to confirm updating the target.
-6. Within the **Deploy** dialog box press **Close**
-7. Within the **ALM Toolkit** dialog box press **Yes** to refresh the comparison.
-
-**Note:** If Power BI Desktop prompts with an dialog box stating **Something went wrong** press Cancel. This is due to Auto time intelligence still being enabled in the **CURRENT FILE** sections **Data Load** properties which is causing conflict with the missing objects.
+4. Navigate to the **Home** tab and complete the following:
+    - Select the **Report Differences** option to receive an Excel output for retention purposes.
+    - Select the **Validate Selection** option to review the applicable changes in the **Warning List** dialog box before pressing **OK**
+    - Select the **Update** option and within the ALM Toolkit diablog box press **Yes** to confirm updating the target.
+        - Within the **Deploy** dialog box press **Close**
+        - Within the **ALM Toolkit** dialog box press **Yes** to refresh the comparison.
 
 ___
 
