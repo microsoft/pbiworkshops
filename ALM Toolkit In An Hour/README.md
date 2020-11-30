@@ -48,8 +48,9 @@ ___
     - Within the workspace, select **Settings**, then the **Premium** tab and press the **Copy** button below the **Workspace Connection** address.
 
 ### ALM Toolkit
-1. Navigate to the **External Tools** ribbon in Power BI Desktop and select **ALM Toolkit**.
-2. Select **Options** and enable the following options:
+1. Navigate to the **External Tools** ribbon in Power BI Desktop and select **ALM Toolkit**. 
+2. Press **Cancel** to exit the Connections dialogue window.
+3. Within the **Home** tab, select **Options** and enable the following options:
     - Include roles
     - Consider partitions when comparing tables
     - For table updates, retain partitions
@@ -116,7 +117,12 @@ model. **Currently not all properties are supported within Power BI Desktop for 
 ### ALM Toolkit
 1. Within the Connections dialog box confirm the following and press **OK** when complete.
     1. **Source** is the Power BI Desktop file **Sales Demo_DEV.pbix** that is currently open.
-    2. **Target** is the **Sales Demo_FINAL.pbix** file that has been uploaded to the Power BI service.
+    2. **Target** is the **Sales Demo_FINAL.pbix** file that has been uploaded to the Power BI service
+        - Select the **Dataset** option
+        - **Workspace** - paste the **Workspace Connection** string. (Pro Tip: Windows+V - to bring up Clipboard)
+            - Authenticate using your organizational credentials
+        - **Dataset** - select **Sales Demo_Final**
+        
     
 ![Connections](./Images/Connections.png)
 
