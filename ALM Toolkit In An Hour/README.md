@@ -11,6 +11,10 @@ In readiness for [XMLA endpoint read/write](https://docs.microsoft.com/en-us/pow
 Website: http://alm-toolkit.com/
 ___
 
+# Prerequisites
+
+For this workshop a **Power BI Pro** license is required for publishing and a workspace backed by either **Premium Capacity** or **Premium Per User** with XMLA endpoints enabled.
+
 **Follow Along:**
 - [Download and Install ALM Toolkit](http://alm-toolkit.com/)
 - [Download the Sales Demo_DEV.pbix File](https://github.com/microsoft/pbiworkshops/raw/main/ALM%20Toolkit%20In%20An%20Hour/Sales%20Demo_DEV.pbix)
@@ -19,17 +23,10 @@ ___
 ___
 
 # Table of Contents
-- [Prerequisites](#prerequisites)
 - [Setup](#setup)
 - [Tabular Object Model Hierarchy](#tabular-object-model-hierarchy)
 - [Comparison](#comparison)
 - [Actions](#actions)
-
-___
-
-# Prerequisites
-
-For this workshop a **Power BI Pro** license is required for publishing and a workspace backed by either **Premium Capacity** or **Premium Per User** with XMLA connectivity enabled.
 
 ___
 
@@ -47,8 +44,8 @@ ___
 2. Within the Power BI service, select the Workspaces option within the navigation menu and locate a workspace that is backed by either Premium Capacity or Premium Per User.
 3. Within the Workspace:
     - Select **New** and the **Upload a file** option
-        - Upload the **Sales Demo_FINAL.pbix**
-    - Select **Settings** and within the **Premium** tab, press the **Copy** button below the **Workspace Connection** address
+    - Within **Create new content**, select **Local file** and upload the **Sales Demo_FINAL.pbix**
+    - Within the workspace, select **Settings**, then the **Premium** tab and press the **Copy** button below the **Workspace Connection** address.
 
 ### ALM Toolkit
 1. Navigate to the **External Tools** ribbon in Power BI Desktop and select **ALM Toolkit**.
