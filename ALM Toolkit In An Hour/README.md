@@ -163,6 +163,9 @@ Within ALM Toolkit modelers can Create, Update, Delete or Skip items that are in
     2. Navigate to the **Transform** tab and select the **Detect Data Type** option to classify the column types.
     3. Navigate to the **Home** tab and select **Close & Apply**.
 3. Navigate to the **Report** option, double click to bring up the Q&A visual and type in the question - *"total unit price by state/province name"* - and select the **Turn this Q&A result into a standard visual option** when complete.
+
+![QA Visual](./Images/QA_Visual.png)
+
 4. Navigate to the **Modeling** tab
     1. Select the **View as** option to view as the **Florida Sales Reps** role and select **OK**.
     2. Select **Stop viewing** within the notification bar.
