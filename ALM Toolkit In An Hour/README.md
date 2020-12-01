@@ -139,7 +139,7 @@ model. **Currently not all properties are supported within Power BI Desktop for 
 ![Comparison](./Images/Comparison.png)
 
 4. Navigate to the **Home** tab and complete the following:
-    - Select the **Report Differences** option to receive an Excel output for retention purposes.
+    - Select the **Report Differences** option to receive an Excel output for change history.
     - Select the **Validate Selection** option to review the applicable changes in the **Warning List** dialog box before pressing **OK**
         - After the **Validate Selection** has been completed, the **Update** and **Generate Script** options will now be enabled.
     - Select the **Update** option and within the ALM Toolkit diablog box press **Yes** to confirm updating the target.
@@ -160,8 +160,12 @@ Within ALM Toolkit modelers can Create, Update, Delete or Skip items that are in
 1. Within the Sales Demo_DEV (PBIX) file, navigate to the **Fields** pane and alternate click the **Warehouse Items** table and select **Edit query**.
 2. With the Power Query Editor
     1. Hold shift and select the columns **TaxRate, UnitPrice, Suggested Retail Price and TypicalWeightPerUnit**.
-    2. Navigate to the **Transform** tab and select the **Detect Data Type** option to classify the column types.
+    2. Navigate to the **Transform** tab and select the **Detect Data Type** option to change the column data types from text to a number.
     3. Navigate to the **Home** tab and select **Close & Apply**.
+    
+![Detect Data Type](./Images/Detect_Data_Type.png)
+
+
 3. Navigate to the **Report** option, double click to bring up the Q&A visual and type in the question - *"total unit price by state/province name"* - and select the **Turn this Q&A result into a standard visual option** when complete.
 
 ![QA Visual](./Images/QA_Visual.png)
@@ -173,25 +177,28 @@ Within ALM Toolkit modelers can Create, Update, Delete or Skip items that are in
 
     ```[State/Province] = "FLORIDA"```
 
-5. Navigate to the **Data** option and select the **[State/Province]** field from the **State/Provinces** table to review the current items.
-6. Navigate to the **Modeling** tab and select the **Manage roles** option and navigate to the **State/Provinces** table to update the current DAX filter expression.
+    4. Update the DAX filter expression.
 
     ```[State/Province] = "FL"```
 
-7. Navigate to the **Report** option
-    1. Select the **[OrderID]** field from the **Sales Order Lines** table, alternate click and select **Hide**.
-    2. Alternate select the **Sales Order Lines** table and select **New Measure** to create the following measures
-        1. ```Total Quantity = SUM('Sales Order Lines'[Quantity])```
-        2. ```Total Quantity MTD = TOTALMTD([Total Quantity], 'Calendar'[Date])```
-    3. Select the **Total Unit Price** measure and update to the following DAX expression and set the **Format** property to **Currency**.
+5. Navigate to the **Report** option
+    1. From the **Sales Order Lines** table.
+        1. Select the **[OrderID]** field, alternate click and select **Hide**.
+        2. Alternate select the table name and select **New Measure** to create the following measures
+            1. ```Total Quantity = SUM('Sales Order Lines'[Quantity])```
+            2. ```Total Quantity MTD = TOTALMTD([Total Quantity], 'Calendar'[Date])```
+        3. Select the **Total Unit Price** measure and update to the following DAX expression and set the **Format** property to **Currency**.
     
-        ```Total Unit Price = SUMX('Sales Order Lines', [Quantity] * [Unit Price])```
+            ```Total Unit Price = SUMX('Sales Order Lines', [Quantity] * [Unit Price])```
+
+![DAX Measure](./Images/DAX_Measure.png)
+
 
 ### ALM Toolkit
 1. Press Compare and confirm the following remain unchanged.
     1. **Source** is the Power BI Desktop file **Sales Demo_DEV.pbix** that is currently open.
-    2. **Target** is the Power BI Desktop file **Sales Demo_FINAL.pbix** that is currently open.
-2. Navigate to the **Home** tab and select **Report Differenes** to output an Excel file for version history.
+    2. **Target** will be the **Sales Demo_FINAL.pbix** file that has been uploaded to the Power BI service
+2. Navigate to the **Home** tab and select **Report Differenes** to output an Excel file for a change history.
 3. Navigate to the **Home** tab and select **Select Actions** and the **Hide Skip Objects with Same Definition** option.
 4. Select the following rows to compare teh differences and confirm or change the **Action**
     1. **Table** objects
