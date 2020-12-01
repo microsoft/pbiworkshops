@@ -200,7 +200,7 @@ Within ALM Toolkit modelers can Create, Update, Delete or Skip items that are in
     2. **Target** will be the **Sales Demo_FINAL.pbix** file that has been uploaded to the Power BI service
 2. Navigate to the **Home** tab and select **Report Differenes** to output an Excel file for a change history.
 3. Navigate to the **Home** tab and select **Select Actions** and the **Hide Skip Objects with Same Definition** option.
-4. Select the following rows to compare the differences and confirm or change the **Action** accordingly.
+4. Select the following rows to compare the differences and review the **Action** applied.
     1. **Table** objects
         1. Source Name **Warehouse Items**
         2. Source Name **Sales Order Lines**
@@ -211,7 +211,7 @@ Within ALM Toolkit modelers can Create, Update, Delete or Skip items that are in
         2. Source Name **Total Quantity**
         3. Source Name **Total Quantity MTD**
         
-5. Select the Source Name **Total Quantity** and **Total Quantity MTD** change the **Action** to **Skip** by holding Shift to multi-select, alternate select and choose the **Skip selected objects** option.
+5. Select the Source Name **Total Quantity** and **Total Quantity MTD** by holding Shift to multi-select, alternate select and choose the **Skip selected objects** option to change the **Action** to **Skip**.
         
 ![Comparison](./Images/SkipObjects.png)
 
