@@ -183,11 +183,11 @@ Within ALM Toolkit modelers can Create, Update, Delete or Skip items that are in
 
 5. Navigate to the **Report** option
     1. From the **Sales Order Lines** table.
-        1. Select the **[OrderID]** field, alternate click and select **Hide**.
-        2. Alternate select the table name and select **New Measure** to create the following measures
+        1. Select the **[OrderID]** field, alternate click and select **Hide** to avoid displaying the foreign key.
+        2. Alternate select the table name and select **New Measure** to create the following measures that will **need to be properly tested** before publishing.
             1. ```Total Quantity = SUM('Sales Order Lines'[Quantity])```
             2. ```Total Quantity MTD = TOTALMTD([Total Quantity], 'Calendar'[Date])```
-        3. Select the **Total Unit Price** measure and update to the following DAX expression and set the **Format** property to **Currency**.
+        3. Select the **Total Unit Price** measure and correct the following DAX expression and set the **Format** property to **Currency**.
     
             ```Total Unit Price = SUMX('Sales Order Lines', [Quantity] * [Unit Price])```
 
@@ -208,6 +208,9 @@ Within ALM Toolkit modelers can Create, Update, Delete or Skip items that are in
         1. Source Name **Florida Sales Rep**
     3. **Measure** objects
         1. Source Name **Total Unit Price**
+        2. Source Name **Total Quantity**
+        3. Source Name **Total Quantity MTD**
+        
 5. Select the Source Name **Total Quantity** and **Total Quantity MTD** change the **Action** to **Skip** by holding Shift to multi-select, alternate select and choose the **Skip selected objects** option.
         
 ![Comparison](./Images/SkipObjects.png)
