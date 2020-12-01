@@ -200,22 +200,22 @@ Within ALM Toolkit modelers can Create, Update, Delete or Skip items that are in
     2. **Target** will be the **Sales Demo_FINAL.pbix** file that has been uploaded to the Power BI service
 2. Navigate to the **Home** tab and select **Report Differenes** to output an Excel file for a change history.
 3. Navigate to the **Home** tab and select **Select Actions** and the **Hide Skip Objects with Same Definition** option.
-4. Select the following rows to compare teh differences and confirm or change the **Action**
+4. Select the following rows to compare the differences and confirm or change the **Action** accordingly.
     1. **Table** objects
-        1. Source Name **Warehouse Items** and set the **Action** to **Update**.
-        2. Source Name **Sales Order Lines** and set the **Action** to **Update**.
+        1. Source Name **Warehouse Items**
+        2. Source Name **Sales Order Lines**
     2. **Role** objects
-        1. Source Name **Florida Sales Rep** and set the **Action** to **Update**.
+        1. Source Name **Florida Sales Rep**
     3. **Measure** objects
-        1. Source Name **Total Unit Price** and set the **Action** to **Update**.
-        2. Source Name **Total Quantity** and **Total Quantity MTD** set the **Action** to **Skip**.
+        1. Source Name **Total Unit Price**
+5. Select the Source Name **Total Quantity** and **Total Quantity MTD** change the **Action** to **Skip** by holding Shift to multi-select, alternate select and choose the **Skip selected objects** option.
         
 ![Comparison](./Images/SkipObjects.png)
 
-5. Navigate to the **Home** tab and select **Validate Selection** to review the applicable changes in the **Warning List** dialog box before pressing **OK**
-6. Navigate to the **Home** tab, select **Update** and within the ALM Toolkit diablog box press **Yes** to confirm updating the target.
-7. Within the **Deploy** dialog box press **Close**
-8. Within the **ALM Toolkit** dialog box press **Yes** to refresh the comparison.
+6. Navigate to the **Home** tab and select **Validate Selection** to review the applicable changes in the **Warning List** dialog box before pressing **OK**
+7. Navigate to the **Home** tab, select **Update** and within the ALM Toolkit diablog box press **Yes** to confirm updating the target.
+8. Within the **Deploy** dialog box press **Close**
+9. Within the **ALM Toolkit** dialog box press **Yes** to refresh the comparison.
 
 ___
 
