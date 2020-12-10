@@ -262,7 +262,8 @@ The above excerpt is from [Exam Ref 70-768 Developing SQL Data Models](https://w
 
 ### DAX Studio
 1. From the **Home** tab select **Server Timings**.
-- Optional: Select **Query Plan**
+
+    - Optional: Select **Query Plan**
 
 2. In the query Editor section enter the below query and review the output in the **Server Timings** section, after pressing the **Run** button.
 
