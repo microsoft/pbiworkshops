@@ -69,7 +69,9 @@ With DAX queries, you can query and return data defined by a table expression. R
 1. Open the Sales Demo (PBIX) file, navigate to the **External Tools** ribbon in Power BI Desktop and select **DAX Studio**.
 
 ### DAX Studio
-In the query Editor section enter the below queries and review their output in the **Results** section (as displayed below), after pressing the **Run (F5)** command.
+In the query Editor section enter the below queries and review their output in the **Results** section (as displayed below), after pressing the **Run** button.
+
+**⭐ Pro Tip:** F5
 
 #### SELECT Statement
 
@@ -141,7 +143,7 @@ DAX formulas are used in measures, calculated columns, calculated tables, and ro
 ### [Optional: Guided Video]()
 
 ### DAX Studio
-In the query Editor section enter the below queries and review their output in the **Results** section, after pressing the **Run (F5)** command.
+In the query Editor section enter the below queries and review their output in the **Results** section, after pressing the **Run** button.
 
 **Description:** Enter the below expression to return the average unit price from the Sales Order Lines table:
 ```
@@ -260,8 +262,22 @@ The above excerpt is from [Exam Ref 70-768 Developing SQL Data Models](https://w
 
 ### DAX Studio
 1. From the **Home** tab select **Server Timings**.
-2. 
+- Optional: Select **Query Plan**
 
+2. In the query Editor section enter the below query and review the output in the **Server Timings** section, after pressing the **Run** button.
+
+```
+EVALUATE
+FILTER ( Customers, NOT ISEMPTY ( RELATEDTABLE ( 'Customer Transactions' ) ) )
+```
+3. Select the bolded Query to review the xmSQL statement. The highlighted term **CallbackDataID** is returned if the expression is too complex, meaning a call back to formula engine during the VertiPaq scan.
+
+4. In the query Editor section enter the below query and review the output in the **Server Timings** section, after pressing the **Run** button.
+
+```
+EVALUATE
+CALCULATETABLE ( Customers, 'Customer Transactions' )
+```
 
 ___
 
