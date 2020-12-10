@@ -17,9 +17,7 @@ ___
 - [Query Language](#query-language)
   - [SELECT Statement](#select-statement)
   - [WHERE Clause](#where-clause)
-  - [Aggregate Functions](#aggregate-functions)
-  - [GROUP BY Statement](#group-by-statement)
-  - [JOIN Clause](#join-clause)
+- [Scalar Value](#scalar-value)
 - [Formula Language](#formula-language)
 - [Query Builder](#query-builder)
 - [Server Timings](#server-timings)
@@ -90,40 +88,6 @@ FROM Customers;
 
 ![Editor Results](./Images/EditorResults.png)
 
-**DAX Query**
-```
-EVALUATE
-Customers
-ORDER BY [CustomerID] ASC
-```
-**SQL Equivalent**
-```
--- Select all from the Customers table in ascending order by the CustomerID
-SELECT * 
-FROM Customers 
-ORDER BY CustomerID ASC;
-```
-
-**Additional Information:**
-
-| Sort Modifiers | Description |
-| :------------- | :---------- |
-| ASC | Ascending (Optional Default) |
-| DESC   | Descending |
-
-**DAX Query**
-```
-EVALUATE
-VALUES( Customers[CustomerName] )
-```
-**SQL Equivalent**
-```
--- Select the CustomerName from the Customers table
-SELECT CustomerName 
-FROM Customers;
-```
-🏆 **Challenge:** Attempt the above DAX query to include the **ORDER BY** clause for the CustomerID column. What is the result?
-
 ___
 
 #### WHERE Clause
@@ -142,7 +106,7 @@ WHERE StateProvinceCode = 'IL';
 ```
 ___
 
-#### Aggregate Functions
+# Scalar Value
 
 **DAX Query**
 ```
@@ -158,49 +122,10 @@ FROM Customers;
 - Review the following error in the **Output**.
 ![Table Error](./Images/TableError.png)
 
-- Update the above expression to store the returned results in a list using curly brackets.
+- Update the above expression to store the returned results in a single column table (list) using curly brackets.
 ```
 EVALUATE
 { COUNTROWS( Customers ) }
-```
-___
-
-#### GROUP BY Statement
-
-**DAX Query**
-```
-EVALUATE
-SUMMARIZECOLUMNS (
-	Customers[StateProvinceCode],
-	"CustomerCount", COUNTROWS( Customers )
-) ORDER BY [Customers] DESC
-```
-**SQL Equivalent**
-```
--- Count all from the Customers table.
-SELECT
-StateProvinceCode
-, COUNT(*) as CustomerCount
-FROM Customers
-GROUP BY StateProvinceCode
-ORDER BY [Customers] DESC;
-```
-___
-
-#### JOIN Clause
-
-**DAX Query**
-```
-EVALUATE
-CALCULATETABLE ( Customers, 'Customer Transactions' )
-```
-**SQL Equivalent**
-```
--- Select all from Customers where a Customer Transcation exists.
-SELECT *
-FROM Customers
-INNER JOIN Customer_Transactions
-  ON Customers.CustomerID = Customer_Transcations.CustomerID;
 ```
 ___
 
@@ -233,13 +158,16 @@ ROW ("Average Unit Price", AVERAGE ( 'Sales Order Lines'[Unit Price] ) )
 
 ```
 EVALUATE
-{ CALCULATE ( COUNT ( Orders[OrderID] ), Customers[CustomerID] = 841 ) }
+{ CALCULATE ( COUNTROWS ( Orders[OrderID] ), Customers[CustomerID] = 841 ) }
 ```
+🏆 **Challenge:** Update the above statement to improve performance.
+
+[Learn More About Using COUNTROWS instead of COUNT](https://docs.microsoft.com/en-us/power-bi/guidance/dax-countrows)
 
 - The CALCULATE function has both an expression and filter.
 CALCULATE(«Expression»,«Filter»)
 
-**Description:** Enter the below query to return the Total Unit Price from the Sales Order Lines table for each row in the Calendar table where the Total Unit Price is greater than zero:
+**Description:** Enter the below query to return the Total Unit Price from the Sales Order Lines table for each row in the Calendar table's Date column where the Total Unit Price is greater than zero:
 
 ```
 EVALUATE
@@ -251,7 +179,7 @@ FILTER (
     [Total Unit Price] > 0
 )
 ```
-🏆 **Challenge:** Update the above statement to provide the correct results based on the calendar tables row __context__.
+🏆 **Challenge:** Update the above statement to provide the correct results based on the calendar tables current row __context__.
 
 [Learn More About Extension Columns](https://www.sqlbi.com/articles/best-practices-using-summarize-and-addcolumns/)
 ___
