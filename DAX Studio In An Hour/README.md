@@ -271,6 +271,8 @@ The above excerpt is from [Exam Ref 70-768 Developing SQL Data Models](https://w
 EVALUATE
 FILTER ( Customers, NOT ISEMPTY ( RELATEDTABLE ( 'Customer Transactions' ) ) )
 ```
+![CallbackDataID](./Images/CallbackDataID.png)
+
 3. Select the bolded Query to review the xmSQL statement. The highlighted term **CallbackDataID** is returned if the expression is too complex, meaning a call back to formula engine during the VertiPaq scan.
 
 4. In the query Editor section enter the below query and review the output in the **Server Timings** section, after pressing the **Run** button.
@@ -279,6 +281,8 @@ FILTER ( Customers, NOT ISEMPTY ( RELATEDTABLE ( 'Customer Transactions' ) ) )
 EVALUATE
 CALCULATETABLE ( Customers, 'Customer Transactions' )
 ```
+
+[Learn More About Server Timings](https://daxstudio.org/documentation/features/server-timings-trace/)
 
 ___
 
