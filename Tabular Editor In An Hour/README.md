@@ -340,7 +340,7 @@ Includes:
 - Using Devops (1:24:05)
 
 ### Advanced Scripting
-[Script Snippets](https://github.com/otykier/TabularEditor/wiki/Useful-script-snippets)
+[Script Snippets](https://docs.tabulareditor.com/Useful-script-snippets.html)
 
 [Community Scripts](https://github.com/TabularEditor/Scripts)
 
