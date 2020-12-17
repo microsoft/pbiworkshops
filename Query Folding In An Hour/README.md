@@ -35,6 +35,52 @@ Website: https://docs.microsoft.com/en-us/sql/samples/adventureworks-install-con
 
 #### DirectQuery and Dual storage mode: 
 - Each DirectQuery and Dual storage mode table (Power BI only) must be based on a Power Query query that can be folded.
+___
+
+### Power BI Desktop
+1. Navigate to the Home tab and select SQL Server.
+2. Enter the local Server name or Azure SQL Database address in the **Server** field.
+  a. Optional: You can also include the Database name
+3. For the Data Connectivity mode leave the default **Import**.
+4. Expand the **Advanced options*** to review some of the various settings and press **OK** to proceed:
+![SQL Server database](.Images/SQLServerOptions.png)
+
+5. Within the **Navigator** window, if you have multiple databases locate the **AdventureWorksLT** and expand to review the views, tables and stored procedures that you currently maintain access to.
+- If you restored from a local .bak file there may be a year suffix attached.
+6. Select the check mark next to **SalesLT.Customer** and **SalesLT.Address** and then press **Transform Data** to open the **Power Query Editor**
+7. Within the **SalesLT.Address** query, within the **Home** tab, press the **Choose Columns** button.
+8. Deselect the **rowguid**, **ModifiedDate**, **SalesLT.CustomerAddress**, **SalesLT.SalesOrderHeader(AddressID)** and **SalesLT.SalesOrderHeader(AddressID) 2** columns and then press **OK**.
+9. Navigate to the **CountryRegion** field, alternate click any of the rows that contain the value **United States**, hover over **Text Filters** and then select **Equals**.
+10. Within the **Query Settings** pane, navigate to the **APPLIED STEPS** section, alternate click the last recorded step **Filtered Rows** and select the option **View Native Query**
+- Within Power Query Online's dataflows this is titled **View data source query**
+11. Review the generated **Native Query**:
+![SubQuery](.Images/SubQuery.png)
+
+[Learn more about Query Optimizer](https://www.red-gate.com/simple-talk/sql/sql-training/the-sql-server-query-optimizer/)
+
+12. 
+
+b.	From SalesLT.Customer select the following columns:
+i.	CustomerID, Title, FirstName, MiddleName, LastName, Suffix, CompanyName, EmailAddress
+c.	Filter where CompanyName contains “Bike”
+d.	Review Native Query and move Filter above the previous step
+e.	Delete Column Selection Step
+2.	Perform the following transformations against SalesLT Customer query
+a.	Add Column – [FullName] combining - [FirstName], [MiddleName], [LastName] merge columns with Space
+i.	No Fold
+ii.	Custom with if condition – folds
+iii.	Delete start over and Merge - folds
+b.	 [Title] - Add Conditional Column – Mr. = Male, Ms. = Female
+i.	Update to Multi-Condition
+1.	List.Contains({“Mr.”,”Sr.”}, [Title]) and List.Contains({“Ms.”, “Sra.”}, [Title])
+3.	From the column SalesLT.CustomerAddress Expand SalesLT.Address and select columns AddressLine1 thru PostalCode
+i.	Filter for CountryRegion = “United States”
+ii.	Select Columns:
+1.	CustomerID, Title, FirstName, MiddleName, LastName, CompanyName, EmailAddress, City, StateProvince, PostalCode
+iii.	Group By all column headers to find distinct values, = Table.Group( Step, ColumnNames, {} )
+b.	Replace Text for [CountryRegion] from “United States” to “USA”
+i.	View Native Query now greyed out
+c.	Update column names by creating a custom function for Text.Combine(Splitter.SplityByCharacterTextTransition()(_), “ “)
 
 
 
