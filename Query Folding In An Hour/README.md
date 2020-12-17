@@ -38,9 +38,11 @@ Website: https://docs.microsoft.com/en-us/sql/samples/adventureworks-install-con
 ___
 
 ### Power BI Desktop
-1. Navigate to the Home tab and select SQL Server.
+1. Navigate to the Home tab and select **SQL Server**.
 2. Enter the local Server name or Azure SQL Database address in the **Server** field.
+
   a. Optional: You can also include the Database name
+  
 3. For the Data Connectivity mode leave the default **Import**.
 4. Expand the **Advanced options*** to review some of the various settings and press **OK** to proceed:
 ![SQL Server database](.Images/SQLServerOptions.png)
