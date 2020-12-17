@@ -49,7 +49,13 @@ ___
 - If you restored from a local .bak file there may be a year suffix attached.
 6. Select the check mark next to **SalesLT.Customer** and **SalesLT.Address** and then press **Transform Data** to open the **Power Query Editor**
 7. Within the **SalesLT.Address** query, within the **Home** tab, press the **Choose Columns** button.
-8. Deselect the **rowguid**, **ModifiedDate**, **SalesLT.CustomerAddress**, **SalesLT.SalesOrderHeader(AddressID)** and **SalesLT.SalesOrderHeader(AddressID) 2** columns and then press **OK**.
+8. Deselect the following columns and then press **OK**
+- **rowguid**
+- **ModifiedDate**
+- **SalesLT.CustomerAddress**
+- **SalesLT.SalesOrderHeader(AddressID)**
+- **SalesLT.SalesOrderHeader(AddressID) 2**
+
 9. Navigate to the **CountryRegion** field, alternate click any of the rows that contain the value **United States**, hover over **Text Filters** and then select **Equals**.
 10. Within the **Query Settings** pane, navigate to the **APPLIED STEPS** section, alternate click the last recorded step **Filtered Rows** and select the option **View Native Query**
 - Within Power Query Online's dataflows this is titled **View data source query**
