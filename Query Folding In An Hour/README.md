@@ -20,7 +20,7 @@ ___
 
 ### SQL Server
 
-Download the Lightweight - AvendtureWorksLT2019
+Download and restore of the Lightweight editions of - AdventureWorksLT*
 
 Website: https://docs.microsoft.com/en-us/sql/samples/adventureworks-install-configure
 
