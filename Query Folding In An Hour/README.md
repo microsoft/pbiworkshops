@@ -41,7 +41,7 @@ ___
 1. Navigate to the Home tab and select **SQL Server**.
 2. Enter the local Server name or Azure SQL Database address in the **Server** field.
 
-  a. Optional: You can also include the Database name
+    a. Optional: You can also include the Database name
   
 3. For the Data Connectivity mode leave the default **Import**.
 4. Expand the **Advanced options*** to review some of the various settings and press **OK** to proceed:
@@ -52,11 +52,11 @@ ___
 6. Select the check mark next to **SalesLT.Customer** and **SalesLT.Address** and then press **Transform Data** to open the **Power Query Editor**
 7. Within the **SalesLT.Address** query, within the **Home** tab, press the **Choose Columns** button.
 8. Deselect the following columns and then press **OK**
-- **rowguid**
-- **ModifiedDate**
-- **SalesLT.CustomerAddress**
-- **SalesLT.SalesOrderHeader(AddressID)**
-- **SalesLT.SalesOrderHeader(AddressID) 2**
+    - **rowguid**
+    - **ModifiedDate**
+    - **SalesLT.CustomerAddress**
+    - **SalesLT.SalesOrderHeader(AddressID)**
+    - **SalesLT.SalesOrderHeader(AddressID) 2**
 
 9. Navigate to the **CountryRegion** field, alternate click any of the rows that contain the value **United States**, hover over **Text Filters** and then select **Equals**.
 10. Within the **Query Settings** pane, navigate to the **APPLIED STEPS** section, alternate click the last recorded step **Filtered Rows** and select the option **View Native Query**
