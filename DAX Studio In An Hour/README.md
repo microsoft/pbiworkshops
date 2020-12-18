@@ -30,8 +30,10 @@ ___
 ## Instructions
 ### [Optional: Guided Video](https://www.youtube.com/watch?v=pFX20PPxXjs&list=PLKW7XPyNDgRCOiC69kZWfRQdOxcnQy2yA&index=2)
 
-### Power BI Desktop
+### Power BI Desktop [Only applicable to July and August 2020 Versions]
 1. Ensure the Power BI preview feature [Store datasets using enhanced metadata format](https://docs.microsoft.com/en-us/power-bi/connect-data/desktop-enhanced-dataset-metadata) is enabled.
+2. Navigate to the **File** menu and select Options and Settings and then **Options**.
+3. Navigate to **Preview features** and enable **Store datasets using enhanced metadata format**.
 
 ### DAX Studio
 1. Open **DAX Studio**.
@@ -69,7 +71,7 @@ With DAX queries, you can query and return data defined by a table expression. R
 1. Open the Sales Demo (PBIX) file, navigate to the **External Tools** ribbon in Power BI Desktop and select **DAX Studio**.
 
 ### DAX Studio
-In the query Editor section enter the below queries and review their output in the **Results** section (as displayed below), after pressing the **Run** button.
+In the query Editor section enter the below DAX queries and review their output in the **Results** section (as displayed below), after pressing the **Run** button.
 
 **⭐ Pro Tip:** F5
 
@@ -143,7 +145,7 @@ DAX formulas are used in measures, calculated columns, calculated tables, and ro
 ### [Optional: Guided Video]()
 
 ### DAX Studio
-In the query Editor section enter the below queries and review their output in the **Results** section, after pressing the **Run** button.
+In the query Editor section enter the below DAX queries and review their output in the **Results** section, after pressing the **Run** button.
 
 **Description:** Enter the below expression to return the average unit price from the Sales Order Lines table:
 ```
@@ -271,7 +273,10 @@ The above excerpt is from [Exam Ref 70-768 Developing SQL Data Models](https://w
 EVALUATE
 FILTER ( Customers, NOT ISEMPTY ( RELATEDTABLE ( 'Customer Transactions' ) ) )
 ```
-3. Select the bolded Query to review the xmSQL statement. The highlighted term **CallbackDataID** is returned if the expression is too complex, meaning a call back to formula engine during the VertiPaq scan.
+
+![CallbackDataID](./Images/CallbackDataID.png)
+
+3. Select the bolded Query to review the **xmSQL** statement to the right. The highlighted term **CallbackDataID** is returned if the expression is too complex, meaning a call back to the formula engine during the VertiPaq scan occurred.
 
 4. In the query Editor section enter the below query and review the output in the **Server Timings** section, after pressing the **Run** button.
 
@@ -279,6 +284,8 @@ FILTER ( Customers, NOT ISEMPTY ( RELATEDTABLE ( 'Customer Transactions' ) ) )
 EVALUATE
 CALCULATETABLE ( Customers, 'Customer Transactions' )
 ```
+
+[Learn More About Server Timings](https://daxstudio.org/documentation/features/server-timings-trace/)
 
 ___
 
