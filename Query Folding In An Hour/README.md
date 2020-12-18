@@ -11,10 +11,11 @@ ___
 - [Setup](#setup)
 - [Connectivity Modes](#connectivity-modes)
 - [Query Folding](#query-folding)
+    - [Query Optimizer](#query-optimizer)
+    - [Recommended Practices](#recommended-practices)
 - [Partial Query Folding](#partial-query-folding)
 - [Foldable Techniques](#)
 - [Incremental Refresh](#incremental-refresh)
-- [Recommended Practices](#recommended-practices)
 - [Continue Your Journey](#continue-your-journey)
 
 ___
@@ -47,9 +48,15 @@ ___
 
 Query folding is the ability for a Power Query query to generate a single query statement to retrieve and transform source data. The Power Query mashup engine strives to achieve query folding whenever possible for reasons of efficiency.
 
-![Query Folding](./Images/QueryFolding.gif)
+</br>
+
+**Transformations that can achieve query folding:**
+
+Relational data source transformations that can be query folded are those that can be written as a single **SELECT** statement. A **SELECT** statement can be constructed with appropriate **WHERE**, **GROUP BY** and **JOIN** clauses. It can also contain column expressions (calculations) that use common built-in functions supported by SQL databases.
 
 </br>
+
+![Query Folding](./Images/QueryFolding.gif)
 
 ## Instructions
 
@@ -68,7 +75,7 @@ Query folding is the ability for a Power Query query to generate a single query 
 
     - If you restored from a local .bak file there may be a year suffix attached.
 
-6. Select the check mark next to **SalesLT.Customer** and **SalesLT.Address** and then press **Transform Data** to open the **Power Query Editor**
+6. Select the check mark next to **SalesLT.Customer** and **SalesLT.Address** and then press **Transform Data** to open the **Power Query Editor**.
 
 ![Navigator](./Images/Navigator.png)
 
@@ -92,7 +99,7 @@ Query folding is the ability for a Power Query query to generate a single query 
 
     a. Alternate click the last recorded step **Filtered Rows** and select the option **View Native Query**
     
-    - **Note:** Within Power Query Online's dataflows this is titled **View data source query**
+    - **Note:** Within Power Query Online's [dataflows](https://docs.microsoft.com/en-us/power-bi/transform-model/dataflows/dataflows-create) this is titled **View data source query**
 
     b. Review the generated **Native Query**:
     
@@ -118,11 +125,25 @@ Each of these tasks is delegated to a separate component within the query proces
 
 [Learn more about Query Optimizer](https://www.red-gate.com/simple-talk/sql/sql-training/the-sql-server-query-optimizer/)
 
+</br>
+
+## Recommended Practices
+
+Every source system and scenario is different with a bold **"it depends"** in terms of a production ready guidance; but the following is a suggested framework when applying transformations within the Power Query Editor to structure efficient system generated SQL. The **Query Optimizer** may be more than robust enough for simple queries as demonstrated above but more complex data transformations performance issues may arise when not careful.
+
+</br>
+
 ___
 
 # Partial Query Folding
 
-Data sources will support different levels of query capabilities. To provide a consistent data transformation experience, the Mashup Engine compensates (i.e. does the processing locally) for transformations that cannot be sent to the source. It is the Data Connector's responsibility to report its capabilities to the engine, carving off the transformations it can handle, generating the appropriate query syntax, and letting the Mashup Engine handle the remaining work.
+Data sources will support different levels of query capabilities. To provide a consistent data transformation experience, the Mashup Engine compensates (i.e. does the processing locally) for transformations that cannot be sent to the source. It is the Data Connector's responsibility to report its capabilities to the engine, carving off the transformations it can handle, generating the appropriate query syntax, and letting the **Mashup Engine** handle the remaining work.
+
+</br>
+
+**Transformations that prevent query folding:**
+
+Merging or appending queries based on different sources. The use of complex logic that have no equivalent functions in the data source.
 
 </br>
 
