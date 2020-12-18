@@ -2,7 +2,7 @@
 
 ### About:
 
-Query folding is the ability for a Power Query query to generate a single query statement to retrieve and transform source data. The Power Query mashup engine strives to achieve query folding whenever possible for reasons of efficiency.
+Efficient data processing.
 
 Website: https://docs.microsoft.com/en-us/power-query/power-query-folding
 ___
@@ -10,6 +10,8 @@ ___
 # Table of Contents
 - [Setup](#setup)
 - [Connectivity Modes](#connectivity-modes)
+- [Query Folding](#query-folding)
+- [Partial Query Folding](#partial-query-folding)
 - [Incremental Refresh](#incremental-refresh)
 
 ___
@@ -37,6 +39,10 @@ Website: https://docs.microsoft.com/en-us/sql/samples/adventureworks-install-con
 - Each DirectQuery and Dual storage mode table (Power BI only) must be based on a Power Query query that can be folded.
 ___
 
+# Query Folding
+
+Query folding is the ability for a Power Query query to generate a single query statement to retrieve and transform source data. The Power Query mashup engine strives to achieve query folding whenever possible for reasons of efficiency.
+
 ### Power BI Desktop
 1. Navigate to the Home tab and select **SQL Server**.
 2. Enter the local Server name or Azure SQL Database address in the **Server** field.
@@ -59,14 +65,22 @@ ___
     - **SalesLT.SalesOrderHeader(AddressID) 2**
 
 9. Navigate to the **CountryRegion** field, alternate click any of the rows that contain the value **United States**, hover over **Text Filters** and then select **Equals**.
-10. Within the **Query Settings** pane, navigate to the **APPLIED STEPS** section, alternate click the last recorded step **Filtered Rows** and select the option **View Native Query**
-- Within Power Query Online's dataflows this is titled **View data source query**
-11. Review the generated **Native Query**:
-![SubQuery](.Images/SubQuery.png)
+10. Within the **Query Settings** pane, navigate to the **APPLIED STEPS** section to complete the following actions:
+    a. Alternate click the last recorded step **Filtered Rows** and select the option **View Native Query**
+        - Within Power Query Online's dataflows this is titled **View data source query**
+    b. Review the generated **Native Query**:
+    
+    ![SubQuery](.Images/SubQuery.png)
+    
+    c. Alternate click the last recorded step **Filtered Rows** and select the **Move before** option.
+    d. Alternate click the last recorded step **Removed Other Columns** and select the option **View Native Query**
 
 [Learn more about Query Optimizer](https://www.red-gate.com/simple-talk/sql/sql-training/the-sql-server-query-optimizer/)
 
-12. 
+# Partial Query Folding
+
+Data sources will support different levels of query capabilities. To provide a consistent data transformation experience, the Mashup Engine compensates (i.e. does the processing locally) for transformations that cannot be sent to the source. It is the Data Connector's responsibility to report its capabilities to the engine, carving off the transformations it can handle, generating the appropriate query syntax, and letting the Mashup Engine handle the remaining work. 
+
 
 b.	From SalesLT.Customer select the following columns:
 i.	CustomerID, Title, FirstName, MiddleName, LastName, Suffix, CompanyName, EmailAddress
