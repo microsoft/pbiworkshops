@@ -10,6 +10,8 @@ ___
 # Table of Contents
 - [Setup](#setup)
 - [Connectivity Modes](#connectivity-modes)
+- [Query Folding](#query-folding)
+- [Partial Query Folding](#partial-query-folding)
 - [Incremental Refresh](#incremental-refresh)
 
 ___
@@ -37,6 +39,8 @@ Website: https://docs.microsoft.com/en-us/sql/samples/adventureworks-install-con
 - Each DirectQuery and Dual storage mode table (Power BI only) must be based on a Power Query query that can be folded.
 ___
 
+# Query Folding
+
 ### Power BI Desktop
 1. Navigate to the Home tab and select **SQL Server**.
 2. Enter the local Server name or Azure SQL Database address in the **Server** field.
@@ -59,12 +63,19 @@ ___
     - **SalesLT.SalesOrderHeader(AddressID) 2**
 
 9. Navigate to the **CountryRegion** field, alternate click any of the rows that contain the value **United States**, hover over **Text Filters** and then select **Equals**.
-10. Within the **Query Settings** pane, navigate to the **APPLIED STEPS** section, alternate click the last recorded step **Filtered Rows** and select the option **View Native Query**
-- Within Power Query Online's dataflows this is titled **View data source query**
-11. Review the generated **Native Query**:
-![SubQuery](.Images/SubQuery.png)
+10. Within the **Query Settings** pane, navigate to the **APPLIED STEPS** section to complete the following actions:
+    a. Alternate click the last recorded step **Filtered Rows** and select the option **View Native Query**
+        - Within Power Query Online's dataflows this is titled **View data source query**
+    b. Review the generated **Native Query**:
+    
+    ![SubQuery](.Images/SubQuery.png)
+    
+    c. Alternate click the last recorded step **Filtered Rows** and select the **Move before** option.
+    d. Alternate click the last recorded step **Removed Other Columns** and select the option **View Native Query**
 
 [Learn more about Query Optimizer](https://www.red-gate.com/simple-talk/sql/sql-training/the-sql-server-query-optimizer/)
+
+# Partial Query Folding
 
 12. 
 
