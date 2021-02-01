@@ -37,8 +37,8 @@ ___
 #### Import:
 - Data refresh will take place efficiently for Import model tables (Power Pivot or Power BI Desktop), in terms of resource utilization and refresh duration.
 
-#### DirectQuery (and Dual storage mode):
-- Each DirectQuery (and Dual storage mode table - Power BI only) must be based on a query that can be folded.
+#### DirectQuery (and Dual storage mode - Power BI only):
+- Each table must be based on a query that can be folded to the source system.
 
 [Learn more about Connectivity Modes](https://docs.microsoft.com/en-us/power-bi/connect-data/service-dataset-modes-understand)
 
@@ -111,8 +111,6 @@ Relational data source transformations that can be query folded are those that c
     
     ![Native Query Wrong](./Images/NativeQueryRight.png)
 
-</br>
-
 ## Query Optimizer
 
 Since SQL is a high-level declarative language, it only defines what data to get from the database, not the steps required to retrieve that data, or any of the algorithms for processing the request.
@@ -136,10 +134,8 @@ Relational data source transformations that can be query folded are those that c
 
 Every source system and scenario is different with a bold **"it depends"** in terms of production ready guidance; but the following is a suggested framework when applying transformations within the Power Query Editor to structure efficient system generated SQL. The **Query Optimizer** may be more than robust enough for simple queries as demonstrated above but with more complex data transformations performance issues may arise when not carefully constructed.
 
-</br>
-Applied Steps Order:
-</br>
 
+**Applied Steps Order:**
 1. Filters and Joins
 2. Transformations
 3. Column Selection
@@ -159,9 +155,9 @@ ___
 </br>
 
 4. Remove the **Inserted Day Name** step, select the **ModifiedDate** column and within the ribbon select the **Add Column** tab, **Date**, **Day** and **Day of Week**.
-    - 1 is Sunday, 7 is Saturday
+    - 1 = Sunday , ... , 7 = Saturday
 
-**🏆 Challenge:** An optional firstDayOfWeek argument exists within Date.DayOfWeek function, review to determine if this property can be changed to start the week on Monday.
+**🏆 Challenge:** An optional firstDayOfWeek argument exists within the Date.DayOfWeek function, review to determine if this property can be changed to start the week as 1 = Monday.
 
 ```
 Date.DayOfWeek( dateTime , firstDayOfWeek )
@@ -184,15 +180,13 @@ Date.DayOfWeek( dateTime , firstDayOfWeek )
 
 </br>
 
-![Day Name](./Images/ConditionalColumn.png)
-
 6. Within the Query Settings pane, navigate to the **APPLIED STEPS** section and review the steps to determine if query folding has occurred.
 7. Select the top left of the **WeekdayName** column to change the any data type (ABC123) to text and review the steps to determine if query folding has occurred.
-8. To avoid the additional subquery, delete the **Changed Type** applied step and within the formula bar update the **Added Conditional Column** formula by including the optional argument "```, type text```" after the ```else null``` condition.
+8. To avoid the additional subquery, delete the **Changed Type** applied step that was just created and within the formula bar update the **Added Conditional Column** step by including the optional argument "```, type text```" after the ```else null``` condition.
 
 ![Day Name](./Images/ColumnType.png)
 
-9. Within the formula bar press the **Add Step** button (Fx) and insert the following formula:
+9. Within the formula bar press the **Add Step** button (Fx) and insert the following complex Power Query M formula:
 
 ```
 = Table.TransformColumnNames( #"Added Conditional Column" , each Text.Combine( Splitter.SplitTextByCharacterTransition({"a".."z"},{"A".."Z"})(_) , " " ) )
@@ -220,6 +214,30 @@ Merging or appending queries based on different sources. The use of complex logi
 ## Instructions
 
 ### Power Query Editor
+
+1. Within the Power Query Editor select **New Source** and then **SQL Server**.
+2. Insert your **Server** address and **Database** name, leave the Data Connectivity mode set to the Import.
+3. Expand the **Advanced options** and within the **SQL statement (optional, requires database)** insert the below SQL statement and press **OK** once complete:
+
+```
+SELECT * 
+FROM SalesLT.Address 
+WHERE CountryRegion = 'United States'
+```
+
+![SQL Statement](./Images/SQLStatement.png)
+
+4. After the preview window has displayed the truncated results, press **OK** to proceed.
+5. Leveraging the Power Query Editor add an additional **WHERE** type of condition by navigating to the **City** column, alternate selecting a row that contains the term **Dallas**, **Text Filters** and then **Equals**.
+
+![Partial Fold Where](./Images/PartialFoldWhere.png)
+
+6. Within the Query Settings pane, navigate to the **APPLIED STEPS** section and review the steps to determine if query folding has occurred.
+
+</br>
+
+## Partial Folding Guidance
+If a SQL statement has been provided, this is the **ONLY** step that can be folded. All steps after the fact will have to be performed within the Mashup Engine. Much like a [SQL injection](https://docs.microsoft.com/en-us/sql/relational-databases/security/sql-injection?view=sql-server-ver15) this is to prevent potentially dangerous or malicious code from being injected within the original SQL statement provided. To leverage a custom SQL statement and the graphical user interface (GUI) of the Power Query Editor it is recommended to store this logic behind a [view](https://docs.microsoft.com/en-us/sql/relational-databases/views/views?view=sql-server-ver15) within your database.
 
 ___
 
@@ -252,3 +270,9 @@ ___
  [30 Day Challenge: Query Folding](https://www.youtube.com/playlist?list=PLKW7XPyNDgRCorKNS1bfZoAO3YSIAVz3N)
 
 **About:** Set aside a few minutes each day for 30 days to challenge yourself and accelerate your understanding of Power Query, M and Query Folding.
+
+</br>
+
+[VSCode - Power Query Fomula Language extension](https://marketplace.visualstudio.com/items?itemName=PowerQuery.vscode-powerquery)
+
+**About:** Power Query Formula Language extension for VS Code, includes intellisense and code formating.
