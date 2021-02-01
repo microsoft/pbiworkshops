@@ -216,6 +216,7 @@ Merging or appending queries based on different sources. The use of complex logi
 1. Within the Power Query Editor select **New Source** and then **SQL Server**.
 2. Insert your **Server** address and **Database** name, leave the Data Connectivity mode set to the Import.
 3. Expand the **Advanced options** and within the **SQL statement (optional, requires database)** insert the below SQL statement and press **OK** once complete:
+    - After the preview window has displayed the truncated results, press **OK** to proceed.
 
 ```
 SELECT * 
@@ -225,17 +226,16 @@ WHERE CountryRegion = 'United States'
 
 ![SQL Statement](./Images/SQLStatement.png)
 
-4. After the preview window has displayed the truncated results, press **OK** to proceed.
-5. Leveraging the Power Query Editor add an additional **WHERE** type of condition by navigating to the **City** column, alternate selecting a row that contains the term **Dallas**, **Text Filters** and then **Equals**.
+4. Leveraging the Power Query Editor add an additional **WHERE** type of condition by navigating to the **City** column, alternate selecting a row that contains the term **Dallas**, **Text Filters** and then **Equals**.
 
 ![Partial Fold Where](./Images/PartialFoldWhere.png)
 
-6. Within the Query Settings pane, navigate to the **APPLIED STEPS** section and review the steps to determine if query folding has occurred.
+5. Within the Query Settings pane, navigate to the **APPLIED STEPS** section and review the steps to determine if query folding has occurred.
 
 </br>
 
 ## Partial Folding Guidance
-If a SQL statement has been provided, this is the **ONLY** step that can be folded. All steps after the fact will have to be performed within the Mashup Engine. Much like a [SQL injection](https://docs.microsoft.com/en-us/sql/relational-databases/security/sql-injection?view=sql-server-ver15) this is to prevent potentially dangerous or malicious code from being injected within the original SQL statement provided. To leverage a custom SQL statement and the graphical user interface (GUI) of the Power Query Editor it is recommended to store this logic behind a [view](https://docs.microsoft.com/en-us/sql/relational-databases/views/views?view=sql-server-ver15) within your database.
+If a SQL statement has been provided, this is the **ONLY** step that can be folded. All steps after the fact will have to be performed within the Mashup Engine. To leverage a custom SQL statement and the graphical user interface (GUI) of the Power Query Editor it is recommended to store this logic behind a [view](https://docs.microsoft.com/en-us/sql/relational-databases/views/views?view=sql-server-ver15) within your database.
 
 ___
 
