@@ -166,10 +166,8 @@ Date.DayOfWeek( dateTime , firstDayOfWeek )
 5. Navigate to the **Add Column** tab and select the **Conditional Column** option.
     - Noting the previous output, edit the **New column name** property to **WeekdayName** and provide the below values and outputs, press the **Add Clause** button to add new conditions.
 
-</br>
-
 | Column Name | Operator | Value | Output |
-| :--- | :----- | :----- | :----- | :----- |
+| :----- | :----- | :----- | :----- |
 | Day of Week | equals | 1 | Sunday |
 | Day of Week | equals | 2 | Monday |
 | Day of Week | equals | 3 | Tuesday |
