@@ -14,7 +14,7 @@ ___
     - [Query Optimizer](#query-optimizer)
     - [Recommended Practices](#recommended-practices)
 - [Partial Query Folding](#partial-query-folding)
-- [Foldable Techniques](#)
+- [Advanced Techniques](#advanced-techniques)
 - [Incremental Refresh](#incremental-refresh)
 - [Continue Your Journey](#continue-your-journey)
 
@@ -38,7 +38,7 @@ ___
 - Data refresh will take place efficiently for Import model tables (Power Pivot or Power BI Desktop), in terms of resource utilization and refresh duration.
 
 #### DirectQuery (and Dual storage mode):
-- Each DirectQuery (and Dual storage mode table - Power BI only) must be based on a Power Query query that can be folded.
+- Each DirectQuery (and Dual storage mode table - Power BI only) must be based on a query that can be folded.
 
 [Learn more about Connectivity Modes](https://docs.microsoft.com/en-us/power-bi/connect-data/service-dataset-modes-understand)
 
@@ -127,13 +127,81 @@ Each of these tasks is delegated to a separate component within the query proces
 
 </br>
 
-## Recommended Practices
-
-Every source system and scenario is different with a bold **"it depends"** in terms of a production ready guidance; but the following is a suggested framework when applying transformations within the Power Query Editor to structure efficient system generated SQL. The **Query Optimizer** may be more than robust enough for simple queries as demonstrated above but more complex data transformations performance issues may arise when not careful.
+## Transformations that can achieve query folding:
+Relational data source transformations that can be query folded are those that can be written as a single **SELECT** statement. A **SELECT** statement can be constructed with appropriate **WHERE**, **GROUP BY** and **JOIN** clauses. It can also contain column expressions (calculations) that use common built-in functions supported by SQL databases.
 
 </br>
 
+## Recommended Practices
+
+Every source system and scenario is different with a bold **"it depends"** in terms of production ready guidance; but the following is a suggested framework when applying transformations within the Power Query Editor to structure efficient system generated SQL. The **Query Optimizer** may be more than robust enough for simple queries as demonstrated above but with more complex data transformations performance issues may arise when not carefully constructed.
+
+</br>
+Applied Steps Order:
+</br>
+
+1. Filters and Joins
+2. Transformations
+3. Column Selection
 ___
+
+## Instructions
+
+### Power Query Editor
+
+1. Navigate to the **SalesLT.Customer** query and select the **ModifiedDate** column.
+2. While the **ModifiedDate** column is the active selection, within the ribbon select the **Add Column** tab and complete the following operations:
+    - Select the **Date** option, **Year** and then select **Year**
+    - Select the **Date** option, **Day** and then select **Name of Day**
+3. Within the Query Settings pane, navigate to the **APPLIED STEPS** section and review the steps to determine if query folding has occurred.
+
+![Day Name](./Images/DayName.png)
+</br>
+
+4. Remove the **Inserted Day Name** step, select the **ModifiedDate** column and within the ribbon select the **Add Column** tab, **Date**, **Day** and **Day of Week**.
+    - 1 is Sunday, 7 is Saturday
+
+**🏆 Challenge:** An optional firstDayOfWeek argument exists within Date.DayOfWeek function, review to determine if this property can be changed to start the week on Monday.
+
+```
+Date.DayOfWeek( dateTime , firstDayOfWeek )
+```
+
+5. Navigate to the **Add Column** tab and select the **Conditional Column** option.
+    - Noting the previous output, edit the **New column name** property to **WeekdayName** and provide the below values and outputs, press the **Add Clause** button to add new conditions.
+
+</br>
+
+| Column Name | Operator | Value | Output |
+| :--- | :----- | :----- | :----- | :----- |
+| Day of Week | equals | 1 | Sunday |
+| Day of Week | equals | 2 | Monday |
+| Day of Week | equals | 3 | Tuesday |
+| Day of Week | equals | 4 | Wednesday |
+| Day of Week | equals | 5 | Thursday |
+| Day of Week | equals | 6 | Friday |
+| Day of Week | equals | 7 | Saturday |
+
+</br>
+
+![Day Name](./Images/ConditionalColumn.png)
+
+6. Within the Query Settings pane, navigate to the **APPLIED STEPS** section and review the steps to determine if query folding has occurred.
+7. Select the top left of the **WeekdayName** column to change the any data type (ABC123) to text and review the steps to determine if query folding has occurred.
+8. To avoid the additional subquery, delete the **Changed Type** applied step and within the formula bar update the **Added Conditional Column** formula by including the optional argument "```, type text```" after the ```else null``` condition.
+
+![Day Name](./Images/ColumnType.png)
+
+9. Within the formula bar press the **Add Step** button (Fx) and insert the following formula:
+
+```
+= Table.TransformColumnNames( #"Added Conditional Column" , each Text.Combine( Splitter.SplitTextByCharacterTransition({"a".."z"},{"A".."Z"})(_) , " " ) )
+```
+
+10. Within the Query Settings pane, navigate to the **APPLIED STEPS** section and review the final step to determine if query folding has occurred.
+
+</br>
+
 
 # Partial Query Folding
 
@@ -145,30 +213,20 @@ Data sources will support different levels of query capabilities. To provide a c
 
 Merging or appending queries based on different sources. The use of complex logic that have no equivalent functions in the data source.
 
+![Partial Folding](./Images/PartialFolding.gif)
+
 </br>
 
 ## Instructions
 
 ### Power Query Editor
 
-
-
 ___
 
 
-# Query Folding Techniques
+# Advanced Techniques
 
-
-b.	From SalesLT.Customer select the following columns:
-i.	CustomerID, Title, FirstName, MiddleName, LastName, Suffix, CompanyName, EmailAddress
-c.	Filter where CompanyName contains “Bike”
-d.	Review Native Query and move Filter above the previous step
-e.	Delete Column Selection Step
-2.	Perform the following transformations against SalesLT Customer query
-a.	Add Column – [FullName] combining - [FirstName], [MiddleName], [LastName] merge columns with Space
-i.	No Fold
-ii.	Custom with if condition – folds
-iii.	Delete start over and Merge - folds
+Delete start over and Merge - folds
 b.	 [Title] - Add Conditional Column – Mr. = Male, Ms. = Female
 i.	Update to Multi-Condition
 1.	List.Contains({“Mr.”,”Sr.”}, [Title]) and List.Contains({“Ms.”, “Sra.”}, [Title])
