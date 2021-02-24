@@ -235,25 +235,78 @@ WHERE CountryRegion = 'United States'
 </br>
 
 ## Partial Folding Guidance
-If a SQL statement has been provided, this is the **ONLY** step that can be folded. All steps after the fact will have to be performed within the Mashup Engine. To leverage a custom SQL statement and the graphical user interface (GUI) of the Power Query Editor it is recommended to store this logic behind a [view](https://docs.microsoft.com/en-us/sql/relational-databases/views/views?view=sql-server-ver15) within your database.
+If a SQL statement has been provided within the initial connection, this is the **ONLY** step that can be folded. All steps after the fact will have to be performed within the Mashup Engine. It is recommended (though not required) to store the logic of a custom SQL statement behind a [view](https://docs.microsoft.com/en-us/sql/relational-databases/views/views?view=sql-server-ver15) within your database in order to provide a seamless experience when used in combination with the graphical user interface (GUI) of the Power Query Editor.
+
+</br>
 
 ___
 
 
 # Advanced Techniques
 
-Delete start over and Merge - folds
-b.	 [Title] - Add Conditional Column – Mr. = Male, Ms. = Female
-i.	Update to Multi-Condition
-1.	List.Contains({“Mr.”,”Sr.”}, [Title]) and List.Contains({“Ms.”, “Sra.”}, [Title])
-3.	From the column SalesLT.CustomerAddress Expand SalesLT.Address and select columns AddressLine1 thru PostalCode
-i.	Filter for CountryRegion = “United States”
-ii.	Select Columns:
-1.	CustomerID, Title, FirstName, MiddleName, LastName, CompanyName, EmailAddress, City, StateProvince, PostalCode
-iii.	Group By all column headers to find distinct values, = Table.Group( Step, ColumnNames, {} )
-b.	Replace Text for [CountryRegion] from “United States” to “USA”
-i.	View Native Query now greyed out
-c.	Update column names by creating a custom function for Text.Combine(Splitter.SplityByCharacterTextTransition()(_), “ “)
+### Combining Native SQL with the Power Query interface, using the Power Query M formula language.
+</br>
+
+1. Within the Power Query Editor select **New Source** and then **SQL Server**.
+2. Insert your **Server** address and leave the Data Connectivity mode set to the Import.
+3. Alternate click the database name **AdventureWorksLT** (or as it appears on your machine) and select **Transform Data**.
+
+
+![Transform Database](./Images/TransformDatabase.png)
+
+
+4. Within the formula bar press the **Add Step** button (Fx) and insert the following Power Query M formula:
+
+```
+= Value.NativeQuery( Source, "SELECT * FROM SalesLT.Address WHERE CountryRegion = 'United States'", null , [EnableFolding=true] )
+```
+
+5. Leveraging the Power Query Editor add an additional **WHERE** type of condition by navigating to the **City** column, alternate selecting a row that contains the term **Dallas**, **Text Filters** and then **Equals**.
+
+![Partial Fold Where](./Images/PartialFoldWhere.png)
+
+6. Within the Query Settings pane, navigate to the **APPLIED STEPS** section and review the steps to determine if query folding has occurred.
+
+____
+
+</br>
+
+### Creating an IN condition
+</br>
+
+1. Within the Power Query Editor select **New Source** and then **SQL Server**.
+2. Insert your **Server** address and leave the Data Connectivity mode set to the Import.
+3. Navigate to the **SalesLT.Customer** query
+4. Navigate to the **Add Column** tab and select the **Conditional Column** option.
+    - Edit the **New column name** property to **Gender** and provide the below values and outputs, press the **Add Clause** button to add new conditions. For the **Else** condition use the value **Unknown**
+
+</br>
+
+| Column Name | Operator | Value | Output |
+| :----- | :----- | :----- | :----- |
+| Title | equals | Mr. | Male |
+| Title | equals | Sr. | Male |
+| Title | equals | Ms. | Female |
+| Title | equals | Sra. | Female |
+
+</br>
+
+5. Within the Query Settings pane, navigate to the **APPLIED STEPS** section and review the steps to determine if query folding has occurred.
+6. Within the formula bar edit the current formula using the [**List.Contains**](https://docs.microsoft.com/en-us/powerquery-m/list-contains) function, [ignore the case sensitivity](https://docs.microsoft.com/en-us/powerquery-m/comparer-functions) and declare the column type:
+
+```
+= Table.AddColumn(SalesLT_Customer, "Gender", each if List.Contains({"Mr.", "Sr."}, [Title], Comparer.OrdinalIgnoreCase ) then "Male" else if List.Contains({"Sra.", "Ms."} , [Title] , Comparer.OrdinalIgnoreCase ) then "Female" else "Unknown", type text)
+```
+7. Within the Query Settings pane, navigate to the **APPLIED STEPS** section and review the steps to determine if query folding has occurred.
+
+____
+
+</br>
+
+### Joinining Tables
+</br>
+
+
 
 ___
 
