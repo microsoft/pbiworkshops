@@ -187,9 +187,8 @@ Within ALM Toolkit modelers can Create, Update, Delete or Skip items that are in
         2. Alternate select the table name and select **New Measure** to create the following measures that will **need to be properly tested** before publishing.
             1. ```Total Quantity = SUM('Sales Order Lines'[Quantity])```
             2. ```Total Quantity MTD = TOTALMTD([Total Quantity], 'Calendar'[Date])```
-        3. Select the **Total Unit Price** measure and correct the following DAX expression and set the **Format** property to **Currency**.
-    
-            ```Total Unit Price = SUMX('Sales Order Lines', [Quantity] * [Unit Price])```
+            3. ```Total Quantity YTD = TOTALYTD([Total Quantity], 'Calendar'[Date])```
+        3. Select the **Total Unit Price** measure and set the **Format** property to **Currency**.
 
 ![DAX Measure](./Images/DAX_Measure.png)
 
@@ -210,8 +209,9 @@ Within ALM Toolkit modelers can Create, Update, Delete or Skip items that are in
         1. Source Name **Total Unit Price**
         2. Source Name **Total Quantity**
         3. Source Name **Total Quantity MTD**
+        4. Source Name **Total Quantity YTD**
         
-5. Select the Source Name **Total Quantity** and **Total Quantity MTD** by holding Shift to multi-select, alternate select and choose the **Skip selected objects** option to change the **Action** to **Skip**.
+5. Select the Source Name **Total Quantity MTD** and **Total Quantity YTD** by holding Shift to multi-select, alternate select and choose the **Skip selected objects** option to change the **Action** to **Skip**.
         
 ![Comparison](./Images/SkipObjects.png)
 
