@@ -12,6 +12,7 @@ Website: http://alm-toolkit.com/
 ___
 
 # Prerequisites
+### [Optional: Guided Video](https://www.youtube.com/watch?v=3zUxw7djcl0&list=PLKW7XPyNDgRBUS2djT4aBVyC7OzeZ9WZM&index=1)
 
 For this workshop a **Power BI Pro** license is required for publishing and a workspace backed by either **Premium Capacity** or **Premium Per User** with XMLA endpoints enabled.
 
@@ -33,6 +34,7 @@ ___
 # Setup
 
 ## Instructions
+### [Optional: Guided Video](https://www.youtube.com/watch?v=3zUxw7djcl0&list=PLKW7XPyNDgRBUS2djT4aBVyC7OzeZ9WZM&index=2)
 
 ### Power BI Desktop [Only applicable to July and August 2020 Versions]
 1. Ensure the Power BI preview feature [Store datasets using enhanced metadata format](https://docs.microsoft.com/en-us/power-bi/connect-data/desktop-enhanced-dataset-metadata) is enabled.
@@ -89,6 +91,7 @@ From a logical perspective, all tabular objects form a tree, the root of which i
 ___
 
 # Comparison
+### [Optional: Guided Video](https://www.youtube.com/watch?v=3zUxw7djcl0&list=PLKW7XPyNDgRBUS2djT4aBVyC7OzeZ9WZM&index=3)
 
 Deployment of tabular models normally employs an all-or-nothing (**Power BI Desktop - Publish to Web**), or partial-metadata deployment strategy. With ALM Toolkit modelers can compare tabular object differences and perform merging across models that are in development (**Source**) to their intended destination (**Target**) supporthing both approaches.
 
@@ -151,6 +154,7 @@ model. **Currently not all properties are supported within Power BI Desktop for 
 ___
 
 # Actions
+### [Optional: Guided Video](https://www.youtube.com/watch?v=3zUxw7djcl0&list=PLKW7XPyNDgRBUS2djT4aBVyC7OzeZ9WZM&index=4)
 
 Within ALM Toolkit modelers can Create, Update, Delete or Skip items that are in development (**Source**) before deploying changes to their intended destination (**Target**).
 
