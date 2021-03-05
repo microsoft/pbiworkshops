@@ -1,0 +1,45 @@
+ProductSubcategoryKey,Subcategory Code,Subcategory,ProductCategoryKey
+1,"0101","MP4&MP3",1
+2,"0102","Recorder",1
+3,"0103","Radio",1
+4,"0104","Recording Pen",1
+5,"0105","Headphones",1
+6,"0106","Bluetooth Headphones",1
+7,"0107","Speakers",1
+8,"0108","Audio Accessories",1
+9,"0201","Televisions",2
+10,"0202","VCD & DVD",2
+11,"0203","Home Theater System",2
+13,"0205","Car Video",2
+14,"0206","TV & Video Accessories",2
+15,"0301","Laptops",3
+16,"0302","Netbooks",3
+17,"0303","Desktops",3
+18,"0304","Monitors",3
+19,"0305","Projectors & Screens",3
+20,"0306","Printers, Scanners & Fax",3
+21,"0307","Computer Setup & Service",3
+22,"0308","Computers Accessories",3
+23,"0401","Digital Cameras",4
+24,"0402","Digital SLR Cameras",4
+25,"0403","Film Cameras",4
+27,"0405","Camcorders",4
+28,"0406","Cameras & Camcorders Accessories",4
+29,"0501","Home & Office Phones",5
+31,"0503","Touch Screen Phones",5
+32,"0504","Smart phones & PDAs",5
+33,"0505","Cell phones Accessories",5
+34,"0601","Music CD",6
+35,"0602","Movie DVD",6
+36,"0603","Audio Books",6
+38,"0701","Boxed Games",7
+39,"0702","Download Games",7
+40,"0703","Games Accessories",7
+41,"0801","Washers & Dryers",8
+42,"0802","Refrigerators",8
+43,"0803","Microwaves",8
+44,"0804","Water Heaters",8
+45,"0805","Coffee Machines",8
+46,"0806","Lamps",8
+47,"0807","Air Conditioners",8
+48,"0808","Fans",8
