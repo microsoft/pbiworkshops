@@ -8,7 +8,7 @@ ___
 
 **Follow Along:**
 - [Download and install DAX Studio](https://daxstudio.org/)
-- [Download and open the Sales Demo PBIX File](https://github.com/microsoft/pbiworkshops/raw/main/Tabular%20Editor%20In%20An%20Hour/Sales%20Demo.pbix)
+- [Download and open the Contoso PBIX File](https://github.com/microsoft/pbiworkshops/raw/main/Tabular%20Editor%20In%20An%20Hour/Contoso.pbix)
 
 ___
 
