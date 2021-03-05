@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-﻿CurrencyKey,Currency Code,Currency
+CurrencyKey,Currency Code,Currency
 1,USD,US Dollar
 2,AMD,Armenian Dram
 3,AUD,Australian Dollar
@@ -27,34 +26,4 @@
 25,IRR,Iranian Rial
 26,SYP,Syrian Pound
 27,TMM,Turkmenistan Manat
-=======
-﻿CurrencyKey,Currency Code,Currency
-1,USD,US Dollar
-2,AMD,Armenian Dram
-3,AUD,Australian Dollar
-4,THB,Thai Baht
-5,CAD,Canadian Dollar
-6,DKK,Danish Krone
-7,EUR,EURO
-8,HKD,Hong Kong Dollar
-9,INR,Indian Rupee
-10,ROL,Romanian Leu
-11,MTL,Maltese Lira
-12,TWD,Taiwan Dollar
-13,BTN,Bhutan Ngultrum
-14,PKR,Pakistan Rupee
-15,RUB,Russian Ruble
-16,SGD,Singapore Dollar
-17,SEK,Swedish Krona
-18,CHF,Swiss Franc
-19,SIT,Slovenian Tolar
-20,GBP,British Pound
-21,KRW,South Korean Won
-22,JPY,Japanese Yen
-23,CNY,Renminbi Yuan
-24,PLN,Polish Zloty
-25,IRR,Iranian Rial
-26,SYP,Syrian Pound
-27,TMM,Turkmenistan Manat
->>>>>>> 45ac9ab8d0c8237bd665eb2fcf5608d00e505d37
 28,KGS,Som
