@@ -8,7 +8,7 @@ ___
 
 **Follow Along:**
 - [Download and install DAX Studio](https://daxstudio.org/)
-- [Download and open the Sales Demo PBIX File](https://github.com/microsoft/pbiworkshops/raw/main/Tabular%20Editor%20In%20An%20Hour/Sales%20Demo.pbix)
+- [Download and open the Contoso PBIX File](https://github.com/microsoft/pbiworkshops/raw/main/Tabular%20Editor%20In%20An%20Hour/Contoso.pbix)
 
 ___
 
@@ -35,7 +35,7 @@ ___
 2. Navigate to the **File** menu and select Options and Settings and then **Options**.
 3. Navigate to **Preview features** and enable **Store datasets using enhanced metadata format**.
 
-### DAX Studio
+### DAX Studio [Optional]
 1. Open **DAX Studio**.
 2. Navigate to the File menu and select Options
 3. Within the **Standard** tab, in the **Defaults** group, enable the setting: **Set 'Clear Cache and Run' as the default**
@@ -80,14 +80,14 @@ In the query Editor section enter the below DAX queries and review their output 
 **DAX Query**
 ```
 EVALUATE
-Customers
+Customer
 ```
 **SQL Equivalent**
 
 ```
--- Select all from the customers table
+-- Select all from the customer table
 SELECT * 
-FROM Customers;
+FROM Customer;
 ```
 
 ![Editor Results](./Images/EditorResults.png)
@@ -99,14 +99,14 @@ ___
 **DAX Query**
 ```
 EVALUATE
-FILTER ( Customers, Customers[StateProvinceCode] = "IL" )
+FILTER( 'Customer', 'Customer'[State] = "Washington" )
 ```
 **SQL Equivalent**
 ```
--- Select all from the Customers table where the StateProvinceCode equals IL
+-- Select all from the Customers table where the State equals Washington
 SELECT * 
-FROM Customers 
-WHERE StateProvinceCode = 'IL';
+FROM Customer 
+WHERE State = 'Washington';
 ```
 ___
 
@@ -115,13 +115,13 @@ ___
 **DAX Query**
 ```
 EVALUATE
-COUNTROWS( Customers )
+COUNTROWS( Customer )
 ```
 **SQL Equivalent**
 ```
 -- Count all from the Customers table.
 SELECT COUNT(*)
-FROM Customers;
+FROM Customer;
 ```
 - Review the following error in the **Output**.
 ![Table Error](./Images/TableError.png)
@@ -129,7 +129,7 @@ FROM Customers;
 - Update the above expression to store the returned results in a single column table (list) using curly brackets.
 ```
 EVALUATE
-{ COUNTROWS( Customers ) }
+{ COUNTROWS( Customer ) }
 ```
 ___
 
@@ -150,19 +150,19 @@ In the query Editor section enter the below DAX queries and review their output 
 **Description:** Enter the below expression to return the average unit price from the Sales Order Lines table:
 ```
 EVALUATE
-{ AVERAGE ( 'Sales Order Lines'[Unit Price] ) }
+{ AVERAGE ( 'Sales'[Unit Price] ) }
 ```
 - Update the statement to provide a column name for the returned value.
 ```
 EVALUATE
-ROW ("Average Unit Price", AVERAGE ( 'Sales Order Lines'[Unit Price] ) )
+ROW ("Average Unit Price", AVERAGE ( 'Sales'[Unit Price] ) )
 ```
 
 **Description:** Enter the below expression to return the count of orders by CustomerID 841.
 
 ```
 EVALUATE
-{ CALCULATE ( COUNTROWS ( Orders[OrderID] ), Customers[CustomerID] = 841 ) }
+{ CALCULATE ( COUNTA ( Sales[StoreKey] ), Sales[StoreKey] = 199 ) }
 ```
 🏆 **Challenge:** Update the above statement to improve performance.
 
@@ -177,8 +177,8 @@ CALCULATE(«Expression»,«Filter»)
 EVALUATE
 FILTER (
     ADDCOLUMNS (
-        'Calendar',
-        "Total Unit Price", SUM ( 'Sales Order Lines'[Unit Price] )
+        VALUES('Date'[Date]),
+        "Total Unit Price", SUM ( 'Sales'[Unit Price] )
     ),
     [Total Unit Price] > 0
 )
@@ -196,18 +196,20 @@ ___
 
 | Table | Object |
 | :------------- | :---------- |
-| Calendar | Date |
-| Sales Order Lines   | Total Unit Price |
+| Date | Date |
+| Sales   | Total Unit Price |
 
 
 3. Expand the following tables and drag the fields/measures into the **Filters** group in the **Builder**.
 
 
-| Table | Object | Comparison Operator | Value  |
-| :------------- | :---------- | :---------- | :---------- |
-| Calendar | Date | >= | 1/1/2016 |
+| Table | Object | Comparison Operator | Start  | End |
+| :------------- | :---------- | :---------- | :---------- | :---------- |
+| Calendar | Date | Between | 2/1/2007 | 2/28/2007 |
 
 4. Select the **➕New** button and enter the measure name **Total Quantity**, the below measure and press **OK** when complete.
+
+![Query Builder](./Images/QueryBuilderNewMeasure.png)
 
 ```
 SUM ( 'Sales Order Lines'[Quantity] )
@@ -218,21 +220,21 @@ SUM ( 'Sales Order Lines'[Quantity] )
 ![Query Builder](./Images/QueryBuilder.png)
 
 6. Press **Edit Query** to view the generated query.
-7. Update the query by adding a **Filter** where the **[Total Quantity] > 16000** as displayed below.
+7. Update the query by adding a **Filter** where the **[Total Quantity] > 1300** as displayed below.
 
 ```
- 1 // START QUERY BUILDER
- 2 DEFINE
- 3 MEASURE 'Calendar'[Total Quantity] = SUM ( 'Sales Order Lines'[Quantity] )
- 4 EVALUATE
- 5 FILTER(
- 6 SUMMARIZECOLUMNS(
- 7     'Calendar'[Date],
- 8     FILTER(KEEPFILTERS(VALUES( 'Calendar'[Date] )), 'Calendar'[Date] >= DATE(2016,1,1)),
- 9     "Total Unit Price", [Total Unit Price],
-10     "Total Quantity", [Total Quantity]
-11 ), [Total Quantity] > 16000)
-12 // END QUERY BUILDER
+1 /* START QUERY BUILDER */
+2 DEFINE
+3 MEASURE Sales[Total Quantity] = 	SUM(Sales[Quantity])
+4 EVALUATE
+5 FILTER(
+6 SUMMARIZECOLUMNS(
+7    'Date'[Date],
+8    KEEPFILTERS( FILTER( ALL( 'Date'[Date] ), 'Date'[Date] >= DATE(2007,2,1) && 'Date'[Date] <= DATE(2007,2,28) )),
+9    "Total Unit Price", [Total Unit Price],
+10    "Total Quantity", [Total Quantity]
+11 ), [Total Quantity] > 1300 )
+12 /* END QUERY BUILDER */
 ```
 8. Press the **Format Query** option.
 
