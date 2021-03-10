@@ -39,7 +39,6 @@ ___
 1. Open **DAX Studio**.
 2. Navigate to the File menu and select Options
 3. Within the **Standard** tab, in the **Defaults** group, enable the setting: **Set 'Clear Cache and Run' as the default**
-3. Within the **Advanced** tab, in the **Preview Features** group, enable the settings: **Show External Tools**, **Show Query Builder Button**, and **Show Benchmark Button**.
 4. Close **DAX Studio**
 
 ![Clear Cache](./Images/ClearCache.png)
@@ -63,12 +62,17 @@ With DAX queries, you can query and return data defined by a table expression. R
 
 [Learn More About DAX Queries](https://docs.microsoft.com/en-us/dax/dax-queries)
 
+</br>
+
 ### Objective: Return tables, single column table (list) and scalar values.
+</br>
 
 ## Instructions
-### [Optional: Guided Video]()
 ### Power BI Desktop
-1. Open the Sales Demo (PBIX) file, navigate to the **External Tools** ribbon in Power BI Desktop and select **DAX Studio**.
+1. Open the Contoso (PBIX) file, navigate to the **External Tools** ribbon in Power BI Desktop and select **DAX Studio**.
+
+### DAX.do
+1. Navigate to the website [DAX.do](https://dax.do).
 
 ### DAX Studio
 In the query Editor section enter the below DAX queries and review their output in the **Results** section (as displayed below), after pressing the **Run** button.
@@ -140,10 +144,9 @@ DAX formulas are used in measures, calculated columns, calculated tables, and ro
 [Learn More About DAX Formulas](https://docs.microsoft.com/en-us/dax/dax-overview)
 
 ### Objective: Aggregate data by writing DAX formulas and the graphical user interface of Query Builder.
+</br>
 
 ## Instructions
-### [Optional: Guided Video]()
-
 ### DAX Studio
 In the query Editor section enter the below DAX queries and review their output in the **Results** section, after pressing the **Run** button.
 
@@ -158,54 +161,135 @@ EVALUATE
 ROW ("Average Unit Price", AVERAGE ( 'Sales'[Unit Price] ) )
 ```
 
-**Description:** Enter the below expression to return the count of orders by CustomerID 841.
+### 🏆 DAX Challenge
+
+**Description:** Update the below statement to improve performance.
 
 ```
 EVALUATE
-{ CALCULATE ( COUNTA ( Sales[StoreKey] ), Sales[StoreKey] = 199 ) }
+{ CALCULATE ( COUNT ( Sales[StoreKey] ), Sales[StoreKey] = 199 ) }
 ```
-🏆 **Challenge:** Update the above statement to improve performance.
-
 [Learn More About Using COUNTROWS instead of COUNT](https://docs.microsoft.com/en-us/power-bi/guidance/dax-countrows)
 
-- The CALCULATE function has both an expression and filter.
+___
+
+</br>
+
+**Description:** Using variables, debug the total count of Sales by StoreKey in 306 and 307.
+
+#### Important Note: For commenting within DAX:
+</br>
+
+| Comment | Characters |
+| :------------- | :---------- |
+| Multi line | /* */ |
+| Singe line | -- |
+| Singe line | // |
+
+</br>
+
+```
+EVALUATE
+VAR _StoreKeys = {306, 307}
+VAR _NorthEastSales = CALCULATETABLE( Sales , Sales[StoreKey] IN _StoreKeys )
+VAR _CountOfSales = ROW( "Total Northeast Sales" , COUNTROWS ( _NorthEastSales ) )
+RETURN
+-- _NorthEastSales
+-- _CountOfSales
+```
+
+### ⭐ Most Important DAX function: **CALCULATE**
+
+Evaluates an expression in a modified filter context.
+
 CALCULATE(«Expression»,«Filter»)
 
-**Description:** Enter the below query to return the Total Unit Price from the Sales Order Lines table for each row in the Calendar table's Date column where the Total Unit Price is greater than zero:
+[Microsoft Docs - CALCULATE](https://docs.microsoft.com/en-us/dax/calculate-function-dax)
+
+</br>
+
+"The CALCULATE function in DAX is the magic key..." - Marco Russo
+
+[SQLBI - How Calculate works in DAX](https://www.sqlbi.com/blog/marco/2010/01/03/how-calculate-works-in-dax/)
+
+</br>
+
+### Power BI Desktop
+1. Open the Contoso (PBIX) file and navigate to the Sales table, add a **New Measure** from the example below, leveraging the CALCULATE function to return the [# Quantity] by StoreKey in 306, 307.
+
+```
+Northeast # Quantity = 
+VAR _StoreKey = {306, 307}
+VAR _Result = CALCULATE( [# Quantity], Sales[StoreKey] IN _StoreKey )
+RETURN
+_Result
+```
+
+2. Create a **Table** visual on the Power BI report page and include the fields Customers Name, Northeast Quantity and # Quantity. 
+
+### DAX.Do [Optional]
+
+**Description:** Enter the below expression to return the [# Quantity] by StoreKey in 306, 307.
+
+```
+EVALUATE
+VAR _StoreKey = {306, 307}
+VAR _Result = CALCULATE( [# Quantity] , Sales[StoreKey] IN _StoreKey )
+RETURN
+{ _Result }
+```
+
+</br>
+
+### 🏆 DAX Challenge
+
+**Description:** Return the Total Unit Price from the Sales table for each row in the Date table's Date column where the Total Unit Price is greater than zero based on the current row __context__.
 
 ```
 EVALUATE
 FILTER (
     ADDCOLUMNS (
-        VALUES('Date'[Date]),
-        "Total Unit Price", SUM ( 'Sales'[Unit Price] )
+        VALUES ( 'Date'[Date] ),
+        "Total Unit Price", SUM ( Sales[Unit Price] )
     ),
     [Total Unit Price] > 0
 )
 ```
-🏆 **Challenge:** Update the above statement to provide the correct results based on the calendar tables current row __context__.
 
 [Learn More About Extension Columns](https://www.sqlbi.com/articles/best-practices-using-summarize-and-addcolumns/)
 ___
 
 # Query Builder
 
+The query builder provides a drag and drop interface for building queries against your data model.
+
+[Learn More](https://daxstudio.org/documentation/features/query-builder/)
+
+</br>
+
+### Objective: Leverage the Query Builder inteface to return a summarized table between the selected time frame.
+</br>
+
+## Instructions
+### DAX Studio
 1. From the **Home** tab select **Query Builder**.
 2. Expand the following tables and drag the fields/measures into the **Columns/Measures** group in the **Builder**.
 
 
-| Table | Object |
-| :------------- | :---------- |
-| Date | Date |
-| Sales   | Total Unit Price |
-
+    | Table | Object |
+    | :------------- | :---------- |
+    | Date | Date |
+    | Sales   | Total Unit Price |
+    
+</br>
 
 3. Expand the following tables and drag the fields/measures into the **Filters** group in the **Builder**.
 
+    | Table | Object | Comparison Operator | Start  | End |
+    | :------------- | :---------- | :---------- | :---------- | :---------- |
+    | Date | Date | Between | 2/1/2007 | 2/28/2007 |
 
-| Table | Object | Comparison Operator | Start  | End |
-| :------------- | :---------- | :---------- | :---------- | :---------- |
-| Calendar | Date | Between | 2/1/2007 | 2/28/2007 |
+</br>
 
 4. Select the **➕New** button and enter the measure name **Total Quantity**, the below measure and press **OK** when complete.
 
@@ -220,24 +304,36 @@ SUM ( 'Sales Order Lines'[Quantity] )
 ![Query Builder](./Images/QueryBuilder.png)
 
 6. Press **Edit Query** to view the generated query.
-7. Update the query by adding a **Filter** where the **[Total Quantity] > 1300** as displayed below.
+7. Press the **Format Query** option.
+
+</br>
+
+### 🏆 DAX Challenge
+
+1. Update the query by adding a **Filter** where the **[Total Quantity] > 1300**.
+
+Result displayed below.
 
 ```
-1 /* START QUERY BUILDER */
-2 DEFINE
-3 MEASURE Sales[Total Quantity] = 	SUM(Sales[Quantity])
-4 EVALUATE
-5 FILTER(
-6 SUMMARIZECOLUMNS(
-7    'Date'[Date],
-8    KEEPFILTERS( FILTER( ALL( 'Date'[Date] ), 'Date'[Date] >= DATE(2007,2,1) && 'Date'[Date] <= DATE(2007,2,28) )),
-9    "Total Unit Price", [Total Unit Price],
-10    "Total Quantity", [Total Quantity]
-11 ), [Total Quantity] > 1300 )
-12 /* END QUERY BUILDER */
+/* START QUERY BUILDER */
+DEFINE
+    MEASURE Sales[Total Unit Price] =
+        SUM ( Sales[Unit Price] )
+EVALUATE
+SUMMARIZECOLUMNS (
+    'Date'[Date],
+    KEEPFILTERS (
+        FILTER (
+            ALL ( 'Date'[Date] ),
+            'Date'[Date] >= DATE ( 2007, 2, 1 )
+                && 'Date'[Date] <= DATE ( 2007, 2, 28 )
+        )
+    ),
+    "Total Unit Price", [Total Unit Price],
+    "# Quantity", [# Quantity]
+)
+/* END QUERY BUILDER */
 ```
-8. Press the **Format Query** option.
-
 ___
 
 # Server Timings
@@ -259,10 +355,12 @@ Before considering how to monitor query performance for in-memory tabular models
 
 The above excerpt is from [Exam Ref 70-768 Developing SQL Data Models](https://www.microsoftpressstore.com/store/exam-ref-70-768-developing-sql-data-models-9781509305155) authored by [Stacia Varga](http://blog.datainspirations.com/)
 
-### Objective: 
+</br>
+
+### Objective: Optimize the current DAX statement to remove the CallbackDataID and run performance benchmarks.
+</br>
 
 ## Instructions
-### [Optional: Guided Video]()
 
 ### DAX Studio
 1. From the **Home** tab select **Server Timings**.
@@ -273,7 +371,7 @@ The above excerpt is from [Exam Ref 70-768 Developing SQL Data Models](https://w
 
 ```
 EVALUATE
-FILTER ( Customers, NOT ISEMPTY ( RELATEDTABLE ( 'Customer Transactions' ) ) )
+{ COUNTROWS ( FILTER ( Customer, NOT ISEMPTY ( RELATEDTABLE ( 'Sales' ) ) ) ) }
 ```
 
 ![CallbackDataID](./Images/CallbackDataID.png)
@@ -284,14 +382,26 @@ FILTER ( Customers, NOT ISEMPTY ( RELATEDTABLE ( 'Customer Transactions' ) ) )
 
 ```
 EVALUATE
-CALCULATETABLE ( Customers, 'Customer Transactions' )
+{ COUNTROWS( CALCULATETABLE ( Customer, Sales ) ) }
 ```
 
+5. Navigate to the **Advanced** tab and with your query highlighted press the **Run Benchmark** button to test the performance of your query multiple times. Review the benchmark outputs of the query perforamnce in both a cold and warm cache state.
+
+<br/>
+
 [Learn More About Server Timings](https://daxstudio.org/documentation/features/server-timings-trace/)
+
+[Learn more about Query Benchmark](https://darren.gosbell.com/2020/06/dax-studio-2-11-0-released/)
+
+<br/>
 
 ___
 
 # VertiPaq Analyzer
+
+VertiPaq Analyzer is useful to analyze VertiPaq storage structures for a data model in Power BI and Analysis Services Tabular.
+
+[Learn More about VertiPaq Analyzer](https://www.sqlbi.com/tools/vertipaq-analyzer/)
 
 
 
@@ -299,8 +409,32 @@ ___
 
 # Continue Your Journey
 
+### Use DAX in Power BI Desktop
+This learning path introduces Data Analysis Expressions (DAX) and provides you with foundational skills required to enhance data models with calculations.
+
+Source: [Microsoft Learn](https://docs.microsoft.com/en-us/learn/paths/dax-power-bi/)
+
+Includes:
+- Describe Power BI Desktop models
+- Write DAX formulas
+- Add calculated tables and columns
+- Add measures
+- Use DAX iterator functions
+- Modify DAX filter context
+- Use DAX time intelligence functions
+
+</br>
+
+### DAX Tools Video Course
+
+The DAX Tools video course teaches how to use three popular tools to write and optimize DAX: DAX Studio, VertiPaq Analyzer, and Analyze in Excel for Power BI Desktop. All these tools are free and open-source.
+
+Source: [SQLBI](https://www.sqlbi.com/p/dax-tools-video-course/)
+
+</br>
+
 ### An indepth walk through of DAX Studio
-[PowerBI.Tips - Introduction to DAX Studio Playlist](https://www.youtube.com/watch?v=jpZnCHRauPU&list=PLn1m_aBmgsbGDZb7ydd8_LS1AfosdRndQ)
+Source: [PowerBI.Tips - Introduction to DAX Studio Playlist](https://www.youtube.com/watch?v=jpZnCHRauPU&list=PLn1m_aBmgsbGDZb7ydd8_LS1AfosdRndQ)
 
 Includes:
 - Introduction to DAX Studio (1:00:44)
