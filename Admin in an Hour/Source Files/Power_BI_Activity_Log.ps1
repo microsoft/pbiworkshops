@@ -2,9 +2,12 @@
     Refer to examples for using ServicePrincipal in the MS Docs:
     https://docs.microsoft.com/en-us/powershell/module/MicrosoftPowerBIMgmt.Profile/Connect-PowerBIServiceAccount?view=powerbi-ps
     
-    Read only apis for service principal authentication in Power BI
+    Read only apis for service principal authentication in Power BI:
     ! IMPORTANT ! - Make sure there are no Power BI admin-consent-required permissions set on this application.
     https://docs.microsoft.com/en-us/power-bi/admin/read-only-apis-service-principal-authentication
+
+    Available operations in the Audit and Activity Logs:
+    https://docs.microsoft.com/en-us/power-bi/admin/service-admin-auditing#operations-available-in-the-audit-and-activity-logs
     
 #>
 
