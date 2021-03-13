@@ -37,7 +37,7 @@ ___
 
 ### DAX Studio [Optional]
 1. Open **DAX Studio**.
-2. Navigate to the File menu and select Options
+2. Navigate to the **File** menu and select **Options**
 3. Within the **Standard** tab, in the **Defaults** group, enable the setting: **Set 'Clear Cache and Run' as the default**
 4. Close **DAX Studio**
 
@@ -71,11 +71,11 @@ With DAX queries, you can query and return data defined by a table expression. R
 ### Power BI Desktop
 1. Open the Contoso (PBIX) file, navigate to the **External Tools** ribbon in Power BI Desktop and select **DAX Studio**.
 
-### DAX.do
+### DAX.do [Optional]
 1. Navigate to the website [DAX.do](https://dax.do).
 
 ### DAX Studio
-In the query Editor section enter the below DAX queries and review their output in the **Results** section (as displayed below), after pressing the **Run** button.
+In the query Editor section enter the below DAX queries and review the output in the **Results** section (as displayed below), after pressing the **Run** button.
 
 **⭐ Pro Tip:** F5
 
@@ -112,6 +112,30 @@ SELECT *
 FROM Customer 
 WHERE State = 'Washington';
 ```
+
+### 🏆 DAX Challenge
+
+**Description:** Update the below statement to return only the names that are not blank.
+
+**DAX Query**
+```
+SELECTCOLUMNS (
+        Customer,
+        "Name", Customer[Company Name],
+        "Code", Customer[Customer Code]
+    )
+```
+
+**SQL Equivalent**
+```
+-- Select and alias the Company Name and Customer Code from the Customer table where the Name is not null
+SELECT 
+CompanyName As "Name",
+CustomerCode As "Code"
+FROM Customer 
+WHERE CompanyName IS NOT NULL;
+```
+
 ___
 
 # Scalar Value
@@ -153,12 +177,12 @@ In the query Editor section enter the below DAX queries and review their output 
 **Description:** Enter the below expression to return the average unit price from the Sales Order Lines table:
 ```
 EVALUATE
-{ AVERAGE ( 'Sales'[Unit Price] ) }
+{ AVERAGE ( Sales[Unit Price] ) }
 ```
 - Update the statement to provide a column name for the returned value.
 ```
 EVALUATE
-ROW ("Average Unit Price", AVERAGE ( 'Sales'[Unit Price] ) )
+ROW ("Average Unit Price", AVERAGE ( Sales[Unit Price] ) )
 ```
 
 ### 🏆 DAX Challenge
@@ -170,6 +194,14 @@ EVALUATE
 { CALCULATE ( COUNT ( Sales[StoreKey] ), Sales[StoreKey] = 199 ) }
 ```
 [Learn More About Using COUNTROWS instead of COUNT](https://docs.microsoft.com/en-us/power-bi/guidance/dax-countrows)
+
+</br>
+
+### 🏆 DAX Challenge
+
+**Description:** Return a table with all the StoreKey equal to 199 from the Sales table.
+
+</br>
 
 ___
 
@@ -194,11 +226,14 @@ VAR _StoreKeys = {306, 307}
 VAR _NorthEastSales = CALCULATETABLE( Sales , Sales[StoreKey] IN _StoreKeys )
 VAR _CountOfSales = ROW( "Total Northeast Sales" , COUNTROWS ( _NorthEastSales ) )
 RETURN
+-- _StoreKeys
 -- _NorthEastSales
 -- _CountOfSales
 ```
 
-### ⭐ Most Important DAX function: **CALCULATE**
+</br>
+
+### 🤚 Most Important DAX function: **CALCULATE** 🤚
 
 Evaluates an expression in a modified filter context.
 
@@ -215,7 +250,7 @@ CALCULATE(«Expression»,«Filter»)
 </br>
 
 ### Power BI Desktop
-1. Open the Contoso (PBIX) file and navigate to the Sales table, add a **New Measure** from the example below, leveraging the CALCULATE function to return the [# Quantity] by StoreKey in 306, 307.
+1. Within the Contoso (PBIX) file in Power BI Desktop and navigate to the Sales table, add a **New Measure** from the example below, leveraging the CALCULATE function to return the [# Quantity] by StoreKey in 306, 307.
 
 ```
 Northeast # Quantity = 
@@ -225,25 +260,13 @@ RETURN
 _Result
 ```
 
-2. Create a **Table** visual on the Power BI report page and include the fields Customers Name, Northeast Quantity and # Quantity. 
-
-### DAX.Do [Optional]
-
-**Description:** Enter the below expression to return the [# Quantity] by StoreKey in 306, 307.
-
-```
-EVALUATE
-VAR _StoreKey = {306, 307}
-VAR _Result = CALCULATE( [# Quantity] , Sales[StoreKey] IN _StoreKey )
-RETURN
-{ _Result }
-```
+2. Create a **Table** visual on the Power BI report page and include the fields Company Name, Northeast # Quantity and # Quantity.
 
 </br>
 
 ### 🏆 DAX Challenge
 
-**Description:** Return the Total Unit Price from the Sales table for each row in the Date table's Date column where the Total Unit Price is greater than zero based on the current row __context__.
+**Description:** Return the Total Unit Price from the Sales table for each row in the Date table's Date column where the Total Unit Price is greater than zero based on the current row **context**.
 
 ```
 EVALUATE
@@ -334,6 +357,8 @@ SUMMARIZECOLUMNS (
 )
 /* END QUERY BUILDER */
 ```
+</br>
+
 ___
 
 # Server Timings
@@ -347,7 +372,7 @@ Before considering how to monitor query performance for in-memory tabular models
 
 3. The DAX formula engine receives either a DAX query request from the parser or a DAX request for measure calculations from the MDX formula engine. Either way, the DAX formula engine generates a query plan that it sends to the VertiPaq storage engine.
 
-4. The VertiPaq storage engine processes the query plan received from the DAX formula engine. The storage engine is multi-threaded and scales well on multiple cores. It can scan large tables very efficiently and quickly. It can also evaluate simple mathematical operations, but pushes more complex operations back to the formula engine. If a calculation is too complex, it sends a callback to the formula engine.
+4. The VertiPaq storage engine processes the query plan received from the DAX formula engine. The storage engine is multi-threaded and scales well on multiple cores. It can scan large tables very efficiently and quickly. It can also evaluate simple mathematical operations, but pushes more complex operations back to the formula engine. If a calculation is **too complex**, it sends a **callback** to the formula engine.
 
 5. The storage engine returns its results to the formula engine which compiles the data and returns the query results to the client application. It maintains a short-term VertiPaq cache to benefit multiple requests for the same data in the same query. An ancillary benefit is the availability of this data for subsequent queries for a period of time.
 
@@ -371,7 +396,7 @@ The above excerpt is from [Exam Ref 70-768 Developing SQL Data Models](https://w
 
 ```
 EVALUATE
-{ COUNTROWS ( FILTER ( Customer, NOT ISEMPTY ( RELATEDTABLE ( 'Sales' ) ) ) ) }
+{ COUNTROWS ( FILTER ( Customer, NOT ISEMPTY ( RELATEDTABLE ( Sales ) ) ) ) }
 ```
 
 ![CallbackDataID](./Images/CallbackDataID.png)
@@ -382,7 +407,7 @@ EVALUATE
 
 ```
 EVALUATE
-{ COUNTROWS( CALCULATETABLE ( Customer, Sales ) ) }
+{ COUNTROWS ( CALCULATETABLE ( Customer, Sales ) ) }
 ```
 
 5. Navigate to the **Advanced** tab and with your query highlighted press the **Run Benchmark** button to test the performance of your query multiple times. Review the benchmark outputs of the query perforamnce in both a cold and warm cache state.
@@ -403,12 +428,73 @@ VertiPaq Analyzer is useful to analyze VertiPaq storage structures for a data mo
 
 [Learn More about VertiPaq Analyzer](https://www.sqlbi.com/tools/vertipaq-analyzer/)
 
+### DAX Studio
 
+1. Navigate to the **Advanced** tab and select the **View Metrics** option.
+2. Within the VertiPaq Analzyzer Metrics **Tables** tab review the column table object **Name** and their associated **% DB**
+3. Navigate to the **Summary** tab and review the **Total Size**
+
+![Vertipaq Analyzer](./Images/VertiPaqAnalyzer.png)
+
+### Power BI Desktop
+1. Within the Contoso (PBIX) file navigate to **File**, **Options and Settings**, **Options**, the **CURRENT FILE** sections **Data Load** properties and disable **Auto date/time**
+
+**⭐ Pro Tip:** Navigate to **File**, **Options and Settings**, **Options**, the **GLOBAL** sections **Data Load** properties and disable **Auto date/time** for all future files.
+
+[Learn more about Automatic time intelligence in Power BI](https://www.sqlbi.com/articles/automatic-time-intelligence-in-power-bi/#:~:text=Power%20BI%20offers%20the%20Auto%20Date/Time%20feature,%20which,by%20simply%20dropping%20the%20date%20into%20a%20matrix:) - Source: SQLBI
+
+</br>
+
+### DAX Studio
+
+1. Navigate to the **Advanced** tab and select the **View Metrics** option again.
+2. Within the VertiPaq Analyzer Metrics navigate to the following tabs:
+    1. Within the **Tables** tab determine the table with the largest **% DB** impact.
+        1. Expand the **Sales** table and determine the column names with the highest cardinality.
+    3. Within the **Relationships** tab determine if these columns are used in any relationships.
+
+![Relationships](./Images/Relationships.png)
+
+</br>
+
+### Power BI Desktop
+1. Within the Contoso (PBIX) file navigate to the **Sales** table and delete the columns **Order Number** and **OnlineSalesKey**.
+
+</br>
+
+### DAX Studio
+
+1. Navigate to the **Advanced** tab and select the **View Metrics** option again.
+2. Navigate to the **Summary** tab and review the **Total Size**
+
+</br>
+
+![Total Size](./Images/TotalSize.png)
 
 ___
 
 # Continue Your Journey
 
+### How to learn DAX
+
+Whether you are starting from scratch or have already learned the basics of DAX, this guide will show you all the steps to follow in order to master the Power BI and Analysis Services query language.
+
+Source: [SQLBI](https://www.sqlbi.com/guides/dax/)
+
+</br>
+
+### An indepth walk through of DAX Studio
+Source: [PowerBI.Tips - Introduction to DAX Studio Playlist](https://www.youtube.com/watch?v=jpZnCHRauPU&list=PLn1m_aBmgsbGDZb7ydd8_LS1AfosdRndQ)
+
+Includes:
+- Introduction to DAX Studio (1:00:44)
+- Model Performance Tuning in DAX Studio (1:09:02)
+- DAX Studio Full Features Review (1:23:11)
+- DAX Studio Query Performance Tuning - Marco Russo; SQLBI (1:00:59)
+- DAX Studio Release 2.11.1 (51:32)
+
+</br>
+ 
 ### Use DAX in Power BI Desktop
 This learning path introduces Data Analysis Expressions (DAX) and provides you with foundational skills required to enhance data models with calculations.
 
@@ -422,23 +508,3 @@ Includes:
 - Use DAX iterator functions
 - Modify DAX filter context
 - Use DAX time intelligence functions
-
-</br>
-
-### DAX Tools Video Course
-
-The DAX Tools video course teaches how to use three popular tools to write and optimize DAX: DAX Studio, VertiPaq Analyzer, and Analyze in Excel for Power BI Desktop. All these tools are free and open-source.
-
-Source: [SQLBI](https://www.sqlbi.com/p/dax-tools-video-course/)
-
-</br>
-
-### An indepth walk through of DAX Studio
-Source: [PowerBI.Tips - Introduction to DAX Studio Playlist](https://www.youtube.com/watch?v=jpZnCHRauPU&list=PLn1m_aBmgsbGDZb7ydd8_LS1AfosdRndQ)
-
-Includes:
-- Introduction to DAX Studio (1:00:44)
-- Model Performance Tuning in DAX Studio (1:09:02)
-- DAX Studio Full Features Review (1:23:11)
-- DAX Studio Query Performance Tuning - Marco Russo; SQLBI (1:00:59)
-- DAX Studio Release 2.11.1 (51:32)
