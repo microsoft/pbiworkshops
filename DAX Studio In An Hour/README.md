@@ -406,7 +406,7 @@ VertiPaq Analyzer is useful to analyze VertiPaq storage structures for a data mo
 
 [Learn More about VertiPaq Analyzer](https://www.sqlbi.com/tools/vertipaq-analyzer/)
 
-### Objective: Review the VertiPaq Analyzer Metrics to reduce the overall size of your model
+### Objective: Review the VertiPaq Analyzer Metrics to reduce the overall size of the model
 
 ### DAX Studio
 
