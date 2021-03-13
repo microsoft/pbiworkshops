@@ -65,7 +65,6 @@ With DAX queries, you can query and return data defined by a table expression. R
 </br>
 
 ### Objective: Return tables, single column table (list) and scalar values.
-</br>
 
 ## Instructions
 ### Power BI Desktop
@@ -167,8 +166,7 @@ DAX formulas are used in measures, calculated columns, calculated tables, and ro
 
 [Learn More About DAX Formulas](https://docs.microsoft.com/en-us/dax/dax-overview)
 
-### Objective: Aggregate data by writing DAX formulas and the graphical user interface of Query Builder.
-</br>
+### Objective: Aggregate data by writing DAX formulas and by using graphical user interface of Query Builder.
 
 ## Instructions
 ### DAX Studio
@@ -200,9 +198,6 @@ EVALUATE
 ### 🏆 DAX Challenge
 
 **Description:** Return a table with all the StoreKey equal to 199 from the Sales table.
-
-</br>
-
 ___
 
 </br>
@@ -231,8 +226,6 @@ RETURN
 -- _CountOfSales
 ```
 
-</br>
-
 ### 🤚 Most Important DAX function: **CALCULATE** 🤚
 
 Evaluates an expression in a modified filter context.
@@ -241,13 +234,9 @@ CALCULATE(«Expression»,«Filter»)
 
 [Microsoft Docs - CALCULATE](https://docs.microsoft.com/en-us/dax/calculate-function-dax)
 
-</br>
-
 "The CALCULATE function in DAX is the magic key..." - Marco Russo
 
 [SQLBI - How Calculate works in DAX](https://www.sqlbi.com/blog/marco/2010/01/03/how-calculate-works-in-dax/)
-
-</br>
 
 ### Power BI Desktop
 1. Within the Contoso (PBIX) file in Power BI Desktop and navigate to the Sales table, add a **New Measure** from the example below, leveraging the CALCULATE function to return the [# Quantity] by StoreKey in 306, 307.
@@ -261,8 +250,6 @@ _Result
 ```
 
 2. Create a **Table** visual on the Power BI report page and include the fields Company Name, Northeast # Quantity and # Quantity.
-
-</br>
 
 ### 🏆 DAX Challenge
 
@@ -288,10 +275,7 @@ The query builder provides a drag and drop interface for building queries agains
 
 [Learn More](https://daxstudio.org/documentation/features/query-builder/)
 
-</br>
-
 ### Objective: Leverage the Query Builder inteface to return a summarized table between the selected time frame.
-</br>
 
 ## Instructions
 ### DAX Studio
@@ -328,8 +312,6 @@ SUM ( 'Sales Order Lines'[Quantity] )
 
 6. Press **Edit Query** to view the generated query.
 7. Press the **Format Query** option.
-
-</br>
 
 ### 🏆 DAX Challenge
 
@@ -383,7 +365,6 @@ The above excerpt is from [Exam Ref 70-768 Developing SQL Data Models](https://w
 </br>
 
 ### Objective: Optimize the current DAX statement to remove the CallbackDataID and run performance benchmarks.
-</br>
 
 ## Instructions
 
@@ -412,13 +393,10 @@ EVALUATE
 
 5. Navigate to the **Advanced** tab and with your query highlighted press the **Run Benchmark** button to test the performance of your query multiple times. Review the benchmark outputs of the query perforamnce in both a cold and warm cache state.
 
-<br/>
 
 [Learn More About Server Timings](https://daxstudio.org/documentation/features/server-timings-trace/)
 
 [Learn more about Query Benchmark](https://darren.gosbell.com/2020/06/dax-studio-2-11-0-released/)
-
-<br/>
 
 ___
 
@@ -427,6 +405,8 @@ ___
 VertiPaq Analyzer is useful to analyze VertiPaq storage structures for a data model in Power BI and Analysis Services Tabular.
 
 [Learn More about VertiPaq Analyzer](https://www.sqlbi.com/tools/vertipaq-analyzer/)
+
+### Objective: Review the VertiPaq Analyzer Metrics to reduce the overall size of your model
 
 ### DAX Studio
 
@@ -443,8 +423,6 @@ VertiPaq Analyzer is useful to analyze VertiPaq storage structures for a data mo
 
 [Learn more about Automatic time intelligence in Power BI](https://www.sqlbi.com/articles/automatic-time-intelligence-in-power-bi/#:~:text=Power%20BI%20offers%20the%20Auto%20Date/Time%20feature,%20which,by%20simply%20dropping%20the%20date%20into%20a%20matrix:) - Source: SQLBI
 
-</br>
-
 ### DAX Studio
 
 1. Navigate to the **Advanced** tab and select the **View Metrics** option again.
@@ -455,21 +433,17 @@ VertiPaq Analyzer is useful to analyze VertiPaq storage structures for a data mo
 
 ![Relationships](./Images/Relationships.png)
 
-</br>
-
 ### Power BI Desktop
 1. Within the Contoso (PBIX) file navigate to the **Sales** table and delete the columns **Order Number** and **OnlineSalesKey**.
-
-</br>
 
 ### DAX Studio
 
 1. Navigate to the **Advanced** tab and select the **View Metrics** option again.
 2. Navigate to the **Summary** tab and review the **Total Size**
 
-</br>
-
 ![Total Size](./Images/TotalSize.png)
+
+[Learn More about data reduction techniques for Import modeling](https://docs.microsoft.com/en-us/power-bi/guidance/import-modeling-data-reduction)
 
 ___
 
@@ -481,8 +455,6 @@ Whether you are starting from scratch or have already learned the basics of DAX,
 
 Source: [SQLBI](https://www.sqlbi.com/guides/dax/)
 
-</br>
-
 ### An indepth walk through of DAX Studio
 Source: [PowerBI.Tips - Introduction to DAX Studio Playlist](https://www.youtube.com/watch?v=jpZnCHRauPU&list=PLn1m_aBmgsbGDZb7ydd8_LS1AfosdRndQ)
 
@@ -492,8 +464,6 @@ Includes:
 - DAX Studio Full Features Review (1:23:11)
 - DAX Studio Query Performance Tuning - Marco Russo; SQLBI (1:00:59)
 - DAX Studio Release 2.11.1 (51:32)
-
-</br>
  
 ### Use DAX in Power BI Desktop
 This learning path introduces Data Analysis Expressions (DAX) and provides you with foundational skills required to enhance data models with calculations.
@@ -508,3 +478,9 @@ Includes:
 - Use DAX iterator functions
 - Modify DAX filter context
 - Use DAX time intelligence functions
+
+### Power BI Guidance
+
+Power BI guidance documentation provides best practice information from the team that builds Power BI and the folks that work with our enterprise customers. Here you’ll find learnings to improve performance and success with Power BI. We’ll update and add to them as new information is available.
+
+Source: https://aka.ms/pbiguidance
