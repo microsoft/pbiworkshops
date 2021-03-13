@@ -8,7 +8,7 @@ ___
 
 **Follow Along:**
 - [Download and install DAX Studio](https://daxstudio.org/)
-- [Download and open the Contoso PBIX File](https://github.com/microsoft/pbiworkshops/raw/main/Tabular%20Editor%20In%20An%20Hour/Contoso.pbix)
+- [Download and open the Contoso PBIX File](https://github.com/microsoft/pbiworkshops/raw/main/DAX%20Studio%20In%20An%20Hour/Contoso.pbix)
 
 ___
 
@@ -412,8 +412,10 @@ VertiPaq Analyzer is useful to analyze VertiPaq storage structures for a data mo
 ### DAX Studio
 
 1. Navigate to the **Advanced** tab and select the **View Metrics** option.
-2. Within the VertiPaq Analzyzer Metrics **Tables** tab review the column table object **Name** and their associated **% DB**
+2. Within the VertiPaq Analyzer Metrics **Tables** tab review the column table object **Name** and their associated **% DB**
 3. Navigate to the **Summary** tab and review the **Total Size**
+4. To export the VertiPaq Analyzer Metrics, navigate to the **Advanced** tab and select the **Export Metrics** option.
+    - [Optional] This can now be sent to others to review by selecting the **Import Metrics** option.
 
 ![Vertipaq Analyzer](./Images/VertiPaqAnalyzer.png)
 
@@ -427,10 +429,10 @@ VertiPaq Analyzer is useful to analyze VertiPaq storage structures for a data mo
 ### DAX Studio
 
 1. Navigate to the **Advanced** tab and select the **View Metrics** option again.
-2. Within the VertiPaq Analyzer Metrics navigate to the following tabs:
-    1. Within the **Tables** tab determine the table with the largest **% DB** impact.
+    1. Within the **VertiPaq Analyzer Metrics** navigate to the following tabs:
+    1. In the **Tables** tab determine the table with the largest **% DB** impact.
         1. Expand the **Sales** table and determine the column names with the highest cardinality.
-    3. Within the **Relationships** tab determine if these columns are used in any relationships.
+    3. In the **Relationships** tab determine if these columns are used in any relationships.
 
 ![Relationships](./Images/Relationships.png)
 
