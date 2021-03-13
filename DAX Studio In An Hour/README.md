@@ -28,7 +28,6 @@ ___
 # Setup
 
 ## Instructions
-### [Optional: Guided Video](https://www.youtube.com/watch?v=pFX20PPxXjs&list=PLKW7XPyNDgRCOiC69kZWfRQdOxcnQy2yA&index=2)
 
 ### Power BI Desktop [Only applicable to July and August 2020 Versions]
 1. Ensure the Power BI preview feature [Store datasets using enhanced metadata format](https://docs.microsoft.com/en-us/power-bi/connect-data/desktop-enhanced-dataset-metadata) is enabled.
@@ -61,8 +60,6 @@ ___
 With DAX queries, you can query and return data defined by a table expression. Reporting clients construct DAX queries whenever a field is placed on a report surface, or a whenever a filter or calculation is applied. DAX queries can also be created and run in SQL Server Management Studio (SSMS) and open-source tools like DAX Studio. DAX queries run in SSMS and DAX Studio return results as a table.
 
 [Learn More About DAX Queries](https://docs.microsoft.com/en-us/dax/dax-queries)
-
-</br>
 
 ### Objective: Return tables, single column table (list) and scalar values.
 
@@ -102,7 +99,7 @@ ___
 **DAX Query**
 ```
 EVALUATE
-FILTER( 'Customer', 'Customer'[State] = "Washington" )
+FILTER( Customer, Customer[State] = "Washington" )
 ```
 **SQL Equivalent**
 ```
@@ -144,16 +141,20 @@ ___
 EVALUATE
 COUNTROWS( Customer )
 ```
+
 **SQL Equivalent**
 ```
 -- Count all from the Customers table.
 SELECT COUNT(*)
 FROM Customer;
 ```
-- Review the following error in the **Output**.
+
+Review the following error in the **Output**
+
 ![Table Error](./Images/TableError.png)
 
-- Update the above expression to store the returned results in a single column table (list) using curly brackets.
+Update the above expression to store the returned results in a single column table (list) using curly brackets
+
 ```
 EVALUATE
 { COUNTROWS( Customer ) }
@@ -169,15 +170,19 @@ DAX formulas are used in measures, calculated columns, calculated tables, and ro
 ### Objective: Aggregate data by writing DAX formulas and by using graphical user interface of Query Builder.
 
 ## Instructions
+
 ### DAX Studio
+
 In the query Editor section enter the below DAX queries and review their output in the **Results** section, after pressing the **Run** button.
+</br>
 
 **Description:** Enter the below expression to return the average unit price from the Sales Order Lines table:
 ```
 EVALUATE
 { AVERAGE ( Sales[Unit Price] ) }
 ```
-- Update the statement to provide a column name for the returned value.
+
+Update the statement to provide a column name for the returned value.
 ```
 EVALUATE
 ROW ("Average Unit Price", AVERAGE ( Sales[Unit Price] ) )
@@ -193,18 +198,15 @@ EVALUATE
 ```
 [Learn More About Using COUNTROWS instead of COUNT](https://docs.microsoft.com/en-us/power-bi/guidance/dax-countrows)
 
-</br>
-
 ### 🏆 DAX Challenge
 
 **Description:** Return a table with all the StoreKey equal to 199 from the Sales table.
 ___
-
 </br>
 
 **Description:** Using variables, debug the total count of Sales by StoreKey in 306 and 307.
 
-#### Important Note: For commenting within DAX:
+**Important Note:** For commenting within DAX:
 </br>
 
 | Comment | Characters |
@@ -212,7 +214,6 @@ ___
 | Multi line | /* */ |
 | Singe line | -- |
 | Singe line | // |
-
 </br>
 
 ```
@@ -225,6 +226,7 @@ RETURN
 -- _NorthEastSales
 -- _CountOfSales
 ```
+___
 
 ### 🤚 Most Important DAX function: **CALCULATE** 🤚
 
@@ -267,6 +269,8 @@ FILTER (
 ```
 
 [Learn More About Extension Columns](https://www.sqlbi.com/articles/best-practices-using-summarize-and-addcolumns/)
+</br>
+
 ___
 
 # Query Builder
@@ -287,7 +291,6 @@ The query builder provides a drag and drop interface for building queries agains
     | :------------- | :---------- |
     | Date | Date |
     | Sales   | Total Unit Price |
-    
 </br>
 
 3. Expand the following tables and drag the fields/measures into the **Filters** group in the **Builder**.
@@ -295,7 +298,6 @@ The query builder provides a drag and drop interface for building queries agains
     | Table | Object | Comparison Operator | Start  | End |
     | :------------- | :---------- | :---------- | :---------- | :---------- |
     | Date | Date | Between | 2/1/2007 | 2/28/2007 |
-
 </br>
 
 4. Select the **➕New** button and enter the measure name **Total Quantity**, the below measure and press **OK** when complete.
@@ -339,7 +341,6 @@ SUMMARIZECOLUMNS (
 )
 /* END QUERY BUILDER */
 ```
-</br>
 
 ___
 
@@ -391,7 +392,7 @@ EVALUATE
 { COUNTROWS ( CALCULATETABLE ( Customer, Sales ) ) }
 ```
 
-5. Navigate to the **Advanced** tab and with your query highlighted press the **Run Benchmark** button to test the performance of your query multiple times. Review the benchmark outputs of the query perforamnce in both a cold and warm cache state.
+5. Navigate to the **Advanced** tab and with your query highlighted press the **Run Benchmark** button to test the performance of your query multiple times. Review the benchmark outputs of the query performance in both a cold and warm cache state.
 
 
 [Learn More About Server Timings](https://daxstudio.org/documentation/features/server-timings-trace/)
