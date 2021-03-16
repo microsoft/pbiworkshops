@@ -472,7 +472,7 @@ From a logical perspective, all tabular objects form a tree, the root of which i
 
 ___
 
-### Objective: Document various objects within Tabular Object Model (TOM) using dynamic management views.
+### Objective: Document various objects within the Tabular Object Model (TOM) using dynamic management views
 
 ### DAX Studio
 
@@ -497,13 +497,13 @@ ___
 
 ### Power BI Desktop
 1. Within the Contoso (PBIX) file navigate to the **Model** view and select the **# Quantity** measure in the Sales table.
-2. Within the **Properties** menu type in the **Description** field - Total number of Sales quantity.
+2. Within the **Properties** menu's **Description** field type in the following text for the **# Quantity** selection: Total number of Sales quantity.
 
 ![Model Description](./Images/ModelDescription.png)
 
 ### DAX Studio
 
-1. Within the editor run the blow query again and review the description field.
+1. Within the editor run the below query again and review the description field.
 
 ```
 select * from $SYSTEM.TMSCHEMA_MEASURES
