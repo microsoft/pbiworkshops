@@ -22,6 +22,8 @@ ___
 - [Query Builder](#query-builder)
 - [Server Timings](#server-timings)
 - [VertiPaq Analyzer](#vertipaq-analyzer)
+- [Dynamic Management Views](#dynamic-management-views)
+    - [Tabular Object Model Hierarchy](#tabular-object-model-hierarchy)
 
 ___
 
@@ -448,6 +450,64 @@ VertiPaq Analyzer is useful to analyze VertiPaq storage structures for a data mo
 
 [Learn More about data reduction techniques for Import modeling](https://docs.microsoft.com/en-us/power-bi/guidance/import-modeling-data-reduction)
 
+___
+
+# Dynamic Management Views
+
+Analysis Services Dynamic Management Views (DMVs) are queries that return information about model objects, server operations, and server health. The query, based on SQL, is an interface to schema rowsets. Schema rowsets are predescribed tables that contain information about Analysis Services objects and server state, including database schema, active sessions, connections, commands, and jobs that are executing on the server.
+
+#### **Query syntax**
+The query engine for DMVs is the Data Mining parser. The DMV query syntax is based on the SELECT (DMX) statement. Although DMV query syntax is based on a SQL SELECT statement, it does not support the full syntax of a SELECT statement. Notably, JOIN, GROUP BY, LIKE, CAST, and CONVERT are not supported.
+
+[Learn More about Dynamic Management Views](https://docs.microsoft.com/en-us/analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services?view=asallproducts-allversions)
+</br>
+
+## Tabular Object Model Hierarchy
+
+The Tabular Object Model (TOM) exposes native tabular metadata, such as model, tables, columns, and relationships objects.
+
+From a logical perspective, all tabular objects form a tree, the root of which is a Model, descended from Database. Server and Database are not considered tabular because these objects can also represent a multidimensional database hosted on a server running in Multidimensional mode, or a tabular model at a lower compatibility level that does not use tabular metadata for object definitions.
+
+[Learn More](https://docs.microsoft.com/en-us/analysis-services/tom/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo?view=asallproducts-allversions)
+
+___
+
+### Objective: Document various objects within Tabular Object Model (TOM) using dynamic management views.
+
+### DAX Studio
+
+1. Within the object explorer navigate to the **DMV** tab to view the available queries.
+
+![DMV](./Images/DMV.png)
+
+2. Using the search option enter the prefix **TMSCHEMA**
+
+    | Prefix | Object |
+    | :------------- | :---------- |
+    | TMSCHEMA | Tabular Model Schema |
+    | MDSCHEMA   | Multidimensional Schema |
+    | DBSCHEMA | Database Schema |
+    | DISCOVER | Active Sessions or Connections |
+</br>
+
+3. Within the **DMV** list, double click the below entries to populate the editor window. Highlight each individual query and press the **Run** button (F5).
+    1. TMSCHEMA_TABLES
+    2. TMSCHEMA_COLUMNS
+    3. TMSCHEMA_MEASURES
+
+### Power BI Desktop
+1. Within the Contoso (PBIX) file navigate to the **Model** view and select the **# Quantity** measure in the Sales table.
+2. Within the **Properties** menu type in the **Description** field - Total number of Sales quantity.
+
+![Model Description](./Images/ModelDescription.png)
+
+### DAX Studio
+
+1. Within the editor run the blow query again and review the description field.
+
+```
+select * from $SYSTEM.TMSCHEMA_MEASURES
+```
 ___
 
 # Continue Your Journey
