@@ -25,7 +25,6 @@ ___
 
 # Setup
 
-## Instructions
 ### [Optional Guided Video](https://www.youtube.com/watch?v=3zUxw7djcl0&list=PLKW7XPyNDgRBUS2djT4aBVyC7OzeZ9WZM&index=2)
 
 ### Power BI Desktop [Only applicable to July and August 2020 Versions]

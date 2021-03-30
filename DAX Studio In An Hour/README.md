@@ -1,6 +1,6 @@
 # DAX Studio In An Hour ![DAX Studio](./Images/daxstudio.png)
 
-### About:
+### About
 DAX Studio is a tool to write, execute, and analyze DAX queries in Power BI Designer, Power Pivot for Excel, and Analysis Services Tabular. It includes an Object Browser, query editing and execution, formula and measure editing, syntax highlighting and formatting, integrated tracing and query execution breakdowns.
 
 Website: https://daxstudio.org/
@@ -12,24 +12,7 @@ ___
 
 ___
 
-# Table of Contents
-- [Setup](#setup)
-- [Query Language](#query-language)
-  - [SELECT Statement](#select-statement)
-  - [WHERE Clause](#where-clause)
-- [Scalar Value](#scalar-value)
-- [Formula Language](#formula-language)
-- [Query Builder](#query-builder)
-- [Server Timings](#server-timings)
-- [VertiPaq Analyzer](#vertipaq-analyzer)
-- [Dynamic Management Views](#dynamic-management-views)
-    - [Tabular Object Model Hierarchy](#tabular-object-model-hierarchy)
-
-___
-
 # Setup
-
-## Instructions
 
 ### Power BI Desktop [Only applicable to July and August 2020 Versions]
 1. Ensure the Power BI preview feature [Store datasets using enhanced metadata format](https://docs.microsoft.com/en-us/power-bi/connect-data/desktop-enhanced-dataset-metadata) is enabled.
@@ -63,7 +46,7 @@ With DAX queries, you can query and return data defined by a table expression. R
 
 [Learn More About DAX Queries](https://docs.microsoft.com/en-us/dax/dax-queries)
 
-### Objective: Return tables, single column table (list) and scalar values.
+### Objective - Return tables, single column table (list) and scalar values.
 
 ## Instructions
 ### Power BI Desktop
@@ -169,7 +152,7 @@ DAX formulas are used in measures, calculated columns, calculated tables, and ro
 
 [Learn More About DAX Formulas](https://docs.microsoft.com/en-us/dax/dax-overview)
 
-### Objective: Aggregate data by writing DAX formulas and by using graphical user interface of Query Builder.
+### Objective - Aggregate data by writing DAX formulas and by using graphical user interface of Query Builder.
 
 ## Instructions
 
@@ -281,7 +264,7 @@ The query builder provides a drag and drop interface for building queries agains
 
 [Learn More](https://daxstudio.org/documentation/features/query-builder/)
 
-### Objective: Leverage the Query Builder inteface to return a summarized table between the selected time frame.
+### Objective - Leverage the Query Builder inteface to return a summarized table between the selected time frame.
 
 ## Instructions
 ### DAX Studio
@@ -409,7 +392,7 @@ VertiPaq Analyzer is useful to analyze VertiPaq storage structures for a data mo
 
 [Learn More about VertiPaq Analyzer](https://www.sqlbi.com/tools/vertipaq-analyzer/)
 
-### Objective: Review the VertiPaq Analyzer Metrics to reduce the overall size of the model
+### Objective - Review the VertiPaq Analyzer Metrics to reduce the overall size of the model
 
 ### DAX Studio
 
@@ -456,7 +439,8 @@ ___
 
 Analysis Services Dynamic Management Views (DMVs) are queries that return information about model objects, server operations, and server health. The query, based on SQL, is an interface to schema rowsets. Schema rowsets are predescribed tables that contain information about Analysis Services objects and server state, including database schema, active sessions, connections, commands, and jobs that are executing on the server.
 
-#### **Query syntax**
+**Query syntax**
+
 The query engine for DMVs is the Data Mining parser. The DMV query syntax is based on the SELECT (DMX) statement. Although DMV query syntax is based on a SQL SELECT statement, it does not support the full syntax of a SELECT statement. Notably, JOIN, GROUP BY, LIKE, CAST, and CONVERT are not supported.
 
 [Learn More about Dynamic Management Views](https://docs.microsoft.com/en-us/analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services?view=asallproducts-allversions)
@@ -472,7 +456,7 @@ From a logical perspective, all tabular objects form a tree, the root of which i
 
 ___
 
-### Objective: Document various objects within the Tabular Object Model (TOM) using dynamic management views
+### Objective - Document various objects within the Tabular Object Model (TOM) using dynamic management views
 
 ### DAX Studio
 

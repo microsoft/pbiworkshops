@@ -1,7 +1,7 @@
 # Tabular Editor In An Hour ![Tabular Editor](./Images/tabular_editor.png)
 
 
-### About:
+### About
 Tabular Editor provides an intuitive hierarchical view of every object in your Tabular Model metadata. Columns, Measures and Hierarchies are arranged in Display Folders by default. You can edit properties of one or more objects, by (multi)selecting them in the tree. A DAX Editor with syntax highlighting lets you easily edit the expressions of Measures, Calculated Columns and Calculated Tables.
 
 Website: https://tabulareditor.com/
@@ -14,22 +14,10 @@ ___
 
 ___
 
-# Table of Contents
-- [Setup](#setup)
-- [Tabular Object Model Hierarchy](#tabular-object-model-hierarchy)
-- [Best Practice Analyzer](#best-practice-analyzer)
-- [Advanced Scripting](#advanced-scripting-automation)
-    - [Tables](#tables)
-    - [Columns](#columns)
-- [Calculation Groups](#calculation-groups)
-- [Continue Your Journey](#continue-your-journey)
-    
-___
-
 # Setup
 
 ## Instructions
-### [Optional: Guided Video](https://www.youtube.com/watch?v=pFX20PPxXjs&list=PLKW7XPyNDgRCOiC69kZWfRQdOxcnQy2yA&index=2)
+### [Optional Guided Video](https://www.youtube.com/watch?v=pFX20PPxXjs&list=PLKW7XPyNDgRCOiC69kZWfRQdOxcnQy2yA&index=2)
 
 ### Power BI Desktop [Only applicable to July and August 2020 Versions]
 1. Ensure the Power BI preview feature [Store datasets using enhanced metadata format](https://docs.microsoft.com/en-us/power-bi/connect-data/desktop-enhanced-dataset-metadata) is enabled.
@@ -56,10 +44,10 @@ The Tabular Object Model (TOM) exposes native tabular metadata, such as model, t
 
 From a logical perspective, all tabular objects form a tree, the root of which is a Model, descended from Database. Server and Database are not considered tabular because these objects can also represent a multidimensional database hosted on a server running in Multidimensional mode, or a tabular model at a lower compatibility level that does not use tabular metadata for object definitions.
 
-### Objective: Extract the underlying metadata from the model.
+### Objective - Extract the underlying metadata from the model.
 
 ## Instructions
-### [Optional: Guided Video](https://www.youtube.com/watch?v=NFz-NaGXZ4w&list=PLKW7XPyNDgRCOiC69kZWfRQdOxcnQy2yA&index=3)
+### [Optional Guided Video](https://www.youtube.com/watch?v=NFz-NaGXZ4w&list=PLKW7XPyNDgRCOiC69kZWfRQdOxcnQy2yA&index=3)
 1. Open the Sales Demo (PBIX) file, navigate to the **External Tools** ribbon in Power BI Desktop and select **Tabular Editor**.
 2. On your local machine create a folder titled: **Sales Demo**
 3. Within Tabular Editor 
@@ -75,16 +63,16 @@ ___
 
 # Best Practice Analyzer
 
-### About:
+### About
 The best practices rules are a collection of community contributions for Tabular Model development. They let you define global or model-specific rules using a simple expression language. At any time, you can check whether objects in your model satisfy the rules.
 
 Website: https://github.com/TabularEditor/BestPracticeRules
 
 
-### Objective: Import the Best Practice Rules collection and apply to the model.
+### Objective - Import the Best Practice Rules collection and apply to the model.
 
 ## Instructions
-### [Optional: Guided Video](https://www.youtube.com/watch?v=PrgPo6Cccfs&list=PLKW7XPyNDgRCOiC69kZWfRQdOxcnQy2yA&index=4)
+### [Optional Guided Video](https://www.youtube.com/watch?v=PrgPo6Cccfs&list=PLKW7XPyNDgRCOiC69kZWfRQdOxcnQy2yA&index=4)
 1. Navigate to the repository, https://github.com/TabularEditor/BestPracticeRules
 2. Navigate to the [BPARules-standard.json](https://github.com/TabularEditor/BestPracticeRules/blob/master/BPARules-standard.json) file and press the Raw button.
     1. Copy the web address in your browser (must match the below with the prefix raw) - 
@@ -121,7 +109,7 @@ Website: https://github.com/TabularEditor/BestPracticeRules
     ![Apply Fix](./Images/apply_fix.png)
     5. Press the **Saves the changes to the connected database (Ctrl+S) button.**
     
-### Objective: Create a new rule that can be utilized within the Best Practices Rules.
+### Objective - Create a new rule that can be utilized within the Best Practices Rules.
 
 1. Within Tabular Editor:
     1. Navigate to **Tools** and select **Manage BPA Rules...**
@@ -156,10 +144,10 @@ Website: https://github.com/otykier/TabularEditor/wiki/Advanced-Scripting
 - You can use CTRL+Z to undo or CTRL+Y to redo changes.
 - The scripting language is C#
 
-### Objective: Create a script to automate the addition of measures in the model.
+### Objective - Create a script to automate the addition of measures in the model.
 
 ## Instructions
-### [Optional: Guided Video](https://www.youtube.com/watch?v=qtNVvaaCKnc&list=PLKW7XPyNDgRCOiC69kZWfRQdOxcnQy2yA&index=5)
+### [Optional Guided Video](https://www.youtube.com/watch?v=qtNVvaaCKnc&list=PLKW7XPyNDgRCOiC69kZWfRQdOxcnQy2yA&index=5)
 
 ### Tables
 
@@ -279,10 +267,10 @@ ___
 
 A calculation group is a set of calculation items that are conveniently grouped together because they are variations on the same topic.
 
-### Objective: Create a calculation group for various time intelligence expressions.
+### Objective - Create a calculation group for various time intelligence expressions.
 
 ## Instructions
-### [Optional: Guided Video](https://www.youtube.com/watch?v=xOkmNZd0SY4&list=PLKW7XPyNDgRCOiC69kZWfRQdOxcnQy2yA&index=6)
+### [Optional Guided Video](https://www.youtube.com/watch?v=xOkmNZd0SY4&list=PLKW7XPyNDgRCOiC69kZWfRQdOxcnQy2yA&index=6)
 
 Within Tabular Editor:
 1. Navigate to the **Calendar** table's **Date** column and edit the Property Pages **Hidden** property to **False**.
