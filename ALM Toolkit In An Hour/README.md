@@ -146,7 +146,7 @@ model. **Currently not all properties are supported within Power BI Desktop for 
 ___
 
 # Actions
-### [Optional: Guided Video](https://www.youtube.com/watch?v=3zUxw7djcl0&list=PLKW7XPyNDgRBUS2djT4aBVyC7OzeZ9WZM&index=4)
+### [Optional Guided Video](https://www.youtube.com/watch?v=3zUxw7djcl0&list=PLKW7XPyNDgRBUS2djT4aBVyC7OzeZ9WZM&index=4)
 
 Within ALM Toolkit modelers can Create, Update, Delete or Skip items that are in development (**Source**) before deploying changes to their intended destination (**Target**).
 
