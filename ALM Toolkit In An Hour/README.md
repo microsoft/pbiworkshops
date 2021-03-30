@@ -1,6 +1,6 @@
 # ALM Toolkit In An Hour ![ALM Toolkit](./Images/ALM.png)
 
-### About:
+### About
 ALM Toolkit is a free and open-source tool to manage Microsoft Power BI datasets including the actions database compare, code merging, source-control integration, reusing definitions and self-service to corporate BI deployments.
 
 In readiness for [XMLA endpoint read/write](https://docs.microsoft.com/en-us/power-platform-release-plan/2020wave1/business-intelligence/xmla-readwrite), objects specific to Power BI are also supported:
@@ -12,7 +12,7 @@ Website: http://alm-toolkit.com/
 ___
 
 # Prerequisites
-### [Optional: Guided Video](https://www.youtube.com/watch?v=3zUxw7djcl0&list=PLKW7XPyNDgRBUS2djT4aBVyC7OzeZ9WZM&index=1)
+### [Optional Guided Video](https://www.youtube.com/watch?v=3zUxw7djcl0&list=PLKW7XPyNDgRBUS2djT4aBVyC7OzeZ9WZM&index=1)
 
 For this workshop a **Power BI Pro** license is required for publishing and a workspace backed by either **Premium Capacity** or **Premium Per User** with XMLA endpoints enabled.
 
@@ -23,18 +23,10 @@ For this workshop a **Power BI Pro** license is required for publishing and a wo
 
 ___
 
-# Table of Contents
-- [Setup](#setup)
-- [Tabular Object Model Hierarchy](#tabular-object-model-hierarchy)
-- [Comparison](#comparison)
-- [Actions](#actions)
-
-___
-
 # Setup
 
 ## Instructions
-### [Optional: Guided Video](https://www.youtube.com/watch?v=3zUxw7djcl0&list=PLKW7XPyNDgRBUS2djT4aBVyC7OzeZ9WZM&index=2)
+### [Optional Guided Video](https://www.youtube.com/watch?v=3zUxw7djcl0&list=PLKW7XPyNDgRBUS2djT4aBVyC7OzeZ9WZM&index=2)
 
 ### Power BI Desktop [Only applicable to July and August 2020 Versions]
 1. Ensure the Power BI preview feature [Store datasets using enhanced metadata format](https://docs.microsoft.com/en-us/power-bi/connect-data/desktop-enhanced-dataset-metadata) is enabled.
@@ -91,11 +83,11 @@ From a logical perspective, all tabular objects form a tree, the root of which i
 ___
 
 # Comparison
-### [Optional: Guided Video](https://www.youtube.com/watch?v=3zUxw7djcl0&list=PLKW7XPyNDgRBUS2djT4aBVyC7OzeZ9WZM&index=3)
+### [Optional Guided Video](https://www.youtube.com/watch?v=3zUxw7djcl0&list=PLKW7XPyNDgRBUS2djT4aBVyC7OzeZ9WZM&index=3)
 
 Deployment of tabular models normally employs an all-or-nothing (**Power BI Desktop - Publish to Web**), or partial-metadata deployment strategy. With ALM Toolkit modelers can compare tabular object differences and perform merging across models that are in development (**Source**) to their intended destination (**Target**) supporthing both approaches.
 
-### Supported Connections:
+### Supported Connections
 - Dataset
     - Analysis Services Database
         - SQL Server Analysis Services (SSAS)
@@ -109,7 +101,7 @@ Deployment of tabular models normally employs an all-or-nothing (**Power BI Desk
 **Important Note:** The target model compatibility level must be greater than or equal to the compatibility level of the source
 model. **Currently not all properties are supported within Power BI Desktop for merging.**
 
-### Objective: Compare schema differences after a change has been made.
+### Objective - Compare schema differences after a change has been made.
 
 ## Instructions
 
@@ -158,7 +150,7 @@ ___
 
 Within ALM Toolkit modelers can Create, Update, Delete or Skip items that are in development (**Source**) before deploying changes to their intended destination (**Target**).
 
-### Objective: Choose the appropriate actions to update the target.
+### Objective - Choose the appropriate actions to update the target.
 
 ### Power BI Desktop
 1. Within the Sales Demo_DEV (PBIX) file, navigate to the **Fields** pane and alternate click the **Warehouse Items** table and select **Edit query**.
