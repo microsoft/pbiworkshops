@@ -1,7 +1,5 @@
 # Tabular Editor In An Hour ![Tabular Editor](./Images/tabular_editor.png)
 
-
-### About
 Tabular Editor provides an intuitive hierarchical view of every object in your Tabular Model metadata. Columns, Measures and Hierarchies are arranged in Display Folders by default. You can edit properties of one or more objects, by (multi)selecting them in the tree. A DAX Editor with syntax highlighting lets you easily edit the expressions of Measures, Calculated Columns and Calculated Tables.
 
 Website: https://tabulareditor.com/
@@ -16,7 +14,6 @@ ___
 
 # Setup
 
-## Instructions
 ### [Optional Guided Video](https://www.youtube.com/watch?v=pFX20PPxXjs&list=PLKW7XPyNDgRCOiC69kZWfRQdOxcnQy2yA&index=2)
 
 ### Power BI Desktop [Only applicable to July and August 2020 Versions]
@@ -46,7 +43,6 @@ From a logical perspective, all tabular objects form a tree, the root of which i
 
 ### Objective - Extract the underlying metadata from the model.
 
-## Instructions
 ### [Optional Guided Video](https://www.youtube.com/watch?v=NFz-NaGXZ4w&list=PLKW7XPyNDgRCOiC69kZWfRQdOxcnQy2yA&index=3)
 1. Open the Sales Demo (PBIX) file, navigate to the **External Tools** ribbon in Power BI Desktop and select **Tabular Editor**.
 2. On your local machine create a folder titled: **Sales Demo**
@@ -63,15 +59,12 @@ ___
 
 # Best Practice Analyzer
 
-### About
 The best practices rules are a collection of community contributions for Tabular Model development. They let you define global or model-specific rules using a simple expression language. At any time, you can check whether objects in your model satisfy the rules.
 
 Website: https://github.com/TabularEditor/BestPracticeRules
 
-
 ### Objective - Import the Best Practice Rules collection and apply to the model.
 
-## Instructions
 ### [Optional Guided Video](https://www.youtube.com/watch?v=PrgPo6Cccfs&list=PLKW7XPyNDgRCOiC69kZWfRQdOxcnQy2yA&index=4)
 1. Navigate to the repository, https://github.com/TabularEditor/BestPracticeRules
 2. Navigate to the [BPARules-standard.json](https://github.com/TabularEditor/BestPracticeRules/blob/master/BPARules-standard.json) file and press the Raw button.
@@ -146,7 +139,6 @@ Website: https://github.com/otykier/TabularEditor/wiki/Advanced-Scripting
 
 ### Objective - Create a script to automate the addition of measures in the model.
 
-## Instructions
 ### [Optional Guided Video](https://www.youtube.com/watch?v=qtNVvaaCKnc&list=PLKW7XPyNDgRCOiC69kZWfRQdOxcnQy2yA&index=5)
 
 ### Tables
@@ -269,7 +261,6 @@ A calculation group is a set of calculation items that are conveniently grouped 
 
 ### Objective - Create a calculation group for various time intelligence expressions.
 
-## Instructions
 ### [Optional Guided Video](https://www.youtube.com/watch?v=xOkmNZd0SY4&list=PLKW7XPyNDgRCOiC69kZWfRQdOxcnQy2yA&index=6)
 
 Within Tabular Editor:

@@ -1,6 +1,5 @@
 # ALM Toolkit In An Hour ![ALM Toolkit](./Images/ALM.png)
 
-### About
 ALM Toolkit is a free and open-source tool to manage Microsoft Power BI datasets including the actions database compare, code merging, source-control integration, reusing definitions and self-service to corporate BI deployments.
 
 In readiness for [XMLA endpoint read/write](https://docs.microsoft.com/en-us/power-platform-release-plan/2020wave1/business-intelligence/xmla-readwrite), objects specific to Power BI are also supported:
@@ -101,8 +100,6 @@ Deployment of tabular models normally employs an all-or-nothing (**Power BI Desk
 model. **Currently not all properties are supported within Power BI Desktop for merging.**
 
 ### Objective - Compare schema differences after a change has been made.
-
-## Instructions
 
 ### Power BI Desktop
 1. Open the **Sales Demo_DEV.pbix** file.

@@ -1,6 +1,5 @@
 # DAX Studio In An Hour ![DAX Studio](./Images/daxstudio.png)
 
-### About
 DAX Studio is a tool to write, execute, and analyze DAX queries in Power BI Designer, Power Pivot for Excel, and Analysis Services Tabular. It includes an Object Browser, query editing and execution, formula and measure editing, syntax highlighting and formatting, integrated tracing and query execution breakdowns.
 
 Website: https://daxstudio.org/
@@ -48,7 +47,6 @@ With DAX queries, you can query and return data defined by a table expression. R
 
 ### Objective - Return tables, single column table (list) and scalar values.
 
-## Instructions
 ### Power BI Desktop
 1. Open the Contoso (PBIX) file, navigate to the **External Tools** ribbon in Power BI Desktop and select **DAX Studio**.
 
@@ -153,8 +151,6 @@ DAX formulas are used in measures, calculated columns, calculated tables, and ro
 [Learn More About DAX Formulas](https://docs.microsoft.com/en-us/dax/dax-overview)
 
 ### Objective - Aggregate data by writing DAX formulas and by using graphical user interface of Query Builder.
-
-## Instructions
 
 ### DAX Studio
 
@@ -266,7 +262,6 @@ The query builder provides a drag and drop interface for building queries agains
 
 ### Objective - Leverage the Query Builder inteface to return a summarized table between the selected time frame.
 
-## Instructions
 ### DAX Studio
 1. From the **Home** tab select **Query Builder**.
 2. Expand the following tables and drag the fields/measures into the **Columns/Measures** group in the **Builder**.
@@ -351,8 +346,6 @@ The above excerpt is from [Exam Ref 70-768 Developing SQL Data Models](https://w
 </br>
 
 ### Objective: Optimize the current DAX statement to remove the CallbackDataID and run performance benchmarks.
-
-## Instructions
 
 ### DAX Studio
 1. From the **Home** tab select **Server Timings**.
