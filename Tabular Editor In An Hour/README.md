@@ -29,8 +29,7 @@ ___
 
 ![Tabular Editor Preferences](./Images/tabular_editor_preferences.png)
 
-**Important Note:** Always create a backup of your PBIX file prior to editing to avoid any issues in the event of a corrupted model.
-
+⚠ Important Note: Always create a backup of your PBIX file prior to editing to avoid any issues in the event of a corrupted model.
 
 # Tabular Object Model Hierarchy
 **Source:** Microsoft Docs
@@ -51,7 +50,7 @@ From a logical perspective, all tabular objects form a tree, the root of which i
     2. Navigate to the **Sales Demo** folder and review the outputs in comparison with the TOM hierarchy above.
 4. To view the full solution navigate to **File > Save As..** and save the output **model.bim** (bim: business intelligence model), to your local machine to review.
 
-**Important Note:** The underlying **model.bim** file can now be incorporated into your CI/CD pipelines for deployments with Azure DevOps. To deploy changes directly to existing datasets published in the Power BI service, enabling the XMLA read/write endpoint in the capacity settings and Power BI Premium is required. Once changes have been made to a dataset published in the service using the XMLA end point, a PBIX file will no longer be able to be downloaded.
+⚠ Important Note: The underlying **model.bim** file can now be incorporated into your CI/CD pipelines for deployments with Azure DevOps. To deploy changes directly to existing datasets published in the Power BI service, enabling the XMLA read/write endpoint in the capacity settings and Power BI Premium is required. Once changes have been made to a dataset published in the service using the XMLA end point, a PBIX file will no longer be able to be downloaded.
 
 [Learn More About Data Modeling and Management Tools](https://docs.microsoft.com/en-us/power-bi/admin/service-premium-connect-tools#data-modeling-and-management-tools) 
 
@@ -61,70 +60,63 @@ ___
 
 The best practices rules are a collection of community contributions for Tabular Model development. They let you define global or model-specific rules using a simple expression language. At any time, you can check whether objects in your model satisfy the rules.
 
-Website: https://github.com/TabularEditor/BestPracticeRules
+Website: https://powerbi.microsoft.com/en-us/blog/best-practice-rules-to-improve-your-models-performance/
 
 ### Objective - Import the Best Practice Rules collection and apply to the model.
+   
+Tabular Editor
 
-### [Optional Guided Video](https://www.youtube.com/watch?v=PrgPo6Cccfs&list=PLKW7XPyNDgRCOiC69kZWfRQdOxcnQy2yA&index=4)
-1. Navigate to the repository, https://github.com/TabularEditor/BestPracticeRules
-2. Navigate to the [BPARules-standard.json](https://github.com/TabularEditor/BestPracticeRules/blob/master/BPARules-standard.json) file and press the Raw button.
-    1. Copy the web address in your browser (must match the below with the prefix raw) - 
+1. Navigate to **Advanced Scripting** tab and paste the following code:
+
+```
+    System.Net.WebClient w = new System.Net.WebClient(); 
     
-    ``https://raw.githubusercontent.com/TabularEditor/BestPracticeRules/master/BPARules-standard.json``
+    string path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.LocalApplicationData);
+    string url = "https://raw.githubusercontent.com/microsoft/Analysis-Services/master/BestPracticeRules/BPARules.json";
+    string downloadLoc = path+@"\TabularEditor\BPARules.json";
+    w.DownloadFile(url, downloadLoc);
+```
+
+2. Press the **Custom Action** button to save the above script, include the following properties and press **OK** when complete.
+
+    1. Custom action name: **Best Practice Rules**
+    2. Action context: **Model**
     
-3. Within Tabular Editor:
-    1. Navigate to **Tools** and select **Manage BPA Rules...**
-    2. Within the Manage Best Practice Rules dialog:
-        1. Press **Add..**
-        2. Select **Include Rule File from URL** and press **OK**
-        3. Paste the above BPARules-standard.json web address and press **OK**
-4. Within Tabular Editor:
-    1. Navigate to **Tools** and select **Best Practice Analyzer...** or press the hotkey (**F10**)
-    2. Review the current list of objects needing attention based on the rules.
-    3. Select the header **Hide foreign key columns (11 objects)**
+![Best Practice Rules](./Images/BestPracticeRules.png)
+
+3. Press the **Run script (selection only) F5** button. ▶
+4. Select **Samples** and review the **Custom Actions** that have now been saved to your local machine.
+
+    ⚠ Important Note:  If new rules are added in the future you can re-run this script to incorporate any updates.
+
+5. Navigate to **Tools** and select **Best Practice Analyzer...** or press the hotkey (**F10**)
+6. Review the current list of objects needing attention based on the rules.
+7. Select the header **[Formatting] Hide foreign key columns (14 objects)**
     4. Press the **Generate fix script** icon to copy to the clipboard.
     ![Generate Fix](./Images/generate_fix_script.png)
     5. In the **Fix script generation** dialog box prompt press **OK**.
-5. Within Tabular Editor:
     1. Select the **Advanced Scripting** tab and paste the generated script (**Ctrl+V**) or from the navigation menu (**Edit > Paste**)
     2. Press the **Run script (selection only) F5** button. ▶
     3. Press the **Saves the changes to the connected database (Ctrl+S) button.**
-    ![Advanced Scripting and Save](./Images/advanced_scripting_and_save.png)
-6. Within Power BI Desktop:
-    1. Review the **Orders** table to confirm that all the applicable columns (CustomerID, SalesPersonID, Order Date and Expected Delivery Date) are now hidden.
-    2. Right click any field and select **Unhide All**
-7. Within Tabular Editor:
-    1. In the **External change detected** dialog box press **Yes**
-    1. Confirm that the fields hidden are now visible.
-    2. Navigate to **Tools** and select **Best Practice Analyzer...** or press the hotkey (**F10**)
-    3. Select the header **Hide foreign key columns (11 objects)**
-    4. Press the **Apply fix** icon to instantly apply fixes.
-    ![Apply Fix](./Images/apply_fix.png)
-    5. Press the **Saves the changes to the connected database (Ctrl+S) button.**
+
+![Advanced Scripting and Save](./Images/advanced_scripting_and_save.png)
+
+Power BI Desktop
+
+1. Review the **Orders** table to confirm that all the applicable columns (OrderID, CustomerID, SalesPersonID, Order Date and Expected Delivery Date) are now hidden.
+2. Right click any field and select **Unhide All**
+
+Tabular Editor
+
+1. In the **External change detected** dialog box press **Yes**
+2. Confirm that the fields hidden are now visible.
+3. Navigate to **Tools** and select **Best Practice Analyzer...** or press the hotkey (**F10**)
+4. Select the header **[Formatting] Hide foreign key columns (14 objects)**
+5. Press the **Apply fix** icon to instantly apply fixes.
+![Apply Fix](./Images/apply_fix.png)
+6. Press the **Saves the changes to the connected database (Ctrl+S) button.**
     
-### Objective - Create a new rule that can be utilized within the Best Practices Rules.
-
-1. Within Tabular Editor:
-    1. Navigate to **Tools** and select **Manage BPA Rules...**
-    2. Within the Manage Best Practice Rules dialog
-        1. Select from the Rule collections: **Rules on the local machine**
-        2. Press **New rule...** and insert the following values from the hash table below.
-        3. Once completed press **OK** to save.
-
-| Key | Value |
-| :--- | :----- |
-| Name | Disable auto time intelligence |
-| ID | DISABLE_AUTO_TIME_INTELLIGENCE |
-| Severity | 1 |
-| Category | Performance |
-| Description | Navigate to the Power BI Desktop's Current File properties and disable the setting Auto date/time in Data Load. Note: To disable for all new files created in Power BI Desktop disable the setting Auto date/time for new files in the Global settings Data Load. |
-| Applies to | Model |
-| Rule Expression Editor | Tables.Any(Name.StartsWith("LocalDateTable_")) |
-| Minimum Compatability Level | CL 1200 (SQL Server 2016 / Azure AS) |
-
-2. Navigate to **Tools** and select **Best Practice Analyzer...** or press the hotkey (**F10**) to view the newly created rule.
-
-**Important Note:** Changes to the model can be both read from and written to the Power BI dataset. Any changes within Tabular Editor will need to be saved back to the connected database.
+⚠ Important Note: Changes to the model can be both read from and written to the Power BI dataset. Any changes within Tabular Editor will need to be saved back to the connected database.
 ___
 
 # Advanced Scripting (Automation)
@@ -133,7 +125,7 @@ Advanced Scripting, lets users write a script, to more directly manipulate the o
 
 Website: https://github.com/otykier/TabularEditor/wiki/Advanced-Scripting
 
-**Important Note:** 
+⚠ Important Note: 
 - You can use CTRL+Z to undo or CTRL+Y to redo changes.
 - The scripting language is C#
 
@@ -218,7 +210,7 @@ foreach(var column in Selected.Columns) {
 
 }
 ```
-**Important Note:** The DaxObjectFullName property provides the fully qualified name of the column for use in the DAX expression: 'TableName'[ColumnName].
+⚠ Important Note: The DaxObjectFullName property provides the fully qualified name of the column for use in the DAX expression: 'TableName'[ColumnName].
 
 3. Select the following columns in the **Sales Order Lines** table and then press the **Run script (selection only) F5** button. ▶
     1. **Quantity**
