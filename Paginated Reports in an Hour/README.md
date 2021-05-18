@@ -218,12 +218,12 @@ ___
     1. select the **Manufacturers** dataset and then press **Next >**.
     1. Arrange the fields in the following groups or values.
 
-| Field | Area |
-| :-- | :-- |
-| Calendar_Year | Row groups |
-| Manufacturer | Row groups |
-| Column groups | Month |
-| Values | Total_Sales |
+    | Field | Area |
+    | :-- | :-- |
+    | Calendar_Year | Row groups |
+    | Manufacturer | Row groups |
+    | Column groups | Month |
+    | Values | Total_Sales |
 
 7. From the **Values** group select the chevron next to **Total_Sales**, set to **Sum** and then press **Next >**
     1. Leave the default **Layout** with subtotal below, press **Next >**
@@ -256,6 +256,109 @@ ___
 1. Navigate to the ribbon, select the **Home** tab and the **Run (F5)** button.
 ___
 
+# Conditional formatting
+
+### Objective - Add dynamic indicators and parameters
+
+1. Navigate to the **Parameters** group within the **Report Data** pane and add the following parameters and rearrange accordingly to ensure the proper order within the Parameters pane:
+
+    | Name | Prompt | Date type |
+    | :-- | :-- | :-- |
+    | StartDate | Start Date | Date/Time |
+    | EndDate | End Date | Date/Time |
+    | Threshold | Threshold | Integer |
+
+1. Within the **Report Data** pane, right click the **Datasets** option and select **Add Dataset...**
+1. In the **Dataset Properties** window and the **Query** group update or select the following:
+    1. Update the **Name:** property to **Occupations**.
+    1. Within the **Data source:** option select Power BI dataset connection from your Data Sources list.
+    1. Press the **Fx** icon, insert the below DAX query and press **OK** in the **Expression** window.
+
+    ```
+    EVALUATE
+    SUMMARIZECOLUMNS (
+        Customer[Occupation],
+        KEEPFILTERS (
+            FILTER (
+                ALL ( 'Date'[Date] ),
+                'Date'[Date] >= DATE ( 2007, 1, 1 )
+                    && 'Date'[Date] <= DATE ( 2007, 12, 31 )
+            )
+        ),
+        "Total Sales", [Total Sales]
+    )
+    ```
+1. Press **Refresh Fields** and then navigate to the **Fields** group.
+1. Update the **Field Name** results as shown in the table below and then press **OK** to exit.
+    
+    | Field Name | Field Source |
+    | :-- | :-- |
+    | Occupation | Customer[Occupation] |
+    | Total_Sales | [Total Sales] |
+1. Navigate to the **Parameters** group and press **Add** to add the following values:
+    
+    | Parameter Name | Parameter Value |
+    | :-- | :-- |
+    | StartDate | [@StartDate] |
+    | EndDate | [@StartDate] |
+
+    ![Start and End Parameters](./Images/StartEndParameters.png)
+
+1. Navigate back to the **Query** group and press the **Fx** icon to update the Query to include the StartDate and EndDate parameters as displayed below and then press **OK**:
+
+    ```
+    EVALUATE
+    SUMMARIZECOLUMNS (
+        Customer[Occupation],
+        KEEPFILTERS (
+            FILTER (
+                ALL ( 'Date'[Date] ),
+                'Date'[Date] >= @StartDate
+                    && 'Date'[Date] <= @EndDate
+            )
+        ),
+        "Total Sales", [Total Sales]
+    )
+    ```
+1. Right click on the report page, select **Insert**, **Table** and then add the following fields **Occupation** and **Total_Sales**.
+1. Within the **Row Groups** right click the **Details**, select **Delete Group** and within the dialog window select **Delete group only** and then **OK**.
+1. Right click and delete the third empty column from the table if still present.
+1. Right click the header row from the table and select **Delete Rows**
+1. Right click on the report page and select **Insert**, **List** and then within the **Properties** pane for the Tablix (Table, List, Matrix) update the **DataSetName** property to the **Occupations** datasets.
+1. Drag the table into the list object.
+1. Right click within the list object and select **Insert**, **Text Box** and then add the following text **Total Sales Results** and stylize the background and font color.
+
+    ![List Card](./Images/ListCard.png)
+
+1. Navigate to the ribbon, select the **Home** tab and the **Run (F5)** button. Complete the parameter values and press **View Report** when complete.
+    1. Recommend Start Date as 1/1/2007, End Date as 12/31/2007 and Threshold 25000 - these can also be set as default values.
+1. Select the **Design (F8)** button to return to design view.
+1. Right click within the list object and select **Insert**, **Indicator** and select **3 Symbols (Uncircled)** and then press **OK**.
+1. Right click the indicator and select **Indicator Properties** and within the dialog window update the following properties.
+    1. Within the **Value and States** group:
+        1. **Value:** equals **[SUM(Total_Sales)]**
+        1. **States Measurement Unit:** equals **Numeric**
+        1. Within the indicators select the middle value (Exclamation point) and select **Delete**
+        1. Within the ❌ value, select the **Fx** icon next to the **End** value and within the **Expression** dialog window, select the **Parameters** category, the **Threshold** parameter and then **OK**.
+        1. Within the ✔ value select the **Fx** icon next to the following values and update accordingly within the **Expression** dialog window:
+            1. **Start** value and the following expression.
+            
+            ```
+            = Parameters!Threshold.Value + 1
+            ```            
+
+            1. **End** value and the following expression.
+        
+            ```
+            =Max(Fields!Total_Sales.Value)
+            ```
+        1. Press **OK** when complete.
+1. Navigate to the ribbon, select the **Home** tab and the **Run (F5)** button. Complete the parameter values and press **View Report** when complete.
+    1. Recommend Start Date as 1/1/2007, End Date as 12/31/2007 and Threshold 25000 - these can also be set as default values.
+
+    ![Formatted Card Values](./Images/FormattedCardValues.png)
+___
+
 # Continue Your Journey
 
 ### Paginated Reports in a Day
@@ -274,6 +377,6 @@ Source: [Paul Turley's SQL Server BI Blog](https://sqlserverbi.blog/paginated-re
 
 ### Twelve Days of Paginated Reports
 
+[Laura Graham-Brown](https://hatfullofdata.blog/) provides a video playlist for those getting started with Paginated Reports and some "Art-of-the-Possible" that extend into subscriptions alongside Power Automate.
 
-
-https://www.youtube.com/watch?v=G9UNql1bTlk&list=PLclDw3xU_tI5bypr74FnLuLGTyuTfKpV1
+Source: [YouTube](https://www.youtube.com/watch?v=G9UNql1bTlk&list=PLclDw3xU_tI5bypr74FnLuLGTyuTfKpV1)
