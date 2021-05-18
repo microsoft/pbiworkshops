@@ -9,7 +9,7 @@ Paginated reports are designed to be printed or shared. They're called paginated
 For this workshop a **Power BI Pro** or **Premium Per User** license and access to a workspace (recommended non-production) is needed to upload the sample Power BI dataset.
 
 **Follow Along:**
-- [Download Power BI Report Builder](https://go.microsoft.com/fwlink/?LinkID=734968)
+- [Download Power BI Report Builder](https://www.microsoft.com/en-us/download/details.aspx?id=58158)
 - [Download the Contoso_Sample.pbix File](https://github.com/microsoft/pbiworkshops/raw/main/Paginated%20Reports%20in%20an%20Hour/Source%20Files/Contoso_Sample.pbix)
 
 
