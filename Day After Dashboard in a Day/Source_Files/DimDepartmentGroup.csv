@@ -1,0 +1,8 @@
+﻿DepartmentGroupKey|ParentDepartmentGroupKey|DepartmentGroupName
+1||Corporate
+2|1|Executive General and Administration
+3|1|Inventory Management
+4|1|Manufacturing
+5|1|Quality Assurance
+6|1|Research and Development
+7|1|Sales and Marketing
