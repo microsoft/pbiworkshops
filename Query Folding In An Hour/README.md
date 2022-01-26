@@ -2,7 +2,7 @@
 
 ### About:
 
-Efficient data processing.
+Query folding is the ability for a Power Query query to generate a single query statement to retrieve and transform source data. The Power Query mashup engine strives to achieve query folding whenever possible for reasons of efficiency.
 
 Website: https://docs.microsoft.com/en-us/power-query/power-query-folding
 ___
@@ -10,7 +10,7 @@ ___
 # Table of Contents
 - [Setup](#setup)
 - [Connectivity Modes](#connectivity-modes)
-- [Query Folding](#query-folding)
+- [Transformations That Can Achieve Query Folding](#transformations-that-can-achieve-query-folding)
     - [Query Optimizer](#query-optimizer)
     - [Recommended Practices](#recommended-practices)
 - [Partial Query Folding](#partial-query-folding)
@@ -44,13 +44,7 @@ ___
 
 ___
 
-# Query Folding
-
-Query folding is the ability for a Power Query query to generate a single query statement to retrieve and transform source data. The Power Query mashup engine strives to achieve query folding whenever possible for reasons of efficiency.
-
-</br>
-
-**Transformations that can achieve query folding:**
+**Transformations that can achieve query folding**
 
 Relational data source transformations that can be query folded are those that can be written as a single **SELECT** statement. A **SELECT** statement can be constructed with appropriate **WHERE**, **GROUP BY** and **JOIN** clauses. It can also contain column expressions (calculations) that use common built-in functions supported by SQL databases.
 
@@ -125,11 +119,6 @@ Each of these tasks is delegated to a separate component within the query proces
 
 </br>
 
-## Transformations that can achieve query folding:
-Relational data source transformations that can be query folded are those that can be written as a single **SELECT** statement. A **SELECT** statement can be constructed with appropriate **WHERE**, **GROUP BY** and **JOIN** clauses. It can also contain column expressions (calculations) that use common built-in functions supported by SQL databases.
-
-</br>
-
 ## Recommended Practices
 
 Every source system and scenario is different with a bold **"it depends"** in terms of production ready guidance; but the following is a suggested framework when applying transformations within the Power Query Editor to structure efficient system generated SQL. The **Query Optimizer** may be more than robust enough for simple queries as demonstrated above but with more complex data transformations performance issues may arise when not carefully constructed.
@@ -148,7 +137,7 @@ ___
 1. Navigate to the **SalesLT.Customer** query and select the **ModifiedDate** column.
 2. While the **ModifiedDate** column is the active selection, within the ribbon select the **Add Column** tab and complete the following operations:
     - Select the **Date** option, **Year** and then select **Year**
-    - Select the **Date** option, **Day** and then select **Name of Day**
+    - (Select **ModifiedDate** once again) Select the **Date** option, **Day** and then select **Name of Day**
 3. Within the Query Settings pane, navigate to the **APPLIED STEPS** section and review the steps to determine if query folding has occurred.
 
 ![Day Name](./Images/DayName.png)
@@ -156,12 +145,6 @@ ___
 
 4. Remove the **Inserted Day Name** step, select the **ModifiedDate** column and within the ribbon select the **Add Column** tab, **Date**, **Day** and **Day of Week**.
     - 1 = Sunday , ... , 7 = Saturday
-
-**🏆 Challenge:** An optional firstDayOfWeek argument exists within the Date.DayOfWeek function, review to determine if this property can be changed to start the week as 1 = Monday.
-
-```
-Date.DayOfWeek( dateTime , firstDayOfWeek )
-```
 
 5. Navigate to the **Add Column** tab and select the **Conditional Column** option.
     - Noting the previous output, edit the **New column name** property to **WeekdayName** and provide the below values and outputs, press the **Add Clause** button to add new conditions.
@@ -184,7 +167,7 @@ Date.DayOfWeek( dateTime , firstDayOfWeek )
 
 ![Day Name](./Images/ColumnType.png)
 
-9. Within the formula bar press the **Add Step** button (Fx) and insert the following complex Power Query M formula:
+9. Within the formula bar press the **Add Step** button (Fx) and insert the following complex Power Query M formula to add a space whenever a capital letter occurs in your column headers:
 
 ```
 = Table.TransformColumnNames( #"Added Conditional Column" , each Text.Combine( Splitter.SplitTextByCharacterTransition({"a".."z"},{"A".."Z"})(_) , " " ) )
@@ -203,7 +186,7 @@ Data sources will support different levels of query capabilities. To provide a c
 
 **Transformations that prevent query folding:**
 
-Merging or appending queries based on different sources. The use of complex logic that have no equivalent functions in the data source.
+Merging or appending queries based on different sources (ex. merging an Excel file or SharePoint list with a SQL table). The use of complex logic that have no equivalent functions in the data source.
 
 ![Partial Folding](./Images/PartialFolding.gif)
 
@@ -274,9 +257,9 @@ ____
 ### Creating an IN condition
 </br>
 
-1. Within the Power Query Editor select **New Source** and then **SQL Server**.
-2. Insert your **Server** address and leave the Data Connectivity mode set to the Import.
-3. Navigate to the **SalesLT.Customer** query
+1. Within the Power Query Editor select **Recent Sources** and the AdventureWorksLT database used throughout the walkthrough.
+2. Select the **SalesLT.Customer** table and press **OK**.
+    - If prompted leave the connectivity mode as **Import**
 4. Navigate to the **Add Column** tab and select the **Conditional Column** option.
     - Edit the **New column name** property to **Gender** and provide the below values and outputs, press the **Add Clause** button to add new conditions. For the **Else** condition use the value **Unknown**
 
@@ -292,27 +275,42 @@ ____
 </br>
 
 5. Within the Query Settings pane, navigate to the **APPLIED STEPS** section and review the steps to determine if query folding has occurred.
-6. Within the formula bar edit the current formula using the [**List.Contains**](https://docs.microsoft.com/en-us/powerquery-m/list-contains) function, [ignore the case sensitivity](https://docs.microsoft.com/en-us/powerquery-m/comparer-functions) and declare the column type:
+6. Within the formula bar replace the current formula to instead use the [**List.Contains**](https://docs.microsoft.com/en-us/powerquery-m/list-contains) function, [ignore any case sensitivity](https://docs.microsoft.com/en-us/powerquery-m/comparer-functions) and declare the column type:
 
-```
-= Table.AddColumn(SalesLT_Customer, "Gender", each if List.Contains({"Mr.", "Sr."}, [Title], Comparer.OrdinalIgnoreCase ) then "Male" else if List.Contains({"Sra.", "Ms."} , [Title] , Comparer.OrdinalIgnoreCase ) then "Female" else "Unknown", type text)
-```
+    - Copy and paste the following formula into the formula bar:
+        ```
+        = Table.AddColumn(SalesLT_Customer, "Gender", each if List.Contains({"Mr.", "Sr."}, [Title], Comparer.OrdinalIgnoreCase ) then "Male" else if List.Contains({"Sra.", "Ms."} , [Title] , Comparer.OrdinalIgnoreCase ) then "Female" else "Unknown", type text )
+        ```
 7. Within the Query Settings pane, navigate to the **APPLIED STEPS** section and review the steps to determine if query folding has occurred.
+
+
 
 ____
 
 </br>
 
-### Joinining Tables
+### Merging Tables
 </br>
 
+1. Within the Power Query Editor select **Recent Sources** and the AdventureWorksLT database used throughout the walkthrough.
+2. Select the **SalesLT.ProductCategory** and the **Select Related Tables** button. Because an existing key exists the **SalesLT.Product** is now selected as well. Press **OK** to continue.
+    - If prompted leave the connectivity mode as **Import**
+3. From the **Home** tab select the **Merge Queries** option, complete the following steps below in the dialog window and press **OK** when complete.
+    - In the **SalesLT Product** table preview select the **ProductCategoryID** column.
+    - In the drop-down select the **SalesLT ProductCategory** table.
+    - In the **SalesLT ProductCategory** table preview select the **ProductCategoryID** column.
+    - Change the **Join Kind** option to **Inner (only matching rows)**
 
+![Merge Dialog Window](./Images/Merge.png)
 
+4. Check the **Merged Queries** step that was now created to ensure Query Folding occurred.
+5. From the **SalesLT ProductCategory** press the **Expand** button, select the **Name** column in the dialog window and then **OK**.
+![Merge Dialog Window](./Images/ExpandColumns.png)
+6. Check the **Expanded SalesLT ProductCategory** step that was now created to ensure Query Folding occurred.
 ___
 
 ## Incremental Refresh:
 - Incremental data refresh (Power BI only) will be efficient, in terms of resource utilization and refresh duration. In fact, the Power BI Incremental Refresh configuration window will notify you of a warning should it determine that query folding for the table cannot be achieved. If it cannot be achieved, the objective of incremental refresh is defeated. The mashup engine would then be required to retrieve all source rows, and then apply filters to determine incremental changes.
-
 
 ___
 
