@@ -324,4 +324,4 @@ ___
 
 [VSCode - Power Query Fomula Language extension](https://marketplace.visualstudio.com/items?itemName=PowerQuery.vscode-powerquery)
 
-**About:** Power Query Formula Language extension for VS Code, includes intellisense and code formating.
+**About:** Power Query Formula Language extension for VS Code, includes intellisense and code formatting.

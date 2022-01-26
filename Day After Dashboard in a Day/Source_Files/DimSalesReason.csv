@@ -1,0 +1,11 @@
+﻿SalesReasonKey|SalesReasonAlternateKey|SalesReasonName|SalesReasonReasonType
+1|1|Price|Other
+2|2|On Promotion|Promotion
+3|3|Magazine Advertisement|Marketing
+4|4|Television  Advertisement|Marketing
+5|5|Manufacturer|Other
+6|6|Review|Other
+7|7|Demo Event|Marketing
+8|8|Sponsorship|Marketing
+9|9|Quality|Other
+10|10|Other|Other
