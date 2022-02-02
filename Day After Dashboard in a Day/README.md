@@ -1,4 +1,4 @@
-:::image type="icon" source="https://raw.githubusercontent.com/microsoft/pbiworkshops/main/_Asset%20Library/powerbi.svg"::: 
+![Power BI](https://raw.githubusercontent.com/microsoft/pbiworkshops/main/_Asset%20Library/powerbi.svg)
 
 # Day After Dashboard in a Day
 
