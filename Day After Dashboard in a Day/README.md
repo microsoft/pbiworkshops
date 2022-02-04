@@ -176,6 +176,27 @@ in
             )
     ```
 
+1. In the **Query settings** pane on the right, navigate to the **Custom1** step, right click and select the **View Native Query** option to review.
+
+1. Right click the **Applied Steps** step named **Custom1** and select **Properties...** to open the **Step Properties** dialog box. Once the **Step Properties** is visible update the **Name** property to **Custom: Gender** and the **Description** field to the below text. Once complete select **OK** to complete.
+
+    ```bash
+    If value is Mr. or Sr. replace with Male.
+    If value is Ms. or Sra. replace with Female.
+    Otherwise replace with Not Provided.
+    ```
+
+    ![Step Properties.](./Media/StepProperties.png)
+
+1. Review the new **Custom: Gender** step's properties by hovering above the step name to view the documentation.
+
+    ![Step documentation.](./Media/StepDocumentation.png)
+
+1. Right click the original **Added Conditional Column** step and select the **Delete** option to remove.
+    1. Selecting the adjacent **X** to the left of the step name is also an option.
+
+    ![Delete.](./Media/DeleteStep.png)
+
 ## Data Modeling
 
 1. Add a **Table** visualization using the following columns:
