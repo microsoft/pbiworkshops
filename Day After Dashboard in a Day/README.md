@@ -18,18 +18,18 @@ By the end of this lab, you will have learned:
 
 [Learn more about the prerequisites for the lab](./Prerequisites.md).
 
-### Dataset
-The AdventureWorks sample databases and Analysis Services models were originally published by Microsoft to show how to design a SQL Server database using SQL Server 2008.
+#### Sample data
+The AdventureWorks sample database is published by Microsoft to show how to design a SQL Server databases and Analysis Services models. 
 
-The company, VanArsdel, manufactures expensive retail products that can be used for fun as well as work. It sells them directly to consumers nationwide as well as in several other countries.
-
-
+To learn more, see [AdventureWorks sample databases](https://docs.microsoft.com/sql/samples/adventureworks-install-configure?view=sql-server-ver15&tabs=ssms).
 
 ## Data Preparation
 
+**Task:** New files are being dropped to a publicly accessible **Web page** which you have been tasked with collecting. All of the files maintain a consistent column naming and data type, and the file names follow a format of **BLAH** to make combining the files easier.
+
 ### Iteration
 
-**Project requirement:** New files are being dropped to a **Web page** which you have been tasked with querying and aggregating. Fortunately, all the files are of the same format, with a consistent column and file naming to make combining the files easier.
+**Project requirement:** New files are being dropped to a publicly accessible **Web page** which you have been tasked with collecting. All of the files maintain a consistent column naming and data type, and the file names follow a format of **BLAH** to make combining the files easier.
 
 1. From the **Home** tab select the drop-down for **Get data** and then **Blank query**.
 
@@ -37,9 +37,10 @@ The company, VanArsdel, manufactures expensive retail products that can be used 
 
 1. Within the **Advanced editor** window update the current query to the text below - creating a custom function that [combines text](https://docs.microsoft.com/powerquery-m/text-combine) and converts to [text from](https://docs.microsoft.com/powerquery-m/text-from) a value. Select **Ok** when complete.
 
-    ```bash
+    ```fsharp
     let
-      fileNameUpdate = (#"File number" as number) as text =>
+        fxFileName =
+            (#"File number" as number) as text =>
                 Text.Combine(
                     {
                         "FactInternetSales_",
@@ -48,29 +49,111 @@ The company, VanArsdel, manufactures expensive retail products that can be used 
                     }
                 )
     in
-      fileNameUpdate
+        fxFileName
+    ```
+2. Open the **Advanced Editor** once again, add a comma to end of the **fXFileName** step and add a new step with the identifier name **Source** which equals a **Record** data type, containing the key values of **fileCount**, **fileName** and **data** and their corresponding values as displayed below and update the return value to **Source** after the text **in**.
+
+    ```fsharp
+    let
+        fxFileName =
+            (#"File number" as number) as text =>
+                Text.Combine(
+                    {
+                        "FactInternetSales_",
+                        Text.From(#"File number"),
+                        ".csv"
+                    }
+                ),
+        Source = [
+            fileCount = 1,
+            fileName = fxFileName(fileCount),
+            data = fxGetFile(fileName)
+        ]
+    in
+        Source
     ```
 
-3. Update
+4. Enable the **Query script** view, to view the full script in the center of the window. 
+    1. To validate the results are updating, change the **fileCount** value to **2** and review the data preview's **fileName** and **data** values.
+    1. Return the **fileCount** value to **1** before proceeding.
 
-```bash
-let
-  fileNameUpdate = (#"File number" as number) as text =>
-            Text.Combine(
-                {
-                    "FactInternetSales_",
-                    Text.From(#"File number"),
-                    ".csv"
-                }
-            ),
-  Source = [
-        fileCount = 1,
-        fileName = fileNameUpdate(fileCount),
-        data = fxGetFile(fileName)
-    ]
-in
-  Source
-```
+    ![Query script](./Media/QueryScript.png)
+
+5. Within the expanded **Query script** view, add a comma to the end of the **Source** step and add a new step with the identifier name **fileList** and value **List.Generate**, and update the return value to **fileList** after the text **in**.
+
+    ```fsharp
+    let
+        fxFileName =
+            (#"File number" as number) as text =>
+                Text.Combine(
+                    {
+                        "FactInternetSales_",
+                        Text.From(#"File number"),
+                        ".csv"
+                    }
+                ),
+        Source = [
+            fileCount = 1,
+            fileName = fxFileName(fileCount),
+            data = fxGetFile(fileName)
+        ],
+        fileList = List.Generate
+    in
+        fileList
+    ```
+
+6. Update the script
+
+    ```fsharp
+    let
+        fxFileName =
+            (#"File number" as number) as text =>
+                Text.Combine(
+                    {
+                        "FactInternetSales_",
+                        Text.From(#"File number"),
+                        ".csv"
+                    }
+                ),
+        Source = [
+            fileCount = 1,
+            fileName = fxFileName(fileCount),
+            data = fxGetFile(fileName)
+        ],
+        fileList =
+            List.Generate(
+                () => Source,
+                each not Table.IsEmpty([data]),
+                each
+                    [
+                        fileCount = [fileCount] + 1,
+                        fileName = fxFileName(fileCount),
+                        data = fxGetFile(fileName)
+                    ]
+            )
+    in
+        fileList
+    ```
+
+5. Create a new **Blank query** and set the **Source** step's value to **#shared** and select **Next** to proceed.
+    1. A record set is returned including the [Power Query M function reference](https://docs.microsoft.com/powerquery-m/power-query-m-function-reference) documentation.
+
+    ```bash
+    let
+      Source = #shared
+    in
+      Source
+    ```
+
+6. From the ribbon, navigate to the **Record tools** tab and select **To table** to convert the current [record to a table](https://docs.microsoft.com/powerquery-m/record-totable) value.
+
+    ![To table](./Media/ToTable.png)
+
+7. Select the **Filter** icon from the **Name** column, the **Text filters** option and then **Begins with...**. Within the **Filter rows** dialog box, in the **Keep rows where "Name"** - **begins with** type in the value **List.** (case sensitive) and select **OK** when complete.
+
+    ![Text filters](./Media/TextFilters.png)
+
+6. FactInternetSales - SURROGATE KEYS on Order Date and Ship Date columns.
 
 ### Data profile
 
@@ -196,6 +279,8 @@ in
     1. Selecting the adjacent **X** to the left of the step name is also an option.
 
     ![Delete.](./Media/DeleteStep.png)
+
+
 
 ## Data Modeling
 
