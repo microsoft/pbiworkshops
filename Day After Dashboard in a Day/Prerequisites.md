@@ -1,5 +1,5 @@
-
 # Prerequisites
+
 The following prerequisites and setup must be done for successful completion of the lab:
 1. You must be connected to the internet.
 1. You must be signed up for a Power BI account.
@@ -7,7 +7,7 @@ The following prerequisites and setup must be done for successful completion of 
 1. You must have a Power BI Premium backed workspace, thru one of the following methods.
     1. Dedicated capacity licensing (P,EM or A)
     1. User based capacity license (Premium Per User).
-1. You must [verify minimum system requirements](https://docs.microsoft.com/power-bi/fundamentals/desktop-get-the-desktop#minimum-requirements) are met Power BI Desktop.
+1. You must [verify minimum system requirements](https://docs.microsoft.com/power-bi/fundamentals/desktop-get-the-desktop#minimum-requirements) are met for Power BI Desktop.
 
 1. You must download and install Power BI Desktop from one of the options listed below:
     1. [Microsoft Store](https://aka.ms/pbidesktop)
@@ -17,6 +17,11 @@ The following prerequisites and setup must be done for successful completion of 
 
 # How to setup your own M365 Tenant
 For future learning: Setup a Personal Tenant
+
+#### Sample data
+The AdventureWorks sample database is published by Microsoft to show how to design a SQL Server databases and Analysis Services models.
+
+To learn more, see [AdventureWorks sample databases](https://docs.microsoft.com/sql/samples/adventureworks-install-configure?view=sql-server-ver15&tabs=ssms).
 
 # Document Structure
 
