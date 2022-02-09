@@ -22,11 +22,11 @@ In this lab you'll learn about how to shape data using the Power Query.
 1. How to write custom functions using the Power Query M formula language.
 1. How to ensure Query folding is occurring.
 
-To start the tutorial, visit [Data Preparation](./DataPreparation.md)
+To start the lab, visit [Data Preparation](./DataPreparation.md)
 
 ## Data Modeling
 
-In this tutorial you'll learn about...
+In this lab you'll learn about...
 
 1. How to configure different [Storage Modes](https://docs.microsoft.com/power-bi/transform-model/desktop-storage-mode) and create [Aggregations](https://docs.microsoft.com/power-bi/transform-model/aggregations-advanced) using Power BI Desktop.
 
@@ -39,9 +39,9 @@ To start the lab, visit [Data Modeling](./DataModeling.md)
 
 ## Data Visualization
 
-In this tutorial you'll learn about...
+In this lab you'll learn about...
 
 - Something
 - Something
 
-To start the tutorial, visit [Data Visualization](./DataVisualization.md)
+To start the lab, visit [Data Visualization](./DataVisualization.md)

@@ -302,5 +302,5 @@ A record set is returned including the [Power Query M function reference](https:
 ## Next steps:
 We hope this tour has shown how the data preparation capabilities in Power BI can provide...
 
-- Continue to the [Data Modeling](.DataModeling.md) tutorial
+- Continue to the [Data Modeling](./DataModeling.md) lab
 - Or return to the [Day After Dashboard in a Day](./README.md) homepage
