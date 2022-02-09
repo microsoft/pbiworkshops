@@ -32,22 +32,24 @@ To learn more, see [Premium features of dataflow](https://docs.microsoft.com/pow
 
 ### Import a dataflow model into a workspace
 
+| Instruction |  |
+| :---- | ---: |
+| 1. Download the sample model.json file. | |
+| 2. Navigate to a group workspace and select the **Settings** option in the top right. Within the navigation pane select the **Premium** tab to ensure that a **Premium** license mode has been enabled from any of the following options below.|<details><summary>VIEW SCREENSHOT</summary>![License mode](./Media/LicenseMode.png)</details>|
+| **License mode:**
+- Premium per user
+- Premium per capacity 
+- Embedded
 
-1. Navigate to a group workspace and select the **Settings** option in the top right. Within the navigation pane select the **Premium** tab. and ensure that a **Premium** license mode has been enabled.
+| | |
+|:--- | ---: |
+| 3. Within the workspace select **New** and then **Dataflow**.| <details><summary>VIEW SCREENSHOT</summary> ![New Dataflow](./Media/NewDataflow.png) </details>|
+| 4. From the Start creating your dataflow screen, select the **Import model** option. **New** and then **Dataflow**. | <details><summary>VIEW SCREENSHOT</summary> ![Import Model](./Media/ImportModel.png) </details>|
+
+
+
     
-    Any of the following options:
-    - [x] Premium per user
-    - [x] Premium per capacity
-    - [x] Embedded 
 
-| ![License mode](./Media/LicenseMode.png) |
-    
-
-1. Within the workspace select **New** and **Dataflow**.
-
-    ![New Dataflow](./Media/NewDataflow.png)
-
-1. 
 
 ### Generate a list of values
 
