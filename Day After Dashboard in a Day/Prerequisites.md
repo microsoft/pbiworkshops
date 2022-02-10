@@ -15,8 +15,11 @@ The following prerequisites and setup must be done for successful completion of 
     1. [Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=58494)
         1. If you have Power BI Desktop installed from Download Center, ensure you have the latest version of downloaded.
 
-# How to setup your own M365 Tenant
-For future learning: Setup a Personal Tenant
+### Trial tenant
+
+https://go.microsoft.com/fwlink/p/?LinkID=698279
+
+[Microsoft 365 developer subscription in Visual Studio subscriptions](https://docs.microsoft.com/visualstudio/subscriptions/vs-m365)
 
 #### Sample data
 The AdventureWorks sample database is published by Microsoft to show how to design a SQL Server databases and Analysis Services models.
