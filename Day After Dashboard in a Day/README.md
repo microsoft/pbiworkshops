@@ -20,9 +20,9 @@ For additional system requirements, see [prerequisites for the lab](./Prerequisi
 
 In this lab you'll learn about how to shape data using the Power Query. 
 
-1. How to prepare and load data into a dataflow using Power Query Online.
-1. How to write custom functions using the Power Query M formula language.
-1. How to determine when a query can be folded.
+1. How to create a [dataflow](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-introduction-self-service) to prepare and load data using Power Query Online.
+1. How to write custom functions using the [Power Query M formula language](https://docs.microsoft.com/powerquery-m/).
+1. How to ensure [query folding](https://docs.microsoft.com/power-query/power-query-folding) is occurring when transforming data.
 
 To start the lab, visit [Data Preparation](./DataPreparation.md)
 

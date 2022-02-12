@@ -1,36 +1,35 @@
 ## Data Preparation
 
-**TO DO** - Learning about the Power Query Online environment and dataflows.
-
-To learn more, see [Premium features of dataflow](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-premium-features)
+#### Sample data
+The sample data for this lab is the AdventureWorks sample database, published by Microsoft to showcase how to design SQL Server databases and Analysis Services models.
 
 ### Import a dataflow model into a workspace
 
 1. Download the sample **model.json** file.
 
-1. Navigate to a group workspace and select the **Settings** option in the top right. Within the **Settings** navigation pane select the **Premium** tab to ensure that a **Premium** license mode has been enabled from any of the following options below.
+1. To use the [premium features of dataflows](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-premium-features) in this lab you'll need to ensure your group workspace has a capacity assigned. In the top right corner of your group workspace, select the **Settings** option and in the navigation pane select the **Premium** tab to confirm that a **Premium** license mode has been enabled from any one of the options below.
 
     **License mode:**
-    - Premium per user
-    - Premium per capacity
-    - Embedded
+    - [Premium per user](https://docs.microsoft.com/power-bi/admin/service-premium-per-user-faq)
+    - [Premium per capacity](https://docs.microsoft.com/power-bi/admin/service-premium-gen2-faq)
+    - [Embedded](https://docs.microsoft.com/power-bi/developer/embedded/embedded-capacity)
 
     ![License mode](./Media/LicenseMode.png)
 
-1. Within the top left of the current workspace select **New** and then **Dataflow**.
+1. After you've confirmed the group workspace has the appropriate license mode enabled, in the top left of the group workspace select **New** and then the **Dataflow** option.
 
     ![New Dataflow](./Media/NewDataflow.png)
 
-1. From the **Start creating your dataflow** screen select the **Import model** option.
+1. From the **Start creating your dataflow** screen, select the **Import model** option and select the **Dataflow demo.json** file from your local workstation.
 
     ![Import Model](./Media/ImportModel.png)
 
-1. Once the import has completed, select **Edit credentials**.
-    1. Alternatively you can click the ellipses (...) next to the dataflow and go to **Settings** within the workspace.
+1. Once the import has successfully completed, select the **Edit credentials** button from the toast notification.
+    1. Alternatively within the workspace you can select the ellipses (...) adjacent to the dataflow name and select the **Settings** option to configure.
 
     ![Edit credentials](./Media/EditCredentials.png)
 
-1. Expand the **Data source credentials** section and select **Edit credentials**. Within the **Configure** dialog box set the following values below and select **Sign in** when complete:
+1. Within the Settings page for the dataflow, expand the **Data source credentials** section and select **Edit credentials** adjacent to the **Web** source. For this lab, you'll be connecting to publicly accessible sample files - to configure the connection in the **Configure** dialog box set the following values below and select **Sign in** when complete:
     1. Authentication method | **Anonymous**
     1. Privacy level setting for this data source | **Public**
         1. To learn more, see [Power Query privacy level settings](https://docs.microsoft.com/power-bi/admin/desktop-privacy-levels#configure-a-privacy-level)
@@ -38,17 +37,24 @@ To learn more, see [Premium features of dataflow](https://docs.microsoft.com/pow
 
     ![Edit credentials](./Media/ConfigureCredentials.png)
 
-### Edit a dataflow using Power Query Online
+---
 
-1. From the workspace, select the ellipses (...) adjacent to the dataflow name and then the **Edit** option.
+### Navigate to the Power Query Online editor and configure Global options
+
+Now that your dataflow has been successfully imported and the credentials set, you'll want to edit the imported model and configure your development environments settings for an optimal authoring experience.
+
+---
+
+1. From the group workspace, select the ellipses (...) adjacent to the dataflow name and then the **Edit** option.
 
     ![Edit dataflow](./Media/EditDataflow.png)
 
-1. Within the top right select the **Edit tables** option to navigate into the Power Query Online interface.
+1. The imported dataflow model included additional standardized metadata as part of the [metadata file (model.json)](https://docs.microsoft.com/common-data-model/model-json). The standardized format enables discovery across other Microsoft products and provide semantic information to the applications - including the table information's column types, metadata descriptions and more. To update the dataflow's model in the top right select the **Edit tables** option to navigate into the Power Query Online interface.
 
     ![Edit tables](./Media/EditTables.png)
 
-1. Within the Power Query Online editor's **Home** tab, select the **Options** - **Global options** property.
+1. Within the Power Query Online editor you'll want to enable additional authoring settings which will persist across all projects - from the **Home** tab - select the **Options** > **Global options** property.
+    1. 
 
     ![Global options](./Media/GlobalOptions.png)
 
@@ -57,18 +63,28 @@ To learn more, see [Premium features of dataflow](https://docs.microsoft.com/pow
     **Steps**
     1. Enable step cost indicators
     1. Show script in step callout
+
     **Column profile**
     1. Enable column profile
     1. Show column value distribution in data preview
     1. Show column value distribution in data preview
     1. Show column profile in details pane
+
+    **Type detection**
+    1. Never detect column types and headers for unstructured sources
+
     **Parameters**
     1. Always allow parameterization in data source and transformation dialogs
-1. 
+
+    ![Global options window](./Media/GlobalOptionsWindow.png)
+
+---
 
 ### Generate a list of values
 
-**Task:** New files are being dropped to a publicly accessible **Web page** which you have been tasked with collecting. All of the files maintain a consistent column - naming, data type - and the file names follow a format of **FactInternetSales_#.csv** to make combining the files easier.
+New information is being added to a file location (**Web page**) which you will need to combine during refresh activities to perform ongoing analysis. The total number of files that will be added is unknown but will continue to grow with time, to which you should account for with a [future proof](https://docs.microsoft.com/power-query/best-practices#future-proofing-queries) based solution. Fortunately, the files maintain a consistent column naming, data type and file naming (**FactInternetSales_#.csv**) to make collecting and appending new data easier.
+
+---
 
 1. From the **Home** tab select the drop-down for **Get data** and then **Blank query**.
 
@@ -173,8 +189,17 @@ To learn more, see [Premium features of dataflow](https://docs.microsoft.com/pow
     in
         fileList
     ```
+5. Within the **List tools** tab, select the **To table** option to convert the list to a table.
+
+    ![List tools](./Media/ListToTable.png)
+
+6. Within the top right of **Column1**, select the expand columns icon, disable the **Use original column name as prefix** option and select **OK** when complete.
+
+    ![Expand columns](./Media/ExpandColumns.png)
 
 5. FactInternetSales - SURROGATE KEYS on Order Date and Ship Date columns.
+
+
 
 ### Power Query M function reference
 
@@ -242,7 +267,7 @@ A record set is returned including the [Power Query M function reference](https:
 
     ![View Native Query for Conditional Column.](./Media/ConditionalQuery.png)
 
-1. From the **Formula bar** select the **Add Step** button and paste in the following formula below.
+1. From the **Formula bar** select the **Add Step** button and type in the following formula below.
     1. If the **Formula Bar** is not enabled navigate to the **View** tab and select the **Formula Bar** checkbox.
 
     ![Add Step.](./Media/AddStep.png)
@@ -278,7 +303,9 @@ A record set is returned including the [Power Query M function reference](https:
             )
     ```
 
-1. In the **Query settings** pane on the right, navigate to the **Custom1** step, right click and select the **View Native Query** option to review.
+1. In the **Query settings** pane on the right, navigate to the **Custom1** step, right click and select the **View Native Query** option to review the difference in the generated query which now uses the [IN (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/language-elements/in-transact-sql?view=sql-server-ver15) clause.
+
+    ![List contains.](./Media/ListContains.png)
 
 1. Right click the **Applied Steps** step named **Custom1** and select **Properties...** to open the **Step Properties** dialog box. Once the **Step Properties** is visible update the **Name** property to **Custom: Gender** and the **Description** field to the below text. Once complete select **OK** to complete.
 

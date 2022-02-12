@@ -1,5 +1,10 @@
 ## Data Modeling
 
+1. Create relationships
+1. Referential integrity
+1. Snowflake schema
+1. Star Schema
+
 1. Add a **Table** visualization using the following columns:
 
 | Table | Column |
