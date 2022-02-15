@@ -1,13 +1,15 @@
 ## Data Preparation
 
 #### Sample data
-The sample data for this lab is the AdventureWorks sample database, published by Microsoft to showcase how to design SQL Server databases and Analysis Services models.
+The data for this lab is the AdventureWorks sample database, published by Microsoft to showcase how to design SQL Server databases and Analysis Services models.
 
-### Import a dataflow model into a workspace
+### Import a dataflow model into a group workspace and edit credentials
 
-1. Download the sample **model.json** file.
+A dataflow has been partially started, which we'll now be responsible for editing to the labs completion. To get started we'll import the existing dataflow model and edit credentials, so that you can transform the data and perform refresh operations.
 
-1. To use the [premium features of dataflows](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-premium-features) in this lab you'll need to ensure your group workspace has a capacity assigned. In the top right corner of your group workspace, select the **Settings** option and in the navigation pane select the **Premium** tab to confirm that a **Premium** license mode has been enabled from any one of the options below.
+1. Download the sample **Dataflow demo.json** file, which contains the metadata format.
+
+1. To use the [premium features of dataflows](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-premium-features) in this lab we'll need to ensure the group workspace has a capacity assigned. In the top right corner of the group workspace, select the **Settings** option and in the navigation pane select the **Premium** tab to confirm that a **Premium** license mode has been enabled from any one of the options below.
 
     **License mode:**
     - [Premium per user](https://docs.microsoft.com/power-bi/admin/service-premium-per-user-faq)
@@ -20,16 +22,16 @@ The sample data for this lab is the AdventureWorks sample database, published by
 
     ![New Dataflow](./Media/NewDataflow.png)
 
-1. From the **Start creating your dataflow** screen, select the **Import model** option and select the **Dataflow demo.json** file from your local workstation.
+1. From the **Start creating your dataflow** screen, select the **Import model** option to import the an existing model and select the **Dataflow demo.json** file from the local destination.
 
     ![Import Model](./Media/ImportModel.png)
 
 1. Once the import has successfully completed, select the **Edit credentials** button from the toast notification.
-    1. Alternatively within the workspace you can select the ellipses (...) adjacent to the dataflow name and select the **Settings** option to configure.
+    1. Alternatively within the workspace you can also select the vertical ellipses ( ⋮ ) adjacent to the dataflow name and then select the **Settings** option to configure.
 
     ![Edit credentials](./Media/EditCredentials.png)
 
-1. Within the Settings page for the dataflow, expand the **Data source credentials** section and select **Edit credentials** adjacent to the **Web** source. For this lab, you'll be connecting to publicly accessible sample files - to configure the connection in the **Configure** dialog box set the following values below and select **Sign in** when complete:
+1. Within the Settings page for the dataflow, expand the **Data source credentials** section and select **Edit credentials** adjacent to the **Web** source. For this lab, we'll be connecting to publicly accessible sample files - to configure the connection in the **Configure** dialog box set the following values below and select **Sign in** when complete:
     1. Authentication method | **Anonymous**
     1. Privacy level setting for this data source | **Public**
         1. To learn more, see [Power Query privacy level settings](https://docs.microsoft.com/power-bi/admin/desktop-privacy-levels#configure-a-privacy-level)
@@ -39,9 +41,9 @@ The sample data for this lab is the AdventureWorks sample database, published by
 
 ---
 
-### Navigate to the Power Query Online editor and configure Global options
+### Configure Global options in the Power Query Online editor
 
-Now that your dataflow has been successfully imported and the credentials set, you'll want to edit the imported model and configure your development environments settings for an optimal authoring experience.
+Now that our dataflow has been successfully imported and the credentials set, we'll want to configure the development experience for an optimal workflow when authoring in the Power Query Online editor.
 
 ---
 
@@ -49,17 +51,16 @@ Now that your dataflow has been successfully imported and the credentials set, y
 
     ![Edit dataflow](./Media/EditDataflow.png)
 
-1. The imported dataflow model included additional standardized metadata as part of the [metadata file (model.json)](https://docs.microsoft.com/common-data-model/model-json). The standardized format enables discovery across other Microsoft products and provide semantic information to the applications - including the table information's column types, metadata descriptions and more. To update the dataflow's model in the top right select the **Edit tables** option to navigate into the Power Query Online interface.
+1. The imported dataflow model included additional standardized metadata as part of the [metadata file (model.json)](https://docs.microsoft.com/common-data-model/model-json). The standardized format enables discovery across other Microsoft products and provide semantic information to applications - including the table information's column types, metadata descriptions and more. To update the dataflow model in the top right select the **Edit tables** option to navigate into the Power Query Online interface.
 
     ![Edit tables](./Media/EditTables.png)
 
 1. Within the Power Query Online editor you'll want to enable additional authoring settings which will persist across all projects - from the **Home** tab - select the **Options** > **Global options** property.
-    1. 
 
     ![Global options](./Media/GlobalOptions.png)
 
 1. Within the **Global options** window ensure the following settings are enabled.
-    
+
     **Steps**
     1. Enable step cost indicators
     1. Show script in step callout
@@ -82,15 +83,15 @@ Now that your dataflow has been successfully imported and the credentials set, y
 
 ### Generate a list of values
 
-New information is being added to a file location (**Web page**) which you will need to combine during refresh activities to perform ongoing analysis. The total number of files that will be added is unknown but will continue to grow with time, to which you should account for with a [future proof](https://docs.microsoft.com/power-query/best-practices#future-proofing-queries) based solution. Fortunately, the files maintain a consistent column naming, data type and file naming (**FactInternetSales_#.csv**) to make collecting and appending new data easier.
+Now that you're ready to begin transforming data, this portion of the labs requirements are as follows - new information is being added to a file location (**Web page**) which you will need to combine during refresh activities for ongoing analysis. The total number of files that will be added is unknown but will continue to grow with time, to which you should account for with a [future proof](https://docs.microsoft.com/power-query/best-practices#future-proofing-queries) solution. Fortunately, the files maintain a consistent column naming, data type and file naming (**FactInternetSales_#.csv**) to make collecting and appending new data easier.
 
 ---
 
-1. From the **Home** tab select the drop-down for **Get data** and then **Blank query**.
+1. From the **Home** tab select the drop-down for **Get data** and the **Blank query** option to create a new query.
 
     ![New Blank Query](./Media/NewBlankQuery.png)
 
-1. Within the **Advanced editor** window update the current query to the text below - creating a custom function that [combines text](https://docs.microsoft.com/powerquery-m/text-combine) and converts to [text from](https://docs.microsoft.com/powerquery-m/text-from) a value. Select **Ok** when complete.
+1. Within the **Advanced editor** window, we'll create a custom function for our file name that [combines text](https://docs.microsoft.com/powerquery-m/text-combine) for our prefix, file number and file extension and converts the [text from](https://docs.microsoft.com/powerquery-m/text-from) a value. Select **Ok** when complete.
 
     ```fsharp
     let
@@ -189,15 +190,28 @@ New information is being added to a file location (**Web page**) which you will 
     in
         fileList
     ```
-5. Within the **List tools** tab, select the **To table** option to convert the list to a table.
+1. Within the **List tools** tab, select the **To table** option to convert the list to a table.
 
     ![List tools](./Media/ListToTable.png)
 
-6. Within the top right of **Column1**, select the expand columns icon, disable the **Use original column name as prefix** option and select **OK** when complete.
+1. In the top right of the **Column1** column - select the expand columns icon, disable the **Use original column name as prefix** option and select **OK** when complete.
 
     ![Expand columns](./Media/ExpandColumns.png)
 
-5. FactInternetSales - SURROGATE KEYS on Order Date and Ship Date columns.
+1. Right click the **data** column and select the **Remove other columns** option to remove all other columns from the current table. 
+
+    ![Remove other columns](./Media/RemoveOtherColumns.png)
+
+1. In the top right of the **data** column - select the expand columns icon, disable the **Use original column name as prefix** option and select **OK** when complete.
+
+    ![Expand data column](./Media/ExpandDataColumn.png)
+
+1. While holding the **shift** key on our keyboard, select the **ProductKey** column and then **Freight** column to highlight all columns in your table. Navigate to the **Transform** tab and then select **Detect data type** to change the current columns [any value](https://docs.microsoft.com/power-query/data-types) (ABC123) to a more appropriate data type automatically.
+    1. You can also select any cell in your table and press **Ctrl+A** to select all cells and columns.
+
+    ![Detect data type](./Media/DetectDataType.png)
+
+1. FactInternetSales - SURROGATE KEYS on Order Date and Ship Date columns.
 
 
 
@@ -232,7 +246,7 @@ A record set is returned including the [Power Query M function reference](https:
 
     ![Power Platform dataflows.](./Media/ppDataflows.png)
 
-1. Within the **Navigator** window, navigate to the group Workspace where your dataflow is located and select all of the tables located within the dataflow. Select **Transform Data** when complete to enter the **Power Query Editor** window.
+1. Within the **Navigator** window, navigate to the group Workspace where the dataflow is located and select all of the tables located within the dataflow. Select **Transform Data** when complete to enter the **Power Query Editor** window.
 
     ![Get dataflow tables.](./Media/getDataDataflow.png)
 
