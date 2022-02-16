@@ -5,11 +5,11 @@ The data for this lab is the AdventureWorks sample database, published by Micros
 
 ### Import a dataflow model into a group workspace and edit credentials
 
-A dataflow has been partially started, which we'll now be responsible for editing to the labs completion. To get started we'll import the existing dataflow model and edit credentials, so that you can transform the data and perform refresh operations.
+A dataflow has been partially started, which we'll now utilize to the labs completion. To get started we'll import the existing dataflow model and edit credentials, so that we can transform the data and perform refresh operations.
 
-1. Download the sample **Dataflow demo.json** file, which contains the metadata format.
+1. Download the sample **Dataflow demo.json** file, which contains the dataflow model.
 
-1. To use the [premium features of dataflows](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-premium-features) in this lab we'll need to ensure the group workspace has a capacity assigned. In the top right corner of the group workspace, select the **Settings** option and in the navigation pane select the **Premium** tab to confirm that a **Premium** license mode has been enabled from any one of the options below.
+1. Navigate to a new, empty or non-production group workspace to utilize the [premium features of dataflows](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-premium-features) for this lab. To confirm a group workspace has a capacity assigned - in the top right corner of the group workspace, select the **Settings** option and in the navigation pane select the **Premium** tab to confirm that a **Premium** license mode has been enabled from any one of the options below.
 
     **License mode:**
     - [Premium per user](https://docs.microsoft.com/power-bi/admin/service-premium-per-user-faq)
@@ -22,16 +22,16 @@ A dataflow has been partially started, which we'll now be responsible for editin
 
     ![New Dataflow](./Media/NewDataflow.png)
 
-1. From the **Start creating your dataflow** screen, select the **Import model** option to import the an existing model and select the **Dataflow demo.json** file from the local destination.
+1. From the **Start creating your dataflow** screen, select the **Import Model** option to import an existing dataflow model and then select the **Dataflow demo.json** file downloaded from the previous step to a local save destination.
 
     ![Import Model](./Media/ImportModel.png)
 
-1. Once the import has successfully completed, select the **Edit credentials** button from the toast notification.
-    1. Alternatively within the workspace you can also select the vertical ellipses ( ⋮ ) adjacent to the dataflow name and then select the **Settings** option to configure.
+1. Once the import has successfully completed, we can select the **Edit credentials** button from the toast notification in the top right.
+    1. Alternatively within the workspace we can also select the vertical ellipses ( ⋮ ) adjacent to the dataflow name and then the **Settings** option to configure.
 
     ![Edit credentials](./Media/EditCredentials.png)
 
-1. Within the Settings page for the dataflow, expand the **Data source credentials** section and select **Edit credentials** adjacent to the **Web** source. For this lab, we'll be connecting to publicly accessible sample files - to configure the connection in the **Configure** dialog box set the following values below and select **Sign in** when complete:
+1. Within the Settings page for the dataflow, expand the **Data source credentials** section and select **Edit credentials** adjacent to the **Web** source. For this lab, we'll be connecting to publicly accessible sample files in this GitHub repository - to complete the configuration in the **Configure** dialog box set the following values below and then select **Sign in** once complete:
     1. Authentication method | **Anonymous**
     1. Privacy level setting for this data source | **Public**
         1. To learn more, see [Power Query privacy level settings](https://docs.microsoft.com/power-bi/admin/desktop-privacy-levels#configure-a-privacy-level)
@@ -51,7 +51,7 @@ Now that our dataflow has been successfully imported and the credentials set, we
 
     ![Edit dataflow](./Media/EditDataflow.png)
 
-1. The imported dataflow model included additional standardized metadata as part of the [metadata file (model.json)](https://docs.microsoft.com/common-data-model/model-json). The standardized format enables discovery across other Microsoft products and provide semantic information to applications - including the table information's column types, metadata descriptions and more. To update the dataflow model in the top right select the **Edit tables** option to navigate into the Power Query Online interface.
+1. Our imported dataflow model includes additional standardized categories as part of the [metadata file (model.json)](https://docs.microsoft.com/common-data-model/model-json). The standardized format enables discovery across other Microsoft products and provide semantic information to applications - including the table information's column types, metadata descriptions and more. To update the dataflow model in the top right select the **Edit tables** option to navigate into the Power Query Online interface.
 
     ![Edit tables](./Media/EditTables.png)
 
@@ -107,7 +107,13 @@ Now that you're ready to begin transforming data, this portion of the labs requi
     in
       fxFileName
     ```
-2. Open the **Advanced Editor** once again, add a comma to end of the **fXFileName** step and add a new step with the identifier name **Source** which equals a **Record** data type, containing the key values of **fileCount**, **fileName** and **data** and their corresponding values as displayed below and update the return value to **Source** after the text **in**.
+2. Open the **Advanced Editor** once again, add a comma to end of the **fXFileName** step and add a new step with the identifier name **Source** which equals a **Record** data type, containing the names **fileCount**, **fileName** and **data** and their corresponding value pairing as displayed below and update the return value to **Source** after the text **in**.
+    
+    | Name | Value |
+    | :--- | :---- |
+    | fileCount | 1 |
+    | fileName | fxFileName(fileCount) |
+    | data | fxGetFile(fileName) |
 
     ```fsharp
     let
@@ -135,7 +141,8 @@ Now that you're ready to begin transforming data, this portion of the labs requi
 
     ![Query script](./Media/QueryScript.png)
 
-5. Within the expanded **Query script** view, add a comma to the end of the **Source** step and add a new step with the identifier name **fileList** and value **List.Generate**, and update the return value to **fileList** after the text **in**.
+5. Within the expanded **Query script** view, add a comma to the end of the **Source** step and add a new step with the step identifier name of **fileList** with the **List.Generate** function value, and update the text after the **in** statement to **fileList** to review the functions documentation.
+    1. Typing any function name without the open and closed parenthesis proceeding will return the function's documentation.
 
     ```fsharp
     let
@@ -158,7 +165,10 @@ Now that you're ready to begin transforming data, this portion of the labs requi
       fileList
     ```
 
-6. Update the script
+6. Now that you've reviewed the documentation, update the **Query script** view to the below.
+    1. For the **initial** parameter include the goes-to "**=>**" symbol and then the **Source** step.
+    1. For the **condition** parameter, we'll use square brackets to reference the initialized **Source** value's **[data]** to logically test that the returned value is **not** empty, when using the **[Table.IsEmpty()](https://docs.microsoft.com//powerquery-m/table-isempty)** function.
+    1. For the **next** parameter, create a record that matches the **Source** step's **fileCount**, **fileName** and **data** fields and increment the **fileCount** by it's current integer value plus **one**.
 
     ```fsharp
     let
@@ -190,11 +200,11 @@ Now that you're ready to begin transforming data, this portion of the labs requi
     in
         fileList
     ```
-1. Within the **List tools** tab, select the **To table** option to convert the list to a table.
+1. To convert out returned list to a table, navigate to the **List tools** tab in the ribbon and select the **To table** option.
 
     ![List tools](./Media/ListToTable.png)
 
-1. In the top right of the **Column1** column - select the expand columns icon, disable the **Use original column name as prefix** option and select **OK** when complete.
+1. In the top right of the **Column1** column - we'll select the expand columns icon, and disable the **Use original column name as prefix** option and select **OK** when complete.
 
     ![Expand columns](./Media/ExpandColumns.png)
 
@@ -202,7 +212,7 @@ Now that you're ready to begin transforming data, this portion of the labs requi
 
     ![Remove other columns](./Media/RemoveOtherColumns.png)
 
-1. In the top right of the **data** column - select the expand columns icon, disable the **Use original column name as prefix** option and select **OK** when complete.
+1. In the top right of the **data** column - select the expand columns icon, disable the **Use original column name as prefix** option and select **OK** when complete.(#tab/step)
 
     ![Expand data column](./Media/ExpandDataColumn.png)
 
@@ -211,13 +221,13 @@ Now that you're ready to begin transforming data, this portion of the labs requi
 
     ![Detect data type](./Media/DetectDataType.png)
 
-1. FactInternetSales - SURROGATE KEYS on Order Date and Ship Date columns.
+1. Within the **Query settings** pane, change the **Name** of the completed query to **FactInternetSales_raw**.
 
+    ![Query name](./Media/QueryName.png)
 
+### Optional: Power Query M function reference
 
-### Power Query M function reference
-
-To view a complete list of function documentation, from the **Home** tab select **Get data** and **Blank query**. Update the **Source** step value to **#shared** and select **Next** to proceed.
+To view a complete list of Power Query function documentation, from the **Home** tab select **Get data** and **Blank query**. Update the **Source** step value to **#shared** and select **Next** to proceed.
 
 ```fsharp
 let
@@ -227,8 +237,55 @@ in
 ```
 A record set is returned including the [Power Query M function reference](https://docs.microsoft.com/powerquery-m/power-query-m-function-reference) documentation.
 
+### Grouping queries
 
-### Enhanced compute engine
+1. In the **Queries** pane, while holding **ctrl**, select the following tables from the list below, once complete right click and select the **Move to group** > **New group...** option.
+
+    1. DimProduct_raw
+    1. DimProductCategory_raw
+    1. DimProductSubcategory_raw
+    1. FactInternetSales_raw
+
+    ![Query name](./Media/StagingGroup.png)
+
+    1. In the **New group** window set the name to **Data staging** and the **Description** to the following text below and select **Ok** once complete.
+
+        ```
+        Data that will be ingested from the source and referenced in computed tables for transformations via the enhanced compute engine.
+        ```
+    
+        ![New group](./Media/NewGroup.png)
+
+1. In the **Queries** pane, while holding **ctrl**, select the following tables from the list below, once complete right click and select the **Move to group** > **New group...** option.
+
+    1. DimCustomer
+    1. DimDate
+    1. DimEmployee
+    1. DimGeography
+
+    ![Query name](./Media/NewGroupDataLoad.png)
+
+    1. In the **New group** window set the name to **Data load** and the **Description** to the following text below and select **Ok** once complete.
+
+        ```
+        Data that will be ingested from the source without transformations.
+        ```
+    
+        ![New group](./Media/NewGroupDataLoadDescription.png)
+
+1. Our **Queries** pane now contains two groups to help make managing and distinguishing our queries intent more effective at a glance. For more detail we can also hover above the group's folder icon where the **description** value of each will be visible.
+
+![New group](./Media/GroupDescription.png)
+
+
+
+### Computed tables for transformation logic
+
+1. 
+
+1. FactInternetSales - SURROGATE KEYS on Order Date and Ship Date columns.
+
+### Enabling the enhanced compute engine
 
 1. Within the **Enhanced compute engine settings**, select the **On** option and then select the **Apply** button.
 
