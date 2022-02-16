@@ -1,11 +1,11 @@
 ## Data Preparation
 
 #### Sample data
-The data for this lab is the AdventureWorks sample database, published by Microsoft to showcase how to design SQL Server databases and Analysis Services models.
+The data for this lab is from the AdventureWorks sample database, published by Microsoft to showcase how to design SQL Server databases and Analysis Services models.
 
 ### Import a dataflow model into a group workspace and edit credentials
 
-A dataflow has been partially started, which we'll now utilize to the labs completion. To get started we'll import the existing dataflow model and edit credentials, so that we can transform the data and perform refresh operations.
+A dataflow has been partially started, which we'll utilize to the labs completion. To get started we'll import the existing dataflow model and edit credentials, so that we can ingest and transform our data and perform refresh operations.
 
 1. Download the sample **Dataflow demo.json** file, which contains the dataflow model.
 
@@ -18,7 +18,7 @@ A dataflow has been partially started, which we'll now utilize to the labs compl
 
     ![License mode](./Media/LicenseMode.png)
 
-1. After you've confirmed the group workspace has the appropriate license mode enabled, in the top left of the group workspace select **New** and then the **Dataflow** option.
+1. After we've confirmed the group workspace has the appropriate license mode enabled, in the top left of the group workspace select **New** and then the **Dataflow** option.
 
     ![New Dataflow](./Media/NewDataflow.png)
 
@@ -43,7 +43,7 @@ A dataflow has been partially started, which we'll now utilize to the labs compl
 
 ### Configure Global options in the Power Query Online editor
 
-Now that our dataflow has been successfully imported and the credentials set, we'll want to configure the development experience for an optimal workflow when authoring in the Power Query Online editor.
+With our dataflow successfully imported and credentials set, we'll want to configure our development environment's experience for an optimal workflow when authoring in the Power Query Online editor.
 
 ---
 
@@ -55,7 +55,7 @@ Now that our dataflow has been successfully imported and the credentials set, we
 
     ![Edit tables](./Media/EditTables.png)
 
-1. Within the Power Query Online editor you'll want to enable additional authoring settings which will persist across all projects - from the **Home** tab - select the **Options** > **Global options** property.
+1. Within the Power Query Online editor we'll want to enable additional authoring settings which will persist across all projects - from the **Home** tab - select the **Options** > **Global options** property.
 
     ![Global options](./Media/GlobalOptions.png)
 
@@ -83,7 +83,7 @@ Now that our dataflow has been successfully imported and the credentials set, we
 
 ### Generate a list of values
 
-Now that you're ready to begin transforming data, this portion of the labs requirements are as follows - new information is being added to a file location (**Web page**) which you will need to combine during refresh activities for ongoing analysis. The total number of files that will be added is unknown but will continue to grow with time, to which you should account for with a [future proof](https://docs.microsoft.com/power-query/best-practices#future-proofing-queries) solution. Fortunately, the files maintain a consistent column naming, data type and file naming (**FactInternetSales_#.csv**) to make collecting and appending new data easier.
+Now that we're ready to begin ingesting data, for this portion of the lab our scenario is as follows - new information is being added to a (**Web page**) file location which we'll combine during refresh activities for our analysis. The total number of files that will be added is unknown but will continue to grow with time, to which we'll need to account for with a [future proofed](https://docs.microsoft.com/power-query/best-practices#future-proofing-queries) solution. Fortunately for us, the files maintain a consistent column naming, data type and file naming structure (**FactInternetSales_#.csv**) to make collecting and appending new data easier.
 
 ---
 
@@ -107,6 +107,7 @@ Now that you're ready to begin transforming data, this portion of the labs requi
     in
       fxFileName
     ```
+
 2. Open the **Advanced Editor** once again, add a comma to end of the **fXFileName** step and add a new step with the identifier name **Source** which equals a **Record** data type, containing the names **fileCount**, **fileName** and **data** and their corresponding value pairing as displayed below and update the return value to **Source** after the text **in**.
     
     | Name | Value |
@@ -165,7 +166,7 @@ Now that you're ready to begin transforming data, this portion of the labs requi
       fileList
     ```
 
-6. Now that you've reviewed the documentation, update the **Query script** view to the below.
+6. Now that we've reviewed the documentation, update the **Query script** view to the below.
     1. For the **initial** parameter include the goes-to "**=>**" symbol and then the **Source** step.
     1. For the **condition** parameter, we'll use square brackets to reference the initialized **Source** value's **[data]** to logically test that the returned value is **not** empty, when using the **[Table.IsEmpty()](https://docs.microsoft.com//powerquery-m/table-isempty)** function.
     1. For the **next** parameter, create a record that matches the **Source** step's **fileCount**, **fileName** and **data** fields and increment the **fileCount** by it's current integer value plus **one**.
@@ -216,8 +217,8 @@ Now that you're ready to begin transforming data, this portion of the labs requi
 
     ![Expand data column](./Media/ExpandDataColumn.png)
 
-1. While holding the **shift** key on our keyboard, select the **ProductKey** column and then **Freight** column to highlight all columns in your table. Navigate to the **Transform** tab and then select **Detect data type** to change the current columns [any value](https://docs.microsoft.com/power-query/data-types) (ABC123) to a more appropriate data type automatically.
-    1. You can also select any cell in your table and press **Ctrl+A** to select all cells and columns.
+1. While holding the **shift** key on our keyboard, select the **ProductKey** column and then **Freight** column to highlight all columns in our table. Navigate to the **Transform** tab and then select **Detect data type** to change the current columns [any value](https://docs.microsoft.com/power-query/data-types) (ABC123) to a more appropriate data type automatically.
+    1. We can also select any cell in our table and press **Ctrl+A** to select all cells and columns.
 
     ![Detect data type](./Media/DetectDataType.png)
 
@@ -275,13 +276,31 @@ A record set is returned including the [Power Query M function reference](https:
 
 1. Our **Queries** pane now contains two groups to help make managing and distinguishing our queries intent more effective at a glance. For more detail we can also hover above the group's folder icon where the **description** value of each will be visible.
 
-![New group](./Media/GroupDescription.png)
+    ![New group](./Media/GroupDescription.png)
 
-
+---
 
 ### Computed tables for transformation logic
 
-1. 
+With data now being ingested and stored in our dataflow's [Azure Data Lake Storage Gen2](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-introduction), we'll want to leverage [computed tables](https://docs.microsoft.com/power-query/dataflows/computed-entities-scenarios) to apply our transformation logic via the enhanced compute engine. 
+
+[Learn more about the benefits of loading data without transformation for Text/CSV files](https://docs.microsoft.com/power-query/dataflows/computed-entities-scenarios#load-data-without-transformation-for-textcsv-files)
+
+---
+
+1. In the **Queries** pane - right click the **FactInternetSales_raw** table you created earlier and select **Reference** to create a computed table. Once complete you will see a new query has been created with a lightning bolt icon (⚡) indicating that this is now a computed table.
+
+    ![Query reference](./Media/QueryReference.png)
+
+1. In the **Queries** pane - right click the **FactInternetSales_raw (2)** table, select **Rename** and update the query title to **FactInternetSales**.
+
+    ![Rename option](./Media/RenameOption.png)
+
+1. In the **Queries** pane - right click the **FactInternetSales** computed table, select the following tables from the list below, once complete right click and select the **Move to group** > **New group...** option and complete the following.
+    1. **Name:** Data transformation
+    1. **Description:** Data that will be ingested from the data lake storage for transformations.
+
+    ![Transformation group](./Media/NewGroupTransformation.png)
 
 1. FactInternetSales - SURROGATE KEYS on Order Date and Ship Date columns.
 
@@ -291,7 +310,7 @@ A record set is returned including the [Power Query M function reference](https:
 
 ![Enhanced compute engine settings.](./Media/EnhancedComputeEngineSettings.png)
 
-1. After you've received the **Success!** notification, return to the workspace and select the **Refresh now** option of the datalfow for the optimization to take effect.
+1. After we've received the **Success!** notification, return to the workspace and select the **Refresh now** option of the datalfow for the optimization to take effect.
 
     ![Refresh now.](./Media/RefreshNow.png)
 
