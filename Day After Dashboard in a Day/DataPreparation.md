@@ -3,9 +3,13 @@
 ## Sample data
 The data for this lab is from the AdventureWorks sample database, published by Microsoft to showcase how to design SQL Server databases and Analysis Services models.
 
-## Import a dataflow model into a group workspace and edit credentials
+---
 
-A dataflow has been partially started, which we'll utilize to the labs completion. To get started we'll import the existing dataflow model and edit credentials, so that we can ingest and transform our data and perform refresh operations.
+# Import a dataflow model into a group workspace
+
+A dataflow has been partially started, which we'll utilize to the labs completion. To get started we'll import the existing dataflow model and edit the credentials so that we can ingest the sample files, transform our data and perform a refresh operation.
+
+---
 
 1. Download the sample **Dataflow demo.json** file, which contains the dataflow model.
 
@@ -26,6 +30,8 @@ A dataflow has been partially started, which we'll utilize to the labs completio
 
     ![Import Model](./Media/ImportModel.png)
 
+## Edit the dataflow credentials
+
 1. Once the import has successfully completed, we can select the **Edit credentials** button from the toast notification in the top right.
     1. Alternatively within the workspace we can also select the vertical ellipses ( ⋮ ) adjacent to the dataflow name and then the **Settings** option to configure.
 
@@ -41,9 +47,9 @@ A dataflow has been partially started, which we'll utilize to the labs completio
 
 ---
 
-## Configure Global options in the Power Query Online editor
+# Configure Global options in the Power Query Online editor
 
-With our dataflow successfully imported and credentials set, we'll want to configure our development environment's experience for an optimal workflow when authoring in the Power Query Online editor.
+With our dataflow successfully imported and credentials set, we'll want to configure our development environment's experience when authoring in the Power Query Online editor.
 
 ---
 
@@ -51,15 +57,15 @@ With our dataflow successfully imported and credentials set, we'll want to confi
 
     ![Edit dataflow](./Media/EditDataflow.png)
 
-1. Our imported dataflow model includes additional standardized categories as part of the [metadata file (model.json)](https://docs.microsoft.com/common-data-model/model-json). The standardized format enables discovery across other Microsoft products and provide semantic information to applications - including the table information's column types, metadata descriptions and more. To update the dataflow model in the top right select the **Edit tables** option to navigate into the Power Query Online interface.
+1. Our imported dataflow model includes additional standardized categories as part of the [metadata file (model.json)](https://docs.microsoft.com/common-data-model/model-json). The standardized format enables discovery across other Microsoft products and provides the semantic information to those applications - including the tables, columns, metadata descriptions and more. To update the dataflow model in the top right we'll select the **Edit tables** option to navigate into the Power Query Online experience.
 
     ![Edit tables](./Media/EditTables.png)
 
-1. Within the Power Query Online editor we'll want to enable additional authoring settings which will persist across all projects - from the **Home** tab - select the **Options** > **Global options** property.
+1. Before we begin using the Power Query Online interface we'll enable some additional authoring settings which will persist the next time we need to author new content. From the **Home** tab, select the **Options** > **Global options** property.
 
     ![Global options](./Media/GlobalOptions.png)
 
-1. Within the **Global options** window ensure the following settings are enabled.
+1. Within the **Global options** window ensure the following settings are enabled and select **OK** once complete.
 
     **Steps**
     1. Enable step cost indicators
@@ -81,9 +87,9 @@ With our dataflow successfully imported and credentials set, we'll want to confi
 
 ---
 
-## Generate a list of values
+# Generate a list of values
 
-Now that we're ready to begin ingesting data, for this portion of the lab our scenario is as follows - new information is being added to a (**Web page**) file location which we'll combine during refresh activities for our analysis. The total number of files that will be added is unknown but will continue to grow with time, to which we'll need to account for with a [future proofed](https://docs.microsoft.com/power-query/best-practices#future-proofing-queries) solution. Fortunately for us, the files maintain a consistent column naming, data type and file naming structure (**FactInternetSales_#.csv**) to make collecting and appending new data easier.
+Now that we're ready to begin ingesting data, for this portion of the lab we'll want to combine new data which is added to a (**Web page**) file location. The total number of files that will be added to this location is unknown but will continue to grow with time, to which we'll need to account for with a [future proofed](https://docs.microsoft.com/power-query/best-practices#future-proofing-queries) solution. Fortunately for us, the files maintain a consistent column naming, data type and file naming structure (**FactInternetSales_#.csv**) to make collecting and combining the new data easier.
 
 ---
 
@@ -93,6 +99,7 @@ Now that we're ready to begin ingesting data, for this portion of the lab our sc
     ![New Blank Query](./Media/NewBlankQuery.png)
 
 1. Within the **Advanced editor** window, we'll create a custom function for our file name that [combines text](https://docs.microsoft.com/powerquery-m/text-combine) for our prefix, file number and file extension and converts the [text from](https://docs.microsoft.com/powerquery-m/text-from) a value. Select **Ok** when complete.
+    1. You can test the return value of the function by supplying a numeric value and then selecting the **Invoke** option.
 
     ```fsharp
     let
@@ -109,7 +116,9 @@ Now that we're ready to begin ingesting data, for this portion of the lab our sc
       fxFileName
     ```
 
-2. Open the **Advanced Editor** once again, add a comma to end of the **fXFileName** step and add a new step with the identifier name **Source** which equals a **Record** data type, containing the names **fileCount**, **fileName** and **data** and their corresponding value pairing as displayed below and update the return value to **Source** after the text **in**.
+2. We'll open the **Advanced Editor** once again and complete the following:
+    1. Add a comma to end of the **fXFileName** step
+    1. On a new line we'll create a step with the identifier name of **Source** which equals a [**Record**](https://docs.microsoft.com/powerquery-m/expressions-values-and-let-expression#record) type, containing the following name/value pairing as displayed below and update the return value to **Source** after the text **in**.
     
     | Name | Value |
     | :--- | :---- |
@@ -138,8 +147,8 @@ Now that we're ready to begin ingesting data, for this portion of the lab our sc
     ```
 
 4. Enable the **Query script** view, to view the full script in the center of the window. 
-    1. To validate the results are updating, change the **fileCount** value to **2** and review the data preview's **fileName** and **data** values.
-    1. Return the **fileCount** value to **1** before proceeding.
+    1. To validate the results are updating, we can change the **fileCount** value to **2** and review the data preview's **fileName** and **data** values.
+    1. If a change was made, return the **fileCount** value to **1** before proceeding.
 
     ![Query script](./Media/QueryScript.png)
 
@@ -239,7 +248,7 @@ in
 ```
 A record set is returned including the [Power Query M function reference](https://docs.microsoft.com/powerquery-m/power-query-m-function-reference) documentation.
 
-## Grouping queries
+# Grouping queries
 
 1. In the **Queries** pane, while holding **ctrl**, select the following tables from the list below, once complete right click and select the **Move to group** > **New group...** option.
 
@@ -281,7 +290,7 @@ A record set is returned including the [Power Query M function reference](https:
 
 ---
 
-## Computed tables for transformation logic
+# Computed tables for transformation logic
 
 With data now being ingested and stored in our dataflow's [Azure Data Lake Storage Gen2](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-introduction), we'll want to leverage [computed tables](https://docs.microsoft.com/power-query/dataflows/computed-entities-scenarios) to apply our transformation logic via the enhanced compute engine. 
 
@@ -289,7 +298,7 @@ With data now being ingested and stored in our dataflow's [Azure Data Lake Stora
 
 ---
 
-### Reference a query to create a computed table
+## Reference a query to create a computed table
 
 1. In the **Queries** pane, right click the **FactInternetSales_raw** table we created earlier and select the **Reference** option to create a computed table. Once complete we will see a new query has been created with a lightning bolt icon (⚡) indicating that this is a computed table.
 
@@ -305,7 +314,7 @@ With data now being ingested and stored in our dataflow's [Azure Data Lake Stora
 
     ![Transformation group](./Media/NewGroupTransformation.png)
 
-### Transforming multiple columns simultaneously
+## Transform multiple columns simultaneously
 
 1. Before we begin we'll change the current **Script** view to **Step script** in the bottom right hand corner of the screen.
 
@@ -359,7 +368,7 @@ With data now being ingested and stored in our dataflow's [Azure Data Lake Stora
 
 [Learn more about DirectQuery with dataflows](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-premium-features#use-directquery-with-dataflows-in-power-bi)
 
-### Query folding
+# Query folding
 
 1. Within **Power BI Desktop**'s **Home** ribbon select the **Get data** button. Within the **Get dialog** window select the **Power Platform** section and then **Dataflows** connector. Select **Connect** to continue to the **Dataflows** navigator window.
 
@@ -459,8 +468,8 @@ With data now being ingested and stored in our dataflow's [Azure Data Lake Stora
 
     ![Delete.](./Media/DeleteStep.png)
 
-## Next steps:
+## Next steps
 We hope this tour has shown how the data preparation capabilities in Power BI can provide...
 
 - Continue to the [Data Modeling](./DataModeling.md) lab
-- Or return to the [Day After Dashboard in a Day](./README.md) homepage
+- Return to the [Day After Dashboard in a Day](./README.md) homepage

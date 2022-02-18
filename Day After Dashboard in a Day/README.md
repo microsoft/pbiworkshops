@@ -36,12 +36,16 @@ In this lab you'll learn about how to create optimal datasets using Power BI Des
     1. [DirectQuery](https://docs.microsoft.com/power-bi/connect-data/desktop-directquery-about)
     1. [Mixed](https://docs.microsoft.com/power-bi/transform-model/desktop-composite-models)
 1. How to use the [Performance analyzer](https://docs.microsoft.com/power-bi/create-reports/desktop-performance-analyzer) to examine report performance.
-1. How to use [External Tools](https://docs.microsoft.com/power-bi/transform-model/desktop-external-tools) in professional development.
+1. How to use [External Tools](https://docs.microsoft.com/power-bi/transform-model/desktop-external-tools) for professional development.
 
 To start the lab, visit [Data Modeling](./DataModeling.md)
 
 ## Data Visualization
 
 In this lab you'll learn about designing efficient and stunning reports.
+
+1.
+1.
+1.
 
 To start the lab, visit [Data Visualization](./DataVisualization.md)
