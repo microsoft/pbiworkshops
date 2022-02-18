@@ -1,9 +1,9 @@
-## Data Preparation
+# Data Preparation
 
-#### Sample data
+## Sample data
 The data for this lab is from the AdventureWorks sample database, published by Microsoft to showcase how to design SQL Server databases and Analysis Services models.
 
-### Import a dataflow model into a group workspace and edit credentials
+## Import a dataflow model into a group workspace and edit credentials
 
 A dataflow has been partially started, which we'll utilize to the labs completion. To get started we'll import the existing dataflow model and edit credentials, so that we can ingest and transform our data and perform refresh operations.
 
@@ -41,7 +41,7 @@ A dataflow has been partially started, which we'll utilize to the labs completio
 
 ---
 
-### Configure Global options in the Power Query Online editor
+## Configure Global options in the Power Query Online editor
 
 With our dataflow successfully imported and credentials set, we'll want to configure our development environment's experience for an optimal workflow when authoring in the Power Query Online editor.
 
@@ -81,13 +81,14 @@ With our dataflow successfully imported and credentials set, we'll want to confi
 
 ---
 
-### Generate a list of values
+## Generate a list of values
 
 Now that we're ready to begin ingesting data, for this portion of the lab our scenario is as follows - new information is being added to a (**Web page**) file location which we'll combine during refresh activities for our analysis. The total number of files that will be added is unknown but will continue to grow with time, to which we'll need to account for with a [future proofed](https://docs.microsoft.com/power-query/best-practices#future-proofing-queries) solution. Fortunately for us, the files maintain a consistent column naming, data type and file naming structure (**FactInternetSales_#.csv**) to make collecting and appending new data easier.
 
 ---
 
 1. From the **Home** tab select the drop-down for **Get data** and the **Blank query** option to create a new query.
+    1. Keyboard shortcut: **Ctrl + M**
 
     ![New Blank Query](./Media/NewBlankQuery.png)
 
@@ -238,7 +239,7 @@ in
 ```
 A record set is returned including the [Power Query M function reference](https://docs.microsoft.com/powerquery-m/power-query-m-function-reference) documentation.
 
-### Grouping queries
+## Grouping queries
 
 1. In the **Queries** pane, while holding **ctrl**, select the following tables from the list below, once complete right click and select the **Move to group** > **New group...** option.
 
@@ -280,7 +281,7 @@ A record set is returned including the [Power Query M function reference](https:
 
 ---
 
-### Computed tables for transformation logic
+## Computed tables for transformation logic
 
 With data now being ingested and stored in our dataflow's [Azure Data Lake Storage Gen2](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-introduction), we'll want to leverage [computed tables](https://docs.microsoft.com/power-query/dataflows/computed-entities-scenarios) to apply our transformation logic via the enhanced compute engine. 
 
@@ -288,7 +289,9 @@ With data now being ingested and stored in our dataflow's [Azure Data Lake Stora
 
 ---
 
-1. In the **Queries** pane - right click the **FactInternetSales_raw** table you created earlier and select **Reference** to create a computed table. Once complete you will see a new query has been created with a lightning bolt icon (⚡) indicating that this is now a computed table.
+### Reference a query to create a computed table
+
+1. In the **Queries** pane, right click the **FactInternetSales_raw** table we created earlier and select the **Reference** option to create a computed table. Once complete we will see a new query has been created with a lightning bolt icon (⚡) indicating that this is a computed table.
 
     ![Query reference](./Media/QueryReference.png)
 
@@ -296,13 +299,53 @@ With data now being ingested and stored in our dataflow's [Azure Data Lake Stora
 
     ![Rename option](./Media/RenameOption.png)
 
-1. In the **Queries** pane - right click the **FactInternetSales** computed table, select the following tables from the list below, once complete right click and select the **Move to group** > **New group...** option and complete the following.
+1. In the **Queries** pane - right click the **FactInternetSales** computed table, select the **Move to group** > **New group...** option and complete the following.
     1. **Name:** Data transformation
     1. **Description:** Data that will be ingested from the data lake storage for transformations.
 
     ![Transformation group](./Media/NewGroupTransformation.png)
 
-1. FactInternetSales - SURROGATE KEYS on Order Date and Ship Date columns.
+### Transforming multiple columns simultaneously
+
+1. Before we begin we'll change the current **Script** view to **Step script** in the bottom right hand corner of the screen.
+
+    ![Step secript](./Media/StepScript.png)
+
+1. While still in the **FactInternetSales** query, we'll select the **fx** icon to the left of the formula bar to insert a new step into the query.
+
+    ![Insert step](./Media/InsertStep.png)
+
+1. Within the formula bar we'll utilize the [Table.TransformColumns](https://docs.microsoft.com/powerquery-m/table-transformcolumns) function to apply a [list](https://docs.microsoft.com/powerquery-m/expressions-values-and-let-expression#list) of transformation operations to multiple columns in a single step - in the order of { column name, transformation , *optional type* } from the table below -
+
+    | Column name | Transformation | Type |
+    | :--- | :--- | :--- |
+    | OrderDate | fxCreateKey | Int64.Type |
+    | ShipDate | fxCreateKey | Int64.Type |
+
+    **Complete formula**
+
+    ```fsharp
+        Table.TransformColumns(
+        Source,
+        {
+            {
+                "OrderDate",
+                fxCreateKey,
+                Int64.Type
+            },
+            {
+                "ShipDate",
+                fxCreateKey,
+                Int64.Type
+            }
+        }
+    )
+    ```
+
+1. While holding the **shift** key select the **SalesAmount**, **TaxAmount** and **Freight** columns, right click any one of the selected columns and choose the **Change type** and then the **Currency** option.
+    1. The [**Currency**](https://docs.microsoft.com/power-query/data-types) type is a fixed decimal number and always has four digits to its right.
+
+    ![Currency type](./Media/CurrencyType.png)
 
 ### Enabling the enhanced compute engine
 
