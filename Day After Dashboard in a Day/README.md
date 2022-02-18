@@ -5,11 +5,11 @@
 # Day After Dashboard in a Day
 
 ## Introduction
-In the Day After Dashboard in a Day you will learn about various advanced analytic features of Power BI, such as [composite models](https://docs.microsoft.com/power-bi/transform-model/desktop-composite-models), [aggregrations](https://docs.microsoft.com/power-bi/transform-model/aggregations-advanced), [query folding](https://docs.microsoft.com/power-query/power-query-folding), **visualization thing** and more. 
+In the Day After Dashboard in a Day you will learn about various advanced analytic features of Power BI, such as [composite models](https://docs.microsoft.com/power-bi/transform-model/desktop-composite-models), [aggregrations](https://docs.microsoft.com/power-bi/transform-model/aggregations-advanced), [query folding](https://docs.microsoft.com/power-query/power-query-folding), designing stunning reports and more.
 
 This course assumes that you have a working knowledge of report authoring using Power BI Desktop and content sharing via the Power BI service.
 
-#### Prerequisites
+### Prerequisites
 The content in this lab requires access to a **Power BI Premium** workspace within the Power BI service.
 - Premium Per User
 - or a Premium capacity subscription
