@@ -1,19 +1,24 @@
 # Data Preparation
 
 ## Sample data
+
 The data for this lab is from the AdventureWorks sample database, published by Microsoft to showcase how to design SQL Server databases and Analysis Services models.
 
 ---
 
-# Import a dataflow model into a group workspace
+# Download a sample dataflow model
 
-A dataflow has been partially started, which we'll utilize to the labs completion. To get started we'll import the existing dataflow model and edit the credentials so that we can ingest the sample files, transform our data and perform a refresh operation.
+We'll start our lab by importing a dataflow model and editing the dataflow's credentials so that we can ingest the sample files, transform data and perform a refresh operation once complete.
+
+1. Download the sample [**Dataflow demo.json**](https://raw.githubusercontent.com/microsoft/pbiworkshops/main/Day%20After%20Dashboard%20in%20a%20Day/Source_Files/Dataflow%20demo.json) file which will be used as a starting point with pre-defined tables and custom functions for the lab.
 
 ---
 
-1. Download the sample **Dataflow demo.json** file, which contains the dataflow model.
+# Premium license mode
 
-1. Navigate to a new, empty or non-production group workspace to utilize the [premium features of dataflows](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-premium-features) for this lab. To confirm a group workspace has a capacity assigned - in the top right corner of the group workspace, select the **Settings** option and in the navigation pane select the **Premium** tab to confirm that a **Premium** license mode has been enabled from any one of the options below.
+1. Navigate to a new, empty or non-production workspace and confirm that a capacity has been assigned to the workspace, if not we'll use this opportunity to enable the option by selecting one of the below values.
+    1. In the top right corner of the workspace, select the **Settings** option.
+    1. In the navigation pane, select the **Premium** tab and verify one of the licensing modes listed below has been enabled.
 
     **License mode:**
     - [Premium per user](https://docs.microsoft.com/power-bi/admin/service-premium-per-user-faq)
@@ -22,11 +27,13 @@ A dataflow has been partially started, which we'll utilize to the labs completio
 
     ![License mode](./Media/LicenseMode.png)
 
-1. After we've confirmed the group workspace has the appropriate license mode enabled, in the top left of the group workspace select **New** and then the **Dataflow** option.
+## Import a dataflow model
+
+1. In the top left of the workspace select **New** and then the **Dataflow** option.
 
     ![New Dataflow](./Media/NewDataflow.png)
 
-1. From the **Start creating your dataflow** screen, select the **Import Model** option to import an existing dataflow model and then select the **Dataflow demo.json** file downloaded from the previous step to a local save destination.
+1. From the **Start creating your dataflow** screen, select the **Import Model** option and import the existing dataflow model file from your local save destination.
 
     ![Import Model](./Media/ImportModel.png)
 
@@ -37,7 +44,9 @@ A dataflow has been partially started, which we'll utilize to the labs completio
 
     ![Edit credentials](./Media/EditCredentials.png)
 
-1. Within the Settings page for the dataflow, expand the **Data source credentials** section and select **Edit credentials** adjacent to the **Web** source. For this lab, we'll be connecting to publicly accessible sample files in this GitHub repository - to complete the configuration in the **Configure** dialog box set the following values below and then select **Sign in** once complete:
+## Edit the dataflow credentials
+
+1. Within the Settings page for the dataflow, expand the **Data source credentials** section and select **Edit credentials** adjacent to the **Web** source. In the **Configure** dialog window set the following values below and then select **Sign in** once complete:
     1. Authentication method | **Anonymous**
     1. Privacy level setting for this data source | **Public**
         1. To learn more, see [Power Query privacy level settings](https://docs.microsoft.com/power-bi/admin/desktop-privacy-levels#configure-a-privacy-level)
@@ -356,19 +365,40 @@ With data now being ingested and stored in our dataflow's [Azure Data Lake Stora
 
     ![Currency type](./Media/CurrencyType.png)
 
-### Enabling the enhanced compute engine
+---
 
-1. Within the **Enhanced compute engine settings**, select the **On** option and then select the **Apply** button.
+# Enabling the enhanced compute engine
 
-![Enhanced compute engine settings.](./Media/EnhancedComputeEngineSettings.png)
+The enhanced compute engine in Power BI enables Power BI Premium subscribers to use their capacity to optimize the use of dataflows. 
+
+Using the enhanced compute engine provides the following advantages:
+
+1. Drastically reduces the refresh time required for long-running ETL steps over computed tables, such as performing joins, distinct, filters, and group by
+1. Performs DirectQuery queries over tables
+
+[Learn more about the enhanced compute engine](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-premium-features?tabs=gen2)
+
+---
+
+1. 
+
+1. To ensure we can perform DirectQuery operations, we'll need to change the default setting from **Optimized** to **On** within the within the **Enhanced compute engine settings** and select the **Apply** button once complete.
+
+    ![Enhanced compute engine settings.](./Media/EnhancedComputeEngineSettings.png)
 
 1. After we've received the **Success!** notification, return to the workspace and select the **Refresh now** option of the datalfow for the optimization to take effect.
 
     ![Refresh now.](./Media/RefreshNow.png)
 
-[Learn more about DirectQuery with dataflows](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-premium-features#use-directquery-with-dataflows-in-power-bi)
+---
 
 # Query folding
+
+Query folding is the ability for a Power Query query to generate a single query statement to retrieve and transform source data. The Power Query mashup engine strives to achieve query folding whenever possible for reasons of efficiency.
+
+[Learn more about query folding](https://docs.microsoft.com/power-query/power-query-folding)
+
+---
 
 1. Within **Power BI Desktop**'s **Home** ribbon select the **Get data** button. Within the **Get dialog** window select the **Power Platform** section and then **Dataflows** connector. Select **Connect** to continue to the **Dataflows** navigator window.
 

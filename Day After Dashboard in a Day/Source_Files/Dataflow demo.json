@@ -1,0 +1,276 @@
+{
+  "name": "Dataflow demo(1)",
+  "description": "Demo of a dataflow for Day after Dashboard in a Day event.",
+  "version": "1.0",
+  "culture": "en-US",
+  "modifiedTime": "2022-02-19T01:36:30.6221564+00:00",
+  "pbi:mashup": {
+    "fastCombine": false,
+    "allowNativeQueries": false,
+    "queriesMetadata": {
+      "DimCustomer": {
+        "queryId": "b8782f36-de41-4e0e-9c85-853fbfca4252",
+        "queryName": "DimCustomer",
+        "loadEnabled": true
+      },
+      "DimDate": {
+        "queryId": "37f72102-aa25-4005-b517-080c52baecd0",
+        "queryName": "DimDate",
+        "loadEnabled": true
+      },
+      "DimEmployee": {
+        "queryId": "c2a07242-3c8f-4c3d-bb24-f3934eb7f4f1",
+        "queryName": "DimEmployee",
+        "loadEnabled": true
+      },
+      "DimGeography": {
+        "queryId": "cc87ce39-7471-4ffa-abc8-6c5e4ef0e8f7",
+        "queryName": "DimGeography",
+        "loadEnabled": true
+      },
+      "DimProduct_raw": {
+        "queryId": "b2a9c1da-3f2f-49c8-8d59-622dee438105",
+        "queryName": "DimProduct_raw",
+        "loadEnabled": true
+      },
+      "DimProductCategory_raw": {
+        "queryId": "415d50a7-90b2-45f7-acfb-195f3782dcd8",
+        "queryName": "DimProductCategory_raw",
+        "loadEnabled": true
+      },
+      "DimProductSubcategory_raw": {
+        "queryId": "a3c281f5-6af9-47fa-913d-77694e2d098c",
+        "queryName": "DimProductSubcategory_raw",
+        "loadEnabled": true
+      },
+      "fxGetFile": {
+        "queryId": "620769f7-b1ac-4a7c-8998-1d0d38736fe1",
+        "queryName": "fxGetFile"
+      },
+      "fxCreateKey": {
+        "queryId": "a0203672-4b21-42b0-8746-0d6bcf495812",
+        "queryName": "fxCreateKey"
+      }
+    },
+    "document": "section Section1;\r\nshared DimCustomer = let\r\n  Source = fxGetFile(\"DimCustomer.csv\"),\r\n  #\"Changed column type\" = Table.TransformColumnTypes(Source, {{\"CustomerKey\", Int64.Type}, {\"GeographyKey\", Int64.Type}, {\"CustomerAlternateKey\", type text}, {\"Title\", type text}, {\"FirstName\", type text}, {\"MiddleName\", type text}, {\"LastName\", type text}, {\"NameStyle\", Int64.Type}, {\"BirthDate\", type date}, {\"MaritalStatus\", type text}, {\"Suffix\", type text}, {\"EmailAddress\", type text}, {\"YearlyIncome\", Int64.Type}, {\"TotalChildren\", Int64.Type}, {\"NumberChildrenAtHome\", Int64.Type}, {\"EnglishEducation\", type text}, {\"SpanishEducation\", type text}, {\"FrenchEducation\", type text}, {\"EnglishOccupation\", type text}, {\"SpanishOccupation\", type text}, {\"FrenchOccupation\", type text}, {\"HouseOwnerFlag\", Int64.Type}, {\"NumberCarsOwned\", Int64.Type}, {\"AddressLine1\", type text}, {\"AddressLine2\", type text}, {\"Phone\", type text}, {\"DateFirstPurchase\", type date}, {\"CommuteDistance\", type text}})\r\nin\r\n  #\"Changed column type\";\r\nshared DimDate = let\r\n  Source = fxGetFile(\"DimDate.csv\"),\r\n  #\"Changed column type\" = Table.TransformColumnTypes(Source, {{\"DateKey\", Int64.Type}, {\"FullDateAlternateKey\", type date}, {\"DayNumberOfWeek\", Int64.Type}, {\"EnglishDayNameOfWeek\", type text}, {\"SpanishDayNameOfWeek\", type text}, {\"FrenchDayNameOfWeek\", type text}, {\"DayNumberOfMonth\", Int64.Type}, {\"DayNumberOfYear\", Int64.Type}, {\"WeekNumberOfYear\", Int64.Type}, {\"EnglishMonthName\", type text}, {\"SpanishMonthName\", type text}, {\"FrenchMonthName\", type text}, {\"MonthNumberOfYear\", Int64.Type}, {\"CalendarQuarter\", Int64.Type}, {\"CalendarYear\", Int64.Type}, {\"CalendarSemester\", Int64.Type}, {\"FiscalQuarter\", Int64.Type}, {\"FiscalYear\", Int64.Type}, {\"FiscalSemester\", Int64.Type}})\r\nin\r\n  #\"Changed column type\";\r\nshared DimEmployee = let\r\n  Source = fxGetFile(\"DimEmployee.csv\"),\r\n  #\"Changed column type\" = Table.TransformColumnTypes(Source, {{\"EmployeeKey\", Int64.Type}, {\"ParentEmployeeKey\", Int64.Type}, {\"EmployeeNationalIDAlternateKey\", Int64.Type}, {\"ParentEmployeeNationalIDAlternateKey\", type text}, {\"SalesTerritoryKey\", Int64.Type}, {\"FirstName\", type text}, {\"LastName\", type text}, {\"MiddleName\", type text}, {\"NameStyle\", Int64.Type}, {\"Title\", type text}, {\"HireDate\", type date}, {\"BirthDate\", type date}, {\"LoginID\", type text}, {\"EmailAddress\", type text}, {\"Phone\", type text}, {\"MaritalStatus\", type text}, {\"EmergencyContactName\", type text}, {\"EmergencyContactPhone\", type text}, {\"SalariedFlag\", Int64.Type}, {\"Gender\", type text}, {\"PayFrequency\", Int64.Type}, {\"BaseRate\", type number}, {\"VacationHours\", Int64.Type}, {\"SickLeaveHours\", Int64.Type}, {\"CurrentFlag\", Int64.Type}, {\"SalesPersonFlag\", Int64.Type}, {\"DepartmentName\", type text}, {\"StartDate\", type date}, {\"EndDate\", type date}, {\"Status\", type text}, {\"EmployeePhoto\", type text}})\r\nin\r\n  #\"Changed column type\";\r\nshared DimGeography = let\r\n  Source = fxGetFile(\"DimGeography.csv\"),\r\n  #\"Changed column type\" = Table.TransformColumnTypes(Source, {{\"GeographyKey\", Int64.Type}, {\"City\", type text}, {\"StateProvinceCode\", type text}, {\"StateProvinceName\", type text}, {\"CountryRegionCode\", type text}, {\"EnglishCountryRegionName\", type text}, {\"SpanishCountryRegionName\", type text}, {\"FrenchCountryRegionName\", type text}, {\"PostalCode\", type text}, {\"SalesTerritoryKey\", Int64.Type}, {\"IpAddressLocator\", type text}})\r\nin\r\n  #\"Changed column type\";\r\nshared DimProduct_raw = let\r\n  Source = fxGetFile(\"DimProduct.csv\"),\r\n  #\"Changed column type\" = Table.TransformColumnTypes(Source, {{\"ProductKey\", Int64.Type}, {\"ProductAlternateKey\", type text}, {\"ProductSubcategoryKey\", Int64.Type}, {\"WeightUnitMeasureCode\", type text}, {\"SizeUnitMeasureCode\", type text}, {\"EnglishProductName\", type text}, {\"SpanishProductName\", type text}, {\"FrenchProductName\", type text}, {\"StandardCost\", type text}, {\"FinishedGoodsFlag\", Int64.Type}, {\"Color\", type text}, {\"SafetyStockLevel\", Int64.Type}, {\"ReorderPoint\", Int64.Type}, {\"ListPrice\", type text}, {\"Size\", type text}, {\"SizeRange\", type text}, {\"Weight\", Int64.Type}, {\"DaysToManufacture\", Int64.Type}, {\"ProductLine\", type text}, {\"DealerPrice\", type text}, {\"Class\", type text}, {\"Style\", type text}, {\"ModelName\", type text}, {\"LargePhoto\", type text}, {\"EnglishDescription\", type text}, {\"FrenchDescription\", type text}, {\"ChineseDescription\", type text}, {\"ArabicDescription\", type text}, {\"HebrewDescription\", type text}, {\"ThaiDescription\", type text}, {\"GermanDescription\", type text}, {\"JapaneseDescription\", type text}, {\"TurkishDescription\", type text}, {\"StartDate\", type date}, {\"EndDate\", type date}, {\"Status\", type text}})\r\nin\r\n  #\"Changed column type\";\r\nshared DimProductCategory_raw = let\r\n  Source = fxGetFile(\"DimProductCategory.csv\"),\r\n  #\"Changed column type\" = Table.TransformColumnTypes(Source, {{\"ProductCategoryKey\", Int64.Type}, {\"ProductCategoryAlternateKey\", Int64.Type}, {\"EnglishProductCategoryName\", type text}, {\"SpanishProductCategoryName\", type text}, {\"FrenchProductCategoryName\", type text}})\r\nin\r\n  #\"Changed column type\";\r\nshared DimProductSubcategory_raw = let\r\n  Source = fxGetFile(\"DimProductSubcategory.csv\"),\r\n  #\"Changed column type\" = Table.TransformColumnTypes(Source, {{\"ProductSubcategoryKey\", Int64.Type}, {\"ProductSubcategoryAlternateKey\", Int64.Type}, {\"EnglishProductSubcategoryName\", type text}, {\"SpanishProductSubcategoryName\", type text}, {\"FrenchProductSubcategoryName\", type text}, {\"ProductCategoryKey\", Int64.Type}})\r\nin\r\n  #\"Changed column type\";\r\nshared fxGetFile = let\r\n  fxGetFile = (#\"File Name\" as text) =>\n            let\n                Source =\n                    Csv.Document(\n                        Web.Contents(\n                            \"https://raw.githubusercontent.com/microsoft/pbiworkshops/main/Day%20After%20Dashboard%20in%20a%20Day/Source_Files\",\n                            [\n                                RelativePath = #\"File Name\",\n                                ManualStatusHandling={404}\n                            ]\n                        ),\n                        [\n                            Delimiter = \"|\",\n                            Encoding = 65001,\n                            QuoteStyle = QuoteStyle.None\n                        ]\n                    ),\n                #\"Promote Headers\" = Table.PromoteHeaders(Source),\n                #\"Table Headers\" = Table.ColumnNames(#\"Promote Headers\"),\n                #\"Update Blank to Null\" = Table.ReplaceValue(#\"Promote Headers\", \"\", null, Replacer.ReplaceValue, #\"Table Headers\"),\n                #\"Update NULL string to Null\" = Table.ReplaceValue(#\"Update Blank to Null\", \"NULL\", null, Replacer.ReplaceValue, #\"Table Headers\")\n            in\n                #\"Update NULL string to Null\",\r\n  Documentation_Meta = [\n        Documentation.Name = \"Day After Dashboard in a Day - Sample data\",\n        Documentation.Description = \"Obtains the pipe delimited csv files from the GitHub repository for Day After Dashboard in a Day. Short link: https://aka.ms/pbiworkshops\"\n    ],\r\n  #\"Add Documentation\" = Value.ReplaceType(fxGetFile, Value.ReplaceMetadata(Value.Type(fxGetFile), Documentation_Meta))\r\nin\r\n  #\"Add Documentation\";\r\nshared fxCreateKey = let\r\n  CreateKey = (#\"Date time value\" as datetime) as number =>\n            let\n                Source =\n                    DateTime.ToText(\n                        #\"Date time value\",\n                        \"yyyyMMdd\"\n                    ),\n                #\"Convert to number\" = Number.From(Source)\n            in\n                #\"Convert to number\",\r\n  Documentation = [\n        Documentation.Name = \"Create an integer surrogate key\",\n        Documentation.Description = \"Converts a datetime value to an integer in the format of yyyyMMdd.\"\n    ],\r\n  Output = Value.ReplaceType(CreateKey, Value.ReplaceMetadata(Value.Type(CreateKey), Documentation))\r\nin\r\n  Output;\r\n"
+  },
+  "annotations": [{ "name": "pbi:QueryGroups", "value": "[]" }],
+  "entities": [
+    {
+      "$type": "LocalEntity",
+      "name": "DimCustomer",
+      "description": "",
+      "pbi:refreshPolicy": {
+        "$type": "FullRefreshPolicy",
+        "location": "DimCustomer.csv"
+      },
+      "attributes": [
+        { "name": "CustomerKey", "dataType": "int64" },
+        { "name": "GeographyKey", "dataType": "int64" },
+        { "name": "CustomerAlternateKey", "dataType": "string" },
+        { "name": "Title", "dataType": "string" },
+        { "name": "FirstName", "dataType": "string" },
+        { "name": "MiddleName", "dataType": "string" },
+        { "name": "LastName", "dataType": "string" },
+        { "name": "NameStyle", "dataType": "int64" },
+        { "name": "BirthDate", "dataType": "date" },
+        { "name": "MaritalStatus", "dataType": "string" },
+        { "name": "Suffix", "dataType": "string" },
+        { "name": "EmailAddress", "dataType": "string" },
+        { "name": "YearlyIncome", "dataType": "int64" },
+        { "name": "TotalChildren", "dataType": "int64" },
+        { "name": "NumberChildrenAtHome", "dataType": "int64" },
+        { "name": "EnglishEducation", "dataType": "string" },
+        { "name": "SpanishEducation", "dataType": "string" },
+        { "name": "FrenchEducation", "dataType": "string" },
+        { "name": "EnglishOccupation", "dataType": "string" },
+        { "name": "SpanishOccupation", "dataType": "string" },
+        { "name": "FrenchOccupation", "dataType": "string" },
+        { "name": "HouseOwnerFlag", "dataType": "int64" },
+        { "name": "NumberCarsOwned", "dataType": "int64" },
+        { "name": "AddressLine1", "dataType": "string" },
+        { "name": "AddressLine2", "dataType": "string" },
+        { "name": "Phone", "dataType": "string" },
+        { "name": "DateFirstPurchase", "dataType": "date" },
+        { "name": "CommuteDistance", "dataType": "string" }
+      ]
+    },
+    {
+      "$type": "LocalEntity",
+      "name": "DimDate",
+      "description": "",
+      "pbi:refreshPolicy": {
+        "$type": "FullRefreshPolicy",
+        "location": "DimDate.csv"
+      },
+      "attributes": [
+        { "name": "DateKey", "dataType": "int64" },
+        { "name": "FullDateAlternateKey", "dataType": "date" },
+        { "name": "DayNumberOfWeek", "dataType": "int64" },
+        { "name": "EnglishDayNameOfWeek", "dataType": "string" },
+        { "name": "SpanishDayNameOfWeek", "dataType": "string" },
+        { "name": "FrenchDayNameOfWeek", "dataType": "string" },
+        { "name": "DayNumberOfMonth", "dataType": "int64" },
+        { "name": "DayNumberOfYear", "dataType": "int64" },
+        { "name": "WeekNumberOfYear", "dataType": "int64" },
+        { "name": "EnglishMonthName", "dataType": "string" },
+        { "name": "SpanishMonthName", "dataType": "string" },
+        { "name": "FrenchMonthName", "dataType": "string" },
+        { "name": "MonthNumberOfYear", "dataType": "int64" },
+        { "name": "CalendarQuarter", "dataType": "int64" },
+        { "name": "CalendarYear", "dataType": "int64" },
+        { "name": "CalendarSemester", "dataType": "int64" },
+        { "name": "FiscalQuarter", "dataType": "int64" },
+        { "name": "FiscalYear", "dataType": "int64" },
+        { "name": "FiscalSemester", "dataType": "int64" }
+      ]
+    },
+    {
+      "$type": "LocalEntity",
+      "name": "DimEmployee",
+      "description": "",
+      "pbi:refreshPolicy": {
+        "$type": "FullRefreshPolicy",
+        "location": "DimEmployee.csv"
+      },
+      "attributes": [
+        { "name": "EmployeeKey", "dataType": "int64" },
+        { "name": "ParentEmployeeKey", "dataType": "int64" },
+        { "name": "EmployeeNationalIDAlternateKey", "dataType": "int64" },
+        {
+          "name": "ParentEmployeeNationalIDAlternateKey",
+          "dataType": "string"
+        },
+        { "name": "SalesTerritoryKey", "dataType": "int64" },
+        { "name": "FirstName", "dataType": "string" },
+        { "name": "LastName", "dataType": "string" },
+        { "name": "MiddleName", "dataType": "string" },
+        { "name": "NameStyle", "dataType": "int64" },
+        { "name": "Title", "dataType": "string" },
+        { "name": "HireDate", "dataType": "date" },
+        { "name": "BirthDate", "dataType": "date" },
+        { "name": "LoginID", "dataType": "string" },
+        { "name": "EmailAddress", "dataType": "string" },
+        { "name": "Phone", "dataType": "string" },
+        { "name": "MaritalStatus", "dataType": "string" },
+        { "name": "EmergencyContactName", "dataType": "string" },
+        { "name": "EmergencyContactPhone", "dataType": "string" },
+        { "name": "SalariedFlag", "dataType": "int64" },
+        { "name": "Gender", "dataType": "string" },
+        { "name": "PayFrequency", "dataType": "int64" },
+        { "name": "BaseRate", "dataType": "double" },
+        { "name": "VacationHours", "dataType": "int64" },
+        { "name": "SickLeaveHours", "dataType": "int64" },
+        { "name": "CurrentFlag", "dataType": "int64" },
+        { "name": "SalesPersonFlag", "dataType": "int64" },
+        { "name": "DepartmentName", "dataType": "string" },
+        { "name": "StartDate", "dataType": "date" },
+        { "name": "EndDate", "dataType": "date" },
+        { "name": "Status", "dataType": "string" },
+        { "name": "EmployeePhoto", "dataType": "string" }
+      ]
+    },
+    {
+      "$type": "LocalEntity",
+      "name": "DimGeography",
+      "description": "",
+      "pbi:refreshPolicy": {
+        "$type": "FullRefreshPolicy",
+        "location": "DimGeography.csv"
+      },
+      "attributes": [
+        { "name": "GeographyKey", "dataType": "int64" },
+        { "name": "City", "dataType": "string" },
+        { "name": "StateProvinceCode", "dataType": "string" },
+        { "name": "StateProvinceName", "dataType": "string" },
+        { "name": "CountryRegionCode", "dataType": "string" },
+        { "name": "EnglishCountryRegionName", "dataType": "string" },
+        { "name": "SpanishCountryRegionName", "dataType": "string" },
+        { "name": "FrenchCountryRegionName", "dataType": "string" },
+        { "name": "PostalCode", "dataType": "string" },
+        { "name": "SalesTerritoryKey", "dataType": "int64" },
+        { "name": "IpAddressLocator", "dataType": "string" }
+      ]
+    },
+    {
+      "$type": "LocalEntity",
+      "name": "DimProduct_raw",
+      "description": "",
+      "pbi:refreshPolicy": {
+        "$type": "FullRefreshPolicy",
+        "location": "DimProduct_raw.csv"
+      },
+      "attributes": [
+        { "name": "ProductKey", "dataType": "int64" },
+        { "name": "ProductAlternateKey", "dataType": "string" },
+        { "name": "ProductSubcategoryKey", "dataType": "int64" },
+        { "name": "WeightUnitMeasureCode", "dataType": "string" },
+        { "name": "SizeUnitMeasureCode", "dataType": "string" },
+        { "name": "EnglishProductName", "dataType": "string" },
+        { "name": "SpanishProductName", "dataType": "string" },
+        { "name": "FrenchProductName", "dataType": "string" },
+        { "name": "StandardCost", "dataType": "string" },
+        { "name": "FinishedGoodsFlag", "dataType": "int64" },
+        { "name": "Color", "dataType": "string" },
+        { "name": "SafetyStockLevel", "dataType": "int64" },
+        { "name": "ReorderPoint", "dataType": "int64" },
+        { "name": "ListPrice", "dataType": "string" },
+        { "name": "Size", "dataType": "string" },
+        { "name": "SizeRange", "dataType": "string" },
+        { "name": "Weight", "dataType": "int64" },
+        { "name": "DaysToManufacture", "dataType": "int64" },
+        { "name": "ProductLine", "dataType": "string" },
+        { "name": "DealerPrice", "dataType": "string" },
+        { "name": "Class", "dataType": "string" },
+        { "name": "Style", "dataType": "string" },
+        { "name": "ModelName", "dataType": "string" },
+        { "name": "LargePhoto", "dataType": "string" },
+        { "name": "EnglishDescription", "dataType": "string" },
+        { "name": "FrenchDescription", "dataType": "string" },
+        { "name": "ChineseDescription", "dataType": "string" },
+        { "name": "ArabicDescription", "dataType": "string" },
+        { "name": "HebrewDescription", "dataType": "string" },
+        { "name": "ThaiDescription", "dataType": "string" },
+        { "name": "GermanDescription", "dataType": "string" },
+        { "name": "JapaneseDescription", "dataType": "string" },
+        { "name": "TurkishDescription", "dataType": "string" },
+        { "name": "StartDate", "dataType": "date" },
+        { "name": "EndDate", "dataType": "date" },
+        { "name": "Status", "dataType": "string" }
+      ]
+    },
+    {
+      "$type": "LocalEntity",
+      "name": "DimProductCategory_raw",
+      "description": "",
+      "pbi:refreshPolicy": {
+        "$type": "FullRefreshPolicy",
+        "location": "DimProductCategory_raw.csv"
+      },
+      "attributes": [
+        { "name": "ProductCategoryKey", "dataType": "int64" },
+        { "name": "ProductCategoryAlternateKey", "dataType": "int64" },
+        { "name": "EnglishProductCategoryName", "dataType": "string" },
+        { "name": "SpanishProductCategoryName", "dataType": "string" },
+        { "name": "FrenchProductCategoryName", "dataType": "string" }
+      ]
+    },
+    {
+      "$type": "LocalEntity",
+      "name": "DimProductSubcategory_raw",
+      "description": "",
+      "pbi:refreshPolicy": {
+        "$type": "FullRefreshPolicy",
+        "location": "DimProductSubcategory_raw.csv"
+      },
+      "attributes": [
+        { "name": "ProductSubcategoryKey", "dataType": "int64" },
+        { "name": "ProductSubcategoryAlternateKey", "dataType": "int64" },
+        { "name": "EnglishProductSubcategoryName", "dataType": "string" },
+        { "name": "SpanishProductSubcategoryName", "dataType": "string" },
+        { "name": "FrenchProductSubcategoryName", "dataType": "string" },
+        { "name": "ProductCategoryKey", "dataType": "int64" }
+      ]
+    }
+  ]
+}
