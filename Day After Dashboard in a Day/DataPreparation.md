@@ -30,9 +30,9 @@ Before we begin, we'll want to navigate to a new, empty or non-production worksp
 
     ![License mode](./Media/LicenseMode.png)
 
-# Import a dataflow model
+# Import a dataflow model and configure settings
 
-We'll leverage an existing dataflow json file as our starting point to assist us in the initial steps of simply connecting to multiple tables of data simultaneously. Once we are finished importing our dataflow model it will include additional standardized categories as part of the [metadata file (model.json)](https://docs.microsoft.com/common-data-model/model-json). This standardized format enables discovery across other Microsoft services and products in the Power Platform by providing the semantic information to those applications - including the table names, column names, metadata descriptions and more.
+We'll leverage an existing dataflow json file as our starting point for this lab. Once the dataflow model has been imported it will include additional standardized categories enabling discovery across other Microsoft products and services. This semantic information includes the table names, column names, metadata descriptions and much more as part of the [metadata file (model.json)](https://docs.microsoft.com/common-data-model/model-json) format.
 
 1. In the top left of the workspace select **New** and then the **Dataflow** option.
 
@@ -48,7 +48,7 @@ We'll leverage an existing dataflow json file as our starting point to assist us
 
 ## Edit the dataflow credentials
 
-Because the lab files are stored in a publicly accessible [GitHub repository](./Source_Files/), we will authenticate anonymously and skip our test connection to ensure we can ingest the lab data.
+Because the lab files are stored in a publicly accessible [GitHub repository](./Source_Files/), we will authenticate anonymously and skip our test connection to ensure that we can successfully connect to and ingest the lab data.
 
 1. Once the import has successfully completed, we can now select the **Edit credentials** button from the toast notification in the top right.
     1. Alternatively within the workspace we can select the vertical ellipses ( ⋮ ) adjacent to the dataflow name and the **Settings** option to configure.
@@ -62,6 +62,25 @@ Because the lab files are stored in a publicly accessible [GitHub repository](./
     1. ☑️ **Skip test connection**
 
     ![Edit credentials](./Media/ConfigureCredentials.png)
+
+## Configure enhanced compute engine settings
+
+The enhanced compute engine in Power BI enables Power BI Premium subscribers to use their capacity to optimize the use of dataflows. 
+
+Using the enhanced compute engine provides the following advantages:
+
+1. Drastically reduces the refresh time required for long-running ETL steps over computed tables, such as performing joins, distinct, filters, and group by.
+1. Performs DirectQuery queries over tables.
+
+[Learn more about the enhanced compute engine](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-premium-features?tabs=gen2)
+
+1. Within the **Enhanced compute engine settings** change the setting to **On** and select the **Apply** button once complete.
+
+    ![Enhanced compute engine settings.](./Media/EnhancedComputeEngineSettings.png)
+
+1. Within the workspace select the **Refresh now** option of the dataflow for the change to take effect.
+
+    ![Refresh now.](./Media/RefreshNow.png)
 
 ---
 
@@ -107,7 +126,7 @@ With our dataflow successfully imported and credentials set, we can now configur
 
 # Advanced Editor
 
-Now that we're ready to begin ingesting data, we need to combine new data which is being added to a (**Web page**) file location. The total number of files that will be added to this location is unknown but will continue to grow over time, to which we'll need to account for with a [future proofed](https://docs.microsoft.com/power-query/best-practices#future-proofing-queries) solution. Fortunately for us, the files maintain a consistent column naming, data type and naming structure (**FactInternetSales_#.csv**) to make collecting and combining new data easier.
+For this labs section, we need to combine new data which is being added to a (**Web page**) file location. The total number of files that will be added to this location is unknown but will continue to grow over time, to which we'll need to account for with a [future proofed](https://docs.microsoft.com/power-query/best-practices#future-proofing-queries) solution. Fortunately for us, the files maintain a consistent column naming, data type and naming structure (**FactInternetSales_#.csv**) to make collecting and combining new data easier.
 
 ---
 
@@ -234,6 +253,7 @@ Now that we're ready to begin ingesting data, we need to combine new data which 
     in
         fileList
     ```
+
 1. To convert out returned list to a table, navigate to the **List tools** tab in the ribbon and select the **To table** option.
 
     ![List tools](./Media/ListToTable.png)
@@ -272,7 +292,7 @@ in
 
 # Grouping queries
 
-As we add more tables to our solutions it can often be challenging to track which-queries-do-what. For this reason we'll create groups for our queries that share similar design principles and objectives.
+As we add more tables to our solutions it can often be challenging to remember which-queries-do-what. For this reason we'll create groups for our queries that share similar design patterns.
 
 1. In the **Queries** pane, while holding **ctrl**, select the following tables from the list below, once complete right click and select the **Move to group** > **New group...** option.
 
@@ -316,7 +336,7 @@ As we add more tables to our solutions it can often be challenging to track whic
 
 # Transforming data at scale
 
-Not that our data is being ingested and stored in our dataflow's [Azure Data Lake Storage Gen2](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-introduction), we'll leverage [computed tables](https://docs.microsoft.com/power-query/dataflows/computed-entities-scenarios) to apply our transformation logic via the enhanced compute engine.
+Not that our data is being ingested and stored in our dataflow's [Azure Data Lake Storage Gen2](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-introduction), we'll leverage [computed tables](https://docs.microsoft.com/power-query/dataflows/computed-entities-scenarios) to apply transformation logic via the enhanced compute engine.
 
 [Learn more about the benefits of loading data without transformation for Text/CSV files](https://docs.microsoft.com/power-query/dataflows/computed-entities-scenarios#load-data-without-transformation-for-textcsv-files)
 
@@ -446,32 +466,17 @@ Not that our data is being ingested and stored in our dataflow's [Azure Data Lak
 
     ![Queries pane completed](./Media/QueriesPaneComplete.png)
 
-1. We'll now select the **Save & close** option in the bottom right to exit the Power Query editor.
+## Saving and refreshing the dataflow
 
-1. In the 
+1. Select the **Save & close** option in the bottom right to exit the Power Query editor.
 
----
+    ![Save & close](./Media/SaveClose.png)
 
-# Enabling the enhanced compute engine
+1. Select the **Close** option in the top right to exit the current dataflow.
 
-The enhanced compute engine in Power BI enables Power BI Premium subscribers to use their capacity to optimize the use of dataflows. 
+    ![Save](./Media/Close.png)
 
-Using the enhanced compute engine provides the following advantages:
-
-1. Drastically reduces the refresh time required for long-running ETL steps over computed tables, such as performing joins, distinct, filters, and group by.
-1. Performs DirectQuery queries over tables.
-
-[Learn more about the enhanced compute engine](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-premium-features?tabs=gen2)
-
----
-
-1. 
-
-1. To ensure we can perform DirectQuery operations, we'll need to change the default setting from **Optimized** to **On** within the within the **Enhanced compute engine settings** and select the **Apply** button once complete.
-
-    ![Enhanced compute engine settings.](./Media/EnhancedComputeEngineSettings.png)
-
-1. After we've received the **Success!** notification, return to the workspace and select the **Refresh now** option of the datalfow for the optimization to take effect.
+1. Within the workspace select the **Refresh now** option of the dataflow to ingest the labs data and apply transformation logic.
 
     ![Refresh now.](./Media/RefreshNow.png)
 
@@ -485,7 +490,7 @@ Query folding is the ability for a Power Query query to generate a single query 
 
 ---
 
-1. Within **Power BI Desktop**'s **Home** ribbon select the **Get data** button. Within the **Get dialog** window select the **Power Platform** section and then **Dataflows** connector. Select **Connect** to continue to the **Dataflows** navigator window.
+1. Open **Power BI Desktop** and from the **Home** tab select the **Get data** button. Within the **Get dialog** window select the **Power Platform** section and then **Dataflows** connector. Select **Connect** to continue to the **Dataflows** navigator window.
 
     ![Power Platform dataflows.](./Media/ppDataflows.png)
 
@@ -582,6 +587,10 @@ Query folding is the ability for a Power Query query to generate a single query 
     1. Selecting the adjacent **X** to the left of the step name is also an option.
 
     ![Delete.](./Media/DeleteStep.png)
+
+# Close & Load
+
+1. Set the connectivity mode to DirectQuery
 
 # Next steps
 We hope this tour has shown how dataflows can provide a self-service, cloud-based, data preparation technology.
