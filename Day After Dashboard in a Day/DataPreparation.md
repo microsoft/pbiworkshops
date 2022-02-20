@@ -1,24 +1,27 @@
 # Data Preparation
 
-## Sample data
+Using dataflows and self-service data prep supports the following scenarios by:
 
-The data for this lab is from the AdventureWorks sample database, published by Microsoft to showcase how to design SQL Server databases and Analysis Services models.
+1. Promoting a single source of the truth, with greater control over which data is accessed and exposed to creators.
 
----
+1. Preventing others from having direct access to the underlying data sources and reducing the load to the underlying systems. Giving administrators finer control of when the systems get loaded from refreshes.
 
-# Download a sample dataflow model
+1. Enabling the ability to create reusable transformation logic and curated views of your cloud or on-premise data sources, which can then be seamlessly shared and integrated with other services and products in the Power Platform.
 
-We'll start our lab by importing a dataflow model and editing the dataflow's credentials so that we can ingest the sample files, transform data and perform a refresh operation once complete.
+[Learn more about dataflows and self-service data prep](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-introduction-self-service)
 
-1. Download the sample [**Dataflow demo.json**](https://raw.githubusercontent.com/microsoft/pbiworkshops/main/Day%20After%20Dashboard%20in%20a%20Day/Source_Files/Dataflow%20demo.json) file which will be used as a starting point with pre-defined tables and custom functions for the lab.
+### Sample data
+
+The data for this lab is from the [AdventureWorks](https://docs.microsoft.com/sql/samples/adventureworks-install-configure) sample database, published by Microsoft to showcase how to design SQL Server databases and Analysis Services models.
 
 ---
 
 # Premium license mode
 
-1. Navigate to a new, empty or non-production workspace and confirm that a capacity has been assigned to the workspace, if not we'll use this opportunity to enable the option by selecting one of the below values.
-    1. In the top right corner of the workspace, select the **Settings** option.
-    1. In the navigation pane, select the **Premium** tab and verify one of the licensing modes listed below has been enabled.
+Before we begin, we'll want to navigate to a new, empty or non-production workspace and confirm that a capacity has been assigned, if not we'll use this opportunity to enable the option by selecting one of the below values.
+
+1. In the top right corner of the workspace, select the **Settings** option.
+1. In the **Settings** pane, select the **Premium** tab and verify one of the following licensing modes listed below has been enabled.
 
     **License mode:**
     - [Premium per user](https://docs.microsoft.com/power-bi/admin/service-premium-per-user-faq)
@@ -29,24 +32,30 @@ We'll start our lab by importing a dataflow model and editing the dataflow's cre
 
 ## Import a dataflow model
 
+We'll leverage an existing dataflow json file as our starting point to assist us in the initial steps of simply connecting to multiple tables of data simultaneously. Once we are finished importing our dataflow model it will include additional standardized categories as part of the [metadata file (model.json)](https://docs.microsoft.com/common-data-model/model-json). This standardized format enables discovery across other Microsoft services and products in the Power Platform by providing the semantic information to those applications - including the table names, column names, metadata descriptions and more.
+
 1. In the top left of the workspace select **New** and then the **Dataflow** option.
 
     ![New Dataflow](./Media/NewDataflow.png)
 
-1. From the **Start creating your dataflow** screen, select the **Import Model** option and import the existing dataflow model file from your local save destination.
+1. From the **Start creating your dataflow** screen, select the **Import Model** option and import an the dataflow json file using the url below.
+
+    ```
+    https://raw.githubusercontent.com/microsoft/pbiworkshops/main/Day%20After%20Dashboard%20in%20a%20Day/Source_Files/Dataflow%20demo.json
+    ```
 
     ![Import Model](./Media/ImportModel.png)
 
 ## Edit the dataflow credentials
 
-1. Once the import has successfully completed, we can select the **Edit credentials** button from the toast notification in the top right.
-    1. Alternatively within the workspace we can also select the vertical ellipses ( ⋮ ) adjacent to the dataflow name and then the **Settings** option to configure.
+Because the lab files are stored in a publicly accessible [GitHub repository](./Source_Files/), we will authenticate anonymously and skip our test connection to ensure we can ingest the lab data.
+
+1. Once the import has successfully completed, we can now select the **Edit credentials** button from the toast notification in the top right.
+    1. Alternatively within the workspace we can select the vertical ellipses ( ⋮ ) adjacent to the dataflow name and the **Settings** option to configure.
 
     ![Edit credentials](./Media/EditCredentials.png)
 
-## Edit the dataflow credentials
-
-1. Within the Settings page for the dataflow, expand the **Data source credentials** section and select **Edit credentials** adjacent to the **Web** source. In the **Configure** dialog window set the following values below and then select **Sign in** once complete:
+1. Within the Settings page for the dataflow, expand the **Data source credentials** section and select the **Edit credentials** link next to the **Web** source. Once in the **Configure...** dialog window we can set the following values below and **Sign in** once complete:
     1. Authentication method | **Anonymous**
     1. Privacy level setting for this data source | **Public**
         1. To learn more, see [Power Query privacy level settings](https://docs.microsoft.com/power-bi/admin/desktop-privacy-levels#configure-a-privacy-level)
@@ -58,7 +67,7 @@ We'll start our lab by importing a dataflow model and editing the dataflow's cre
 
 # Configure Global options in the Power Query Online editor
 
-With our dataflow successfully imported and credentials set, we'll want to configure our development environment's experience when authoring in the Power Query Online editor.
+With our dataflow successfully imported and credentials set, we can now configure our development environment for authoring in the Power Query Online editor.
 
 ---
 
@@ -66,7 +75,7 @@ With our dataflow successfully imported and credentials set, we'll want to confi
 
     ![Edit dataflow](./Media/EditDataflow.png)
 
-1. Our imported dataflow model includes additional standardized categories as part of the [metadata file (model.json)](https://docs.microsoft.com/common-data-model/model-json). The standardized format enables discovery across other Microsoft products and provides the semantic information to those applications - including the tables, columns, metadata descriptions and more. To update the dataflow model in the top right we'll select the **Edit tables** option to navigate into the Power Query Online experience.
+1. To update the dataflow model in the top right we'll select the **Edit tables** option to navigate into the Power Query Online experience.
 
     ![Edit tables](./Media/EditTables.png)
 
@@ -96,11 +105,13 @@ With our dataflow successfully imported and credentials set, we'll want to confi
 
 ---
 
-# Generate a list of values
+# Advanced Editor
 
-Now that we're ready to begin ingesting data, for this portion of the lab we'll want to combine new data which is added to a (**Web page**) file location. The total number of files that will be added to this location is unknown but will continue to grow with time, to which we'll need to account for with a [future proofed](https://docs.microsoft.com/power-query/best-practices#future-proofing-queries) solution. Fortunately for us, the files maintain a consistent column naming, data type and file naming structure (**FactInternetSales_#.csv**) to make collecting and combining the new data easier.
+Now that we're ready to begin ingesting data, we need to combine new data which is being added to a (**Web page**) file location. The total number of files that will be added to this location is unknown but will continue to grow over time, to which we'll need to account for with a [future proofed](https://docs.microsoft.com/power-query/best-practices#future-proofing-queries) solution. Fortunately for us, the files maintain a consistent column naming, data type and naming structure (**FactInternetSales_#.csv**) to make collecting and combining new data easier.
 
 ---
+
+## Custom functions
 
 1. From the **Home** tab select the drop-down for **Get data** and the **Blank query** option to create a new query.
     1. Keyboard shortcut: **Ctrl + M**
@@ -125,8 +136,10 @@ Now that we're ready to begin ingesting data, for this portion of the lab we'll 
       fxFileName
     ```
 
-2. We'll open the **Advanced Editor** once again and complete the following:
-    1. Add a comma to end of the **fXFileName** step
+## Structured values
+
+1. We'll open the **Advanced Editor** once again and complete the following:
+    1. Add a comma to end of the **fXFileName** step.
     1. On a new line we'll create a step with the identifier name of **Source** which equals a [**Record**](https://docs.microsoft.com/powerquery-m/expressions-values-and-let-expression#record) type, containing the following name/value pairing as displayed below and update the return value to **Source** after the text **in**.
     
     | Name | Value |
@@ -155,13 +168,14 @@ Now that we're ready to begin ingesting data, for this portion of the lab we'll 
       Source
     ```
 
-4. Enable the **Query script** view, to view the full script in the center of the window. 
-    1. To validate the results are updating, we can change the **fileCount** value to **2** and review the data preview's **fileName** and **data** values.
-    1. If a change was made, return the **fileCount** value to **1** before proceeding.
+1. Enable the **Query script** view, to view the full script on your screen.
+    1. **Optional:** To validate the results are updating, we can change the **fileCount** value to **2** and review the data preview's **fileName** and **data** values. If a change was made, return the **fileCount** value to **1** before proceeding.
 
     ![Query script](./Media/QueryScript.png)
 
-5. Within the expanded **Query script** view, add a comma to the end of the **Source** step and add a new step with the step identifier name of **fileList** with the **List.Generate** function value, and update the text after the **in** statement to **fileList** to review the functions documentation.
+## Generating a list of values
+
+1. Within the expanded **Query script** view, add a comma to the end of the **Source** step and add a new step with the step identifier name of **fileList** with the [**List.Generate**](https://docs.microsoft.com/powerquery-m/list-generate) function, and update the text after the **in** statement to **fileList** to review the functions documentation.
     1. Typing any function name without the open and closed parenthesis proceeding will return the function's documentation.
 
     ```fsharp
@@ -247,7 +261,7 @@ Now that we're ready to begin ingesting data, for this portion of the lab we'll 
 
 ### Optional: Power Query M function reference
 
-To view a complete list of Power Query function documentation, from the **Home** tab select **Get data** and **Blank query**. Update the **Source** step value to **#shared** and select **Next** to proceed.
+To view a complete list of Power Query function documentation, from the **Home** tab select **Get data** and **Blank query**, update the **Source** step's value to **#shared** and select **Next** to proceed. A record value will be returned including the [Power Query M function reference](https://docs.microsoft.com/powerquery-m/power-query-m-function-reference) documentation.
 
 ```fsharp
 let
@@ -255,9 +269,10 @@ let
 in
     Source
 ```
-A record set is returned including the [Power Query M function reference](https://docs.microsoft.com/powerquery-m/power-query-m-function-reference) documentation.
 
 # Grouping queries
+
+As we add more tables to our solutions it can often be challenging to track which-queries-do-what. For this reason we'll create groups for our queries that share similar design principles and objectives.
 
 1. In the **Queries** pane, while holding **ctrl**, select the following tables from the list below, once complete right click and select the **Move to group** > **New group...** option.
 
@@ -290,7 +305,7 @@ A record set is returned including the [Power Query M function reference](https:
         ```
         Data that will be ingested from the source without transformations.
         ```
-    
+
         ![New group](./Media/NewGroupDataLoadDescription.png)
 
 1. Our **Queries** pane now contains two groups to help make managing and distinguishing our queries intent more effective at a glance. For more detail we can also hover above the group's folder icon where the **description** value of each will be visible.
@@ -301,7 +316,7 @@ A record set is returned including the [Power Query M function reference](https:
 
 # Computed tables for transformation logic
 
-With data now being ingested and stored in our dataflow's [Azure Data Lake Storage Gen2](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-introduction), we'll want to leverage [computed tables](https://docs.microsoft.com/power-query/dataflows/computed-entities-scenarios) to apply our transformation logic via the enhanced compute engine. 
+Not that our data is being ingested and stored in our dataflow's [Azure Data Lake Storage Gen2](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-introduction), we'll leverage [computed tables](https://docs.microsoft.com/power-query/dataflows/computed-entities-scenarios) to apply our transformation logic via the enhanced compute engine.
 
 [Learn more about the benefits of loading data without transformation for Text/CSV files](https://docs.microsoft.com/power-query/dataflows/computed-entities-scenarios#load-data-without-transformation-for-textcsv-files)
 
@@ -323,11 +338,11 @@ With data now being ingested and stored in our dataflow's [Azure Data Lake Stora
 
     ![Transformation group](./Media/NewGroupTransformation.png)
 
-## Transform multiple columns simultaneously
+### Transform multiple columns simultaneously
 
 1. Before we begin we'll change the current **Script** view to **Step script** in the bottom right hand corner of the screen.
 
-    ![Step secript](./Media/StepScript.png)
+    ![Step script](./Media/StepScript.png)
 
 1. While still in the **FactInternetSales** query, we'll select the **fx** icon to the left of the formula bar to insert a new step into the query.
 
@@ -365,6 +380,74 @@ With data now being ingested and stored in our dataflow's [Azure Data Lake Stora
 
     ![Currency type](./Media/CurrencyType.png)
 
+### Group multiple tables
+
+1. In the bottom right of the **Power Query** editor, select the **Diagram view** icon.
+
+    ![Diagram view](./Media/DiagramView.png)
+
+1. Select the **Actions** option ( ⋮ ) at the top right of the **DimProduct_raw** table and select the **Merge queries as new** option.
+
+    ![Merge queries as new](./Media/MergeNew.png)
+
+1. In the **Merge** window complete the following steps and then select **OK** when complete.
+
+    | Merge | Table | Column |
+    | :--- | :---- | :--- | 
+    | Left table for merge | DimProduct_raw | ProductSubcategoryKey |
+    | Right table for merge | DimProductSubcategory_raw | ProductSubcategoryKey |
+
+    1. Set the **Join kind** to **Left outer**
+
+    ![Merge DimProductSubcategory](./Media/MergeDimProductSubcategory.png)
+
+1. From the **Home** tab select the drop down next to **Choose columns** and then the **Go to column** option. Within the search dialog type the column name **DimProductSubcategory_raw** until a result has been returned, you can then either double click the name or press **OK** to continue.
+
+    ![Go to column](./Media/GoToColumn.png)
+
+1. In the top right of the **DimProductSubcategory_raw** column - we'll select the expand columns icon and disable the **ProductSubcategoryKey** column since this column already exists in our **DimProduct_raw** table, disable the **Use original column name as prefix** option and then select **OK** when complete.
+    
+    ![Expand product subcategory](./Media/ExpandProductSubcategory.png)
+
+1. Select the **Actions** option ( ⋮ ) at the top right of the **Merge** table and select the **Merge queries** option.
+
+    ![Merge queries](./Media/MergeQueries.png)
+    
+1. In the **Merge** window complete the following steps and then select **OK** when complete.
+
+    | Merge | Table | Column |
+    | :--- | :---- | :--- | 
+    | Left table for merge | (Current) | ProductCategoryKey |
+    | Right table for merge | DimProductCategory_raw | ProductCategoryKey |
+
+    1. Set the **Join kind** to **Left outer**
+
+    ![Merge left outer](./Media/MergeLeftOuter.png)
+
+1. In the top right of the **DimProductSubcategory_raw** column - we'll select the expand columns icon and disable the **ProductCategoryKey** column since this column already exists in our **DimProductSubcategory_raw** table, disable the **Use original column name as prefix** option and then select **OK** when complete.
+
+    ![Expand product category](./Media/ExpandProductCategory.png)
+
+### View query plan
+
+1. In the **Query settings** pane on the right, navigate to the **Expanded DimProductCategory_raw** step, right click and select the **View query plan** option.
+
+    ![View query plan](./Media/ViewQueryPlan.png)
+
+1. In the **Query plan** window, navigate to the inner joined **Table.Join** Full scan and select the **View details** to determine what join algorithm is being used. Press **Close** when complete.
+
+    ![Join algorithm](./Media/JoinAlgorithm.png)
+
+1. From the diagram view complete the following steps using the **Actions** options ( ⋮ ) for the **Merge** table.
+    1. Select the **Rename** action and update the query title to **DimProduct**.
+    1. Select the **Move to group...** action and select the **Data transformation** group.
+
+    ![Queries pane completed](./Media/QueriesPaneComplete.png)
+
+1. We'll now select the **Save & close** option in the bottom right to exit the Power Query editor.
+
+1. In the 
+
 ---
 
 # Enabling the enhanced compute engine
@@ -373,8 +456,8 @@ The enhanced compute engine in Power BI enables Power BI Premium subscribers to 
 
 Using the enhanced compute engine provides the following advantages:
 
-1. Drastically reduces the refresh time required for long-running ETL steps over computed tables, such as performing joins, distinct, filters, and group by
-1. Performs DirectQuery queries over tables
+1. Drastically reduces the refresh time required for long-running ETL steps over computed tables, such as performing joins, distinct, filters, and group by.
+1. Performs DirectQuery queries over tables.
 
 [Learn more about the enhanced compute engine](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-premium-features?tabs=gen2)
 
