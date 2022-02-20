@@ -599,12 +599,28 @@ Query folding is the ability for a Power Query query to generate a single query 
 
     ![Delete.](./Media/DeleteStep.png)
 
-# Close & Load
+# Set the storage mode
 
-1. Set the connectivity mode to DirectQuery
+1. From the **Home** tab select **Close & apply**.
+
+    ![Close & apply](./Media/CloseApply.png)
+
+1. Within the **Set the storage mode** window, select **DirectQuery** for all of the tables and select **OK** once complete.
+
+    ![List contains.](./Media/SetStorageMode.png)
 
 # Next steps
-We hope this tour has shown how dataflows can provide a self-service, cloud-based, data preparation technology.
+We hope this portion of the lab has shown how dataflows can provide a self-service, cloud-based, data preparation technology that can be consumed in Power BI. 
 
 - Continue to the [Data Modeling](./DataModeling.md) lab
 - Return to the [Day After Dashboard in a Day](./README.md) homepage
+
+---
+
+# Completed files
+
+To download the completed files from the lab instructions:
+
+- Dataflow model
+- Power BI Desktop file (PBIX)
+    - You will need to update the WorkspaceId and DataflowId to the Ids within your environment
