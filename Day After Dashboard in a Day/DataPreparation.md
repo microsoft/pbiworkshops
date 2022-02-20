@@ -126,7 +126,7 @@ With our dataflow successfully imported and credentials set, we can now configur
 
 # Advanced Editor
 
-For this labs section, we need to combine new data which is being added to a (**Web page**) file location. The total number of files that will be added to this location is unknown but will continue to grow over time, to which we'll need to account for with a [future proofed](https://docs.microsoft.com/power-query/best-practices#future-proofing-queries) solution. Fortunately for us, the files maintain a consistent column naming, data type and naming structure (**FactInternetSales_#.csv**) to make collecting and combining new data easier.
+For this labs section, we need to combine files which are being added to a (**Web page**) file location. The total number of files that will be added to this location is unknown but will continue to grow over time, which we'll need to account for with a [future proofed](https://docs.microsoft.com/power-query/best-practices#future-proofing-queries) solution. Fortunately for us, the files maintain a consistent column naming, data type and naming structure (**FactInternetSales_#.csv**) to make collecting and combining new data easier.
 
 ---
 
@@ -601,6 +601,8 @@ Query folding is the ability for a Power Query query to generate a single query 
 
 # Set the storage mode
 
+Now that we have completed all of the data preparation activities in this lab we need to create the connection between our queries and the Power BI dataset.
+
 1. From the **Home** tab select **Close & apply**.
 
     ![Close & apply](./Media/CloseApply.png)
@@ -622,5 +624,5 @@ We hope this portion of the lab has shown how dataflows can provide a self-servi
 To download the completed files from the lab instructions:
 
 - Dataflow model
-- Power BI Desktop file (PBIX)
-    - You will need to update the WorkspaceId and DataflowId to the Ids within your environment
+- Power BI Desktop template file (PBIT)
+    - You will need to update the WorkspaceId and DataflowId to those within your environment
