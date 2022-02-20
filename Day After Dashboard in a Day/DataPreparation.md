@@ -494,7 +494,18 @@ Query folding is the ability for a Power Query query to generate a single query 
 
     ![Power Platform dataflows.](./Media/ppDataflows.png)
 
-1. Within the **Navigator** window, navigate to the group Workspace where the dataflow is located and select all of the tables located within the dataflow. Select **Transform Data** when complete to enter the **Power Query Editor** window.
+1. Within the **Navigator** window, navigate to the group Workspace where the dataflow is located and select all of the tables listed below within the dataflow, once complete select the **Transform Data** option to continue.
+
+    | Table |
+    | :---- |
+    | DimCustomer |
+    | DimDate |
+    | DimEmployee |
+    | DimGeography |
+    | DimProduct_raw |
+    | DimProductCategory_raw |
+    | DimProductSubcategory_raw |
+    | FactInternetSales |
 
     ![Get dataflow tables.](./Media/getDataDataflow.png)
 
@@ -521,7 +532,7 @@ Query folding is the ability for a Power Query query to generate a single query 
     | If | Title | equals | Sr. | Male |
     | If | Title | equals | Ms. | Female |
     | If | Title | equals | Sra. | Female |
-    | else | Unknown | | |
+    | else | Not Provided | | |
 
     ![View Native Query.](./Media/AddConditionalColumn.png)
 
@@ -545,7 +556,7 @@ Query folding is the ability for a Power Query query to generate a single query 
                                 "Mr.",
                                 "Sr."
                             },
-                            [Gender]
+                            [Title]
                         )
                     then
                         "Male"
@@ -555,7 +566,7 @@ Query folding is the ability for a Power Query query to generate a single query 
                                 "Ms.",
                                 "Sra."
                             },
-                            [Gender]
+                            [Title]
                         )
                     then
                         "Female"
