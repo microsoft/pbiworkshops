@@ -30,7 +30,7 @@ Before we begin, we'll want to navigate to a new, empty or non-production worksp
 
     ![License mode](./Media/LicenseMode.png)
 
-## Import a dataflow model
+# Import a dataflow model
 
 We'll leverage an existing dataflow json file as our starting point to assist us in the initial steps of simply connecting to multiple tables of data simultaneously. Once we are finished importing our dataflow model it will include additional standardized categories as part of the [metadata file (model.json)](https://docs.microsoft.com/common-data-model/model-json). This standardized format enables discovery across other Microsoft services and products in the Power Platform by providing the semantic information to those applications - including the table names, column names, metadata descriptions and more.
 
@@ -259,7 +259,7 @@ Now that we're ready to begin ingesting data, we need to combine new data which 
 
     ![Query name](./Media/QueryName.png)
 
-### Optional: Power Query M function reference
+#### Optional: Power Query M function reference
 
 To view a complete list of Power Query function documentation, from the **Home** tab select **Get data** and **Blank query**, update the **Source** step's value to **#shared** and select **Next** to proceed. A record value will be returned including the [Power Query M function reference](https://docs.microsoft.com/powerquery-m/power-query-m-function-reference) documentation.
 
@@ -314,7 +314,7 @@ As we add more tables to our solutions it can often be challenging to track whic
 
 ---
 
-# Computed tables for transformation logic
+# Transforming data at scale
 
 Not that our data is being ingested and stored in our dataflow's [Azure Data Lake Storage Gen2](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-introduction), we'll leverage [computed tables](https://docs.microsoft.com/power-query/dataflows/computed-entities-scenarios) to apply our transformation logic via the enhanced compute engine.
 
@@ -380,7 +380,7 @@ Not that our data is being ingested and stored in our dataflow's [Azure Data Lak
 
     ![Currency type](./Media/CurrencyType.png)
 
-### Group multiple tables
+### Joining tables using the diagram view
 
 1. In the bottom right of the **Power Query** editor, select the **Diagram view** icon.
 
@@ -429,6 +429,8 @@ Not that our data is being ingested and stored in our dataflow's [Azure Data Lak
     ![Expand product category](./Media/ExpandProductCategory.png)
 
 ### View query plan
+
+[Learn more about the query plan](https://docs.microsoft.com/power-query/query-plan)
 
 1. In the **Query settings** pane on the right, navigate to the **Expanded DimProductCategory_raw** step, right click and select the **View query plan** option.
 
@@ -581,8 +583,8 @@ Query folding is the ability for a Power Query query to generate a single query 
 
     ![Delete.](./Media/DeleteStep.png)
 
-## Next steps
-We hope this tour has shown how the data preparation capabilities in Power BI can provide...
+# Next steps
+We hope this tour has shown how dataflows can provide a self-service, cloud-based, data preparation technology.
 
 - Continue to the [Data Modeling](./DataModeling.md) lab
 - Return to the [Day After Dashboard in a Day](./README.md) homepage
