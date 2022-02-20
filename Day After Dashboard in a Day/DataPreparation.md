@@ -6,7 +6,7 @@ Using dataflows and self-service data prep supports the following scenarios by:
 
 1. Preventing others from having direct access to the underlying data sources and reducing the load to the underlying systems. Giving administrators finer control of when the systems get loaded from refreshes.
 
-1. Enabling the ability to create reusable transformation logic and curated views of your cloud or on-premise data sources, which can then be seamlessly shared and integrated with other services and products in the Power Platform.
+1. Enabling the ability to create reusable transformation logic and curated views of your cloud or on-premise data sources, which can then be seamlessly shared and integrated with other Microsoft services and products (Power BI, Power Apps, and Dynamics 365 Customer Insights).
 
 [Learn more about dataflows and self-service data prep](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-introduction-self-service)
 
@@ -259,7 +259,7 @@ Now that we're ready to begin ingesting data, we need to combine new data which 
 
     ![Query name](./Media/QueryName.png)
 
-#### Optional: Power Query M function reference
+## Optional: Power Query M function reference
 
 To view a complete list of Power Query function documentation, from the **Home** tab select **Get data** and **Blank query**, update the **Source** step's value to **#shared** and select **Next** to proceed. A record value will be returned including the [Power Query M function reference](https://docs.microsoft.com/powerquery-m/power-query-m-function-reference) documentation.
 
@@ -338,7 +338,7 @@ Not that our data is being ingested and stored in our dataflow's [Azure Data Lak
 
     ![Transformation group](./Media/NewGroupTransformation.png)
 
-### Transform multiple columns simultaneously
+## Transform multiple columns simultaneously
 
 1. Before we begin we'll change the current **Script** view to **Step script** in the bottom right hand corner of the screen.
 
@@ -380,7 +380,7 @@ Not that our data is being ingested and stored in our dataflow's [Azure Data Lak
 
     ![Currency type](./Media/CurrencyType.png)
 
-### Joining tables using the diagram view
+## Joining tables using the diagram view
 
 1. In the bottom right of the **Power Query** editor, select the **Diagram view** icon.
 
@@ -428,7 +428,7 @@ Not that our data is being ingested and stored in our dataflow's [Azure Data Lak
 
     ![Expand product category](./Media/ExpandProductCategory.png)
 
-### View query plan
+## View query plan
 
 [Learn more about the query plan](https://docs.microsoft.com/power-query/query-plan)
 
