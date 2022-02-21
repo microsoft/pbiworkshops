@@ -612,7 +612,7 @@ Now that we have completed all of the data preparation activities in this lab we
     ![List contains.](./Media/SetStorageMode.png)
 
 # Next steps
-We hope this portion of the lab has shown how dataflows can provide a self-service, cloud-based, data preparation technology that can be consumed in Power BI. 
+We hope this portion of the lab has shown how dataflows can provide a self-service, cloud-based, data preparation technology that can be easily consumed in Power BI.
 
 - Continue to the [Data Modeling](./DataModeling.md) lab
 - Return to the [Day After Dashboard in a Day](./README.md) homepage
