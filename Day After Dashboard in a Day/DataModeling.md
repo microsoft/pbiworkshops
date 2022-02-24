@@ -1,14 +1,8 @@
 # Data Modeling
 
- supports the following scenarios by:
-
-1. Promoting a single source of the truth, with greater control over which data is accessed and exposed to creators.
+# Storage modes
 
 [Learn more about storage modes](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-introduction-self-service)
-
-[Learn more about external tools](https://docs.microsoft.com/power-bi/transform-model/desktop-external-tools)
-
-# Storage modes
 
 ## DirectQuery
 
@@ -58,14 +52,15 @@
 
 ---
 
-### Optional - View event traces
+# Optional - View event traces
 
 ---
 
 One important item of note that was missing from our above query is the [Transact-SQL](https://docs.microsoft.com/learn/modules/introduction-to-transact-sql/) statement for the **Direct query** value. To trace this event we'll use an external tool titled [SQL Server Profiler](https://docs.microsoft.com/sql/tools/sql-server-profiler/sql-server-profiler) to view event traces. We can leverage [external tools in Power BI Desktop](https://docs.microsoft.com/power-bi/transform-model/desktop-external-tools) to view the event traces against our underlying Analysis Services instance.
 
 
-#### Prerequisite - Register the SQL Server Profiler external tool
+
+## Prerequisite - Register the SQL Server Profiler external tool
 
 1. Download and install [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms) or the [Azure Data Studio with the SQL Server Profiler extension](https://docs.microsoft.com/sql/azure-data-studio/extensions/sql-server-profiler-extension?view=sql-server-ver15).
 
@@ -76,8 +71,9 @@ One important item of note that was missing from our above query is the [Transac
     ```
     C:\Program Files (x86)\Common Files\Microsoft Shared\Power BI Desktop\External Tools
     ```
+[Learn more about external tools](https://docs.microsoft.com/power-bi/transform-model/desktop-external-tools)
 
-#### DirectQuery event traces
+## DirectQuery event traces
 
 1. From the **Trace Properties** window select the **Events Selection** tab. Within the **Events** view, expand the **Query Processing** group and then select the **DirectQuery End** event. Once complete select the **Run** option to begin tracing events.
 
