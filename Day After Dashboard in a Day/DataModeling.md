@@ -130,8 +130,50 @@ One important item of note that was missing from our above query is the [Transac
     
     ![Add sales amount.](./Media/AddSalesAmount.png)
 
-1. Create relationships
-1. Referential integrity
+1. **Optional:** Returning to the **SQL Server Profiler** application, we can locate the **DirectQuery end** event with the **Text data** display of the SQL query generated when using data across multiple tables. In this example a [**LEFT OUTER JOIN**](https://docs.microsoft.com/sql/relational-databases/performance/joins?view=sql-server-ver15#fundamentals) is used.
+
+    ![DirectQuery left outer join.](./Media/DirectQueryLeftOuterJoin.png)
+
+    ```sql
+    SELECT
+        TOP (1000001) *
+    FROM (
+        SELECT
+            [t1].[EmailAddress],
+            [t1].[Gender],
+            SUM([t0].[SalesAmount]) AS [a0]
+        FROM (
+            [FactInternetSales] AS [t0]
+            LEFT OUTER JOIN [DimCustomer] AS [t1]
+            ON ([t0].[CustomerKey] = [t1].[CustomerKey])
+        )
+        GROUP BY
+            [t1].[EmailAddress],
+            [t1].[Gender]
+    ) [MainTable]
+    WHERE (NOT( ([a0] IS NULL)))
+    ```
+
+1. To change the behavior of our join, we'll first navigate to the **Modeling** tab and select the **Manage relationships** option to edit the current relationship.
+
+    ![Manage relationships.](./Media/ManageRelationships.png)
+
+1. In the **Manage relationships** dialog window select the **Edit...** option.
+    1. You can also double click to enter the relationship view.
+
+    ![Edit relationships.](./Media/EditRelationships.png)
+
+1. In the **Edit relationship** dialog window select the checkbox next to the **Assume referential integrity** property and then **OK** when complete.
+
+    ![Assume referential integrity.](./Media/AssumeReferentialIntegrity.png)
+
+AssumeReferentialIntegrity
+
+[Learn more about referential integrity](https://docs.microsoft.com/power-bi/connect-data/desktop-assume-referential-integrity)
+
+
+# Schema
+
 1. Snowflake schema
 1. Star Schema
 
