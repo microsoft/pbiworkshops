@@ -317,6 +317,7 @@ As we add more tables to our solutions it can often be challenging to remember w
     1. DimDate
     1. DimEmployee
     1. DimGeography
+    1. DimSalesTerritory
 
     ![Query name](./Media/NewGroupDataLoad.png)
 
@@ -502,6 +503,7 @@ Query folding is the ability for a Power Query query to generate a single query 
     | DimDate |
     | DimEmployee |
     | DimGeography |
+    | DimSalesTerritory |
     | DimProduct_raw |
     | DimProductCategory_raw |
     | DimProductSubcategory_raw |
@@ -607,7 +609,7 @@ Now that we have completed all of the data preparation activities in this lab we
 
     ![Close & apply](./Media/CloseApply.png)
 
-1. Within the **Set the storage mode** window, select **DirectQuery** for all of the tables and select **OK** once complete.
+1. Within the **Set the storage mode** window, select the **DirectQuery** storage mode for each of the tables and then select **OK** once complete.
 
     ![List contains.](./Media/SetStorageMode.png)
 
