@@ -24,7 +24,7 @@
     ![Performance analyzer.](./Media/PerformanceAnalyzer.png)
 
 1. Once the **Performance analyzer** pane is visible, we'll now select **Start recording**.
-    
+
     ![Start recording button.](./Media/StartRecording.png)
 
 1. With the **Performance analyzer** recording, we'll hover above the **Table** visual and select the **Analyze this visual** option to refresh a single visual. Once complete we'll select the expand/collapse box next to the **Table** visual to confirm that a **Direct query** value is now present. We can also now select the **Copy query** option and paste our query into a text editor of our choice.
@@ -56,9 +56,7 @@
 
 ---
 
-One important item of note that was missing from our above query is the [Transact-SQL](https://docs.microsoft.com/learn/modules/introduction-to-transact-sql/) statement for the **Direct query** value. To trace this event we'll use an external tool titled [SQL Server Profiler](https://docs.microsoft.com/sql/tools/sql-server-profiler/sql-server-profiler) to view event traces. We can leverage [external tools in Power BI Desktop](https://docs.microsoft.com/power-bi/transform-model/desktop-external-tools) to view the event traces against our underlying Analysis Services instance.
-
-
+One important item of note that was missing from our above query is our [Transact-SQL](https://docs.microsoft.com/learn/modules/introduction-to-transact-sql/) statement for the **Direct query** value. To trace this event we'll use an external tool titled [SQL Server Profiler](https://docs.microsoft.com/sql/tools/sql-server-profiler/sql-server-profiler) to view event traces. We can leverage [external tools in Power BI Desktop](https://docs.microsoft.com/power-bi/transform-model/desktop-external-tools) to view the event traces against our underlying Analysis Services instance.
 
 ## Prerequisite - Register the SQL Server Profiler external tool
 
@@ -103,9 +101,7 @@ One important item of note that was missing from our above query is the [Transac
 
 ---
 
-## Relationships
-
-
+# Relationships
 
 ---
 
@@ -196,6 +192,24 @@ One important item of note that was missing from our above query is the [Transac
     ) [MainTable]
     WHERE (NOT( ([a0] IS NULL)))
     ```
+
+1. Returning to the **Model** view we'll create the below relationships by dragging and dropping our columns and setting the necessary configurations.
+    1. We can create relationships by selecting the **Manage relationships** button from the **Home** tab and then **New...** option in the bottom left.
+
+    | Active | From: Table (Column) | Column | Cardinality | Assume referential integrity | Cross filter direction | 
+    | :----- |:----- | :------ | :----- | :----- | :----- |
+    | ☑ | DimCustomer (GeographyKey) | DimGeography (GeographyKey) | Many to one (*:1) | ☑ | Single | 
+    | ☑ | DimEmployee (SalesTerritoryKey) | DimSalesTerritory (SalesTerritoryKey) | Many to one (*:1) | ☑ | Both |
+    | ☑ | DimProduct_raw (ProductSubcategoryKey) | DimProductSubcategory_raw (ProductSubcategoryKey) | Many to one (*:1) |  | Single |
+    | ☑ | DimProductSubcategory_raw (ProductCategoryKey) | DimProductCategory_raw (ProductCategoryKey) | Many to one (*:1) | ☑ | Single |
+    | ☑ | FactInternetSales (CustomerKey) | DimCustomer (CustomerKey) | Many to one (*:1) | ☑ | Single |
+    | ☑ | FactInternetSales (ProductKey) | DimProduct_raw (ProductKey) | Many to one (*:1) | ☑ | Single |
+    | ☑ | FactInternetSales (SalesTerritoryKey) | DimSalesTerritory (SalesTerritoryKey) | Many to one (*:1) | ☑ | Single |
+    | ☑ | FactInternetSales (OrderDate) | DimDate (DateKey) | Many to one (*:1) | | Single |
+    |  | FactInternetSales (ShipDate) | DimDate (DateKey) | Many to one (*:1) | | Single |
+    
+
+    ![Model view of completed relationships.](./Media/DQModelRelationships.png)
 
 [Learn more about DirectQuery model guidance](https://docs.microsoft.com/power-bi/guidance/directquery-model-guidance)
 
