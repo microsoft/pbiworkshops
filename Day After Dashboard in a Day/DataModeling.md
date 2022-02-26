@@ -123,7 +123,7 @@ One important item of note that was missing from our above query is the [Transac
 
     ![Create relationship.](./Media/CreateRelationship.png)
 
-1. Returning to our report page view, we'll complete the following steps.
+1. Returning to our report page, we'll complete the following steps.
     1. Add the **SalesAmount** column from the **FactInternetSales** table.
     1. Select the **Clear** option in the **Performance analyzer** pane to remove previous events.
     1. Select the **Analyze this visual** to test the performance of the added column.
@@ -154,7 +154,7 @@ One important item of note that was missing from our above query is the [Transac
     WHERE (NOT( ([a0] IS NULL)))
     ```
 
-1. To change the behavior of our join, we'll first navigate to the **Modeling** tab and select the **Manage relationships** option to edit the current relationship.
+1. Since all of our sales include a customer key, we can improve our performance by changing the default join. We'll navigate now to the **Modeling** tab and select the **Manage relationships** option.
 
     ![Manage relationships.](./Media/ManageRelationships.png)
 
@@ -163,16 +163,54 @@ One important item of note that was missing from our above query is the [Transac
 
     ![Edit relationships.](./Media/EditRelationships.png)
 
-1. In the **Edit relationship** dialog window select the checkbox next to the **Assume referential integrity** property and then **OK** when complete.
+1. In the **Edit relationship** dialog window select the checkbox next to the [**Assume referential integrity**](https://docs.microsoft.com/power-bi/connect-data/desktop-assume-referential-integrity) property, then **OK** and close the **Manage relationships** window to return to the report page.
 
     ![Assume referential integrity.](./Media/AssumeReferentialIntegrity.png)
 
-AssumeReferentialIntegrity
+1. Returning to our report page, we'll complete the following steps.
+    1. Select the **Clear** option in the **Performance analyzer** pane to remove previous events.
+    1. Select the **Analyze this visual** to test the performance of the added column.
 
-[Learn more about referential integrity](https://docs.microsoft.com/power-bi/connect-data/desktop-assume-referential-integrity)
+    ![Analyze this visual for inner join.](./Media/AnalyzeInnerJoin.png)
+
+1. **Optional:** Returning to the **SQL Server Profiler** application, we can locate the **DirectQuery end** event with the **Text data** display of the SQL query generated using an [**INNER JOIN**](https://docs.microsoft.com/sql/relational-databases/performance/joins?view=sql-server-ver15#fundamentals).
+
+    ![DirectQuery inner join.](./Media/DirectQueryInnerJoin.png)
+
+    ```sql
+    SELECT
+        TOP (1000001) *
+    FROM (
+        SELECT
+            [t1].[EmailAddress],
+            [t1].[Gender],
+            SUM([t0].[SalesAmount]) AS [a0]
+        FROM (
+            [FactInternetSales] AS [t0]
+            INNER JOIN [DimCustomer] AS [t1]
+            ON ([t0].[CustomerKey] = [t1].[CustomerKey])
+        )
+        GROUP BY
+            [t1].[EmailAddress],
+            [t1].[Gender]
+    ) [MainTable]
+    WHERE (NOT( ([a0] IS NULL)))
+    ```
+
+[Learn more about DirectQuery model guidance](https://docs.microsoft.com/power-bi/guidance/directquery-model-guidance)
+
+# Scema design
+
+## Snowflake schema
+1. Navigate to the model view on the side-rail
+
+    ![Model view.](./Media/ModelView.png)
+
+1. 
 
 
-# Schema
+## Star Schema
+1. 
 
 1. Snowflake schema
 1. Star Schema
