@@ -28,7 +28,7 @@ To start the lab, visit [Data Preparation](./DataPreparation.md)
 
 ## Data Modeling
 
-In this lab you'll learn about how to create optimal datasets using Power BI Desktop.
+In this lab you'll learn about how to create optimally designed datasets using Power BI Desktop.
 
 1. How to configure different [Storage Modes](https://docs.microsoft.com/power-bi/transform-model/desktop-storage-mode) and create [Aggregations](https://docs.microsoft.com/power-bi/transform-model/aggregations-advanced) using Power BI Desktop.
 

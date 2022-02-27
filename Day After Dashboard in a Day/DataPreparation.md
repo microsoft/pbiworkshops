@@ -359,7 +359,7 @@ Not that our data is being ingested and stored in our dataflow's [Azure Data Lak
 
     ![Transformation group](./Media/NewGroupTransformation.png)
 
-## Transform multiple columns simultaneously
+## Transforming multiple columns
 
 1. Before we begin we'll change the current **Script** view to **Step script** in the bottom right hand corner of the screen.
 
@@ -396,7 +396,17 @@ Not that our data is being ingested and stored in our dataflow's [Azure Data Lak
     )
     ```
 
-1. While holding the **shift** key select the **SalesAmount**, **TaxAmount** and **Freight** columns, right click any one of the selected columns and choose the **Change type** and then the **Currency** option.
+1. To create a new column from a multi-selection we'll first hold shift and select the **SalesAmount**, **TaxAmount** and **Freight** columns, then we'll navigate to the **Add column** tab's **Statistics** button and select the **Sum** option.
+
+    ![Add column statistics](./Media/AddColumnStatistics.png)
+
+1. To avoid creating a new step to rename the column name, from the formula bar we can update the default column name of **Sum** to **TotalSalesAmount**, to match the below formula.
+
+    ```powerquery-m
+    Table.AddColumn(Custom, "TotalSalesAmount", each List.Sum({[SalesAmount], [TaxAmount], [Freight]}), type nullable number)
+    ```
+
+1. While holding the **shift** key select the **SalesAmount**, **TaxAmount**, **Freight** and **TotalSalesAmount** columns, right click any one of the selected columns and choose the **Change type** and then the **Currency** option.
     1. The [**Currency**](https://docs.microsoft.com/power-query/data-types) type is a fixed decimal number and always has four digits to its right.
 
     ![Currency type](./Media/CurrencyType.png)
