@@ -194,7 +194,7 @@ One important item of note that was missing from our above query is our [Transac
     ```
 
 1. Returning to the **Model** view we'll create the below relationships by dragging and dropping our columns and setting the necessary configurations.
-    1. We can create relationships by selecting the **Manage relationships** button from the **Home** tab and then **New...** option in the bottom left.
+    1. We can also create relationships between tables by selecting the **Manage relationships** button from the **Home** tab and then **New...** option in the bottom left.
 
     | Active | From: Table (Column) | Column | Cardinality | Assume referential integrity | Cross filter direction | 
     | :----- |:----- | :------ | :----- | :----- | :----- |
