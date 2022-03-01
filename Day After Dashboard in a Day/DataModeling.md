@@ -4,9 +4,17 @@
 
 [Learn more about storage modes](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-introduction-self-service)
 
+---
+
 ## DirectQuery
 
-1. Some of the first things we might notice is that in the bottom right corner of Power BI Desktop is the text **Storage Mode: DirectQuery** and on the left side-rail our **Data** view is now missing.
+
+
+[Learn more about DirectQuery model guidance](https://docs.microsoft.com/power-bi/guidance/directquery-model-guidance)
+
+---
+
+1. One of the first things we might notice is that on our left side-rail the **Data** view is now missing and in the bottom right corner of Power BI Desktop is the text **Storage Mode: DirectQuery**.
 
     ![Missing data view.](./Media/MissingDataView.png)
 
@@ -31,7 +39,7 @@
 
     ![Analyze this visual.](./Media/AnalyzeThisVisual.png)
 
-1. From the copied query, we are able to view the **DAX Query** that was sent to the analysis services database instance.
+1. From the copied query, we are able to view the **DAX Query** that was sent to the analysis services database engine.
 
     ```dax
     // DAX Query
@@ -56,7 +64,7 @@
 
 ---
 
-One important item of note that was missing from our above query is our [Transact-SQL](https://docs.microsoft.com/learn/modules/introduction-to-transact-sql/) statement for the **Direct query** value. To trace this event we'll use an external tool titled [SQL Server Profiler](https://docs.microsoft.com/sql/tools/sql-server-profiler/sql-server-profiler) to view event traces. We can leverage [external tools in Power BI Desktop](https://docs.microsoft.com/power-bi/transform-model/desktop-external-tools) to view the event traces against our underlying Analysis Services instance.
+One important item of note that was missing from our above query is our [Transact-SQL](https://docs.microsoft.com/learn/modules/introduction-to-transact-sql/) statement for the **Direct query** value. To trace this event we'll use an external tool titled [SQL Server Profiler](https://docs.microsoft.com/sql/tools/sql-server-profiler/sql-server-profiler) to view event traces. We can leverage the [external tools in Power BI Desktop](https://docs.microsoft.com/power-bi/transform-model/desktop-external-tools) integration to easily view the event traces against our underlying Analysis Services instance.
 
 ## Prerequisite - Register the SQL Server Profiler external tool
 
@@ -193,7 +201,7 @@ One important item of note that was missing from our above query is our [Transac
     WHERE (NOT( ([a0] IS NULL)))
     ```
 
-1. Returning to the **Model** view we'll create the below relationships by dragging and dropping our columns and setting the necessary configurations.
+1. Returning to the **Model** view we'll create the below relationships by dragging and dropping our columns and setting the necessary configurations within the **Edit relationship** window.
     1. We can also create relationships between tables by selecting the **Manage relationships** button from the **Home** tab and then **New...** option in the bottom left.
 
     | Active | From: Table (Column) | Column | Cardinality | Assume referential integrity | Cross filter direction | 
@@ -205,23 +213,25 @@ One important item of note that was missing from our above query is our [Transac
     | ☑ | FactInternetSales (CustomerKey) | DimCustomer (CustomerKey) | Many to one (*:1) | ☑ | Single |
     | ☑ | FactInternetSales (ProductKey) | DimProduct_raw (ProductKey) | Many to one (*:1) | ☑ | Single |
     | ☑ | FactInternetSales (SalesTerritoryKey) | DimSalesTerritory (SalesTerritoryKey) | Many to one (*:1) | ☑ | Single |
-    | ☑ | FactInternetSales (OrderDate) | DimDate (DateKey) | Many to one (*:1) | | Single |
-    |  | FactInternetSales (ShipDate) | DimDate (DateKey) | Many to one (*:1) | | Single |
-    
+    | ☑ | FactInternetSales (OrderDate) | DimDate (DateKey) | Many to one (*:1) | ☑ | Single |
+    |  | FactInternetSales (ShipDate) | DimDate (DateKey) | Many to one (*:1) | ☑ | Single |
 
-    ![Model view of completed relationships.](./Media/DQModelRelationships.png)
+    ![Edit relationship settings.](./Media/EditRelationshipSettings.png)
 
-[Learn more about DirectQuery model guidance](https://docs.microsoft.com/power-bi/guidance/directquery-model-guidance)
+# Aggregates
 
-# Scema design
+
+
+# Schema design
 
 ## Snowflake schema
-1. Navigate to the model view on the side-rail
+1. Navigate to the **Model** view on the side-rail of Power BI Desktop.
 
     ![Model view.](./Media/ModelView.png)
 
-1. 
+1. Within
 
+    ![Model view of completed relationships.](./Media/DQModelRelationships.png)
 
 ## Star Schema
 1. 
