@@ -218,20 +218,107 @@ One important item of note that was missing from our above query is our [Transac
 
     ![Edit relationship settings.](./Media/EditRelationshipSettings.png)
 
-# Aggregates
+---
+# User-defined aggregations
 
+Aggregations in Power BI can improve query performance over very large DirectQuery datasets. By using aggregations, you cache data at the aggregated level in-memory. Aggregations in Power BI can be manually configured in the data model, as described in this article, or for Premium subscriptions, automatically by enabling the [Automatic aggregations](https://docs.microsoft.com/power-bi/admin/aggregations-auto) feature in dataset Settings.
 
+[To learn more about user-defined aggregations](https://docs.microsoft.com/power-bi/transform-model/aggregations-advanced)
 
-# Schema design
+---
 
-## Snowflake schema
-1. Navigate to the **Model** view on the side-rail of Power BI Desktop.
+1. Within the **Home** tab select the **Transform data** button to return to the Power Query editor.
+
+    ![Transform data.](./Media/TransformData.png)
+ 
+1. Within the Queries pane, right click the **FactInternetSales** table and select the **Duplicate** option to create a new query.
+
+    ![Duplicate table.](./Media/DuplicateTable.png)
+
+1. Select the **Tranform** tab and then the **Group By** button.
+
+    ![Group by.](./Media/GroupBy.png)
+
+1. Within the **Group By** window, we'll first select the **Advanced** tab and create our groupings using the **Add grouping** button for the **ProductKey** and **OrderDate** columns. And for our aggregates - new column names, operations and columns use the **Add aggregation** button and the below configuration. Once complete select **OK**.
+
+    | New column name | Operator | Column |
+    |:----- | :------ | :------ |
+    | SumOrderQuantity | Sum | OrderQuantity |
+    | SumSalesAmount | Sum | SalesAmount |
+    | SumTaxAmount | Sum | TaxAmount |
+    | SumFreight | Sum | Freight |
+    | SumTotalSalesAmount | Sum | TotalSalesAmount |
+
+    ![Group by menu.](./Media/GroupByMenu.png)
+
+1. Before we proceed we must ensure that our data types are consistent between our two tables. If we toggle between the **FactInternetSales** and **FactInternetSales (2)** table we'll notice that the **OrderQuantity** and **SumOrderQuantity** are not of the same data type.
+
+    ![Schema differences.](./Media/SchemaDifferences.png)
+
+1. Navigate to the **FactInternetSales (2)** table and within the formula bar for the **Grouped Rows** step, update the date type for the **SumOrderQuantity** from **type nullable number** to **type nullable Int64.Type**.
+    1. Complete formula below.
+
+    ```powerquery-m
+    = Table.Group(#"Entity Name", {"ProductKey", "OrderDate"}, {{"SumOrderQuantity", each List.Sum([OrderQuantity]), type nullable Int64.Type}, {"SumSalesAmount", each List.Sum([SalesAmount]), type nullable number}, {"SumTaxAmount", each List.Sum([TaxAmount]), type nullable number}, {"SumFreight", each List.Sum([Freight]), type nullable number}, {"SumTotalSalesAmount", each List.Sum([TotalSalesAmount]), type nullable number}})
+    ```
+
+    ![Schema differences.](./Media/UpdateDataType.png)
+
+1. Within the queries pane right click the **FactInternetSales (2)** and select **Rename** to update the table name to **FactInternetSales_agg**.
+
+    ![Rename agg.](./Media/RenameAgg.png)
+
+1. Now that we're ready to return to our modeling view navigate to the **Home** tab and select the **Close & Apply** option.
+
+    ![Close apply.](./Media/CloseApply.png)
+
+1. Navigate to the **Model** view on the side-rail of Power BI Desktop, where we'll now create a new relationship between the **FactInternetSales_agg** and our existing tables in our model.
 
     ![Model view.](./Media/ModelView.png)
 
-1. Within
+1. By dragging and dropping the columns or navigating to the **Manage relationships** menu, complete the below relationships.
 
-    ![Model view of completed relationships.](./Media/DQModelRelationships.png)
+    | Active | From: Table (Column) | Column | Cardinality | Assume referential integrity | Cross filter direction | 
+    | :----- |:----- | :------ | :----- | :----- | :----- |
+    | ☑ | FactInternetSales_agg (ProductKey) | DimProduct (ProductKey) | Many to one (*:1) | ☑ | Single | 
+    | ☑ | FactInternetSales_agg (OrderDate) | DimDate (DateKey) | Many to one (*:1) | ☑ | Single |
+
+    ![Agg relationships.](./Media/AggRelationships.png)
+
+1. Right click the **FactInternetSales_agg** table and select the **Manage aggregations** option.
+
+    ![Manage aggregations.](./Media/ManageAggregations.png)
+
+1. Within the **Manage aggregations** window complete the following configurations and select **Apply all** once complete.
+
+    |AGGREGATION COLUMN | SUMMARIZATION | DETAIL TABLE | DETAIL COLUMN |
+    | :-- | :-- | :-- | :-- |
+    | OrderDate | GroupBy | FactInternetSales | OrderDate |
+    | ProductKey | GroupBy | FactInternetSales | ProductKey |
+    | SumFreight | Sum | FactInternetSales | Freight |
+    | SumOrderQuantity | Sum | FactInternetSales | OrderQuantity |
+    | SumSalesAmount | Sum | FactInternetSales | SalesAmount |
+    | SumTaxAmount | Sum | FactInternetSales | TaxAmount |
+    | SumTotalSalesAmount | Sum | FactInternetSales | TotalSalesAmount |
+    
+    
+    ![Manage aggregations window.](./Media/ManageAggregationsWindow.png)
+
+1. With the **FactInternetSales_agg** selected, navigate to the **Properties** pane of the Modeling view and expand the **Advanced** section to change the **Storage mode** of our table to **Import**.
+
+    ![Storage mode import.](./Media/StorageModeImport.png)
+
+1. A **Storage mode** window is now displayed providing us with the detail that changing to **Import** is an irreversible operation and has provided us with the suggestion to set the tables with relationships to our aggregate table to **Dual** mode. We'll follow Power BI's suggestion wit the **Set affected tables to dual** option checked and select the **OK** button to proceed.
+
+    ![Storage mode warning.](./Media/StorageModeWarning.png)
+
+1. The **Refresh** window is now displayed as our tables with **Import** and **Dual** storage are cached in to our model.
+
+    ![Refresh window.](./Media/RefreshWindow.png)
+
+# Schema design
+
+# Snowflake Schema
 
 ## Star Schema
 1. 
