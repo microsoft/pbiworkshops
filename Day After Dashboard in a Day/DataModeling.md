@@ -290,6 +290,7 @@ Aggregations in Power BI can improve query performance over very large DirectQue
     ![Manage aggregations.](./Media/ManageAggregations.png)
 
 1. Within the **Manage aggregations** window complete the following configurations and select **Apply all** once complete.
+    1. GroupBy not required, but may be recommended.
 
     |AGGREGATION COLUMN | SUMMARIZATION | DETAIL TABLE | DETAIL COLUMN |
     | :-- | :-- | :-- | :-- |
@@ -315,6 +316,27 @@ Aggregations in Power BI can improve query performance over very large DirectQue
 1. The **Refresh** window is now displayed as our tables with **Import** and **Dual** storage are cached in to our model.
 
     ![Refresh window.](./Media/RefreshWindow.png)
+
+1. Returning to our report page, we'll complete the following steps.
+    1. Add a **Matrix** visual to our report page.
+    1. Add the **EnglishProductName**, **EnglishMonthName** and **EnglishCountryRegionName** fields to **Rows**.
+    1. Add the **Total Quantity** measure to **Values**.
+    1. Select the **Total Quantity** column header in the matrix visual to sort descending to ascending.
+
+    ![Matrix visual.](./Media/MatrixVisual.png)
+
+1. Expanding our **Performance analyzer** pane once again, we can select the **Clear** option to remove any previous results and then select the **Analyze this visual** on our table, once complete expand the **Matrix** tables results, where only a **DAX query** is now present meaning that our aggregate table is being used.
+
+    ![Agg first level.](./Media/AggFirstLevel.png)
+
+1. If we expand one of the **EnglishProductName** values in our **Matrix** the **Performance analyer** includes the **Drilled down/up** action where the second level of our hierarchy is also leveraging the speed and performance of the aggregate table.
+
+    ![Agg second level.](./Media/AggSecondLevel.png)
+
+1. If we expand one of the **EnglishMonthName** values in our **Matrix** the **Performance analyer** 
+
+    ![Agg third level.](./Media/AggThirdLevel.png)
+
 
 # Schema design
 
