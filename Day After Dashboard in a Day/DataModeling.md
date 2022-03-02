@@ -333,7 +333,7 @@ Aggregations in Power BI can improve query performance over very large DirectQue
 
     ![Agg second level.](./Media/AggSecondLevel.png)
 
-1. If we expand one of the **EnglishMonthName** values in our **Matrix** the **Performance analyer** includes a second **Drilled down/up** action where a **Direct query** value is now present meaning that our agg table did not have the necessary information to complete the query and it's now had to utilize the **FactInternetSales** table.
+1. If we expand one of the **EnglishMonthName** values in our **Matrix** the **Performance analyer** includes a second **Drilled down/up** action where a **Direct query** value is now present meaning that our agg table did not have the necessary information to complete the query and it's now had to utilize the **FactInternetSales** table which is in the **DirectQuery** storage mode.
 
     ![Agg third level.](./Media/AggThirdLevel.png)
 
