@@ -290,7 +290,7 @@ Aggregations in Power BI can improve query performance over very large DirectQue
     ![Manage aggregations.](./Media/ManageAggregations.png)
 
 1. Within the **Manage aggregations** window complete the following configurations and select **Apply all** once complete.
-    1. GroupBy not required, but may be recommended.
+    1. If relationships exist the **GroupBy** fields are not required.
 
     |AGGREGATION COLUMN | SUMMARIZATION | DETAIL TABLE | DETAIL COLUMN |
     | :-- | :-- | :-- | :-- |
@@ -336,6 +336,62 @@ Aggregations in Power BI can improve query performance over very large DirectQue
 1. If we expand one of the **EnglishMonthName** values in our **Matrix** the **Performance analyer** includes a second **Drilled down/up** action where a **Direct query** value is now present meaning that our agg table did not have the necessary information to complete the query and it's now had to utilize the **FactInternetSales** table which is in the **DirectQuery** storage mode.
 
     ![Agg third level.](./Media/AggThirdLevel.png)
+
+---
+
+## Optional - Aggregation event traces
+
+---
+
+1. If we return to the **SQL Server Profiler** window, we can select the **Pause** button to pause the existing trace and then select **File** > **Properties**.
+
+    ![New trace events.](./Media/NewTraceEvents.png)
+
+1. From the **Trace Properties** window select the **Events Selection** tab. Within the **Events** section, expand the **Query Processing** group and then select the **Aggregate Table Rewrite Query** event. Once complete select the **Run** option in the bottom right to start tracing events.
+    1. If you have an abbreviated list of events, select the **Show all events** option.
+
+    ![Agg trace events.](./Media/AggTraceEvents.png)
+
+1. Return to Power BI Desktop and select the **Analyze this visual** option to send a query to the analysis services engine.
+
+    ![Analyze agg trace events.](./Media/AnalyzeAggTraceEvent.png)
+
+1. Within the **SQL Server Profiler** three events are displayed with the **Aggregate Table Rewrite Query**, when reading thru each's **TextData** we'll notice the **matchingResult** field and in one example the **attemptFailed** was returned, indicating that the aggregate table was unable to be used, whereas the other values include a **matchFound** value.
+
+    ![Aggregate table rewrite.](./Media/AggregateTableQuery.png)
+
+    ```json
+    {
+      "table": "FactInternetSales",
+      "matchingResult": "attemptFailed",
+      "failureReasons": [
+        {
+          "alternateSource": "FactInternetSales_agg",
+          "reason": "no column mapping",
+          "column": "DimGeography[EnglishCountryRegionName]"
+        }
+      ],
+      "dataRequest": [
+        {
+          "aggregation": "Sum",
+          "table": "FactInternetSales",
+          "column": "OrderQuantity"
+        },
+        {
+          "table": "DimDate",
+          "column": "EnglishMonthName"
+        },
+        {
+          "table": "DimGeography",
+          "column": "EnglishCountryRegionName"
+        },
+        {
+          "table": "DimProduct_raw",
+          "column": "EnglishProductName"
+        }
+      ]
+    }
+    ```
 
 # Schema design
 
