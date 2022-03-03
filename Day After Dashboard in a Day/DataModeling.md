@@ -418,7 +418,7 @@ DAX Studio is a tool to write, execute, and analyze DAX queries in Power BI Desi
     
     ![Product alternate key.](./Media/ProductAlternateKey.png)
 
-1. The above **ProductAlternateKey** and **ProductKey** may be good columns to remove from our dataset if they are not currently being used in any of our table relationships. Select the **Relationships** tab and exapnd the **DimProductSubcategory_raw** and **DimProduct_raw** values to confirm if the above columns can be removed.
+1. The above **ProductAlternateKey** and **ProductKey** may be good candidates for removal from our dataset if they are not currently being used in any of our table relationships. Select the **Relationships** tab and by selecting the Table name review the different relationship values to confirm if the above columns can be removed.
     1.  **Important note:** While the size of the relationships in this lab is small, this field may be worth investigating if you have a model with a large number of snowflake dimensions that can be joined.
 
     ![Relationships.](./Media/Relationships.png)
@@ -432,7 +432,34 @@ Importance of the Star Schema.
 
 ---
 
-1. 
+1. Navigate to the model view on the side-rail
+
+    ![Full side rail.](./Media/FullSideRail.png)
+
+1. Snowflake 
+
+    ![Snowflake dimensions](./Media/SnowflakeDimensions.png)
+
+1. Within them model view we'll select the vertical ellipses ( ⋮ ) at the top right of the **DimProduct_raw** table and then the **Edit query** option to return to the Power Query Editor.
+    1. Important you can also right click the table header as opposed to selecting the ellipses.
+
+    ![Edit query.](./Media/EditQueryFromTable.png)
+
+1. In the Power Query Editor - **Queries** pane select the **DimProduct_raw** and in the formula bar we'll update the following entity value to our merged table from the previous [**Data Preparation**](https://github.com/microsoft/pbiworkshops/blob/main/Day%20After%20Dashboard%20in%20a%20Day/DataPreparation.md#joining-tables-using-the-diagram-view) section.
+
+    | Before | After |
+    | :-- | :-- |
+    |= #"Dataflow Id"{[entity="**DimProduct_raw**",version=""]}[Data] | = #"Dataflow Id"{[entity="**DimProduct**",version=""]}[Data] |
+
+    ![DimProduct update](./Media/DimProduct.png)
+
+1. Within the **Queries** pane right click the **DimProduct_raw** table and select the **Rename** option to update the table name to **DimProduct**.
+
+    ![Rename product](./Media/RenameProduct.png)
+
+1. Within the **Queries** pane while holding shift click the **DimProductCategory_raw** and **DimProductSubcategory_raw** tables and select the **Delete** option to remove the tables from our dataset.
+
+    ![Delete product](./Media/DeleteProducts.png)
 
 # Next steps
 We hope this portion of the lab has shown how dataflows can provide a self-service, cloud-based, data preparation technology that can be easily consumed in Power BI.
