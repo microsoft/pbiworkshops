@@ -424,10 +424,9 @@ DAX Studio is a tool to write, execute, and analyze DAX queries in Power BI Desi
     ![Relationships.](./Media/Relationships.png)
 
 ---
-
-# Star schema
-
+# Dimensional modeling
 ---
+
 Importance of the Star Schema.
 
 ---
@@ -436,7 +435,7 @@ Importance of the Star Schema.
 
     ![Full side rail.](./Media/FullSideRail.png)
 
-1. Snowflake 
+1. In our modeling view, we notice a [snowflaked dimension](https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/dimensional-modeling-techniques/snowflake-dimension/) from the **DimProductCategory_raw** < **DimProductSubcategory_raw** < **DimProductCategory_raw** tables. This type of modeling approaching may affect our datasets query performance, as these dimensions contain the same information - to better optimize our dataset we'll flatten the three tables into a single dimension table for use.
 
     ![Snowflake dimensions](./Media/SnowflakeDimensions.png)
 
