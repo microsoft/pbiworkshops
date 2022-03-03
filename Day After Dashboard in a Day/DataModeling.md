@@ -460,6 +460,10 @@ Importance of the Star Schema.
 
     ![Delete product](./Media/DeleteProducts.png)
 
+1. Now that we're ready to return to our modeling view navigate to the **Home** tab and select the **Close & Apply** option.
+
+    ![Close apply.](./Media/CloseApply.png)
+
 # Next steps
 We hope this portion of the lab has shown how dataflows can provide a self-service, cloud-based, data preparation technology that can be easily consumed in Power BI.
 
