@@ -1,0 +1,144 @@
+#Step 1
+DEFINE
+    VAR _step1 =
+        CALCULATETABLE (
+            ADDCOLUMNS (
+                SUMMARIZE (
+                    FactInternetSales,
+                    DimDate[CalendarYear],
+                    DimDate[EnglishMonthName]
+                ),
+                "@SalesAmount", [Total Sales Amount]
+            ),
+            ALLSELECTED ()
+        )
+EVALUATE
+_step1
+ORDER BY [@SalesAmount]
+------------------------------------------------------------------
+
+#Step 2
+DEFINE
+    VAR _filter1 =
+        TREATAS ( { 2021 }, DimDate[CalendarYear] )
+    VAR _step1 =
+        CALCULATETABLE (
+            ADDCOLUMNS (
+                SUMMARIZE (
+                    FactInternetSales,
+                    DimDate[CalendarYear],
+                    DimDate[EnglishMonthName]
+                ),
+                "@SalesAmount", [Total Sales Amount]
+            ),
+            ALLSELECTED (),
+            _filter1
+        )
+
+EVALUATE
+_step1
+ORDER BY [@SalesAmount]
+------------------------------------------------------------------
+
+#Step 3 
+DEFINE
+    VAR _filter1 =
+        TREATAS ( { 2021 }, DimDate[CalendarYear] )
+    VAR _step1 =
+        CALCULATETABLE (
+            ADDCOLUMNS (
+                SUMMARIZE (
+                    FactInternetSales,
+                    DimDate[CalendarYear],
+                    DimDate[EnglishMonthName]
+                ),
+                "@SalesAmount", [Total Sales Amount]
+            ),
+            ALLSELECTED (),
+            _filter1
+        )
+    VAR _step2 =
+        MINX ( _step1, [@SalesAmount] )
+    VAR _step3 =
+        MAXX ( _step1, [@SalesAmount] )
+
+EVALUATE
+_step1
+ORDER BY [@SalesAmount]
+
+EVALUATE
+{ _step2 }
+
+EVALUATE
+{ _step3 }
+------------------------------------------------------------------
+
+#Step 4
+DEFINE
+    VAR _filter1 =
+        TREATAS ( { 2021 }, DimDate[CalendarYear] )
+    VAR _step1 =
+        CALCULATETABLE (
+            ADDCOLUMNS (
+                SUMMARIZE (
+                    FactInternetSales,
+                    DimDate[CalendarYear],
+                    DimDate[EnglishMonthName]
+                ),
+                "@SalesAmount", [Total Sales Amount]
+            ),
+            ALLSELECTED (),
+            _filter1
+        )
+    VAR _step2 =
+        MINX ( _step1, [@SalesAmount] )
+    VAR _step3 =
+        MAXX ( _step1, [@SalesAmount] )
+    VAR _step4 = [Total Sales Amount]
+
+EVALUATE
+_step1
+ORDER BY [@SalesAmount]
+
+EVALUATE
+{ _step2 }
+
+EVALUATE
+{ _step3 }
+
+EVALUATE
+{ _step4 }
+------------------------------------------------------------------
+
+#Step 5
+DEFINE
+    MEASURE FactInternetSales[MinMaxSalesAmount] =
+        VAR _step1 =
+            CALCULATETABLE (
+                ADDCOLUMNS (
+                    SUMMARIZE (
+                        FactInternetSales,
+                        DimDate[CalendarYear],
+                        DimDate[EnglishMonthName]
+                    ),
+                    "@SalesAmount", [Total Sales Amount]
+                ),
+                ALLSELECTED ()
+            )
+        VAR _step2 =
+            MINX ( _step1, [@SalesAmount] )
+        VAR _step3 =
+            MAXX ( _step1, [@SalesAmount] )
+        VAR _step4 = [Total Sales Amount]
+        VAR _step5 =
+            SWITCH ( TRUE, _step4 = _step2, 1, _step4 = _step3, 2 )
+        RETURN
+            _step5
+
+EVALUATE
+SUMMARIZECOLUMNS (
+    DimDate[EnglishMonthName],
+    TREATAS ( { 2020 }, DimDate[CalendarYear] ),
+    "TotalSalesAmount", [Total Sales Amount],
+    "MinMax", FactInternetSales[MinMaxSalesAmount]
+)

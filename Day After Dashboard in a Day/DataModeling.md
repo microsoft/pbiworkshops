@@ -392,20 +392,50 @@ Aggregations in Power BI can improve query performance over very large DirectQue
       ]
     }
     ```
+---
+## Optional - DAX Studio
+---
 
-# Schema design
+DAX Studio is a tool to write, execute, and analyze DAX queries in Power BI Designer, Power Pivot for Excel, and Analysis Services Tabular. It includes an Object Browser, query editing and execution, formula and measure editing, syntax highlighting and formatting, integrated event tracing and query execution breakdowns.
 
-# Snowflake Schema
+**Important note:** DAX Studio will automatically install the external tools json file.
 
-## Star Schema
+[Learn more about DAX Studio](https://daxstudio.org)
+
+---
+
+1. Within Power BI Desktop, select the **External Tools** tab and the **DAX Studio** button.
+
+    ![External tools DAX Studio.](./Media/ExternalToolsDAX.png)
+
+1. Navigate to the **Advanced** tab and select the **View Metrics** option. Within the VertiPaq Analyzer Metrics that is now displayed and the **Tables** tab, select the **% DB** column to sort the tables in descending order by the largest percentage.
+
+    ![View metrics.](./Media/ViewMetrics.png)
+
+1. Expand the **DimProduct_raw** table, to view the columns and their metrics.
+    1. One of the first items of note is that the **ProductAlternateKey** is the largest column in our table with nearly 6% of the table size and nearly 2% of the database size.
+    1. The second item is that our **ProductKey**'s cardinality matches the row count value of **606** for our entire table and is nearly 4% of the table size and nearly 2% of the database size.
+    
+    ![Product alternate key.](./Media/ProductAlternateKey.png)
+
+1. The above **ProductAlternateKey** and **ProductKey** may be good columns to remove from our dataset if they are not currently being used in any of our table relationships. Select the **Relationships** tab and exapnd the **DimProductSubcategory_raw** and **DimProduct_raw** values to confirm if the above columns can be removed.
+    1.  **Important note:** While the size of the relationships in this lab is small, this field may be worth investigating if you have a model with a large number of snowflake dimensions that can be joined.
+
+    ![Relationships.](./Media/Relationships.png)
+
+---
+
+# Star schema
+
+---
+Importance of the Star Schema.
+
+---
+
 1. 
 
-1. Snowflake schema
-1. Star Schema
+# Next steps
+We hope this portion of the lab has shown how dataflows can provide a self-service, cloud-based, data preparation technology that can be easily consumed in Power BI.
 
-1. Add a **Table** visualization using the following columns:
-
-| Table | Column |
-|:----- | :------ |
-| Customer | EmailAddress|
-| Internet Sales | Sales Amount |
+- Continue to the [Data Visualization](./DataVisualization.md) lab
+- Return to the [Day After Dashboard in a Day](./README.md) homepage
