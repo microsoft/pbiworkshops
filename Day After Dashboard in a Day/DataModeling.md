@@ -435,7 +435,7 @@ Importance of the Star Schema.
 
     ![Full side rail.](./Media/FullSideRail.png)
 
-1. In our modeling view, we notice a [snowflaked dimension](https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/dimensional-modeling-techniques/snowflake-dimension/) from the **DimProductCategory_raw** < **DimProductSubcategory_raw** < **DimProductCategory_raw** tables. This type of modeling approaching may affect our datasets query performance, as these dimensions contain the same information - to better optimize our dataset we'll flatten the three tables into a single dimension table for use.
+1. In our modeling view, we notice a [snowflaked dimension](https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/dimensional-modeling-techniques/snowflake-dimension/) from the **DimProductCategory_raw** > **DimProductSubcategory_raw** > **DimProductCategory_raw** tables and the **DimGeography** > **DimCustomer** tables. This type of modeling approaching may affect our datasets query performance, as these dimensions contain the same information - to better optimize our dataset we'll flatten the three tables into a single dimension table for use.
 
     ![Snowflake dimensions](./Media/SnowflakeDimensions.png)
 
@@ -459,6 +459,36 @@ Importance of the Star Schema.
 1. Within the **Queries** pane while holding shift click the **DimProductCategory_raw** and **DimProductSubcategory_raw** tables and select the **Delete** option to remove the tables from our dataset.
 
     ![Delete product](./Media/DeleteProducts.png)
+
+1. Select the **DimCustomer** table and from the **Home** tab select the **Merge Queries** option.
+
+    ![Merge Queries in the Power Query Edtior](./Media/MergeQueriesPQE.png)
+
+1. From the **Merge** window complete the following steps below and select **OK** when complete.
+    1. Select the **GeographyKey** in the base table (**DimCustomer**).
+    1. From the drop-down select the **DimGeography** table.
+    1. Select the **GeographyKey** column in the table to be merged (**DimGeography**).
+    1. Set the **Join Kind** to **Inner (only matching rows)**.
+
+    ![Merge Queries in the Power Query Edtior](./Media/InnerJoinGeography.png)
+
+1. The Power Query Editor window has now provided us with a warning that the following **Merged Queries** step results in a query that can no longer be folded back to the source system via DirectQuery mode.
+    1. We can right click the **Merged Queries** step where the **View Native Query** option is now greyed out.
+
+    ![Not supported in DirectQuery mode](./Media/NotSupportedDQ.png)
+
+1. In the top right of the **DimGeography** column select the **Expand** option. Deselect the **GeographyKey** and **SalesTerritoryKey** fields and select **OK** when complete.
+
+    ![Expand the Geography dimension.](./Media/ExpandDimGeography.png)
+
+1. The previous warning banner is now gone and if we were to right click the **Expanded DimGeography** step the **View Native Query** option is once again available.
+
+    ![View.](./Media/ViewNativeQueryMerge.png)
+
+1. From the **Queries** pane, right click the **DimGeography** table and select the **Enable load** option to deselect (remove the checkmark) the table from being loaded into our dataset as it's currently only being utilized for data preparation activites.
+    1. **Note:** this could be a good candidate for a dataflow if the transformation logic would be consistently used across an organization.
+
+    ![Disable load.](./Media/DisableLoad.png)
 
 1. Now that we're ready to return to our modeling view navigate to the **Home** tab and select the **Close & Apply** option.
 
