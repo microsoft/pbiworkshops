@@ -22,8 +22,8 @@
 
     | Table | Column |
     |:----- | :------ |
-    | DimCustomer | EmailAddress|
-    | DimCustomer | Gender |
+    | DimCustomer_raw | EmailAddress|
+    | DimCustomer_raw | Gender |
 
     ![Table visual.](./Media/TableVisual.png)
 
@@ -45,16 +45,16 @@
     // DAX Query
     DEFINE
       VAR __DS0Core = 
-        SUMMARIZE('DimCustomer', 'DimCustomer'[Gender], 'DimCustomer'[EmailAddress])
+        SUMMARIZE('DimCustomer_raw', 'DimCustomer_raw'[Gender], 'DimCustomer_raw'[EmailAddress])
     
       VAR __DS0PrimaryWindowed = 
-        TOPN(501, __DS0Core, 'DimCustomer'[Gender], 1, 'DimCustomer'[EmailAddress], 1)
+        TOPN(501, __DS0Core, 'DimCustomer_raw'[Gender], 1, 'DimCustomer_raw'[EmailAddress], 1)
     
     EVALUATE
       __DS0PrimaryWindowed
     
     ORDER BY
-      'DimCustomer'[Gender], 'DimCustomer'[EmailAddress]
+      'DimCustomer_raw'[Gender], 'DimCustomer_raw'[EmailAddress]
     ```
     [Learn more about DirectQuery guidance](https://docs.microsoft.com/en-us/power-bi/guidance/directquery-model-guidance)
 
@@ -98,7 +98,7 @@ One important item of note that was missing from our above query is our [Transac
         TOP (501) [t1].[EmailAddress],
         [t1].[Gender]
     FROM
-        [DimCustomer] AS [t1]
+        [DimCustomer_raw] AS [t1]
     GROUP BY
         [t1].[EmailAddress],
         [t1].[Gender]
@@ -122,7 +122,7 @@ One important item of note that was missing from our above query is our [Transac
 
     | Table | Column |
     |:----- | :------ |
-    | DimCustomer | CustomerKey|
+    | DimCustomer_raw | CustomerKey|
     | FactInternetSales | CustomerKey |
 
     ![Create relationship.](./Media/CreateRelationship.png)
@@ -148,7 +148,7 @@ One important item of note that was missing from our above query is our [Transac
             SUM([t0].[SalesAmount]) AS [a0]
         FROM (
             [FactInternetSales] AS [t0]
-            LEFT OUTER JOIN [DimCustomer] AS [t1]
+            LEFT OUTER JOIN [DimCustomer_raw] AS [t1]
             ON ([t0].[CustomerKey] = [t1].[CustomerKey])
         )
         GROUP BY
@@ -191,7 +191,7 @@ One important item of note that was missing from our above query is our [Transac
             SUM([t0].[SalesAmount]) AS [a0]
         FROM (
             [FactInternetSales] AS [t0]
-            INNER JOIN [DimCustomer] AS [t1]
+            INNER JOIN [DimCustomer_raw] AS [t1]
             ON ([t0].[CustomerKey] = [t1].[CustomerKey])
         )
         GROUP BY
@@ -206,11 +206,11 @@ One important item of note that was missing from our above query is our [Transac
 
     | Active | From: Table (Column) | Column | Cardinality | Assume referential integrity | Cross filter direction | 
     | :----- |:----- | :------ | :----- | :----- | :----- |
-    | ☑ | DimCustomer (GeographyKey) | DimGeography (GeographyKey) | Many to one (*:1) | ☑ | Single | 
+    | ☑ | DimCustomer_raw (GeographyKey) | DimGeography_raw (GeographyKey) | Many to one (*:1) | ☑ | Single | 
     | ☑ | DimEmployee (SalesTerritoryKey) | DimSalesTerritory (SalesTerritoryKey) | Many to one (*:1) | ☑ | Both |
     | ☑ | DimProduct_raw (ProductSubcategoryKey) | DimProductSubcategory_raw (ProductSubcategoryKey) | Many to one (*:1) |  | Single |
     | ☑ | DimProductSubcategory_raw (ProductCategoryKey) | DimProductCategory_raw (ProductCategoryKey) | Many to one (*:1) | ☑ | Single |
-    | ☑ | FactInternetSales (CustomerKey) | DimCustomer (CustomerKey) | Many to one (*:1) | ☑ | Single |
+    | ☑ | FactInternetSales (CustomerKey) | DimCustomer_raw (CustomerKey) | Many to one (*:1) | ☑ | Single |
     | ☑ | FactInternetSales (ProductKey) | DimProduct_raw (ProductKey) | Many to one (*:1) | ☑ | Single |
     | ☑ | FactInternetSales (SalesTerritoryKey) | DimSalesTerritory (SalesTerritoryKey) | Many to one (*:1) | ☑ | Single |
     | ☑ | FactInternetSales (OrderDate) | DimDate (DateKey) | Many to one (*:1) | ☑ | Single |
@@ -280,7 +280,7 @@ Aggregations in Power BI can improve query performance over very large DirectQue
 
     | Active | From: Table (Column) | Column | Cardinality | Assume referential integrity | Cross filter direction | 
     | :----- |:----- | :------ | :----- | :----- | :----- |
-    | ☑ | FactInternetSales_agg (ProductKey) | DimProduct (ProductKey) | Many to one (*:1) | ☑ | Single | 
+    | ☑ | FactInternetSales_agg (ProductKey) | DimProduct_raw (ProductKey) | Many to one (*:1) | ☑ | Single | 
     | ☑ | FactInternetSales_agg (OrderDate) | DimDate (DateKey) | Many to one (*:1) | ☑ | Single |
 
     ![Agg relationships.](./Media/AggRelationships.png)
@@ -368,7 +368,7 @@ Aggregations in Power BI can improve query performance over very large DirectQue
         {
           "alternateSource": "FactInternetSales_agg",
           "reason": "no column mapping",
-          "column": "DimGeography[EnglishCountryRegionName]"
+          "column": "DimGeography_raw[EnglishCountryRegionName]"
         }
       ],
       "dataRequest": [
@@ -382,7 +382,7 @@ Aggregations in Power BI can improve query performance over very large DirectQue
           "column": "EnglishMonthName"
         },
         {
-          "table": "DimGeography",
+          "table": "DimGeography_raw",
           "column": "EnglishCountryRegionName"
         },
         {
@@ -392,6 +392,14 @@ Aggregations in Power BI can improve query performance over very large DirectQue
       ]
     }
     ```
+
+---
+## Incremental Refresh
+---
+
+1. FactInternetSales_agg
+
+    ![New parameter.](./Media/NewParameter.png)
 ---
 ## Optional - DAX Studio
 ---
@@ -435,7 +443,7 @@ Importance of the Star Schema.
 
     ![Full side rail.](./Media/FullSideRail.png)
 
-1. In our modeling view, we notice a [snowflaked dimension](https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/dimensional-modeling-techniques/snowflake-dimension/) from the **DimProductCategory_raw** > **DimProductSubcategory_raw** > **DimProductCategory_raw** tables and the **DimGeography** > **DimCustomer** tables. This type of modeling approaching may affect our datasets query performance, as these dimensions contain the same information - to better optimize our dataset we'll flatten the three tables into a single dimension table for use.
+1. In our modeling view, we notice a [snowflaked dimension](https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/dimensional-modeling-techniques/snowflake-dimension/) from the **DimProductCategory_raw** > **DimProductSubcategory_raw** > **DimProductCategory_raw** tables and the **DimGeography_raw** > **DimCustomer_raw** tables. This type of modeling approaching may affect our datasets query performance, as these dimensions contain the same information - to better optimize our dataset we'll flatten the three tables into a single dimension table for use.
 
     ![Snowflake dimensions](./Media/SnowflakeDimensions.png)
 
@@ -444,7 +452,9 @@ Importance of the Star Schema.
 
     ![Edit query.](./Media/EditQueryFromTable.png)
 
-1. In the Power Query Editor - **Queries** pane select the **DimProduct_raw** and in the formula bar we'll update the following entity value to our merged table from the previous [**Data Preparation**](https://github.com/microsoft/pbiworkshops/blob/main/Day%20After%20Dashboard%20in%20a%20Day/DataPreparation.md#joining-tables-using-the-diagram-view) section.
+1. In the Power Query Editor - **Queries** pane select the following tables and in the formula bar we'll update the following entity value to our merged table from the previous [**Data Preparation**](https://github.com/microsoft/pbiworkshops/blob/main/Day%20After%20Dashboard%20in%20a%20Day/DataPreparation.md#joining-tables-using-the-diagram-view) section.
+    
+    1. Select the **DimProduct_raw** table and complete the before and after: 
 
     | Before | After |
     | :-- | :-- |
@@ -452,43 +462,26 @@ Importance of the Star Schema.
 
     ![DimProduct update](./Media/DimProduct.png)
 
-1. Within the **Queries** pane right click the **DimProduct_raw** table and select the **Rename** option to update the table name to **DimProduct**.
+    1. Select the **DimCustomer_raw** table and the **Navigation** step from the **Query Settings** pane and complete the before and after:
+
+    | Before | After |
+    | :-- | :-- |
+    |= #"Dataflow Id"{[entity="**DimCustomer_raw**",version=""]}[Data] | = #"Dataflow Id"{[entity="**DimCustomer**",version=""]}[Data] |
+
+    ![DimProduct update](./Media/DimCustomer.png)
+
+1. Within the **Queries** pane right click the following tables and select the **Rename** option to change the table names to the following:
+
+    | Before | After |
+    | :-- | :-- |
+    | DimProduct_raw | DimProduct  |
+    | DimCustomer_raw | DimCustomer  |
 
     ![Rename product](./Media/RenameProduct.png)
 
-1. Within the **Queries** pane while holding shift click the **DimProductCategory_raw** and **DimProductSubcategory_raw** tables and select the **Delete** option to remove the tables from our dataset.
+1. Within the **Queries** pane while holding shift click the **DimGeography_raw**, **DimProductCategory_raw**, and **DimProductSubcategory_raw** tables and select the **Delete** option to remove the tables from our dataset.
 
     ![Delete product](./Media/DeleteProducts.png)
-
-1. Select the **DimCustomer** table and from the **Home** tab select the **Merge Queries** option.
-
-    ![Merge Queries in the Power Query Edtior](./Media/MergeQueriesPQE.png)
-
-1. From the **Merge** window complete the following steps below and select **OK** when complete.
-    1. Select the **GeographyKey** in the base table (**DimCustomer**).
-    1. From the drop-down select the **DimGeography** table.
-    1. Select the **GeographyKey** column in the table to be merged (**DimGeography**).
-    1. Set the **Join Kind** to **Inner (only matching rows)**.
-
-    ![Merge Queries in the Power Query Edtior](./Media/InnerJoinGeography.png)
-
-1. The Power Query Editor window has now provided us with a warning that the following **Merged Queries** step results in a query that can no longer be folded back to the source system via DirectQuery mode.
-    1. We can right click the **Merged Queries** step where the **View Native Query** option is now greyed out.
-
-    ![Not supported in DirectQuery mode](./Media/NotSupportedDQ.png)
-
-1. In the top right of the **DimGeography** column select the **Expand** option. Deselect the **GeographyKey** and **SalesTerritoryKey** fields and select **OK** when complete.
-
-    ![Expand the Geography dimension.](./Media/ExpandDimGeography.png)
-
-1. The previous warning banner is now gone and if we were to right click the **Expanded DimGeography** step the **View Native Query** option is once again available.
-
-    ![View.](./Media/ViewNativeQueryMerge.png)
-
-1. From the **Queries** pane, right click the **DimGeography** table and select the **Enable load** option to deselect (remove the checkmark) the table from being loaded into our dataset as it's currently only being utilized for data preparation activites.
-    1. **Note:** this could be a good candidate for a dataflow if the transformation logic would be consistently used across an organization.
-
-    ![Disable load.](./Media/DisableLoad.png)
 
 1. Now that we're ready to return to our modeling view navigate to the **Home** tab and select the **Close & Apply** option.
 
