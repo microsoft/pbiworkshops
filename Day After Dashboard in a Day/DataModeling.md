@@ -268,15 +268,67 @@ Aggregations in Power BI can improve query performance over very large DirectQue
 
     ![Rename agg.](./Media/RenameAgg.png)
 
+---
+### Incremental Refresh
+---
+
+1. From the **Home** tab of the **Power Query Editor** select the **Manage Parameters** and then the **New Parameter** option.
+
+    ![New parameter.](./Media/NewParameter.png)
+
+1. From the **Manage Parameters** window, select the **New** button and create the below two values.
+    1. **Important Note**: these are case sensitive, reserved keywords and must match exactly for incremenetal refresh to properly work.
+
+    | Name | Type | Current Value |
+    |:----- | :------ | :------ |
+    | RangeStart | Date/Time | 1/1/2011 |
+    | RangeEnd | Date/Time | 6/30/2021 |
+
+    ![RangeStart and RangeEnd.](./Media/RangeStartEnd.png)
+
+1. From the **FactInternetSales_agg** table, select the **OrderDate** column's drop down in the top right corner, the **Number Filters** option and then the **Between** value.
+
+    ![Between.](./Media/Between.png)
+
+1. Within the **Filter Rows** menu, set the following values below.
+
+    Keep rows where 'OrderDate'
+    | Keep Rows | |
+    |:- | :- |
+    | is greater than or equal to | 20110101 |
+    | is less than | 20210701 |
+
+    ![Filter rows.](./Media/FilterRows.png)
+
+1. In the **Power Query Editor** formula bar update the current integer values to utilize the **RangeStart** and **RangeEnd** parameters. These will need to be updated using the **fxCreateKey** function.
+
+    1. Completed formula below.
+    ```powerquery-m
+    = Table.SelectRows(#"Grouped Rows", each [OrderDate] >= fxCreateKey(RangeStart) and [OrderDate] < fxCreateKey(RangeEnd))
+    ```
+
+    ![fxCreateKey function](./Media/fxCreateKey.png)
+
 1. Now that we're ready to return to our modeling view navigate to the **Home** tab and select the **Close & Apply** option.
 
     ![Close apply.](./Media/CloseApply.png)
 
-1. Navigate to the **Model** view on the side-rail of Power BI Desktop, where we'll now create a new relationship between the **FactInternetSales_agg** and our existing tables in our model.
+1. Navigate to the **Model** view on the side-rail of Power BI Desktop, where we'll now setup our incremental refresh policy and create a new relationship between the **FactInternetSales_agg** and our existing tables in our model.
 
     ![Model view.](./Media/ModelView.png)
 
-1. By dragging and dropping the columns or navigating to the **Manage relationships** menu, complete the below relationships.
+1. Righ click the **FactInternetSales_agg** and select **Incremental refresh**.
+
+    ![Agg relationships.](./Media/IncrementalRefreshSelection.png)
+
+1. From the **Incremental refresh and real-time data** menu, set the following configurations below and select **Apply** once complete.
+    1. ☑️Incrementally refresh this table
+    1. Archive data starting **3 Years**
+    1. Incrementally refresh data starting **1 Days**
+
+    ![Incremental refresh menu.](./Media/IncrementalRefreshMenu.png)
+
+1. We'll now create relationships by dragging and dropping the columns or navigating to the **Manage relationships** menu, complete the below relationships.
 
     | Active | From: Table (Column) | Column | Cardinality | Assume referential integrity | Cross filter direction | 
     | :----- |:----- | :------ | :----- | :----- | :----- |
@@ -393,13 +445,6 @@ Aggregations in Power BI can improve query performance over very large DirectQue
     }
     ```
 
----
-## Incremental Refresh
----
-
-1. FactInternetSales_agg
-
-    ![New parameter.](./Media/NewParameter.png)
 ---
 ## Optional - DAX Studio
 ---
