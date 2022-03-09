@@ -536,7 +536,7 @@ Importance of the Star Schema.
     ![Close apply.](./Media/CloseApply.png)
 
 # Next steps
-We hope this portion of the lab has shown how dataflows can provide a self-service, cloud-based, data preparation technology that can be easily consumed in Power BI.
+We hope this portion of the lab has shown how various storage modes and modeling options can offer a flexible and optimized experience to build enterprise scalable solutions using Power BI Desktop.
 
 - Continue to the [Data Visualization](./DataVisualization.md) lab
 - Return to the [Day After Dashboard in a Day](./README.md) homepage
