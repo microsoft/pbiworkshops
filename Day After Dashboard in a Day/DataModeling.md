@@ -2,13 +2,15 @@
 
 # Storage modes
 
-[Learn more about storage modes](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-introduction-self-service)
+In Microsoft Power BI Desktop, you can specify the storage mode for each table individually in your model. Setting the storage mode provides many advantages, including the following: query performance, large datasets, data refresh requirements and near-real time requirements.
+
+[Learn more about storage modes](https://docs.microsoft.com/power-bi/transform-model/desktop-storage-mode)
 
 ---
 
 ## DirectQuery
 
-
+For DirectQuery, when using Get Data in Power BI Desktop to connect to a data source, no data is imported into Power BI. Instead, upon building a visual within Power BI Desktop, queries are sent to the underlying data source to retrieve the necessary data. The time taken to refresh the visual depends on the performance of the underlying data source.
 
 [Learn more about DirectQuery model guidance](https://docs.microsoft.com/power-bi/guidance/directquery-model-guidance)
 
@@ -56,13 +58,10 @@
     ORDER BY
       'DimCustomer_raw'[Gender], 'DimCustomer_raw'[EmailAddress]
     ```
-    [Learn more about DirectQuery guidance](https://docs.microsoft.com/en-us/power-bi/guidance/directquery-model-guidance)
-
 ---
 
 # Optional - Event traces
 
----
 
 One important item of note that was missing from our above query is our [Transact-SQL](https://docs.microsoft.com/learn/modules/introduction-to-transact-sql/) statement for the **Direct query** value. To trace this event we'll use an external tool titled [SQL Server Profiler](https://docs.microsoft.com/sql/tools/sql-server-profiler/sql-server-profiler) to view event traces. We can leverage the [external tools in Power BI Desktop](https://docs.microsoft.com/power-bi/transform-model/desktop-external-tools) integration to easily view the event traces against our underlying Analysis Services instance.
 
@@ -110,6 +109,10 @@ One important item of note that was missing from our above query is our [Transac
 ---
 
 # Relationships
+
+When using multiple tables, chances are you'll do some analysis using data from all those tables. Relationships between those tables are necessary to accurately calculate results and display the correct information in your reports.
+
+[Learn more about relationships](https://docs.microsoft.com/power-bi/transform-model/desktop-create-and-manage-relationships)
 
 ---
 
