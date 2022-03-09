@@ -44,8 +44,6 @@ To start the lab, visit [Data Modeling](./DataModeling.md)
 
 In this lab you'll learn about designing efficient and stunning reports.
 
-1.
-1.
-1.
+**Stay tuned!!!**
 
 To start the lab, visit [Data Visualization](./DataVisualization.md)
