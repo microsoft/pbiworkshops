@@ -2,13 +2,15 @@
 
 # Storage modes
 
-[Learn more about storage modes](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-introduction-self-service)
+In Microsoft Power BI Desktop, you can specify the storage mode for each table individually in your model. Setting the storage mode provides many advantages, including the following: query performance, large datasets, data refresh requirements and near-real time requirements.
+
+[Learn more about storage modes](https://docs.microsoft.com/power-bi/transform-model/desktop-storage-mode)
 
 ---
 
 ## DirectQuery
 
-
+For DirectQuery, when using Get Data in Power BI Desktop to connect to a data source, no data is imported into Power BI. Instead, upon building a visual within Power BI Desktop, queries are sent to the underlying data source to retrieve the necessary data. The time taken to refresh the visual depends on the performance of the underlying data source.
 
 [Learn more about DirectQuery model guidance](https://docs.microsoft.com/power-bi/guidance/directquery-model-guidance)
 
@@ -22,8 +24,8 @@
 
     | Table | Column |
     |:----- | :------ |
-    | DimCustomer | EmailAddress|
-    | DimCustomer | Gender |
+    | DimCustomer_raw | EmailAddress|
+    | DimCustomer_raw | Gender |
 
     ![Table visual.](./Media/TableVisual.png)
 
@@ -45,24 +47,21 @@
     // DAX Query
     DEFINE
       VAR __DS0Core = 
-        SUMMARIZE('DimCustomer', 'DimCustomer'[Gender], 'DimCustomer'[EmailAddress])
+        SUMMARIZE('DimCustomer_raw', 'DimCustomer_raw'[Gender], 'DimCustomer_raw'[EmailAddress])
     
       VAR __DS0PrimaryWindowed = 
-        TOPN(501, __DS0Core, 'DimCustomer'[Gender], 1, 'DimCustomer'[EmailAddress], 1)
+        TOPN(501, __DS0Core, 'DimCustomer_raw'[Gender], 1, 'DimCustomer_raw'[EmailAddress], 1)
     
     EVALUATE
       __DS0PrimaryWindowed
     
     ORDER BY
-      'DimCustomer'[Gender], 'DimCustomer'[EmailAddress]
+      'DimCustomer_raw'[Gender], 'DimCustomer_raw'[EmailAddress]
     ```
-    [Learn more about DirectQuery guidance](https://docs.microsoft.com/en-us/power-bi/guidance/directquery-model-guidance)
-
 ---
 
 # Optional - Event traces
 
----
 
 One important item of note that was missing from our above query is our [Transact-SQL](https://docs.microsoft.com/learn/modules/introduction-to-transact-sql/) statement for the **Direct query** value. To trace this event we'll use an external tool titled [SQL Server Profiler](https://docs.microsoft.com/sql/tools/sql-server-profiler/sql-server-profiler) to view event traces. We can leverage the [external tools in Power BI Desktop](https://docs.microsoft.com/power-bi/transform-model/desktop-external-tools) integration to easily view the event traces against our underlying Analysis Services instance.
 
@@ -98,7 +97,7 @@ One important item of note that was missing from our above query is our [Transac
         TOP (501) [t1].[EmailAddress],
         [t1].[Gender]
     FROM
-        [DimCustomer] AS [t1]
+        [DimCustomer_raw] AS [t1]
     GROUP BY
         [t1].[EmailAddress],
         [t1].[Gender]
@@ -111,6 +110,10 @@ One important item of note that was missing from our above query is our [Transac
 
 # Relationships
 
+When using multiple tables, chances are you'll do some analysis using data from all those tables. Relationships between those tables are necessary to accurately calculate results and display the correct information in your reports.
+
+[Learn more about relationships](https://docs.microsoft.com/power-bi/transform-model/desktop-create-and-manage-relationships)
+
 ---
 
 1. Navigate to the model view on the side-rail
@@ -122,7 +125,7 @@ One important item of note that was missing from our above query is our [Transac
 
     | Table | Column |
     |:----- | :------ |
-    | DimCustomer | CustomerKey|
+    | DimCustomer_raw | CustomerKey|
     | FactInternetSales | CustomerKey |
 
     ![Create relationship.](./Media/CreateRelationship.png)
@@ -148,7 +151,7 @@ One important item of note that was missing from our above query is our [Transac
             SUM([t0].[SalesAmount]) AS [a0]
         FROM (
             [FactInternetSales] AS [t0]
-            LEFT OUTER JOIN [DimCustomer] AS [t1]
+            LEFT OUTER JOIN [DimCustomer_raw] AS [t1]
             ON ([t0].[CustomerKey] = [t1].[CustomerKey])
         )
         GROUP BY
@@ -191,7 +194,7 @@ One important item of note that was missing from our above query is our [Transac
             SUM([t0].[SalesAmount]) AS [a0]
         FROM (
             [FactInternetSales] AS [t0]
-            INNER JOIN [DimCustomer] AS [t1]
+            INNER JOIN [DimCustomer_raw] AS [t1]
             ON ([t0].[CustomerKey] = [t1].[CustomerKey])
         )
         GROUP BY
@@ -206,11 +209,11 @@ One important item of note that was missing from our above query is our [Transac
 
     | Active | From: Table (Column) | Column | Cardinality | Assume referential integrity | Cross filter direction | 
     | :----- |:----- | :------ | :----- | :----- | :----- |
-    | ☑ | DimCustomer (GeographyKey) | DimGeography (GeographyKey) | Many to one (*:1) | ☑ | Single | 
+    | ☑ | DimCustomer_raw (GeographyKey) | DimGeography_raw (GeographyKey) | Many to one (*:1) | ☑ | Single | 
     | ☑ | DimEmployee (SalesTerritoryKey) | DimSalesTerritory (SalesTerritoryKey) | Many to one (*:1) | ☑ | Both |
     | ☑ | DimProduct_raw (ProductSubcategoryKey) | DimProductSubcategory_raw (ProductSubcategoryKey) | Many to one (*:1) |  | Single |
     | ☑ | DimProductSubcategory_raw (ProductCategoryKey) | DimProductCategory_raw (ProductCategoryKey) | Many to one (*:1) | ☑ | Single |
-    | ☑ | FactInternetSales (CustomerKey) | DimCustomer (CustomerKey) | Many to one (*:1) | ☑ | Single |
+    | ☑ | FactInternetSales (CustomerKey) | DimCustomer_raw (CustomerKey) | Many to one (*:1) | ☑ | Single |
     | ☑ | FactInternetSales (ProductKey) | DimProduct_raw (ProductKey) | Many to one (*:1) | ☑ | Single |
     | ☑ | FactInternetSales (SalesTerritoryKey) | DimSalesTerritory (SalesTerritoryKey) | Many to one (*:1) | ☑ | Single |
     | ☑ | FactInternetSales (OrderDate) | DimDate (DateKey) | Many to one (*:1) | ☑ | Single |
@@ -268,19 +271,71 @@ Aggregations in Power BI can improve query performance over very large DirectQue
 
     ![Rename agg.](./Media/RenameAgg.png)
 
+---
+### Incremental Refresh
+---
+
+1. From the **Home** tab of the **Power Query Editor** select the **Manage Parameters** and then the **New Parameter** option.
+
+    ![New parameter.](./Media/NewParameter.png)
+
+1. From the **Manage Parameters** window, select the **New** button and create the below two values.
+    1. **Important Note**: these are case sensitive, reserved keywords and must match exactly for incremenetal refresh to properly work.
+
+    | Name | Type | Current Value |
+    |:----- | :------ | :------ |
+    | RangeStart | Date/Time | 1/1/2011 |
+    | RangeEnd | Date/Time | 6/30/2021 |
+
+    ![RangeStart and RangeEnd.](./Media/RangeStartEnd.png)
+
+1. From the **FactInternetSales_agg** table, select the **OrderDate** column's drop down in the top right corner, the **Number Filters** option and then the **Between** value.
+
+    ![Between.](./Media/Between.png)
+
+1. Within the **Filter Rows** menu, set the following values below.
+
+    Keep rows where 'OrderDate'
+    | Keep Rows | |
+    |:- | :- |
+    | is greater than or equal to | 20110101 |
+    | is less than | 20210701 |
+
+    ![Filter rows.](./Media/FilterRows.png)
+
+1. In the **Power Query Editor** formula bar update the current integer values to utilize the **RangeStart** and **RangeEnd** parameters. These will need to be updated using the **fxCreateKey** function.
+
+    1. Completed formula below.
+    ```powerquery-m
+    = Table.SelectRows(#"Grouped Rows", each [OrderDate] >= fxCreateKey(RangeStart) and [OrderDate] < fxCreateKey(RangeEnd))
+    ```
+
+    ![fxCreateKey function](./Media/fxCreateKey.png)
+
 1. Now that we're ready to return to our modeling view navigate to the **Home** tab and select the **Close & Apply** option.
 
     ![Close apply.](./Media/CloseApply.png)
 
-1. Navigate to the **Model** view on the side-rail of Power BI Desktop, where we'll now create a new relationship between the **FactInternetSales_agg** and our existing tables in our model.
+1. Navigate to the **Model** view on the side-rail of Power BI Desktop, where we'll now setup our incremental refresh policy and create a new relationship between the **FactInternetSales_agg** and our existing tables in our model.
 
     ![Model view.](./Media/ModelView.png)
 
-1. By dragging and dropping the columns or navigating to the **Manage relationships** menu, complete the below relationships.
+1. Righ click the **FactInternetSales_agg** and select **Incremental refresh**.
+
+    ![Agg relationships.](./Media/IncrementalRefreshSelection.png)
+
+1. From the **Incremental refresh and real-time data** menu, set the following configurations below and select **Apply** once complete.
+    1. ☑️Incrementally refresh this table
+    1. Archive data starting **3 Years**
+    1. Incrementally refresh data starting **1 Days**
+
+    ![Incremental refresh menu.](./Media/IncrementalRefreshMenu.png)
+
+1. We'll now create relationships by dragging and dropping the columns or navigating to the **Manage relationships** menu, complete the below relationships.
 
     | Active | From: Table (Column) | Column | Cardinality | Assume referential integrity | Cross filter direction | 
     | :----- |:----- | :------ | :----- | :----- | :----- |
-    | ☑ | FactInternetSales_agg (ProductKey) | DimProduct (ProductKey) | Many to one (*:1) | ☑ | Single | 
+    | ☑ | FactInternetSales_agg (ProductKey) | DimProduct_raw (ProductKey) | Many to one (*:1) | ☑ | Single | 
     | ☑ | FactInternetSales_agg (OrderDate) | DimDate (DateKey) | Many to one (*:1) | ☑ | Single |
 
     ![Agg relationships.](./Media/AggRelationships.png)
@@ -368,7 +423,7 @@ Aggregations in Power BI can improve query performance over very large DirectQue
         {
           "alternateSource": "FactInternetSales_agg",
           "reason": "no column mapping",
-          "column": "DimGeography[EnglishCountryRegionName]"
+          "column": "DimGeography_raw[EnglishCountryRegionName]"
         }
       ],
       "dataRequest": [
@@ -382,7 +437,7 @@ Aggregations in Power BI can improve query performance over very large DirectQue
           "column": "EnglishMonthName"
         },
         {
-          "table": "DimGeography",
+          "table": "DimGeography_raw",
           "column": "EnglishCountryRegionName"
         },
         {
@@ -392,6 +447,7 @@ Aggregations in Power BI can improve query performance over very large DirectQue
       ]
     }
     ```
+
 ---
 ## Optional - DAX Studio
 ---
@@ -435,7 +491,7 @@ Importance of the Star Schema.
 
     ![Full side rail.](./Media/FullSideRail.png)
 
-1. In our modeling view, we notice a [snowflaked dimension](https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/dimensional-modeling-techniques/snowflake-dimension/) from the **DimProductCategory_raw** > **DimProductSubcategory_raw** > **DimProductCategory_raw** tables and the **DimGeography** > **DimCustomer** tables. This type of modeling approaching may affect our datasets query performance, as these dimensions contain the same information - to better optimize our dataset we'll flatten the three tables into a single dimension table for use.
+1. In our modeling view, we notice a [snowflaked dimension](https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/dimensional-modeling-techniques/snowflake-dimension/) from the **DimProductCategory_raw** > **DimProductSubcategory_raw** > **DimProductCategory_raw** tables and the **DimGeography_raw** > **DimCustomer_raw** tables. This type of modeling approaching may affect our datasets query performance, as these dimensions contain the same information - to better optimize our dataset we'll flatten the three tables into a single dimension table for use.
 
     ![Snowflake dimensions](./Media/SnowflakeDimensions.png)
 
@@ -444,7 +500,9 @@ Importance of the Star Schema.
 
     ![Edit query.](./Media/EditQueryFromTable.png)
 
-1. In the Power Query Editor - **Queries** pane select the **DimProduct_raw** and in the formula bar we'll update the following entity value to our merged table from the previous [**Data Preparation**](https://github.com/microsoft/pbiworkshops/blob/main/Day%20After%20Dashboard%20in%20a%20Day/DataPreparation.md#joining-tables-using-the-diagram-view) section.
+1. In the Power Query Editor - **Queries** pane select the following tables and in the formula bar we'll update the following entity value to our merged table from the previous [**Data Preparation**](https://github.com/microsoft/pbiworkshops/blob/main/Day%20After%20Dashboard%20in%20a%20Day/DataPreparation.md#joining-tables-using-the-diagram-view) section.
+    
+    1. Select the **DimProduct_raw** table and complete the before and after: 
 
     | Before | After |
     | :-- | :-- |
@@ -452,50 +510,33 @@ Importance of the Star Schema.
 
     ![DimProduct update](./Media/DimProduct.png)
 
-1. Within the **Queries** pane right click the **DimProduct_raw** table and select the **Rename** option to update the table name to **DimProduct**.
+    1. Select the **DimCustomer_raw** table and the **Navigation** step from the **Query Settings** pane and complete the before and after:
+
+    | Before | After |
+    | :-- | :-- |
+    |= #"Dataflow Id"{[entity="**DimCustomer_raw**",version=""]}[Data] | = #"Dataflow Id"{[entity="**DimCustomer**",version=""]}[Data] |
+
+    ![DimProduct update](./Media/DimCustomer.png)
+
+1. Within the **Queries** pane right click the following tables and select the **Rename** option to change the table names to the following:
+
+    | Before | After |
+    | :-- | :-- |
+    | DimProduct_raw | DimProduct  |
+    | DimCustomer_raw | DimCustomer  |
 
     ![Rename product](./Media/RenameProduct.png)
 
-1. Within the **Queries** pane while holding shift click the **DimProductCategory_raw** and **DimProductSubcategory_raw** tables and select the **Delete** option to remove the tables from our dataset.
+1. Within the **Queries** pane while holding shift click the **DimGeography_raw**, **DimProductCategory_raw**, and **DimProductSubcategory_raw** tables and select the **Delete** option to remove the tables from our dataset.
 
     ![Delete product](./Media/DeleteProducts.png)
-
-1. Select the **DimCustomer** table and from the **Home** tab select the **Merge Queries** option.
-
-    ![Merge Queries in the Power Query Edtior](./Media/MergeQueriesPQE.png)
-
-1. From the **Merge** window complete the following steps below and select **OK** when complete.
-    1. Select the **GeographyKey** in the base table (**DimCustomer**).
-    1. From the drop-down select the **DimGeography** table.
-    1. Select the **GeographyKey** column in the table to be merged (**DimGeography**).
-    1. Set the **Join Kind** to **Inner (only matching rows)**.
-
-    ![Merge Queries in the Power Query Edtior](./Media/InnerJoinGeography.png)
-
-1. The Power Query Editor window has now provided us with a warning that the following **Merged Queries** step results in a query that can no longer be folded back to the source system via DirectQuery mode.
-    1. We can right click the **Merged Queries** step where the **View Native Query** option is now greyed out.
-
-    ![Not supported in DirectQuery mode](./Media/NotSupportedDQ.png)
-
-1. In the top right of the **DimGeography** column select the **Expand** option. Deselect the **GeographyKey** and **SalesTerritoryKey** fields and select **OK** when complete.
-
-    ![Expand the Geography dimension.](./Media/ExpandDimGeography.png)
-
-1. The previous warning banner is now gone and if we were to right click the **Expanded DimGeography** step the **View Native Query** option is once again available.
-
-    ![View.](./Media/ViewNativeQueryMerge.png)
-
-1. From the **Queries** pane, right click the **DimGeography** table and select the **Enable load** option to deselect (remove the checkmark) the table from being loaded into our dataset as it's currently only being utilized for data preparation activites.
-    1. **Note:** this could be a good candidate for a dataflow if the transformation logic would be consistently used across an organization.
-
-    ![Disable load.](./Media/DisableLoad.png)
 
 1. Now that we're ready to return to our modeling view navigate to the **Home** tab and select the **Close & Apply** option.
 
     ![Close apply.](./Media/CloseApply.png)
 
 # Next steps
-We hope this portion of the lab has shown how dataflows can provide a self-service, cloud-based, data preparation technology that can be easily consumed in Power BI.
+We hope this portion of the lab has shown how various storage modes and modeling options can offer a flexible and optimized experience to build enterprise scalable solutions using Power BI Desktop.
 
 - Continue to the [Data Visualization](./DataVisualization.md) lab
 - Return to the [Day After Dashboard in a Day](./README.md) homepage
