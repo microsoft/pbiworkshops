@@ -1,38 +1,45 @@
-﻿ProductSubcategoryKey|ProductSubcategoryAlternateKey|EnglishProductSubcategoryName|SpanishProductSubcategoryName|FrenchProductSubcategoryName|ProductCategoryKey
-1|1|Mountain Bikes|Bicicleta de montaña|VTT|1
-2|2|Road Bikes|Bicicleta de carretera|Vélo de route|1
-3|3|Touring Bikes|Bicicleta de paseo|Vélo de randonnée|1
-4|4|Handlebars|Barra|Barre d'appui|2
-5|5|Bottom Brackets|Eje de pedalier|Axe de pédalier|2
-6|6|Brakes|Frenos|Freins|2
-7|7|Chains|Cadena|Chaîne|2
-8|8|Cranksets|Bielas|Pédalier|2
-9|9|Derailleurs|Desviador|Dérailleur|2
-10|10|Forks|Horquilla|Fourche|2
-11|11|Headsets|Dirección|Jeu de direction|2
-12|12|Mountain Frames|Cuadro de montaña|Cadre de VTT|2
-13|13|Pedals|Pedal|Pédale|2
-14|14|Road Frames|Cuadro de carretera|Cadre de vélo de route|2
-15|15|Saddles|Sillín|Selle|2
-16|16|Touring Frames|Cuadro de paseo|Cadre de vélo de randonnée|2
-17|17|Wheels|Rueda|Roue|2
-18|18|Bib-Shorts|Culote corto|Cuissards avec bretelles|3
-19|19|Caps|Gorra|Casquette|3
-20|20|Gloves|Guantes|Gants|3
-21|21|Jerseys|Jersey|Maillot|3
-22|22|Shorts|Pantalones cortos|Cuissards|3
-23|23|Socks|Calcetines|Chaussettes|3
-24|24|Tights|Mallas|Collants|3
-25|25|Vests|Camiseta|Veste|3
-26|26|Bike Racks|Portabicicletas|Porte-vélo|4
-27|27|Bike Stands|Soporte para bicicletas|Range-vélo|4
-28|28|Bottles and Cages|Portabotellas y botella|Bidon et porte-bidon|4
-29|29|Cleaners|Limpiador|Nettoyant|4
-30|30|Fenders|Guardabarros|Garde-boue|4
-31|31|Helmets|Casco|Casque|4
-32|32|Hydration Packs|Sistema de hidratación|Sac d'hydratation|4
-33|33|Lights|Luz|Éclairage|4
-34|34|Locks|Candado|Antivol|4
-35|35|Panniers|Cesta|Sacoche|4
-36|36|Pumps|Bomba|Pompe|4
-37|37|Tires and Tubes|Cubierta y cámara|Pneu et chambre à air|4
+﻿ProductSubcategoryKey|ProductSubcategoryLabel|ProductSubcategoryName|ProductSubcategoryDescription|ProductCategoryKey|ETLLoadID|LoadDate|UpdateDate
+1|0101|MP4&MP3|MP4&MP3|1|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
+2|0102|Recorder|Recorder|1|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
+3|0103|Radio|Radio|1|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
+4|0104|Recording Pen|Recording Pen|1|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
+5|0105|Headphones|Headphones|1|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
+6|0106|Bluetooth Headphones|Bluetooth Headphones|1|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
+7|0107|Speakers|Speakers|1|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
+8|0108|Audio Accessories|Audio Accessories|1|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
+9|0201|Televisions|Televisions|2|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
+10|0202|VCD & DVD|VCD & DVD|2|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
+11|0203|Home Theater System|Home Theater System|2|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
+13|0205|Car Video|Car Video|2|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
+14|0206|TV & Video Accessories|TV & Video Accessories|2|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
+15|0301|Laptops|Laptops|3|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
+16|0302|Netbooks|Netbooks|3|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
+17|0303|Desktops|Desktops|3|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
+18|0304|Monitors|Monitors|3|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
+19|0305|Projectors & Screens|Projectors & Screens|3|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
+20|0306|Printers, Scanners & Fax|Printers, Scanners & Fax|3|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
+21|0307|Computer Setup & Service|Computer Setup & Service|3|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
+22|0308|Computers Accessories|Computers Accessories|3|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
+23|0401|Digital Cameras|Digital Cameras|4|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
+24|0402|Digital SLR Cameras|Digital SLR Cameras|4|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
+25|0403|Film Cameras|Film Cameras|4|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
+27|0405|Camcorders|Camcorders|4|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
+28|0406|Cameras & Camcorders Accessories|Cameras & Camcorders Accessories|4|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
+29|0501|Home & Office Phones|Home & Office Phones|5|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
+31|0503|Touch Screen Phones |Touch Screen Phones |5|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
+32|0504|Smart phones & PDAs |Smart phones & PDAs |5|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
+33|0505|Cell phones Accessories|Cell phones Accessories|5|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
+34|0601|Music CD|Music CD|6|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
+35|0602|Movie DVD|Movie DVD|6|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
+36|0603|Audio Books|Audio Books|6|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
+38|0701|Boxed Games|Boxed Games|7|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
+39|0702|Download Games|Download Games|7|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
+40|0703|Games Accessories|Games Accessories|7|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
+41|0801|Washers & Dryers|Washers & Dryers|8|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
+42|0802|Refrigerators|Refrigerators|8|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
+43|0803|Microwaves|Microwaves|8|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
+44|0804|Water Heaters|Water Heaters|8|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
+45|0805|Coffee Machines|Coffee Machines|8|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
+46|0806|Lamps|Lamps|8|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
+47|0807|Air Conditioners|Air Conditioners|8|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
+48|0808|Fans|Fans|8|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000

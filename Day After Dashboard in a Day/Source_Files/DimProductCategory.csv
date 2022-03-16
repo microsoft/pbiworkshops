@@ -1,5 +1,9 @@
-﻿ProductCategoryKey|ProductCategoryAlternateKey|EnglishProductCategoryName|SpanishProductCategoryName|FrenchProductCategoryName
-1|1|Bikes|Bicicleta|Vélo
-2|2|Components|Componente|Composant
-3|3|Clothing|Prenda|Vêtements
-4|4|Accessories|Accesorio|Accessoire
+﻿ProductCategoryKey|ProductCategoryLabel|ProductCategoryName|ProductCategoryDescription|ETLLoadID|LoadDate|UpdateDate
+1|01|Audio|Audio|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
+2|02|TV and Video|TV and Video|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
+3|03|Computers|Computers|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
+4|04|Cameras and camcorders |Cameras and camcorders |1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
+5|05|Cell phones|Cell phones|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
+6|06|Music, Movies and Audio Books|Music, Movies and Audio Books|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
+7|07|Games and Toys|Games and Toys|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
+8|08|Home Appliances|Home Appliances|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000

@@ -1,656 +1,675 @@
-﻿GeographyKey|City|StateProvinceCode|StateProvinceName|CountryRegionCode|EnglishCountryRegionName|SpanishCountryRegionName|FrenchCountryRegionName|PostalCode|SalesTerritoryKey|IpAddressLocator
-1|Alexandria|NSW|New South Wales|AU|Australia|Australia|Australie|2015|9|198.51.100.2
-2|Coffs Harbour|NSW|New South Wales|AU|Australia|Australia|Australie|2450|9|198.51.100.3
-3|Darlinghurst|NSW|New South Wales|AU|Australia|Australia|Australie|2010|9|198.51.100.4
-4|Goulburn|NSW|New South Wales|AU|Australia|Australia|Australie|2580|9|198.51.100.5
-5|Lane Cove|NSW|New South Wales|AU|Australia|Australia|Australie|1597|9|198.51.100.6
-6|Lavender Bay|NSW|New South Wales|AU|Australia|Australia|Australie|2060|9|198.51.100.7
-7|Malabar|NSW|New South Wales|AU|Australia|Australia|Australie|2036|9|198.51.100.8
-8|Matraville|NSW|New South Wales|AU|Australia|Australia|Australie|2036|9|198.51.100.9
-9|Milsons Point|NSW|New South Wales|AU|Australia|Australia|Australie|2061|9|198.51.100.10
-10|Newcastle|NSW|New South Wales|AU|Australia|Australia|Australie|2300|9|198.51.100.11
-11|North Ryde|NSW|New South Wales|AU|Australia|Australia|Australie|2113|9|198.51.100.12
-12|North Sydney|NSW|New South Wales|AU|Australia|Australia|Australie|2055|9|198.51.100.13
-13|Port Macquarie|NSW|New South Wales|AU|Australia|Australia|Australie|2444|9|198.51.100.14
-14|Rhodes|NSW|New South Wales|AU|Australia|Australia|Australie|2138|9|198.51.100.15
-15|Silverwater|NSW|New South Wales|AU|Australia|Australia|Australie|2264|9|198.51.100.16
-16|Springwood|NSW|New South Wales|AU|Australia|Australia|Australie|2777|9|198.51.100.17
-17|St. Leonards|NSW|New South Wales|AU|Australia|Australia|Australie|2065|9|198.51.100.18
-18|Sydney|NSW|New South Wales|AU|Australia|Australia|Australie|1002|9|198.51.100.19
-19|Wollongong|NSW|New South Wales|AU|Australia|Australia|Australie|2500|9|198.51.100.20
-20|Brisbane|QLD|Queensland|AU|Australia|Australia|Australie|4000|9|198.51.100.21
-21|Caloundra|QLD|Queensland|AU|Australia|Australia|Australie|4551|9|198.51.100.22
-22|East Brisbane|QLD|Queensland|AU|Australia|Australia|Australie|4169|9|198.51.100.23
-23|Gold Coast|QLD|Queensland|AU|Australia|Australia|Australie|4217|9|198.51.100.24
-24|Hawthorne|QLD|Queensland|AU|Australia|Australia|Australie|4171|9|198.51.100.25
-25|Hervey Bay|QLD|Queensland|AU|Australia|Australia|Australie|4655|9|198.51.100.26
-26|Rockhampton|QLD|Queensland|AU|Australia|Australia|Australie|4700|9|198.51.100.27
-27|Townsville|QLD|Queensland|AU|Australia|Australia|Australie|4810|9|198.51.100.28
-28|Cloverdale|SA|South Australia|AU|Australia|Australia|Australie|6105|9|198.51.100.29
-29|Findon|SA|South Australia|AU|Australia|Australia|Australie|5023|9|198.51.100.30
-30|Perth|SA|South Australia|AU|Australia|Australia|Australie|6006|9|198.51.100.31
-31|Hobart|TAS|Tasmania|AU|Australia|Australia|Australie|7001|9|198.51.100.32
-32|Bendigo|VIC|Victoria|AU|Australia|Australia|Australie|3550|9|198.51.100.33
-33|Cranbourne|VIC|Victoria|AU|Australia|Australia|Australie|3977|9|198.51.100.34
-34|Geelong|VIC|Victoria|AU|Australia|Australia|Australie|3220|9|198.51.100.35
-35|Melbourne|VIC|Victoria|AU|Australia|Australia|Australie|3000|9|198.51.100.36
-36|Melton|VIC|Victoria|AU|Australia|Australia|Australie|3337|9|198.51.100.37
-37|Seaford|VIC|Victoria|AU|Australia|Australia|Australie|3198|9|198.51.100.38
-38|South Melbourne|VIC|Victoria|AU|Australia|Australia|Australie|3205|9|198.51.100.39
-39|Sunbury|VIC|Victoria|AU|Australia|Australia|Australie|3429|9|198.51.100.40
-40|Warrnambool|VIC|Victoria|AU|Australia|Australia|Australie|3280|9|198.51.100.41
-41|Calgary|AB|Alberta|CA|Canada|Canada|Canada|T2P 2G8|6|198.51.100.42
-42|Edmonton|AB|Alberta|CA|Canada|Canada|Canada|T5|6|198.51.100.43
-43|Burnaby|BC|British Columbia|CA|Canada|Canada|Canada|V3J 6Z3|6|198.51.100.44
-44|Burnaby|BC|British Columbia|CA|Canada|Canada|Canada|V5A 3A6|6|198.51.100.45
-45|Burnaby|BC|British Columbia|CA|Canada|Canada|Canada|V5A 4X1|6|198.51.100.46
-46|Burnaby|BC|British Columbia|CA|Canada|Canada|Canada|V5G 4S4|6|198.51.100.47
-47|Burnaby|BC|British Columbia|CA|Canada|Canada|Canada|V5G 4W1|6|198.51.100.48
-48|Burnaby|BC|British Columbia|CA|Canada|Canada|Canada|V5H 3Z7|6|198.51.100.49
-49|Cliffside|BC|British Columbia|CA|Canada|Canada|Canada|V8Y 1L1|6|198.51.100.50
-50|Haney|BC|British Columbia|CA|Canada|Canada|Canada|V2W 1W2|6|198.51.100.51
-51|Langford|BC|British Columbia|CA|Canada|Canada|Canada|V9|6|198.51.100.52
-52|Langley|BC|British Columbia|CA|Canada|Canada|Canada|V3A 4R2|6|198.51.100.53
-53|Metchosin|BC|British Columbia|CA|Canada|Canada|Canada|V9|6|198.51.100.54
-54|N. Vancouver|BC|British Columbia|CA|Canada|Canada|Canada|V7L 4J4|6|198.51.100.55
-55|Newton|BC|British Columbia|CA|Canada|Canada|Canada|V2L3W8|6|198.51.100.56
-56|Newton|BC|British Columbia|CA|Canada|Canada|Canada|V2M1N7|6|198.51.100.57
-57|Newton|BC|British Columbia|CA|Canada|Canada|Canada|V2M1P1|6|198.51.100.58
-58|Newton|BC|British Columbia|CA|Canada|Canada|Canada|V2M1S6|6|198.51.100.59
-59|Oak Bay|BC|British Columbia|CA|Canada|Canada|Canada|V8P|6|198.51.100.60
-60|Port Hammond|BC|British Columbia|CA|Canada|Canada|Canada|V6B 3P7|6|198.51.100.61
-61|Richmond|BC|British Columbia|CA|Canada|Canada|Canada|V6B 3P7|6|198.51.100.62
-62|Royal Oak|BC|British Columbia|CA|Canada|Canada|Canada|V8X|6|198.51.100.63
-63|Shawnee|BC|British Columbia|CA|Canada|Canada|Canada|V8Z 4N5|6|198.51.100.64
-64|Shawnee|BC|British Columbia|CA|Canada|Canada|Canada|V9B 2C3|6|198.51.100.65
-65|Shawnee|BC|British Columbia|CA|Canada|Canada|Canada|V9B 5T2|6|198.51.100.66
-66|Sooke|BC|British Columbia|CA|Canada|Canada|Canada|V0|6|198.51.100.67
-67|Surrey|BC|British Columbia|CA|Canada|Canada|Canada|V3T 4W3|6|198.51.100.68
-68|Vancouver|BC|British Columbia|CA|Canada|Canada|Canada|V7L 4J4|6|198.51.100.69
-69|Victoria|BC|British Columbia|CA|Canada|Canada|Canada|V8V|6|198.51.100.70
-70|Westminster|BC|British Columbia|CA|Canada|Canada|Canada|V3L 1E7|6|198.51.100.71
-71|Westminster|BC|British Columbia|CA|Canada|Canada|Canada|V3L 1H4|6|198.51.100.72
-72|Winnipeg|MB|Manitoba|CA|Canada|Canada|Canada|R3|6|198.51.100.73
-73|Saint John|NB|Brunswick|CA|Canada|Canada|Canada|E2P 1E3|6|198.51.100.74
-74|Aurora|ON|Ontario|CA|Canada|Canada|Canada|L4G 7N6|6|198.51.100.75
-75|Barrie|ON|Ontario|CA|Canada|Canada|Canada|L4N|6|198.51.100.76
-76|Brampton|ON|Ontario|CA|Canada|Canada|Canada|L6W 2T7|6|198.51.100.77
-77|Chalk Riber|ON|Ontario|CA|Canada|Canada|Canada|K0J 1J0|6|198.51.100.78
-78|Etobicoke|ON|Ontario|CA|Canada|Canada|Canada|M9W 3P3|6|198.51.100.79
-79|Kanata|ON|Ontario|CA|Canada|Canada|Canada|K2L 1H5|6|198.51.100.80
-80|Kingston|ON|Ontario|CA|Canada|Canada|Canada|7L|6|198.51.100.81
-81|Markham|ON|Ontario|CA|Canada|Canada|Canada|L3S 3K2|6|198.51.100.82
-82|Mississauga|ON|Ontario|CA|Canada|Canada|Canada|L4W 5J3|6|198.51.100.83
-83|Mississauga|ON|Ontario|CA|Canada|Canada|Canada|L5A 1H6|6|198.51.100.84
-84|Mississauga|ON|Ontario|CA|Canada|Canada|Canada|L5B 3V4|6|198.51.100.85
-85|Nepean|ON|Ontario|CA|Canada|Canada|Canada|K2J 2W5|6|198.51.100.86
-86|North York|ON|Ontario|CA|Canada|Canada|Canada|M4C 4K6|6|198.51.100.87
-87|Ottawa|ON|Ontario|CA|Canada|Canada|Canada|K4B 1S1|6|198.51.100.88
-88|Ottawa|ON|Ontario|CA|Canada|Canada|Canada|K4B 1S2|6|198.51.100.89
-89|Ottawa|ON|Ontario|CA|Canada|Canada|Canada|K4B 1S3|6|198.51.100.90
-90|Ottawa|ON|Ontario|CA|Canada|Canada|Canada|K4B 1T7|6|198.51.100.91
-91|Richmond Hill|ON|Ontario|CA|Canada|Canada|Canada|L4E 3M5|6|198.51.100.92
-92|Scarborough|ON|Ontario|CA|Canada|Canada|Canada|M1V 4M2|6|198.51.100.93
-93|Toronto|ON|Ontario|CA|Canada|Canada|Canada|M4B 1V4|6|198.51.100.94
-94|Toronto|ON|Ontario|CA|Canada|Canada|Canada|M4B 1V5|6|198.51.100.95
-95|Toronto|ON|Ontario|CA|Canada|Canada|Canada|M4B 1V6|6|198.51.100.96
-96|Toronto|ON|Ontario|CA|Canada|Canada|Canada|M4B 1V7|6|198.51.100.97
-97|Vancouver|ON|Ontario|CA|Canada|Canada|Canada|V5T 1Y9|6|198.51.100.98
-98|Waterloo|ON|Ontario|CA|Canada|Canada|Canada|N2V|6|198.51.100.99
-99|Weston|ON|Ontario|CA|Canada|Canada|Canada|M9V 4W3|6|198.51.100.100
-100|Brossard|QC|Quebec|CA|Canada|Canada|Canada|J4Z 1C5|6|198.51.100.101
-101|Brossard|QC|Quebec|CA|Canada|Canada|Canada|J4Z 1R4|6|198.51.100.102
-102|Dorval|QC|Quebec|CA|Canada|Canada|Canada|H9P 1H1|6|198.51.100.103
-103|Hull|QC|Quebec|CA|Canada|Canada|Canada|8Y|6|198.51.100.104
-104|Montreal|QC|Quebec|CA|Canada|Canada|Canada|H1Y 2H3|6|198.51.100.105
-105|Montreal|QC|Quebec|CA|Canada|Canada|Canada|H1Y 2H5|6|198.51.100.106
-106|Montreal|QC|Quebec|CA|Canada|Canada|Canada|H1Y 2H7|6|198.51.100.107
-107|Montreal|QC|Quebec|CA|Canada|Canada|Canada|H1Y 2H8|6|198.51.100.108
-108|Outremont|QC|Quebec|CA|Canada|Canada|Canada|H1Y 2G5|6|198.51.100.109
-109|Pnot-Rouge|QC|Quebec|CA|Canada|Canada|Canada|J1E 2T7|6|198.51.100.110
-110|Quebec|QC|Quebec|CA|Canada|Canada|Canada|G1R|6|198.51.100.111
-111|Sainte-Foy|QC|Quebec|CA|Canada|Canada|Canada|G1W|6|198.51.100.112
-112|Sillery|QC|Quebec|CA|Canada|Canada|Canada|G1T|6|198.51.100.113
-113|Ville De'anjou|QC|Quebec|CA|Canada|Canada|Canada|J1G 2R3|6|198.51.100.114
-114|Berlin|BB|Brandenburg|DE|Germany|Alemania|Allemagne|14197|8|198.51.100.115
-115|Eilenburg|BB|Brandenburg|DE|Germany|Alemania|Allemagne|04838|8|198.51.100.116
-116|Augsburg|BY|Bayern|DE|Germany|Alemania|Allemagne|86150|8|198.51.100.117
-117|Erlangen|BY|Bayern|DE|Germany|Alemania|Allemagne|91054|8|198.51.100.118
-118|Frankfurt|BY|Bayern|DE|Germany|Alemania|Allemagne|91480|8|198.51.100.119
-119|Grevenbroich|BY|Bayern|DE|Germany|Alemania|Allemagne|41485|8|198.51.100.120
-120|Hof|BY|Bayern|DE|Germany|Alemania|Allemagne|95010|8|198.51.100.121
-121|Ingolstadt|BY|Bayern|DE|Germany|Alemania|Allemagne|85049|8|198.51.100.122
-122|Bad Soden|HE|Hessen|DE|Germany|Alemania|Allemagne|65800|8|198.51.100.123
-123|Berlin|HE|Hessen|DE|Germany|Alemania|Allemagne|12171|8|198.51.100.124
-124|Berlin|HE|Hessen|DE|Germany|Alemania|Allemagne|13441|8|198.51.100.125
-125|Berlin|HE|Hessen|DE|Germany|Alemania|Allemagne|14111|8|198.51.100.126
-126|Berlin|HE|Hessen|DE|Germany|Alemania|Allemagne|14129|8|198.51.100.127
-127|Darmstadt|HE|Hessen|DE|Germany|Alemania|Allemagne|64283|8|198.51.100.128
-128|Dresden|HE|Hessen|DE|Germany|Alemania|Allemagne|01071|8|198.51.100.129
-129|Duesseldorf|HE|Hessen|DE|Germany|Alemania|Allemagne|40434|8|198.51.100.130
-130|Duesseldorf|HE|Hessen|DE|Germany|Alemania|Allemagne|40605|8|198.51.100.131
-131|Frankfurt|HE|Hessen|DE|Germany|Alemania|Allemagne|60323|8|198.51.100.132
-132|Hamburg|HE|Hessen|DE|Germany|Alemania|Allemagne|22001|8|198.51.100.133
-133|Kassel|HE|Hessen|DE|Germany|Alemania|Allemagne|34117|8|198.51.100.134
-134|München|HE|Hessen|DE|Germany|Alemania|Allemagne|80074|8|198.51.100.135
-135|Salzgitter|HE|Hessen|DE|Germany|Alemania|Allemagne|38231|8|198.51.100.136
-136|Ascheim|HH|Hamburg|DE|Germany|Alemania|Allemagne|86171|8|198.51.100.137
-137|Augsburg|HH|Hamburg|DE|Germany|Alemania|Allemagne|86171|8|198.51.100.138
-138|Berlin|HH|Hamburg|DE|Germany|Alemania|Allemagne|10210|8|198.51.100.139
-139|Berlin|HH|Hamburg|DE|Germany|Alemania|Allemagne|10791|8|198.51.100.140
-140|Berlin|HH|Hamburg|DE|Germany|Alemania|Allemagne|12311|8|198.51.100.141
-141|Berlin|HH|Hamburg|DE|Germany|Alemania|Allemagne|14111|8|198.51.100.142
-142|Bonn|HH|Hamburg|DE|Germany|Alemania|Allemagne|53001|8|198.51.100.143
-143|Bonn|HH|Hamburg|DE|Germany|Alemania|Allemagne|53131|8|198.51.100.144
-144|Essen|HH|Hamburg|DE|Germany|Alemania|Allemagne|45001|8|198.51.100.145
-145|Frankfurt am Main|HH|Hamburg|DE|Germany|Alemania|Allemagne|60082|8|198.51.100.146
-146|Frankfurt am Main|HH|Hamburg|DE|Germany|Alemania|Allemagne|60355|8|198.51.100.147
-147|Hamburg|HH|Hamburg|DE|Germany|Alemania|Allemagne|20354|8|198.51.100.148
-148|Muehlheim|HH|Hamburg|DE|Germany|Alemania|Allemagne|63151|8|198.51.100.149
-149|Mühlheim|HH|Hamburg|DE|Germany|Alemania|Allemagne|63151|8|198.51.100.150
-150|München|HH|Hamburg|DE|Germany|Alemania|Allemagne|80074|8|198.51.100.151
-151|Paderborn|HH|Hamburg|DE|Germany|Alemania|Allemagne|33041|8|198.51.100.152
-152|Berlin|NW|Nordrhein-Westfalen|DE|Germany|Alemania|Allemagne|10501|8|198.51.100.153
-153|Berlin|NW|Nordrhein-Westfalen|DE|Germany|Alemania|Allemagne|14197|8|198.51.100.154
-154|Bonn|NW|Nordrhein-Westfalen|DE|Germany|Alemania|Allemagne|53131|8|198.51.100.155
-155|Bottrop|NW|Nordrhein-Westfalen|DE|Germany|Alemania|Allemagne|46236|8|198.51.100.156
-156|Braunschweig|NW|Nordrhein-Westfalen|DE|Germany|Alemania|Allemagne|38001|8|198.51.100.157
-157|Hannover|NW|Nordrhein-Westfalen|DE|Germany|Alemania|Allemagne|30601|8|198.51.100.158
-158|Leipzig|NW|Nordrhein-Westfalen|DE|Germany|Alemania|Allemagne|04139|8|198.51.100.159
-159|München|NW|Nordrhein-Westfalen|DE|Germany|Alemania|Allemagne|80074|8|198.51.100.160
-160|Paderborn|NW|Nordrhein-Westfalen|DE|Germany|Alemania|Allemagne|33098|8|198.51.100.161
-161|Solingen|NW|Nordrhein-Westfalen|DE|Germany|Alemania|Allemagne|42651|8|198.51.100.162
-162|Werne|NW|Nordrhein-Westfalen|DE|Germany|Alemania|Allemagne|59368|8|198.51.100.163
-163|Berlin|SL|Saarland|DE|Germany|Alemania|Allemagne|12171|8|198.51.100.164
-164|Berlin|SL|Saarland|DE|Germany|Alemania|Allemagne|12311|8|198.51.100.165
-165|Berlin|SL|Saarland|DE|Germany|Alemania|Allemagne|14197|8|198.51.100.166
-166|Frankfurt am Main|SL|Saarland|DE|Germany|Alemania|Allemagne|60061|8|198.51.100.167
-167|Frankfurt am Main|SL|Saarland|DE|Germany|Alemania|Allemagne|60075|8|198.51.100.168
-168|Kiel|SL|Saarland|DE|Germany|Alemania|Allemagne|24044|8|198.51.100.169
-169|München|SL|Saarland|DE|Germany|Alemania|Allemagne|48001|8|198.51.100.170
-170|Münster|SL|Saarland|DE|Germany|Alemania|Allemagne|48001|8|198.51.100.171
-171|Neunkirchen|SL|Saarland|DE|Germany|Alemania|Allemagne|66578|8|198.51.100.172
-172|Offenbach|SL|Saarland|DE|Germany|Alemania|Allemagne|63009|8|198.51.100.173
-173|Poing|SL|Saarland|DE|Germany|Alemania|Allemagne|66041|8|198.51.100.174
-174|Saarbrücken|SL|Saarland|DE|Germany|Alemania|Allemagne|66001|8|198.51.100.175
-175|Saarlouis|SL|Saarland|DE|Germany|Alemania|Allemagne|66740|8|198.51.100.176
-176|Stuttgart|SL|Saarland|DE|Germany|Alemania|Allemagne|70452|8|198.51.100.177
-177|Stuttgart|SL|Saarland|DE|Germany|Alemania|Allemagne|70511|8|198.51.100.178
-178|Sulzbach Taunus|SL|Saarland|DE|Germany|Alemania|Allemagne|66272|8|198.51.100.179
-179|Saint Ouen|17|Charente-Maritime|FR|France|Francia|France|17490|7|198.51.100.180
-180|Colomiers|31|Garonne (Haute)|FR|France|Francia|France|31770|7|198.51.100.181
-181|Aujan Mournede|32|Gers|FR|France|Francia|France|32300|7|198.51.100.182
-182|Saint Ouen|41|Loir et Cher|FR|France|Francia|France|41100|7|198.51.100.183
-183|Orleans|45|Loiret|FR|France|Francia|France|45000|7|198.51.100.184
-184|Metz|57|Moselle|FR|France|Francia|France|57000|7|198.51.100.185
-185|Croix|59|Nord|FR|France|Francia|France|59170|7|198.51.100.186
-186|Dunkerque|59|Nord|FR|France|Francia|France|59140|7|198.51.100.187
-187|Lille|59|Nord|FR|France|Francia|France|59000|7|198.51.100.188
-188|Roncq|59|Nord|FR|France|Francia|France|59223|7|198.51.100.189
-189|Roubaix|59|Nord|FR|France|Francia|France|59100|7|198.51.100.190
-190|Villeneuve-d'Ascq|59|Nord|FR|France|Francia|France|59491|7|198.51.100.191
-191|Boulogne-sur-Mer|62|Pas de Calais|FR|France|Francia|France|62200|7|198.51.100.192
-192|Paris|75|Seine (Paris)|FR|France|Francia|France|75002|7|198.51.100.193
-193|Paris|75|Seine (Paris)|FR|France|Francia|France|75003|7|198.51.100.194
-194|Paris|75|Seine (Paris)|FR|France|Francia|France|75005|7|198.51.100.195
-195|Paris|75|Seine (Paris)|FR|France|Francia|France|75006|7|198.51.100.196
-196|Paris|75|Seine (Paris)|FR|France|Francia|France|75007|7|198.51.100.197
-197|Paris|75|Seine (Paris)|FR|France|Francia|France|75008|7|198.51.100.198
-198|Paris|75|Seine (Paris)|FR|France|Francia|France|75009|7|198.51.100.199
-199|Paris|75|Seine (Paris)|FR|France|Francia|France|75010|7|198.51.100.200
-200|Paris|75|Seine (Paris)|FR|France|Francia|France|75012|7|198.51.100.201
-201|Paris|75|Seine (Paris)|FR|France|Francia|France|75013|7|198.51.100.202
-202|Paris|75|Seine (Paris)|FR|France|Francia|France|75016|7|198.51.100.203
-203|Paris|75|Seine (Paris)|FR|France|Francia|France|75017|7|198.51.100.204
-204|Paris|75|Seine (Paris)|FR|France|Francia|France|75019|7|198.51.100.205
-205|Lieusaint|77|Seine et Marne|FR|France|Francia|France|77127|7|198.51.100.206
-206|Roissy en Brie|77|Seine et Marne|FR|France|Francia|France|77680|7|198.51.100.207
-207|Chatou|78|Yveline|FR|France|Francia|France|78400|7|198.51.100.208
-208|Saint Germain en Laye|78|Yveline|FR|France|Francia|France|78100|7|198.51.100.209
-209|Versailles|78|Yveline|FR|France|Francia|France|78000|7|198.51.100.210
-210|Saint Ouen|80|Somme|FR|France|Francia|France|80610|7|198.51.100.211
-211|Les Ulis|91|Essonne|FR|France|Francia|France|91940|7|198.51.100.212
-212|Morangis|91|Essonne|FR|France|Francia|France|91420|7|198.51.100.213
-213|Verrieres Le Buisson|91|Essonne|FR|France|Francia|France|91370|7|198.51.100.214
-214|Boulogne-Billancourt|92|Hauts de Seine|FR|France|Francia|France|92100|7|198.51.100.215
-215|Colombes|92|Hauts de Seine|FR|France|Francia|France|92700|7|198.51.100.216
-216|Courbevoie|92|Hauts de Seine|FR|France|Francia|France|92400|7|198.51.100.217
-217|Paris La Defense|92|Hauts de Seine|FR|France|Francia|France|92081|7|198.51.100.218
-218|Sèvres|92|Hauts de Seine|FR|France|Francia|France|92310|7|198.51.100.219
-219|Suresnes|92|Hauts de Seine|FR|France|Francia|France|92150|7|198.51.100.220
-220|Bobigny|93|Seine Saint Denis|FR|France|Francia|France|93000|7|198.51.100.221
-221|Drancy|93|Seine Saint Denis|FR|France|Francia|France|93700|7|198.51.100.222
-222|Pantin|93|Seine Saint Denis|FR|France|Francia|France|93500|7|198.51.100.223
-223|Saint-Denis|93|Seine Saint Denis|FR|France|Francia|France|93400|7|198.51.100.224
-224|Tremblay-en-France|93|Seine Saint Denis|FR|France|Francia|France|93290|7|198.51.100.225
-225|Orly|94|Val de Marne|FR|France|Francia|France|94310|7|198.51.100.226
-226|Cergy|95|Val d'Oise|FR|France|Francia|France|95000|7|198.51.100.227
-227|Abingdon|ENG|England|GB|United Kingdom|Reino Unido|Royaume-Uni|OX14 4SE|10|198.51.100.228
-228|Basingstoke Hants|ENG|England|GB|United Kingdom|Reino Unido|Royaume-Uni|RG24 8PL|10|198.51.100.229
-229|Berks|ENG|England|GB|United Kingdom|Reino Unido|Royaume-Uni|SL4 1RH|10|198.51.100.230
-230|Berkshire|ENG|England|GB|United Kingdom|Reino Unido|Royaume-Uni|RG11 5TP|10|198.51.100.231
-231|Billericay|ENG|England|GB|United Kingdom|Reino Unido|Royaume-Uni|CM11|10|198.51.100.232
-232|Birmingham|ENG|England|GB|United Kingdom|Reino Unido|Royaume-Uni|B29 6SL|10|198.51.100.233
-233|Bracknell|ENG|England|GB|United Kingdom|Reino Unido|Royaume-Uni|RG12 8TB|10|198.51.100.234
-234|Bury|ENG|England|GB|United Kingdom|Reino Unido|Royaume-Uni|PE17|10|198.51.100.235
-235|Cambridge|ENG|England|GB|United Kingdom|Reino Unido|Royaume-Uni|CB4 4BZ|10|198.51.100.236
-236|Cheltenham|ENG|England|GB|United Kingdom|Reino Unido|Royaume-Uni|GL50|10|198.51.100.237
-237|Esher-Molesey|ENG|England|GB|United Kingdom|Reino Unido|Royaume-Uni|EM15|10|198.51.100.238
-238|Gateshead|ENG|England|GB|United Kingdom|Reino Unido|Royaume-Uni|GA10|10|198.51.100.239
-239|Gloucestershire|ENG|England|GB|United Kingdom|Reino Unido|Royaume-Uni|GL7 1RY|10|198.51.100.240
-240|High Wycombe|ENG|England|GB|United Kingdom|Reino Unido|Royaume-Uni|HP10 9QY|10|198.51.100.241
-241|Kirkby|ENG|England|GB|United Kingdom|Reino Unido|Royaume-Uni|KB9|10|198.51.100.242
-242|Lancaster|ENG|England|GB|United Kingdom|Reino Unido|Royaume-Uni|LA1 1LN|10|198.51.100.243
-243|Leeds|ENG|England|GB|United Kingdom|Reino Unido|Royaume-Uni|LE18|10|198.51.100.244
-244|London|ENG|England|GB|United Kingdom|Reino Unido|Royaume-Uni|C2H 7AU|10|198.51.100.245
-245|London|ENG|England|GB|United Kingdom|Reino Unido|Royaume-Uni|E17 6JF|10|198.51.100.246
-246|London|ENG|England|GB|United Kingdom|Reino Unido|Royaume-Uni|EC1R 0DU|10|198.51.100.247
-247|London|ENG|England|GB|United Kingdom|Reino Unido|Royaume-Uni|SE1 8HL|10|198.51.100.248
-248|London|ENG|England|GB|United Kingdom|Reino Unido|Royaume-Uni|SW19 3RU|10|198.51.100.249
-249|London|ENG|England|GB|United Kingdom|Reino Unido|Royaume-Uni|SW1P 2NU|10|198.51.100.250
-250|London|ENG|England|GB|United Kingdom|Reino Unido|Royaume-Uni|SW6 SBY|10|198.51.100.251
-251|London|ENG|England|GB|United Kingdom|Reino Unido|Royaume-Uni|SW8 1XD|10|198.51.100.252
-252|London|ENG|England|GB|United Kingdom|Reino Unido|Royaume-Uni|SW8 4BG|10|198.51.100.253
-253|London|ENG|England|GB|United Kingdom|Reino Unido|Royaume-Uni|W10 6BL|10|198.51.100.254
-254|London|ENG|England|GB|United Kingdom|Reino Unido|Royaume-Uni|W1N 9FA|10|192.0.2.1
-255|London|ENG|England|GB|United Kingdom|Reino Unido|Royaume-Uni|W1V 5RN|10|192.0.2.2
-256|London|ENG|England|GB|United Kingdom|Reino Unido|Royaume-Uni|W1X3SE|10|192.0.2.3
-257|London|ENG|England|GB|United Kingdom|Reino Unido|Royaume-Uni|W1Y 3RA|10|192.0.2.4
-258|Maidenhead|ENG|England|GB|United Kingdom|Reino Unido|Royaume-Uni|SL67RJ|10|192.0.2.5
-259|Milton Keynes|ENG|England|GB|United Kingdom|Reino Unido|Royaume-Uni|MK8 8DF|10|192.0.2.6
-260|Milton Keynes|ENG|England|GB|United Kingdom|Reino Unido|Royaume-Uni|MK8 8ZD|10|192.0.2.7
-261|Newcastle upon Tyne|ENG|England|GB|United Kingdom|Reino Unido|Royaume-Uni|NT20|10|192.0.2.8
-262|Oxford|ENG|England|GB|United Kingdom|Reino Unido|Royaume-Uni|OX1|10|192.0.2.9
-263|Oxford|ENG|England|GB|United Kingdom|Reino Unido|Royaume-Uni|OX14 4SE|10|192.0.2.10
-264|Oxon|ENG|England|GB|United Kingdom|Reino Unido|Royaume-Uni|OX16 8RS|10|192.0.2.11
-265|Peterborough|ENG|England|GB|United Kingdom|Reino Unido|Royaume-Uni|PB12|10|192.0.2.12
-266|Reading|ENG|England|GB|United Kingdom|Reino Unido|Royaume-Uni|RG7 5H7|10|192.0.2.13
-267|Runcorn|ENG|England|GB|United Kingdom|Reino Unido|Royaume-Uni|TY31|10|192.0.2.14
-268|Liverpool|ENG|England|GB|United Kingdom|Reino Unido|Royaume-Uni|L4 4HB|10|192.0.2.15
-269|Stoke-on-Trent|ENG|England|GB|United Kingdom|Reino Unido|Royaume-Uni|AS23|10|192.0.2.16
-270|W. York|ENG|England|GB|United Kingdom|Reino Unido|Royaume-Uni|BD1 4SJ|10|192.0.2.17
-271|Warrington|ENG|England|GB|United Kingdom|Reino Unido|Royaume-Uni|WA1|10|192.0.2.18
-272|Warrington|ENG|England|GB|United Kingdom|Reino Unido|Royaume-Uni|WA3 7BH|10|192.0.2.19
-273|Watford|ENG|England|GB|United Kingdom|Reino Unido|Royaume-Uni|WA3|10|192.0.2.20
-274|West Sussex|ENG|England|GB|United Kingdom|Reino Unido|Royaume-Uni|RH15 9UD|10|192.0.2.21
-275|Wokingham|ENG|England|GB|United Kingdom|Reino Unido|Royaume-Uni|RG41 1QW|10|192.0.2.22
-276|Woolston|ENG|England|GB|United Kingdom|Reino Unido|Royaume-Uni|WA1 4SY|10|192.0.2.23
-277|York|ENG|England|GB|United Kingdom|Reino Unido|Royaume-Uni|Y024 1GF|10|192.0.2.24
-278|York|ENG|England|GB|United Kingdom|Reino Unido|Royaume-Uni|Y03 4TN|10|192.0.2.25
-279|York|ENG|England|GB|United Kingdom|Reino Unido|Royaume-Uni|YO15|10|192.0.2.26
-280|Birmingham|AL|Alabama|US|United States|Estados Unidos|États-Unis|35203|5|192.0.2.27
-281|Florence|AL|Alabama|US|United States|Estados Unidos|États-Unis|35630|5|192.0.2.28
-282|Huntsville|AL|Alabama|US|United States|Estados Unidos|États-Unis|35801|5|192.0.2.29
-283|Mobile|AL|Alabama|US|United States|Estados Unidos|États-Unis|36602|5|192.0.2.30
-284|Montgomery|AL|Alabama|US|United States|Estados Unidos|États-Unis|36104|5|192.0.2.31
-285|Chandler|AZ|Arizona|US|United States|Estados Unidos|États-Unis|85225|4|192.0.2.32
-286|Gilbert|AZ|Arizona|US|United States|Estados Unidos|États-Unis|85233|4|192.0.2.33
-287|Mesa|AZ|Arizona|US|United States|Estados Unidos|États-Unis|85201|4|192.0.2.34
-288|Phoenix|AZ|Arizona|US|United States|Estados Unidos|États-Unis|85004|4|192.0.2.35
-289|Scottsdale|AZ|Arizona|US|United States|Estados Unidos|États-Unis|85257|4|192.0.2.36
-290|Surprise|AZ|Arizona|US|United States|Estados Unidos|États-Unis|85374|4|192.0.2.37
-291|Tucson|AZ|Arizona|US|United States|Estados Unidos|États-Unis|85701|4|192.0.2.38
-292|Alhambra|CA|California|US|United States|Estados Unidos|États-Unis|91801|4|192.0.2.39
-293|Alpine|CA|California|US|United States|Estados Unidos|États-Unis|91901|4|192.0.2.40
-294|Auburn|CA|California|US|United States|Estados Unidos|États-Unis|95603|4|192.0.2.41
-295|Baldwin Park|CA|California|US|United States|Estados Unidos|États-Unis|91706|4|192.0.2.42
-296|Barstow|CA|California|US|United States|Estados Unidos|États-Unis|92311|4|192.0.2.43
-297|Bell Gardens|CA|California|US|United States|Estados Unidos|États-Unis|90201|4|192.0.2.44
-298|Bellflower|CA|California|US|United States|Estados Unidos|États-Unis|90706|4|192.0.2.45
-299|Berkeley|CA|California|US|United States|Estados Unidos|États-Unis|94704|4|192.0.2.46
-300|Beverly Hills|CA|California|US|United States|Estados Unidos|États-Unis|90210|4|192.0.2.47
-301|Burbank|CA|California|US|United States|Estados Unidos|États-Unis|91502|4|192.0.2.48
-302|Burlingame|CA|California|US|United States|Estados Unidos|États-Unis|94010|4|192.0.2.49
-303|Camarillo|CA|California|US|United States|Estados Unidos|États-Unis|93010|4|192.0.2.50
-304|Canoga Park|CA|California|US|United States|Estados Unidos|États-Unis|91303|4|192.0.2.51
-305|Carson|CA|California|US|United States|Estados Unidos|États-Unis|90746|4|192.0.2.52
-306|Cerritos|CA|California|US|United States|Estados Unidos|États-Unis|90703|4|192.0.2.53
-307|Chula Vista|CA|California|US|United States|Estados Unidos|États-Unis|91910|4|192.0.2.54
-308|Citrus Heights|CA|California|US|United States|Estados Unidos|États-Unis|95610|4|192.0.2.55
-309|City Of Commerce|CA|California|US|United States|Estados Unidos|États-Unis|90040|4|192.0.2.56
-310|Colma|CA|California|US|United States|Estados Unidos|États-Unis|94014|4|192.0.2.57
-311|Concord|CA|California|US|United States|Estados Unidos|États-Unis|94519|4|192.0.2.58
-312|Coronado|CA|California|US|United States|Estados Unidos|États-Unis|92118|4|192.0.2.59
-313|Culver City|CA|California|US|United States|Estados Unidos|États-Unis|90232|4|192.0.2.60
-314|Daly City|CA|California|US|United States|Estados Unidos|États-Unis|94015|4|192.0.2.61
-315|Downey|CA|California|US|United States|Estados Unidos|États-Unis|90241|4|192.0.2.62
-316|El Cajon|CA|California|US|United States|Estados Unidos|États-Unis|92020|4|192.0.2.63
-317|El Segundo|CA|California|US|United States|Estados Unidos|États-Unis|90245|4|192.0.2.64
-318|Elk Grove|CA|California|US|United States|Estados Unidos|États-Unis|95624|4|192.0.2.65
-319|Escondido|CA|California|US|United States|Estados Unidos|États-Unis|92025|4|192.0.2.66
-320|Eureka|CA|California|US|United States|Estados Unidos|États-Unis|95501|4|192.0.2.67
-321|Fontana|CA|California|US|United States|Estados Unidos|États-Unis|92335|4|192.0.2.68
-322|Fremont|CA|California|US|United States|Estados Unidos|États-Unis|94536|4|192.0.2.69
-323|Fullerton|CA|California|US|United States|Estados Unidos|États-Unis|92831|4|192.0.2.70
-324|Gilroy|CA|California|US|United States|Estados Unidos|États-Unis|95020|4|192.0.2.71
-325|Glendale|CA|California|US|United States|Estados Unidos|États-Unis|91203|4|192.0.2.72
-326|Grossmont|CA|California|US|United States|Estados Unidos|États-Unis|91941|4|192.0.2.73
-327|Hanford|CA|California|US|United States|Estados Unidos|États-Unis|93230|4|192.0.2.74
-328|Hayward|CA|California|US|United States|Estados Unidos|États-Unis|94541|4|192.0.2.75
-329|Imperial Beach|CA|California|US|United States|Estados Unidos|États-Unis|91932|4|192.0.2.76
-330|Irvine|CA|California|US|United States|Estados Unidos|États-Unis|92614|4|192.0.2.77
-331|La Jolla|CA|California|US|United States|Estados Unidos|États-Unis|92806|4|192.0.2.78
-332|La Mesa|CA|California|US|United States|Estados Unidos|États-Unis|91941|4|192.0.2.79
-333|Lake Elsinore|CA|California|US|United States|Estados Unidos|États-Unis|92530|4|192.0.2.80
-334|Lakewood|CA|California|US|United States|Estados Unidos|États-Unis|90712|4|192.0.2.81
-335|Lemon Grove|CA|California|US|United States|Estados Unidos|États-Unis|91945|4|192.0.2.82
-336|Lincoln Acres|CA|California|US|United States|Estados Unidos|États-Unis|91950|4|192.0.2.83
-337|Long Beach|CA|California|US|United States|Estados Unidos|États-Unis|90802|4|192.0.2.84
-338|Los Angeles|CA|California|US|United States|Estados Unidos|États-Unis|90012|4|192.0.2.85
-339|Mill Valley|CA|California|US|United States|Estados Unidos|États-Unis|94941|4|192.0.2.86
-340|Milpitas|CA|California|US|United States|Estados Unidos|États-Unis|95035|4|192.0.2.87
-341|Modesto|CA|California|US|United States|Estados Unidos|États-Unis|95354|4|192.0.2.88
-342|Monrovia|CA|California|US|United States|Estados Unidos|États-Unis|91016|4|192.0.2.89
-343|National City|CA|California|US|United States|Estados Unidos|États-Unis|91950|4|192.0.2.90
-344|Newark|CA|California|US|United States|Estados Unidos|États-Unis|94560|4|192.0.2.91
-345|Newport Beach|CA|California|US|United States|Estados Unidos|États-Unis|92625|4|192.0.2.92
-346|Norwalk|CA|California|US|United States|Estados Unidos|États-Unis|90650|4|192.0.2.93
-347|Novato|CA|California|US|United States|Estados Unidos|États-Unis|94947|4|192.0.2.94
-348|Oakland|CA|California|US|United States|Estados Unidos|États-Unis|94611|4|192.0.2.95
-349|Ontario|CA|California|US|United States|Estados Unidos|États-Unis|91764|4|192.0.2.96
-350|Orange|CA|California|US|United States|Estados Unidos|États-Unis|92867|4|192.0.2.97
-351|Oxnard|CA|California|US|United States|Estados Unidos|États-Unis|93030|4|192.0.2.98
-352|Palo Alto|CA|California|US|United States|Estados Unidos|États-Unis|94303|4|192.0.2.99
-353|Pleasanton|CA|California|US|United States|Estados Unidos|États-Unis|94566|4|192.0.2.100
-354|Redlands|CA|California|US|United States|Estados Unidos|États-Unis|92373|4|192.0.2.101
-355|Redwood City|CA|California|US|United States|Estados Unidos|États-Unis|94063|4|192.0.2.102
-356|Sacramento|CA|California|US|United States|Estados Unidos|États-Unis|95814|4|192.0.2.103
-357|San Bruno|CA|California|US|United States|Estados Unidos|États-Unis|94066|4|192.0.2.104
-358|San Carlos|CA|California|US|United States|Estados Unidos|États-Unis|94070|4|192.0.2.105
-359|San Diego|CA|California|US|United States|Estados Unidos|États-Unis|92102|4|192.0.2.106
-360|San Francisco|CA|California|US|United States|Estados Unidos|États-Unis|94109|4|192.0.2.107
-361|San Gabriel|CA|California|US|United States|Estados Unidos|États-Unis|91776|4|192.0.2.108
-362|San Jose|CA|California|US|United States|Estados Unidos|États-Unis|95112|4|192.0.2.109
-363|San Mateo|CA|California|US|United States|Estados Unidos|États-Unis|94404|4|192.0.2.110
-364|San Ramon|CA|California|US|United States|Estados Unidos|États-Unis|94583|4|192.0.2.111
-365|San Ysidro|CA|California|US|United States|Estados Unidos|États-Unis|92173|4|192.0.2.112
-366|Sand City|CA|California|US|United States|Estados Unidos|États-Unis|93955|4|192.0.2.113
-367|Santa Ana|CA|California|US|United States|Estados Unidos|États-Unis|92701|4|192.0.2.114
-368|Santa Cruz|CA|California|US|United States|Estados Unidos|États-Unis|95062|4|192.0.2.115
-369|Santa Monica|CA|California|US|United States|Estados Unidos|États-Unis|90401|4|192.0.2.116
-370|Sherman Oaks|CA|California|US|United States|Estados Unidos|États-Unis|91403|4|192.0.2.117
-371|Simi Valley|CA|California|US|United States|Estados Unidos|États-Unis|93065|4|192.0.2.118
-372|Spring Valley|CA|California|US|United States|Estados Unidos|États-Unis|91977|4|192.0.2.119
-373|Stockton|CA|California|US|United States|Estados Unidos|États-Unis|95202|4|192.0.2.120
-374|Torrance|CA|California|US|United States|Estados Unidos|États-Unis|90505|4|192.0.2.121
-375|Trabuco Canyon|CA|California|US|United States|Estados Unidos|États-Unis|92679|4|192.0.2.122
-376|Union City|CA|California|US|United States|Estados Unidos|États-Unis|94587|4|192.0.2.123
-377|Upland|CA|California|US|United States|Estados Unidos|États-Unis|91786|4|192.0.2.124
-378|Vacaville|CA|California|US|United States|Estados Unidos|États-Unis|95688|4|192.0.2.125
-379|Van Nuys|CA|California|US|United States|Estados Unidos|États-Unis|91411|4|192.0.2.126
-380|Visalia|CA|California|US|United States|Estados Unidos|États-Unis|93291|4|192.0.2.127
-381|Vista|CA|California|US|United States|Estados Unidos|États-Unis|92084|4|192.0.2.128
-382|Walnut Creek|CA|California|US|United States|Estados Unidos|États-Unis|94596|4|192.0.2.129
-383|West Covina|CA|California|US|United States|Estados Unidos|États-Unis|91791|4|192.0.2.130
-384|Whittier|CA|California|US|United States|Estados Unidos|États-Unis|90605|4|192.0.2.131
-385|Woodland Hills|CA|California|US|United States|Estados Unidos|États-Unis|91364|4|192.0.2.132
-386|Denver|CO|Colorado|US|United States|Estados Unidos|États-Unis|80203|3|192.0.2.133
-387|Englewood|CO|Colorado|US|United States|Estados Unidos|États-Unis|80110|3|192.0.2.134
-388|Greeley|CO|Colorado|US|United States|Estados Unidos|États-Unis|80631|3|192.0.2.135
-389|Longmont|CO|Colorado|US|United States|Estados Unidos|États-Unis|80501|3|192.0.2.136
-390|Loveland|CO|Colorado|US|United States|Estados Unidos|États-Unis|80537|3|192.0.2.137
-391|Parker|CO|Colorado|US|United States|Estados Unidos|États-Unis|80138|3|192.0.2.138
-392|Westminster|CO|Colorado|US|United States|Estados Unidos|États-Unis|80030|3|192.0.2.139
-393|East Haven|CT|Connecticut|US|United States|Estados Unidos|États-Unis|06512|2|192.0.2.140
-394|Farmington|CT|Connecticut|US|United States|Estados Unidos|États-Unis|06032|2|192.0.2.141
-395|Hamden|CT|Connecticut|US|United States|Estados Unidos|États-Unis|06518|2|192.0.2.142
-396|Milford|CT|Connecticut|US|United States|Estados Unidos|États-Unis|06460|2|192.0.2.143
-397|New Haven|CT|Connecticut|US|United States|Estados Unidos|États-Unis|06510|2|192.0.2.144
-398|Stamford|CT|Connecticut|US|United States|Estados Unidos|États-Unis|06901|2|192.0.2.145
-399|Waterbury|CT|Connecticut|US|United States|Estados Unidos|États-Unis|06710|2|192.0.2.146
-400|Westport|CT|Connecticut|US|United States|Estados Unidos|États-Unis|06880|2|192.0.2.147
-401|Altamonte Springs|FL|Florida|US|United States|Estados Unidos|États-Unis|32701|5|192.0.2.148
-402|Bradenton|FL|Florida|US|United States|Estados Unidos|États-Unis|34205|5|192.0.2.149
-403|Clearwater|FL|Florida|US|United States|Estados Unidos|États-Unis|33755|5|192.0.2.150
-404|Destin|FL|Florida|US|United States|Estados Unidos|États-Unis|32541|5|192.0.2.151
-405|Hollywood|FL|Florida|US|United States|Estados Unidos|États-Unis|33021|5|192.0.2.152
-406|Kendall|FL|Florida|US|United States|Estados Unidos|États-Unis|33143|5|192.0.2.153
-407|Lakeland|FL|Florida|US|United States|Estados Unidos|États-Unis|33801|5|192.0.2.154
-408|Merritt Island|FL|Florida|US|United States|Estados Unidos|États-Unis|32952|5|192.0.2.155
-409|Miami|FL|Florida|US|United States|Estados Unidos|États-Unis|33127|5|192.0.2.156
-410|North Miami Beach|FL|Florida|US|United States|Estados Unidos|États-Unis|33162|5|192.0.2.157
-411|Orlando|FL|Florida|US|United States|Estados Unidos|États-Unis|32804|5|192.0.2.158
-412|Sarasota|FL|Florida|US|United States|Estados Unidos|États-Unis|34236|5|192.0.2.159
-413|Sunrise|FL|Florida|US|United States|Estados Unidos|États-Unis|33322|5|192.0.2.160
-414|Tampa|FL|Florida|US|United States|Estados Unidos|États-Unis|33602|5|192.0.2.161
-415|Vero Beach|FL|Florida|US|United States|Estados Unidos|États-Unis|32960|5|192.0.2.162
-416|Atlanta|GA|Georgia|US|United States|Estados Unidos|États-Unis|30308|5|192.0.2.163
-417|Augusta|GA|Georgia|US|United States|Estados Unidos|États-Unis|30901|5|192.0.2.164
-418|Austell|GA|Georgia|US|United States|Estados Unidos|États-Unis|30106|5|192.0.2.165
-419|Byron|GA|Georgia|US|United States|Estados Unidos|États-Unis|31008|5|192.0.2.166
-420|Clarkston|GA|Georgia|US|United States|Estados Unidos|États-Unis|30021|5|192.0.2.167
-421|Columbus|GA|Georgia|US|United States|Estados Unidos|États-Unis|31901|5|192.0.2.168
-422|Decatur|GA|Georgia|US|United States|Estados Unidos|États-Unis|30030|5|192.0.2.169
-423|La Grange|GA|Georgia|US|United States|Estados Unidos|États-Unis|30240|5|192.0.2.170
-424|Marietta|GA|Georgia|US|United States|Estados Unidos|États-Unis|30060|5|192.0.2.171
-425|Mcdonough|GA|Georgia|US|United States|Estados Unidos|États-Unis|30253|5|192.0.2.172
-426|Savannah|GA|Georgia|US|United States|Estados Unidos|États-Unis|31401|5|192.0.2.173
-427|Suwanee|GA|Georgia|US|United States|Estados Unidos|États-Unis|30024|5|192.0.2.174
-428|Idaho Falls|ID|Idaho|US|United States|Estados Unidos|États-Unis|83402|1|192.0.2.175
-429|Lewiston|ID|Idaho|US|United States|Estados Unidos|États-Unis|83501|1|192.0.2.176
-430|Sandpoint|ID|Idaho|US|United States|Estados Unidos|États-Unis|83864|1|192.0.2.177
-431|Carol Stream|IL|Illinois|US|United States|Estados Unidos|États-Unis|60188|3|192.0.2.178
-432|Chicago|IL|Illinois|US|United States|Estados Unidos|États-Unis|60610|3|192.0.2.179
-433|Elgin|IL|Illinois|US|United States|Estados Unidos|États-Unis|60120|3|192.0.2.180
-434|Joliet|IL|Illinois|US|United States|Estados Unidos|États-Unis|60433|3|192.0.2.181
-435|Moline|IL|Illinois|US|United States|Estados Unidos|États-Unis|61265|3|192.0.2.182
-436|Norridge|IL|Illinois|US|United States|Estados Unidos|États-Unis|60706|3|192.0.2.183
-437|Peoria|IL|Illinois|US|United States|Estados Unidos|États-Unis|61606|3|192.0.2.184
-438|Tuscola|IL|Illinois|US|United States|Estados Unidos|États-Unis|61953|3|192.0.2.185
-439|West Chicago|IL|Illinois|US|United States|Estados Unidos|États-Unis|60185|3|192.0.2.186
-440|Wood Dale|IL|Illinois|US|United States|Estados Unidos|États-Unis|60191|3|192.0.2.187
-441|Daleville|IN|Indiana|US|United States|Estados Unidos|États-Unis|47334|2|192.0.2.188
-442|Fort Wayne|IN|Indiana|US|United States|Estados Unidos|États-Unis|46807|2|192.0.2.189
-443|Indianapolis|IN|Indiana|US|United States|Estados Unidos|États-Unis|46204|2|192.0.2.190
-444|Logansport|IN|Indiana|US|United States|Estados Unidos|États-Unis|46947|2|192.0.2.191
-445|Michigan City|IN|Indiana|US|United States|Estados Unidos|États-Unis|46360|2|192.0.2.192
-446|New Castle|IN|Indiana|US|United States|Estados Unidos|États-Unis|47362|2|192.0.2.193
-447|South Bend|IN|Indiana|US|United States|Estados Unidos|États-Unis|46601|2|192.0.2.194
-448|Campbellsville|KY|Kentucky|US|United States|Estados Unidos|États-Unis|42718|5|192.0.2.195
-449|Florence|KY|Kentucky|US|United States|Estados Unidos|États-Unis|41042|5|192.0.2.196
-450|Newport|KY|Kentucky|US|United States|Estados Unidos|États-Unis|41071|5|192.0.2.197
-451|Saint Matthews|KY|Kentucky|US|United States|Estados Unidos|États-Unis|40207|5|192.0.2.198
-452|Somerset|KY|Kentucky|US|United States|Estados Unidos|États-Unis|42501|5|192.0.2.199
-453|Braintree|MA|Massachusetts|US|United States|Estados Unidos|États-Unis|02184|2|192.0.2.200
-454|Norwood|MA|Massachusetts|US|United States|Estados Unidos|États-Unis|02062|2|192.0.2.201
-455|Randolph|MA|Massachusetts|US|United States|Estados Unidos|États-Unis|02368|2|192.0.2.202
-456|Saugus|MA|Massachusetts|US|United States|Estados Unidos|États-Unis|01906|2|192.0.2.203
-457|Wrentham|MA|Massachusetts|US|United States|Estados Unidos|États-Unis|02093|2|192.0.2.204
-458|Baltimore|MD|Maryland|US|United States|Estados Unidos|États-Unis|21201|2|192.0.2.205
-459|Kittery|ME|Maine|US|United States|Estados Unidos|États-Unis|03904|2|192.0.2.206
-460|Detroit|MI|Michigan|US|United States|Estados Unidos|États-Unis|48226|3|192.0.2.207
-461|Holland|MI|Michigan|US|United States|Estados Unidos|États-Unis|49423|3|192.0.2.208
-462|Howell|MI|Michigan|US|United States|Estados Unidos|États-Unis|48843|3|192.0.2.209
-463|Madison Heights|MI|Michigan|US|United States|Estados Unidos|États-Unis|48071|3|192.0.2.210
-464|Midland|MI|Michigan|US|United States|Estados Unidos|États-Unis|48640|3|192.0.2.211
-465|Monroe|MI|Michigan|US|United States|Estados Unidos|États-Unis|98272|3|192.0.2.212
-466|Novi|MI|Michigan|US|United States|Estados Unidos|États-Unis|48375|3|192.0.2.213
-467|Pontiac|MI|Michigan|US|United States|Estados Unidos|États-Unis|48342|3|192.0.2.214
-468|Port Huron|MI|Michigan|US|United States|Estados Unidos|États-Unis|48060|3|192.0.2.215
-469|Redford|MI|Michigan|US|United States|Estados Unidos|États-Unis|48239|3|192.0.2.216
-470|Saginaw|MI|Michigan|US|United States|Estados Unidos|États-Unis|48601|3|192.0.2.217
-471|Southfield|MI|Michigan|US|United States|Estados Unidos|États-Unis|48034|3|192.0.2.218
-472|Southgate|MI|Michigan|US|United States|Estados Unidos|États-Unis|48195|3|192.0.2.219
-473|Westland|MI|Michigan|US|United States|Estados Unidos|États-Unis|48185|3|192.0.2.220
-474|Zeeland|MI|Michigan|US|United States|Estados Unidos|États-Unis|49464|3|192.0.2.221
-475|Branch|MN|Minnesota|US|United States|Estados Unidos|États-Unis|55056|3|192.0.2.222
-476|Duluth|MN|Minnesota|US|United States|Estados Unidos|États-Unis|55802|3|192.0.2.223
-477|Edina|MN|Minnesota|US|United States|Estados Unidos|États-Unis|55436|3|192.0.2.224
-478|Medford|MN|Minnesota|US|United States|Estados Unidos|États-Unis|55049|3|192.0.2.225
-479|Minneapolis|MN|Minnesota|US|United States|Estados Unidos|États-Unis|55402|3|192.0.2.226
-480|Woodbury|MN|Minnesota|US|United States|Estados Unidos|États-Unis|55125|3|192.0.2.227
-481|Branson|MO|Missouri|US|United States|Estados Unidos|États-Unis|65616|3|192.0.2.228
-482|Ferguson|MO|Missouri|US|United States|Estados Unidos|États-Unis|63135|3|192.0.2.229
-483|Jefferson City|MO|Missouri|US|United States|Estados Unidos|États-Unis|65101|3|192.0.2.230
-484|Kansas City|MO|Missouri|US|United States|Estados Unidos|États-Unis|64106|3|192.0.2.231
-485|Odessa|MO|Missouri|US|United States|Estados Unidos|États-Unis|64076|3|192.0.2.232
-486|Saint Ann|MO|Missouri|US|United States|Estados Unidos|États-Unis|63074|3|192.0.2.233
-487|Saint Louis|MO|Missouri|US|United States|Estados Unidos|États-Unis|63103|3|192.0.2.234
-488|Biloxi|MS|Mississippi|US|United States|Estados Unidos|États-Unis|39530|5|192.0.2.235
-489|Gulfport|MS|Mississippi|US|United States|Estados Unidos|États-Unis|39501|5|192.0.2.236
-490|Tupelo|MS|Mississippi|US|United States|Estados Unidos|États-Unis|38804|5|192.0.2.237
-491|Billings|MT|Montana|US|United States|Estados Unidos|États-Unis|59101|1|192.0.2.238
-492|Great Falls|MT|Montana|US|United States|Estados Unidos|États-Unis|59401|1|192.0.2.239
-493|Missoula|MT|Montana|US|United States|Estados Unidos|États-Unis|59801|1|192.0.2.240
-494|Charlotte|NC|North Carolina|US|United States|Estados Unidos|États-Unis|28202|5|192.0.2.241
-495|Greensboro|NC|North Carolina|US|United States|Estados Unidos|États-Unis|27412|5|192.0.2.242
-496|Kannapolis|NC|North Carolina|US|United States|Estados Unidos|États-Unis|28081|5|192.0.2.243
-497|Raleigh|NC|North Carolina|US|United States|Estados Unidos|États-Unis|27603|5|192.0.2.244
-498|Rocky Mount|NC|North Carolina|US|United States|Estados Unidos|États-Unis|27803|5|192.0.2.245
-499|Smithfield|NC|North Carolina|US|United States|Estados Unidos|États-Unis|27577|5|192.0.2.246
-500|Winston-Salem|NC|North Carolina|US|United States|Estados Unidos|États-Unis|27104|5|192.0.2.247
-501|Hooksett|NH|New Hampshire|US|United States|Estados Unidos|États-Unis|03106|2|192.0.2.248
-502|Nashua|NH|New Hampshire|US|United States|Estados Unidos|États-Unis|03064|2|192.0.2.249
-503|Plaistow|NH|New Hampshire|US|United States|Estados Unidos|États-Unis|03865|2|192.0.2.250
-504|Tilton|NH|New Hampshire|US|United States|Estados Unidos|États-Unis|03276|2|192.0.2.251
-505|Las Cruces|NM|New Mexico|US|United States|Estados Unidos|États-Unis|88001|4|192.0.2.252
-506|Rio Rancho|NM|New Mexico|US|United States|Estados Unidos|États-Unis|87124|4|192.0.2.253
-507|Santa Fe|NM|New Mexico|US|United States|Estados Unidos|États-Unis|87501|4|192.0.2.254
-508|Fernley|NV|Nevada|US|United States|Estados Unidos|États-Unis|89408|1|203.0.113.1
-509|Las Vegas|NV|Nevada|US|United States|Estados Unidos|États-Unis|89106|1|203.0.113.2
-510|North Las Vegas|NV|Nevada|US|United States|Estados Unidos|États-Unis|89030|1|203.0.113.3
-511|Reno|NV|Nevada|US|United States|Estados Unidos|États-Unis|89502|1|203.0.113.4
-512|Sparks|NV|Nevada|US|United States|Estados Unidos|États-Unis|89431|1|203.0.113.5
-513|Central Valley|NY|New York|US|United States|Estados Unidos|États-Unis|10917|2|203.0.113.6
-514|Cheektowaga|NY|New York|US|United States|Estados Unidos|États-Unis|14227|2|203.0.113.7
-515|Clay|NY|New York|US|United States|Estados Unidos|États-Unis|13041|2|203.0.113.8
-516|De Witt|NY|New York|US|United States|Estados Unidos|États-Unis|13214|2|203.0.113.9
-517|Endicott|NY|New York|US|United States|Estados Unidos|États-Unis|13760|2|203.0.113.10
-518|Ithaca|NY|New York|US|United States|Estados Unidos|États-Unis|14850|2|203.0.113.11
-519|Lake George|NY|New York|US|United States|Estados Unidos|États-Unis|12845|2|203.0.113.12
-520|Melville|NY|New York|US|United States|Estados Unidos|États-Unis|11747|2|203.0.113.13
-521|New Hartford|NY|New York|US|United States|Estados Unidos|États-Unis|13413|2|203.0.113.14
-522|New York|NY|New York|US|United States|Estados Unidos|États-Unis|10007|2|203.0.113.15
-523|Valley Stream|NY|New York|US|United States|Estados Unidos|États-Unis|11580|2|203.0.113.16
-524|Burbank|OH|Ohio|US|United States|Estados Unidos|États-Unis|44214|2|203.0.113.17
-525|Cincinnati|OH|Ohio|US|United States|Estados Unidos|États-Unis|45202|2|203.0.113.18
-526|Columbus|OH|Ohio|US|United States|Estados Unidos|États-Unis|43215|2|203.0.113.19
-527|Euclid|OH|Ohio|US|United States|Estados Unidos|États-Unis|44119|2|203.0.113.20
-528|Heath|OH|Ohio|US|United States|Estados Unidos|États-Unis|43056|2|203.0.113.21
-529|Holland|OH|Ohio|US|United States|Estados Unidos|États-Unis|43528|2|203.0.113.22
-530|Mansfield|OH|Ohio|US|United States|Estados Unidos|États-Unis|44903|2|203.0.113.23
-531|Mentor|OH|Ohio|US|United States|Estados Unidos|États-Unis|44060|2|203.0.113.24
-532|North Randall|OH|Ohio|US|United States|Estados Unidos|États-Unis|44128|2|203.0.113.25
-533|Oberlin|OH|Ohio|US|United States|Estados Unidos|États-Unis|44074|2|203.0.113.26
-534|Springdale|OH|Ohio|US|United States|Estados Unidos|États-Unis|45246|2|203.0.113.27
-535|Albany|OR|Oregon|US|United States|Estados Unidos|États-Unis|97321|1|203.0.113.28
-536|Beaverton|OR|Oregon|US|United States|Estados Unidos|États-Unis|97005|1|203.0.113.29
-537|Clackamas|OR|Oregon|US|United States|Estados Unidos|États-Unis|97015|1|203.0.113.30
-538|Clackamas|OR|Oregon|US|United States|Estados Unidos|États-Unis|97015-6403|1|203.0.113.31
-539|Corvallis|OR|Oregon|US|United States|Estados Unidos|États-Unis|97330|1|203.0.113.32
-540|Hillsboro|OR|Oregon|US|United States|Estados Unidos|États-Unis|97123|1|203.0.113.33
-541|Klamath Falls|OR|Oregon|US|United States|Estados Unidos|États-Unis|97601|1|203.0.113.34
-542|Lake Oswego|OR|Oregon|US|United States|Estados Unidos|États-Unis|97034|1|203.0.113.35
-543|Lebanon|OR|Oregon|US|United States|Estados Unidos|États-Unis|97355|1|203.0.113.36
-544|Medford|OR|Oregon|US|United States|Estados Unidos|États-Unis|97504|1|203.0.113.37
-545|Milwaukie|OR|Oregon|US|United States|Estados Unidos|États-Unis|97222|1|203.0.113.38
-546|Oregon City|OR|Oregon|US|United States|Estados Unidos|États-Unis|97045|1|203.0.113.39
-547|Portland|OR|Oregon|US|United States|Estados Unidos|États-Unis|97205|1|203.0.113.40
-548|Salem|OR|Oregon|US|United States|Estados Unidos|États-Unis|97301|1|203.0.113.41
-549|Springfield|OR|Oregon|US|United States|Estados Unidos|États-Unis|97477|1|203.0.113.42
-550|Tigard|OR|Oregon|US|United States|Estados Unidos|États-Unis|97223|1|203.0.113.43
-551|Troutdale|OR|Oregon|US|United States|Estados Unidos|États-Unis|97060|1|203.0.113.44
-552|W. Linn|OR|Oregon|US|United States|Estados Unidos|États-Unis|97068|1|203.0.113.45
-553|Woodburn|OR|Oregon|US|United States|Estados Unidos|États-Unis|97071|1|203.0.113.46
-554|Warwick|RI|Rhode Island|US|United States|Estados Unidos|États-Unis|02889|2|203.0.113.47
-555|West Kingston|RI|Rhode Island|US|United States|Estados Unidos|États-Unis|02892|2|203.0.113.48
-556|Woonsocket|RI|Rhode Island|US|United States|Estados Unidos|États-Unis|02895|2|203.0.113.49
-557|Bluffton|SC|South Carolina|US|United States|Estados Unidos|États-Unis|29910|5|203.0.113.50
-558|Gaffney|SC|South Carolina|US|United States|Estados Unidos|États-Unis|29340|5|203.0.113.51
-559|Myrtle Beach|SC|South Carolina|US|United States|Estados Unidos|États-Unis|29577|5|203.0.113.52
-560|Denby|SD|South Dakota|US|United States|Estados Unidos|États-Unis|57716|3|203.0.113.53
-561|North Sioux City|SD|South Dakota|US|United States|Estados Unidos|États-Unis|57049|3|203.0.113.54
-562|Crossville|TN|Tennessee|US|United States|Estados Unidos|États-Unis|38555|5|203.0.113.55
-563|Hixson|TN|Tennessee|US|United States|Estados Unidos|États-Unis|37343|5|203.0.113.56
-564|Kingsport|TN|Tennessee|US|United States|Estados Unidos|États-Unis|37660|5|203.0.113.57
-565|La Vergne|TN|Tennessee|US|United States|Estados Unidos|États-Unis|37086|5|203.0.113.58
-566|Maryville|TN|Tennessee|US|United States|Estados Unidos|États-Unis|37801|5|203.0.113.59
-567|Memphis|TN|Tennessee|US|United States|Estados Unidos|États-Unis|38103|5|203.0.113.60
-568|Millington|TN|Tennessee|US|United States|Estados Unidos|États-Unis|38054|5|203.0.113.61
-569|Nashville|TN|Tennessee|US|United States|Estados Unidos|États-Unis|37203|5|203.0.113.62
-570|Pigeon Forge|TN|Tennessee|US|United States|Estados Unidos|États-Unis|37863|5|203.0.113.63
-571|Arlington|TX|Texas|US|United States|Estados Unidos|États-Unis|76010|4|203.0.113.64
-572|Austin|TX|Texas|US|United States|Estados Unidos|États-Unis|78701|4|203.0.113.65
-573|Baytown|TX|Texas|US|United States|Estados Unidos|États-Unis|77520|4|203.0.113.66
-574|Carrollton|TX|Texas|US|United States|Estados Unidos|États-Unis|75006|4|203.0.113.67
-575|Cedar Park|TX|Texas|US|United States|Estados Unidos|États-Unis|78613|4|203.0.113.68
-576|College Station|TX|Texas|US|United States|Estados Unidos|États-Unis|77840|4|203.0.113.69
-577|Corpus Christi|TX|Texas|US|United States|Estados Unidos|États-Unis|78404|4|203.0.113.70
-578|Dallas|TX|Texas|US|United States|Estados Unidos|États-Unis|75201|4|203.0.113.71
-579|Fort Worth|TX|Texas|US|United States|Estados Unidos|États-Unis|76102|4|203.0.113.72
-580|Garland|TX|Texas|US|United States|Estados Unidos|États-Unis|75040|4|203.0.113.73
-581|Hillsboro|TX|Texas|US|United States|Estados Unidos|États-Unis|76645|4|203.0.113.74
-582|Houston|TX|Texas|US|United States|Estados Unidos|États-Unis|77003|4|203.0.113.75
-583|Humble|TX|Texas|US|United States|Estados Unidos|États-Unis|77338|4|203.0.113.76
-584|Irving|TX|Texas|US|United States|Estados Unidos|États-Unis|75061|4|203.0.113.77
-585|Killeen|TX|Texas|US|United States|Estados Unidos|États-Unis|76541|4|203.0.113.78
-586|La Marque|TX|Texas|US|United States|Estados Unidos|États-Unis|77568|4|203.0.113.79
-587|Laredo|TX|Texas|US|United States|Estados Unidos|États-Unis|78040|4|203.0.113.80
-588|Mesquite|TX|Texas|US|United States|Estados Unidos|États-Unis|75149|4|203.0.113.81
-589|Plano|TX|Texas|US|United States|Estados Unidos|États-Unis|75074|4|203.0.113.82
-590|Round Rock|TX|Texas|US|United States|Estados Unidos|États-Unis|78664|4|203.0.113.83
-591|San Antonio|TX|Texas|US|United States|Estados Unidos|États-Unis|78204|4|203.0.113.84
-592|Stafford|TX|Texas|US|United States|Estados Unidos|États-Unis|77477|4|203.0.113.85
-593|Sugar Land|TX|Texas|US|United States|Estados Unidos|États-Unis|77478|4|203.0.113.86
-594|Bountiful|UT|Utah|US|United States|Estados Unidos|États-Unis|84010|1|203.0.113.87
-595|Cedar City|UT|Utah|US|United States|Estados Unidos|États-Unis|84720|1|203.0.113.88
-596|Ogden|UT|Utah|US|United States|Estados Unidos|États-Unis|84401|1|203.0.113.89
-597|Park City|UT|Utah|US|United States|Estados Unidos|États-Unis|84098|1|203.0.113.90
-598|Riverton|UT|Utah|US|United States|Estados Unidos|États-Unis|84065|1|203.0.113.91
-599|Salt Lake City|UT|Utah|US|United States|Estados Unidos|États-Unis|84101|1|203.0.113.92
-600|Sandy|UT|Utah|US|United States|Estados Unidos|États-Unis|84070|1|203.0.113.93
-601|Tooele|UT|Utah|US|United States|Estados Unidos|États-Unis|84074|1|203.0.113.94
-602|Chantilly|VA|Virginia|US|United States|Estados Unidos|États-Unis|20151|5|203.0.113.95
-603|Falls Church|VA|Virginia|US|United States|Estados Unidos|États-Unis|22046|5|203.0.113.96
-604|Leesburg|VA|Virginia|US|United States|Estados Unidos|États-Unis|20176|5|203.0.113.97
-605|Newport News|VA|Virginia|US|United States|Estados Unidos|États-Unis|23607|5|203.0.113.98
-606|Virginia Beach|VA|Virginia|US|United States|Estados Unidos|États-Unis|23451|5|203.0.113.99
-607|Ballard|WA|Washington|US|United States|Estados Unidos|États-Unis|98107|1|203.0.113.100
-608|Bellevue|WA|Washington|US|United States|Estados Unidos|États-Unis|98004|1|203.0.113.101
-609|Bellingham|WA|Washington|US|United States|Estados Unidos|États-Unis|98225|1|203.0.113.102
-610|Bothell|WA|Washington|US|United States|Estados Unidos|États-Unis|98011|1|203.0.113.103
-611|Bremerton|WA|Washington|US|United States|Estados Unidos|États-Unis|98312|1|203.0.113.104
-612|Burien|WA|Washington|US|United States|Estados Unidos|États-Unis|98168|1|203.0.113.105
-613|Chehalis|WA|Washington|US|United States|Estados Unidos|États-Unis|98532|1|203.0.113.106
-614|Edmonds|WA|Washington|US|United States|Estados Unidos|États-Unis|98020|1|203.0.113.107
-615|Ellensburg|WA|Washington|US|United States|Estados Unidos|États-Unis|98926|1|203.0.113.108
-616|Everett|WA|Washington|US|United States|Estados Unidos|États-Unis|98201|1|203.0.113.109
-617|Federal Way|WA|Washington|US|United States|Estados Unidos|États-Unis|98003|1|203.0.113.110
-618|Issaquah|WA|Washington|US|United States|Estados Unidos|États-Unis|98027|1|203.0.113.111
-619|Kelso|WA|Washington|US|United States|Estados Unidos|États-Unis|98626|1|203.0.113.112
-620|Kenmore|WA|Washington|US|United States|Estados Unidos|États-Unis|98028|1|203.0.113.113
-621|Kennewick|WA|Washington|US|United States|Estados Unidos|États-Unis|99337|1|203.0.113.114
-622|Kent|WA|Washington|US|United States|Estados Unidos|États-Unis|98031|1|203.0.113.115
-623|Kirkland|WA|Washington|US|United States|Estados Unidos|États-Unis|98033|1|203.0.113.116
-624|Lacey|WA|Washington|US|United States|Estados Unidos|États-Unis|98503|1|203.0.113.117
-625|Longview|WA|Washington|US|United States|Estados Unidos|États-Unis|98632|1|203.0.113.118
-626|Lynnwood|WA|Washington|US|United States|Estados Unidos|États-Unis|98036|1|203.0.113.119
-627|Marysville|WA|Washington|US|United States|Estados Unidos|États-Unis|98270|1|203.0.113.120
-628|Monroe|WA|Washington|US|United States|Estados Unidos|États-Unis|98272|1|203.0.113.121
-629|Newport Hills|WA|Washington|US|United States|Estados Unidos|États-Unis|98006|1|203.0.113.122
-630|North Bend|WA|Washington|US|United States|Estados Unidos|États-Unis|98045|1|203.0.113.123
-631|Olympia|WA|Washington|US|United States|Estados Unidos|États-Unis|98501|1|203.0.113.124
-632|Port Orchard|WA|Washington|US|United States|Estados Unidos|États-Unis|98366|1|203.0.113.125
-633|Puyallup|WA|Washington|US|United States|Estados Unidos|États-Unis|98371|1|203.0.113.126
-634|Redmond|WA|Washington|US|United States|Estados Unidos|États-Unis|98052|1|203.0.113.127
-635|Renton|WA|Washington|US|United States|Estados Unidos|États-Unis|98055|1|203.0.113.128
-636|Sammamish|WA|Washington|US|United States|Estados Unidos|États-Unis|98074|1|203.0.113.129
-637|Seattle|WA|Washington|US|United States|Estados Unidos|États-Unis|98104|1|203.0.113.130
-638|Sedro Woolley|WA|Washington|US|United States|Estados Unidos|États-Unis|98284|1|203.0.113.131
-639|Sequim|WA|Washington|US|United States|Estados Unidos|États-Unis|98382|1|203.0.113.132
-640|Shelton|WA|Washington|US|United States|Estados Unidos|États-Unis|98584|1|203.0.113.133
-641|Spokane|WA|Washington|US|United States|Estados Unidos|États-Unis|99202|1|203.0.113.134
-642|Tacoma|WA|Washington|US|United States|Estados Unidos|États-Unis|98403|1|203.0.113.135
-643|Union Gap|WA|Washington|US|United States|Estados Unidos|États-Unis|98903|1|203.0.113.136
-644|Walla Walla|WA|Washington|US|United States|Estados Unidos|États-Unis|99362|1|203.0.113.137
-645|Washougal|WA|Washington|US|United States|Estados Unidos|États-Unis|98671|1|203.0.113.138
-646|Wenatchee|WA|Washington|US|United States|Estados Unidos|États-Unis|98801|1|203.0.113.139
-647|Woodinville|WA|Washington|US|United States|Estados Unidos|États-Unis|98072|1|203.0.113.140
-648|Yakima|WA|Washington|US|United States|Estados Unidos|États-Unis|98901|1|203.0.113.141
-649|Johnson Creek|WI|Wisconsin|US|United States|Estados Unidos|États-Unis|53038|3|203.0.113.142
-650|Milwaukee|WI|Wisconsin|US|United States|Estados Unidos|États-Unis|53202|3|203.0.113.143
-651|Mosinee|WI|Wisconsin|US|United States|Estados Unidos|États-Unis|54455|3|203.0.113.144
-652|Racine|WI|Wisconsin|US|United States|Estados Unidos|États-Unis|53182|3|203.0.113.145
-653|Casper|WY|Wyoming|US|United States|Estados Unidos|États-Unis|82601|1|203.0.113.146
-654|Cheyenne|WY|Wyoming|US|United States|Estados Unidos|États-Unis|82001|1|203.0.113.147
-655|Rock Springs|WY|Wyoming|US|United States|Estados Unidos|États-Unis|82901|1|203.0.113.148
+﻿GeographyKey|GeographyType|ContinentName|CityName|StateProvinceName|RegionCountryName|Geometry|ETLLoadID|LoadDate|UpdateDate
+1|Continent|Asia||||0x000000000104A9A30000C6E40F6898DC6240B013824B284C25C0D26C0D07F1DC624078A168BAFF1F25C0D6A660EFADDC62403088FAA3D01925C008201693E6DB624070C63EF1C41325C088BC1E0361D96240603DD1D7541525C01663D94A97D862407852D113F73725C0AED0ABB820D96240A01D4367FA4425C08221AC7D69|1|2009-09-28 19:34:45.703|2009-09-28 19:34:45.703
+2|Continent|Europe||||0x000000000104066A000000000000DB074D4000000040046C54400000000051114D40000000402D6C544000000000D9194D4000000040886C544000000000791D4D4000000040DA6C5440000000005A294D40000000C0946D5440000000001D3E4D4000000040986E544000000000FC4A4D40000000401C6F54400000000092|1|2009-09-28 19:34:45.703|2009-09-28 19:34:45.703
+3|Continent|North America||||0x00000000010437FD00009CF9D31D6C6B54C050772E7EEE8D1D4052176414AC6D54C0D037302225BF1D40C1855EC8CB6D54C08083650F88C91D40F5C052A6796D54C0D07AB1BAA9EA1D4064D06DD2156D54C040A3B7750BF61D400476DC39756D54C0F067096FE3381E403FEC7CC14F6E54C090B91731C0771E403E2B97484A|1|2009-09-28 19:34:45.703|2009-09-28 19:34:45.703
+269|Country/Region|Asia|||Armenia|0x000000000104170000007128E28B0E4547407370A4A56270434050B2596E4A364740F5C105FA929A4340D27CFAA09A4F474075D8A5FF629D4340F08A81645E314740778CA62CE3B34340311D1289A6434740D83A3F58AFC94340EED68037DE1A47405851DF5D7FCC43402A6CCE9C85CD4640DBCF80BD4FFC43408CA127EA31|1|2009-09-28 19:51:53.790|2009-09-28 19:51:53.790
+270|Country/Region|Asia|||Australia|0x000000000104D0010000000000A0CF4F60400000000040AC27C0000000A06154604000000000808A27C05D72DA8214526040CCDE0758E06027C0000000A0CF4F604000000000D04927C0D0A77617834F6040A914E1336D3227C0000000A040486040000000001EAF26C000000080DE40604000000000909827C0000000A0CF|1|2009-09-28 19:51:53.790|2009-09-28 19:51:53.790
+271|Country/Region|Asia|||Bhutan|0x000000000104120000008F28340B12055740A5CFC8469DDE3A402F2E9C0CC60557406DA27C3BF6583B403D5BDFD767EB5640AFBBCD811E7C3B40FD4F0FD5FFE9564074F93F11D7C33B40CD52C3D559EA5640B76C116E3FF23B402B995AA725D35640F98562B467153C407B2BEE8B6FC55640B7995179DFF73B40A8C0383115|1|2009-09-28 19:51:53.790|2009-09-28 19:51:53.790
+272|Country/Region|Asia|||China|0x000000000104150200000000000070F95D400000000030094040D9309ACEBAF55D4040B5C493C21E40401766EA4349F55D4071A5D3F8C21F4040000000C07BED5D4000000000CC2140400000000070F95D4000000000300940400000000071805E40000000009C013E4000000040D5945E4000000000D4053E4000000000A1|1|2009-09-28 19:51:53.790|2009-09-28 19:51:53.790
+273|Country/Region|Asia|||India|0x000000000104340100003F66881AC80C514034FB9F110FC437401F4A801344095140F1B40EC0469B3740C0A9682B38155140F187CEB4A6953740B17C2560962F5140B5980039BFD7374020D14035241A5140F1B40EC0469B374060DC10388C1B5140EE4C0D66466E3740936E9E9CD24D514025991839CDD73640B56BE7DB76|1|2009-09-28 19:51:53.790|2009-09-28 19:51:53.790
+274|Country/Region|Asia|||Iran|0x000000000104750000000000004077A44B40000000C0748E3A400000004024254C4000000080B5F33A40000000C0EFE04B4000000080B5F33A40000000C057E24B4000000000EDCA3A400000004077A44B40000000C0748E3A400000008011B34E40000000C029143940000000807DCE4E40000000001A333940000000C06D|1|2009-09-28 19:51:53.790|2009-09-28 19:51:53.790
+275|Country/Region|Asia|||Japan|0x000000000104FC0000000C4DE093A1C9604051BDD378FE594140EE6B99DB7DED604011B20376965841402670A7DC04EE60405009D34B7E434140F518DBC61EE360406EEA1904A21F414045322FCD48E660408D7F61E9451241408510BFC410E26040EB6B78A4D1EF4040EFC519F2BDF8604067C0963961BA40403058AA1606|1|2009-09-28 19:51:53.790|2009-09-28 19:51:53.790
+276|Country/Region|Asia|||Kyrgyzstan|0x000000000104380000007AB15D6D2FB6524080F1EA45844044402B794A9F25CF52403FB9DA377C3944405D2A97CB4BE55240C1837B6ACC5244403D680FDB07ED5240BE1B7A10CC254440B0ABEC2B761553409E59F21F882D444082BC217090375340A4FCB4C8E8814440172A880B43855340C418BDCF6C8544400957C556E1|1|2009-09-28 19:51:53.790|2009-09-28 19:51:53.790
+277|Country/Region|Asia|||Pakistan|0x0000000001046B000000E6A57BEABC745340F8ECBE44F3BF414092CAA5735239534019634762B7CE4140301C0D48862353403B8DD0ACFBF34140EF5C3C189E0B53409A2DE89407E841408EDBE3F771FB5240FC3501D7130942409E16A806D4025340BDDE31012C1E42407ECD5FF4AFF952408168A363644F42402B4C0A9485|1|2009-09-28 19:51:53.790|2009-09-28 19:51:53.790
+278|Country/Region|Asia|||Singapore||1|2009-09-28 19:51:53.790|2009-09-28 19:51:53.790
+279|Country/Region|Asia|||South Korea||1|2009-09-28 19:51:53.790|2009-09-28 19:51:53.790
+280|Country/Region|Asia|||Syria|0x000000000104220000003AACBEAC87D54140E5C8B5FB709B4040BA951EA7B7D24140E1ACB374F05740403CBA3FF047F74140A1CE237D285C40406098C9670C334240DF71F22590304040645A4BD84C6B42405E2E12152028404045024C0249804440CF98B22F6E354140088CBD6481B14440F9737F66D3D04140C7266D4BD9|1|2009-09-28 19:51:53.790|2009-09-28 19:51:53.790
+281|Country/Region|Asia|||Taiwan|0x0000000001040D0000006F9EC828CE135E40602E669E748A3640D1A6E16ADA345E4056426163F3EC3540F2EF297DFE3D5E40A16676AC7C91364074E70ABBEE5C5E402D779C308E53374025AFF7ECE4755E407FA6757C78793840E5A327EA7C745E4085A3B83B19D93840B6005C0117805E40C8E9498DE1013940F42AEBCB5E|1|2009-09-28 19:51:53.790|2009-09-28 19:51:53.790
+282|Country/Region|Asia|||Thailand|0x00000000010471000000656573DAAC6C594050B2BF36EC081740F6E317FA7E7C59405736C3176D791740E72F140DFD8559406EFD8E0950F21840A416C3C6D4625940958062EAB4621B40420EAA84C8415940958062EAB4621B40412D694CA8255940AC1AEED0F7D51C40E0D850371C1B5940A985AC6B57A31C401F5D6018A4|1|2009-09-28 19:51:53.790|2009-09-28 19:51:53.790
+283|Country/Region|Asia|||Turkmenistan|0x00000000010438000000C71C154999A34E40785DDF6003CE4140AD2A900C56054F4017AF463537B841404F3E7951CA274F40F584BDEAF2924140D2E95ABC3A5D4F4076F5DD0603A14140F66D641DBF8D4F40F7BF7E3953BA4140D67E9C21DB8F4F403B6090A15BEE414060014D412C205040BE0B720CCC23424082A4156A90|1|2009-09-28 19:51:53.790|2009-09-28 19:51:53.790
+284|Country/Region|Europe|||Denmark       |0x0000000001048D000000000000005CF6254000000000319C4C40000000C00C6426400000001825A84C40000000807BB8254000000008D1A14C40000000005CF6254000000000319C4C405BD1991566E520400EFA8581E25A4C40000000C012592140000000B808794C4000000080143A2240000000D018874C400000008049|1|2009-09-28 19:51:53.790|2009-09-28 19:51:53.790
+285|Country/Region|Europe|||France|0x0000000001047A00000000000000202C0040000000207A2D454000000000B2660940000000400638454000000000F0AF0740000000A00E6C45400000000072A70840000000E0E288454000000000C0BA0F40000000405BC5454000000000859C12400000002027AE454000000000C6D412400000006093C945400000000047|1|2009-09-28 19:51:53.790|2009-09-28 19:51:53.790
+286|Country/Region|Europe|||Germany |0x00000000010477000000000000801D9F2640000000302E344B40000000005D7D2640000000406E3F4B40000000006C04264000000040823A4B40000000801D9F2640000000302E344B400000000065882A40000000007E204B4000000000A7742B40000000104E234B4000000080B6282B4000000040823A4B400000008086|1|2009-09-28 19:51:53.790|2009-09-28 19:51:53.790
+287|Country/Region|Europe|||Greece |0x000000000104B500000000000040A1A4384000000050F44844400000008061C6384000000060B050444000000040A1A4384000000090C865444000000000E1823840000000703454444000000040A1A4384000000050F4484440000000C0725B39400000009067E44340000000008B703940000000C08700444000000000B2|1|2009-09-28 19:51:53.790|2009-09-28 19:51:53.790
+288|Country/Region|Europe|||the Netherlands|0x0000000001044300000000000040898B144000000028B8304A4000000000ECED15400000005854494A40AF1C08F8184B14406413F82448514A4012318D48C6351440615F994477504A4000000000696F144000000040C83E4A4000000040898B144000000028B8304A40000000800BB0154000000008F4214A4000000000ED|1|2009-09-28 19:51:53.790|2009-09-28 19:51:53.790
+289|Country/Region|Europe|||Ireland |0x00000000010446000000000000C0C7E223C0000000A861F14A4000000080C83C24C0000000C825004B4000000000B98824C0000000C0A1FC4A40000000C0C7E223C0000000A861F14A400000004017A223C0000000382FB9494000000000257522C00000004067BD494000000040719F20C00000008027DF4940000000C0B1|1|2009-09-28 19:51:53.790|2009-09-28 19:51:53.790
+290|Country/Region|Europe|||Italy    |0x00000000010476000000CB00F14B1C201E40BA0F808D4BE44540771D414DB02320403B80A0A95BF245400CED2B01A37D2140DFA10A3290364640B7756163B82E24409C01F9C98702464047754963AA2E2540F3C38CBAD27A45405AF3D2C26C5E264050FCA248DE414540588BD1686C3126402F861A2B1A334540E9117A8A3E|1|2009-09-28 19:51:53.790|2009-09-28 19:51:53.790
+291|Country/Region|Europe|||Malta||1|2009-09-28 19:51:53.790|2009-09-28 19:51:53.790
+292|Country/Region|Europe|||Poland |0x0000000001043E0000004F396D542BA72D40926244A2A66E49405AD972BC2C5B2E4074FA3CC8A2814940E119968C3DC32E40320E2C8D1A6449403FA7E2ACE85430401198A36F565549408193F3E770723040103E2359164A4940FEBAD17160373040AF8F8A2D4A344940441D654AA9A330404C5A31E09D0D4940CA0308047A|1|2009-09-28 19:51:53.790|2009-09-28 19:51:53.790
+293|Country/Region|Europe|||Portugal|0x0000000001043100000023EDEBF5A27D21C08BBE30B925FA4440A71F8E82F3C321C06AEE278521E044402085EA9BA25021C0C1B0BB756C5844402E60B152042C22C0386217629BCE434036C5F56BA5B822C0D659FE1F8FAD4340BA9D17E2B5F322C011C20B7A965A43402FE77174E43C22C051CDDB7CFE5B4340ABE10FF333|1|2009-09-28 19:51:53.790|2009-09-28 19:51:53.790
+294|Country/Region|Europe|||Romania |0x0000000001042B0000003F8D82A6A8513840B9B5FF760BD9454093431C14738839401983576AB7D245401C19814924233A403BDA20C09BFD45402B4EC816C6093B40FD8251EAB312464083A7242DF1943C405AE8A7835FDF4540C40C754699A13C40DE1A4A10B0254640496C57DE89ED3C40C06643632C4F4640860F2687F1|1|2009-09-28 19:51:53.790|2009-09-28 19:51:53.790
+295|Country/Region|Europe|||Russia|0x0000000001045D0800000000000090074D40000000C0006C5440000000000CB84D40000000C07074544000000000C0F14C40000000C0686D54400000000090074D40000000C0006C544000000000BC194F40000000C0EA6354400000000094E34E40000000C014675440000000001CD44E40000000C0BA66544000000000BC|1|2009-09-28 19:51:53.790|2009-09-28 19:51:53.790
+296|Country/Region|Europe|||Slovenia|0x000000000104130000002B781BE4066F2B400850975D55CC4640A772B962562E2B40E7D90E4091BD4640C1470698F9C82C4087DF764145BE4640C8CB09797A392D402999DF6F79D54640DAC2D2B65C582E40A7A1FE3189B64640DE0B15497DA12E402AF35F86B9E046406B1C3BCD8E632F402A4DE09CF9EB464069957AABAE|1|2009-09-28 19:51:53.790|2009-09-28 19:51:53.790
+297|Country/Region|Europe|||Spain|0x0000000001047A00000020D2E3C7387AFCBF965E362127AE4540C0CD495DB23909C0F658CE1F73AD4540F793E54E79B20CC078F62E4723C14540377FD014E40F12C0F7850E2B13B345408D63FBCD6E6C17C01983576AB7D24540D95B214C782B1CC097E5F64207BF45400FC83C27FF981FC03AF9DF877BE14540153F654AE1|1|2009-09-28 19:51:53.790|2009-09-28 19:51:53.790
+298|Country/Region|Europe|||Sweden |0x000000000104B800000000000000DEED2640000000E079084D40B6136E7D979E2740D9C968AA1C1C4D40FA2A2745484A2740EEDBD8BACB204D4000000000DEED2640000000E079084D4000000040B6203340000000A0A5EB4C40000000C026563340000000C01DFB4C400000004046183340000000C085FC4C4000000040B6|1|2009-09-28 19:51:53.790|2009-09-28 19:51:53.790
+299|Country/Region|Europe|||Switzerland |0x0000000001041E000000865F8EA3F3CB194052476C9B3E6B4740722D0417B1851840304A235C9A4B474069F5FF08B0FE17408D8239EAA51247407C738968722E1940AF7F82294A324740967516A9B5CE1A408FBDFA38063A4740AC2E6157D8251C402BA760B339F74640E05FBBE3FE6B1F40EB9B90B0D1F546408317C7CBF1|1|2009-09-28 19:51:53.790|2009-09-28 19:51:53.790
+300|Country/Region|Europe|||United Kingdom||1|2009-09-28 19:51:53.790|2009-09-28 19:51:53.790
+301|Country/Region|North America|||Canada|0x000000000104830D00005D91085A563950C0321E036BE0B7544000000080962E50C000000040B3B95440000000803E3B50C000000040F1B754405D91085A563950C0321E036BE0B754400000008049A950C0000000C0EA63544000000000239350C0000000C0526554400000008037BB50C0000000C0526554400000008049|1|2009-09-28 19:51:53.790|2009-09-28 19:51:53.790
+302|Country/Region|North America|||United States|0x0000000001045705000000000000904965C000000000239E4F4000000000D55E65C000000000BFB64F4095885F00515F65C0E8DF4C8F6BB64F4000000000904965C000000000239E4F4000000000853565C000000080DE784F4000000000452A65C000000000CF974F4000000000081C65C00000000097934F400000000068|1|2009-09-28 19:51:53.790|2009-09-28 19:51:53.790
+303|State/Province|Asia||Ahal Province|Turkmenistan||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+304|State/Province|Asia||Armenia|Armenia||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+305|State/Province|Asia||Beijing|China||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+306|State/Province|Asia||Chubu|Japan||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+307|State/Province|Asia||Chuy Province|Kyrgyzstan||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+308|State/Province|Asia||Damascus|Syria||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+309|State/Province|Asia||GuangDong|China||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+310|State/Province|Asia||Hokkaido|Japan||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+311|State/Province|Asia||Hong Kong|China||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+312|State/Province|Asia||Islamabad Capital Territory|Pakistan||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+313|State/Province|Asia||Kansai|Japan||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+314|State/Province|Asia||Kanto|Japan||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+315|State/Province|Asia||Krung Thep|Thailand||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+316|State/Province|Asia||Maharashtra|India||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+317|State/Province|Asia||Molonglo|Australia||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+318|State/Province|Asia||National Capital Territory of Delhi|India||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+319|State/Province|Asia||New South Wales|Australia||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+320|State/Province|Asia||Seoul-jikhalsi|South Korea||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+321|State/Province|Asia||Shanghai|China||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+322|State/Province|Asia||Singapore|Singapore||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+323|State/Province|Asia||Taiwan|Taiwan||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+324|State/Province|Asia||Tehran|Iran||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+325|State/Province|Asia||Thimphu District|Bhutan||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+326|State/Province|Asia||Tohoku|Japan||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+327|State/Province|Asia||West Bengal|India||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+328|State/Province|Asia||Xinjiang|China||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+329|State/Province|Asia||Yeongnam|South Korea||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+330|State/Province|Europe||Alpes-Maritimes|France||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+331|State/Province|Europe||Bas-Rhin|France||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+332|State/Province|Europe||Bavaria|Germany ||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+333|State/Province|Europe||Bayern|Germany ||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+334|State/Province|Europe||Berlin|Germany ||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+335|State/Province|Europe||Bern|Switzerland ||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+336|State/Province|Europe||Bucuresti|Romania ||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+337|State/Province|Europe||Central Greece and Evvoia|Greece ||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+338|State/Province|Europe||England |United Kingdom||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+339|State/Province|Europe||Hesse|Germany ||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+340|State/Province|Europe||Ile-del-France|France||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+341|State/Province|Europe||Leinster|Ireland ||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+342|State/Province|Europe||Lisboa Region|Portugal||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+343|State/Province|Europe||Ljubljana|Slovenia||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+344|State/Province|Europe||Lombardia|Italy    ||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+345|State/Province|Europe||Madrid|Spain||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+346|State/Province|Europe||Midi-Pyrenees|France||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+347|State/Province|Europe||Moskovskaya oblast|Russia||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+348|State/Province|Europe||Nizhny Novgorod Oblast|Russia||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+349|State/Province|Europe||Noord-Holland|the Netherlands||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+350|State/Province|Europe||Nordrhein-Westfalen|Germany ||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+351|State/Province|Europe||North Rhine-Westphalia|Germany ||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+352|State/Province|Europe||Northwestern|Russia||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+353|State/Province|Europe||Pays de la Loire|France||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+354|State/Province|Europe||Provence-Alpes-Cote d'Azur|France||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+355|State/Province|Europe||Province of Florence|Italy    ||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+356|State/Province|Europe||Province of Turin|Italy    ||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+357|State/Province|Europe||Rhineland-Palatinate|Germany ||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+358|State/Province|Europe||Rhone-Alpes |France||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+359|State/Province|Europe||Roma|Italy    ||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+360|State/Province|Europe||Scotland|United Kingdom||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+361|State/Province|Europe||Staden Kobenhavn|Denmark       ||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+362|State/Province|Europe||Stockholms|Sweden ||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+363|State/Province|Europe||Valletta|Malta||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+364|State/Province|Europe||Venice|Italy    ||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+365|State/Province|Europe||Warszawa|Poland ||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+366|State/Province|North America||Alaska|United States||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+367|State/Province|North America||Alberta|Canada||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+368|State/Province|North America||British Columbia|Canada||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+369|State/Province|North America||Colorado|United States|0x000000000104380000002671335FD88259C01220F8D41BD24240B15DEF81D08259C060D1FAC300DE424034120FABF28259C0483C4E407D204340B7419347EA8259C030113E3CB5214340DEDEFB9E0B8359C00851E2AEC84E43405A00E05B0B8359C05E08857DA55843401086AD5C228359C0E4B9B686BC844340F5FF545F10|1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+370|State/Province|North America||Connecticut|United States|0x0000000001042800000049EA65F2F16152C02CD8F551E9C2444046066BB3D56252C0569ACB18C2AE4440A1C0A272376352C0C689265A95A54440213DBD85995E52C084E12508FA9A4440ABCE8F496A6E52C0F26F6F69D88C444013AD4C9ED66952C0EE6F22729D814440409CF63ACD6952C018842F52CB7F4440ACC0F1C9AE|1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+371|State/Province|North America||Florida|United States|0x000000000104700100003B95684A483254C0489B487F02C93C400DF41E23364654C0819FC3850F5A3D40CD994347084754C094A2962A246E3D402E55CF06F64E54C0965D1D2E45AB3D4082EF58299A4F54C0DAB610DBE9BC3D4064106A60415454C0684D8E1849D43D40B9523B64605354C064A695CCBDE93D40E33F8075B2|1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+372|State/Province|North America||Maine|United States|0x0000000001049800000073A3EEE4BE7151C0C7E798B17D094640CDE5A884127151C096CE20181C0646407583D26A337351C051F76E5B700346409C241266C57151C0EFF5F05848E5454059EFD9E2057051C0625D5B877FE1454032EF9103616E51C0B78620C169E4454044A714E3E76F51C03F0BC31F5AF24540BCED5BE31E|1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+373|State/Province|North America||Maryland|United States|0x0000000001040C01000097CC4D4F7CED52C0D2B3103C28534340B6D8DAAF5FEE52C01F99AAB9466A43409C8FA5352AF052C08D1543ED21924340D1E2475BB9F052C016A6FC04BA9F4340DCCF5B9BEAF052C0A8CB16FFE1A543404EA2653C6EF152C0F23EC6050AB14340242DD949A1F252C01E042DA7A7DC4340C5F8B408E9|1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+374|State/Province|North America||Massachusetts|United States|0x00000000010475000000065DCFDF6FD451C041563A4CD7E24440962FFD6F10D151C0586D3397F7DF4440B1FD0D8CA7CE51C0A46D9FBA95DA4440489D4A46B9CC51C00CC09919D9D644403076289F09C951C0FA0267FFDFD34440D05051187FC751C057A9E8AA1CBF4440B2EE596B13C051C0A2326B6F93C244402FB923A118|1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+375|State/Province|North America||New Jersey|United States|0x0000000001047E0000007B012E5E50DF52C0004C987A80DB4340F3B4DDB77EE452C008C2D1F311CF4340EDAFDB6F11E152C0A0D6E94F85C8434042482E7960E352C04052B82CC9BE43404DC0D95F9ADA52C008F3C80FFFAF434090B66F65ADC752C0FF0674F7A3974340B257740CECC052C0797D80F8639943402CB9A776AA|1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+376|State/Province|North America||New York|United States|0x000000000104D400000075ACBFD8D8F053C0C2ED7CC837224540B58E8606BFF053C05CF5B3C16500454001057E0631E753C01229692E13004540154C15ACCEC353C0E8CEB1EC250045405652BD54C9BA53C03ABE3AF7FAFF44407FC6F290869353C04CB5AE01EDFF444026870DA2128D53C0BAA79407C5FF4440EC6D2937AE|1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+377|State/Province|North America||Ontario|Canada||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+378|State/Province|North America||Quebec|Canada||1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+379|State/Province|North America||South Carolina|United States|0x000000000104F80000006FF2192D9D7054C0EF3EA0410299404067025FAEDB7054C045EC3E2ABD954040F5CFC54A626F54C0E2ED6A718592404092A35EE9126D54C02BAC157ABC8F404064C180011A6754C00CF8EE7F3F8B40401AC05200226654C006CF90A80F8940406AD52E9ED76354C0626633CCC8874040D1BFABDD0C|1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+380|State/Province|North America||Texas|United States|0x0000000001044F0300000B7AC8C0ED7F5AC0C49C7446D9643F407793E4C74B715AC03EC269A6C02B3F403E1AF990A3665AC0F6003EB028163F403956F16F83635AC0882E6C5898FF3E401BD84B7B365A5AC078F51CC413E73E407AA8513703595AC02441E1736CDA3E40BD90A64C1D545AC00A31C29A0FD13E409D9EFE4C70|1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+381|State/Province|North America||Virginia|United States|0x000000000104960100009E67265538C953C04CE3F1D3E9454240251247AEF8B253C0C027191F974542404CF2B7E92CAF53C054A0295AEA4542402C25268B589D53C06B3010EA53454240BDB2B0C28A9453C05EF0B3B0D84542408294A9D4498353C0305FF94BBC4642408D137C24827953C0C62B02BBCB4642400FA10B73DF|1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+382|State/Province|North America||Washington|United States|0x00000000010414010000ACA56C9EBA995EC08EF1DCE3D31C48405C7FE0C592975EC0AE9EBDEF66104840CEF5B633E38D5EC0F818FAC5F30048407061BB4EBA8E5EC046BA2FE80BFC474080FB411463935EC0EE39E29FA0F94740CEE5AC5C3F995EC094721B3618E34740D50184558C9A5EC0D6E1C7DC03D54740A6382D4C76|1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+383|State/Province|North America||Wisconsin|United States|0x0000000001040C010000C2AE6554E8EF55C0B8CDC43E167B464093E1BC92B3E755C0019311C5F97E4640EA3545DA95E755C044EEC0764587464040F06AA133E555C076DCF52C1D8C46403EED2C7F8DEA55C03A315B7EF58D4640861D9E630FEB55C0EC3C5D8D019246406193C5E6B2EE55C0F2BFD3F89A9646404E6FC5E71D|1|2009-09-28 19:53:25.110|2009-09-28 19:53:25.110
+384|State/Province|Asia||Tasmania|Australia||1|2009-09-28 20:12:20.173|2009-09-28 20:12:20.173
+385|State/Province|Europe||Hessen|Germany||1|2009-09-28 20:12:20.173|2009-09-28 20:12:20.173
+386|State/Province|North America||Mississippi|United States||1|2009-09-28 20:12:20.173|2009-09-28 20:12:20.173
+387|State/Province|Europe||Essonne|France||1|2009-09-28 20:12:20.173|2009-09-28 20:12:20.173
+388|State/Province|Europe||Hamburg|Germany||1|2009-09-28 20:12:20.173|2009-09-28 20:12:20.173
+389|State/Province|Europe||Hauts de Seine|France||1|2009-09-28 20:12:20.173|2009-09-28 20:12:20.173
+390|State/Province|North America||Ohio|United States||1|2009-09-28 20:12:20.173|2009-09-28 20:12:20.173
+391|State/Province|Europe||Seine Saint Denis|France||1|2009-09-28 20:12:20.173|2009-09-28 20:12:20.173
+392|State/Province|North America||Alabama|United States|0x0000000001048F000000725274FB7B4455C056760E600FFB3F40E75831FAA04355C0A9207363390240402370F2F9F74355C0CA8F48BD6606404014F7723DA04355C0B88B361BEA084040828A79BBF44255C089978575A20B404038C9157C694355C0D23526A735104040030CAD7A8F4155C00221CB82481540406964C73980|1|2009-09-28 20:12:20.173|2009-09-28 20:12:20.173
+393|State/Province|Europe||Garonne (Haute)|France||1|2009-09-28 20:12:20.173|2009-09-28 20:12:20.173
+394|State/Province|North America||Arizona|United States||1|2009-09-28 20:12:20.173|2009-09-28 20:12:20.173
+395|State/Province|Europe||Pas de Calais|France||1|2009-09-28 20:12:20.173|2009-09-28 20:12:20.173
+396|State/Province|North America||North Carolina|United States||1|2009-09-28 20:12:20.173|2009-09-28 20:12:20.173
+397|State/Province|North America||Minnesota|United States||1|2009-09-28 20:12:20.173|2009-09-28 20:12:20.173
+398|State/Province|Europe||Yveline|France||1|2009-09-28 20:12:20.173|2009-09-28 20:12:20.173
+399|State/Province|Europe||Loiret|France||1|2009-09-28 20:12:20.173|2009-09-28 20:12:20.173
+400|State/Province|Europe||Nord|France||1|2009-09-28 20:12:20.173|2009-09-28 20:12:20.173
+401|State/Province|North America||Wyoming|United States||1|2009-09-28 20:12:20.173|2009-09-28 20:12:20.173
+402|State/Province|Europe||Seine (Paris)|France||1|2009-09-28 20:12:20.173|2009-09-28 20:12:20.173
+403|State/Province|Europe||Val de Marne|France||1|2009-09-28 20:12:20.173|2009-09-28 20:12:20.173
+404|State/Province|Europe||Brandenburg|Germany||1|2009-09-28 20:12:20.173|2009-09-28 20:12:20.173
+405|State/Province|Europe||Val d'Oise|France||1|2009-09-28 20:12:20.173|2009-09-28 20:12:20.173
+406|State/Province|North America||Kentucky|United States||1|2009-09-28 20:12:20.173|2009-09-28 20:12:20.173
+407|State/Province|Asia||Queensland|Australia||1|2009-09-28 20:12:20.173|2009-09-28 20:12:20.173
+408|State/Province|North America||Illinois|United States||1|2009-09-28 20:12:20.173|2009-09-28 20:12:20.173
+409|State/Province|North America||Utah|United States||1|2009-09-28 20:12:20.173|2009-09-28 20:12:20.173
+410|State/Province|Europe||Seine et Marne|France||1|2009-09-28 20:12:20.173|2009-09-28 20:12:20.173
+411|State/Province|North America||Oregon|United States||1|2009-09-28 20:12:20.173|2009-09-28 20:12:20.173
+412|State/Province|Asia||South Australia|Australia||1|2009-09-28 20:12:20.173|2009-09-28 20:12:20.173
+413|State/Province|Europe||Somme|France||1|2009-09-28 20:12:20.173|2009-09-28 20:12:20.173
+414|State/Province|Europe||Loir et Cher|France||1|2009-09-28 20:12:20.173|2009-09-28 20:12:20.173
+415|State/Province|North America||Montana|United States||1|2009-09-28 20:12:20.173|2009-09-28 20:12:20.173
+416|State/Province|Europe||Charente-Maritime|France||1|2009-09-28 20:12:20.173|2009-09-28 20:12:20.173
+417|State/Province|North America||California|United States||1|2009-09-28 20:12:20.173|2009-09-28 20:12:20.173
+418|State/Province|Europe||Moselle|France||1|2009-09-28 20:12:20.173|2009-09-28 20:12:20.173
+419|State/Province|Europe||Saarland|Germany||1|2009-09-28 20:12:20.173|2009-09-28 20:12:20.173
+420|State/Province|Asia||Victoria|Australia||1|2009-09-28 20:12:20.173|2009-09-28 20:12:20.173
+421|State/Province|North America||Missouri|United States||1|2009-09-28 20:12:20.173|2009-09-28 20:12:20.173
+422|State/Province|North America||Georgia|United States||1|2009-09-28 20:12:20.173|2009-09-28 20:12:20.173
+423|City|Europe|Basingstoke Hants|England|United Kingdom|0xE6100000010CF4893C49BA66F1BFA7E8482EFFA14940|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+424|City|North America|Bellevue|Washington|United States|0x00000000010C713D0AD7A3385EC02A3A92CB7FA84740|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+425|City|Asia|Bendigo|Victoria|Australia|0xE6100000010CB0726891ED086240637FD93D796042C0|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+426|City|Europe|Berks|England|United Kingdom|0xE6100000010C8FFCC1C073EFF0BF8CB96B09F9B84940|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+430|City|North America|Beverly Hills|California|United States|0x00000000010CD578E92631585DC033C4B12E6E1B4140|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+431|City|North America|Billings|Montana|United States|0x00000000010CFCA9F1D24D225BC097900F7A36E34640|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+432|City|North America|Biloxi|Mississippi|United States|0x00000000010C3B014D840D3B56C064CC5D4BC8673E40|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+433|City|North America|Birmingham|Alabama|United States|0x00000000010C7AA52C431CA755C099BB96900FF24040|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+434|City|North America|Bluffton|South Carolina|United States|0x00000000010CCD3B4ED191A854C0857CD0B359054240|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+435|City|Europe|Bobigny|Seine Saint Denis|France|0xE6100000010C69006F8104850340C05B2041F1734840|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+436|City|North America|Bothell|Washington|United States|0x00000000010C068195438B8C5EC0068195438BE44740|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+437|City|Europe|Bottrop|North Rhine-Westphalia|Germany|0xE6100000010C54742497FFB01B4034A2B437F8C24940|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+438|City|North America|Bountiful|Utah|United States|0x00000000010C54E3A59BC4F85BC0B7D100DE02714440|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+439|City|Europe|Bracknell|England|United Kingdom|0xE6100000010CFE8172DBBEC7E7BF21B0726891B54940|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+440|City|North America|Braintree|Massachusetts|United States|0x00000000010CEF38454772C151C0FAEDEBC0391B4540|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+441|City|North America|Branson|Missouri|United States|0x00000000010CC7BAB88D065057C03411363CBD524240|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+442|City|North America|Bremerton|Washington|United States|0x00000000010C46B6F3FDD4A85EC061C3D32B65C94740|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+443|City|North America|Burbank|California|United States|0x00000000010C7F6ABC7493885DC01283C0CAA11D4140|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+444|City|North America|Burbank|Ohio|United States|0x00000000010C7F6ABC7493885DC01283C0CAA11D4140|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+445|City|North America|Burlingame|California|United States|0x00000000010CBA490C022B975EC0F90FE9B7AFCB4240|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+446|City|North America|Burnaby|British Columbia|Canada|0xE6100000010C96438B6CE7BB5EC03D2CD49AE69D4840|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+447|City|Europe|Bury|England|United Kingdom|0xE6100000010CE50AEF72115F02C0075F984C15CC4A40|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+448|City|North America|Byron|Georgia|United States|0x00000000010CCA54C1A8A4A656C0FFB27BF2B0E04340|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+449|City|Europe|Cambridge|England|United Kingdom|0x00000000010C992A1895D41552C0B3EA73B515234540|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+450|City|North America|Campbellsville|Kentucky|United States|0x00000000010C68B3EA73B55555C0C0EC9E3C2CAC4240|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+451|City|North America|Carol Stream|Illinois|United States|0x00000000010CECC039234A0756C04DF38E5374F44440|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+452|City|North America|Carrollton|Texas|United States|0x00000000010C2FDD240681D157C019E25817B7994040|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+453|City|North America|Cedar Park|Texas|United States|0x00000000010C46B6F3FDD47458C0355EBA490C823E40|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+454|City|Europe|Cergy|Val d'Oise|France|0xE6100000010C47551344DD4700409F3C2CD49A864840|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+455|City|North America|Cerritos|California|United States|0x00000000010CCFF753E3A5835DC08048BF7D1DF04040|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+456|City|North America|Chalk River|Ontario|Canada|0xE6100000010CA913D044D85C53C00AD7A3703D024740|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+457|City|North America|Chantilly|Virginia|United States|0x00000000010C7F6ABC74935C53C099BB96900F724340|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+458|City|North America|Charlotte|North Carolina|United States|0x00000000010CDFE00B93A93A54C0F54A598638A64140|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+459|City|Europe|Chatou|Yveline|France|0xE6100000010CD061BEBC003B0140EE5A423EE8714840|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+460|City|North America|Chehalis|Washington|United States|0x00000000010C17D9CEF753BB5EC0DD24068195534740|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+461|City|North America|Cheyenne|Wyoming|United States|0x00000000010CA4703D0AD7335AC060E5D022DB914440|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+462|City|North America|Cincinnati|Ohio|United States|0x00000000010C6B9A779CA21F55C057EC2FBB27974340|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+463|City|North America|City Of Commerce|California|United States|0x00000000010CB6F3FDD478895DC09D11A5BDC1FF4040|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+464|City|North America|Clarkston|Georgia|United States|0x00000000010C83C0CAA1452A57C0029A081B9E764540|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+465|City|North America|Clay|New York|United States|0x00000000010C9A779CA2234554C0EBE2361AC03B4340|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+466|City|North America|Clearwater|Florida|United States|0x00000000010C1B9E5E29CBB454C0EF38454772093C40|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+467|City|North America|Cliffside|British Columbia|Canada|0x00000000010C705F07CE197154C08FC2F5285C9F4140|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+468|City|Asia|Coffs Harbour|New South Wales|Australia|0xE6100000010C000000000024634097900F7A364B3EC0|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+469|City|North America|Colma|California|United States|0x00000000010C2FDD2406819D5EC0E71DA7E848D64240|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+470|City|North America|Concord|California|United States|0x00000000010C0E2DB29DEF6B57C05839B4C876C64340|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+471|City|Asia|Cranbourne|Victoria|Australia|0xE6100000010C7F6ABC7493286240E71DA7E8480E43C0|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+472|City|North America|Daly City|California|United States|0x00000000010CBC749318049E5EC058CA32C4B1D64240|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+473|City|Asia|Darlinghurst|New South Wales|Australia|0xE6100000010CD7A3703D0AE762407F6ABC7493F040C0|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+474|City|Europe|Darmstadt|Hesse|Germany|0xE6100000010CAE47E17A144E214063EE5A423EF04840|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+475|City|North America|Downey|California|United States|0x00000000010CB81E85EB51885DC072F90FE9B7F74040|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+476|City|Europe|Drancy|Seine Saint Denis|France|0xE6100000010C9352D0ED258D0340917EFB3A70764840|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+478|City|Asia|East Brisbane|Queensland|Australia|0xE6100000010C7D3F355EBA21634096438B6CE77B3BC0|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+479|City|North America|Edmonds|Washington|United States|0x00000000010C8FC2F5285C975EC0E5F21FD26FE74740|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+480|City|Europe|Eilenburg|Saxony|Germany|0xE6100000010C5227A089B0412940DFE00B93A9BA4940|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+481|City|Europe|Esher-Molesey|England|United Kingdom|0xE6100000010C2AC76471FF91D5BF27C286A757B24940|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+482|City|Europe|Essen|North Rhine-Westphalia|Germany|0xE6100000010CFDA4DAA7E3111C405F29CB10C7BA4940|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+483|City|Europe|Frankfurt|Hesse|Germany|0xE6100000010CC5387F130A7121403A234A7B830F4940|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+485|City|Europe|Gateshead|England|United Kingdom|0xE6100000010C8C101E6D1CB1F9BF09F9A067B37A4B40|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+486|City|Europe|Gloucestershire|England|United Kingdom|0xE6100000010C72BF4351A0CF01C048E17A14AEDF4940|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+487|City|Asia|Gold Coast|Queensland|Australia|0xE6100000010CA4703D0AD72B6340C74B378941003CC0|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+488|City|North America|Grossmont|California|United States|0xE6100000010C9EEFA7C64B3F5DC0F853E3A59B644040|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+490|City|North America|Haney|British Columbia|Canada|0xE6100000010C5839B4C876A65EC008AC1C5A649B4840|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+491|City|Europe|Hanover|Lower Saxony|Germany|0xE6100000010C7E1D3867447923409FCDAACFD52E4A40|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+492|City|Asia|Hervey Bay|Queensland|Australia|0xE6100000010C48E17A14AE1B6340E71DA7E8484E39C0|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+493|City|Asia|Hobart|Tasmania|Australia|0x00000000010CA835CD3B4E3D56C04BEA0434114E4440|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+494|City|North America|Imperial Beach|California|United States|0x00000000010C39B4C876BE475DC03411363CBD4A4040|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+495|City|North America|Issaquah|Washington|United States|0x00000000010CC3F5285C8F825EC0F7065F984CC54740|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+496|City|Europe|Kiel|Schleswig-Holstein|Germany|0x00000000010CDBF97E6ABC0056C0D8F0F44A59F64540|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+497|City|Europe|Kirkby|England|United Kingdom|0xE6100000010C184339D1AEC2F2BF371AC05B20394B40|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+498|City|Europe|Lancaster|England|United Kingdom|0x00000000010C34A2B437F81E54C03B014D840DC74340|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+499|City|North America|Langley|British Columbia|Canada|0xE6100000010C14AE47E17AA45EC09A081B9E5E894840|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+500|City|North America|Lebanon|Oregon|United States|0x00000000010C5F07CE19515254C0598638D6C5ED4340|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+501|City|Europe|Leeds|England|United Kingdom|0x00000000010C4703780B245855C04B598638D6054540|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+502|City|North America|Lemon Grove|California|United States|0x00000000010C894160E5D0425DC04A0C022B875E4040|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+503|City|Europe|Les Ulis|Essonne|France|0xE6100000010C0AA2EE03905A014010E9B7AF03574840|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+504|City|Europe|Lieusaint|Seine et Marne|France|0xE6100000010C2A00C63368680440F085C954C1504840|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+505|City|North America|Lincoln Acres|California|United States|0xE6100000010CE9263108AC445DC0F775E09C11554040|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+506|City|Europe|London|England|United Kingdom|0x00000000010C97FF907EFBDE54C04BC8073D9BF54240|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+507|City|North America|Lynnwood|Washington|United States|0x00000000010CEE7C3F355E925EC0273108AC1CEA4740|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+508|City|North America|Marysville|Washington|United States|0x00000000010C5839B4C8767659C0764F1E166AB54540|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+509|City|Asia|Matraville|New South Wales|Australia|0xE6100000010CEC51B81E85E76240DE02098A1FFB40C0|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+510|City|Asia|Melton|Victoria|Australia|0xE6100000010C6DE7FBA9F112624073D712F241D742C0|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+511|City|North America|Metchosin|British Columbia|Canada|0xE6100000010C6F1283C0CAE15EC0B8AF03E78C304840|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+512|City|Asia|Milsons Point|New South Wales|Australia|0xE6100000010CC3F5285C8FE662404FAF946588EB40C0|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+513|City|Europe|Mühlheim am Main|Hesse|Germany|0xE6100000010C26DF6C7363AA2140006F8104C50F4940|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+515|City|Europe|Munster|North Rhine-Westphalia|Germany|0xE6100000010C5ABBED42737D1E404F1E166A4DFB4940|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+516|City|North America|National City|California|United States|0x00000000010C14AE47E17AF45CC0D3BCE3141D794040|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+517|City|Europe|Neunkirchen|North Rhine-Westphalia|Germany|0xE6100000010CB0726891EDBC1C403108AC1C5AAC4840|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+518|City|Asia|Newcastle|New South Wales|Australia|0x00000000010C23DBF97E6A8C5BC0EEEBC039238A4640|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+519|City|Asia|North Ryde|New South Wales|Australia|0xE6100000010CA4703D0AD7E36240F5B9DA8AFDE540C0|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+520|City|North America|Oakland|California|United States|0x00000000010CA8C64B3789895DC0C976BE9F1AFF4240|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+521|City|Europe|Offenbach am Main|Hesse|Germany|0xE6100000010C2E39EE940E662140EC51B81E85034940|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+522|City|North America|Olympia|Washington|United States|0x00000000010C0000000000B85EC0CEAACFD556844740|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+523|City|North America|Oregon City|Oregon|United States|0x00000000010C77BE9F1A2FA55EC088635DDC46AB4640|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+524|City|Europe|Orly|Val de Marne|France|0xE6100000010C481630815B370340107A36AB3E5F4840|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+525|City|Europe|Oxford|England|United Kingdom|0x00000000010C7DD0B359F55D54C02063EE5A42FE4240|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+527|City|North America|Palo Alto|California|United States|0x00000000010C46B6F3FDD4885EC02CD49AE61DB74240|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+528|City|Europe|Pantin|Seine Saint Denis|France|0xE6100000010CE63FA4DFBE4E0340431CEBE236724840|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+529|City|Europe|Paris|Seine (Paris)|France|0x00000000010CBC0512143F6656C0273108AC1C724240|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+530|City|Europe|Paris La Defense|Hauts de Seine|France|0xE6100000010C271422E0106A0440BDE3141DC95D4840|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+531|City|Asia|Perth|South Australia|Australia|0xE6100000010C0C022B8716F95C405227A089B0F13FC0|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+532|City|Europe|Peterborough|England|United Kingdom|0x00000000010C705F07CE19FD51C09D11A5BDC16F4540|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+533|City|Europe|Poing|Bavaria|Germany|0xE6100000010CFBCBEEC9C3A2274076E09C11A5154840|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+534|City|Asia|Port Macquarie|New South Wales|Australia|0xE6100000010C931804560E1D6340006F8104C56F3FC0|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+535|City|North America|Port Orchard|Washington|United States|0x00000000010C8B6CE7FBA9A95EC0280F0BB5A6C14740|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+536|City|North America|Portland|Oregon|United States|0x00000000010C7B14AE47E1D25CC04694F6065F904640|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+537|City|North America|Puyallup|Washington|United States|0x00000000010C894160E5D0925EC06666666666964740|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+538|City|North America|Redwood City|California|United States|0x00000000010CD7A3703D0A8F5EC08CB96B09F9C04240|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+539|City|Europe|Roncq|Nord|France|0xE6100000010CC442AD69DEF108402A3A92CB7F604940|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+540|City|Europe|Roubaix|Nord|France|0xE6100000010C7715527E526D094055302AA913584940|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+541|City|Europe|Runcorn|England|United Kingdom|0xE6100000010CA301BC0512D405C0A5BDC11726AB4A40|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+542|City|Europe|Saarlouis|Saar|Germany|0xE6100000010C1B81785DBF001B4071AC8BDB68A84840|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+543|City|Europe|Saint Germain en Laye|Yveline|France|0xE6100000010C2A52616C21C80040A5BDC11726734840|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+544|City|Europe|Saint Ouen|Somme|France|0xE6100000010C42CF66D5E7AA024040A4DFBE0E744840|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+545|City|Europe|Saint-Denis|Seine Saint Denis|France|0xE6100000010CCD1E680586EC0240AB3E575BB1774840|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+546|City|North America|San Carlos|California|United States|0x00000000010C14AE47E17A745EC06744696FF0AD4240|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+547|City|North America|Santa Monica|California|United States|0x00000000010C2DB29DEFA79E5DC0A52C431CEB024140|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+548|City|Europe|Sèvres|Hauts de Seine|France|0xE6100000010C08AC1C5A64BB0140C4B12E6EA3694840|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+549|City|Asia|Silverwater|New South Wales|Australia|0xE6100000010C4C37894160E162405F07CE1951EA40C0|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+550|City|North America|Sooke|British Columbia|Canada|0xE6100000010C4A0C022B87EE5EC02B1895D409304840|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+551|City|North America|Spokane|Washington|United States|0x00000000010C66666666664E5DC0E09C11A5BDD14740|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+552|City|North America|Spring Valley|California|United States|0x00000000010CF853E3A59B0C58C0F38E537424474340|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+553|City|Asia|Springwood|New South Wales|Australia|0xE6100000010C60E5D022DBD162407D3F355EBAD940C0|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+554|City|Asia|St. Leonards|New South Wales|Australia|0xE6100000010C273108AC1CE6624061C3D32B65E940C0|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+555|City|Europe|Stuttgart|Baden-Wuerttemberg|Germany|0x00000000010CE5F21FD26FE356C07B14AE47E13A4140|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+556|City|Europe|Sulzbach Taunus|Saar|Germany|0xE6100000010C569A94826E0F2140613255302A114940|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+557|City|Europe|Suresnes|Hauts de Seine|France|0xE6100000010CDB6D179AEBB4014064CC5D4BC86F4840|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+558|City|Asia|Sydney|New South Wales|Australia|0xE6100000010CF4FDD478E9E662406666666666EE40C0|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+559|City|North America|Tacoma|Washington|United States|0x00000000010C3108AC1C5A9C5EC03D0AD7A3709D4740|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+560|City|North America|Torrance|California|United States|0x00000000010CBE9F1A2FDD945DC0DE02098A1FEB4040|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+561|City|Asia|Townsville|Queensland|Australia|0xE6100000010C273108AC1C5A62406ABC7493184433C0|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+562|City|North America|Vancouver|British Columbia|Canada|0x00000000010CAC1C5A643BA75EC018265305A3D24640|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+563|City|Europe|Verrieres Le Buisson|Essonne|France|0xE6100000010CD40E7F4DD62802401DC9E53FA45F4840|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+564|City|Europe|Versailles|Yveline|France|0x00000000010C54742497FF4855C004560E2DB23D4340|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+565|City|Europe|W. York|England|United Kingdom|0xE6100000010C62F888981249F1BFEE7C3F355EFA4A40|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+566|City|North America|Walla Walla|Washington|United States|0x00000000010CF6285C8FC2955DC08048BF7D1D084740|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+567|City|Europe|Warrington|England|United Kingdom|0x00000000010CFE43FAEDEBC852C0E6AE25E4831E4440|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+568|City|Asia|Warrnambool|Victoria|Australia|0xE6100000010C736891ED7CCF61408FE4F21FD22F43C0|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+569|City|Europe|Werne|North Rhine-Westphalia|Germany|0xE6100000010CF19D98F562881E40A245B6F3FDD44940|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+570|City|North America|West Covina|California|United States|0x00000000010CD122DBF97E7A5DC029CB10C7BA084140|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+571|City|North America|Westminster|British Columbia|Canada|0x00000000010CC9E53FA4DFCA58C06A4DF38E53544340|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+572|City|Europe|Wokingham|England|United Kingdom|0xE6100000010CB8205B96AFCBEABFEA95B20C71B44940|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+573|City|North America|Woodburn|Oregon|United States|0x00000000010C022B8716D9B65EC0C217265305934640|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+574|City|Europe|Woolston|England|United Kingdom|0xE6100000010CA94D9CDCEF5004C0F90FE9B7AFB34A40|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+575|City|North America|Yakima|Washington|United States|0x00000000010C3BDF4F8D971E5EC04BEA043411364740|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+576|City|Europe|York|England|United Kingdom|0x00000000010C780B24287E6053C034A2B437F8E24340|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+577|City|North America|Ballard|Washington|United States|0xE6100000010C1B2FDD2406995EC0D95F764F1ED64740|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+578|City|North America|Barstow|California|United States|0x00000000010C6ABC749318445DC0BB270F0BB56E4140|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+579|City|North America|Baytown|Texas|United States|0x00000000010C2E90A0F831BE57C0A7E8482EFFC13D40|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+580|City|North America|Beaverton|Oregon|United States|0x00000000010C2FDD240681A55EC01283C0CAA1BD4640|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+581|City|North America|Bell Gardens|California|United States|0x00000000010C0AD7A3703D8A5DC05EBA490C02FB4040|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+582|City|North America|Bellflower|California|United States|0x00000000010CE3A59BC420885DC00C022B8716F14040|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+583|City|North America|Bellingham|Washington|United States|0x00000000010C8B6CE7FBA9F95DC03B014D840D374840|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+584|City|North America|Berkeley|California|United States|0x00000000010C1B2FDD2406195EC07A36AB3E570B4340|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+585|City|Europe|Berkshire|England|United Kingdom|0xE6100000010CE3A9471ADCD6EEBF7B14AE47E1BA4940|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+586|City|Europe|Berlin|Berlin|Germany|0x00000000010C8195438B6C2353C06C787AA52CCB4440|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+587|City|Europe|Billericay|England|United Kingdom|0xE6100000010CF5F23B4D66BCDA3FD3BCE3141DD14940|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+588|City|Europe|Birmingham|England|United Kingdom|0x00000000010C7AA52C431CA755C099BB96900FF24040|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+590|City|Europe|Bonn|North Rhine-Westphalia|Germany|0xE6100000010C397F130A11701C40F46C567DAE5E4940|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+591|City|Europe|Boulogne-Billancourt|Hauts de Seine|France|0xE6100000010C11DF89592F06024024287E8CB96B4840|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+592|City|Europe|Boulogne-sur-Mer|Pas de Calais|France|0xE6100000010C0D897B2C7DE8F93F226C787AA55C4940|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+593|City|North America|Bradenton|Florida|United States|0x00000000010C742497FF90A254C06666666666763B40|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+594|City|North America|Branch|Minnesota|United States|0xE6100000010C5AF5B9DA8A3D57C091ED7C3F35BE4640|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+595|City|Europe|Brunswick|Lower Saxony|Germany|0xE6100000010CEA95B20C710C25407C61325530224A40|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+596|City|Asia|Brisbane|Queensland|Australia|0x00000000010C9A99999999995EC00F0BB5A679D74240|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+597|City|North America|Burien|Washington|United States|0x00000000010C21B0726891955EC0ECC039234ABB4740|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+598|City|North America|Calgary|Alberta|Canada|0xE6100000010C96438B6CE7835CC0D734EF3845874940|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+599|City|Asia|Caloundra|Queensland|Australia|0xE6100000010CE3A59BC4202463405C8FC2F528CC3AC0|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+600|City|North America|Camarillo|California|United States|0x00000000010C355EBA490CC25DC088855AD3BC1B4140|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+601|City|North America|Canoga Park|California|United States|0x00000000010C83C0CAA145A65DC05F984C158C1A4140|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+602|City|North America|Carson|California|United States|0x00000000010C85EB51B81E6D5DC0280F0BB5A6F14040|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+603|City|North America|Casper|Wyoming|United States|0x00000000010C4C37894160955AC0ADFA5C6DC56E4540|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+604|City|North America|Cedar City|Utah|United States|0x00000000010CA01A2FDD24465CC04D158C4AEADC4240|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+605|City|North America|Central Valley|New York|United States|0x00000000010C401361C3D38752C0EFC9C342ADA94440|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+606|City|North America|Chandler|Arizona|United States|0x00000000010C8716D9CEF7C35BC01D38674469BF4040|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+607|City|North America|Cheektowaga|New York|United States|0x00000000010CE3A59BC420B053C0068195438B744540|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+608|City|Europe|Cheltenham|England|United Kingdom|0x00000000010CBB270F0BB5C652C00F9C33A2B4074440|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+609|City|North America|Chicago|Illinois|United States|0x00000000010CEE5A423EE8E955C07DAEB6627FF14440|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+610|City|North America|Chula Vista|California|United States|0x00000000010C52B81E85EB415DC0D49AE61DA7504040|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+611|City|North America|Citrus Heights|California|United States|0x00000000010C1904560E2D525EC0711B0DE02D584340|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+612|City|North America|Clackamas|Oregon|United States|0x00000000010C08AC1C5A64A35EC086C954C1A8B44640|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+613|City|Asia|Cloverdale|South Australia|Australia|0x00000000010C5AF5B9DA8AF953C0E3361AC05BB04240|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+614|City|North America|College Station|Texas|United States|0x00000000010C97FF907EFB1258C0986E1283C09A3E40|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+615|City|Europe|Colombes|Hauts de Seine|France|0xE6100000010C6C787AA52C03024010E9B7AF03774840|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+616|City|Europe|Colomiers|Garonne (Haute)|France|0xE6100000010C90BDDEFDF15EF53F6666666666CE4540|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+617|City|North America|Columbus|Georgia|United States|0x00000000010C6DE7FBA9F1FA54C0780B24287E844340|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+618|City|North America|Columbus|Ohio|United States|0x00000000010C6DE7FBA9F1FA54C0780B24287E844340|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+619|City|North America|Coronado|California|United States|0x00000000010C5EBA490C024B5DC02A3A92CB7F584040|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+620|City|North America|Corvallis|Oregon|United States|0x00000000010C6ABC749318BC5EC002BC0512144F4640|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+621|City|Europe|Courbevoie|Hauts de Seine|France|0xE6100000010CA9D903ADC01002404F1E166A4D734840|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+622|City|Europe|Croix|Nord|France|0xE6100000010CDEE522BE13330940F46C567DAE564940|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+623|City|Europe|Dresden|Saxony|Germany|0x00000000010CE3A59BC4202C56C04F1E166A4D234240|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+624|City|Europe|Dunkerque|Nord|France|0xE6100000010CAF08FEB7921D034014AE47E17A844940|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+625|City|North America|El Cajon|California|United States|0x00000000010C04560E2DB23D5DC0C976BE9F1A674040|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+626|City|Europe|Erlangen|Bavaria|Germany|0xE6100000010C6C787AA52C0326404D840D4FAFCC4840|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+627|City|North America|Everett|Washington|United States|0x00000000010C5C8FC2F528745DC0CFF753E3A5BB4740|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+628|City|Asia|Findon|South Australia|Australia|0xE6100000010C3108AC1C5A50614098DD9387857241C0|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+629|City|Europe|Frankfurt|Bavaria|Germany|0xE6100000010C20D26F5F070E25402CD49AE61DD74840|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+631|City|North America|Fremont|California|United States|0x00000000010C273108AC1C625DC0E4141DC9E5074340|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+632|City|Asia|Geelong|Victoria|Australia|0xE6100000010C6DE7FBA9F10A62404CA60A46251543C0|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+633|City|North America|Glendale|California|United States|0x00000000010CF0A7C64B37295CC0E8D9ACFA5C754140|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+634|City|Asia|Goulburn|New South Wales|Australia|0xE6100000010C1F85EB51B8B662400EBE30992A6041C0|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+635|City|Europe|Grevenbroich|North Rhine-Westphalia|Germany|0xE6100000010C2905DD5ED2581A403255302AA98B4940|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+637|City|Asia|Hawthorne|Queensland|Australia|0x00000000010CCDCCCCCCCC9856C03480B74082424340|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+638|City|Europe|High Wycombe|England|United Kingdom|0xE6100000010CB900344A97FEE7BF55302AA913D04940|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+639|City|Europe|Hof|Bavaria|Germany|0xE6100000010CFFB27BF2B0D027402A3A92CB7F284940|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+640|City|Europe|Ingolstadt|Bavaria|Germany|0xE6100000010CBE30992A18D5264060764F1E16624840|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+641|City|Europe|Kassel|Hesse|Germany|0xE6100000010C70253B3602012340B9FC87F4DBA74940|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+642|City|North America|Kirkland|Washington|United States|0x00000000010C3F355EBA497C5EC0A779C7293AD24740|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+643|City|North America|La Jolla|California|United States|0x00000000010C1D5A643BDF4F5DC03BDF4F8D976E4040|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+644|City|North America|Lake Oswego|Oregon|United States|0x00000000010C7593180456AE5EC085EB51B81EB54640|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+645|City|North America|Lakewood|California|United States|0x00000000010CA52C431CEB7A58C08D28ED0DBE084440|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+646|City|Asia|Lane Cove|New South Wales|Australia|0xE6100000010C2FDD240681E5624055C1A8A44EE840C0|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+647|City|North America|Langford|British Columbia|Canada|0xE6100000010CAAF1D24D62E05EC0FD87F4DBD7394840|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+648|City|Asia|Lavender Bay|New South Wales|Australia|0xE6100000010C2DB29DEFA7E66240CE1951DA1BEC40C0|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+649|City|Europe|Leipzig|Saxony|Germany|0xE6100000010CB1506B9A77BC284033C4B12E6EAB4940|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+650|City|Europe|Lille|Nord|France|0xE6100000010C7AAA436E865B0840FD87F4DBD7514940|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+651|City|Europe|Liverpool|England|United Kingdom|0x00000000010C8CDB68006F0D53C0E5F21FD26F874540|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+652|City|North America|Long Beach|California|United States|0x00000000010C60E5D022DBF15CC01A51DA1B7C014140|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+653|City|North America|Los Angeles|California|United States|0x00000000010CCDCCCCCCCC945DC03D0AD7A370054140|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+654|City|Europe|Maidenhead|England|United Kingdom|0xE6100000010CAF09698D4127E7BF7AA52C431CC34940|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+655|City|Asia|Malabar|New South Wales|Australia|0x00000000010C5D6DC5FEB22354C05D6DC5FEB2FB3B40|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+656|City|Asia|Melbourne|Victoria|Australia|0x00000000010CBD5296218E2954C03EE8D9ACFA1C3C40|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+657|City|Europe|Metz|Moselle|France|0xE6100000010C82E7DEC325A71840F46C567DAE8E4840|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+658|City|North America|Mill Valley|California|United States|0x00000000010CB6F3FDD478A15EC01973D712F2F14240|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+659|City|Europe|Milton Keynes|England|United Kingdom|0xE6100000010CE6CE4C309C6BE6BFBF0E9C33A2044A40|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+660|City|North America|Milwaukie|Oregon|United States|0x00000000010C560E2DB29DA75EC0B98D06F016B84640|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+661|City|Europe|Morangis|Essonne|France|0xE6100000010C8369183E22A60240431CEBE2365A4840|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+662|City|Europe|Hamburg |Hamburg|Germany|0xE6100000010CB0389CF9D5FC23409E5E29CB10C74A40|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+664|City|Europe|Mönchengladbach|North Rhine-Westphalia|Germany|0xE6100000010CD3D9C9E028B9194039D6C56D34984940|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+665|City|North America|N. Vancouver|British Columbia|Canada|0xE6100000010CCDCCCCCCCCC45EC038F8C264AAA84840|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+666|City|Europe|Newcastle upon Tyne|England|United Kingdom|0xE6100000010C950ED6FF39CCF9BF6891ED7C3F7D4B40|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+667|City|North America|Newport Beach|California|United States|0x00000000010CE3A59BC420785DC05F07CE1951D24040|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+668|City|North America|Newton|British Columbia|Canada|0x00000000010C1904560E2D2A53C054742497FF904440|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+669|City|Asia|North Sydney|New South Wales|Australia|0xE6100000010CC3F5285C8FE662405DDC460378EB40C0|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+670|City|North America|Novato|California|United States|0x00000000010C7B14AE47E1A25EC0FB3A70CE880A4340|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+671|City|North America|Oak Bay|British Columbia|Canada|0xE6100000010C8716D9CEF7D35EC0F241CF66D5374840|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+672|City|Europe|Orleans|Loiret|France|0x00000000010C8A8EE4F21F6A52C0DE718A8EE48A4440|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+673|City|Europe|Oxon|England|United Kingdom|0xE6100000010CA4AA09A2EE03F4BF645DDC4603E04940|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+674|City|Europe|Paderborn|North Rhine-Westphalia|Germany|0xE6100000010C8C84B69C4B81214040A4DFBE0EDC4940|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+675|City|North America|Port Hammond|British Columbia|Canada|0xE6100000010C3BDF4F8D97B65EC0E561A1D6349F4840|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+676|City|Europe|Reading|England|United Kingdom|0x00000000010CF54A598638F652C0EBE2361AC03B4440|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+677|City|North America|Redmond|Washington|United States|0x00000000010CD9CEF753E3855EC0CAC342AD69C64740|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+678|City|North America|Renton|Washington|United States|0x00000000010CBC749318048E5EC0083D9B559FBB4740|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+679|City|Asia|Rhodes|New South Wales|Australia|0xE6100000010C894160E5D0E26240ED0DBE3099EA40C0|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+680|City|Asia|Rockhampton|Queensland|Australia|0xE6100000010C54E3A59BC4D06240713D0AD7A36037C0|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+681|City|Europe|Roissy en Brie|Seine et Marne|France|0xE6100000010C888043A8523305403D0AD7A370654840|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+682|City|North America|Royal Oak|British Columbia|Canada|0x00000000010CC442AD69DEC954C0E4839ECDAA3F4540|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+683|City|Europe|Saarbrücken|Saar|Germany|0xE6100000010CB936548CF3F71B405917B7D1009E4840|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+684|City|Europe|Saint Ouen|Charente-Maritime|France|0xE6100000010CE7525C55F69D0240091B9E5E29734840|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+685|City|Europe|Saint Ouen|Loir et Cher|France|0xE6100000010CE2CCAFE60041F13FC898BB9690E74740|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+686|City|North America|Salem|Oregon|United States|0x00000000010CA913D044D88058C05EBA490C02634540|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+687|City|Europe|Salzgitter|Lower Saxony|Germany|0xE6100000010C5EBA490C02AB2440ECC039234A134A40|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+688|City|North America|San Diego|California|United States|0x00000000010CFCA9F1D24D4A5DC0ED9E3C2CD46A4040|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+689|City|North America|San Francisco|California|United States|0x00000000010C52B81E85EB995EC0CEAACFD556E44240|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+690|City|North America|San Gabriel|California|United States|0x00000000010CCBA145B6F3855DC0A3923A014D0C4140|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+691|City|North America|Santa Cruz|California|United States|0x00000000010CE17A14AE47815EC0CCEEC9C3427D4240|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+692|City|Asia|Seaford|Victoria|Australia|0x00000000010CC217265305E752C0C58F31772D514340|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+693|City|North America|Seattle|Washington|United States|0x00000000010C5A643BDF4F955EC0840D4FAF94CD4740|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+694|City|North America|Sedro Woolley|Washington|United States|0x00000000010CE3A59BC420885EC0D3DEE00B93414840|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+695|City|North America|Shawnee|British Columbia|Canada|0x00000000010C62105839B4D057C0764F1E166A954240|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+696|City|Europe|Solingen|North Rhine-Westphalia|Germany|0xE6100000010CB4B0A71DFE5A1C40598638D6C5954940|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+697|City|Asia|South Melbourne|Victoria|Australia|0xE6100000010CAC1C5A643B1F6240C442AD69DEE942C0|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+698|City|Europe|Stoke-on-Trent|England|United Kingdom|0xE6100000010CFB743C66A07201C0A54E401361834A40|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+699|City|Asia|Sunbury|Victoria|Australia|0x00000000010CAAF1D24D628053C0C9E53FA4DF5E4440|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+700|City|Europe|Tremblay-en-France|Seine Saint Denis|France|0xE6100000010CF8C264AA6094044060E5D022DB794840|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+701|City|North America|Victoria|British Columbia|Canada|0x00000000010CED0DBE30993258C002BC051214CF3D40|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+702|City|Europe|Villeneuve-d'Ascq|Nord|France|0xE6100000010C7F87A2409F0809404850FC18734F4940|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+703|City|North America|W. Linn|Oregon|United States|0xE6100000010C643BDF4F8DA75EC011C7BAB88DAE4640|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+704|City|Europe|Watford|England|United Kingdom|0xE6100000010CA4FCA4DAA7E3D9BF158C4AEA04D44940|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+705|City|Europe|West Sussex|England|United Kingdom|0xE6100000010C38F581E49D43DDBFF54A598638764940|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+706|City|Asia|Wollongong|New South Wales|Australia|0xE6100000010CF853E3A59BDC6240F46C567DAE3641C0|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+707|City|North America|Woodland Hills|California|United States|0x00000000010C83C0CAA145A65DC0CA54C1A8A4164140|1|2009-09-28 20:13:34.990|2009-09-28 20:13:34.990
+708|City|Asia|Ashgabat|Ahal Province|Turkmenistan|0xE6100000010CF31FD26F5F2F4D4044696FF085F94240|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+709|City|Asia|Bangkok|Krung Thep|Thailand|0xE6100000010CEE7C3F355E225940265305A3927A2B40|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+710|City|Asia|Beijing|Beijing|China|0xE6100000010C62105839B4185D405C2041F163F44340|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+711|City|Asia|Bishkek|Chuy Province|Kyrgyzstan|0xE6100000010C8F53742497A35240AEB6627FD96D4540|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+712|City|Asia|Busan |Yeongnam|South Korea|0xE6100000010C986E1283C022604022FDF675E0944140|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+713|City|Asia|Canberra|Molonglo|Australia|0xE6100000010CE3A59BC420A46240075F984C15A441C0|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+714|City|Asia|Damascus|Damascus|Syria|0x00000000010C07F0164850F458C077BE9F1A2F2D4540|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+715|City|Asia|Guangzhou|GuangDong|China|0xE6100000010C5EBA490C02535C4076711B0DE02D3740|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+716|City|Asia|Hong Kong|Hong Kong|China|0xE6100000010C5A643BDF4F8D5C40F931E6AE25443640|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+717|City|Asia|Islamabad|Islamabad Capital Territory|Pakistan|0xE6100000010C772D211FF444524029ED0DBE30D94040|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+718|City|Asia|Kolkata |West Bengal|India|0xE6100000010CBB270F0BB5365240E09C11A5BD113340|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+719|City|Asia|Kyoto |Kansai|Japan|0xE6100000010C14AE47E17AF86040D0B359F5B9824140|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+720|City|Asia|Miyagi|Tohoku|Japan|0xE6100000010C08AC1C5A649B614070CE88D2DE204340|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+721|City|Asia|Mumbai |Maharashtra|India|0xE6100000010C2D211FF46C3A524010E9B7AF03073340|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+722|City|Asia|Nagoya |Chubu|Japan|0xE6100000010C295C8FC2F51C6140C9E53FA4DF964140|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+723|City|Asia|New Delhi|National Capital Territory of Delhi|India|0xE6100000010C1361C3D32B395240C9E53FA4DF0E3340|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+724|City|Asia|Osaka |Kansai|Japan|0xE6100000010C1B2FDD2406F16040AB3E575BB1574140|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+725|City|Asia|Sapporo |Hokkaido|Japan|0xE6100000010CE5D022DBF9AA6140F163CC5D4B884540|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+726|City|Asia|Seoul|Seoul-jikhalsi|South Korea|0xE6100000010CC976BE9F1ABF5F40917EFB3A70C64240|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+727|City|Asia|Shanghai|Shanghai|China|0xE6100000010C48E17A14AE5F5E403D2CD49AE63D3F40|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+728|City|Asia|Singapore|Singapore|Singapore|0xE6100000010C5C8FC2F528F459401ADD41EC4CA1F53F|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+729|City|Asia|Taipei|Taiwan|Taiwan|0xE6100000010CB6F3FDD478615E4062A1D634EF083940|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+730|City|Asia|Tehran|Tehran|Iran|0xE6100000010CBD5296218EB5494029ED0DBE30D94140|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+731|City|Asia|Thimphu|Thimphu District|Bhutan|0xE6100000010C69006F81046956409B559FABAD783B40|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+732|City|Asia|Tokyo|Kanto|Japan|0xE6100000010C0000000000786140D5E76A2BF6D74140|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+733|City|Asia|Urumqi|Xinjiang|China|0xE6100000010CBA6B09F9A0E755406F8104C58FE94540|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+734|City|Asia|Yerevan|Armenia|Armenia|0xE6100000010C1DC9E53FA43F4640075F984C15144440|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+735|City|Asia|Yokohama |Kanto|Japan|0xE6100000010C14AE47E17A74614054E3A59BC4B84140|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+736|City|Europe|Amsterdam|Noord-Holland|the Netherlands|0x00000000010C2B8716D9CE8B52C01C7C613255784540|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+737|City|Europe|Athens|Central Greece and Evvoia|Greece |0x00000000010C4703780B241C55C0FDF675E09C914140|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+738|City|Europe|Baildon|England |United Kingdom|0xE6100000010C6EA301BC0592FCBFDC68006F81EC4A40|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+739|City|Europe|Baumholder|Rhineland-Palatinate|Germany |0xE6100000010C7BDAE1AFC95A1D40CAC342AD69CE4840|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+740|City|Europe|Berne|Bern|Switzerland |0x00000000010C1B9E5E29CB3C55C0789CA223B9544440|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+741|City|Europe|Bucharest|Bucuresti|Romania |0xE6100000010C499D8026C2163A4048BF7D1D38374640|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+742|City|Europe|Carlisle|England |United Kingdom|0x00000000010C32772D211F7053C038F8C264AA204440|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+743|City|Europe|Cheshire|England |United Kingdom|0x00000000010CA779C7293A3A52C02B1895D409C84440|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+745|City|Europe|Copenhagen|Staden Kobenhavn|Denmark       |0xE6100000010CFCA9F1D24D22294073D712F241D74B40|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+746|City|Europe|Dublin|Leinster|Ireland |0x00000000010C295C8FC2F50C57C0C6DCB5847C804340|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+747|City|Europe|Dusseldorf|North Rhine-Westphalia|Germany |0xE6100000010C745E6397A81E1B40A1D634EF389D4940|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+748|City|Europe|Edinburgh|Scotland|United Kingdom|0x00000000010C36CD3B4ED17D55C0068195438BAC4340|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+749|City|Europe|Firenze|Province of Florence|Italy    |0xE6100000010CE25817B7D1802640F931E6AE25E44540|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+750|City|Europe|Giebelstadt|Bavaria|Germany |0xE6100000010C884677103BE32340C139234A7BD34840|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+751|City|Europe|Glasgow|Scotland|United Kingdom|0x00000000010C0DE02D90A0B056C0FBCBEEC9C3BA4340|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+752|City|Europe|Hofheim am Taunus|Hesse|Germany |0xE6100000010CBB61DBA2CCE620402575029A080B4940|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+753|City|Europe|Knotty Ash|England |United Kingdom|0xE6100000010C062FFA0AD20C07C0764F1E166AB54A40|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+754|City|Europe|Koln|North Rhine-Westphalia|Germany |0xE6100000010C13B875374FD51B40C6DCB5847C784940|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+755|City|Europe|Lancashire|England |United Kingdom|0xE6100000010C0A68226C787A06C05839B4C876064B40|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+756|City|Europe|Landstuhl|Rhineland-Palatinate|Germany |0xE6100000010CB77F65A549491E40772D211FF4B44840|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+757|City|Europe|Lisbon|Lisboa Region|Portugal|0x00000000010CED9E3C2CD42A54C06D567DAEB6524540|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+758|City|Europe|Ljubljana|Ljubljana|Slovenia|0xE6100000010CF931E6AE25042D4011363CBD52064740|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+759|City|Europe|Lyon|Rhone-Alpes |France|0xE6100000010C9E077767ED5613406E3480B740E24640|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+760|City|Europe|Madrid|Madrid|Spain|0x00000000010CC5FEB27BF27457C04694F6065FF04440|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+761|City|Europe|Manchester|England |United Kingdom|0x00000000010CC364AA60545652C0499D8026C2164540|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+762|City|Europe|Marseille|Provence-Alpes-Cote d'Azur|France|0xE6100000010C0E2DB29DEF871540CBA145B6F3A54540|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+763|City|Europe|Milan|Lombardia|Italy    |0x00000000010CB30C71AC8B2B56C02497FF907ED34340|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+764|City|Europe|Moscow|Moskovskaya oblast|Russia|0x00000000010C62105839B4285BC0FCA9F1D24DD24540|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+765|City|Europe|Munich|Bavaria|Germany |0x00000000010C3D0AD7A370B558C0A089B0E1E9554840|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+766|City|Europe|Nantes|Pays de la Loire|France|0xE6100000010C6002B7EEE629F9BF07CE1951DA9B4740|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+767|City|Europe|Nice|Alpes-Maritimes|France|0x00000000010C6891ED7C3FB55EC0AC1C5A643B8F4340|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+768|City|Europe|Nizhny Novgorod |Nizhny Novgorod Oblast|Russia|0xE6100000010C1B0DE02D90004640A779C7293A2A4C40|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+769|City|Europe|Bamberg|Bavaria|Germany |0xE6100000010C9F3C2CD49AC62540DF4F8D976EF24840|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+770|City|Europe|Ramstein|Rhineland-Palatinate|Germany |0xE6100000010CEDD808C4EB3A1E40E10B93A982B94840|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+771|City|Europe|Roma|Roma|Italy    |0xE6100000010CB22E6EA301FC28401973D712F2F14440|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+772|City|Europe|Saint Petersburg|Northwestern|Russia|0x00000000010C83C0CAA145AA54C05917B7D100CE3B40|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+773|City|Europe|Stockholm|Stockholms|Sweden |0xE6100000010C8A1F63EE5A123240FD87F4DBD7A94D40|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+774|City|Europe|Stockport|England |United Kingdom|0xE6100000010C001DE6CB0B3001C087A757CA32B44A40|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+775|City|Europe|Strasbourg|Bas-Rhin|France|0xE6100000010C33E197FA79F31E408A8EE4F21F4A4840|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+776|City|Europe|Torino|Province of Turin|Italy    |0xE6100000010CC63368E89FC01E405305A3923A894640|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+777|City|Europe|Toulouse|Midi-Pyrenees|France|0xE6100000010C020EA14ACD1EF73F13F241CF66CD4540|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+778|City|Europe|Valletta|Valletta|Malta|0xE6100000010C17D9CEF753032D40F90FE9B7AFF34140|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+779|City|Europe|Venezia|Venice|Italy    |0xE6100000010CCCEEC9C342AD2840C898BB9690B74640|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+780|City|Europe|Warsaw|Warszawa|Poland |0x00000000010C6FF085C9541555C0280F0BB5A6494440|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+781|City|Europe|West Yorkshire|England |United Kingdom|0xE6100000010CBE6A65C22FF5F8BF0F9C33A2B4E74A40|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+782|City|North America|Albany|New York|United States|0x00000000010C60764F1E160254C064CC5D4BC87F4440|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+783|City|North America|Alexandria|Virginia|United States|0x00000000010C29ED0DBE30C953C024B9FC87F4434340|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+784|City|North America|Anchorage|Alaska|United States|0x00000000010C6ABC749318B462C0F46C567DAE8E4E40|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+785|City|North America|Annapolis|Maryland|United States|0x00000000010C82E2C798BB2253C0E6AE25E4837E4340|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+786|City|North America|Appleton|Wisconsin|United States|0x00000000010CCE88D2DEE01F56C0C139234A7B234640|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+787|City|North America|Arlington|Texas|United States|0x00000000010C5F984C158C3255C0BEC1172653A54240|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+788|City|North America|Atlantic City |New Jersey|United States|0x00000000010C64CC5D4BC89B52C091ED7C3F35AE4340|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+789|City|North America|Attleboro|Massachusetts|United States|0x00000000010CD0D556EC2FD351C02BF697DD93F74440|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+790|City|North America|Aurora|Colorado|United States|0x00000000010CAF25E4839E3958C00AD7A3703D524440|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+791|City|North America|Austin|Texas|United States|0x00000000010C0C022B87166D58C03CBD5296216E3E40|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+792|City|North America|Back River|Maryland|United States|0xE6100000010CDD240681951F53C01FF46C567DA64340|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+793|City|North America|Bacliff|Texas|United States|0xE6100000010C0F0BB5A679BF57C050FC1873D7823D40|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+794|City|North America|Baltimore|Maryland|United States|0x00000000010C9EEFA7C64B2753C04850FC1873A74340|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+795|City|North America|Bangor|Maine|United States|0x00000000010C4703780B247451C0FAEDEBC0394B4640|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+796|City|North America|Bar Harbor|Maine|United States|0x00000000010CE10B93A9820D51C0D200DE0209324640|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+797|City|North America|Bayonne |New Jersey|United States|0x00000000010CC976BE9F1A8752C03F575BB1BF544440|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+798|City|North America|Beaumont|Texas|United States|0x00000000010C992A1895D4D957C0D1915CFE434A3E40|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+799|City|North America|Berthoud|Colorado|United States|0x00000000010CBE9F1A2FDD445AC0ACADD85F76274440|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+800|City|North America|Bethesda|Maryland|United States|0x00000000010CA69BC420B04653C02CD49AE61D7F4340|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+801|City|North America|Bridgeport|Connecticut|United States|0xE6100000010C86C954C1A84C52C00612143FC6944440|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+802|City|North America|Boston|Massachusetts|United States|0x00000000010CA323B9FC87C451C0068195438B2C4540|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+803|City|North America|Boulder|Colorado|United States|0x00000000010C560E2DB29D4F5AC0EC51B81E85034440|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+804|City|North America|Brooklyn|New York|United States|0x00000000010C41F163CC5D9352C0F2D24D6210584440|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+805|City|North America|Buffalo|New York|United States|0x00000000010C1B0DE02D90D853C0EE7C3F355E724540|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+806|City|North America|Burlington|Wisconsin|United States|0x00000000010CF2B0506B9A3753C01895D40968DA4440|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+807|City|North America|Cape Canaveral|Florida|United States|0x00000000010C9FCDAACFD52654C02FDD240681653C40|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+808|City|North America|Cape May|New Jersey|United States|0x00000000010C4FAF946588BB52C0A8C64B3789794340|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+809|City|North America|Castle Rock|Colorado|United States|0x00000000010CCDCCCCCCCC1C5AC0FB3A70CE88CA4340|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+810|City|North America|Charleston |South Carolina|United States|0x00000000010C0E2DB29DEF3B54C05F29CB10C79A4140|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+811|City|North America|Charlottesville |Virginia|United States|0x00000000010C6519E258179F53C0E78C28ED0D064340|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+812|City|North America|Cheney|Washington|United States|0x00000000010CFA7E6ABC74635DC0211FF46C56C54740|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+813|City|North America|Cle Elum|Washington|United States|0x00000000010CC1CAA145B63B5EC07FFB3A70CE984740|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+814|City|North America|Clifton|New Jersey|United States|0x00000000010CBF0E9C33A29C52C05BD3BCE3145D4440|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+815|City|North America|Dallas|Texas|United States|0x00000000010CA835CD3B4E3158C0211FF46C56754040|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+816|City|North America|Darien|Connecticut|United States|0x00000000010C1DC9E53FA4FB53C0BC0512143F764440|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+817|City|North America|Denton|Texas|United States|0x00000000010C2AA913D044FC57C09487855AD3D44040|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+818|City|North America|Denver|Colorado|United States|0x00000000010C3F355EBA49245AC0DC4603780BDC4340|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+819|City|North America|Desoto|Texas|United States|0x00000000010C1973D712F23558C03C4ED1915C4E4040|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+820|City|North America|East Orange |New Jersey|United States|0x00000000010CA1F831E6AE8D52C052499D8026624440|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+821|City|North America|East Troy|Wisconsin|United States|0x00000000010CD1915CFE431A56C0B003E78C28654540|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+822|City|North America|Edgerton|Wisconsin|United States|0x00000000010CC139234A7B6756C0EC2FBB270F634540|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+823|City|North America|Elmira|New York|United States|0x00000000010C88855AD3BC3353C0302AA913D00C4540|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+824|City|North America|Englewood|Colorado|United States|0x00000000010C54E3A59BC47059C0F2D24D6210C84340|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+825|City|North America|Fall City|Washington|United States|0x00000000010CD122DBF97E7A5EC0DFE00B93A9CA4740|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+826|City|North America|Falmouth|Massachusetts|United States|0x00000000010C4DF38E5374C051C00E4FAF9465684540|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+827|City|North America|Fond du Lac|Wisconsin|United States|0x00000000010C143FC6DCB51C56C0B537F8C264E24540|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+828|City|North America|Fort Atkinson|Wisconsin|United States|0x00000000010CEE7C3F355E3656C01283C0CAA1754540|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+829|City|North America|Fort Collins|Colorado|United States|0xE6100000010CD9CEF753E3455AC08CDB68006F494440|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+830|City|North America|Fort Lauderdale|Florida|United States|0x00000000010CD0B359F5B90A54C02D211FF46C263A40|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+831|City|North America|Fort Worth|Texas|United States|0x00000000010CD49AE61DA75458C0FED478E926614040|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+832|City|North America|Framingham|Massachusetts|United States|0x00000000010C9E5E29CB10DB51C0E71DA7E848264540|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+833|City|North America|Fredericksburg|Virginia|United States|0x00000000010C3480B74082CE53C05AF5B9DA8ADD4240|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+834|City|North America|Georgetown|Texas|United States|0x00000000010C744694F6064356C02A3A92CB7F284140|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+835|City|North America|Germantown|Maryland|United States|0x00000000010CAE47E17A14DE54C0363CBD5296E14340|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+836|City|North America|Grand Junction|Colorado|United States|0x00000000010CE5D022DBF9EE5AC034A2B437F89A4340|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+837|City|North America|Grand Prairie|Texas|United States|0x00000000010C66666666664258C05396218E75614040|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+838|City|North America|Granger|Washington|United States|0x00000000010C98DD938785D656C045D8F0F44A294540|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+839|City|North America|Greeley|Colorado|United States|0x00000000010C2DB29DEFA72E5AC085EB51B81E354440|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+840|City|North America|Green Bay|Wisconsin|United States|0x00000000010C12A5BDC1170256C0E25817B7D1404640|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+841|City|North America|Greenville|South Carolina|United States|0x00000000010C6C787AA52CA754C03D9B559FABC54140|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+842|City|North America|Hackensack |New Jersey|United States|0x00000000010C4A0C022B878252C018265305A3724440|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+843|City|North America|Hartford|Connecticut|United States|0x00000000010C8D28ED0DBE7052C01E166A4DF3DE4440|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+844|City|North America|Haverhill|Massachusetts|United States|0x00000000010C75029A081BC651C0D0B359F5B9624540|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+845|City|North America|Hillsboro|Texas|United States|0x00000000010C96438B6CE73B5DC0F5B9DA8AFD254640|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+846|City|North America|Hingham|Massachusetts|United States|0x00000000010C4A7B832F4CBA51C0A913D044D8184540|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+847|City|North America|Hoboken |New Jersey|United States|0x00000000010C7DD0B359F58152C011C7BAB88D5E4440|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+848|City|North America|Holyoke|Massachusetts|United States|0x00000000010CE9482EFF211553C0105839B4C8FE4440|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+849|City|North America|Houston|Texas|United States|0x00000000010C894160E5D0DA57C034A2B437F8D23D40|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+850|City|North America|Howard|Maryland|United States|0x00000000010C4CA60A46250157C02BF697DD934F4440|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+851|City|North America|Humble|Texas|United States|0x00000000010C8E75711B0DD057C01F85EB51B8FE3D40|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+852|City|North America|Ithaca|New York|United States|0x00000000010C12143FC6DC3553C08FC2F5285C3F4540|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+853|City|North America|Jacksonville|Florida|United States|0x00000000010C82E2C798BB8A54C0C6DCB5847CB03E40|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+854|City|North America|Jersey City|New Jersey|United States|0x00000000010CA54E4013618352C096438B6CE75B4440|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+855|City|North America|Kennebunkport|Maine|United States|0xE6100000010C43AD69DE719E51C07593180456AE4540|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+856|City|North America|Kennewick|Washington|United States|0x00000000010C4260E5D022CB5DC0C3F5285C8F1A4740|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+857|City|North America|Key West|Florida|United States|0x00000000010CBC749318047254C072F90FE9B78F3840|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+858|City|North America|La Porte|Texas|United States|0x00000000010CE3A59BC420C856C0F697DD9387A54140|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+859|City|North America|Lafayette|Colorado|United States|0x00000000010C8FC2F5285CAF57C022FDF675E0044140|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+860|City|North America|Lakeland|Florida|United States|0x00000000010C287E8CB96B7D54C0F0164850FC083C40|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+861|City|North America|Leominster|Massachusetts|United States|0x00000000010CDDB5847CD0EF51C06DE7FBA9F1424540|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+862|City|North America|Lewiston|Maine|United States|0x00000000010CD50968226CA055C04694F6065F684640|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+863|City|North America|Lewisville|Texas|United States|0x00000000010C4703780B244C58C05F07CE1951B24040|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+864|City|North America|Litchfield County|Connecticut|United States|0xE6100000010CA2B437F8C24C52C039B4C876BEDF4440|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+865|City|North America|Littleton|Colorado|United States|0x00000000010C4DF38E53749058C0764F1E166A254440|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+866|City|North America|Longview|Texas|United States|0x00000000010C6ABC7493185459C0F5DBD78173D64140|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+867|City|North America|Loveland|Colorado|United States|0x00000000010CDE02098A1F8F58C0A54E401361034440|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+868|City|North America|Lowell|Massachusetts|United States|0x00000000010C234A7B832F9452C017B7D100DE0A4540|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+869|City|North America|Lynn|Massachusetts|United States|0x00000000010C52B81E85EB2152C091ED7C3F35EE4440|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+870|City|North America|Madison|Wisconsin|United States|0x00000000010CF5DBD781733256C070CE88D2DEE04440|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+871|City|North America|Manitowoc|Wisconsin|United States|0x00000000010C1CEBE2361AEC55C0C2172653050B4640|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+872|City|North America|Marshall|Texas|United States|0x00000000010C26E4839ECDAE56C0F931E6AE251C4440|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+873|City|North America|Martinsville |Virginia|United States|0x00000000010CDC4603780B5C54C0C898BB9690AF4240|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+874|City|North America|Menasha|Wisconsin|United States|0x00000000010CDFE00B93A91A56C0A5BDC117261B4640|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+875|City|North America|Miami|Florida|United States|0x00000000010C492EFF21FD1E54C0AC8BDB6800EF3940|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+876|City|North America|Midland|Texas|United States|0x00000000010C2CD49AE61D0758C0C0EC9E3C2CCC4140|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+877|City|North America|Milliken|Colorado|United States|0x00000000010C4C37894160355AC08BFD65F7E4294440|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+878|City|North America|Milwaukee|Wisconsin|United States|0x00000000010CBE9F1A2FDD0056C046B6F3FDD4884540|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+879|City|North America|Minden|Texas|United States|0x00000000010CF0A7C64B37895AC096438B6CE7034240|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+880|City|North America|Montclair |New Jersey|United States|0x00000000010C82E2C798BBCE56C0F4FDD478E9164340|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+881|City|North America|Montreal|Quebec|Canada|0xE6100000010C787AA52C436852C0068195438BC44640|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+882|City|North America|Morristown |New Jersey|United States|0x00000000010CF163CC5D4B3453C0728A8EE4F2D74340|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+883|City|North America|Nantucket|Massachusetts|United States|0x00000000010CFCA9F1D24D8651C08716D9CEF7A34440|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+884|City|North America|Naples|Florida|United States|0x00000000010C4B598638D67154C0DFE00B93A9323A40|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+885|City|North America|New Bedford|Massachusetts|United States|0x00000000010C5D6DC5FEB2BB51C04DF38E5374D44440|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+886|City|North America|New Brunswick |New Jersey|United States|0x00000000010C54742497FF9C52C0E6AE25E4833E4440|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+887|City|North America|New Castle|Colorado|United States|0x00000000010C7B832F4CA65E53C06ABC749318044440|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+888|City|North America|New Haven |Connecticut|United States|0x00000000010CE3361AC05B7452C0FB5C6DC5FEA24440|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+889|City|North America|New London|Connecticut|United States|0x00000000010C96438B6CE75F53C0D49AE61DA7104540|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+890|City|North America|New York|New York|United States|0x00000000010CC74B3789418052C0E02D90A0F8614440|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+891|City|North America|Newark|New Jersey|United States|0x00000000010C0F9C33A2B43754C0C7293A92CB074440|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+892|City|North America|Norfolk|Virginia|United States|0x00000000010C6F1283C0CA8953C004E78C28EDAD4240|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+893|City|North America|North Bend|Washington|United States|0x00000000010CE7FBA9F1D2F55EC0295C8FC2F5004640|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+894|City|North America|North Harford|Maryland|United States|0xE6100000010C4F1E166A4D1753C06D567DAEB6CA4340|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+895|City|North America|Northampton|Massachusetts|United States|0x00000000010C13F241CF664D52C0AAF1D24D62004540|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+896|City|North America|Old Saybrook|Connecticut|United States|0x00000000010CA323B9FC871852C067D5E76A2BA64440|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+897|City|North America|Orange|Texas|United States|0x00000000010CE9263108ACE45BC0448B6CE7FB394140|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+898|City|North America|Oregon|Wisconsin|United States|0x00000000010C2F6EA301BC1156C03EE8D9ACFAFC4440|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+899|City|North America|Orlando|Florida|United States|0x00000000010C401361C3D35754C0B515FBCBEE893C40|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+900|City|North America|Orono|Maine|United States|0x00000000010CFB5C6DC5FE2E51C0C364AA6054724640|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+901|City|North America|Oshkosh|Wisconsin|United States|0x00000000010C7AC7293A922356C0A7E8482EFF014640|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+902|City|North America|Oswego|New York|United States|0x00000000010CCC7F48BF7DDD54C093A9825149354540|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+903|City|North America|Ottawa|Ontario|Canada|0x00000000010C68B3EA73B5BD56C0F775E09C112D4440|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+904|City|North America|Parker|Colorado|United States|0x00000000010CC976BE9F1AB75AC096B20C71AC234340|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+905|City|North America|Parkville|Maryland|United States|0x00000000010C05A3923A012956C05227A089B0A14340|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+906|City|North America|Pasadena|Texas|United States|0x00000000010C3F355EBA49F45BC0DDB5847CD0A34040|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+907|City|North America|Passaic |New Jersey|United States|0x00000000010C3F355EBA498852C0A167B3EA736D4440|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+908|City|North America|Paterson|New Jersey|United States|0x00000000010CD95F764F1E8A52C03EE8D9ACFA744440|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+909|City|North America|Pittsfield|Massachusetts|United States|0x00000000010C6A4DF38E53A052C0DA1B7C6132354540|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+910|City|North America|Plano|Texas|United States|0x00000000010C4C378941602D58C06DE7FBA9F18A4040|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+911|City|North America|Plattsburgh|New York|United States|0x00000000010C5F984C158C5E52C037894160E5584640|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+912|City|North America|Poestenkill|New York|United States|0x00000000010C3FC6DCB5846452C071AC8BDB68584540|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+913|City|North America|Port Washington|Wisconsin|United States|0x00000000010CAC1C5A643B5B53C0B9FC87F4DBBF4440|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+914|City|North America|Provincetown|Massachusetts|United States|0x00000000010C1B0DE02D908C51C0302AA913D0044540|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+915|City|North America|Queen Anne's County|Maryland|United States|0xE6100000010CD1915CFE430A53C08351499D807E4340|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+916|City|North America|Queens|New York|United States|0xE6100000010C744694F6067352C0645DDC4603604440|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+917|City|North America|Quincy|Massachusetts|United States|0x00000000010C33333333339F54C0986E1283C07A4440|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+918|City|North America|Racine|Wisconsin|United States|0x00000000010CCD3B4ED191F455C0764F1E166A5D4540|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+919|City|North America|Richardson|Texas|United States|0x00000000010CCB10C7BAB82D58C0CE1951DA1B7C4040|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+920|City|North America|Ridgely|Maryland|United States|0x00000000010C58A835CD3BFA52C09D11A5BDC1774340|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+921|City|North America|Roanoke|Virginia|United States|0x00000000010C36CD3B4ED13D54C07D3F355EBA914240|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+922|City|North America|Rochester|New York|United States|0x00000000010C62A1D634EFEC53C0705F07CE19994540|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+923|City|North America|Round Rock|Texas|United States|0x00000000010C5D6DC5FEB26B58C0840D4FAF94853E40|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+924|City|North America|Russellville|Texas|United States|0x00000000010C613255302AE556C0637FD93D79B84140|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+925|City|North America|San Antonio|Texas|United States|0x00000000010C598638D6C59D58C0ACADD85F767F3D40|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+926|City|North America|Sebring|Florida|United States|0x00000000010CB7D100DE025554C0FD87F4DBD7A13F40|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+927|City|North America|Sedalia|Colorado|United States|0x00000000010C448B6CE7FBED57C031992A18956C4340|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+928|City|North America|Sheboygan|Wisconsin|United States|0x00000000010C90A0F831E6EE55C0E63FA4DFBEDE4540|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+929|City|North America|Shreveport|Texas|United States|0x00000000010C302AA913D07057C05B423EE8D93C4040|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+930|City|North America|Snoqualmie|Washington|United States|0x00000000010CA01A2FDD24765EC0CFF753E3A5C34740|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+931|City|North America|Somerville|Massachusetts|United States|0x00000000010CBE9F1A2FDD8052C09487855AD3844440|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+932|City|North America|South Portland|Maine|United States|0x00000000010CF241CF66D59351C0295C8FC2F5D04540|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+933|City|North America|Spring|Texas|United States|0x00000000010CAED85F764FDE57C0696FF085C9143E40|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+934|City|North America|Stoughton|Wisconsin|United States|0x00000000010C08AC1C5A64D352C0F0164850FC284540|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+935|City|North America|Sunnyside|Washington|United States|0x00000000010C736891ED7C1F5BC06666666666764640|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+936|City|North America|Syracuse|New York|United States|0x00000000010C8716D9CEF74F53C0728A8EE4F2774540|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+937|City|North America|Tallahassee|Florida|United States|0x00000000010C44696FF0851155C0D881734694763E40|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+938|City|North America|Tampa|Florida|United States|0x00000000010C24287E8CB99F54C097FF907EFBFA3B40|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+939|City|North America|Texas City|Texas|United States|0x00000000010C6891ED7C3FBD57C0F775E09C11653D40|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+940|City|North America|Thornton|Colorado|United States|0x00000000010CD34D621058F959C07DD0B359F5F14340|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+941|City|North America|Toppenish|Washington|United States|0x00000000010C4C37894160155EC01CEBE2361A304740|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+942|City|North America|Toronto|Ontario|Canada|0xE6100000010C0C93A98251D953C0F7065F984CD54540|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+943|City|North America|Trenton|New Jersey|United States|0x00000000010CA7E8482EFF4953C032E6AE25E4034440|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+944|City|North America|Veradale|Washington|United States|0x00000000010C23DBF97E6A4C5DC035EF384547D24740|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+945|City|North America|Vineland|New Jersey|United States|0x00000000010CFD87F4DBD7C152C0917EFB3A70BE4340|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+946|City|North America|Virginia Beach|Virginia|United States|0x00000000010C5F984C158C0653C05EBA490C026B4240|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+947|City|North America|Wapato|Washington|United States|0x00000000010C33333333331B5EC09A779CA223394740|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+948|City|North America|Waterbury|Connecticut|United States|0x00000000010C8C4AEA04344152C0FAEDEBC039E34440|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+949|City|North America|Waukesha|Wisconsin|United States|0x00000000010C90A0F831E60E56C0E0BE0E9C33824540|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+950|City|North America|Wheat Ridge|Colorado|United States|0x00000000010CE5D022DBF9465AC0401361C3D3E34340|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+951|City|North America|Winchester|Virginia|United States|0x00000000010CF241CF66D5C353C0AC8BDB68009F4340|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
+952|City|North America|Worcester|Massachusetts|United States|0x00000000010CA01A2FDD24FA51C05F984C158C1A4540|1|2009-09-28 20:19:34.760|2009-09-28 20:19:34.760
