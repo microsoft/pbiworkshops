@@ -1,6 +1,6 @@
 # Data Modeling
 
-# Storage modes
+# Storage mode
 
 In Microsoft Power BI Desktop, you can specify the storage mode for each table individually in your model. Setting the storage mode provides many advantages, including the following: query performance, large datasets, data refresh requirements and near-real time requirements.
 
