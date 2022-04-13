@@ -58,6 +58,8 @@ A single piece of data is called a value. Broadly speaking, there are two genera
 | Record | Record.Type | [a = 10, b = {1,2,3}, c = "pizza"] |
 | Table | Table.Type | #table({"Animal","Count"},{{"Cat",99},{"Dog",1},{"Bear",3}}) |
 
+[Learn more about Power Query data types](https://docs.microsoft.com/power-query/data-types)
+
 ## Custom functions
 
 In the Power Query M formula language, a function is a mapping from a **set of** input values to a **single output** value. A function is written by first **naming the function parameters**, and then **providing an expression to compute** the result of the function.
