@@ -262,7 +262,7 @@ let
             [
                 Documentation.FieldCaption = "First topping choice",
                 Documentation.FieldDescription = "Choose the first topping of your pizza",
-                Documentation.SampleValues = {
+                Documentation.AllowedValues = {
                     "Pepperoni",
                     "Sausage",
                     "Pineapple"
@@ -277,7 +277,7 @@ let
             [
                 Documentation.FieldCaption = "Second topping choice",
                 Documentation.FieldDescription = "Choose the second topping of your pizza",
-                Documentation.SampleValues = {
+                Documentation.AllowedValues = {
                     "Olive",
                     "Mushroom",
                     "Jalapeño"
