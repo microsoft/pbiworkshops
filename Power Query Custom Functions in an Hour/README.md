@@ -242,6 +242,66 @@ in
 ```
 ### Parameter documentation
 
+The following table lists the Documentation fields that can be set in the metadata for your function parameters. All fields are optional.
 
+| Field | Type | Details |
+| :--- | :--- | :--- |
+| Documentation.FieldCaption | text | Friendly display name to use for the parameter. |
+| Documentation.FieldDescription | text | Description to show next to the display name. |
+| Documentation.SampleValues | list | **List** of sample values to be displayed (as faded text) inside of the text box. |
+| Documentation.AllowedValues | list | List of valid values for this parameter. Providing this field will change the input from a textbox to a drop down list.<br><br> **Note**, this doesn't prevent a user from manually editing the query to supply alternative values. |
+| Formatting.IsMultiLine | boolean | Allows you to create a multi-line input, for example for pasting in native queries. |
+| Formatting.IsCode | boolean | Formats the input field for code, commonly with multi-line inputs. Uses a code-like font rather than the standard font. |
+
+```powerquery-m
+let
+    PizzaType = type function (#"First topping" as
+        (
+            type text
+            meta
+            [
+                Documentation.FieldCaption = "First topping choice",
+                Documentation.FieldDescription = "Choose the first topping of your pizza",
+                Documentation.SampleValues = {
+                    "Pepperoni",
+                    "Sausage",
+                    "Pineapple"
+                },
+                Formatting.IsMultiLine = false,
+                Formatting.IsCode = true
+            ]
+        ), #"Second topping" as
+        (
+            type text
+            meta
+            [
+                Documentation.FieldCaption = "Second topping choice",
+                Documentation.FieldDescription = "Choose the second topping of your pizza",
+                Documentation.SampleValues = {
+                    "Olive",
+                    "Mushroom",
+                    "Jalapeño"
+                },
+                Formatting.IsMultiLine = false,
+                Formatting.IsCode = false
+            ]
+        )) as text,
+    PizzaFunction =
+        (#"First topping" as text, #"Second topping" as text) as text =>
+            Text.Combine(
+                {
+                    "The best pizza in the world is",
+                    #"First topping",
+                    "and",
+                    #"Second topping"
+                },
+                " "
+            )
+in
+    Value.ReplaceType(
+        PizzaFunction,
+        PizzaType
+    )
+```
 
 [Learn more about function documentation](https://docs.microsoft.com/power-query/handlingdocumentation)
