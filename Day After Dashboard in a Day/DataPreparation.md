@@ -370,7 +370,7 @@ Not that our data is being ingested and stored in our dataflow's [Azure Data Lak
 
     ![Transformation group](./Media/NewGroupTransformation.png)
 
-## Transforming multiple columns
+## TO BE UPDATED: Transforming multiple columns
 
 1. Before we begin we'll change the current **Script** view to **Step script** in the bottom right hand corner of the screen.
 
@@ -520,11 +520,11 @@ Query folding is the ability for a Power Query query to generate a single query 
 
     | Table |
     | :---- |
-    | DimCustomer |
     | DimDate |
     | DimEmployee |
-    | DimGeography |
-    | DimSalesTerritory |
+    | DimStore |
+    | DimCustomer_raw |
+    | DimGeography_raw |
     | DimProduct_raw |
     | DimProductCategory_raw |
     | DimProductSubcategory_raw |
