@@ -21,10 +21,9 @@ https://go.microsoft.com/fwlink/p/?LinkID=698279
 
 [Microsoft 365 developer subscription in Visual Studio subscriptions](https://docs.microsoft.com/visualstudio/subscriptions/vs-m365)
 
-#### Sample data
-The AdventureWorks sample database is published by Microsoft to show how to design a SQL Server databases and Analysis Services models.
+### Sample data
 
-To learn more, see [AdventureWorks sample databases](https://docs.microsoft.com/sql/samples/adventureworks-install-configure?view=sql-server-ver15&tabs=ssms).
+The data for this lab is from the [Contoso Retail Industry](https://www.microsoft.com/en-ca/download/details.aspx?id=18279) sample database, published by Microsoft to showcase how to design SQL Server databases and Analysis Services business intelligence models.
 
 # Document Structure
 

@@ -1,5 +1,13 @@
 # Data Preparation
 
+## Lab scenario
+
+For this portion of the lab, we have an existing dataflow which will be used as our starting point to skip over the more basic concepts like **Get data** > from > **CSV** and start getting into more advanced transformation patterns. To begin, we have new information that is being shared with us daily and stored in an accessible (**Web page**) folder, the total number of files that will be added to this location will continue to grow over time, which we will need to account for with a [future proofed](https://docs.microsoft.com/power-query/best-practices#future-proofing-queries) solution.
+
+Fortunately for us, the files maintain a consistent column naming, data type and file naming structure (**FactOnlineSales_#.csv**) to make collecting and combining new data easier. To promote reusability of our solution for other business groups, we'll also leverage Power Query Online to help us create new Dataflow tables.
+
+## About dataflows
+
 Using dataflows and self-service data prep supports the following scenarios by:
 
 1. Promoting a single source of the truth, with greater control over which data is accessed and exposed to creators.
@@ -9,10 +17,6 @@ Using dataflows and self-service data prep supports the following scenarios by:
 1. Enabling the ability to create reusable transformation logic and curated views of your cloud or on-premise data sources, which can then be seamlessly shared and integrated with other Microsoft services and products (Power BI, Power Apps, and Dynamics 365 Customer Insights).
 
 [Learn more about dataflows and self-service data prep](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-introduction-self-service)
-
-### Sample data
-
-The data for this lab is from the [AdventureWorks](https://docs.microsoft.com/sql/samples/adventureworks-install-configure) sample database, published by Microsoft to showcase how to design SQL Server databases and Analysis Services models.
 
 ---
 
@@ -126,7 +130,7 @@ With our dataflow successfully imported and credentials set, we can now configur
 
 # Advanced Editor
 
-For this labs section, we need to combine files which are being added to a (**Web page**) file location. The total number of files that will be added to this location is unknown but will continue to grow over time, which we'll need to account for with a [future proofed](https://docs.microsoft.com/power-query/best-practices#future-proofing-queries) solution. Fortunately for us, the files maintain a consistent column naming, data type and naming structure (**FactInternetSales_#.csv**) to make collecting and combining new data easier.
+SOMETHING ABOUT ADVANCED EDITOR
 
 ---
 
@@ -146,9 +150,9 @@ For this labs section, we need to combine files which are being added to a (**We
       fxFileName = (#"File number" as number) as text =>
                     Text.Combine(
                         {
-                            "FactInternetSales_",
+                            "FactOnlineSales_",
                             Text.From(#"File number"),
-                            ".csv"
+                            ".parquet"
                         }
                     )
     in
@@ -173,9 +177,9 @@ For this labs section, we need to combine files which are being added to a (**We
       fxFileName = (#"File number" as number) as text =>
                     Text.Combine(
                         {
-                            "FactInternetSales_",
+                            "FactOnlineSales_",
                             Text.From(#"File number"),
-                            ".csv"
+                            ".parquet"
                         }
                     ),
       Source = [
@@ -203,9 +207,9 @@ For this labs section, we need to combine files which are being added to a (**We
       fxFileName = (#"File number" as number) as text =>
                     Text.Combine(
                         {
-                            "FactInternetSales_",
+                            "FactOnlineSales_",
                             Text.From(#"File number"),
-                            ".csv"
+                            ".parquet"
                         }
                     ),
       Source = [
@@ -229,9 +233,9 @@ For this labs section, we need to combine files which are being added to a (**We
       fxFileName = (#"File number" as number) as text =>
                     Text.Combine(
                         {
-                            "FactInternetSales_",
+                            "FactOnlineSales_",
                             Text.From(#"File number"),
-                            ".csv"
+                            ".parquet"
                         }
                 ),
         Source = [
@@ -241,15 +245,21 @@ For this labs section, we need to combine files which are being added to a (**We
         ],
         fileList =
             List.Generate(
-                () => Source,
-                each not Table.IsEmpty([data]),
-                each
-                    [
-                        fileCount = [fileCount] + 1,
-                        fileName = fxFileName(fileCount),
-                        data = fxGetFile(fileName)
-                    ]
-            )
+            () => tableReturn,
+            each try not Table.IsEmpty([data]) otherwise false,
+            each
+                [
+                    fileCount = [fileCount] + 1,
+                    fileName = fileNameUpdate(fileCount),
+                    data =
+                        try fxGetFile(fileName)
+                        otherwise
+                            #table(
+                                {},
+                                {}
+                            )
+                ]
+        )
     in
         fileList
     ```
@@ -266,7 +276,7 @@ For this labs section, we need to combine files which are being added to a (**We
 
     ![Remove other columns](./Media/RemoveOtherColumns.png)
 
-1. In the top right of the **data** column - select the expand columns icon, disable the **Use original column name as prefix** option and select **OK** when complete.(#tab/step)
+1. In the top right of the **data** column - select the expand columns icon, disable the **Use original column name as prefix** option and select **OK** when complete.
 
     ![Expand data column](./Media/ExpandDataColumn.png)
 
@@ -275,7 +285,7 @@ For this labs section, we need to combine files which are being added to a (**We
 
     ![Detect data type](./Media/DetectDataType.png)
 
-1. Within the **Query settings** pane, change the **Name** of the completed query to **FactInternetSales_raw**.
+1. Within the **Query settings** pane, change the **Name** of the completed query to **FactOnlineSales_raw**.
 
     ![Query name](./Media/QueryName.png)
 
@@ -283,7 +293,7 @@ For this labs section, we need to combine files which are being added to a (**We
 
 To view a complete list of Power Query function documentation, from the **Home** tab select **Get data** and **Blank query**, update the **Source** step's value to **#shared** and select **Next** to proceed. A record value will be returned including the [Power Query M function reference](https://docs.microsoft.com/powerquery-m/power-query-m-function-reference) documentation.
 
-```fsharp
+```powerquery-m
 let
     Source = #shared
 in
@@ -296,10 +306,12 @@ As we add more tables to our solutions it can often be challenging to remember w
 
 1. In the **Queries** pane, while holding **ctrl**, select the following tables from the list below, once complete right click and select the **Move to group** > **New group...** option.
 
+    1. DimCustomer_raw
+    1. DimGeography_raw
     1. DimProduct_raw
     1. DimProductCategory_raw
     1. DimProductSubcategory_raw
-    1. FactInternetSales_raw
+    1. FactOnlineSales_raw
 
     ![Query name](./Media/StagingGroup.png)
 
@@ -313,11 +325,10 @@ As we add more tables to our solutions it can often be challenging to remember w
 
 1. In the **Queries** pane, while holding **ctrl**, select the following tables from the list below, once complete right click and select the **Move to group** > **New group...** option.
 
-    1. DimCustomer
+    
     1. DimDate
     1. DimEmployee
-    1. DimGeography
-    1. DimSalesTerritory
+    1. DimStore
 
     ![Query name](./Media/NewGroupDataLoad.png)
 
@@ -345,15 +356,15 @@ Not that our data is being ingested and stored in our dataflow's [Azure Data Lak
 
 ## Reference a query to create a computed table
 
-1. In the **Queries** pane, right click the **FactInternetSales_raw** table we created earlier and select the **Reference** option to create a computed table. Once complete we will see a new query has been created with a lightning bolt icon (⚡) indicating that this is a computed table.
+1. In the **Queries** pane, right click the **F** table we created earlier and select the **Reference** option to create a computed table. Once complete we will see a new query has been created with a lightning bolt icon (⚡) indicating that this is a computed table.
 
     ![Query reference](./Media/QueryReference.png)
 
-1. In the **Queries** pane - right click the **FactInternetSales_raw (2)** table, select **Rename** and update the query title to **FactInternetSales**.
+1. In the **Queries** pane - right click the **FactOnlineSales_raw (2)** table, select **Rename** and update the query title to **FactOnlineSales**.
 
     ![Rename option](./Media/RenameOption.png)
 
-1. In the **Queries** pane - right click the **FactInternetSales** computed table, select the **Move to group** > **New group...** option and complete the following.
+1. In the **Queries** pane - right click the **FactOnlineSales** computed table, select the **Move to group** > **New group...** option and complete the following.
     1. **Name:** Data transformation
     1. **Description:** Data that will be ingested from the data lake storage for transformations.
 
@@ -365,7 +376,7 @@ Not that our data is being ingested and stored in our dataflow's [Azure Data Lak
 
     ![Step script](./Media/StepScript.png)
 
-1. While still in the **FactInternetSales** query, we'll select the **fx** icon to the left of the formula bar to insert a new step into the query.
+1. While still in the **FactOnlineSales** query, we'll select the **fx** icon to the left of the formula bar to insert a new step into the query.
 
     ![Insert step](./Media/InsertStep.png)
 
@@ -517,7 +528,7 @@ Query folding is the ability for a Power Query query to generate a single query 
     | DimProduct_raw |
     | DimProductCategory_raw |
     | DimProductSubcategory_raw |
-    | FactInternetSales |
+    | FactOnlineSales |
 
     ![Get dataflow tables.](./Media/getDataDataflow.png)
 
