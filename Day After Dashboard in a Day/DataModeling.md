@@ -310,7 +310,7 @@ Aggregations in Power BI can improve query performance over very large DirectQue
     = Table.SelectRows(#"Grouped Rows", each [OrderDate] >= fxCreateKey(RangeStart) and [OrderDate] < fxCreateKey(RangeEnd))
     ```
 
-    ![fxCreateKey function](./Media/fxCreateKey.png)
+    ![FxCreateKey function](./Media/FxCreateKey.png)
 
 1. Now that we're ready to return to our modeling view navigate to the **Home** tab and select the **Close & Apply** option.
 
