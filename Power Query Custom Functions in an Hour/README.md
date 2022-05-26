@@ -46,6 +46,7 @@ A single piece of data is called a value. Broadly speaking, there are two genera
 | Date | Date.Type | #date(2022,06,30) |
 | DateTime | DateTime.Type | #datetime(2022,06,03,15,05,15) |
 | DateTimeZone | DateTimeZone.Type |  #datetimezone(2022,06,03,15,05,15,-6) |
+| Duration | Duration.Type | #duration(2,06,15,20) | 
 | Text | Text.Type | "Hello, world!" |
 | Binary | Binary.Type | #binary("AQID") |
 | Function | Function.Type | (bar as number) as any => let foo = bar * 10 in foo |
