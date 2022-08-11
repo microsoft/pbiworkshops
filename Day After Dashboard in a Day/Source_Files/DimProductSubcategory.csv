@@ -1,45 +1,45 @@
-﻿ProductSubcategoryKey|ProductSubcategoryLabel|ProductSubcategoryName|ProductSubcategoryDescription|ProductCategoryKey|ETLLoadID|LoadDate|UpdateDate
-1|0101|MP4&MP3|MP4&MP3|1|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
-2|0102|Recorder|Recorder|1|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
-3|0103|Radio|Radio|1|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
-4|0104|Recording Pen|Recording Pen|1|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
-5|0105|Headphones|Headphones|1|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
-6|0106|Bluetooth Headphones|Bluetooth Headphones|1|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
-7|0107|Speakers|Speakers|1|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
-8|0108|Audio Accessories|Audio Accessories|1|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
-9|0201|Televisions|Televisions|2|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
-10|0202|VCD & DVD|VCD & DVD|2|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
-11|0203|Home Theater System|Home Theater System|2|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
-13|0205|Car Video|Car Video|2|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
-14|0206|TV & Video Accessories|TV & Video Accessories|2|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
-15|0301|Laptops|Laptops|3|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
-16|0302|Netbooks|Netbooks|3|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
-17|0303|Desktops|Desktops|3|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
-18|0304|Monitors|Monitors|3|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
-19|0305|Projectors & Screens|Projectors & Screens|3|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
-20|0306|Printers, Scanners & Fax|Printers, Scanners & Fax|3|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
-21|0307|Computer Setup & Service|Computer Setup & Service|3|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
-22|0308|Computers Accessories|Computers Accessories|3|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
-23|0401|Digital Cameras|Digital Cameras|4|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
-24|0402|Digital SLR Cameras|Digital SLR Cameras|4|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
-25|0403|Film Cameras|Film Cameras|4|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
-27|0405|Camcorders|Camcorders|4|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
-28|0406|Cameras & Camcorders Accessories|Cameras & Camcorders Accessories|4|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
-29|0501|Home & Office Phones|Home & Office Phones|5|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
-31|0503|Touch Screen Phones |Touch Screen Phones |5|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
-32|0504|Smart phones & PDAs |Smart phones & PDAs |5|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
-33|0505|Cell phones Accessories|Cell phones Accessories|5|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
-34|0601|Music CD|Music CD|6|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
-35|0602|Movie DVD|Movie DVD|6|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
-36|0603|Audio Books|Audio Books|6|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
-38|0701|Boxed Games|Boxed Games|7|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
-39|0702|Download Games|Download Games|7|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
-40|0703|Games Accessories|Games Accessories|7|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
-41|0801|Washers & Dryers|Washers & Dryers|8|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
-42|0802|Refrigerators|Refrigerators|8|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
-43|0803|Microwaves|Microwaves|8|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
-44|0804|Water Heaters|Water Heaters|8|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
-45|0805|Coffee Machines|Coffee Machines|8|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
-46|0806|Lamps|Lamps|8|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
-47|0807|Air Conditioners|Air Conditioners|8|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
-48|0808|Fans|Fans|8|1|2009-07-07 00:00:00.000|2009-07-07 00:00:00.000
+ProductSubcategoryKey|ProductSubcategoryLabel|ProductSubcategoryName|ProductSubcategoryDescription|ProductCategoryKey
+1|101|MP4&MP3|MP4&MP3|1
+2|102|Recorder|Recorder|1
+3|103|Radio|Radio|1
+4|104|Recording Pen|Recording Pen|1
+5|105|Headphones|Headphones|1
+6|106|Bluetooth Headphones|Bluetooth Headphones|1
+7|107|Speakers|Speakers|1
+8|108|Audio Accessories|Audio Accessories|1
+9|201|Televisions|Televisions|2
+10|202|VCD & DVD|VCD & DVD|2
+11|203|Home Theater System|Home Theater System|2
+13|205|Car Video|Car Video|2
+14|206|TV & Video Accessories|TV & Video Accessories|2
+15|301|Laptops|Laptops|3
+16|302|Netbooks|Netbooks|3
+17|303|Desktops|Desktops|3
+18|304|Monitors|Monitors|3
+19|305|Projectors & Screens|Projectors & Screens|3
+20|306|Printers, Scanners & Fax|Printers, Scanners & Fax|3
+21|307|Computer Setup & Service|Computer Setup & Service|3
+22|308|Computers Accessories|Computers Accessories|3
+23|401|Digital Cameras|Digital Cameras|4
+24|402|Digital SLR Cameras|Digital SLR Cameras|4
+25|403|Film Cameras|Film Cameras|4
+27|405|Camcorders|Camcorders|4
+28|406|Cameras & Camcorders Accessories|Cameras & Camcorders Accessories|4
+29|501|Home & Office Phones|Home & Office Phones|5
+31|503|Touch Screen Phones |Touch Screen Phones |5
+32|504|Smart phones & PDAs |Smart phones & PDAs |5
+33|505|Cell phones Accessories|Cell phones Accessories|5
+34|601|Music CD|Music CD|6
+35|602|Movie DVD|Movie DVD|6
+36|603|Audio Books|Audio Books|6
+38|701|Boxed Games|Boxed Games|7
+39|702|Download Games|Download Games|7
+40|703|Games Accessories|Games Accessories|7
+41|801|Washers & Dryers|Washers & Dryers|8
+42|802|Refrigerators|Refrigerators|8
+43|803|Microwaves|Microwaves|8
+44|804|Water Heaters|Water Heaters|8
+45|805|Coffee Machines|Coffee Machines|8
+46|806|Lamps|Lamps|8
+47|807|Air Conditioners|Air Conditioners|8
+48|808|Fans|Fans|8

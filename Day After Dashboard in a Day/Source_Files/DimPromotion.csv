@@ -1,29 +1,29 @@
-﻿PromotionKey|PromotionLabel|PromotionName|PromotionDescription|DiscountPercent|PromotionType|PromotionCategory|StartDate|EndDate|MinQuantity|MaxQuantity|ETLLoadID|LoadDate|UpdateDate
-1|001|No Discount|No Discount|0|No Discount|No Discount|2003-01-01 00:00:00.000|2010-12-31 00:00:00.000|||1|2009-09-01 00:00:00.000|2009-09-01 00:00:00.000
-2|002|North America Spring Promotion|North America Spring Promotion|0.05|Seasonal Discount|Store|2007-01-01 00:00:00.000|2007-03-31 00:00:00.000|||1|2009-09-01 00:00:00.000|2009-09-01 00:00:00.000
-3|003|North America Back-to-School Promotion|North America Back-to-School Promotion|0.1|Seasonal Discount|Store|2007-07-01 00:00:00.000|2007-09-30 00:00:00.000|||1|2009-09-01 00:00:00.000|2009-09-01 00:00:00.000
-4|004|North America Holiday Promotion|North America Holiday Promotion|0.2|Seasonal Discount|Store|2007-11-01 00:00:00.000|2007-12-31 00:00:00.000|||1|2009-09-01 00:00:00.000|2009-09-01 00:00:00.000
-5|005|Asian Holiday Promotion|Asian Holiday Promotion|0.15|Seasonal Discount|Store|2007-11-01 00:00:00.000|2008-01-31 00:00:00.000|||1|2009-09-01 00:00:00.000|2009-09-01 00:00:00.000
-6|006|Asian Spring Promotion|Asian Spring Promotion|0.2|Seasonal Discount|Store|2007-02-01 00:00:00.000|2007-04-30 00:00:00.000|||1|2009-09-01 00:00:00.000|2009-09-01 00:00:00.000
-7|007|Asian Summer Promotion|Asian Summer Promotion|0.1|Seasonal Discount|Store|2007-05-01 00:00:00.000|2007-06-30 00:00:00.000|||1|2009-09-01 00:00:00.000|2009-09-01 00:00:00.000
-8|008|European Spring Promotion|European Spring Promotion|0.07|Seasonal Discount|Store|2007-02-01 00:00:00.000|2007-04-30 00:00:00.000|||1|2009-09-01 00:00:00.000|2009-09-01 00:00:00.000
-9|009|European Back-to-Scholl Promotion|European Back-to-Scholl Promotion|0.1|Seasonal Discount|Store|2007-08-01 00:00:00.000|2007-09-30 00:00:00.000|||1|2009-09-01 00:00:00.000|2009-09-01 00:00:00.000
-10|010|European Holiday Promotion|European Holiday Promotion|0.2|Seasonal Discount|Store|2007-10-01 00:00:00.000|2008-01-31 00:00:00.000|||1|2009-09-01 00:00:00.000|2009-09-01 00:00:00.000
-11|011|North America Spring Promotion|North America Spring Promotion|0.05|Seasonal Discount|Store|2008-01-01 00:00:00.000|2008-03-31 00:00:00.000|||1|2009-09-01 00:00:00.000|2009-09-01 00:00:00.000
-12|012|North America Back-to-School Promotion|North America Back-to-School Promotion|0.1|Seasonal Discount|Store|2008-07-01 00:00:00.000|2008-09-30 00:00:00.000|||1|2009-09-01 00:00:00.000|2009-09-01 00:00:00.000
-13|013|North America Holiday Promotion|North America Holiday Promotion|0.2|Seasonal Discount|Store|2008-11-01 00:00:00.000|2008-12-31 00:00:00.000|||1|2009-09-01 00:00:00.000|2009-09-01 00:00:00.000
-14|014|Asian Holiday Promotion|Asian Holiday Promotion|0.15|Seasonal Discount|Store|2008-11-01 00:00:00.000|2009-01-31 00:00:00.000|||1|2009-09-01 00:00:00.000|2009-09-01 00:00:00.000
-15|015|Asian Spring Promotion|Asian Spring Promotion|0.2|Seasonal Discount|Store|2008-02-01 00:00:00.000|2008-04-30 00:00:00.000|||1|2009-09-01 00:00:00.000|2009-09-01 00:00:00.000
-16|016|Asian Summer Promotion|Asian Summer Promotion|0.1|Seasonal Discount|Store|2008-05-01 00:00:00.000|2008-06-30 00:00:00.000|||1|2009-09-01 00:00:00.000|2009-09-01 00:00:00.000
-17|017|European Spring Promotion|European Spring Promotion|0.07|Seasonal Discount|Store|2008-02-01 00:00:00.000|2008-04-30 00:00:00.000|||1|2009-09-01 00:00:00.000|2009-09-01 00:00:00.000
-18|018|European Back-to-Scholl Promotion|European Back-to-Scholl Promotion|0.1|Seasonal Discount|Store|2008-08-01 00:00:00.000|2008-09-30 00:00:00.000|||1|2009-09-01 00:00:00.000|2009-09-01 00:00:00.000
-19|019|European Holiday Promotion|European Holiday Promotion|0.2|Seasonal Discount|Store|2008-10-01 00:00:00.000|2009-01-31 00:00:00.000|||1|2009-09-01 00:00:00.000|2009-09-01 00:00:00.000
-20|020|North America Spring Promotion|North America Spring Promotion|0.05|Seasonal Discount|Store|2009-01-01 00:00:00.000|2010-03-31 00:00:00.000|||1|2009-09-01 00:00:00.000|2009-09-01 00:00:00.000
-21|021|North America Back-to-School Promotion|North America Back-to-School Promotion|0.1|Seasonal Discount|Store|2009-07-01 00:00:00.000|2009-09-30 00:00:00.000|||1|2009-09-01 00:00:00.000|2009-09-01 00:00:00.000
-22|022|North America Holiday Promotion|North America Holiday Promotion|0.2|Seasonal Discount|Store|2009-11-01 00:00:00.000|2009-12-31 00:00:00.000|||1|2009-09-01 00:00:00.000|2009-09-01 00:00:00.000
-23|023|Asian Holiday Promotion|Asian Holiday Promotion|0.15|Seasonal Discount|Store|2009-11-01 00:00:00.000|2010-01-31 00:00:00.000|||1|2009-09-01 00:00:00.000|2009-09-01 00:00:00.000
-24|024|Asian Spring Promotion|Asian Spring Promotion|0.2|Seasonal Discount|Store|2009-02-01 00:00:00.000|2009-04-30 00:00:00.000|||1|2009-09-01 00:00:00.000|2009-09-01 00:00:00.000
-25|025|Asian Summer Promotion|Asian Summer Promotion|0.1|Seasonal Discount|Store|2009-05-01 00:00:00.000|2009-06-30 00:00:00.000|||1|2009-09-01 00:00:00.000|2009-09-01 00:00:00.000
-26|026|European Spring Promotion|European Spring Promotion|0.07|Seasonal Discount|Store|2009-02-01 00:00:00.000|2009-04-30 00:00:00.000|||1|2009-09-01 00:00:00.000|2009-09-01 00:00:00.000
-27|027|European Back-to-Scholl Promotion|European Back-to-Scholl Promotion|0.1|Seasonal Discount|Store|2009-08-01 00:00:00.000|2009-09-30 00:00:00.000|||1|2009-09-01 00:00:00.000|2009-09-01 00:00:00.000
-28|028|European Holiday Promotion|European Holiday Promotion|0.2|Seasonal Discount|Store|2009-10-01 00:00:00.000|2010-01-31 00:00:00.000|||1|2009-09-01 00:00:00.000|2009-09-01 00:00:00.000
+PromotionKey|PromotionLabel|PromotionName|PromotionDescription|DiscountPercent|PromotionType|PromotionCategory|StartDate|EndDate|MinQuantity|MaxQuantity
+1|1|No Discount|No Discount|0.0|No Discount|No Discount|2003-01-01 00:00:00.000|2010-12-31 00:00:00.000||
+2|2|North America Spring Promotion|North America Spring Promotion|0.05|Seasonal Discount|Store|2007-01-01 00:00:00.000|2007-03-31 00:00:00.000||
+3|3|North America Back-to-School Promotion|North America Back-to-School Promotion|0.1|Seasonal Discount|Store|2007-07-01 00:00:00.000|2007-09-30 00:00:00.000||
+4|4|North America Holiday Promotion|North America Holiday Promotion|0.2|Seasonal Discount|Store|2007-11-01 00:00:00.000|2007-12-31 00:00:00.000||
+5|5|Asian Holiday Promotion|Asian Holiday Promotion|0.15|Seasonal Discount|Store|2007-11-01 00:00:00.000|2008-01-31 00:00:00.000||
+6|6|Asian Spring Promotion|Asian Spring Promotion|0.2|Seasonal Discount|Store|2007-02-01 00:00:00.000|2007-04-30 00:00:00.000||
+7|7|Asian Summer Promotion|Asian Summer Promotion|0.1|Seasonal Discount|Store|2007-05-01 00:00:00.000|2007-06-30 00:00:00.000||
+8|8|European Spring Promotion|European Spring Promotion|0.07|Seasonal Discount|Store|2007-02-01 00:00:00.000|2007-04-30 00:00:00.000||
+9|9|European Back-to-Scholl Promotion|European Back-to-Scholl Promotion|0.1|Seasonal Discount|Store|2007-08-01 00:00:00.000|2007-09-30 00:00:00.000||
+10|10|European Holiday Promotion|European Holiday Promotion|0.2|Seasonal Discount|Store|2007-10-01 00:00:00.000|2008-01-31 00:00:00.000||
+11|11|North America Spring Promotion|North America Spring Promotion|0.05|Seasonal Discount|Store|2008-01-01 00:00:00.000|2008-03-31 00:00:00.000||
+12|12|North America Back-to-School Promotion|North America Back-to-School Promotion|0.1|Seasonal Discount|Store|2008-07-01 00:00:00.000|2008-09-30 00:00:00.000||
+13|13|North America Holiday Promotion|North America Holiday Promotion|0.2|Seasonal Discount|Store|2008-11-01 00:00:00.000|2008-12-31 00:00:00.000||
+14|14|Asian Holiday Promotion|Asian Holiday Promotion|0.15|Seasonal Discount|Store|2008-11-01 00:00:00.000|2009-01-31 00:00:00.000||
+15|15|Asian Spring Promotion|Asian Spring Promotion|0.2|Seasonal Discount|Store|2008-02-01 00:00:00.000|2008-04-30 00:00:00.000||
+16|16|Asian Summer Promotion|Asian Summer Promotion|0.1|Seasonal Discount|Store|2008-05-01 00:00:00.000|2008-06-30 00:00:00.000||
+17|17|European Spring Promotion|European Spring Promotion|0.07|Seasonal Discount|Store|2008-02-01 00:00:00.000|2008-04-30 00:00:00.000||
+18|18|European Back-to-Scholl Promotion|European Back-to-Scholl Promotion|0.1|Seasonal Discount|Store|2008-08-01 00:00:00.000|2008-09-30 00:00:00.000||
+19|19|European Holiday Promotion|European Holiday Promotion|0.2|Seasonal Discount|Store|2008-10-01 00:00:00.000|2009-01-31 00:00:00.000||
+20|20|North America Spring Promotion|North America Spring Promotion|0.05|Seasonal Discount|Store|2009-01-01 00:00:00.000|2010-03-31 00:00:00.000||
+21|21|North America Back-to-School Promotion|North America Back-to-School Promotion|0.1|Seasonal Discount|Store|2009-07-01 00:00:00.000|2009-09-30 00:00:00.000||
+22|22|North America Holiday Promotion|North America Holiday Promotion|0.2|Seasonal Discount|Store|2009-11-01 00:00:00.000|2009-12-31 00:00:00.000||
+23|23|Asian Holiday Promotion|Asian Holiday Promotion|0.15|Seasonal Discount|Store|2009-11-01 00:00:00.000|2010-01-31 00:00:00.000||
+24|24|Asian Spring Promotion|Asian Spring Promotion|0.2|Seasonal Discount|Store|2009-02-01 00:00:00.000|2009-04-30 00:00:00.000||
+25|25|Asian Summer Promotion|Asian Summer Promotion|0.1|Seasonal Discount|Store|2009-05-01 00:00:00.000|2009-06-30 00:00:00.000||
+26|26|European Spring Promotion|European Spring Promotion|0.07|Seasonal Discount|Store|2009-02-01 00:00:00.000|2009-04-30 00:00:00.000||
+27|27|European Back-to-Scholl Promotion|European Back-to-Scholl Promotion|0.1|Seasonal Discount|Store|2009-08-01 00:00:00.000|2009-09-30 00:00:00.000||
+28|28|European Holiday Promotion|European Holiday Promotion|0.2|Seasonal Discount|Store|2009-10-01 00:00:00.000|2010-01-31 00:00:00.000||
