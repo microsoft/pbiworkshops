@@ -1,10 +1,8 @@
 # Data Preparation
 
-## Lab scenario
+## ✏️ Lab scenario
 
-For this portion of the lab, we have an existing dataflow which will be used as our starting point to skip over the more basic concepts like **Get data** > from > **CSV** and start getting into more advanced transformation patterns. To begin, we have new information that is being shared with us daily and stored in an accessible (**Web page**) folder, the total number of files that will be added to this location will continue to grow over time, which we will need to account for with a [future proofed](https://docs.microsoft.com/power-query/best-practices#future-proofing-queries) solution.
-
-Fortunately for us, the files maintain a consistent column naming, data type and file naming structure (**FactOnlineSales_#.csv**) to make collecting and combining new data easier. To promote reusability of our solution for other business groups, we'll also leverage Power Query Online to help us create new Dataflow tables.
+For this portion of the lab, we've been tasked with collecting and combining new daily files that are being shared with us in a publicly accessible **Web page** folder. The total number of files that will be added to this location will continue to grow over time, which we will need to account for when developing our [future proofed](https://docs.microsoft.com/power-query/best-practices#future-proofing-queries) solution. Ultimately, to promote the reusability of our work for other users, we'll leverage Power Query Online to help us create new dataflow tables.
 
 ## About dataflows
 
@@ -36,7 +34,9 @@ Before we begin, we'll want to navigate to a new, empty or non-production worksp
 
 # Import a dataflow model and configure settings
 
-We'll leverage an existing dataflow json file as our starting point for this lab. Once the dataflow model has been imported it will include additional standardized categories enabling discovery across other Microsoft products and services. This semantic information includes the table names, column names, metadata descriptions and much more as part of the [metadata file (model.json)](https://docs.microsoft.com/common-data-model/model-json) format.
+For this portion of the lab, we'll use an existing dataflow model as our starting point to skip over the more familiar steps of **Get data** > from **CSV** to focus on more advanced transformation patterns.
+
+Once our dataflow model has been imported and refreshed it will enable discovery across other Microsoft products and services. This semantic information includes the table names, column names, metadata descriptions and much more as part of a [metadata file (model.json)](https://docs.microsoft.com/common-data-model/model-json) format.
 
 1. In the top left of the workspace select **New** and then the **Dataflow** option.
 
@@ -90,7 +90,7 @@ Using the enhanced compute engine provides the following advantages:
 
 # Configure Global options in the Power Query Online editor
 
-With our dataflow successfully imported and credentials set, we can now configure our development environment for authoring in the Power Query Online editor.
+With our dataflow successfully imported and credentials set, we can now configure our development environment for authoring in the Power Query Online experience.
 
 ---
 
@@ -127,6 +127,74 @@ With our dataflow successfully imported and credentials set, we can now configur
     ![Global options window](./Media/GlobalOptionsWindow.png)
 
 ---
+
+## Joining tables using the diagram view
+
+BENEFIT OF USING DIAGRAM VIEW
+
+1. In the bottom right of the **Power Query** editor, select the **Diagram view** icon.
+
+    ![Diagram view](./Media/DiagramView.png)
+
+1. Select the **Actions** option ( ⋮ ) at the top right of the **DimProduct_raw** table and select the **Merge queries as new** option.
+
+    ![Merge queries as new](./Media/MergeNew.png)
+
+1. In the **Merge** window complete the following steps and then select **OK** when complete.
+
+    | Merge | Table | Column |
+    | :--- | :---- | :--- | 
+    | Left table for merge | DimProduct_raw | ProductSubcategoryKey |
+    | Right table for merge | DimProductSubcategory_raw | ProductSubcategoryKey |
+
+    1. Set the **Join kind** to **Left outer**
+
+    ![Merge DimProductSubcategory](./Media/MergeDimProductSubcategory.png)
+
+1. From the **Home** tab select the drop down next to **Choose columns** and then the **Go to column** option. Within the search dialog type the column name **DimProductSubcategory_raw** until a result has been returned, you can then either double click the name or press **OK** to continue.
+
+    ![Go to column](./Media/GoToColumn.png)
+
+1. In the top right of the **DimProductSubcategory_raw** column - we'll select the expand columns icon and disable the **ProductSubcategoryKey** column since this column already exists in our **DimProduct_raw** table, disable the **Use original column name as prefix** option and then select **OK** when complete.
+    
+    ![Expand product subcategory](./Media/ExpandProductSubcategory.png)
+
+1. Select the **Actions** option ( ⋮ ) at the top right of the **Merge** table and select the **Merge queries** option.
+
+    ![Merge queries](./Media/MergeQueries.png)
+    
+1. In the **Merge** window complete the following steps and then select **OK** when complete.
+
+    | Merge | Table | Column |
+    | :--- | :---- | :--- | 
+    | Left table for merge | (Current) | ProductCategoryKey |
+    | Right table for merge | DimProductCategory_raw | ProductCategoryKey |
+
+    1. Set the **Join kind** to **Left outer**
+
+    ![Merge left outer](./Media/MergeLeftOuter.png)
+
+1. In the top right of the **DimProductSubcategory_raw** column - we'll select the expand columns icon and disable the **ProductCategoryKey** column since this column already exists in our **DimProductSubcategory_raw** table, disable the **Use original column name as prefix** option and then select **OK** when complete.
+
+    ![Expand product category](./Media/ExpandProductCategory.png)
+
+## View query plan
+
+[Learn more about the query plan](https://docs.microsoft.com/power-query/query-plan)
+
+1. In the **Query settings** pane on the right, navigate to the **Expanded DimProductCategory_raw** step, right click and select the **View query plan** option.
+
+    ![View query plan](./Media/ViewQueryPlan.png)
+
+1. In the **Query plan** window, navigate to the inner joined **Table.Join** Full scan and select the **View details** to determine what join algorithm is being used. Press **Close** when complete.
+
+    ![Join algorithm](./Media/JoinAlgorithm.png)
+
+1. From the diagram view complete the following steps using the **Actions** options ( ⋮ ) for the **Merge** table.
+    1. Select the **Rename** action and update the query title to **DimProduct**.
+    1. Select the **Move to group...** action and select the **Data transformation** group.
+
+    ![Queries pane completed](./Media/QueriesPaneComplete.png)
 
 # Advanced Editor
 
@@ -422,71 +490,6 @@ Not that our data is being ingested and stored in our dataflow's [Azure Data Lak
 
     ![Currency type](./Media/CurrencyType.png)
 
-## Joining tables using the diagram view
-
-1. In the bottom right of the **Power Query** editor, select the **Diagram view** icon.
-
-    ![Diagram view](./Media/DiagramView.png)
-
-1. Select the **Actions** option ( ⋮ ) at the top right of the **DimProduct_raw** table and select the **Merge queries as new** option.
-
-    ![Merge queries as new](./Media/MergeNew.png)
-
-1. In the **Merge** window complete the following steps and then select **OK** when complete.
-
-    | Merge | Table | Column |
-    | :--- | :---- | :--- | 
-    | Left table for merge | DimProduct_raw | ProductSubcategoryKey |
-    | Right table for merge | DimProductSubcategory_raw | ProductSubcategoryKey |
-
-    1. Set the **Join kind** to **Left outer**
-
-    ![Merge DimProductSubcategory](./Media/MergeDimProductSubcategory.png)
-
-1. From the **Home** tab select the drop down next to **Choose columns** and then the **Go to column** option. Within the search dialog type the column name **DimProductSubcategory_raw** until a result has been returned, you can then either double click the name or press **OK** to continue.
-
-    ![Go to column](./Media/GoToColumn.png)
-
-1. In the top right of the **DimProductSubcategory_raw** column - we'll select the expand columns icon and disable the **ProductSubcategoryKey** column since this column already exists in our **DimProduct_raw** table, disable the **Use original column name as prefix** option and then select **OK** when complete.
-    
-    ![Expand product subcategory](./Media/ExpandProductSubcategory.png)
-
-1. Select the **Actions** option ( ⋮ ) at the top right of the **Merge** table and select the **Merge queries** option.
-
-    ![Merge queries](./Media/MergeQueries.png)
-    
-1. In the **Merge** window complete the following steps and then select **OK** when complete.
-
-    | Merge | Table | Column |
-    | :--- | :---- | :--- | 
-    | Left table for merge | (Current) | ProductCategoryKey |
-    | Right table for merge | DimProductCategory_raw | ProductCategoryKey |
-
-    1. Set the **Join kind** to **Left outer**
-
-    ![Merge left outer](./Media/MergeLeftOuter.png)
-
-1. In the top right of the **DimProductSubcategory_raw** column - we'll select the expand columns icon and disable the **ProductCategoryKey** column since this column already exists in our **DimProductSubcategory_raw** table, disable the **Use original column name as prefix** option and then select **OK** when complete.
-
-    ![Expand product category](./Media/ExpandProductCategory.png)
-
-## View query plan
-
-[Learn more about the query plan](https://docs.microsoft.com/power-query/query-plan)
-
-1. In the **Query settings** pane on the right, navigate to the **Expanded DimProductCategory_raw** step, right click and select the **View query plan** option.
-
-    ![View query plan](./Media/ViewQueryPlan.png)
-
-1. In the **Query plan** window, navigate to the inner joined **Table.Join** Full scan and select the **View details** to determine what join algorithm is being used. Press **Close** when complete.
-
-    ![Join algorithm](./Media/JoinAlgorithm.png)
-
-1. From the diagram view complete the following steps using the **Actions** options ( ⋮ ) for the **Merge** table.
-    1. Select the **Rename** action and update the query title to **DimProduct**.
-    1. Select the **Move to group...** action and select the **Data transformation** group.
-
-    ![Queries pane completed](./Media/QueriesPaneComplete.png)
 
 ## Saving and refreshing the dataflow
 
@@ -522,6 +525,7 @@ Query folding is the ability for a Power Query query to generate a single query 
     | :---- |
     | DimDate |
     | DimEmployee |
+    | DimSalesTerritory |
     | DimStore |
     | DimCustomer_raw |
     | DimGeography_raw |
@@ -532,7 +536,7 @@ Query folding is the ability for a Power Query query to generate a single query 
 
     ![Get dataflow tables.](./Media/getDataDataflow.png)
 
-1. Navigate to the **DimCustomer** table, holding the **shift** key select the **FirstName**, **MiddleName** and **LastName** columns, right click one of the selected columns and choose the **Merge Columns** option.
+1. Navigate to the **DimCustomer_raw** table, holding the **shift** key select the **FirstName**, **MiddleName** and **LastName** columns, right click one of the selected columns and choose the **Merge Columns** option.
 
     ![Merge Columns option.](./Media/MergeColumns.png)
 
@@ -554,6 +558,7 @@ Query folding is the ability for a Power Query query to generate a single query 
     | If | Title | equals | Mr. | Male |
     | If | Title | equals | Sr. | Male |
     | If | Title | equals | Ms. | Female |
+    | If | Title | equals | Mrs. | Female |
     | If | Title | equals | Sra. | Female |
     | else | Not Provided | | |
 
@@ -607,7 +612,7 @@ Query folding is the ability for a Power Query query to generate a single query 
 
     ```bash
     If value is Mr. or Sr. replace with Male.
-    If value is Ms. or Sra. replace with Female.
+    If value is Ms. , Mrs. , or Sra. replace with Female.
     Otherwise replace with Not Provided.
     ```
 
