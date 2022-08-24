@@ -128,7 +128,7 @@ With our dataflow successfully imported and credentials set, we can now configur
 
 ---
 
-## Joining tables using the diagram view
+## Merging tables using the diagram view
 
 BENEFIT OF USING DIAGRAM VIEW
 

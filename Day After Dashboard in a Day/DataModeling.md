@@ -118,7 +118,7 @@ We can also leverage the [external tools in Power BI Desktop](https://docs.micro
     ```
 
 ## ✅ Lab check
-We've been able to confirm that as our Power BI visuals are being rendered our query will be instantly sent to our data source to retrieve new insights. With this initial requirement met, let's continue and start connecting our tables.
+We've been able to confirm that as our Power BI visuals are being rendered our query will be instantly sent to our data source to retrieve new insights. With this initial requirement met, let's continue and start connecting our tables to create a dimensional model.
 
 ---
 
@@ -237,14 +237,17 @@ When using multiple tables, chances are you'll do some analysis using data from 
     | ☑ | FactOnlineSales (OrderDate) | DimDate (DateKey) | Many to one (*:1) | ☑ | Single |
     |  | FactOnlineSales (ShipDate) | DimDate (DateKey) | Many to one (*:1) | ☑ | Single |
 
-    ![Edit relationship settings.](./Media/EditRelationshipSettings.png)
 
-FINISHED VIEW OF RELATIONSHIPS
+1. Within the Modeling view's **Properties** pane, set both the **Show the database in the header when applicable** and **Pin related fields to top of card** options to **Yes**.
+
+    ![Full view of all connected tables.](./Media/FullModelView.png)
 
 
 
 ## ✅ Lab check
-We've been able to create relationships between all of our data source's tables and a new requirement has come in that our data model has to be both - **near-real time** and **blazing fast**. For this we'll continue to leverage the built in Performance analyzer within Power BI Desktop to ensure we are getting sub-second response times.
+We've been able to create relationships between all of our data source's tables and a new requirement has come in that our data model has to be both - **near-real time** and **blazing fast**. 
+
+For this we'll want to revisit the design of our model.
 
 ---
 # Dimensional modeling
@@ -254,30 +257,35 @@ Importance of the Star Schema.
 
 ---
 
-1. Navigate to the model view on the side-rail
+1. Navigate to the model view on the side-rail.
 
-    ![Full side rail.](./Media/FullSideRail.png)
+    ![Full side rail.](./Media/ModelViewSelection.png)
 
-1. In our modeling view, we notice a [snowflaked dimension](https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/dimensional-modeling-techniques/snowflake-dimension/) from the **DimProductCategory_raw** > **DimProductSubcategory_raw** > **DimProductCategory_raw** tables and the **DimGeography_raw** > **DimCustomer_raw** tables. This type of modeling approaching may affect our datasets query performance, as these dimensions contain the same information - to better optimize our dataset we'll flatten the three tables into a single dimension table for use.
+1. In our modeling view, we notice some [snowflaked dimensions](https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/dimensional-modeling-techniques/snowflake-dimension/) between the following tables:
+    1. **DimCustomer_raw** to **DimGeography_raw**
+    1. **DimProductCategory_raw** to **DimProductSubcategory_raw** and **DimProductCategory_raw** tables
 
     ![Snowflake dimensions](./Media/SnowflakeDimensions.png)
+
+    This type of modeling approaching may affect the duration of our datasets queries and could ultimately lead to reduced performance. To better optimize our model let's update our model to leverage the tables within our dataflow where we've already merged our tables into a correct view of our data.
 
 1. Within them model view we'll select the vertical ellipses ( ⋮ ) at the top right of the **DimProduct_raw** table and then the **Edit query** option to return to the Power Query Editor.
     1. Important you can also right click the table header as opposed to selecting the ellipses.
 
     ![Edit query.](./Media/EditQueryFromTable.png)
 
-1. In the Power Query Editor - **Queries** pane select the following tables and in the formula bar we'll update the following entity value to our merged table from the previous [**Data Preparation**](https://github.com/microsoft/pbiworkshops/blob/main/Day%20After%20Dashboard%20in%20a%20Day/DataPreparation.md#joining-tables-using-the-diagram-view) section.
+1. In the Power Query Editor - **Queries** pane we'll update the following queries to our merged table from the previous [**Data Preparation**](https://github.com/microsoft/pbiworkshops/blob/main/Day%20After%20Dashboard%20in%20a%20Day/DataPreparation.md#joining-tables-using-the-diagram-view) lab instructions.
     
-    1. Select the **DimProduct_raw** table and complete the before and after: 
+    1. We'll start by selecting the **DimProduct_raw** query and then complete the following.
+        1. In the **APPLIED STEPS** next to the **Navigation** step select the settings icon.
+        1. Within the **Navigation** window, we'll now select **Workspaces** to view our dataflows stored within the Power BI service.
+            1. The Environments option, shows dataflows created with Power Apps.
+        1. We can now navigate to the workspace location where we created and saved our dataflows from the data preparation lab instructions. Once found we'll then expand our dataflow to view all the available tables and update our selection to the **DimProduct** table.
+        1. Within the **Query Settings** pane, update the **Name** value to now simply be titled **DimProduct**.
 
-    | Before | After |
-    | :-- | :-- |
-    |= #"Dataflow Id"{[entity="**DimProduct_raw**",version=""]}[Data] | = #"Dataflow Id"{[entity="**DimProduct**",version=""]}[Data] |
+        ![DimProduct update](./Media/DimProductNavigation.png)
 
-    ![DimProduct update](./Media/DimProduct.png)
-
-    1. Select the **DimCustomer_raw** table and the **Navigation** step from the **Query Settings** pane and complete the before and after:
+    1. Now select the **DimCustomer_raw** table where we'll try a different approach by leveraging our formula bar. Within the **Query Settings** pane's **APPLIED STEPS** section, select the **Navigation** step and complete the following before and after below to remove the **"_raw"** suffix.
 
     | Before | After |
     | :-- | :-- |
@@ -285,30 +293,52 @@ Importance of the Star Schema.
 
     ![DimProduct update](./Media/DimCustomer.png)
 
-1. Within the **Queries** pane right click the following tables and select the **Rename** option to change the table names to the following:
+1. Within the **Queries** pane right click the **DimCustomer_raw** table and select the **Rename** option to update the table names to now simply be titled **DimCustomer**:
 
-    | Before | After |
-    | :-- | :-- |
-    | DimProduct_raw | DimProduct  |
-    | DimCustomer_raw | DimCustomer  |
 
-    ![Rename product](./Media/RenameProduct.png)
+    ![Rename product](./Media/DimCustomerRename.png)
 
-1. Within the **Queries** pane while holding shift click the **DimGeography_raw**, **DimProductCategory_raw**, and **DimProductSubcategory_raw** tables and select the **Delete** option to remove the tables from our dataset.
+1. Within the **Queries** pane while holding ctrl on your keyboard (or shift if they are adjacent), click the following tables listed below and then right click to select the **Delete** option to bulk remove the tables from our dataset.
+    1. DimGeography_raw
+    1. DimProductCategory_raw
+    1. DimProductSubcategory_raw
 
-    ![Delete product](./Media/DeleteProducts.png)
+    ![Delete product](./Media/BulkDeleteQueries.png)
 
 1. Now that we're ready to return to our modeling view navigate to the **Home** tab and select the **Close & Apply** option.
 
     ![Close apply.](./Media/CloseApply.png)
 
+1. Returning to the **Model** view, our tables now resemble a star with our fact table, maintaining all of our sales records and our dimension tables which are then used to filter our results.
+
+    ![Star Schema view.](./Media/StarSchemaView.png)
+
+## ✅ Lab check
+We've been able to properly model our dataset into a proper star schema but a new requirement has come in that our data model has to be both - **near-real time** and **blazing fast**. For this we'll want to revisit our storage mode options and determine if each of our tables are configured properly.
+
 ---
 ### Mixed Storage
 ---
 
+1. Within the **Model** view, we'll select the following tables listed below by holding ctrl on our keyboard, navigating to the **Properties** pane and expanding the **Advanced** options. For the **Storage mode** option select the drop down and update the selection to **Import**.
+    1. DimDate
+    1. DimProduct
+    1. DimStore
+    1. DimEmployee
+
+    ![Update Storage Mode.](./Media/UpdateStorageMode.png)
+
+1. Within the **Storage mode** window is some very important text that changing our tables from DirectQuery is an irreversible operation and the recommendation that instead of setting the tables to **Import** that we should leverage the **Dual** storage mode so that our returned values can either be **Import** or **DirectQuery** mode depending upon the queries being submitted.
+
+    ![Storage Mode window.](./Media/StorageModeMenu.png)
+
+1. Returning to the **Model** view, there are new icons available within our tables representing **Dual** storage mode for our **DimProduct**, **DimDate** and **DimStore** tables. Our **DimEmployee** table also has an icon indicating that it is an **Import** only storage mode.
+
+    ![Mixed Storage Modes.](./Media/MixedStorageModes.png)
+
 
 ## ✅ Lab check
-We've been able to create a proper data model and tested different storage modes. After speaking directly with our end users we learned they would rather have **blazing fast** performance as the reports prepare them for their business day so they need to be able to quickly slice-and-dice their insights. 
+We've been able to create a proper data model and tested different storage modes. After speaking directly with our end users we learned they would rather have **blazing fast** performance as the reports prepare them for their business day so they need to be able to quickly slice-and-dice their insights.
 
 We've also learned that new information only comes in overnight and as long as this information can be made fully available before they start their morning the request for **near real-time** meant no extended delays.
 
