@@ -17,7 +17,7 @@ In Microsoft Power BI Desktop, we can specify the storage mode for each table in
 
 ---
 
-## DirectQuery
+## DirectQuery Storage Mode
 
 For DirectQuery, when using Get Data in Power BI Desktop to connect to a data source, no data is imported into Power BI. Instead, upon building a visual within Power BI Desktop, queries are sent to the underlying data source to retrieve the necessary data. The time taken to refresh the visual depends on the performance of the underlying data source.
 
@@ -317,7 +317,7 @@ Importance of the Star Schema.
 We've been able to properly model our dataset into a proper star schema but a new requirement has come in that our data model has to be both - **near-real time** and **blazing fast**. For this we'll want to revisit our storage mode options and determine if each of our tables are configured properly.
 
 ---
-### Mixed Storage
+### Mixed Storage Mode
 ---
 
 1. Within the **Model** view, we'll select the following tables listed below by holding ctrl on our keyboard, navigating to the **Properties** pane and expanding the **Advanced** options. For the **Storage mode** option select the drop down and update the selection to **Import**.
@@ -336,11 +336,117 @@ We've been able to properly model our dataset into a proper star schema but a ne
 
     ![Mixed Storage Modes.](./Media/MixedStorageModes.png)
 
+1. On the side-rail we now see three options - **Report**, **Data** and **Model** view. With the data view we can now view imported and cached data within our Power BI file. For now, let's select the **Report** view to continue.
+
+    ![Report view.](./Media/ReportView.png)
+
+1. On the report canvas we'll create a new table and add the following columns from the tables below to test the performance of our **Dual** and **Import** tables.
+
+    | Table | Column | Storage Mode |
+    | :---- | :----- | :----- |
+    | DimStore | StoreName| Dual | 
+    | DimEmployee | EmailAddress | Import | 
+    
+    ![Store employees.](./Media/StoreEmployees.png)
+
+1. With results returned almost instantly, we want to understand if our query is being sent to our source via **Direct query** or if it's able to be successfully completed all thru an imported cache. To confirm we'll navigate to the **View** tab and then select **Performance analyzer**.
+
+    ![Performance analyzer.](./Media/PerformanceAnalyzer.png)
+
+1. Once the **Performance analyzer** pane is visible, we'll now select **Start recording**.
+
+    ![Start recording button.](./Media/StartRecording.png)
+
+1. Select the **Analyze this visual** button above the table visual and once complete, expand the **Table** object in the **Performance analyzer** pane. We can now review our results, and determine that there is no longer a **Direct query** entry.
+
+    This means that Power BI was able to determine that we had the available data stored in-memory to satisfy our query and that we did not need return to our data source to directly obtain our results.
+
+    ![Dax Query mixed storage.](./Media/DaxQueryMixed.png)
+
+1. On the report canvas we'll create another new table and add the following columns from the tables below to test the performance between **Dual** and **DirectQuery** tables.
+
+    | Table | Column | Storage Mode |
+    | :---- | :----- | :----- |
+    | DimStore | StoreName| Dual | 
+    | FactOnlineSales | SalesAmount | DirectQuery |
+
+    ![Store sales.](./Media/StoreSales.png)
+
+1. Select the **Analyze this visual** button above the table visual and once complete, expand the new **Table** object in the **Performance analyzer** pane. We can now review our results, and determine that a **Direct query** entry is once again present.
+
+    This means that Power BI was able to determine that we only a partial amount of data stored in-memory from our DimStore table and that it would need to transition our query to a DirectQuery method to satisfy our results.
+
+    ![Store sales Direct query.](./Media/StoreSalesDQ.png)
+
+1. **Optional:** Returning to the **SQL Server Profiler** application, we can locate the **DirectQuery end** event and review the SQL query that will be sent to our data source.
+
+    ![DirectQuery end.](./Media/DQEndEventStoreSales.png)
+
+    ```sql
+    SELECT 
+      TOP (1000001) * 
+    FROM 
+      (
+        SELECT 
+          [t4].[StoreName], 
+          SUM([t0].[SalesAmount]) AS [a0] 
+        FROM 
+          (
+            [FactOnlineSales] AS [t0] 
+            INNER JOIN [DimStore] AS [t4] on (
+              [t0].[StoreKey] = [t4].[StoreKey]
+            )
+          ) 
+        GROUP BY 
+          [t4].[StoreName]
+      ) AS [MainTable] 
+    WHERE 
+      (
+        NOT(
+          ([a0] IS NULL)
+        )
+      )
+    ```
 
 ## ✅ Lab check
 We've been able to create a proper data model and tested different storage modes. After speaking directly with our end users we learned they would rather have **blazing fast** performance as the reports prepare them for their business day so they need to be able to quickly slice-and-dice their insights.
 
-We've also learned that new information only comes in overnight and as long as this information can be made fully available before they start their morning the request for **near real-time** meant no extended delays.
+We've also learned that new information only comes in overnight and as long as this information can be made fully available before they start their morning. The request for **near real-time** meant as soon as its available, as opposed to the previous wait period in the prior reporting solution.
+
+---
+### Import Storage Mode
+---
+
+1. Navigate to the model view on the side-rail.
+
+    ![Full side rail.](./Media/ModelViewSideRail.png)
+
+1. Within the model diagram view on the keyboard press **Ctrl+A** to select all tables (you can also hold ctrl and click to select them individually). Within the **Properties** pane expand the **Advanced** options and within the **Storage mode** option select **Import** to update all of our tables.
+
+     ![Import storage mode.](./Media/ImportStorageMode.png)
+
+1. Within the **Storage mode** window is a warning letting us know that **Setting our storage mode to Import is an irreversible operation. You will not be able to switch it back to DirectQuery.** - select **OK** to procee.
+
+    Understanding our business requirements fully now, we recognize that **Import** will give us the blazing-fast performance to create an enjoyable experience for our end users as they slice-and-dice information and we can meet the overall data freshness requirements through a scheduled refresh of our results each day.
+
+    ![Storage mode window](./Media/IrreversibleImport.png)
+
+1. Select the **Report** view to return to the report canvas.
+
+    ![Report view.](./Media/ReportView.png)
+
+1. From our previous sales by store table visual select the **Analyze this visual** button above the table visual once again and once complete, expand the new **Table** object in the **Performance analyzer** pane. We can now review our results, and determine that only a **DAX query** entry is present.
+
+    This means that Power BI was able to determine that we have all of the available data stored in-memory to satisfy our queries requirements now.
+
+    ![Store sales Direct query.](./Media/ImportDAXQuery.png)
+
+## ✅ Lab check
+At this stage in our projects development we've explored a lot about the potential benefits of each storage mode, ultimately though the most important thing we learned was that had we gone to our business users first and understand their requirements directly we could have save some development time.
+
+Important questions we can ask next time:
+- How often is the data updated?
+- 
 
 ---
 ### Incremental Refresh
