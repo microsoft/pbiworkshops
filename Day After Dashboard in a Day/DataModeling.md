@@ -17,7 +17,7 @@ In Microsoft Power BI Desktop, we can specify the storage mode for each table in
 
 ---
 
-## DirectQuery Storage Mode
+## DirectQuery
 
 For DirectQuery, when using Get Data in Power BI Desktop to connect to a data source, no data is imported into Power BI. Instead, upon building a visual within Power BI Desktop, queries are sent to the underlying data source to retrieve the necessary data. The time taken to refresh the visual depends on the performance of the underlying data source.
 
@@ -442,9 +442,9 @@ We've also learned that new information only comes in overnight and as long as t
     ![Store sales Direct query.](./Media/ImportDAXQuery.png)
 
 ## ✅ Lab check
-At this stage in our projects development we've explored a lot about the potential benefits of each storage mode, ultimately though the most important thing we learned was that had we gone to our business users first and understand their requirements directly we could have save some development time.
+At this stage in our projects development we've explored several potential benefits of each storage mode, ultimately though the most important thing we learned was that had we gone to our business users and understood their requirements directly we could choose the right solution to meet their needs.
 
-Important questions we can ask next time:
+Important questions we should ask next time:
 - How often is the data updated?
 - 
 
