@@ -19,9 +19,14 @@ In Microsoft Power BI Desktop, we can specify the storage mode for each table in
 
 ## DirectQuery
 
-For DirectQuery, when using Get Data in Power BI Desktop to connect to a data source, no data is imported into Power BI. Instead, upon building a visual within Power BI Desktop, queries are sent to the underlying data source to retrieve the necessary data. The time taken to refresh the visual depends on the performance of the underlying data source.
+Models developed in DirectQuery mode don't import data. Instead, they consist only of metadata defining the model structure. When the model is queried, native queries are used to retrieve data from the underlying data source.
 
-[Learn more about DirectQuery model guidance](https://docs.microsoft.com/power-bi/guidance/directquery-model-guidance)
+There are two main reasons to consider developing a DirectQuery model:
+
+- When data volumes are too large - even when data reduction methods are applied - to load into a model, or practically refresh
+- When reports and dashboards need to deliver "near real-time" data, beyond what can be achieved within scheduled refresh limits. (Scheduled refresh limits are eight times a day for shared capacity, and 48 times a day for a Premium capacity.)
+
+    Learn more about [DirectQuery mode](https://docs.microsoft.com/power-bi/connect-data/service-dataset-modes-understand#directquery-mode) and [DirectQuery model guidance](https://docs.microsoft.com/power-bi/guidance/directquery-model-guidance)
 
 ---
 
@@ -71,14 +76,13 @@ For DirectQuery, when using Get Data in Power BI Desktop to connect to a data so
 
 # Optional - Event traces
 
-
-One important item of note that was missing from our above query is our [Transact-SQL](https://docs.microsoft.com/learn/modules/introduction-to-transact-sql/) statement for the **Direct query** value. To trace this event we'll use an external tool titled [SQL Server Profiler](https://docs.microsoft.com/sql/tools/sql-server-profiler/sql-server-profiler) to view event traces. 
+One important item that was missing from our above query is the [Transact-SQL](https://docs.microsoft.com/learn/modules/introduction-to-transact-sql/) statement for the **Direct query** value. In order to trace this event we'll leverage [SQL Server Profiler](https://docs.microsoft.com/sql/tools/sql-server-profiler/sql-server-profiler) to view our event traces.
 
 We can also leverage the [external tools in Power BI Desktop](https://docs.microsoft.com/power-bi/transform-model/desktop-external-tools) integration to easily view the event traces against our underlying Analysis Services instance.
 
 ## Prerequisite - Register the SQL Server Profiler external tool
 
-1. Download and install [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms) or the [Azure Data Studio with the SQL Server Profiler extension](https://docs.microsoft.com/sql/azure-data-studio/extensions/sql-server-profiler-extension?view=sql-server-ver15).
+1. Download and install [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
 
 1. Download the registered external tool [SQL Server Profiler External Tools](https://raw.githubusercontent.com/microsoft/pbiworkshops/main/Day%20After%20Dashboard%20in%20a%20Day/Source_Files/SQLProfiler.pbitool.json) (json) file. (Courtesy of Microsoft MVP [Steve Campbell](https://mvp.microsoft.com/PublicProfile/5004099))
 
@@ -126,7 +130,7 @@ We've been able to confirm that as our Power BI visuals are being rendered our q
 
 When using multiple tables, chances are you'll do some analysis using data from all those tables. Relationships between those tables are necessary to accurately calculate results and display the correct information in your reports.
 
-[Learn more about relationships](https://docs.microsoft.com/power-bi/transform-model/desktop-create-and-manage-relationships)
+Learn more about [creating and managing relationships](https://docs.microsoft.com/power-bi/transform-model/desktop-create-and-manage-relationships)
 
 ---
 
@@ -253,7 +257,21 @@ For this we'll want to revisit the design of our model.
 # Dimensional modeling
 ---
 
-Importance of the Star Schema.
+A well-structured model design should include tables that are either dimension-type tables or fact-type tables and should avoid mixing the two types together into a single table.
+
+- **Dimension tables** describe business entities — the things you model.
+    - Entities can include products, people, places, and concepts including time itself.
+    - The most consistent table you'll find in a star schema is a **date** dimension table. 
+    - A dimension table contains a key column (or columns) that acts as a unique identifier, and descriptive columns.
+
+- **Fact tables** store observations or events, and can be sales orders, stock balances, exchange rates, temperatures, etc.
+    - A fact table contains dimension key columns that relate to dimension tables, and numeric measure columns. 
+    - The dimension key columns determine the dimensionality of a fact table, while the dimension key values determine the granularity of a fact table. For example, consider a fact table designed to store sale targets that has two dimension key columns Date and ProductKey. 
+    - It's easy to understand that the table has two dimensions. The granularity, however, can't be determined without considering the dimension key values. In this example, consider that the values stored in the Date column are the first day of each month. In this case, the granularity is at month-product level.
+
+It is also recommend to strive to deliver the **right number of tables** with the **right relationships** in place.
+
+[Learn more about the star schema and the importance for Power BI](https://docs.microsoft.com/power-bi/guidance/star-schema)
 
 ---
 
@@ -317,7 +335,15 @@ Importance of the Star Schema.
 We've been able to properly model our dataset into a proper star schema but a new requirement has come in that our data model has to be both - **near-real time** and **blazing fast**. For this we'll want to revisit our storage mode options and determine if each of our tables are configured properly.
 
 ---
-### Mixed Storage Mode
+### Mixed (Composite) Storage Mode
+---
+
+With mixed (composite) mode we can mix both Import and DirectQuery modes into a single model. Models developed in composite mode support configuring the storage mode as Import, DirectQuery, or Dual for each table.
+
+A table configured as dual storage mode is both Import and DirectQuery, depending upon the query. This allows Power BI to determine the most efficient mode to use on a query-by-query basis.
+
+[Learn more about composite mode](https://docs.microsoft.com/power-bi/connect-data/service-dataset-modes-understand#composite-mode)
+
 ---
 
 1. Within the **Model** view, we'll select the following tables listed below by holding ctrl on our keyboard, navigating to the **Properties** pane and expanding the **Advanced** options. For the **Storage mode** option select the drop down and update the selection to **Import**.
@@ -415,6 +441,23 @@ We've also learned that new information only comes in overnight and as long as t
 
 ---
 ### Import Storage Mode
+---
+
+Import mode is the most common mode used to develop datasets. This mode delivers extremely fast performance thanks to in-memory querying. It also offers design flexibility to modelers, and support for specific Power BI service features (Q&A, Quick Insights, etc.). Because of these strengths, it's the default mode when creating a new Power BI Desktop solution.
+
+It's important to understand that imported data is always stored to disk. When queried or refreshed, the data must be fully loaded into memory of the Power BI capacity. Once in memory, Import models can then achieve very fast query results. It's also important to understand that there's no concept of an Import model being partially loaded into memory.
+
+When refreshed, data is compressed and optimized and then stored to disk by the VertiPaq storage engine. When loaded from disk into memory, it's possible to see 10x compression. So, it's reasonable to expect that 10 GB of source data can compress to about 1 GB in size. Storage size on disk can achieve a 20% reduction from the compressed size. (The difference in size can be determined by comparing the Power BI Desktop file size with the Task Manager memory usage of the file.)
+
+Design flexibility can be achieved in three ways. Data modelers can:
+
+Integrate data by caching data from dataflows, and external data sources, whatever the data source type or format
+Leverage the entire set of Power Query Formula Language (informally referred to as M) functions when creating data preparation queries
+Leverage the entire set of Data Analysis Expressions (DAX) functions when enhancing the model with business logic. There's support for calculated columns, calculated tables, and measures.
+
+
+[Learn more about import mode](https://docs.microsoft.com/power-bi/connect-data/service-dataset-modes-understand#import-mode)
+
 ---
 
 1. Navigate to the model view on the side-rail.
