@@ -1,294 +1,294 @@
-EmployeeKey|ParentEmployeeKey|FirstName|LastName|MiddleName|Title|HireDate|BirthDate|EmailAddress|Phone|MaritalStatus|EmergencyContactName|EmergencyContactPhone|SalariedFlag|Gender|PayFrequency|BaseRate|VacationHours|CurrentFlag|SalesPersonFlag|DepartmentName|StartDate|EndDate|Status|StoreKey
-1|18.0|Kim|Abercrombie||Sales Region Manager|1996-07-31|1972-05-15|guy1@contoso.com|320-555-0195|M|Hazem Abolrous|320-555-0195|0|M|2|72.45|40|1|0|Production|1996-07-31||Current|251
-2|18.0|Sagiv|Hadaya||Sales Region Manager|1997-02-26|1977-06-03|kevin0@contoso.com|150-555-0189|S|Kevin Cook|150-555-0189|0|M|2|72.45|40|1|0|Marketing|1997-02-26||Current|182
-3|18.0|Luka|Abrus||Sales Region Manager|1997-12-12|1964-12-13|roberto0@contoso.com|212-555-0187|M|Ahmad Abu-Dayah|212-555-0187|1|M|2|72.45|40|1|0|Engineering|1997-12-12||Current|12
-4|18.0|Kirk|Nason|J.|Sales Region Manager|1998-01-05|1965-01-23|KirkNason@contoso.com|612-555-0100|S|Mrina Natarajan|612-555-0100|0|M|2|72.45|40|1|0|Tool Design|1998-01-05|2000-06-30||159
-5|18.0|Humberto|Acevedo||Sales Region Manager|1998-01-05|1965-01-23|Humberto@contoso.com|612-555-0100|S|Gustavo Achong|612-555-0100|0|M|2|72.45|40|1|0|Tool Design|2000-06-30||Current|10
-6|1.0|Yoichiro|Okada||Sales State Manager|1998-01-11|1949-08-29|thierry0@contoso.com|168-555-0183|M|Gerwald Oberleitner|168-555-0183|0|M|2|55.0|40|1|0|Tool Design|1998-01-11||Current|260
-7|2.0|Pilar|Ackerman||Sales State Manager|1998-01-20|1965-04-19|PilarAckerman@contoso.com|913-555-0172|S|Gudmundur Adalsteinsson|913-555-0172|1|M|2|55.0|40|1|0|Marketing|1998-01-20|1999-08-15||116
-8|3.0|Aaron|Painter|M.|Sales State Manager|1998-01-20|1965-04-19|AaronPainter@contoso.com|913-555-0172|S|Dominik Paiha|913-555-0172|1|M|2|55.0|40|1|0|Marketing|1999-08-16||Current|304
-9|4.0|Terry|Adams||Sales State Manager|1998-01-26|1946-02-16|jolynn0@contoso.com|903-555-0145|S|Michael Affronti|903-555-0145|0|F|2|55.0|40|1|0|Production|1998-01-26||Current|110
-10|5.0|David|Probst||Sales State Manager|1998-02-06|1946-07-06|ruth0@contoso.com|145-555-0130|M|Jim Ptaszynski|145-555-0130|0|F|2|55.0|40|1|0|Production|1998-02-06||Current|154
-11|1.0|Manoj|Agarwal||Sales State Manager|1998-02-06|1942-10-29|gail0@contoso.com|849-555-0139|M|Nupur Agarwal|849-555-0139|1|F|2|55.0|40|1|0|Engineering|1998-02-06||Current|17
-12|2.0|Michael|Raheem||Sales State Manager|1998-02-07|1946-04-27|barry0@contoso.com|206-555-0180|S|Amritansh Raghav|206-555-0180|0|M|2|55.0|40|1|0|Production|1998-02-07||Current|142
-13|3.0|David|Ahs||Sales State Manager|1998-02-24|1949-04-11|jossef0@contoso.com|122-555-0189|M|Hatim Aiad|122-555-0189|1|M|2|55.0|40|1|0|Engineering|1998-02-24||Current|152
-14|8.0|Miguel|Saenz||Sales Store Manager|1998-03-03|1961-09-01|terri0@contoso.com|819-555-0175|S|Peter Saddow|819-555-0175|1|F|2|25.0|40|1|0|Engineering|1998-03-03||Current|257
-15|9.0|Kim|Akers||Sales Store Manager|1998-03-05|1946-10-01|sidney0@contoso.com|424-555-0189|M|Cigdem Akin|424-555-0189|0|M|2|25.0|40|1|0|Production|1998-03-05||Current|140
-16|1.0|Kate|Taneyhill||Sales State Manager|1998-03-11|1946-05-03|taylor0@contoso.com|508-555-0165|M|Roberto Tamburello|508-555-0165|0|M|2|55.0|40|1|0|Production|1998-03-11||Current|292
-17|2.0|David|Alexander||Sales State Manager|1998-03-23|1946-08-12|jeffrey0@contoso.com|984-555-0185|S|Michael Alexander|984-555-0185|0|M|2|55.0|40|1|0|Production|1998-03-23||Current|28
-18||Pieter|Uittenbogaard||Sales Group Manager|1998-03-30|1946-11-09|jo0@contoso.com|632-555-0129|S|Sairaj Uddin|632-555-0129|0|F|2|125.0|80|1|0|'Human Resources Contral|1998-03-30||Current|296
-19|4.0|Michelle|Alexander||Sales State Manager|1998-04-11|1946-05-06|doris0@contoso.com|328-555-0150|M|Mark Alexieff|328-555-0150|0|F|2|55.0|40|1|0|Production|1998-04-11||Current|292
-20|5.0|Rene|Valdes||Sales State Manager|1998-04-18|1946-09-08|john0@contoso.com|435-555-0113|M|Szabolcs Vajda|435-555-0113|0|M|2|55.0|40|1|0|Production|1998-04-18||Current|110
-21|1.0|Michael|Allen||Sales State Manager|1998-04-29|1946-04-30|diane0@contoso.com|202-555-0151|M|Gilead Almosnino|202-555-0151|0|F|2|55.0|40|1|0|Production|1998-04-29||Current|76
-22|2.0|Rohinton|Wadia||Sales State Manager|1999-01-02|1967-06-15|steven0@contoso.com|925-555-0114|M|Roland Wacker|925-555-0114|0|M|2|55.0|40|1|0|Production|1999-01-02||Current|205
-23|3.0|Luis|Alverca||Sales State Manager|1999-01-02|1972-12-04|peter0@contoso.com|913-555-0196|M|James Alvord|913-555-0196|1|M|2|55.0|40|1|0|Production Control|1999-01-02||Current|308
-24|9.0|Ming-Yang|Xie||Sales Store Manager|1999-01-03|1952-10-14|stuart0@contoso.com|413-555-0136|S|Stig Panduro|413-555-0136|0|M|2|25.0|40|1|0|Production|1999-01-03||Current|182
-25|10.0|Antonio|Alwan||Sales Store Manager|1999-01-03|1960-11-18|greg0@contoso.com|332-555-0150|S|Kamil Amireh|332-555-0150|0|M|2|25.0|40|1|0|Production|1999-01-03||Current|139
-26|1.0|David|Yalovsky||Sales State Manager|1999-01-03|1969-12-03|david1@contoso.com|166-555-0162|S|Shmuel Yair|166-555-0162|0|M|2|55.0|40|1|0|Production|1999-01-03||Current|1
-27|2.0|Oleg|Anashkin||Sales State Manager|1999-01-04|1973-11-26|zheng0@contoso.com|113-555-0173|S|Thomas Andersen|113-555-0173|0|M|2|55.0|40|1|0|Production|1999-01-04||Current|2
-28|3.0|Marko|Zajc||Sales State Manager|1999-01-05|1972-02-04|ivo0@contoso.com|115-555-0179|M|Eugene Zabokritski|115-555-0179|0|M|2|55.0|40|1|0|Production|1999-01-05||Current|130
-29|4.0|Christen|Anderson||Sales State Manager|1999-01-05|1970-12-15|paul0@contoso.com|147-555-0160|S|Nancy Anderson|147-555-0160|0|M|2|55.0|40|1|0|Production|1999-01-05||Current|31
-30|5.0|Mike|Nash||Sales State Manager|1999-01-05|1967-04-28|ashvini0@contoso.com|656-555-0119|S|Ranjith Narayanan|656-555-0119|0|M|2|55.0|40|1|0|Information Services|1999-01-05||Current|187
-31|1.0|Diogo|Andrade||Sales State Manager|1999-01-06|1976-06-30|kendall0@contoso.com|138-555-0128|M|Joe Andreshak|138-555-0128|0|M|2|55.0|40|1|0|Production|1999-01-06||Current|62
-32|2.0|Aneta|Olecka||Sales State Manager|1999-01-07|1966-03-14|paula0@contoso.com|523-555-0175|M|Preeda Ola|523-555-0175|1|F|2|55.0|40|1|0|Human Resources|1999-01-07||Current|281
-33|3.0|Ben|Andrews||Sales State Manager|1999-01-07|1979-01-06|alejandro0@contoso.com|668-555-0130|S|Lisa Andrews|668-555-0130|0|M|2|55.0|40|1|0|Production|1999-01-07||Current|198
-34|7.0|Jae|Pak|B.|Sales Store Manager|1999-01-08|1974-09-26|garrett0@contoso.com|609-555-0179|S|Wilson Pais|609-555-0179|0|M|2|25.0|40|1|0|Production|1999-01-08||Current|15
-35|10.0|Roy|Antebi||Sales Store Manager|1999-01-08|1973-08-27|jianshuo0@contoso.com|952-555-0178|S|Johnson Apacible|952-555-0178|0|M|1|25.0|38|1|0|Production|1999-01-08||Current|156
-36|6.0|Prithvi|Raj||Sales Store Manager|1999-01-08|1968-03-20|susan0@contoso.com|943-555-0196|S|Stuart Railson|943-555-0196|0|F|1|25.0|40|1|0|Shipping and Receiving|1999-01-08||Current|185
-37|6.0|Luca|Argentiero||Sales Store Manager|1999-01-08|1967-04-19|vamsi0@contoso.com|937-555-0137|M|NeKeta Argrow|937-555-0137|0|M|2|25.0|40|1|0|Shipping and Receiving|1999-01-08||Current|72
-38|6.0|Suriya|Sajjateerakool||Sales Store Manager|1999-01-08|1968-02-27|alice0@contoso.com|333-555-0173|M|Malvin Seale|333-555-0173|0|F|1|25.0|40|1|0|Production|1999-01-08||Current|75
-39|6.0|Zainal|Arifin||Sales Store Manager|1999-01-09|1980-06-17|simon0@contoso.com|963-555-0134|S|Ravital Artman|963-555-0134|0|M|1|25.0|40|1|0|Production|1999-01-09||Current|85
-40|6.0|Amy|Strande||Sales Store Manager|1999-01-09|1979-03-09|jinghao0@contoso.com|794-555-0159|S|Anne-Mette Stoltze|794-555-0159|0|M|2|25.0|40|1|0|Production|1999-01-09||Current|275
-41|6.0|Ties|Arts||Sales Store Manager|1999-01-10|1974-12-19|michael0@contoso.com|218-555-0126|S|Dimple Arya|218-555-0126|0|M|1|25.0|40|1|0|Production|1999-01-10||Current|34
-42|6.0|Daniel|Taylor|P.|Sales Store Manager|1999-01-10|1979-05-17|yvonne0@contoso.com|286-555-0189|M|Maurice Taylor|286-555-0189|0|F|1|25.0|40|1|0|Production|1999-01-10||Current|232
-43|6.0|Ronen|Ashkenazi||Sales Store Manager|1999-01-10|1966-04-19|peng0@contoso.com|164-555-0164|M|Roya Asbari|164-555-0164|1|M|2|25.0|40|1|0|Quality Assurance|1999-01-10||Current|186
-44|6.0|Hans-Walter|Untch||Sales Store Manager|1999-01-12|1966-01-13|jean0@contoso.com|685-555-0120|S|Sunil Uppal|685-555-0120|1|F|2|25.0|40|1|0|Information Services|1999-01-12||Current|87
-45|6.0|Chris|Ashton||Sales Store Manager|1999-01-13|1962-12-27|russell0@contoso.com|786-555-0144|M|Sameer Athalye|786-555-0144|0|M|1|25.0|40|1|0|Production|1999-01-13||Current|259
-46|6.0|Michael|Vanderhyde||Sales Store Manager|1999-01-13|1958-10-19|ascott0@contoso.com|992-555-0194|S|Esther Valle|992-555-0194|0|M|2|25.0|40|1|0|Production Control|1999-01-13||Current|30
-47|6.0|Vivian|Atlas||Sales Store Manager|1999-01-13|1979-07-27|fred0@contoso.com|818-555-0192|S|Kai Axford|818-555-0192|0|M|1|25.0|40|1|0|Production|1999-01-13||Current|123
-48|6.0|Robin|Wakefield||Sales Store Manager|1999-01-13|1977-06-21|sariya0@contoso.com|399-555-0176|S|Darren Waite|399-555-0176|0|M|2|25.0|40|1|0|Marketing|1999-01-13||Current|298
-49|6.0|Anahita|Bahrami||Sales Store Manager|1999-01-14|1968-08-18|willis0@contoso.com|778-555-0141|S|Josh Bailey|778-555-0141|0|M|2|25.0|40|1|0|Human Resources|1999-01-14||Current|80
-50|6.0|Pieter|Wycoff||Sales Store Manager|1999-01-15|1969-08-06|jun0@contoso.com|299-555-0113|S|David Wright|299-555-0113|0|M|1|25.0|40|1|0|Production|1999-01-15||Current|258
-51|6.0|Dev|Balasubramanian||Sales Store Manager|1999-01-15|1966-02-18|christian0@contoso.com|846-555-0157|M|Yossi Banai|846-555-0157|1|M|2|25.0|40|1|0|Facilities and Maintenance|1999-01-15||Current|182
-52|6.0|Steven|Wright|M.|Sales Store Manager|1999-01-15|1973-05-03|susan1@contoso.com|639-555-0164|S|Makoto Yamagishi|639-555-0164|0|F|1|25.0|40|1|0|Production|1999-01-15||Current|33
-54|6.0|Eiji|Yasuda||Sales Store Manager|1999-01-16|1975-03-10|kirk0@contoso.com|669-555-0150|S|Arthur Yasinski|669-555-0150|0|M|1|25.0|40|1|0|Production|1999-01-16||Current|272
-55|6.0|Ed|Banti||Sales Store Manager|1999-01-16|1975-01-30|david2@contoso.com|712-555-0119|M|Evan Basalik|712-555-0119|0|M|1|25.0|33|1|0|Production|1999-01-16||Current|119
-56|6.0|Mrina|Natarajan||Sales Store Manager|1999-01-17|1980-05-29|tengiz0@contoso.com|910-555-0116|S|Kirk J. Nason|910-555-0116|0|M|2|25.0|76|1|0|Document Control|1999-01-17||Current|123
-57|6.0|Dave|Barnett||Sales Store Manager|1999-01-17|1964-11-16|hanying0@contoso.com|319-555-0139|S|Josh Barnhill|319-555-0139|0|M|1|25.0|15|1|0|Production|1999-01-17||Current|240
-58|6.0|Manuel|Oliveira||Sales Store Manager|1999-01-18|1976-01-26|kevin1@contoso.com|714-555-0138|S|Neil Orint|714-555-0138|0|M|1|25.0|58|1|0|Production|1999-01-18||Current|91
-59|6.0|Adam|Barr||Sales Store Manager|1999-01-18|1967-01-27|annik0@contoso.com|499-555-0125|M|Chris Barry|499-555-0125|0|M|1|25.0|17|1|0|Production|1999-01-18||Current|32
-60|7.0|Rok|Palcic||Sales Store Manager|1999-01-18|1968-03-28|suroor0@contoso.com|932-555-0161|S|Ian Palangio|932-555-0161|0|M|1|25.0|93|1|0|Production|1999-01-18||Current|96
-61|7.0|Shai|Bassli||Sales Store Manager|1999-01-19|1966-04-07|deborah0@contoso.com|602-555-0194|M|Deborah Baumfeld|602-555-0194|0|F|2|25.0|60|1|0|Finance|1999-01-19||Current|80
-62|7.0|Yossi|Ran||Sales Store Manager|1999-01-20|1976-10-09|jim0@contoso.com|679-555-0113|M|Rajesh Ramanathan|679-555-0113|0|M|1|25.0|1|1|0|Production|1999-01-20||Current|110
-63|7.0|Shaun|Beasley||Sales Store Manager|1999-01-20|1973-11-19|carole0@contoso.com|688-555-0192|M|Mark Bebbington|688-555-0192|0|F|1|25.0|42|1|0|Production|1999-01-20||Current|131
-64|7.0|Karolina|Salas-Szlejter||Sales Store Manager|1999-01-22|1967-05-18|george0@contoso.com|518-555-0199|M|Tamer Salah|518-555-0199|0|M|1|25.0|26|1|0|Production|1999-01-22||Current|138
-65|7.0|Anna|Bedecs||Sales Store Manager|1999-01-23|1978-06-17|gary0@contoso.com|901-555-0125|S|Parry Bedi|901-555-0125|0|M|1|25.0|69|1|0|Production|1999-01-23||Current|33
-66|7.0|Oliver|Szimmetat||Sales Store Manager|1999-01-23|1974-05-13|cristian0@contoso.com|434-555-0133|M|Radoslaw Szymczak|434-555-0133|0|M|2|25.0|67|1|0|Production|1999-01-23||Current|134
-67|7.0|Ann|Beebe||Sales Store Manager|1999-01-24|1957-04-02|raymond0@contoso.com|226-555-0197|M|Kostadin Belishky|226-555-0197|0|M|1|25.0|10|1|0|Production|1999-01-24||Current|84
-68|7.0|Jeff|Teper||Sales Store Manager|1999-01-24|1975-03-03|janaina0@contoso.com|623-555-0155|M|Rakesh Tangirala|623-555-0155|1|F|2|25.0|71|1|0|Information Services|1999-01-24||Current|146
-69|7.0|Allie|Bellew||Sales Store Manager|1999-01-25|1969-09-16|bob0@contoso.com|611-555-0116|S|Almudena Benito|611-555-0116|0|M|1|25.0|12|1|0|Production|1999-01-25||Current|154
-70|7.0|Siri|Velauthapillai||Sales Store Manager|1999-01-25|1970-11-05|shammi0@contoso.com|793-555-0179|M|Garrett Vargas|793-555-0179|0|M|1|25.0|66|1|0|Production|1999-01-25||Current|209
-71|7.0|Nuno|Bento||Sales Store Manager|1999-01-26|1977-08-17|linda0@contoso.com|612-555-0171|M|Karen Berg|612-555-0171|0|F|1|25.0|96|1|0|Production|1999-01-26||Current|234
-72|7.0|Anne|Wallace||Sales Store Manager|1999-01-26|1974-12-22|mindy0@contoso.com|522-555-0147|M|Larry Waldman|522-555-0147|0|F|2|25.0|51|1|0|Human Resources|1999-01-26||Current|196
-73|7.0|Matt|Berg||Sales Store Manager|1999-01-26|1974-11-12|wendy0@contoso.com|248-555-0134|S|Martin Berka|248-555-0134|1|F|2|25.0|55|1|0|Finance|1999-01-26||Current|199
-74|7.0|John|Yokim||Sales Store Manager|1999-01-27|1974-06-01|kim0@contoso.com|309-555-0129|S|Norimichi Yonekura|309-555-0129|0|F|1|25.0|98|1|0|Shipping and Receiving|1999-01-27||Current|187
-75|7.0|Antonio|Bermejo||Sales Store Manager|1999-01-27|1965-12-06|sandra0@contoso.com|896-555-0168|M|Matthias Berndt|896-555-0168|0|F|1|25.0|37|1|0|Production|1999-01-27||Current|242
-76|7.0|Robert|Zare||Sales Store Manager|1999-01-28|1970-05-30|kok-ho0@contoso.com|999-555-0155|S|Amr Zaki|999-555-0155|0|M|2|25.0|78|1|0|Production|1999-01-28||Current|283
-77|8.0|Michael|Berroth||Sales Store Manager|1999-01-28|1975-12-26|douglas0@contoso.com|808-555-0172|M|Dana Birkby|808-555-0172|0|M|1|25.0|80|1|0|Production|1999-01-28||Current|88
-79|8.0|Jimmy|Bischoff||Sales Store Manager|1999-01-29|1966-04-07|sean0@contoso.com|420-555-0173|S|Scott Bishop|420-555-0173|0|M|2|25.0|82|1|0|Quality Assurance|1999-01-29||Current|92
-80|8.0|Michael|Neipper||Sales Store Manager|1999-01-29|1977-01-01|nitin0@contoso.com|143-555-0173|S|Jeremy Nelson|143-555-0173|0|M|1|25.0|21|1|0|Production|1999-01-29||Current|43
-81|8.0|Ari|Bixhorn||Sales Store Manager|1999-01-30|1976-07-06|diane1@contoso.com|815-555-0138|S|Neil Black|815-555-0138|1|F|2|25.0|62|1|0|Research and Development|1999-01-30||Current|8
-82|8.0|Paulo|Neves||Sales Store Manager|1999-01-30|1967-08-11|rebecca0@contoso.com|314-555-0113|M|Belinda Newman|314-555-0113|0|F|1|25.0|23|1|0|Production|1999-01-30||Current|266
-83|8.0|Rex|Bloesser||Sales Store Manager|1999-02-01|1967-11-05|rajesh0@contoso.com|373-555-0137|M|Nikhil Bobde|373-555-0137|0|M|1|25.0|48|1|0|Production|1999-02-01||Current|223
-84|8.0|Aaron|Nicholls||Sales Store Manager|1999-02-02|1974-09-02|vidur0@contoso.com|153-555-0186|S|Chad Niswonger|153-555-0186|0|M|2|25.0|50|1|0|Human Resources|1999-02-02||Current|230
-85|8.0|Tomasz|Bochenek||Sales Store Manager|1999-02-02|1968-07-01|john1@contoso.com|172-555-0130|S|Catherine Boeger|172-555-0130|0|M|1|25.0|91|1|0|Production|1999-02-02||Current|261
-86|8.0|Toby|Nixon||Sales Store Manager|1999-02-03|1978-12-21|nancy0@contoso.com|970-555-0118|M|Elly Nkya|970-555-0118|0|F|1|25.0|34|1|0|Production|1999-02-03||Current|267
-87|8.0|Corinna|Bolender||Sales Store Manager|1999-02-03|1962-10-11|pilar0@contoso.com|577-555-0185|S|Srikanth Bolisetty|577-555-0185|1|M|2|25.0|93|1|0|Shipping and Receiving|1999-02-03||Current|124
-88|8.0|Fabricio|Noriega||Sales Store Manager|1999-02-03|1971-09-04|david3@contoso.com|373-555-0142|S|Chris Norred|373-555-0142|0|M|1|25.0|32|1|0|Production|1999-02-03||Current|305
-89|8.0|Raffaella|Bonaldi||Sales Store Manager|1999-02-04|1973-08-02|david4@contoso.com|986-555-0177|S|Luis Bonifaz|986-555-0177|0|M|2|25.0|73|1|0|Production|1999-02-04||Current|242
-90|8.0|Jerry|Orman||Sales Store Manager|1999-02-04|1971-01-26|laura0@contoso.com|777-555-0141|S|Tad Orman|777-555-0141|0|F|1|25.0|75|1|0|Production|1999-02-04||Current|307
-91|8.0|Laurent|Bonnet||Sales Store Manager|1999-02-05|1976-06-20|margie0@contoso.com|818-555-0128|M|Randall Boseman|818-555-0128|0|F|1|25.0|18|1|0|Production|1999-02-05||Current|196
-92|8.0|Danni|Ortman||Sales Store Manager|1999-02-05|1966-03-02|zainal0@contoso.com|204-555-0115|M|Jon Orton|204-555-0115|0|M|2|25.0|77|1|0|Document Control|1999-02-05||Current|95
-93|8.0|Thomas|Bouchard||Sales Store Manager|1999-02-05|1978-12-28|lorraine0@contoso.com|845-555-0184|M|Eli Bowen|845-555-0184|0|F|1|25.0|49|1|0|Production|1999-02-05||Current|112
-94|8.0|Scott|Oveson||Sales Store Manager|1999-02-05|1979-03-19|fadi0@contoso.com|935-555-0116|S|Inna Ozhogina|935-555-0116|0|M|1|25.0|16|1|0|Production|1999-02-05||Current|135
-95|8.0|Marc|Boyer||Sales Store Manager|1999-02-06|1962-07-15|ryan0@contoso.com|208-555-0114|M|Jonas Brandel|208-555-0114|0|M|1|25.0|59|1|0|Production|1999-02-06||Current|83
-96|8.0|Tude|Palma||Sales Store Manager|1999-02-07|1966-03-26|candy0@contoso.com|920-555-0177|S|Prakash Paramasivam|920-555-0177|0|F|2|25.0|61|1|0|Finance|1999-02-07||Current|24
-97|8.0|Peter|Bankov||Sales Store Manager|1999-02-07|1969-04-29|nuan0@contoso.com|913-555-0184|S|Dushyant Bansal|913-555-0184|0|M|1|25.0|2|1|0|Production|1999-02-07||Current|41
-98|8.0|Dan|Park||Sales Store Manager|1999-02-08|1971-12-08|DanPark@contoso.com|148-555-0145|M|Darren Parker|148-555-0145|0|M|2|25.0|45|1|0|Production Control|1999-02-08|2001-10-01||61
-99|8.0|Bryan|Bredehoeft||Sales Store Manager|1999-02-08|1971-12-08|BryanB@contoso.com|148-555-0145|M|Peter Brehm|148-555-0145|0|M|2|25.0|45|1|0|Production Control|2001-10-02||Current|103
-100|8.0|Rajesh|Patel|M.|Sales Store Manager|1999-02-08|1979-12-08|bjorn0@contoso.com|199-555-0117|S|Sanjay Patel|199-555-0117|0|M|1|25.0|43|1|0|Production|1999-02-08||Current|50
-101|8.0|Alan|Brewer||Sales Store Manager|1999-02-09|1977-03-13|scott0@contoso.com|391-555-0138|M|Markus Breyer|391-555-0138|0|M|1|25.0|86|1|0|Production|1999-02-09||Current|267
-102|8.0|Dorena|Paschke||Sales Store Manager|1999-02-11|1981-02-04|michael1@contoso.com|454-555-0119|S|Michael Patten|454-555-0119|0|M|1|25.0|70|1|0|Production|1999-02-11||Current|291
-103|8.0|Nick|Brigandi||Sales Store Manager|1999-02-12|1964-10-24|lane0@contoso.com|200-555-0117|M|David Bristol|200-555-0117|0|M|1|25.0|11|1|0|Production|1999-02-12||Current|140
-104|8.0|Leonids|Paturskis||Sales Store Manager|1999-02-12|1967-03-07|pete0@contoso.com|768-555-0123|S|Flemming Pedersen|768-555-0123|0|M|1|25.0|13|1|0|Production|1999-02-12||Current|1
-105|8.0|Allison|Brown||Sales Store Manager|1999-02-12|1971-07-28|dan0@contoso.com|166-555-0159|M|Jed Brown|166-555-0159|1|M|2|25.0|72|1|0|Information Services|1999-02-12||Current|212
-106|8.0|Yael|Peled||Sales Store Manager|1999-02-13|1954-07-23|david5@contoso.com|477-555-0132|S|Laurent Penisson|477-555-0132|0|M|2|25.0|56|1|0|Finance|1999-02-13||Current|245
-107|8.0|Robert|Brown||Sales Store Manager|1999-02-13|1963-02-25|lolan0@contoso.com|582-555-0178|M|Scott Brown|582-555-0178|0|M|1|25.0|7|1|0|Production|1999-02-13||Current|308
-108|8.0|Lori|Penor||Sales Store Manager|1999-02-13|1977-03-13|paula1@contoso.com|476-555-0119|M|Lionel Penuchot|476-555-0119|0|F|1|25.0|54|1|0|Production|1999-02-13||Current|285
-109|8.0|Daniel|Brunner||Sales Store Manager|1999-02-13|1952-10-14|mary0@contoso.com|531-555-0183|M|Chloe Brussard|531-555-0183|0|F|2|25.0|46|1|0|Marketing|1999-02-13||Current|283
-110|9.0|Michel|Pereira||Sales Store Manager|1999-02-14|1968-06-07|mindaugas0@contoso.com|637-555-0120|M|Tom Perham|637-555-0120|0|M|1|25.0|97|1|0|Production|1999-02-14||Current|293
-111|9.0|Chris|Bryant||Sales Store Manager|1999-02-15|1975-02-20|eric0@contoso.com|260-555-0119|M|Susan Burk|260-555-0119|0|M|2|25.0|40|1|0|Production|1999-02-15||Current|209
-112|9.0|Wirote|Petchdenlarp||Sales Store Manager|1999-02-15|1959-03-02|ken0@contoso.com|697-555-0142|S|Cristian Petculescu|697-555-0142|1|M|2|25.0|99|1|0|Executive|1999-02-15||Current|276
-113|9.0|Brian|Burke||Sales Store Manager|1999-02-15|1979-01-08|jason0@contoso.com|571-555-0179|S|Ovidiu Burlacu|571-555-0179|0|M|1|25.0|38|1|0|Production|1999-02-15||Current|100
-114|9.0|Palle|Petersen||Sales Store Manager|1999-02-16|1976-05-31|mark0@contoso.com|147-555-0179|S|Pierangela Pezzini|147-555-0179|0|M|2|25.0|83|1|0|Quality Assurance|1999-02-16||Current|297
-115|9.0|Tzipi|Butnaru||Sales Store Manager|1999-02-16|1962-08-25|janeth0@contoso.com|540-555-0191|S|Dennis Bye|540-555-0191|0|F|1|25.0|81|1|0|Production|1999-02-16||Current|124
-116|9.0|Terrence|Philip||Sales Store Manager|1999-02-17|1976-11-24|marc0@contoso.com|234-555-0169|M|Jeff Phillips|234-555-0169|0|M|1|25.0|22|1|0|Production|1999-02-17||Current|110
-117|9.0|Rick|Byham||Sales Store Manager|1999-02-17|1969-02-21|gigi0@contoso.com|185-555-0186|M|Randy Byrne|185-555-0186|1|F|2|25.0|63|1|0|Research and Development|1999-02-17||Current|29
-118|9.0|Michal|Piaseczny||Sales Store Manager|1999-02-18|1980-12-05|paul1@contoso.com|727-555-0112|M|Guido Pica|727-555-0112|0|M|1|25.0|6|1|0|Production|1999-02-18||Current|194
-119|9.0|Reina|Cabatana||Sales Store Manager|1999-02-18|1977-10-07|frank0@contoso.com|158-555-0191|M|Ryan Calafato|158-555-0191|0|M|1|25.0|56|1|0|Production|1999-02-18||Current|19
-120|9.0|Pilar|Pinilla||Sales Store Manager|1999-02-18|1965-06-17|françois0@contoso.com|785-555-0110|S|Armando Pinto|785-555-0110|1|M|2|25.0|67|1|0|Information Services|1999-02-18||Current|264
-121|9.0|Iulian|Calinov||Sales Store Manager|1999-02-19|1979-09-10|diane2@contoso.com|361-555-0180|S|Geert Camelbeke|361-555-0180|0|F|1|25.0|8|1|0|Production|1999-02-19||Current|270
-122|9.0|Tanja|Plate||Sales Store Manager|1999-02-19|1969-07-19|jill0@contoso.com|510-555-0121|M|Idan Plonsky|510-555-0121|0|F|2|25.0|47|1|0|Marketing|1999-02-19||Current|83
-123|9.0|Maria|Cameron||Sales Store Manager|1999-02-21|1981-07-01|angela0@contoso.com|150-555-0194|S|David Campbell|150-555-0194|0|F|1|25.0|92|1|0|Production|1999-02-21||Current|147
-124|9.0|Ekaterina|Podkolzina||Sales Store Manager|1999-02-21|1963-12-13|matthias0@contoso.com|139-555-0120|M|Toni Poe|139-555-0120|0|M|2|25.0|94|1|0|Shipping and Receiving|1999-02-21||Current|231
-125|9.0|Jamie|Campbell||Sales Store Manager|1999-02-22|1963-09-28|bryan0@contoso.com|712-555-0113|S|Fabrice Canel|712-555-0113|0|M|1|25.0|35|1|0|Production|1999-02-22||Current|300
-126|9.0|Grigory|Pogulsky||Sales Store Manager|1999-02-22|1967-02-16|jeff0@contoso.com|350-555-0167|M|Carole Poland|350-555-0167|0|M|2|25.0|74|1|0|Production|1999-02-22||Current|42
-127|9.0|Paul|Cannon||Sales Store Manager|1999-02-22|1977-08-15|eugene0@contoso.com|241-555-0191|S|Jon Cantrell|241-555-0191|0|M|1|25.0|33|1|0|Production|1999-02-22||Current|155
-128|9.0|Josh|Pollock||Sales Store Manager|1999-02-23|1969-08-02|barbara0@contoso.com|119-555-0192|M|Laura Steele Polly|119-555-0192|0|F|1|25.0|17|1|0|Production|1999-02-23||Current|205
-129|9.0|Cyril|Carbonati||Sales Store Manager|1999-02-23|1979-01-17|chris0@contoso.com|200-555-0112|M|Richard Carey|200-555-0112|0|M|1|25.0|76|1|0|Production|1999-02-23||Current|188
-130|9.0|Cristina|Potra||Sales Store Manager|1999-02-23|1977-04-12|sean1@contoso.com|205-555-0132|S|Houman Pournasseh|205-555-0132|0|M|2|25.0|78|1|0|Document Control|1999-02-23||Current|57
-131|9.0|Jason|Carlson||Sales Store Manager|1999-02-23|1966-02-06|dan1@contoso.com|653-555-0144|M|Ty Carlson|653-555-0144|1|M|2|25.0|66|1|0|Information Services|1999-02-23||Current|185
-132|9.0|Chris|Preston||Sales Store Manager|1999-02-24|1969-10-26|mark1@contoso.com|417-555-0154|S|Jeff Price|417-555-0154|0|M|1|25.0|19|1|0|Production|1999-02-24||Current|52
-133|9.0|Fernando|Caro||Sales Store Manager|1999-02-25|1974-10-22|bryan1@contoso.com|935-555-0199|S|Rob Caron|935-555-0199|0|M|2|25.0|62|1|0|Finance|1999-02-25||Current|221
-134|9.0|Vishwa|Ranjan||Sales Store Manager|1999-02-26|1961-09-30|houman0@contoso.com|180-555-0136|M|Markus Rankenburg|180-555-0136|0|M|1|25.0|3|1|0|Production|1999-02-26||Current|182
-135|9.0|Chase|Carpenter||Sales Store Manager|1999-02-27|1978-01-22|sairaj0@contoso.com|500-555-0159|M|Adam Carter|500-555-0159|0|M|2|25.0|46|1|0|Production Control|1999-02-27||Current|185
-136|9.0|Arvind|Rao|B.|Sales Store Manager|1999-02-27|1972-07-28|michiko0@contoso.com|984-555-0148|S|Rui Raposo|984-555-0148|0|M|1|25.0|44|1|0|Production|1999-02-27||Current|262
-137|9.0|Carlos|Carvallo||Sales Store Manager|1999-02-28|1976-02-06|benjamin0@contoso.com|533-555-0111|S|Rob Cason|533-555-0111|0|M|1|25.0|28|1|0|Production|1999-02-28||Current|299
-138|9.0|Morten|Rasmussen||Sales Store Manager|1999-02-28|1971-09-19|cynthia0@contoso.com|352-555-0138|S|Andrew Rath|352-555-0138|0|F|2|25.0|69|1|0|Production|1999-02-28||Current|194
-139|9.0|Gitte|Casparij||Sales Store Manager|1999-02-28|1980-12-02|kathie0@contoso.com|446-555-0118|M|Joao Casqueiro|446-555-0118|0|F|1|25.0|87|1|0|Production|1999-02-28||Current|89
-140|9.0|Mike|Ray||Sales Store Manager|1999-03-02|1979-10-30|britta0@contoso.com|955-555-0169|M|Rodrigo Ready|955-555-0169|0|F|1|25.0|14|1|0|Production|1999-03-02||Current|1
-141|9.0|Giorgio|Cavaglieri||Sales Store Manager|1999-03-02|1967-03-14|brian0@contoso.com|110-555-0182|S|Matt Cavallari|110-555-0182|0|M|1|25.0|55|1|0|Production|1999-03-02||Current|52
-142|9.0|April|Reagan||Sales Store Manager|1999-03-03|1973-08-08|david6@contoso.com|646-555-0185|M|Jamie Reding|646-555-0185|1|M|2|25.0|57|1|0|Finance|1999-03-03||Current|201
-143|9.0|Luisa|Cazzaniga||Sales Store Manager|1999-03-04|1966-02-06|LuisaC@contoso.com|615-555-0110|M|Ural Cebeci|615-555-0110|1|F|2|25.0|0|1|0|Executive|1999-03-04|2003-12-15||82
-144|9.0|Barak|Regev||Sales Store Manager|1999-03-04|1966-02-06|BarakR@contoso.com|615-555-0110|M|Miles Reid|615-555-0110|1|F|2|25.0|0|1|0|Executive|2003-12-15||Current|286
-145|9.0|Sean|Chai||Sales Store Manager|1999-03-04|1964-06-03|michael2@contoso.com|441-555-0195|S|Gareth Chan|441-555-0195|0|M|1|25.0|98|1|0|Production|1999-03-04||Current|150
-146|9.0|Enoch|Remick|T.|Sales Store Manager|1999-03-04|1973-11-20|andy0@contoso.com|118-555-0110|M|Olivier Renaud|118-555-0110|0|M|1|25.0|39|1|0|Production|1999-03-04||Current|307
-147|9.0|Greg|Chapman||Sales Store Manager|1999-03-05|1967-05-08|yuhong0@contoso.com|965-555-0155|M|Mathew Charles|965-555-0155|0|M|2|25.0|41|1|0|Production|1999-03-05||Current|244
-148|9.0|Bjorn|Rettig||Sales Store Manager|1999-03-06|1975-04-01|robert0@contoso.com|589-555-0147|S|Delphine Ribaute|589-555-0147|0|M|1|25.0|82|1|0|Production|1999-03-06||Current|17
-149|9.0|Neil|Charney||Sales Store Manager|1999-03-06|1979-04-29|andreas0@contoso.com|181-555-0124|M|Mohammad Chami|181-555-0124|0|M|2|25.0|84|1|0|Quality Assurance|1999-03-06||Current|190
-150|9.0|Don|Richardson||Sales Store Manager|1999-03-06|1979-02-09|reed0@contoso.com|678-555-0110|M|Shawn Richardson|678-555-0110|0|M|1|25.0|23|1|0|Production|1999-03-06||Current|23
-151|9.0|Ankur|Chavda||Sales Store Manager|1999-03-07|1967-11-06|linda1@contoso.com|696-555-0157|S|Francisco Chaves|696-555-0157|0|F|1|25.0|12|1|0|Production|1999-03-07||Current|43
-152|9.0|Wendy|Richardson||Sales Store Manager|1999-03-07|1973-02-07|james1@contoso.com|870-555-0122|S|Jack S. Richins|870-555-0122|1|M|2|25.0|64|1|0|Production|1999-03-07||Current|83
-153|9.0|Aik|Chen||Sales Store Manager|1999-03-07|1978-04-14|ramesh0@contoso.com|182-555-0134|S|Jacky Chen|182-555-0134|1|M|2|25.0|73|1|0|Information Services|1999-03-07||Current|207
-154|9.0|Anders|Riis||Sales Store Manager|1999-03-08|1974-04-26|stephanie0@contoso.com|594-555-0110|S|Bjarne Riis|594-555-0110|1|F|2|25.0|68|1|0|Information Services|1999-03-08||Current|201
-155|9.0|Jeff|Chia||Sales Store Manager|1999-03-08|1977-12-23|samantha0@contoso.com|587-555-0114|M|Martin Chisholm|587-555-0114|0|F|1|25.0|7|1|0|Production|1999-03-08||Current|296
-156|9.0|Titti|Ringstrom||Sales Store Manager|1999-03-09|1979-12-12|tawana0@contoso.com|368-555-0113|S|Juan-Carlos Rivas|368-555-0113|0|M|1|25.0|50|1|0|Production|1999-03-09||Current|75
-157|9.0|Michal|Chmiela||Sales Store Manager|1999-03-09|1978-08-07|denise0@contoso.com|869-555-0119|M|Manish Chopra|869-555-0119|0|F|1|25.0|9|1|0|Production|1999-03-09||Current|215
-158|9.0|John|Rodman||Sales Store Manager|1999-03-10|1967-05-19|hao0@contoso.com|806-555-0136|S|Scott Rockfeld|806-555-0136|0|M|2|25.0|52|1|0|Human Resources|1999-03-10||Current|258
-159|9.0|Ray|Chow||Sales Store Manager|1999-03-12|1980-05-14|alex0@contoso.com|819-555-0198|M|Terri Chudzik|819-555-0198|0|M|1|25.0|77|1|0|Production|1999-03-12||Current|83
-160|9.0|Don|Roessler||Sales Store Manager|1999-03-12|1966-03-13|eugene1@contoso.com|173-555-0179|S|Marek Rolecki|173-555-0179|0|M|1|25.0|36|1|0|Production|1999-03-12||Current|146
-161|9.0|Alice|Ciccu||Sales Store Manager|1999-03-12|1967-02-11|brandon0@contoso.com|429-555-0137|M|Ken Circeo|429-555-0137|0|M|1|25.0|22|1|0|Production|1999-03-12||Current|235
-162|9.0|Kelly|Rollin||Sales Store Manager|1999-03-12|1977-03-27|dylan0@contoso.com|181-555-0156|M|Daniel Roman|181-555-0156|1|M|2|25.0|61|1|0|Research and Development|1999-03-12||Current|80
-163|9.0|Izak|Cohen||Sales Store Manager|1999-03-12|1980-06-24|shane0@contoso.com|810-555-0178|S|Pat Coleman|810-555-0178|0|M|2|25.0|75|1|0|Production|1999-03-12||Current|254
-164|9.0|Daniel|Roth||Sales Store Manager|1999-03-13|1976-05-06|john2@contoso.com|201-555-0163|M|Tali Roth|201-555-0163|0|M|1|25.0|18|1|0|Production|1999-03-13||Current|241
-165|9.0|Aaron|Con||Sales Store Manager|1999-03-13|1966-01-25|karen0@contoso.com|746-555-0164|M|Peter Connelly|746-555-0164|0|F|2|25.0|79|1|0|Document Control|1999-03-13||Current|76
-166|9.0|Pablo|Rovira Diez||Sales Store Manager|1999-03-14|1974-09-01|jose0@contoso.com|587-555-0115|M|Todd Rowe|587-555-0115|0|M|1|25.0|20|1|0|Production|1999-03-14||Current|186
-167|9.0|Kevin|Cook||Sales Store Manager|1999-03-14|1976-04-21|mandar0@contoso.com|140-555-0132|S|Jeroen Cool|140-555-0132|0|M|1|25.0|0|1|0|Production|1999-03-14||Current|261
-168|9.0|Erik|Rucker||Sales Store Manager|1999-03-14|1974-09-18|mikael0@contoso.com|309-555-0170|S|Raimonds Rudmanis|309-555-0170|0|M|2|25.0|59|1|0|Purchasing|1999-03-14||Current|50
-169|9.0|Jim|Corbin||Sales Store Manager|1999-03-15|1968-07-27|sameer0@contoso.com|990-555-0172|M|Michel Cordani|990-555-0172|0|M|1|25.0|4|1|0|Production|1999-03-15||Current|306
-170|9.0|Michael|Ruggiero||Sales Store Manager|1999-03-15|1967-03-18|dragan0@contoso.com|117-555-0185|M|Christian Rytt|117-555-0185|0|M|2|25.0|63|1|0|Finance|1999-03-15||Current|66
-171|9.0|Cecilia|Cornejo||Sales Store Manager|1999-03-16|1978-11-18|carol0@contoso.com|609-555-0153|M|Eva Corets|609-555-0153|0|F|1|25.0|45|1|0|Production|1999-03-16||Current|7
-172|9.0|Sharon|Salavaria||Sales Store Manager|1999-03-17|1963-09-05|rob1@contoso.com|238-555-0116|S|Raymond Sam|238-555-0116|0|M|1|25.0|71|1|0|Production|1999-03-17||Current|64
-173|9.0|Robin|Counts||Sales Store Manager|1999-03-17|1961-07-14|don0@contoso.com|100-555-0174|M|Jack Creasey|100-555-0174|0|M|1|25.0|88|1|0|Production|1999-03-17||Current|18
-174|9.0|Ken|Sánchez||Sales Store Manager|1999-03-17|1974-04-30|alan0@contoso.com|438-555-0172|M|Yolanda Sánchez|438-555-0172|0|M|2|25.0|47|1|0|Production Control|1999-03-17||Current|185
-175|9.0|Ioan|Crisiarcu||Sales Store Manager|1999-03-18|1975-10-25|david7@contoso.com|118-555-0177|M|Grant Culbertson|118-555-0177|0|M|1|25.0|29|1|0|Production|1999-03-18||Current|190
-176|9.0|Mandar|Samant||Sales Store Manager|1999-03-19|1980-11-07|baris0@contoso.com|164-555-0114|S|Prasanna Samarawickrama|164-555-0114|0|M|1|25.0|72|1|0|Production|1999-03-19||Current|240
-177|9.0|Scott|Culp||Sales Store Manager|1999-03-19|1979-03-02|michael3@contoso.com|156-555-0199|S|Conor Cunningham|156-555-0199|0|M|2|25.0|70|1|0|Production|1999-03-19||Current|183
-178|9.0|Patrick|Sands||Sales Store Manager|1999-03-19|1981-05-07|steve0@contoso.com|712-555-0170|S|Dubravka Salopek|712-555-0170|0|M|1|25.0|31|1|0|Production|1999-03-19||Current|118
-179|9.0|Pawel|Czernek||Sales Store Manager|1999-03-20|1977-07-11|suchitra0@contoso.com|753-555-0129|M|Wojciech Czupta|753-555-0129|0|F|1|25.0|15|1|0|Production|1999-03-20||Current|176
-180|9.0|Mark|Sargent||Sales Store Manager|1999-03-20|1968-06-19|karen1@contoso.com|654-555-0177|S|Esko Sario|654-555-0177|1|F|2|25.0|74|1|0|Information Services|1999-03-20||Current|257
-181|9.0|Apurva|Dalia||Sales Store Manager|1999-03-20|1975-01-09|terrence0@contoso.com|110-555-0115|S|Ofer Daliot|110-555-0115|0|M|1|25.0|13|1|0|Production|1999-03-20||Current|231
-182|9.0|Tihomir|Sasic||Sales Store Manager|1999-03-22|1966-02-04|barbara1@contoso.com|822-555-0145|M|Raman Sarin|822-555-0145|1|F|2|25.0|58|1|0|Finance|1999-03-22||Current|123
-183|9.0|Jim|Daly||Sales Store Manager|1999-03-22|1980-09-04|chad0@contoso.com|559-555-0175|M|Ryan Danner|559-555-0175|0|M|1|25.0|99|1|0|Production|1999-03-22||Current|245
-184|9.0|Michiyo|Sato||Sales Store Manager|1999-03-23|1967-10-15|rostislav0@contoso.com|751-555-0134|M|Naoki Sato|751-555-0134|0|M|1|25.0|40|1|0|Production|1999-03-23||Current|301
-185|9.0|Mike|Danseglio||Sales Store Manager|1999-03-24|1959-10-19|belinda0@contoso.com|319-555-0126|S|Alex Darrow|319-555-0126|0|F|1|25.0|83|1|0|Production|1999-03-24||Current|223
-186|9.0|Rimvydas|Saulis||Sales Store Manager|1999-03-24|1974-12-20|katie0@contoso.com|809-555-0133|S|Kazuki Sawanoi|809-555-0133|0|F|2|25.0|42|1|0|Production|1999-03-24||Current|223
-187|9.0|Shannon|Dascher||Sales Store Manager|1999-03-25|1972-03-14|russell1@contoso.com|517-555-0122|M|Velimir Davidovski|517-555-0122|0|M|1|25.0|24|1|0|Production|1999-03-25||Current|70
-188|9.0|George|Schaller||Sales Store Manager|1999-03-25|1973-07-23|jack0@contoso.com|552-555-0111|S|Gary Schare|552-555-0111|0|M|2|25.0|68|1|0|Production|1999-03-25||Current|24
-189|9.0|Andrew|Davis||Sales Store Manager|1999-03-26|1978-10-08|andrew0@contoso.com|908-555-0159|S|Sara Davis|908-555-0159|0|M|2|25.0|65|1|0|Production|1999-03-26||Current|102
-190|9.0|Rainer|Schiller||Sales Store Manager|1999-03-26|1976-05-10|nicole0@contoso.com|508-555-0129|M|Janet Schorr|508-555-0129|0|F|1|25.0|67|1|0|Production|1999-03-26||Current|63
-191|9.0|Eric|Davison||Sales Store Manager|1999-03-27|1961-08-24|frank1@contoso.com|167-555-0139|S|Marlowe Dayley|167-555-0139|0|M|1|25.0|10|1|0|Production|1999-03-27||Current|159
-192|9.0|Boris|Scholl||Sales Store Manager|1999-03-27|1970-06-29|peter1@contoso.com|310-555-0133|S|Thorsten Scholl|310-555-0133|0|M|2|25.0|69|1|0|Information Services|1999-03-27||Current|276
-193|9.0|Denis|Dehenne||Sales Store Manager|1999-03-27|1964-10-06|anibal0@contoso.com|106-555-0120|S|Aidan Delaney|106-555-0120|0|F|1|25.0|8|1|0|Production|1999-03-27||Current|228
-194|9.0|Andreas|Schou||Sales Store Manager|1999-03-28|1971-06-29|ken1@contoso.com|949-555-0174|M|Steve Schmidt|949-555-0174|0|M|1|25.0|51|1|0|Production|1999-03-28||Current|139
-195|9.0|Axel|Delgado||Sales Store Manager|1999-03-29|1966-05-18|grant0@contoso.com|955-555-0131|S|Eduard Dell|955-555-0131|0|M|2|25.0|66|1|0|Human Resources|1999-03-29||Current|104
-196|9.0|Miguel|Severino||Sales Store Manager|1999-03-29|1979-07-17|michael4@contoso.com|817-555-0186|S|James Seymour|817-555-0186|0|M|1|25.0|94|1|0|Production|1999-03-29||Current|193
-197|10.0|Luca|Dellamore||Sales Store Manager|1999-03-30|1978-04-15|lionel0@contoso.com|450-555-0152|S|Stephen Deming|450-555-0152|0|M|1|25.0|78|1|0|Production|1999-03-30||Current|277
-198|10.0|Jill|Shrader||Sales Store Manager|1999-03-30|1976-02-11|thomas0@contoso.com|278-555-0118|M|Shish Shridhar|278-555-0118|0|M|1|25.0|37|1|0|Production|1999-03-30||Current|297
-199|10.0|Molly|Dempsey||Sales Store Manager|1999-03-30|1975-06-05|jimmy0@contoso.com|927-555-0168|M|Bruno Denuit|927-555-0168|0|M|1|25.0|96|1|0|Shipping and Receiving|1999-03-30||Current|168
-200|10.0|Alexandre|Silva||Sales Store Manager|1999-03-30|1972-10-19|michael5@contoso.com|296-555-0121|M|Edmund Silva|296-555-0121|0|M|1|25.0|35|1|0|Production|1999-03-30||Current|36
-201|10.0|Prashanth|Desai||Sales Store Manager|1999-03-30|1970-08-19|lori0@contoso.com|289-555-0196|S|Shane DeSeranno|289-555-0196|0|F|2|25.0|76|1|0|Production|1999-03-30||Current|43
-202|10.0|Alex|Simmons|J.|Sales Store Manager|1999-04-01|1964-09-21|arvind0@contoso.com|848-555-0163|M|Britta Simon|848-555-0163|0|M|2|25.0|60|1|0|Purchasing|1999-04-01||Current|50
-203|10.0|Michael|DeVoe||Sales Store Manager|1999-04-01|1966-01-21|stefen0@contoso.com|165-555-0113|S|Craig Dewar|165-555-0113|0|M|1|25.0|19|1|0|Production|1999-04-01||Current|304
-204|10.0|David|Simpson||Sales Store Manager|1999-04-01|1967-11-27|hazem0@contoso.com|869-555-0125|S|Katherine Simpson|869-555-0125|1|M|2|25.0|80|1|0|Quality Assurance|1999-04-01||Current|277
-205|10.0|Cari|Dick||Sales Store Manager|1999-04-02|1969-04-09|janet0@contoso.com|393-555-0186|M|Holly Dickson|393-555-0186|0|F|2|25.0|64|1|0|Finance|1999-04-02||Current|21
-206|10.0|Ashima|Singhal||Sales Store Manager|1999-04-03|1980-02-26|elizabeth0@contoso.com|318-555-0137|M|Soumya Singhi|318-555-0137|0|F|1|25.0|5|1|0|Production|1999-04-03||Current|202
-207|10.0|Cliff|Didcock||Sales Store Manager|1999-04-03|1976-03-07|terry0@contoso.com|138-555-0118|M|Andrew Dixon|138-555-0118|0|M|2|25.0|44|1|0|Marketing|1999-04-03||Current|280
-208|10.0|Bonnie|Skelly|L.|Sales Store Manager|1999-04-04|1972-04-24|john3@contoso.com|663-555-0172|S|Morgan Skinner|663-555-0172|0|M|1|25.0|27|1|0|Production|1999-04-04||Current|194
-209|10.0|Blaine|Dockter||Sales Store Manager|1999-04-04|1973-06-13|merav0@contoso.com|224-555-0187|M|Jane Dow|224-555-0187|0|F|1|25.0|46|1|0|Production|1999-04-04||Current|29
-210|10.0|Egil|Skjold|Ivar|Sales Store Manager|1999-04-04|1974-09-12|brian1@contoso.com|313-555-0196|M|Randy Slycord|313-555-0196|0|M|2|25.0|48|1|0|Production Control|1999-04-04||Current|54
-211|10.0|Chris|Downs||Sales Store Manager|1999-04-05|1977-07-07|kitti0@contoso.com|785-555-0132|S|Patricia Doyle|785-555-0132|0|F|1|25.0|89|1|0|Production|1999-04-05||Current|179
-212|10.0|Ben|Smith||Sales Store Manager|1999-04-06|1966-03-14|jay0@contoso.com|407-555-0165|S|Denise Smith|407-555-0165|0|M|1|25.0|32|1|0|Production|1999-04-06||Current|123
-213|10.0|Jan|Dryml||Sales Store Manager|1999-04-06|1964-12-16|jan0@contoso.com|139-555-0131|S|Dominik Dubicki|139-555-0131|0|M|1|25.0|30|1|0|Production|1999-04-06||Current|39
-214|10.0|Brian|Smith||Sales Store Manager|1999-04-06|1973-03-31|brenda0@contoso.com|142-555-0139|M|Derek Snyder|142-555-0139|0|F|2|25.0|71|1|0|Production|1999-04-06||Current|97
-215|10.0|Bernard|Duerr||Sales Store Manager|1999-04-07|1978-10-26|andrew1@contoso.com|207-555-0192|S|Marina Dukhon|207-555-0192|0|M|1|25.0|73|1|0|Production|1999-04-07||Current|14
-216|10.0|Lorrin|Smith-Bates|G.|Sales Store Manager|1999-04-07|1977-06-26|chris1@contoso.com|575-555-0126|M|Tony Smith|575-555-0126|0|M|2|25.0|75|1|0|Document Control|1999-04-07||Current|58
-217|10.0|Andrea|Dunker||Sales Store Manager|1999-04-08|1976-09-07|chris2@contoso.com|315-555-0144|S|Adrian Dumitrascu|315-555-0144|0|M|1|25.0|16|1|0|Production|1999-04-08||Current|17
-218|10.0|Martin|Spona||Sales Store Manager|1999-04-08|1977-01-08|shelley0@contoso.com|991-555-0184|S|Christof Sprenger|991-555-0184|0|F|1|25.0|14|1|0|Production|1999-04-08||Current|289
-219|10.0|Bart|Duncan||Sales Store Manager|1999-04-09|1978-06-11|gabe0@contoso.com|310-555-0117|M|Daniel Durrer|310-555-0117|0|M|1|25.0|57|1|0|Production|1999-04-09||Current|296
-220|10.0|Jeff|Stammler||Sales Store Manager|1999-04-09|1969-08-01|mike0@contoso.com|927-555-0150|S|Jamie Stark|927-555-0150|1|M|2|25.0|59|1|0|Finance|1999-04-09||Current|207
-221|10.0|Shelley|Dyck||Sales Store Manager|1999-06-04|1975-01-01|michael6@contoso.com|330-555-2568|M|Maria Dykstra|330-555-2568|1|M|2|25.0|16|1|0|Research and Development|1999-06-04||Current|115
-222|10.0|Mark|Steele||Sales Store Manager|2000-01-03|1961-03-21|gary1@contoso.com|110-555-0112|M|Heidi Steen|110-555-0112|1|M|2|25.0|86|1|0|Facilities and Maintenance|2000-01-03||Current|304
-223|10.0|Witold|Dyszkiewicz||Sales Store Manager|2000-01-04|1961-10-03|charles0@contoso.com|931-555-0118|S|Krittiya Eamsiri|931-555-0118|0|M|1|25.0|27|1|0|Production|2000-01-04||Current|178
-224|10.0|Brad|Sutton||Sales Store Manager|2000-01-07|1976-10-23|ebru0@contoso.com|202-555-0187|S|Kern Sutton|202-555-0187|0|M|1|25.0|93|1|0|Production|2000-01-07||Current|145
-225|10.0|Terry|Earls||Sales Store Manager|2000-01-12|1960-12-13|sylvester0@contoso.com|492-555-0174|M|Mads Ebdrup|492-555-0174|0|M|1|25.0|4|1|0|Production|2000-01-12||Current|174
-226|10.0|Bernard|Tham||Sales Store Manager|2000-01-12|1961-01-23|brian2@contoso.com|730-555-0117|S|Ram Thirunavukkarasu|730-555-0117|0|M|1|25.0|63|1|0|Production|2000-01-12||Current|37
-227|10.0|Josh|Edwards||Sales Store Manager|2000-01-18|1960-12-31|linda2@contoso.com|916-555-0165|M|Alexander Eggerer|916-555-0165|0|F|2|25.0|56|1|0|Purchasing|2000-01-18||Current|35
-228|10.0|Sandhya|Thodla||Sales Store Manager|2000-01-19|1933-01-17|betsy0@contoso.com|405-555-0171|S|Tien Dung Thoi|405-555-0171|0|F|1|25.0|99|1|0|Production|2000-01-19||Current|274
-229|10.0|Vladimir|Egorov||Sales Store Manager|2000-01-22|1961-09-27|magnus0@contoso.com|583-555-0182|M|Mohamed Elkugia|583-555-0182|0|M|2|25.0|87|1|0|Facilities and Maintenance|2000-01-22||Current|129
-230|10.0|Iben|Thorell||Sales Store Manager|2000-01-23|1960-04-07|karan0@contoso.com|447-555-0186|S|Alicia Thornber|447-555-0186|0|M|1|25.0|28|1|0|Production|2000-01-23||Current|307
-231|10.0|Patrick|Elliott||Sales Store Manager|2000-01-26|1976-10-20|mary1@contoso.com|283-555-0185|M|Heiko Elmsheuser|283-555-0185|0|F|1|25.0|94|1|0|Production|2000-01-26||Current|304
-232|10.0|Justin|Thorp||Sales Store Manager|2000-01-26|1976-10-20|kevin2@contoso.com|555-555-0113|S|Steven Thorpe|555-555-0113|0|M|1|25.0|90|1|0|Production|2000-01-26||Current|139
-233|10.0|Anil|Elson||Sales Store Manager|2000-01-30|1961-04-09|mihail0@contoso.com|733-555-0128|S|Terry Eminhizer|733-555-0128|0|M|1|25.0|64|1|0|Production|2000-01-30||Current|4
-234|10.0|Danielle|Tiedt||Sales Store Manager|2000-02-02|1976-10-11|bonnie0@contoso.com|264-555-0150|M|Hung-Fu Ting|264-555-0150|0|F|1|25.0|89|1|0|Production|2000-02-02||Current|164
-235|10.0|Michael|Entin||Sales Store Manager|2000-02-05|1960-12-25|fukiko0@contoso.com|520-555-0177|M|Alexei Eremenko|520-555-0177|0|M|2|25.0|57|1|0|Purchasing|2000-02-05||Current|62
-236|10.0|Olinda|Turner||Sales Store Manager|2000-02-07|1961-11-23|hung-fu0@contoso.com|497-555-0181|S|Richard Turner|497-555-0181|0|M|1|25.0|0|1|0|Production|2000-02-07||Current|310
-237|10.0|Ebru|Ersan||Sales Store Manager|2000-02-12|1932-12-30|gordon0@contoso.com|230-555-0144|M|Daniel Escapa|230-555-0144|0|M|2|25.0|52|1|0|Purchasing|2000-02-12||Current|175
-238|10.0|Tjeerd|Veninga||Sales Store Manager|2000-02-13|1976-10-14|kimberly0@contoso.com|123-555-0167|S|Raja D. Venugopal|123-555-0167|0|F|1|25.0|95|1|0|Production|2000-02-13||Current|53
-239|6.0|Modesto|Estrada||Sales Store Manager|2000-02-17|1933-01-14|kim1@contoso.com|208-555-0114|M|John Evans|208-555-0114|0|F|1|25.0|24|1|0|Production|2000-02-17||Current|104
-240|6.0|Gregory|Verny||Sales Store Manager|2000-02-18|1961-01-03|sandeep0@contoso.com|166-555-0156|S|Giorgio Veronesi|166-555-0156|0|M|1|25.0|65|1|0|Production|2000-02-18||Current|186
-241|6.0|Ken|Ewert||Sales Store Manager|2000-02-23|1943-06-01|prasanna0@contoso.com|129-555-0199|M|Sten Faerch|129-555-0199|0|M|1|25.0|5|1|0|Production|2000-02-23||Current|283
-242|6.0|Peter|Villadsen||Sales Store Manager|2000-02-24|1942-06-13|frank2@contoso.com|163-555-0147|M|Aldis Vilums|163-555-0147|0|M|2|25.0|58|1|0|Purchasing|2000-02-24||Current|91
-243|6.0|Antoine|Faisandier||Sales Store Manager|2000-02-25|1964-10-11|min0@contoso.com|590-555-0152|M|Maciej Fedorow|590-555-0152|0|M|1|25.0|1|1|0|Production|2000-02-25||Current|36
-244|6.0|Florian|Voss||Sales Store Manager|2000-02-25|1933-01-08|eric1@contoso.com|680-555-0118|M|Rob Walters|680-555-0118|0|M|1|25.0|60|1|0|Production|2000-02-25||Current|73
-246|6.0|Kelly|Weadock|J.|Sales Store Manager|2000-02-28|1961-01-03|pat0@contoso.com|720-555-0158|S|Gregory Weber|720-555-0158|0|M|1|25.0|89|1|0|Facilities and Maintenance|2000-02-28||Current|100
-247|6.0|Yaniv|Feinberg||Sales Store Manager|2000-03-01|1945-03-02|maciej0@contoso.com|237-555-0128|S|Walter Felhofer|237-555-0128|0|M|1|25.0|30|1|0|Production|2000-03-01||Current|244
-248|6.0|Martin|Weber||Sales Store Manager|2000-03-03|1961-02-04|erin0@contoso.com|842-555-0158|S|Maira Wenzel|842-555-0158|0|F|2|25.0|66|1|0|Purchasing|2000-03-03||Current|159
-249|6.0|Dan|Fennell||Sales Store Manager|2000-03-04|1976-10-11|patrick0@contoso.com|413-555-0124|S|Burke Fewel|413-555-0124|0|M|1|25.0|96|1|0|Production|2000-03-04||Current|295
-250|6.0|Cindy|White||Sales Store Manager|2000-03-08|1942-04-03|frank3@contoso.com|203-555-0196|M|Jim Wickham|203-555-0196|0|M|1|25.0|66|1|0|Production|2000-03-08||Current|143
-251|6.0|Franziska|Fiegler||Sales Store Manager|2000-03-08|1961-10-12|ed0@contoso.com|919-555-0140|S|Heinrich Fischer|919-555-0140|0|M|1|25.0|25|1|0|Production|2000-03-08||Current|46
-252|6.0|Greg|Winston||Sales Store Manager|2000-03-11|1976-11-01|christopher0@contoso.com|153-555-0166|M|Rainer Witte|153-555-0166|0|M|1|25.0|91|1|0|Production|2000-03-11||Current|127
-253|6.0|William|Flash||Sales Store Manager|2000-03-15|1964-01-24|patrick1@contoso.com|425-555-0117|M|Florence Flipo|425-555-0117|0|M|1|25.0|61|1|0|Production|2000-03-15||Current|179
-254|6.0|Robin|Wood||Sales Store Manager|2000-03-16|1961-10-06|krishna0@contoso.com|491-555-0183|S|Joanna Yuan|491-555-0183|0|M|1|25.0|2|1|0|Production|2000-03-16||Current|24
-255|6.0|Raymond|Fong||Sales Store Manager|2000-03-19|1960-08-31|lori1@contoso.com|295-555-0161|M|Olivier Fontana|295-555-0161|0|F|1|25.0|90|1|0|Facilities and Maintenance|2000-03-19||Current|247
-256|6.0|Karin|Zimprich||Sales Store Manager|2000-03-23|1976-10-08|danielle0@contoso.com|500-555-0172|S|Erwin Zischka|500-555-0172|0|F|1|25.0|97|1|0|Production|2000-03-23||Current|180
-257|6.0|Jeff|Ford||Sales Store Manager|2000-03-26|1933-01-05|sootha0@contoso.com|325-555-0137|M|Viggo Forde|325-555-0137|0|M|2|25.0|85|1|0|Quality Assurance|2000-03-26||Current|26
-258|6.0|Aziz|Hassouneh||Sales Store Manager|2000-03-26|1963-10-07|michael7@contoso.com|582-555-0148|S|Satomi Hayakawa|582-555-0148|0|M|1|25.0|26|1|0|Production|2000-03-26||Current|221
-259|6.0|Diane|Forsyth||Sales Store Manager|2000-03-26|1960-05-29|randy0@contoso.com|961-555-0122|M|Garth Fort|961-555-0122|0|M|1|25.0|29|1|0|Production|2000-03-26||Current|126
-260|6.0|Arno|Harteveld||Sales Store Manager|2000-03-30|1976-10-29|john4@contoso.com|254-555-0114|S|Roger Harui|254-555-0114|0|M|1|25.0|92|1|0|Production|2000-03-30||Current|221
-261|6.0|Soren|Francker||Sales Store Manager|2000-04-03|1963-09-30|jack1@contoso.com|521-555-0113|S|Jill Frank|521-555-0113|0|M|1|25.0|62|1|0|Production|2000-04-03||Current|252
-262|6.0|Mark|Harrington||Sales Store Manager|2000-04-04|1960-05-05|olinda0@contoso.com|306-555-0186|S|Phyllis Harris|306-555-0186|0|F|1|25.0|3|1|0|Production|2000-04-04||Current|118
-263|6.0|Joel|Frauenheim||Sales Store Manager|2000-04-05|1962-01-17|stuart1@contoso.com|539-555-0149|M|Sven Freitag|539-555-0149|0|M|1|25.0|88|1|0|Facilities and Maintenance|2000-04-05||Current|13
-264|6.0|Eran|Harel||Sales Store Manager|2000-04-07|1944-05-25|jo1@contoso.com|228-555-0159|M|Walter Harp|228-555-0159|0|F|1|25.0|91|1|0|Facilities and Maintenance|2000-04-07||Current|31
-265|6.0|Victor|Freitas||Sales Store Manager|2000-04-09|1963-07-05|ben0@contoso.com|151-555-0113|M|Mihail Frintu|151-555-0113|0|M|2|25.0|55|1|0|Purchasing|2000-04-09||Current|25
-266|6.0|Claus|Hansen||Sales Store Manager|2000-04-10|1976-11-01|tom0@contoso.com|295-555-0161|M|Mark Hanson|295-555-0161|0|M|1|25.0|98|1|0|Production|2000-04-10||Current|213
-267|6.0|Gabe|Frost||Sales Store Manager|2001-01-05|1968-02-18|ovidiu0@contoso.com|719-555-0181|S|Don Funk|719-555-0181|0|M|2|25.0|7|1|0|Tool Design|2001-01-05||Current|34
-268|6.0|Jim|Hance||Sales Store Manager|2001-01-06|1968-03-01|annette0@contoso.com|125-555-0196|M|Kerim Hanif|125-555-0196|0|F|2|25.0|50|1|0|Purchasing|2001-01-06||Current|192
-269|6.0|Kari|Furse||Sales Store Manager|2001-01-23|1979-06-29|janice0@contoso.com|473-555-0117|M|Lawrie Gaffney|473-555-0117|0|F|2|25.0|8|1|0|Tool Design|2001-01-23||Current|281
-270|6.0|David|Hamilton||Sales Store Manager|2001-01-25|1968-02-18|reinout0@contoso.com|370-555-0163|M|Jay Hamlin|370-555-0163|0|M|2|25.0|51|1|0|Purchasing|2001-01-25||Current|21
-271|6.0|Mike|Gahrns||Sales Store Manager|2001-01-30|1969-07-17|michael8@contoso.com|465-555-0156|S|Chris Gallagher|465-555-0156|1|M|2|25.0|3|1|0|Engineering|2001-01-30||Current|215
-272|6.0|Dean|Halstead||Sales Store Manager|2001-02-04|1941-11-17|stephen0@contoso.com|238-555-0197|M|Thomas Hamborg|238-555-0197|1|M|2|25.0|14|1|1|Sales|2001-02-04||Current|242
-273|6.0|Janet|Galore||Sales Store Manager|2001-02-07|1965-04-17|wanida0@contoso.com|708-555-0141|M|David Galvin|708-555-0141|0|F|2|25.0|41|1|0|Marketing|2001-02-07||Current|53
-274|6.0|Adina|Hagege||Sales Store Manager|2001-02-18|1951-06-03|sharon0@contoso.com|970-555-0138|M|Pernille Halberg|970-555-0138|1|F|2|25.0|4|1|0|Engineering|2001-02-18||Current|189
-275|6.0|Cesar|Garcia||Sales Store Manager|2001-03-10|1968-04-06|john5@contoso.com|486-555-0150|S|Debra Garcia|486-555-0150|0|M|2|25.0|48|1|0|Marketing|2001-03-10||Current|264
-276|6.0|Mary|Andersen|Kay|Sales Store Manager|2001-03-17|1968-03-01|mary2@contoso.com|124-555-0114|S|Ivo Haemels|124-555-0114|0|F|2|25.0|43|1|0|Marketing|2001-03-17||Current|209
-277|6.0|Hugo|Garcia||Sales Store Manager|2001-03-18|1967-07-08|brian3@contoso.com|716-555-0127|S|Euan Garden|716-555-0127|1|M|2|25.0|10|1|0|Sales|2001-03-18||Current|138
-278|6.0|Allan|Guinot||Sales Store Manager|2001-03-28|1968-03-13|AllanG@contoso.com|210-555-0193|S|Pedro Gutierrez|210-555-0193|1|F|2|25.0|49|1|0|Purchasing|2001-03-28|2001-08-30||171
-279|6.0|Davide|Garghentini||Sales Store Manager|2001-03-28|1968-03-13|DavideG@contoso.com|210-555-0193|S|Benjamin Gay|210-555-0193|1|F|2|25.0|49|1|0|Purchasing|2001-08-31|2002-08-15||193
-280|6.0|Eric|Gruber||Sales Store Manager|2001-03-28|1968-03-13|EricG@contoso.com|210-555-0193|S|Daniela Guaita|210-555-0193|1|F|2|25.0|49|1|0|Purchasing|2002-08-16||Current|114
-281|6.0|Inbar|Gazit||Sales Store Manager|2001-07-01|1959-01-26|michael9@contoso.com|257-555-0154|S|Darren Gehring|257-555-0154|1|M|2|25.0|38|1|1|Sales|2001-07-01||Current|44
-282|7.0|Seth|Grossman||Sales Store Manager|2001-07-01|1970-03-30|linda3@contoso.com|883-555-0116|M|Brian Groth|883-555-0116|1|F|2|25.0|27|1|1|Sales|2001-07-01||Current|132
-283|7.0|Christa|Geller||Sales Store Manager|2001-07-01|1952-09-29|jillian0@contoso.com|517-555-0117|S|Jens Geschwandtner|517-555-0117|1|F|2|25.0|24|1|1|Sales|2001-07-01||Current|39
-284|7.0|Carlos|Grilo||Sales Store Manager|2001-07-01|1965-03-07|garrett1@contoso.com|922-555-0165|M|Geoff Grisso|922-555-0165|1|M|2|25.0|33|1|1|Sales|2001-07-01||Current|227
-285|7.0|Tom|Getzinger||Sales Store Manager|2001-07-01|1964-02-19|tsvi0@contoso.com|664-555-0112|M|Wriju Ghosh|664-555-0112|1|M|2|25.0|29|1|1|Sales|2001-07-01||Current|266
-286|7.0|Kirk|Gregersen||Sales Store Manager|2001-07-01|1965-01-06|pamela0@contoso.com|340-555-0193|S|Ryan Gregg|340-555-0193|1|F|2|25.0|22|1|1|Sales|2001-07-01||Current|173
-287|7.0|Leo|Giakoumakis||Sales Store Manager|2001-07-01|1934-04-10|shu0@contoso.com|330-555-0120|M|Phil Gibbins|330-555-0120|1|M|2|25.0|26|1|1|Sales|2001-07-01||Current|305
-288|7.0|Nikolay|Grachev||Sales Store Manager|2001-07-01|1930-01-11|josé1@contoso.com|185-555-0169|M|Chris Gray|185-555-0169|1|M|2|25.0|31|1|1|Sales|2001-07-01||Current|179
-289|7.0|Enrique|Gil||Sales Store Manager|2001-07-01|1964-03-14|david8@contoso.com|740-555-0182|S|Guy Gilbert|740-555-0182|1|M|2|25.0|23|1|1|Sales|2001-07-01||Current|249
-290|7.0|Mojca|Gostincar||Sales Store Manager|2002-05-18|1947-10-22|amy0@contoso.com|775-555-0164|M|Elisa Graceffo|775-555-0164|1|F|2|25.0|21|1|1|Sales|2002-05-18||Current|84
-291|7.0|Eric|Gilmore||Sales Store Manager|2002-07-01|1958-04-18|jae0@contoso.com|1 (11) 500 555-0145|M|Adriana Giorgi|1 (11) 500 555-0145|1|F|2|25.0|37|1|1|Sales|2002-07-01||Current|214
-292|7.0|Nuria|Gonzalez||Sales Store Manager|2002-07-01|1965-10-31|ranjit0@contoso.com|1 (11) 500 555-0117|S|Jon Gordner|1 (11) 500 555-0117|1|M|2|25.0|34|1|1|Sales|2002-07-01||Current|265
-293|7.0|Stuart|Glasson||Sales Store Manager|2002-11-01|1968-02-06|tete0@contoso.com|615-555-0153|M|Jim Glynn|615-555-0153|1|M|2|25.0|39|1|1|Sales|2002-11-01||Current|102
-294|7.0|Daniel|Goldschmidt||Sales Store Manager|2003-04-15|1965-02-11|syed0@contoso.com|926-555-0182|M|Howard Gonzalez|926-555-0182|1|M|2|25.0|20|1|1|Sales|2003-04-15||Current|141
-295|7.0|Gerhard|Goeschl||Sales Store Manager|2003-07-01|1965-08-09|rachel0@contoso.com|1 (11) 500 555-0140|S|Mete Goktepe|1 (11) 500 555-0140|1|F|2|25.0|35|1|1|Sales|2003-07-01||Current|198
-296|7.0|Jossef|Goldberg||Sales Store Manager|2003-07-01|1961-04-18|lynn0@contoso.com|1 (11) 500 555-0190|S|Maxim Goldin|1 (11) 500 555-0190|1|F|2|25.0|36|1|1|Sales|2003-07-01||Current|5
+EmployeeKey|FirstName|LastName|MiddleName|Title|HireDate|BirthDate|EmailAddress|Phone|MaritalStatus|EmergencyContactName|EmergencyContactPhone|SalariedFlag|Gender|PayFrequency|BaseRate|VacationHours|SalesPersonFlag|DepartmentName|StartDate|EndDate|StoreKey
+1|Kim|Abercrombie||Sales Region Manager|1996-07-31|1972-05-15|guy1@contoso.com|320-555-0195|M|Hazem Abolrous|320-555-0195|0|M|2|72.45|40|0|Production|1996-07-31||251
+2|Sagiv|Hadaya||Sales Region Manager|1997-02-26|1977-06-03|kevin0@contoso.com|150-555-0189|S|Kevin Cook|150-555-0189|0|M|2|72.45|40|0|Marketing|1997-02-26||182
+3|Luka|Abrus||Sales Region Manager|1997-12-12|1964-12-13|roberto0@contoso.com|212-555-0187|M|Ahmad Abu-Dayah|212-555-0187|1|M|2|72.45|40|0|Engineering|1997-12-12||12
+4|Kirk|Nason|J.|Sales Region Manager|1998-01-05|1965-01-23|KirkNason@contoso.com|612-555-0100|S|Mrina Natarajan|612-555-0100|0|M|2|72.45|40|0|Tool Design|1998-01-05|2000-06-30|159
+5|Humberto|Acevedo||Sales Region Manager|1998-01-05|1965-01-23|Humberto@contoso.com|612-555-0100|S|Gustavo Achong|612-555-0100|0|M|2|72.45|40|0|Tool Design|2000-06-30||10
+6|Yoichiro|Okada||Sales State Manager|1998-01-11|1949-08-29|thierry0@contoso.com|168-555-0183|M|Gerwald Oberleitner|168-555-0183|0|M|2|55.0|40|0|Tool Design|1998-01-11||260
+7|Pilar|Ackerman||Sales State Manager|1998-01-20|1965-04-19|PilarAckerman@contoso.com|913-555-0172|S|Gudmundur Adalsteinsson|913-555-0172|1|M|2|55.0|40|0|Marketing|1998-01-20|1999-08-15|116
+8|Aaron|Painter|M.|Sales State Manager|1998-01-20|1965-04-19|AaronPainter@contoso.com|913-555-0172|S|Dominik Paiha|913-555-0172|1|M|2|55.0|40|0|Marketing|1999-08-16||304
+9|Terry|Adams||Sales State Manager|1998-01-26|1946-02-16|jolynn0@contoso.com|903-555-0145|S|Michael Affronti|903-555-0145|0|F|2|55.0|40|0|Production|1998-01-26||110
+10|David|Probst||Sales State Manager|1998-02-06|1946-07-06|ruth0@contoso.com|145-555-0130|M|Jim Ptaszynski|145-555-0130|0|F|2|55.0|40|0|Production|1998-02-06||154
+11|Manoj|Agarwal||Sales State Manager|1998-02-06|1942-10-29|gail0@contoso.com|849-555-0139|M|Nupur Agarwal|849-555-0139|1|F|2|55.0|40|0|Engineering|1998-02-06||17
+12|Michael|Raheem||Sales State Manager|1998-02-07|1946-04-27|barry0@contoso.com|206-555-0180|S|Amritansh Raghav|206-555-0180|0|M|2|55.0|40|0|Production|1998-02-07||142
+13|David|Ahs||Sales State Manager|1998-02-24|1949-04-11|jossef0@contoso.com|122-555-0189|M|Hatim Aiad|122-555-0189|1|M|2|55.0|40|0|Engineering|1998-02-24||152
+14|Miguel|Saenz||Sales Store Manager|1998-03-03|1961-09-01|terri0@contoso.com|819-555-0175|S|Peter Saddow|819-555-0175|1|F|2|25.0|40|0|Engineering|1998-03-03||257
+15|Kim|Akers||Sales Store Manager|1998-03-05|1946-10-01|sidney0@contoso.com|424-555-0189|M|Cigdem Akin|424-555-0189|0|M|2|25.0|40|0|Production|1998-03-05||140
+16|Kate|Taneyhill||Sales State Manager|1998-03-11|1946-05-03|taylor0@contoso.com|508-555-0165|M|Roberto Tamburello|508-555-0165|0|M|2|55.0|40|0|Production|1998-03-11||292
+17|David|Alexander||Sales State Manager|1998-03-23|1946-08-12|jeffrey0@contoso.com|984-555-0185|S|Michael Alexander|984-555-0185|0|M|2|55.0|40|0|Production|1998-03-23||28
+18|Pieter|Uittenbogaard||Sales Group Manager|1998-03-30|1946-11-09|jo0@contoso.com|632-555-0129|S|Sairaj Uddin|632-555-0129|0|F|2|125.0|80|0|'Human Resources Contral|1998-03-30||296
+19|Michelle|Alexander||Sales State Manager|1998-04-11|1946-05-06|doris0@contoso.com|328-555-0150|M|Mark Alexieff|328-555-0150|0|F|2|55.0|40|0|Production|1998-04-11||292
+20|Rene|Valdes||Sales State Manager|1998-04-18|1946-09-08|john0@contoso.com|435-555-0113|M|Szabolcs Vajda|435-555-0113|0|M|2|55.0|40|0|Production|1998-04-18||110
+21|Michael|Allen||Sales State Manager|1998-04-29|1946-04-30|diane0@contoso.com|202-555-0151|M|Gilead Almosnino|202-555-0151|0|F|2|55.0|40|0|Production|1998-04-29||76
+22|Rohinton|Wadia||Sales State Manager|1999-01-02|1967-06-15|steven0@contoso.com|925-555-0114|M|Roland Wacker|925-555-0114|0|M|2|55.0|40|0|Production|1999-01-02||205
+23|Luis|Alverca||Sales State Manager|1999-01-02|1972-12-04|peter0@contoso.com|913-555-0196|M|James Alvord|913-555-0196|1|M|2|55.0|40|0|Production Control|1999-01-02||308
+24|Ming-Yang|Xie||Sales Store Manager|1999-01-03|1952-10-14|stuart0@contoso.com|413-555-0136|S|Stig Panduro|413-555-0136|0|M|2|25.0|40|0|Production|1999-01-03||182
+25|Antonio|Alwan||Sales Store Manager|1999-01-03|1960-11-18|greg0@contoso.com|332-555-0150|S|Kamil Amireh|332-555-0150|0|M|2|25.0|40|0|Production|1999-01-03||139
+26|David|Yalovsky||Sales State Manager|1999-01-03|1969-12-03|david1@contoso.com|166-555-0162|S|Shmuel Yair|166-555-0162|0|M|2|55.0|40|0|Production|1999-01-03||1
+27|Oleg|Anashkin||Sales State Manager|1999-01-04|1973-11-26|zheng0@contoso.com|113-555-0173|S|Thomas Andersen|113-555-0173|0|M|2|55.0|40|0|Production|1999-01-04||2
+28|Marko|Zajc||Sales State Manager|1999-01-05|1972-02-04|ivo0@contoso.com|115-555-0179|M|Eugene Zabokritski|115-555-0179|0|M|2|55.0|40|0|Production|1999-01-05||130
+29|Christen|Anderson||Sales State Manager|1999-01-05|1970-12-15|paul0@contoso.com|147-555-0160|S|Nancy Anderson|147-555-0160|0|M|2|55.0|40|0|Production|1999-01-05||31
+30|Mike|Nash||Sales State Manager|1999-01-05|1967-04-28|ashvini0@contoso.com|656-555-0119|S|Ranjith Narayanan|656-555-0119|0|M|2|55.0|40|0|Information Services|1999-01-05||187
+31|Diogo|Andrade||Sales State Manager|1999-01-06|1976-06-30|kendall0@contoso.com|138-555-0128|M|Joe Andreshak|138-555-0128|0|M|2|55.0|40|0|Production|1999-01-06||62
+32|Aneta|Olecka||Sales State Manager|1999-01-07|1966-03-14|paula0@contoso.com|523-555-0175|M|Preeda Ola|523-555-0175|1|F|2|55.0|40|0|Human Resources|1999-01-07||281
+33|Ben|Andrews||Sales State Manager|1999-01-07|1979-01-06|alejandro0@contoso.com|668-555-0130|S|Lisa Andrews|668-555-0130|0|M|2|55.0|40|0|Production|1999-01-07||198
+34|Jae|Pak|B.|Sales Store Manager|1999-01-08|1974-09-26|garrett0@contoso.com|609-555-0179|S|Wilson Pais|609-555-0179|0|M|2|25.0|40|0|Production|1999-01-08||15
+35|Roy|Antebi||Sales Store Manager|1999-01-08|1973-08-27|jianshuo0@contoso.com|952-555-0178|S|Johnson Apacible|952-555-0178|0|M|1|25.0|38|0|Production|1999-01-08||156
+36|Prithvi|Raj||Sales Store Manager|1999-01-08|1968-03-20|susan0@contoso.com|943-555-0196|S|Stuart Railson|943-555-0196|0|F|1|25.0|40|0|Shipping and Receiving|1999-01-08||185
+37|Luca|Argentiero||Sales Store Manager|1999-01-08|1967-04-19|vamsi0@contoso.com|937-555-0137|M|NeKeta Argrow|937-555-0137|0|M|2|25.0|40|0|Shipping and Receiving|1999-01-08||72
+38|Suriya|Sajjateerakool||Sales Store Manager|1999-01-08|1968-02-27|alice0@contoso.com|333-555-0173|M|Malvin Seale|333-555-0173|0|F|1|25.0|40|0|Production|1999-01-08||75
+39|Zainal|Arifin||Sales Store Manager|1999-01-09|1980-06-17|simon0@contoso.com|963-555-0134|S|Ravital Artman|963-555-0134|0|M|1|25.0|40|0|Production|1999-01-09||85
+40|Amy|Strande||Sales Store Manager|1999-01-09|1979-03-09|jinghao0@contoso.com|794-555-0159|S|Anne-Mette Stoltze|794-555-0159|0|M|2|25.0|40|0|Production|1999-01-09||275
+41|Ties|Arts||Sales Store Manager|1999-01-10|1974-12-19|michael0@contoso.com|218-555-0126|S|Dimple Arya|218-555-0126|0|M|1|25.0|40|0|Production|1999-01-10||34
+42|Daniel|Taylor|P.|Sales Store Manager|1999-01-10|1979-05-17|yvonne0@contoso.com|286-555-0189|M|Maurice Taylor|286-555-0189|0|F|1|25.0|40|0|Production|1999-01-10||232
+43|Ronen|Ashkenazi||Sales Store Manager|1999-01-10|1966-04-19|peng0@contoso.com|164-555-0164|M|Roya Asbari|164-555-0164|1|M|2|25.0|40|0|Quality Assurance|1999-01-10||186
+44|Hans-Walter|Untch||Sales Store Manager|1999-01-12|1966-01-13|jean0@contoso.com|685-555-0120|S|Sunil Uppal|685-555-0120|1|F|2|25.0|40|0|Information Services|1999-01-12||87
+45|Chris|Ashton||Sales Store Manager|1999-01-13|1962-12-27|russell0@contoso.com|786-555-0144|M|Sameer Athalye|786-555-0144|0|M|1|25.0|40|0|Production|1999-01-13||259
+46|Michael|Vanderhyde||Sales Store Manager|1999-01-13|1958-10-19|ascott0@contoso.com|992-555-0194|S|Esther Valle|992-555-0194|0|M|2|25.0|40|0|Production Control|1999-01-13||30
+47|Vivian|Atlas||Sales Store Manager|1999-01-13|1979-07-27|fred0@contoso.com|818-555-0192|S|Kai Axford|818-555-0192|0|M|1|25.0|40|0|Production|1999-01-13||123
+48|Robin|Wakefield||Sales Store Manager|1999-01-13|1977-06-21|sariya0@contoso.com|399-555-0176|S|Darren Waite|399-555-0176|0|M|2|25.0|40|0|Marketing|1999-01-13||298
+49|Anahita|Bahrami||Sales Store Manager|1999-01-14|1968-08-18|willis0@contoso.com|778-555-0141|S|Josh Bailey|778-555-0141|0|M|2|25.0|40|0|Human Resources|1999-01-14||80
+50|Pieter|Wycoff||Sales Store Manager|1999-01-15|1969-08-06|jun0@contoso.com|299-555-0113|S|David Wright|299-555-0113|0|M|1|25.0|40|0|Production|1999-01-15||258
+51|Dev|Balasubramanian||Sales Store Manager|1999-01-15|1966-02-18|christian0@contoso.com|846-555-0157|M|Yossi Banai|846-555-0157|1|M|2|25.0|40|0|Facilities and Maintenance|1999-01-15||182
+52|Steven|Wright|M.|Sales Store Manager|1999-01-15|1973-05-03|susan1@contoso.com|639-555-0164|S|Makoto Yamagishi|639-555-0164|0|F|1|25.0|40|0|Production|1999-01-15||33
+54|Eiji|Yasuda||Sales Store Manager|1999-01-16|1975-03-10|kirk0@contoso.com|669-555-0150|S|Arthur Yasinski|669-555-0150|0|M|1|25.0|40|0|Production|1999-01-16||272
+55|Ed|Banti||Sales Store Manager|1999-01-16|1975-01-30|david2@contoso.com|712-555-0119|M|Evan Basalik|712-555-0119|0|M|1|25.0|33|0|Production|1999-01-16||119
+56|Mrina|Natarajan||Sales Store Manager|1999-01-17|1980-05-29|tengiz0@contoso.com|910-555-0116|S|Kirk J. Nason|910-555-0116|0|M|2|25.0|76|0|Document Control|1999-01-17||123
+57|Dave|Barnett||Sales Store Manager|1999-01-17|1964-11-16|hanying0@contoso.com|319-555-0139|S|Josh Barnhill|319-555-0139|0|M|1|25.0|15|0|Production|1999-01-17||240
+58|Manuel|Oliveira||Sales Store Manager|1999-01-18|1976-01-26|kevin1@contoso.com|714-555-0138|S|Neil Orint|714-555-0138|0|M|1|25.0|58|0|Production|1999-01-18||91
+59|Adam|Barr||Sales Store Manager|1999-01-18|1967-01-27|annik0@contoso.com|499-555-0125|M|Chris Barry|499-555-0125|0|M|1|25.0|17|0|Production|1999-01-18||32
+60|Rok|Palcic||Sales Store Manager|1999-01-18|1968-03-28|suroor0@contoso.com|932-555-0161|S|Ian Palangio|932-555-0161|0|M|1|25.0|93|0|Production|1999-01-18||96
+61|Shai|Bassli||Sales Store Manager|1999-01-19|1966-04-07|deborah0@contoso.com|602-555-0194|M|Deborah Baumfeld|602-555-0194|0|F|2|25.0|60|0|Finance|1999-01-19||80
+62|Yossi|Ran||Sales Store Manager|1999-01-20|1976-10-09|jim0@contoso.com|679-555-0113|M|Rajesh Ramanathan|679-555-0113|0|M|1|25.0|1|0|Production|1999-01-20||110
+63|Shaun|Beasley||Sales Store Manager|1999-01-20|1973-11-19|carole0@contoso.com|688-555-0192|M|Mark Bebbington|688-555-0192|0|F|1|25.0|42|0|Production|1999-01-20||131
+64|Karolina|Salas-Szlejter||Sales Store Manager|1999-01-22|1967-05-18|george0@contoso.com|518-555-0199|M|Tamer Salah|518-555-0199|0|M|1|25.0|26|0|Production|1999-01-22||138
+65|Anna|Bedecs||Sales Store Manager|1999-01-23|1978-06-17|gary0@contoso.com|901-555-0125|S|Parry Bedi|901-555-0125|0|M|1|25.0|69|0|Production|1999-01-23||33
+66|Oliver|Szimmetat||Sales Store Manager|1999-01-23|1974-05-13|cristian0@contoso.com|434-555-0133|M|Radoslaw Szymczak|434-555-0133|0|M|2|25.0|67|0|Production|1999-01-23||134
+67|Ann|Beebe||Sales Store Manager|1999-01-24|1957-04-02|raymond0@contoso.com|226-555-0197|M|Kostadin Belishky|226-555-0197|0|M|1|25.0|10|0|Production|1999-01-24||84
+68|Jeff|Teper||Sales Store Manager|1999-01-24|1975-03-03|janaina0@contoso.com|623-555-0155|M|Rakesh Tangirala|623-555-0155|1|F|2|25.0|71|0|Information Services|1999-01-24||146
+69|Allie|Bellew||Sales Store Manager|1999-01-25|1969-09-16|bob0@contoso.com|611-555-0116|S|Almudena Benito|611-555-0116|0|M|1|25.0|12|0|Production|1999-01-25||154
+70|Siri|Velauthapillai||Sales Store Manager|1999-01-25|1970-11-05|shammi0@contoso.com|793-555-0179|M|Garrett Vargas|793-555-0179|0|M|1|25.0|66|0|Production|1999-01-25||209
+71|Nuno|Bento||Sales Store Manager|1999-01-26|1977-08-17|linda0@contoso.com|612-555-0171|M|Karen Berg|612-555-0171|0|F|1|25.0|96|0|Production|1999-01-26||234
+72|Anne|Wallace||Sales Store Manager|1999-01-26|1974-12-22|mindy0@contoso.com|522-555-0147|M|Larry Waldman|522-555-0147|0|F|2|25.0|51|0|Human Resources|1999-01-26||196
+73|Matt|Berg||Sales Store Manager|1999-01-26|1974-11-12|wendy0@contoso.com|248-555-0134|S|Martin Berka|248-555-0134|1|F|2|25.0|55|0|Finance|1999-01-26||199
+74|John|Yokim||Sales Store Manager|1999-01-27|1974-06-01|kim0@contoso.com|309-555-0129|S|Norimichi Yonekura|309-555-0129|0|F|1|25.0|98|0|Shipping and Receiving|1999-01-27||187
+75|Antonio|Bermejo||Sales Store Manager|1999-01-27|1965-12-06|sandra0@contoso.com|896-555-0168|M|Matthias Berndt|896-555-0168|0|F|1|25.0|37|0|Production|1999-01-27||242
+76|Robert|Zare||Sales Store Manager|1999-01-28|1970-05-30|kok-ho0@contoso.com|999-555-0155|S|Amr Zaki|999-555-0155|0|M|2|25.0|78|0|Production|1999-01-28||283
+77|Michael|Berroth||Sales Store Manager|1999-01-28|1975-12-26|douglas0@contoso.com|808-555-0172|M|Dana Birkby|808-555-0172|0|M|1|25.0|80|0|Production|1999-01-28||88
+79|Jimmy|Bischoff||Sales Store Manager|1999-01-29|1966-04-07|sean0@contoso.com|420-555-0173|S|Scott Bishop|420-555-0173|0|M|2|25.0|82|0|Quality Assurance|1999-01-29||92
+80|Michael|Neipper||Sales Store Manager|1999-01-29|1977-01-01|nitin0@contoso.com|143-555-0173|S|Jeremy Nelson|143-555-0173|0|M|1|25.0|21|0|Production|1999-01-29||43
+81|Ari|Bixhorn||Sales Store Manager|1999-01-30|1976-07-06|diane1@contoso.com|815-555-0138|S|Neil Black|815-555-0138|1|F|2|25.0|62|0|Research and Development|1999-01-30||8
+82|Paulo|Neves||Sales Store Manager|1999-01-30|1967-08-11|rebecca0@contoso.com|314-555-0113|M|Belinda Newman|314-555-0113|0|F|1|25.0|23|0|Production|1999-01-30||266
+83|Rex|Bloesser||Sales Store Manager|1999-02-01|1967-11-05|rajesh0@contoso.com|373-555-0137|M|Nikhil Bobde|373-555-0137|0|M|1|25.0|48|0|Production|1999-02-01||223
+84|Aaron|Nicholls||Sales Store Manager|1999-02-02|1974-09-02|vidur0@contoso.com|153-555-0186|S|Chad Niswonger|153-555-0186|0|M|2|25.0|50|0|Human Resources|1999-02-02||230
+85|Tomasz|Bochenek||Sales Store Manager|1999-02-02|1968-07-01|john1@contoso.com|172-555-0130|S|Catherine Boeger|172-555-0130|0|M|1|25.0|91|0|Production|1999-02-02||261
+86|Toby|Nixon||Sales Store Manager|1999-02-03|1978-12-21|nancy0@contoso.com|970-555-0118|M|Elly Nkya|970-555-0118|0|F|1|25.0|34|0|Production|1999-02-03||267
+87|Corinna|Bolender||Sales Store Manager|1999-02-03|1962-10-11|pilar0@contoso.com|577-555-0185|S|Srikanth Bolisetty|577-555-0185|1|M|2|25.0|93|0|Shipping and Receiving|1999-02-03||124
+88|Fabricio|Noriega||Sales Store Manager|1999-02-03|1971-09-04|david3@contoso.com|373-555-0142|S|Chris Norred|373-555-0142|0|M|1|25.0|32|0|Production|1999-02-03||305
+89|Raffaella|Bonaldi||Sales Store Manager|1999-02-04|1973-08-02|david4@contoso.com|986-555-0177|S|Luis Bonifaz|986-555-0177|0|M|2|25.0|73|0|Production|1999-02-04||242
+90|Jerry|Orman||Sales Store Manager|1999-02-04|1971-01-26|laura0@contoso.com|777-555-0141|S|Tad Orman|777-555-0141|0|F|1|25.0|75|0|Production|1999-02-04||307
+91|Laurent|Bonnet||Sales Store Manager|1999-02-05|1976-06-20|margie0@contoso.com|818-555-0128|M|Randall Boseman|818-555-0128|0|F|1|25.0|18|0|Production|1999-02-05||196
+92|Danni|Ortman||Sales Store Manager|1999-02-05|1966-03-02|zainal0@contoso.com|204-555-0115|M|Jon Orton|204-555-0115|0|M|2|25.0|77|0|Document Control|1999-02-05||95
+93|Thomas|Bouchard||Sales Store Manager|1999-02-05|1978-12-28|lorraine0@contoso.com|845-555-0184|M|Eli Bowen|845-555-0184|0|F|1|25.0|49|0|Production|1999-02-05||112
+94|Scott|Oveson||Sales Store Manager|1999-02-05|1979-03-19|fadi0@contoso.com|935-555-0116|S|Inna Ozhogina|935-555-0116|0|M|1|25.0|16|0|Production|1999-02-05||135
+95|Marc|Boyer||Sales Store Manager|1999-02-06|1962-07-15|ryan0@contoso.com|208-555-0114|M|Jonas Brandel|208-555-0114|0|M|1|25.0|59|0|Production|1999-02-06||83
+96|Tude|Palma||Sales Store Manager|1999-02-07|1966-03-26|candy0@contoso.com|920-555-0177|S|Prakash Paramasivam|920-555-0177|0|F|2|25.0|61|0|Finance|1999-02-07||24
+97|Peter|Bankov||Sales Store Manager|1999-02-07|1969-04-29|nuan0@contoso.com|913-555-0184|S|Dushyant Bansal|913-555-0184|0|M|1|25.0|2|0|Production|1999-02-07||41
+98|Dan|Park||Sales Store Manager|1999-02-08|1971-12-08|DanPark@contoso.com|148-555-0145|M|Darren Parker|148-555-0145|0|M|2|25.0|45|0|Production Control|1999-02-08|2001-10-01|61
+99|Bryan|Bredehoeft||Sales Store Manager|1999-02-08|1971-12-08|BryanB@contoso.com|148-555-0145|M|Peter Brehm|148-555-0145|0|M|2|25.0|45|0|Production Control|2001-10-02||103
+100|Rajesh|Patel|M.|Sales Store Manager|1999-02-08|1979-12-08|bjorn0@contoso.com|199-555-0117|S|Sanjay Patel|199-555-0117|0|M|1|25.0|43|0|Production|1999-02-08||50
+101|Alan|Brewer||Sales Store Manager|1999-02-09|1977-03-13|scott0@contoso.com|391-555-0138|M|Markus Breyer|391-555-0138|0|M|1|25.0|86|0|Production|1999-02-09||267
+102|Dorena|Paschke||Sales Store Manager|1999-02-11|1981-02-04|michael1@contoso.com|454-555-0119|S|Michael Patten|454-555-0119|0|M|1|25.0|70|0|Production|1999-02-11||291
+103|Nick|Brigandi||Sales Store Manager|1999-02-12|1964-10-24|lane0@contoso.com|200-555-0117|M|David Bristol|200-555-0117|0|M|1|25.0|11|0|Production|1999-02-12||140
+104|Leonids|Paturskis||Sales Store Manager|1999-02-12|1967-03-07|pete0@contoso.com|768-555-0123|S|Flemming Pedersen|768-555-0123|0|M|1|25.0|13|0|Production|1999-02-12||1
+105|Allison|Brown||Sales Store Manager|1999-02-12|1971-07-28|dan0@contoso.com|166-555-0159|M|Jed Brown|166-555-0159|1|M|2|25.0|72|0|Information Services|1999-02-12||212
+106|Yael|Peled||Sales Store Manager|1999-02-13|1954-07-23|david5@contoso.com|477-555-0132|S|Laurent Penisson|477-555-0132|0|M|2|25.0|56|0|Finance|1999-02-13||245
+107|Robert|Brown||Sales Store Manager|1999-02-13|1963-02-25|lolan0@contoso.com|582-555-0178|M|Scott Brown|582-555-0178|0|M|1|25.0|7|0|Production|1999-02-13||308
+108|Lori|Penor||Sales Store Manager|1999-02-13|1977-03-13|paula1@contoso.com|476-555-0119|M|Lionel Penuchot|476-555-0119|0|F|1|25.0|54|0|Production|1999-02-13||285
+109|Daniel|Brunner||Sales Store Manager|1999-02-13|1952-10-14|mary0@contoso.com|531-555-0183|M|Chloe Brussard|531-555-0183|0|F|2|25.0|46|0|Marketing|1999-02-13||283
+110|Michel|Pereira||Sales Store Manager|1999-02-14|1968-06-07|mindaugas0@contoso.com|637-555-0120|M|Tom Perham|637-555-0120|0|M|1|25.0|97|0|Production|1999-02-14||293
+111|Chris|Bryant||Sales Store Manager|1999-02-15|1975-02-20|eric0@contoso.com|260-555-0119|M|Susan Burk|260-555-0119|0|M|2|25.0|40|0|Production|1999-02-15||209
+112|Wirote|Petchdenlarp||Sales Store Manager|1999-02-15|1959-03-02|ken0@contoso.com|697-555-0142|S|Cristian Petculescu|697-555-0142|1|M|2|25.0|99|0|Executive|1999-02-15||276
+113|Brian|Burke||Sales Store Manager|1999-02-15|1979-01-08|jason0@contoso.com|571-555-0179|S|Ovidiu Burlacu|571-555-0179|0|M|1|25.0|38|0|Production|1999-02-15||100
+114|Palle|Petersen||Sales Store Manager|1999-02-16|1976-05-31|mark0@contoso.com|147-555-0179|S|Pierangela Pezzini|147-555-0179|0|M|2|25.0|83|0|Quality Assurance|1999-02-16||297
+115|Tzipi|Butnaru||Sales Store Manager|1999-02-16|1962-08-25|janeth0@contoso.com|540-555-0191|S|Dennis Bye|540-555-0191|0|F|1|25.0|81|0|Production|1999-02-16||124
+116|Terrence|Philip||Sales Store Manager|1999-02-17|1976-11-24|marc0@contoso.com|234-555-0169|M|Jeff Phillips|234-555-0169|0|M|1|25.0|22|0|Production|1999-02-17||110
+117|Rick|Byham||Sales Store Manager|1999-02-17|1969-02-21|gigi0@contoso.com|185-555-0186|M|Randy Byrne|185-555-0186|1|F|2|25.0|63|0|Research and Development|1999-02-17||29
+118|Michal|Piaseczny||Sales Store Manager|1999-02-18|1980-12-05|paul1@contoso.com|727-555-0112|M|Guido Pica|727-555-0112|0|M|1|25.0|6|0|Production|1999-02-18||194
+119|Reina|Cabatana||Sales Store Manager|1999-02-18|1977-10-07|frank0@contoso.com|158-555-0191|M|Ryan Calafato|158-555-0191|0|M|1|25.0|56|0|Production|1999-02-18||19
+120|Pilar|Pinilla||Sales Store Manager|1999-02-18|1965-06-17|françois0@contoso.com|785-555-0110|S|Armando Pinto|785-555-0110|1|M|2|25.0|67|0|Information Services|1999-02-18||264
+121|Iulian|Calinov||Sales Store Manager|1999-02-19|1979-09-10|diane2@contoso.com|361-555-0180|S|Geert Camelbeke|361-555-0180|0|F|1|25.0|8|0|Production|1999-02-19||270
+122|Tanja|Plate||Sales Store Manager|1999-02-19|1969-07-19|jill0@contoso.com|510-555-0121|M|Idan Plonsky|510-555-0121|0|F|2|25.0|47|0|Marketing|1999-02-19||83
+123|Maria|Cameron||Sales Store Manager|1999-02-21|1981-07-01|angela0@contoso.com|150-555-0194|S|David Campbell|150-555-0194|0|F|1|25.0|92|0|Production|1999-02-21||147
+124|Ekaterina|Podkolzina||Sales Store Manager|1999-02-21|1963-12-13|matthias0@contoso.com|139-555-0120|M|Toni Poe|139-555-0120|0|M|2|25.0|94|0|Shipping and Receiving|1999-02-21||231
+125|Jamie|Campbell||Sales Store Manager|1999-02-22|1963-09-28|bryan0@contoso.com|712-555-0113|S|Fabrice Canel|712-555-0113|0|M|1|25.0|35|0|Production|1999-02-22||300
+126|Grigory|Pogulsky||Sales Store Manager|1999-02-22|1967-02-16|jeff0@contoso.com|350-555-0167|M|Carole Poland|350-555-0167|0|M|2|25.0|74|0|Production|1999-02-22||42
+127|Paul|Cannon||Sales Store Manager|1999-02-22|1977-08-15|eugene0@contoso.com|241-555-0191|S|Jon Cantrell|241-555-0191|0|M|1|25.0|33|0|Production|1999-02-22||155
+128|Josh|Pollock||Sales Store Manager|1999-02-23|1969-08-02|barbara0@contoso.com|119-555-0192|M|Laura Steele Polly|119-555-0192|0|F|1|25.0|17|0|Production|1999-02-23||205
+129|Cyril|Carbonati||Sales Store Manager|1999-02-23|1979-01-17|chris0@contoso.com|200-555-0112|M|Richard Carey|200-555-0112|0|M|1|25.0|76|0|Production|1999-02-23||188
+130|Cristina|Potra||Sales Store Manager|1999-02-23|1977-04-12|sean1@contoso.com|205-555-0132|S|Houman Pournasseh|205-555-0132|0|M|2|25.0|78|0|Document Control|1999-02-23||57
+131|Jason|Carlson||Sales Store Manager|1999-02-23|1966-02-06|dan1@contoso.com|653-555-0144|M|Ty Carlson|653-555-0144|1|M|2|25.0|66|0|Information Services|1999-02-23||185
+132|Chris|Preston||Sales Store Manager|1999-02-24|1969-10-26|mark1@contoso.com|417-555-0154|S|Jeff Price|417-555-0154|0|M|1|25.0|19|0|Production|1999-02-24||52
+133|Fernando|Caro||Sales Store Manager|1999-02-25|1974-10-22|bryan1@contoso.com|935-555-0199|S|Rob Caron|935-555-0199|0|M|2|25.0|62|0|Finance|1999-02-25||221
+134|Vishwa|Ranjan||Sales Store Manager|1999-02-26|1961-09-30|houman0@contoso.com|180-555-0136|M|Markus Rankenburg|180-555-0136|0|M|1|25.0|3|0|Production|1999-02-26||182
+135|Chase|Carpenter||Sales Store Manager|1999-02-27|1978-01-22|sairaj0@contoso.com|500-555-0159|M|Adam Carter|500-555-0159|0|M|2|25.0|46|0|Production Control|1999-02-27||185
+136|Arvind|Rao|B.|Sales Store Manager|1999-02-27|1972-07-28|michiko0@contoso.com|984-555-0148|S|Rui Raposo|984-555-0148|0|M|1|25.0|44|0|Production|1999-02-27||262
+137|Carlos|Carvallo||Sales Store Manager|1999-02-28|1976-02-06|benjamin0@contoso.com|533-555-0111|S|Rob Cason|533-555-0111|0|M|1|25.0|28|0|Production|1999-02-28||299
+138|Morten|Rasmussen||Sales Store Manager|1999-02-28|1971-09-19|cynthia0@contoso.com|352-555-0138|S|Andrew Rath|352-555-0138|0|F|2|25.0|69|0|Production|1999-02-28||194
+139|Gitte|Casparij||Sales Store Manager|1999-02-28|1980-12-02|kathie0@contoso.com|446-555-0118|M|Joao Casqueiro|446-555-0118|0|F|1|25.0|87|0|Production|1999-02-28||89
+140|Mike|Ray||Sales Store Manager|1999-03-02|1979-10-30|britta0@contoso.com|955-555-0169|M|Rodrigo Ready|955-555-0169|0|F|1|25.0|14|0|Production|1999-03-02||1
+141|Giorgio|Cavaglieri||Sales Store Manager|1999-03-02|1967-03-14|brian0@contoso.com|110-555-0182|S|Matt Cavallari|110-555-0182|0|M|1|25.0|55|0|Production|1999-03-02||52
+142|April|Reagan||Sales Store Manager|1999-03-03|1973-08-08|david6@contoso.com|646-555-0185|M|Jamie Reding|646-555-0185|1|M|2|25.0|57|0|Finance|1999-03-03||201
+143|Luisa|Cazzaniga||Sales Store Manager|1999-03-04|1966-02-06|LuisaC@contoso.com|615-555-0110|M|Ural Cebeci|615-555-0110|1|F|2|25.0|0|0|Executive|1999-03-04|2003-12-15|82
+144|Barak|Regev||Sales Store Manager|1999-03-04|1966-02-06|BarakR@contoso.com|615-555-0110|M|Miles Reid|615-555-0110|1|F|2|25.0|0|0|Executive|2003-12-15||286
+145|Sean|Chai||Sales Store Manager|1999-03-04|1964-06-03|michael2@contoso.com|441-555-0195|S|Gareth Chan|441-555-0195|0|M|1|25.0|98|0|Production|1999-03-04||150
+146|Enoch|Remick|T.|Sales Store Manager|1999-03-04|1973-11-20|andy0@contoso.com|118-555-0110|M|Olivier Renaud|118-555-0110|0|M|1|25.0|39|0|Production|1999-03-04||307
+147|Greg|Chapman||Sales Store Manager|1999-03-05|1967-05-08|yuhong0@contoso.com|965-555-0155|M|Mathew Charles|965-555-0155|0|M|2|25.0|41|0|Production|1999-03-05||244
+148|Bjorn|Rettig||Sales Store Manager|1999-03-06|1975-04-01|robert0@contoso.com|589-555-0147|S|Delphine Ribaute|589-555-0147|0|M|1|25.0|82|0|Production|1999-03-06||17
+149|Neil|Charney||Sales Store Manager|1999-03-06|1979-04-29|andreas0@contoso.com|181-555-0124|M|Mohammad Chami|181-555-0124|0|M|2|25.0|84|0|Quality Assurance|1999-03-06||190
+150|Don|Richardson||Sales Store Manager|1999-03-06|1979-02-09|reed0@contoso.com|678-555-0110|M|Shawn Richardson|678-555-0110|0|M|1|25.0|23|0|Production|1999-03-06||23
+151|Ankur|Chavda||Sales Store Manager|1999-03-07|1967-11-06|linda1@contoso.com|696-555-0157|S|Francisco Chaves|696-555-0157|0|F|1|25.0|12|0|Production|1999-03-07||43
+152|Wendy|Richardson||Sales Store Manager|1999-03-07|1973-02-07|james1@contoso.com|870-555-0122|S|Jack S. Richins|870-555-0122|1|M|2|25.0|64|0|Production|1999-03-07||83
+153|Aik|Chen||Sales Store Manager|1999-03-07|1978-04-14|ramesh0@contoso.com|182-555-0134|S|Jacky Chen|182-555-0134|1|M|2|25.0|73|0|Information Services|1999-03-07||207
+154|Anders|Riis||Sales Store Manager|1999-03-08|1974-04-26|stephanie0@contoso.com|594-555-0110|S|Bjarne Riis|594-555-0110|1|F|2|25.0|68|0|Information Services|1999-03-08||201
+155|Jeff|Chia||Sales Store Manager|1999-03-08|1977-12-23|samantha0@contoso.com|587-555-0114|M|Martin Chisholm|587-555-0114|0|F|1|25.0|7|0|Production|1999-03-08||296
+156|Titti|Ringstrom||Sales Store Manager|1999-03-09|1979-12-12|tawana0@contoso.com|368-555-0113|S|Juan-Carlos Rivas|368-555-0113|0|M|1|25.0|50|0|Production|1999-03-09||75
+157|Michal|Chmiela||Sales Store Manager|1999-03-09|1978-08-07|denise0@contoso.com|869-555-0119|M|Manish Chopra|869-555-0119|0|F|1|25.0|9|0|Production|1999-03-09||215
+158|John|Rodman||Sales Store Manager|1999-03-10|1967-05-19|hao0@contoso.com|806-555-0136|S|Scott Rockfeld|806-555-0136|0|M|2|25.0|52|0|Human Resources|1999-03-10||258
+159|Ray|Chow||Sales Store Manager|1999-03-12|1980-05-14|alex0@contoso.com|819-555-0198|M|Terri Chudzik|819-555-0198|0|M|1|25.0|77|0|Production|1999-03-12||83
+160|Don|Roessler||Sales Store Manager|1999-03-12|1966-03-13|eugene1@contoso.com|173-555-0179|S|Marek Rolecki|173-555-0179|0|M|1|25.0|36|0|Production|1999-03-12||146
+161|Alice|Ciccu||Sales Store Manager|1999-03-12|1967-02-11|brandon0@contoso.com|429-555-0137|M|Ken Circeo|429-555-0137|0|M|1|25.0|22|0|Production|1999-03-12||235
+162|Kelly|Rollin||Sales Store Manager|1999-03-12|1977-03-27|dylan0@contoso.com|181-555-0156|M|Daniel Roman|181-555-0156|1|M|2|25.0|61|0|Research and Development|1999-03-12||80
+163|Izak|Cohen||Sales Store Manager|1999-03-12|1980-06-24|shane0@contoso.com|810-555-0178|S|Pat Coleman|810-555-0178|0|M|2|25.0|75|0|Production|1999-03-12||254
+164|Daniel|Roth||Sales Store Manager|1999-03-13|1976-05-06|john2@contoso.com|201-555-0163|M|Tali Roth|201-555-0163|0|M|1|25.0|18|0|Production|1999-03-13||241
+165|Aaron|Con||Sales Store Manager|1999-03-13|1966-01-25|karen0@contoso.com|746-555-0164|M|Peter Connelly|746-555-0164|0|F|2|25.0|79|0|Document Control|1999-03-13||76
+166|Pablo|Rovira Diez||Sales Store Manager|1999-03-14|1974-09-01|jose0@contoso.com|587-555-0115|M|Todd Rowe|587-555-0115|0|M|1|25.0|20|0|Production|1999-03-14||186
+167|Kevin|Cook||Sales Store Manager|1999-03-14|1976-04-21|mandar0@contoso.com|140-555-0132|S|Jeroen Cool|140-555-0132|0|M|1|25.0|0|0|Production|1999-03-14||261
+168|Erik|Rucker||Sales Store Manager|1999-03-14|1974-09-18|mikael0@contoso.com|309-555-0170|S|Raimonds Rudmanis|309-555-0170|0|M|2|25.0|59|0|Purchasing|1999-03-14||50
+169|Jim|Corbin||Sales Store Manager|1999-03-15|1968-07-27|sameer0@contoso.com|990-555-0172|M|Michel Cordani|990-555-0172|0|M|1|25.0|4|0|Production|1999-03-15||306
+170|Michael|Ruggiero||Sales Store Manager|1999-03-15|1967-03-18|dragan0@contoso.com|117-555-0185|M|Christian Rytt|117-555-0185|0|M|2|25.0|63|0|Finance|1999-03-15||66
+171|Cecilia|Cornejo||Sales Store Manager|1999-03-16|1978-11-18|carol0@contoso.com|609-555-0153|M|Eva Corets|609-555-0153|0|F|1|25.0|45|0|Production|1999-03-16||7
+172|Sharon|Salavaria||Sales Store Manager|1999-03-17|1963-09-05|rob1@contoso.com|238-555-0116|S|Raymond Sam|238-555-0116|0|M|1|25.0|71|0|Production|1999-03-17||64
+173|Robin|Counts||Sales Store Manager|1999-03-17|1961-07-14|don0@contoso.com|100-555-0174|M|Jack Creasey|100-555-0174|0|M|1|25.0|88|0|Production|1999-03-17||18
+174|Ken|Sánchez||Sales Store Manager|1999-03-17|1974-04-30|alan0@contoso.com|438-555-0172|M|Yolanda Sánchez|438-555-0172|0|M|2|25.0|47|0|Production Control|1999-03-17||185
+175|Ioan|Crisiarcu||Sales Store Manager|1999-03-18|1975-10-25|david7@contoso.com|118-555-0177|M|Grant Culbertson|118-555-0177|0|M|1|25.0|29|0|Production|1999-03-18||190
+176|Mandar|Samant||Sales Store Manager|1999-03-19|1980-11-07|baris0@contoso.com|164-555-0114|S|Prasanna Samarawickrama|164-555-0114|0|M|1|25.0|72|0|Production|1999-03-19||240
+177|Scott|Culp||Sales Store Manager|1999-03-19|1979-03-02|michael3@contoso.com|156-555-0199|S|Conor Cunningham|156-555-0199|0|M|2|25.0|70|0|Production|1999-03-19||183
+178|Patrick|Sands||Sales Store Manager|1999-03-19|1981-05-07|steve0@contoso.com|712-555-0170|S|Dubravka Salopek|712-555-0170|0|M|1|25.0|31|0|Production|1999-03-19||118
+179|Pawel|Czernek||Sales Store Manager|1999-03-20|1977-07-11|suchitra0@contoso.com|753-555-0129|M|Wojciech Czupta|753-555-0129|0|F|1|25.0|15|0|Production|1999-03-20||176
+180|Mark|Sargent||Sales Store Manager|1999-03-20|1968-06-19|karen1@contoso.com|654-555-0177|S|Esko Sario|654-555-0177|1|F|2|25.0|74|0|Information Services|1999-03-20||257
+181|Apurva|Dalia||Sales Store Manager|1999-03-20|1975-01-09|terrence0@contoso.com|110-555-0115|S|Ofer Daliot|110-555-0115|0|M|1|25.0|13|0|Production|1999-03-20||231
+182|Tihomir|Sasic||Sales Store Manager|1999-03-22|1966-02-04|barbara1@contoso.com|822-555-0145|M|Raman Sarin|822-555-0145|1|F|2|25.0|58|0|Finance|1999-03-22||123
+183|Jim|Daly||Sales Store Manager|1999-03-22|1980-09-04|chad0@contoso.com|559-555-0175|M|Ryan Danner|559-555-0175|0|M|1|25.0|99|0|Production|1999-03-22||245
+184|Michiyo|Sato||Sales Store Manager|1999-03-23|1967-10-15|rostislav0@contoso.com|751-555-0134|M|Naoki Sato|751-555-0134|0|M|1|25.0|40|0|Production|1999-03-23||301
+185|Mike|Danseglio||Sales Store Manager|1999-03-24|1959-10-19|belinda0@contoso.com|319-555-0126|S|Alex Darrow|319-555-0126|0|F|1|25.0|83|0|Production|1999-03-24||223
+186|Rimvydas|Saulis||Sales Store Manager|1999-03-24|1974-12-20|katie0@contoso.com|809-555-0133|S|Kazuki Sawanoi|809-555-0133|0|F|2|25.0|42|0|Production|1999-03-24||223
+187|Shannon|Dascher||Sales Store Manager|1999-03-25|1972-03-14|russell1@contoso.com|517-555-0122|M|Velimir Davidovski|517-555-0122|0|M|1|25.0|24|0|Production|1999-03-25||70
+188|George|Schaller||Sales Store Manager|1999-03-25|1973-07-23|jack0@contoso.com|552-555-0111|S|Gary Schare|552-555-0111|0|M|2|25.0|68|0|Production|1999-03-25||24
+189|Andrew|Davis||Sales Store Manager|1999-03-26|1978-10-08|andrew0@contoso.com|908-555-0159|S|Sara Davis|908-555-0159|0|M|2|25.0|65|0|Production|1999-03-26||102
+190|Rainer|Schiller||Sales Store Manager|1999-03-26|1976-05-10|nicole0@contoso.com|508-555-0129|M|Janet Schorr|508-555-0129|0|F|1|25.0|67|0|Production|1999-03-26||63
+191|Eric|Davison||Sales Store Manager|1999-03-27|1961-08-24|frank1@contoso.com|167-555-0139|S|Marlowe Dayley|167-555-0139|0|M|1|25.0|10|0|Production|1999-03-27||159
+192|Boris|Scholl||Sales Store Manager|1999-03-27|1970-06-29|peter1@contoso.com|310-555-0133|S|Thorsten Scholl|310-555-0133|0|M|2|25.0|69|0|Information Services|1999-03-27||276
+193|Denis|Dehenne||Sales Store Manager|1999-03-27|1964-10-06|anibal0@contoso.com|106-555-0120|S|Aidan Delaney|106-555-0120|0|F|1|25.0|8|0|Production|1999-03-27||228
+194|Andreas|Schou||Sales Store Manager|1999-03-28|1971-06-29|ken1@contoso.com|949-555-0174|M|Steve Schmidt|949-555-0174|0|M|1|25.0|51|0|Production|1999-03-28||139
+195|Axel|Delgado||Sales Store Manager|1999-03-29|1966-05-18|grant0@contoso.com|955-555-0131|S|Eduard Dell|955-555-0131|0|M|2|25.0|66|0|Human Resources|1999-03-29||104
+196|Miguel|Severino||Sales Store Manager|1999-03-29|1979-07-17|michael4@contoso.com|817-555-0186|S|James Seymour|817-555-0186|0|M|1|25.0|94|0|Production|1999-03-29||193
+197|Luca|Dellamore||Sales Store Manager|1999-03-30|1978-04-15|lionel0@contoso.com|450-555-0152|S|Stephen Deming|450-555-0152|0|M|1|25.0|78|0|Production|1999-03-30||277
+198|Jill|Shrader||Sales Store Manager|1999-03-30|1976-02-11|thomas0@contoso.com|278-555-0118|M|Shish Shridhar|278-555-0118|0|M|1|25.0|37|0|Production|1999-03-30||297
+199|Molly|Dempsey||Sales Store Manager|1999-03-30|1975-06-05|jimmy0@contoso.com|927-555-0168|M|Bruno Denuit|927-555-0168|0|M|1|25.0|96|0|Shipping and Receiving|1999-03-30||168
+200|Alexandre|Silva||Sales Store Manager|1999-03-30|1972-10-19|michael5@contoso.com|296-555-0121|M|Edmund Silva|296-555-0121|0|M|1|25.0|35|0|Production|1999-03-30||36
+201|Prashanth|Desai||Sales Store Manager|1999-03-30|1970-08-19|lori0@contoso.com|289-555-0196|S|Shane DeSeranno|289-555-0196|0|F|2|25.0|76|0|Production|1999-03-30||43
+202|Alex|Simmons|J.|Sales Store Manager|1999-04-01|1964-09-21|arvind0@contoso.com|848-555-0163|M|Britta Simon|848-555-0163|0|M|2|25.0|60|0|Purchasing|1999-04-01||50
+203|Michael|DeVoe||Sales Store Manager|1999-04-01|1966-01-21|stefen0@contoso.com|165-555-0113|S|Craig Dewar|165-555-0113|0|M|1|25.0|19|0|Production|1999-04-01||304
+204|David|Simpson||Sales Store Manager|1999-04-01|1967-11-27|hazem0@contoso.com|869-555-0125|S|Katherine Simpson|869-555-0125|1|M|2|25.0|80|0|Quality Assurance|1999-04-01||277
+205|Cari|Dick||Sales Store Manager|1999-04-02|1969-04-09|janet0@contoso.com|393-555-0186|M|Holly Dickson|393-555-0186|0|F|2|25.0|64|0|Finance|1999-04-02||21
+206|Ashima|Singhal||Sales Store Manager|1999-04-03|1980-02-26|elizabeth0@contoso.com|318-555-0137|M|Soumya Singhi|318-555-0137|0|F|1|25.0|5|0|Production|1999-04-03||202
+207|Cliff|Didcock||Sales Store Manager|1999-04-03|1976-03-07|terry0@contoso.com|138-555-0118|M|Andrew Dixon|138-555-0118|0|M|2|25.0|44|0|Marketing|1999-04-03||280
+208|Bonnie|Skelly|L.|Sales Store Manager|1999-04-04|1972-04-24|john3@contoso.com|663-555-0172|S|Morgan Skinner|663-555-0172|0|M|1|25.0|27|0|Production|1999-04-04||194
+209|Blaine|Dockter||Sales Store Manager|1999-04-04|1973-06-13|merav0@contoso.com|224-555-0187|M|Jane Dow|224-555-0187|0|F|1|25.0|46|0|Production|1999-04-04||29
+210|Egil|Skjold|Ivar|Sales Store Manager|1999-04-04|1974-09-12|brian1@contoso.com|313-555-0196|M|Randy Slycord|313-555-0196|0|M|2|25.0|48|0|Production Control|1999-04-04||54
+211|Chris|Downs||Sales Store Manager|1999-04-05|1977-07-07|kitti0@contoso.com|785-555-0132|S|Patricia Doyle|785-555-0132|0|F|1|25.0|89|0|Production|1999-04-05||179
+212|Ben|Smith||Sales Store Manager|1999-04-06|1966-03-14|jay0@contoso.com|407-555-0165|S|Denise Smith|407-555-0165|0|M|1|25.0|32|0|Production|1999-04-06||123
+213|Jan|Dryml||Sales Store Manager|1999-04-06|1964-12-16|jan0@contoso.com|139-555-0131|S|Dominik Dubicki|139-555-0131|0|M|1|25.0|30|0|Production|1999-04-06||39
+214|Brian|Smith||Sales Store Manager|1999-04-06|1973-03-31|brenda0@contoso.com|142-555-0139|M|Derek Snyder|142-555-0139|0|F|2|25.0|71|0|Production|1999-04-06||97
+215|Bernard|Duerr||Sales Store Manager|1999-04-07|1978-10-26|andrew1@contoso.com|207-555-0192|S|Marina Dukhon|207-555-0192|0|M|1|25.0|73|0|Production|1999-04-07||14
+216|Lorrin|Smith-Bates|G.|Sales Store Manager|1999-04-07|1977-06-26|chris1@contoso.com|575-555-0126|M|Tony Smith|575-555-0126|0|M|2|25.0|75|0|Document Control|1999-04-07||58
+217|Andrea|Dunker||Sales Store Manager|1999-04-08|1976-09-07|chris2@contoso.com|315-555-0144|S|Adrian Dumitrascu|315-555-0144|0|M|1|25.0|16|0|Production|1999-04-08||17
+218|Martin|Spona||Sales Store Manager|1999-04-08|1977-01-08|shelley0@contoso.com|991-555-0184|S|Christof Sprenger|991-555-0184|0|F|1|25.0|14|0|Production|1999-04-08||289
+219|Bart|Duncan||Sales Store Manager|1999-04-09|1978-06-11|gabe0@contoso.com|310-555-0117|M|Daniel Durrer|310-555-0117|0|M|1|25.0|57|0|Production|1999-04-09||296
+220|Jeff|Stammler||Sales Store Manager|1999-04-09|1969-08-01|mike0@contoso.com|927-555-0150|S|Jamie Stark|927-555-0150|1|M|2|25.0|59|0|Finance|1999-04-09||207
+221|Shelley|Dyck||Sales Store Manager|1999-06-04|1975-01-01|michael6@contoso.com|330-555-2568|M|Maria Dykstra|330-555-2568|1|M|2|25.0|16|0|Research and Development|1999-06-04||115
+222|Mark|Steele||Sales Store Manager|2000-01-03|1961-03-21|gary1@contoso.com|110-555-0112|M|Heidi Steen|110-555-0112|1|M|2|25.0|86|0|Facilities and Maintenance|2000-01-03||304
+223|Witold|Dyszkiewicz||Sales Store Manager|2000-01-04|1961-10-03|charles0@contoso.com|931-555-0118|S|Krittiya Eamsiri|931-555-0118|0|M|1|25.0|27|0|Production|2000-01-04||178
+224|Brad|Sutton||Sales Store Manager|2000-01-07|1976-10-23|ebru0@contoso.com|202-555-0187|S|Kern Sutton|202-555-0187|0|M|1|25.0|93|0|Production|2000-01-07||145
+225|Terry|Earls||Sales Store Manager|2000-01-12|1960-12-13|sylvester0@contoso.com|492-555-0174|M|Mads Ebdrup|492-555-0174|0|M|1|25.0|4|0|Production|2000-01-12||174
+226|Bernard|Tham||Sales Store Manager|2000-01-12|1961-01-23|brian2@contoso.com|730-555-0117|S|Ram Thirunavukkarasu|730-555-0117|0|M|1|25.0|63|0|Production|2000-01-12||37
+227|Josh|Edwards||Sales Store Manager|2000-01-18|1960-12-31|linda2@contoso.com|916-555-0165|M|Alexander Eggerer|916-555-0165|0|F|2|25.0|56|0|Purchasing|2000-01-18||35
+228|Sandhya|Thodla||Sales Store Manager|2000-01-19|1933-01-17|betsy0@contoso.com|405-555-0171|S|Tien Dung Thoi|405-555-0171|0|F|1|25.0|99|0|Production|2000-01-19||274
+229|Vladimir|Egorov||Sales Store Manager|2000-01-22|1961-09-27|magnus0@contoso.com|583-555-0182|M|Mohamed Elkugia|583-555-0182|0|M|2|25.0|87|0|Facilities and Maintenance|2000-01-22||129
+230|Iben|Thorell||Sales Store Manager|2000-01-23|1960-04-07|karan0@contoso.com|447-555-0186|S|Alicia Thornber|447-555-0186|0|M|1|25.0|28|0|Production|2000-01-23||307
+231|Patrick|Elliott||Sales Store Manager|2000-01-26|1976-10-20|mary1@contoso.com|283-555-0185|M|Heiko Elmsheuser|283-555-0185|0|F|1|25.0|94|0|Production|2000-01-26||304
+232|Justin|Thorp||Sales Store Manager|2000-01-26|1976-10-20|kevin2@contoso.com|555-555-0113|S|Steven Thorpe|555-555-0113|0|M|1|25.0|90|0|Production|2000-01-26||139
+233|Anil|Elson||Sales Store Manager|2000-01-30|1961-04-09|mihail0@contoso.com|733-555-0128|S|Terry Eminhizer|733-555-0128|0|M|1|25.0|64|0|Production|2000-01-30||4
+234|Danielle|Tiedt||Sales Store Manager|2000-02-02|1976-10-11|bonnie0@contoso.com|264-555-0150|M|Hung-Fu Ting|264-555-0150|0|F|1|25.0|89|0|Production|2000-02-02||164
+235|Michael|Entin||Sales Store Manager|2000-02-05|1960-12-25|fukiko0@contoso.com|520-555-0177|M|Alexei Eremenko|520-555-0177|0|M|2|25.0|57|0|Purchasing|2000-02-05||62
+236|Olinda|Turner||Sales Store Manager|2000-02-07|1961-11-23|hung-fu0@contoso.com|497-555-0181|S|Richard Turner|497-555-0181|0|M|1|25.0|0|0|Production|2000-02-07||310
+237|Ebru|Ersan||Sales Store Manager|2000-02-12|1932-12-30|gordon0@contoso.com|230-555-0144|M|Daniel Escapa|230-555-0144|0|M|2|25.0|52|0|Purchasing|2000-02-12||175
+238|Tjeerd|Veninga||Sales Store Manager|2000-02-13|1976-10-14|kimberly0@contoso.com|123-555-0167|S|Raja D. Venugopal|123-555-0167|0|F|1|25.0|95|0|Production|2000-02-13||53
+239|Modesto|Estrada||Sales Store Manager|2000-02-17|1933-01-14|kim1@contoso.com|208-555-0114|M|John Evans|208-555-0114|0|F|1|25.0|24|0|Production|2000-02-17||104
+240|Gregory|Verny||Sales Store Manager|2000-02-18|1961-01-03|sandeep0@contoso.com|166-555-0156|S|Giorgio Veronesi|166-555-0156|0|M|1|25.0|65|0|Production|2000-02-18||186
+241|Ken|Ewert||Sales Store Manager|2000-02-23|1943-06-01|prasanna0@contoso.com|129-555-0199|M|Sten Faerch|129-555-0199|0|M|1|25.0|5|0|Production|2000-02-23||283
+242|Peter|Villadsen||Sales Store Manager|2000-02-24|1942-06-13|frank2@contoso.com|163-555-0147|M|Aldis Vilums|163-555-0147|0|M|2|25.0|58|0|Purchasing|2000-02-24||91
+243|Antoine|Faisandier||Sales Store Manager|2000-02-25|1964-10-11|min0@contoso.com|590-555-0152|M|Maciej Fedorow|590-555-0152|0|M|1|25.0|1|0|Production|2000-02-25||36
+244|Florian|Voss||Sales Store Manager|2000-02-25|1933-01-08|eric1@contoso.com|680-555-0118|M|Rob Walters|680-555-0118|0|M|1|25.0|60|0|Production|2000-02-25||73
+246|Kelly|Weadock|J.|Sales Store Manager|2000-02-28|1961-01-03|pat0@contoso.com|720-555-0158|S|Gregory Weber|720-555-0158|0|M|1|25.0|89|0|Facilities and Maintenance|2000-02-28||100
+247|Yaniv|Feinberg||Sales Store Manager|2000-03-01|1945-03-02|maciej0@contoso.com|237-555-0128|S|Walter Felhofer|237-555-0128|0|M|1|25.0|30|0|Production|2000-03-01||244
+248|Martin|Weber||Sales Store Manager|2000-03-03|1961-02-04|erin0@contoso.com|842-555-0158|S|Maira Wenzel|842-555-0158|0|F|2|25.0|66|0|Purchasing|2000-03-03||159
+249|Dan|Fennell||Sales Store Manager|2000-03-04|1976-10-11|patrick0@contoso.com|413-555-0124|S|Burke Fewel|413-555-0124|0|M|1|25.0|96|0|Production|2000-03-04||295
+250|Cindy|White||Sales Store Manager|2000-03-08|1942-04-03|frank3@contoso.com|203-555-0196|M|Jim Wickham|203-555-0196|0|M|1|25.0|66|0|Production|2000-03-08||143
+251|Franziska|Fiegler||Sales Store Manager|2000-03-08|1961-10-12|ed0@contoso.com|919-555-0140|S|Heinrich Fischer|919-555-0140|0|M|1|25.0|25|0|Production|2000-03-08||46
+252|Greg|Winston||Sales Store Manager|2000-03-11|1976-11-01|christopher0@contoso.com|153-555-0166|M|Rainer Witte|153-555-0166|0|M|1|25.0|91|0|Production|2000-03-11||127
+253|William|Flash||Sales Store Manager|2000-03-15|1964-01-24|patrick1@contoso.com|425-555-0117|M|Florence Flipo|425-555-0117|0|M|1|25.0|61|0|Production|2000-03-15||179
+254|Robin|Wood||Sales Store Manager|2000-03-16|1961-10-06|krishna0@contoso.com|491-555-0183|S|Joanna Yuan|491-555-0183|0|M|1|25.0|2|0|Production|2000-03-16||24
+255|Raymond|Fong||Sales Store Manager|2000-03-19|1960-08-31|lori1@contoso.com|295-555-0161|M|Olivier Fontana|295-555-0161|0|F|1|25.0|90|0|Facilities and Maintenance|2000-03-19||247
+256|Karin|Zimprich||Sales Store Manager|2000-03-23|1976-10-08|danielle0@contoso.com|500-555-0172|S|Erwin Zischka|500-555-0172|0|F|1|25.0|97|0|Production|2000-03-23||180
+257|Jeff|Ford||Sales Store Manager|2000-03-26|1933-01-05|sootha0@contoso.com|325-555-0137|M|Viggo Forde|325-555-0137|0|M|2|25.0|85|0|Quality Assurance|2000-03-26||26
+258|Aziz|Hassouneh||Sales Store Manager|2000-03-26|1963-10-07|michael7@contoso.com|582-555-0148|S|Satomi Hayakawa|582-555-0148|0|M|1|25.0|26|0|Production|2000-03-26||221
+259|Diane|Forsyth||Sales Store Manager|2000-03-26|1960-05-29|randy0@contoso.com|961-555-0122|M|Garth Fort|961-555-0122|0|M|1|25.0|29|0|Production|2000-03-26||126
+260|Arno|Harteveld||Sales Store Manager|2000-03-30|1976-10-29|john4@contoso.com|254-555-0114|S|Roger Harui|254-555-0114|0|M|1|25.0|92|0|Production|2000-03-30||221
+261|Soren|Francker||Sales Store Manager|2000-04-03|1963-09-30|jack1@contoso.com|521-555-0113|S|Jill Frank|521-555-0113|0|M|1|25.0|62|0|Production|2000-04-03||252
+262|Mark|Harrington||Sales Store Manager|2000-04-04|1960-05-05|olinda0@contoso.com|306-555-0186|S|Phyllis Harris|306-555-0186|0|F|1|25.0|3|0|Production|2000-04-04||118
+263|Joel|Frauenheim||Sales Store Manager|2000-04-05|1962-01-17|stuart1@contoso.com|539-555-0149|M|Sven Freitag|539-555-0149|0|M|1|25.0|88|0|Facilities and Maintenance|2000-04-05||13
+264|Eran|Harel||Sales Store Manager|2000-04-07|1944-05-25|jo1@contoso.com|228-555-0159|M|Walter Harp|228-555-0159|0|F|1|25.0|91|0|Facilities and Maintenance|2000-04-07||31
+265|Victor|Freitas||Sales Store Manager|2000-04-09|1963-07-05|ben0@contoso.com|151-555-0113|M|Mihail Frintu|151-555-0113|0|M|2|25.0|55|0|Purchasing|2000-04-09||25
+266|Claus|Hansen||Sales Store Manager|2000-04-10|1976-11-01|tom0@contoso.com|295-555-0161|M|Mark Hanson|295-555-0161|0|M|1|25.0|98|0|Production|2000-04-10||213
+267|Gabe|Frost||Sales Store Manager|2001-01-05|1968-02-18|ovidiu0@contoso.com|719-555-0181|S|Don Funk|719-555-0181|0|M|2|25.0|7|0|Tool Design|2001-01-05||34
+268|Jim|Hance||Sales Store Manager|2001-01-06|1968-03-01|annette0@contoso.com|125-555-0196|M|Kerim Hanif|125-555-0196|0|F|2|25.0|50|0|Purchasing|2001-01-06||192
+269|Kari|Furse||Sales Store Manager|2001-01-23|1979-06-29|janice0@contoso.com|473-555-0117|M|Lawrie Gaffney|473-555-0117|0|F|2|25.0|8|0|Tool Design|2001-01-23||281
+270|David|Hamilton||Sales Store Manager|2001-01-25|1968-02-18|reinout0@contoso.com|370-555-0163|M|Jay Hamlin|370-555-0163|0|M|2|25.0|51|0|Purchasing|2001-01-25||21
+271|Mike|Gahrns||Sales Store Manager|2001-01-30|1969-07-17|michael8@contoso.com|465-555-0156|S|Chris Gallagher|465-555-0156|1|M|2|25.0|3|0|Engineering|2001-01-30||215
+272|Dean|Halstead||Sales Store Manager|2001-02-04|1941-11-17|stephen0@contoso.com|238-555-0197|M|Thomas Hamborg|238-555-0197|1|M|2|25.0|14|1|Sales|2001-02-04||242
+273|Janet|Galore||Sales Store Manager|2001-02-07|1965-04-17|wanida0@contoso.com|708-555-0141|M|David Galvin|708-555-0141|0|F|2|25.0|41|0|Marketing|2001-02-07||53
+274|Adina|Hagege||Sales Store Manager|2001-02-18|1951-06-03|sharon0@contoso.com|970-555-0138|M|Pernille Halberg|970-555-0138|1|F|2|25.0|4|0|Engineering|2001-02-18||189
+275|Cesar|Garcia||Sales Store Manager|2001-03-10|1968-04-06|john5@contoso.com|486-555-0150|S|Debra Garcia|486-555-0150|0|M|2|25.0|48|0|Marketing|2001-03-10||264
+276|Mary|Andersen|Kay|Sales Store Manager|2001-03-17|1968-03-01|mary2@contoso.com|124-555-0114|S|Ivo Haemels|124-555-0114|0|F|2|25.0|43|0|Marketing|2001-03-17||209
+277|Hugo|Garcia||Sales Store Manager|2001-03-18|1967-07-08|brian3@contoso.com|716-555-0127|S|Euan Garden|716-555-0127|1|M|2|25.0|10|0|Sales|2001-03-18||138
+278|Allan|Guinot||Sales Store Manager|2001-03-28|1968-03-13|AllanG@contoso.com|210-555-0193|S|Pedro Gutierrez|210-555-0193|1|F|2|25.0|49|0|Purchasing|2001-03-28|2001-08-30|171
+279|Davide|Garghentini||Sales Store Manager|2001-03-28|1968-03-13|DavideG@contoso.com|210-555-0193|S|Benjamin Gay|210-555-0193|1|F|2|25.0|49|0|Purchasing|2001-08-31|2002-08-15|193
+280|Eric|Gruber||Sales Store Manager|2001-03-28|1968-03-13|EricG@contoso.com|210-555-0193|S|Daniela Guaita|210-555-0193|1|F|2|25.0|49|0|Purchasing|2002-08-16||114
+281|Inbar|Gazit||Sales Store Manager|2001-07-01|1959-01-26|michael9@contoso.com|257-555-0154|S|Darren Gehring|257-555-0154|1|M|2|25.0|38|1|Sales|2001-07-01||44
+282|Seth|Grossman||Sales Store Manager|2001-07-01|1970-03-30|linda3@contoso.com|883-555-0116|M|Brian Groth|883-555-0116|1|F|2|25.0|27|1|Sales|2001-07-01||132
+283|Christa|Geller||Sales Store Manager|2001-07-01|1952-09-29|jillian0@contoso.com|517-555-0117|S|Jens Geschwandtner|517-555-0117|1|F|2|25.0|24|1|Sales|2001-07-01||39
+284|Carlos|Grilo||Sales Store Manager|2001-07-01|1965-03-07|garrett1@contoso.com|922-555-0165|M|Geoff Grisso|922-555-0165|1|M|2|25.0|33|1|Sales|2001-07-01||227
+285|Tom|Getzinger||Sales Store Manager|2001-07-01|1964-02-19|tsvi0@contoso.com|664-555-0112|M|Wriju Ghosh|664-555-0112|1|M|2|25.0|29|1|Sales|2001-07-01||266
+286|Kirk|Gregersen||Sales Store Manager|2001-07-01|1965-01-06|pamela0@contoso.com|340-555-0193|S|Ryan Gregg|340-555-0193|1|F|2|25.0|22|1|Sales|2001-07-01||173
+287|Leo|Giakoumakis||Sales Store Manager|2001-07-01|1934-04-10|shu0@contoso.com|330-555-0120|M|Phil Gibbins|330-555-0120|1|M|2|25.0|26|1|Sales|2001-07-01||305
+288|Nikolay|Grachev||Sales Store Manager|2001-07-01|1930-01-11|josé1@contoso.com|185-555-0169|M|Chris Gray|185-555-0169|1|M|2|25.0|31|1|Sales|2001-07-01||179
+289|Enrique|Gil||Sales Store Manager|2001-07-01|1964-03-14|david8@contoso.com|740-555-0182|S|Guy Gilbert|740-555-0182|1|M|2|25.0|23|1|Sales|2001-07-01||249
+290|Mojca|Gostincar||Sales Store Manager|2002-05-18|1947-10-22|amy0@contoso.com|775-555-0164|M|Elisa Graceffo|775-555-0164|1|F|2|25.0|21|1|Sales|2002-05-18||84
+291|Eric|Gilmore||Sales Store Manager|2002-07-01|1958-04-18|jae0@contoso.com|1 (11) 500 555-0145|M|Adriana Giorgi|1 (11) 500 555-0145|1|F|2|25.0|37|1|Sales|2002-07-01||214
+292|Nuria|Gonzalez||Sales Store Manager|2002-07-01|1965-10-31|ranjit0@contoso.com|1 (11) 500 555-0117|S|Jon Gordner|1 (11) 500 555-0117|1|M|2|25.0|34|1|Sales|2002-07-01||265
+293|Stuart|Glasson||Sales Store Manager|2002-11-01|1968-02-06|tete0@contoso.com|615-555-0153|M|Jim Glynn|615-555-0153|1|M|2|25.0|39|1|Sales|2002-11-01||102
+294|Daniel|Goldschmidt||Sales Store Manager|2003-04-15|1965-02-11|syed0@contoso.com|926-555-0182|M|Howard Gonzalez|926-555-0182|1|M|2|25.0|20|1|Sales|2003-04-15||141
+295|Gerhard|Goeschl||Sales Store Manager|2003-07-01|1965-08-09|rachel0@contoso.com|1 (11) 500 555-0140|S|Mete Goktepe|1 (11) 500 555-0140|1|F|2|25.0|35|1|Sales|2003-07-01||198
+296|Jossef|Goldberg||Sales Store Manager|2003-07-01|1961-04-18|lynn0@contoso.com|1 (11) 500 555-0190|S|Maxim Goldin|1 (11) 500 555-0190|1|F|2|25.0|36|1|Sales|2003-07-01||5
