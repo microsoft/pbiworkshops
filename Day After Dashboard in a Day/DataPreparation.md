@@ -3,27 +3,9 @@
 ✏️ Lab scenario
 ---
 
-For this portion of the lab, we've been tasked with collecting and combining daily files that are being shared with us in a cloud directory. 
+For this portion of the lab, we've been tasked with collecting and combining daily files that are being shared with us in a cloud directory. The total number of files that will be added to this location will continue to grow over time, which we will need to account for when developing a [future proofed](https://docs.microsoft.com/power-query/best-practices#future-proofing-queries) data preparation solution.
 
-The total number of files that will be added to this location will continue to grow over time, which we will need to account for when developing a [future proofed](https://docs.microsoft.com/power-query/best-practices#future-proofing-queries) solution.
-
-To easily share our data preparation outputs with other users, we'll leverage Power Query Online to create dataflow tables.
-
-## About dataflows
-
-Using dataflows and self-service data prep supports the following scenarios by:
-
-1. Promoting a single source of the truth, with greater control over which data is accessed and exposed to creators.
-
-1. Preventing others from having direct access to the underlying data sources and reducing the load to the underlying systems. Giving administrators finer control of when the systems get loaded from refreshes.
-
-1. Enabling the ability to create reusable transformation logic and curated views of your cloud or on-premise data sources, which can then be seamlessly shared and integrated with other Microsoft services and products (Power BI, Power Apps, and Dynamics 365 Customer Insights).
-
-[Learn more about dataflows and self-service data prep](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-introduction-self-service)
-
----
-
-# Premium license mode
+### Premium license mode
 
 Before we begin, we'll want to navigate to a new, empty or non-production workspace and confirm that a capacity has been assigned, if not we'll use this opportunity to enable the option by selecting one of the below values.
 
@@ -37,7 +19,21 @@ Before we begin, we'll want to navigate to a new, empty or non-production worksp
 
     ![License mode](./Media/LicenseMode.png)
 
-# Import a dataflow model and configure dataflow settings
+# Dataflows
+
+Using dataflows and self-service data prep supports the following scenarios by:
+
+1. Promoting a single source of the truth, with greater control over which data is accessed and exposed to creators.
+
+1. Preventing others from having direct access to the underlying data sources and reducing the load to the underlying systems. Giving administrators finer control of when the systems get loaded from refreshes.
+
+1. Enabling the ability to create reusable transformation logic and curated views of your cloud or on-premise data sources, which can then be seamlessly shared and integrated with other Microsoft services and products (Power BI, Power Apps, and Dynamics 365 Customer Insights).
+
+[Learn more about dataflows and self-service data prep](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-introduction-self-service)
+
+---
+
+## Import a dataflow model
 
 For this portion of the lab, we'll use an existing dataflow model as our starting point to skip over the more familiar steps of **Get data** > from **CSV** to focus on more advanced transformation patterns.
 
@@ -92,16 +88,11 @@ Using the enhanced compute engine provides the following advantages:
     ![Refresh now.](./Media/RefreshNow.png)
 
 ---
-# Power Query Online editor
-
-
-
-
----
+# Power Query Online
 
 ## Global options
 
-With our dataflow successfully imported and credentials set, we can now configure our development environment for authoring in the Power Query Online experience.
+With our dataflow successfully imported and credentials set, we'll now configure some settings for authoring in the Power Query Online interface which will also persist the next time we need to author new content.
 
 ---
 
@@ -113,7 +104,7 @@ With our dataflow successfully imported and credentials set, we can now configur
 
     ![Edit tables](./Media/EditTables.png)
 
-1. Before we begin using the Power Query Online interface we'll enable some additional authoring settings which will persist the next time we need to author new content. From the **Home** tab, select the **Options** > **Global options** property.
+1. From the **Home** tab, select the **Options** > **Global options** property.
 
     ![Global options](./Media/GlobalOptions.png)
 
@@ -141,7 +132,11 @@ With our dataflow successfully imported and credentials set, we can now configur
 
 ## Diagram view
 
-BENEFIT OF USING DIAGRAM VIEW
+The diagram view in Power Query Online offers a visual way to prepare data in the Power Query editor. With this interface it simplifies the experience of data preparation by helping users quickly understand the flow of data, both in the "big picture view" of how their queries are related and in the "detailed view" of the specific data preparation steps in a query.
+
+Learn more about [diagram view](https://docs.microsoft.com/power-query/diagram-view).
+
+---
 
 1. In the bottom right of the **Power Query** editor, select the **Diagram view** option.
 
@@ -176,7 +171,9 @@ BENEFIT OF USING DIAGRAM VIEW
     
     ![Expand product subcategory](./Media/ExpandProductSubcategory.png)
 
-1. Select the **Actions** option ( ⋮ ) at the top right of the **Merge** table and select the **Merge queries** option.
+1. After the **Expanded DimProduct** step, select the **"+"** icon to insert a new step and complete the following steps below.
+    1. Within the transformations search, type **Merge**.
+    1. Select the **Merge queries** option from the list.
 
     ![Merge queries](./Media/MergeQueries.png)
     
@@ -202,7 +199,9 @@ BENEFIT OF USING DIAGRAM VIEW
 
 ## Schema view
 
-BENEFIT OF USING SCHEMA VIEW
+Schema view is designed to optimize your flow when working on schema level operations by putting your query's column information front and center. Schema view provides contextual interactions to shape your data structure, and lower latency operations as it only requires the column metadata to be computed and not the complete data results.
+
+Learn more about [Schema view](https://docs.microsoft.com/power-query/schema-view)
 
 ---
 
@@ -210,7 +209,7 @@ BENEFIT OF USING SCHEMA VIEW
 
     ![Schema view](./Media/SchemaView.png)
 
-1. Select the **Merge** table and complete the following steps below:
+1. Select the **Merge** query and complete the following steps below:
     1. Select the **ProductSubcategoryKey** and **ProductCategoryKey** column names from the schema list.
     1. Navigate to the **Schema tools** tab and select the **Remove columns** option.
     
@@ -218,24 +217,9 @@ BENEFIT OF USING SCHEMA VIEW
     
     ![Remove columns](./Media/RemoveColumns.png)
 
-1. While in the schema view, complete the following steps below for the **DimProductCategory_raw** table:
+1. Select the **DimProductCategory_raw** query and complete the following steps below:
     1. Select the **ProductCategoryKey** column name from the schema list.
     1. Navigate to the **Schema tools** tab and select the **Mark as key** option.
-    
-
-    ![Mark ProductCategoryKey](./Media/ProductCategoryKey.png)
-
-    1. Within the formula bar, update the [Table.AddKey()](https://docs.microsoft.com/powerquery-m/table-addkey) **isPrimary** value from **false** to **true**.
-    ``` powerquery-m
-        Table.AddKey(#"Changed column type", {"ProductCategoryKey"}, true)
-    ```
-
-    ![Mark ProductCategoryKey](./Media/ProductCategoryKeyTrue.png)
-
-1. While in the schema view, complete the following steps below for the **DimProductCategory_raw** table:
-    1. Select the **ProductCategoryKey** column name from the schema list.
-    1. Navigate to the **Schema tools** tab and select the **Mark as key** option.
-    
 
     ![Mark ProductCategoryKey](./Media/ProductCategoryKey.png)
 
@@ -245,9 +229,9 @@ BENEFIT OF USING SCHEMA VIEW
         Table.AddKey(#"Changed column type", {"ProductCategoryKey"}, true)
     ```
 
-    ![Mark ProductCategoryKey](./Media/ProductCategoryKeyTrue.png)
+    ![Mark ProductCategoryKey true](./Media/ProductCategoryKeyTrue.png)
 
-1. While in the schema view, complete the following steps below for the **DimProductSubcategory_raw** table:
+1. Select the **DimProductSubcategory_raw** query and complete the following steps below:
     1. Select the **ProductSubcategoryKey** column name from the schema list.
     1. Navigate to the **Schema tools** tab and select the **Mark as key** option.
 
@@ -256,24 +240,24 @@ BENEFIT OF USING SCHEMA VIEW
     1. Within the formula bar, update the [Table.AddKey()](https://docs.microsoft.com/powerquery-m/table-addkey) **isPrimary** value from **false** to **true**.
 
     ``` powerquery-m
-        Table.AddKey(#"Changed column type", {"ProductCategoryKey"}, true)
+        Table.AddKey(#"Changed column type", {"ProductSubcategoryKey"}, true)
     ```
 
-    ![Mark ProductCategoryKey](./Media/ProductSubcategoryKeyTrue.png)
+    ![Mark ProductSubcategoryKey true](./Media/ProductSubcategoryKeyTrue.png)
 
-1. While in the schema view, complete the following steps below for the **DimProductCategory_raw** table:
-    1. Select the **ProductCategoryKey** column name from the schema list.
+1. Select the **DimGeography_raw** query and complete the following steps below:
+    1. Select the **GeographyKey** column name from the schema list.
     1. Navigate to the **Schema tools** tab and select the **Mark as key** option.
 
-    ![Mark ProductCategoryKey](./Media/ProductCategoryKey.png)
+    ![Mark GeographyKey](./Media/GeographyKey.png)
 
     1. Within the formula bar, update the [Table.AddKey()](https://docs.microsoft.com/powerquery-m/table-addkey) **isPrimary** value from **false** to **true**.
 
     ``` powerquery-m
-        Table.AddKey(#"Changed column type", {"ProductCategoryKey"}, true)
+        Table.AddKey(#"Changed column type", {"GeographyKey"}, true)
     ```
 
-    ![Mark ProductCategoryKey](./Media/ProductCategoryKeyTrue.png)
+    ![Mark GeographyKey true](./Media/GeographyKeyTrue.png)
 
 ---
 
@@ -359,6 +343,8 @@ Something about variables
 ## View query plan
 
 [Learn more about the query plan](https://docs.microsoft.com/power-query/query-plan)
+
+---
 
 1. In the **Query settings** pane on the right, navigate to the **Expanded DimProductCategory_raw** step, right click and select the **View query plan** option.
 
