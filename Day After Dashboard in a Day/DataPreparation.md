@@ -2,7 +2,11 @@
 
 ## ✏️ Lab scenario
 
-For this portion of the lab, we've been tasked with collecting and combining new daily files that are being shared with us in a publicly accessible **Web page** folder. The total number of files that will be added to this location will continue to grow over time, which we will need to account for when developing our [future proofed](https://docs.microsoft.com/power-query/best-practices#future-proofing-queries) solution. Ultimately, to promote the reusability of our work for other users, we'll leverage Power Query Online to help us create new dataflow tables.
+For this portion of the lab, we've been tasked with collecting and combining daily files that are being shared with us in a cloud directory. 
+
+The total number of files that will be added to this location will continue to grow over time, which we will need to account for when developing a [future proofed](https://docs.microsoft.com/power-query/best-practices#future-proofing-queries) solution.
+
+To easily share our data preparation outputs with other users, we'll leverage Power Query Online to create dataflow tables.
 
 ## About dataflows
 
@@ -128,11 +132,11 @@ With our dataflow successfully imported and credentials set, we can now configur
 
 ---
 
-## Merging tables using the diagram view
+## Diagram view
 
 BENEFIT OF USING DIAGRAM VIEW
 
-1. In the bottom right of the **Power Query** editor, select the **Diagram view** icon.
+1. In the bottom right of the **Power Query** editor, select the **Diagram view** option.
 
     ![Diagram view](./Media/DiagramView.png)
 
@@ -147,15 +151,21 @@ BENEFIT OF USING DIAGRAM VIEW
     | Left table for merge | DimProduct_raw | ProductSubcategoryKey |
     | Right table for merge | DimProductSubcategory_raw | ProductSubcategoryKey |
 
-    1. Set the **Join kind** to **Left outer**
+    1. Set the **Join kind** to **Inner**
 
     ![Merge DimProductSubcategory](./Media/MergeDimProductSubcategory.png)
 
-1. From the **Home** tab select the drop down next to **Choose columns** and then the **Go to column** option. Within the search dialog type the column name **DimProductSubcategory_raw** until a result has been returned, you can then either double click the name or press **OK** to continue.
+1. From the **Home** tab select the drop down next to **Choose columns** and then the **Go to column** option (Shorcut: Ctrl+G). 
+
+    Within the search dialog type the column name **DimProductSubcategory_raw** until a result has been returned, you can then either double click the name or press **OK** to continue.
 
     ![Go to column](./Media/GoToColumn.png)
 
-1. In the top right of the **DimProductSubcategory_raw** column - we'll select the expand columns icon and disable the **ProductSubcategoryKey** column since this column already exists in our **DimProduct_raw** table, disable the **Use original column name as prefix** option and then select **OK** when complete.
+1. In the top right of the **DimProductSubcategory_raw** column - we'll select the expand columns icon and complete the following steps below:
+    1. Disable the **ProductSubcategoryKey** column since this column already exists in our original **DimProduct_raw** table.
+    1. Select only the **ProductSubcategoryName** and **ProductCategoryKey** columns.
+    1. Disable the **Use original column name as prefix** option (if enabled).
+    1. Select **OK** once complete.
     
     ![Expand product subcategory](./Media/ExpandProductSubcategory.png)
 
@@ -170,13 +180,171 @@ BENEFIT OF USING DIAGRAM VIEW
     | Left table for merge | (Current) | ProductCategoryKey |
     | Right table for merge | DimProductCategory_raw | ProductCategoryKey |
 
-    1. Set the **Join kind** to **Left outer**
+    1. Set the **Join kind** to **Inner**
 
     ![Merge left outer](./Media/MergeLeftOuter.png)
 
-1. In the top right of the **DimProductSubcategory_raw** column - we'll select the expand columns icon and disable the **ProductCategoryKey** column since this column already exists in our **DimProductSubcategory_raw** table, disable the **Use original column name as prefix** option and then select **OK** when complete.
+1. In the top right of the **DimProductCategory_raw** column - we'll select the expand columns icon and disable the **ProductCategoryKey** column since this column already exists in our **DimProductSubcategory_raw** table, disable the **Use original column name as prefix** option and then select **OK** when complete.
+
+1. In the top right of the **DimProductCategory_raw** column - we'll select the expand columns icon and complete the following steps below:
+    1. Deselect all columns except **ProductCategoryName**.
+    1. Disable the **Use original column name as prefix** option (if enabled).
+    1. Select **OK** once complete.
 
     ![Expand product category](./Media/ExpandProductCategory.png)
+
+## Schema view
+
+BENEFIT OF USING SCHEMA VIEW
+
+1. In the bottom right of the **Power Query** editor, select the **Show schema view** option.
+
+    ![Schema view](./Media/SchemaView.png)
+
+1. Select the **Merge** table and complete the following steps below:
+    1. Select the **ProductSubcategoryKey** and **ProductCategoryKey** column names from the schema list.
+    1. Navigate to the **Schema tools** tab and select the **Remove columns** option.
+    
+        **Note:** You can maximize or minimize the view by selecting the chevrons next to the formula bar.
+    
+    ![Remove columns](./Media/RemoveColumns.png)
+
+1. While in the schema view, complete the following steps below for the **DimProductCategory_raw** table:
+    1. Select the **ProductCategoryKey** column name from the schema list.
+    1. Navigate to the **Schema tools** tab and select the **Mark as key** option.
+    
+
+    ![Mark ProductCategoryKey](./Media/ProductCategoryKey.png)
+
+    1. Within the formula bar, update the [Table.AddKey()](https://docs.microsoft.com/powerquery-m/table-addkey) **isPrimary** value from **false** to **true**.
+    ``` powerquery-m
+        Table.AddKey(#"Changed column type", {"ProductCategoryKey"}, true)
+    ```
+
+    ![Mark ProductCategoryKey](./Media/ProductCategoryKeyTrue.png)
+
+1. While in the schema view, complete the following steps below for the **DimProductCategory_raw** table:
+    1. Select the **ProductCategoryKey** column name from the schema list.
+    1. Navigate to the **Schema tools** tab and select the **Mark as key** option.
+    
+
+    ![Mark ProductCategoryKey](./Media/ProductCategoryKey.png)
+
+    1. Within the formula bar, update the [Table.AddKey()](https://docs.microsoft.com/powerquery-m/table-addkey) **isPrimary** value from **false** to **true**.
+    
+    ``` powerquery-m
+        Table.AddKey(#"Changed column type", {"ProductCategoryKey"}, true)
+    ```
+
+    ![Mark ProductCategoryKey](./Media/ProductCategoryKeyTrue.png)
+
+1. While in the schema view, complete the following steps below for the **DimProductSubcategory_raw** table:
+    1. Select the **ProductSubcategoryKey** column name from the schema list.
+    1. Navigate to the **Schema tools** tab and select the **Mark as key** option.
+
+    ![Mark ProductSubcategoryKey](./Media/ProductSubcategoryKey.png)
+
+    1. Within the formula bar, update the [Table.AddKey()](https://docs.microsoft.com/powerquery-m/table-addkey) **isPrimary** value from **false** to **true**.
+
+    ``` powerquery-m
+        Table.AddKey(#"Changed column type", {"ProductCategoryKey"}, true)
+    ```
+
+    ![Mark ProductCategoryKey](./Media/ProductSubcategoryKeyTrue.png)
+
+1. While in the schema view, complete the following steps below for the **DimProductCategory_raw** table:
+    1. Select the **ProductCategoryKey** column name from the schema list.
+    1. Navigate to the **Schema tools** tab and select the **Mark as key** option.
+
+    ![Mark ProductCategoryKey](./Media/ProductCategoryKey.png)
+
+    1. Within the formula bar, update the [Table.AddKey()](https://docs.microsoft.com/powerquery-m/table-addkey) **isPrimary** value from **false** to **true**.
+
+    ``` powerquery-m
+        Table.AddKey(#"Changed column type", {"ProductCategoryKey"}, true)
+    ```
+
+    ![Mark ProductCategoryKey](./Media/ProductCategoryKeyTrue.png)
+
+---
+
+## Step identifiers
+
+Something about variables
+
+---
+
+1. Return to the query titled **Merge** and select the **Fx** button next to the formula bar to **Insert step**.
+
+    ![Insert step](./Media/MergeInsertStep.png)
+
+1. To return a list of the column names in our table, we'll complete the following steps below.
+    1.  In the formula bar wrap the current #"Removed columns"" value with the [Table.ColumnNames()](https://docs.microsoft.com/powerquery-m/table-columnnames) function as displayed below.
+    1. Upon pressing **Enter** to complete the formula, select the **Switch to data preview** to view our results.
+
+    ``` powerquery-m
+        Table.ColumnNames(#"Removed columns")
+    ```
+
+    ![Table column names](./Media/TableColumnNames.png)
+
+1. We'll now want to remove any value from our list where the column name contains the text **"ID"**, to get started select the **Fx** button next to the formula bar to **Insert step** and complete the following formula below using the [List.Select()](https://docs.microsoft.com/powerquery-m/list-select) and [Text.Contains()](https://docs.microsoft.com/powerquery-m/text-contains) functions and the **not** [keyword](https://docs.microsoft.com/powerquery-m/m-spec-lexical-structure#keywords).
+
+    ``` powerquery-m
+        List.Select( Custom , each not Text.Contains( _ , "ID", Comparer.Ordinal ) )
+    ```
+
+    ![List not ID](./Media/ListNotID.png)
+
+1. From the **Query settings** pane **Applied steps**, right click the **Custom** step and select **Rename**.
+
+    ![Rename custom](./Media/RenameCustom.png)
+
+    1. Change the current value from **Custom** to **Get column names**.
+
+        ![Get column names](./Media/GetColumnNamesStep.png)
+
+1. From the **Query settings** pane **Applied steps**, right click the **Custom 1** step and select **Properties**.
+
+    ![Custom 1 step properties](./Media/Custom1StepProperties.png)
+
+    1. Update the following values below and select **OK** when complete.
+        1. **Name:** Select non-ID columns
+        1. **Description:** Select only columns where the text ID does not exist.
+
+        ![Step properties documentation](./Media/StepPropertiesDocumentation.png)
+
+1. Within the **Applied steps** list, we may notice an information icon now present, if we were to hover above this value our step description is now available for an at-a-glance understanding of the transformation we performed and also our step formula is available within the **Script** field. 
+
+    ![Remove ID information](./Media/RemoveIDInformation.png)
+
+1. Select the **Fx** button next to the formula bar to **Insert step** and complete the following formula below to select the non-ID table columns.
+
+    ![Table select columns](./Media/TableSelectColumns.png)
+
+    ``` powerquery-m
+        Table.SelectColumns( #"Removed columns", #"Select non-ID columns" )
+    ```
+
+1. From the **Applied steps** list, right click **Custom** and update the title to **Select columns**.
+
+    ![Table select columns](./Media/RenameTableSelect.png)
+
+1. From the **Query settings** pane, update the current table name from **Merge** to **DimProduct**.
+
+    ![DimProduct name](./Media/DimProductName.png)
+
+1. Return to the **Diagram view** and select the **Expand** option in the top right of the **DimProduct** query. It's here where we can review the visual flow of our queries and steps.
+    1. The **DimProductCategory_raw** and **DimProductSubcategory_raw** tables both display that **Key** columns exist within the tables.
+    1. For the **DimProduct** table our **Removed columns** step identifier, is split into two separate branches.
+        2. One branch being used to **Get column names** and **Select non-ID columns**.
+        3. The other branch to take the original **Removed columns** and combine this with the **Select non-ID columns** to return our final table.
+
+        Because step identifiers are like variables they can be utilized throughout our queries steps to create more advanced and custom solutions that may differ from the linear top-to-bottom presentation of the **Applied steps** list.
+
+    ![DiagramViewIdentifiers](./Media/DiagramViewIdentifiers.png)
+
+---
 
 ## View query plan
 
