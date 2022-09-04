@@ -33,7 +33,7 @@ Using dataflows and self-service data prep supports the following scenarios by:
 
 ---
 
-## Import a dataflow model
+## Import dataflow model
 
 For this portion of the lab, we'll use an existing dataflow model as our starting point to skip over the more familiar steps of **Get data** > from **CSV** to focus on more advanced transformation patterns.
 
@@ -51,7 +51,7 @@ Once our dataflow model has been imported and refreshed it will enable discovery
 
     ![Import Model](./Media/ImportModel.png)
 
-## Edit the dataflow credentials
+## Edit dataflow credentials
 
 Because the lab files are stored in a publicly accessible [GitHub repository](./Source_Files/), we will authenticate anonymously and skip our test connection to ensure that we can successfully connect to and ingest the lab data.
 
@@ -68,9 +68,9 @@ Because the lab files are stored in a publicly accessible [GitHub repository](./
 
     ![Edit credentials](./Media/ConfigureCredentials.png)
 
-## Configure enhanced compute engine settings
+## Enhanced compute engine settings
 
-The enhanced compute engine in Power BI enables Power BI Premium subscribers to use their capacity to optimize the use of dataflows. 
+The enhanced compute engine in Power BI enables Power BI Premium subscribers to use their capacity to optimize the use of dataflows.
 
 Using the enhanced compute engine provides the following advantages:
 
