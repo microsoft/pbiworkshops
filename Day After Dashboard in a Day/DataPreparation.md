@@ -1,6 +1,7 @@
 # Data Preparation
 
-## ✏️ Lab scenario
+✏️ Lab scenario
+---
 
 For this portion of the lab, we've been tasked with collecting and combining daily files that are being shared with us in a cloud directory. 
 
@@ -36,7 +37,7 @@ Before we begin, we'll want to navigate to a new, empty or non-production worksp
 
     ![License mode](./Media/LicenseMode.png)
 
-# Import a dataflow model and configure settings
+# Import a dataflow model and configure dataflow settings
 
 For this portion of the lab, we'll use an existing dataflow model as our starting point to skip over the more familiar steps of **Get data** > from **CSV** to focus on more advanced transformation patterns.
 
@@ -91,8 +92,14 @@ Using the enhanced compute engine provides the following advantages:
     ![Refresh now.](./Media/RefreshNow.png)
 
 ---
+# Power Query Online editor
 
-# Configure Global options in the Power Query Online editor
+
+
+
+---
+
+## Global options
 
 With our dataflow successfully imported and credentials set, we can now configure our development environment for authoring in the Power Query Online experience.
 
@@ -196,6 +203,8 @@ BENEFIT OF USING DIAGRAM VIEW
 ## Schema view
 
 BENEFIT OF USING SCHEMA VIEW
+
+---
 
 1. In the bottom right of the **Power Query** editor, select the **Show schema view** option.
 
@@ -337,8 +346,9 @@ Something about variables
 1. Return to the **Diagram view** and select the **Expand** option in the top right of the **DimProduct** query. It's here where we can review the visual flow of our queries and steps.
     1. The **DimProductCategory_raw** and **DimProductSubcategory_raw** tables both display that **Key** columns exist within the tables.
     1. For the **DimProduct** table our **Removed columns** step identifier, is split into two separate branches.
-        2. One branch being used to **Get column names** and **Select non-ID columns**.
-        3. The other branch to take the original **Removed columns** and combine this with the **Select non-ID columns** to return our final table.
+
+        2. One branch being used for the **Get column names** and **Select non-ID columns** steps.
+        3. The other branch to take the original **Removed columns** and combine this with the **Select non-ID columns** to return our final table result.
 
         Because step identifiers are like variables they can be utilized throughout our queries steps to create more advanced and custom solutions that may differ from the linear top-to-bottom presentation of the **Applied steps** list.
 
