@@ -577,7 +577,7 @@ in
 ```
 
 
-# Grouping queries
+## Query groups
 
 As we add more tables to our solutions it can often be challenging to remember which-queries-do-what. For this reason we'll create groups for our queries that share similar design patterns.
 
@@ -638,7 +638,7 @@ Now that our data is being ingested and stored in our dataflow's [Azure Data Lak
 ---
 
 
-## Saving and refreshing the dataflow
+## Saving and refreshing a dataflow
 
 1. Select the **Save & close** option in the bottom right to exit the Power Query editor.
 
@@ -775,7 +775,7 @@ Query folding is the ability for a Power Query query to generate a single query 
 
     ![Delete.](./Media/DeleteStep.png)
 
-## Set the storage mode
+## Setting the storage mode
 
 Now that we have completed all of the data preparation activities in this lab we need to create the connection between our queries and the Power BI dataset.
 
