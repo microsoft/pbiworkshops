@@ -130,6 +130,59 @@ With our dataflow successfully imported and credentials set, we'll now configure
 
 ---
 
+## Data view
+
+WRITE UP FOR DATA VIEW
+
+---
+
+1. From the **Queries** pane, right click the **DimCustomer_raw** query and select **Reference** from the menu.
+    ![Reference query](./Media/DimCustomerReference.png)
+
+1. Inspect the **Queries** pane again and notice that a new query titled **DimCustomer_raw (2)** has now been created, with a lightning bolt icon (⚡) indicating that this is a computed table. 
+    
+    This query will leverage the enhanced compute engine which can drastically reduces refresh time required for long-running data preparation steps - such as performing joins between tables.
+    
+    ![Computed table](./Media/ComputedTable.png)
+
+1. With the **DimCustomer_raw (2)** query selected, navigate to the **Home** tab and select the **Merge queries** option.
+
+    ![Computed table](./Media/MergeQueriesDimCustomer.png)
+
+1. In the **Merge** window complete the following steps and then select **OK** when complete.
+
+    | Merge | Table | Column |
+    | :--- | :---- | :--- | 
+    | Left table for merge | DimCustomer_raw (2) | GeographyKey |
+    | Right table for merge | DimGeography_raw | GeographyKey |
+
+    1. Set the **Join kind** to **Inner**
+
+    ![Computed table](./Media/DimCustomerDimGeography.png)
+
+1. Within the data view, navigate to the **DimGeography_raw** column and select the **Expand** icon. Deselect the **GeographyKey** since we this column already exists in our original query and then select **OK**.
+
+    ![Expand DimGeography](./Media/ExpandDimGeography.png)
+
+1. From the **Home** tab select the drop down next to **Choose columns** and then the **Go to column** option (Shorcut: Ctrl+G). 
+
+    Within the search dialog type the column name **GeographyKey** until a result has been returned, you can then either double click the name or press **OK** to continue.
+
+    ![Go to column](./Media/GoToColumn.png)
+
+1. With the **GeographyKey** selected (highlighted) in the data view, right click the column and select **Remove columns**.
+
+    ![Remove GeographyKey](./Media/RemoveGeographyKey.png)
+
+1. Within the **Query settings** pane, update the name of our query from **DimCustomer_raw (2)** to the name **DimCustomer**.
+
+    ![Query settings DimCustomer](./Media/QuerySettingsDimCustomer.png)
+
+Now that our data is being ingested and stored in our dataflow's [Azure Data Lake Storage Gen2](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-introduction), we'll leverage [computed tables](https://docs.microsoft.com/power-query/dataflows/computed-entities-scenarios) to apply transformation logic via the enhanced compute engine.
+
+[Learn more about the benefits of loading data without transformation for Text/CSV files](https://docs.microsoft.com/power-query/dataflows/computed-entities-scenarios#load-data-without-transformation-for-textcsv-files)
+
+---
 ## Diagram view
 
 The diagram view in Power Query Online offers a visual way to prepare data in the Power Query editor. With this interface it simplifies the experience of data preparation by helping users quickly understand the flow of data, both in the "big picture view" of how their queries are related and in the "detailed view" of the specific data preparation steps in a query.
@@ -340,7 +393,7 @@ Something about variables
 
 ---
 
-## View query plan
+## Query plan
 
 [Learn more about the query plan](https://docs.microsoft.com/power-query/query-plan)
 
@@ -354,11 +407,6 @@ Something about variables
 
     ![Join algorithm](./Media/JoinAlgorithm.png)
 
-1. From the diagram view complete the following steps using the **Actions** options ( ⋮ ) for the **Merge** table.
-    1. Select the **Rename** action and update the query title to **DimProduct**.
-    1. Select the **Move to group...** action and select the **Data transformation** group.
-
-    ![Queries pane completed](./Media/QueriesPaneComplete.png)
 
 # Advanced Editor
 
@@ -521,7 +569,10 @@ SOMETHING ABOUT ADVANCED EDITOR
 
     ![Query name](./Media/QueryName.png)
 
-## Optional: Power Query M function reference
+
+---
+
+<b>Optional: Power Query M function reference</b>
 
 To view a complete list of Power Query function documentation, from the **Home** tab select **Get data** and **Blank query**, update the **Source** step's value to **#shared** and select **Next** to proceed. A record value will be returned including the [Power Query M function reference](https://docs.microsoft.com/powerquery-m/power-query-m-function-reference) documentation.
 
@@ -531,6 +582,7 @@ let
 in
     Source
 ```
+
 
 # Grouping queries
 
@@ -576,83 +628,21 @@ As we add more tables to our solutions it can often be challenging to remember w
 
     ![New group](./Media/GroupDescription.png)
 
+1. From the diagram view complete the following steps using the **Actions** options ( ⋮ ) for the **Merge** table.
+    1. Select the **Rename** action and update the query title to **DimProduct**.
+    1. Select the **Move to group...** action and select the **Data transformation** group.
+
+    ![Queries pane completed](./Media/QueriesPaneComplete.png)
+
 ---
 
-# Transforming data at scale
+Transforming data at scale
 
-Not that our data is being ingested and stored in our dataflow's [Azure Data Lake Storage Gen2](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-introduction), we'll leverage [computed tables](https://docs.microsoft.com/power-query/dataflows/computed-entities-scenarios) to apply transformation logic via the enhanced compute engine.
+Now that our data is being ingested and stored in our dataflow's [Azure Data Lake Storage Gen2](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-introduction), we'll leverage [computed tables](https://docs.microsoft.com/power-query/dataflows/computed-entities-scenarios) to apply transformation logic via the enhanced compute engine.
 
 [Learn more about the benefits of loading data without transformation for Text/CSV files](https://docs.microsoft.com/power-query/dataflows/computed-entities-scenarios#load-data-without-transformation-for-textcsv-files)
 
 ---
-
-## Reference a query to create a computed table
-
-1. In the **Queries** pane, right click the **F** table we created earlier and select the **Reference** option to create a computed table. Once complete we will see a new query has been created with a lightning bolt icon (⚡) indicating that this is a computed table.
-
-    ![Query reference](./Media/QueryReference.png)
-
-1. In the **Queries** pane - right click the **FactOnlineSales_raw (2)** table, select **Rename** and update the query title to **FactOnlineSales**.
-
-    ![Rename option](./Media/RenameOption.png)
-
-1. In the **Queries** pane - right click the **FactOnlineSales** computed table, select the **Move to group** > **New group...** option and complete the following.
-    1. **Name:** Data transformation
-    1. **Description:** Data that will be ingested from the data lake storage for transformations.
-
-    ![Transformation group](./Media/NewGroupTransformation.png)
-
-## TO BE UPDATED: Transforming multiple columns
-
-1. Before we begin we'll change the current **Script** view to **Step script** in the bottom right hand corner of the screen.
-
-    ![Step script](./Media/StepScript.png)
-
-1. While still in the **FactOnlineSales** query, we'll select the **fx** icon to the left of the formula bar to insert a new step into the query.
-
-    ![Insert step](./Media/InsertStep.png)
-
-1. Within the formula bar we'll utilize the [Table.TransformColumns](https://docs.microsoft.com/powerquery-m/table-transformcolumns) function to apply a [list](https://docs.microsoft.com/powerquery-m/expressions-values-and-let-expression#list) of transformation operations to multiple columns in a single step - in the order of { column name, transformation , *optional type* } from the table below -
-
-    | Column name | Transformation | Type |
-    | :--- | :--- | :--- |
-    | OrderDate | fxCreateKey | Int64.Type |
-    | ShipDate | fxCreateKey | Int64.Type |
-
-    **Complete formula**
-
-    ```fsharp
-        Table.TransformColumns(
-        Source,
-        {
-            {
-                "OrderDate",
-                fxCreateKey,
-                Int64.Type
-            },
-            {
-                "ShipDate",
-                fxCreateKey,
-                Int64.Type
-            }
-        }
-    )
-    ```
-
-1. To create a new column from a multi-selection we'll first hold shift and select the **SalesAmount**, **TaxAmount** and **Freight** columns, then we'll navigate to the **Add column** tab's **Statistics** button and select the **Sum** option.
-
-    ![Add column statistics](./Media/AddColumnStatistics.png)
-
-1. To avoid creating a new step to rename the column name, from the formula bar we can update the default column name of **Sum** to **TotalSalesAmount**, to match the below formula.
-
-    ```powerquery-m
-    Table.AddColumn(Custom, "TotalSalesAmount", each List.Sum({[SalesAmount], [TaxAmount], [Freight]}), type nullable number)
-    ```
-
-1. While holding the **shift** key select the **SalesAmount**, **TaxAmount**, **Freight** and **TotalSalesAmount** columns, right click any one of the selected columns and choose the **Change type** and then the **Currency** option.
-    1. The [**Currency**](https://docs.microsoft.com/power-query/data-types) type is a fixed decimal number and always has four digits to its right.
-
-    ![Currency type](./Media/CurrencyType.png)
 
 
 ## Saving and refreshing the dataflow
@@ -671,7 +661,9 @@ Not that our data is being ingested and stored in our dataflow's [Azure Data Lak
 
 ---
 
-# Query folding
+# Power Query Desktop
+
+## Query folding
 
 Query folding is the ability for a Power Query query to generate a single query statement to retrieve and transform source data. The Power Query mashup engine strives to achieve query folding whenever possible for reasons of efficiency.
 
@@ -689,7 +681,6 @@ Query folding is the ability for a Power Query query to generate a single query 
     | :---- |
     | DimDate |
     | DimEmployee |
-    | DimSalesTerritory |
     | DimStore |
     | DimCustomer_raw |
     | DimGeography_raw |
@@ -791,7 +782,7 @@ Query folding is the ability for a Power Query query to generate a single query 
 
     ![Delete.](./Media/DeleteStep.png)
 
-# Set the storage mode
+## Set the storage mode
 
 Now that we have completed all of the data preparation activities in this lab we need to create the connection between our queries and the Power BI dataset.
 
