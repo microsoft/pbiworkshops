@@ -407,13 +407,6 @@ Something about variables
 
     ![Join algorithm](./Media/JoinAlgorithm.png)
 
-
-# Advanced Editor
-
-SOMETHING ABOUT ADVANCED EDITOR
-
----
-
 ## Custom functions
 
 1. From the **Home** tab select the drop-down for **Get data** and the **Blank query** option to create a new query.
@@ -502,7 +495,7 @@ SOMETHING ABOUT ADVANCED EDITOR
       fileList
     ```
 
-6. Now that we've reviewed the documentation, update the **Query script** view to the below.
+1. Now that we've reviewed the documentation, update the **Query script** view to the below.
     1. For the **initial** parameter include the goes-to "**=>**" symbol and then the **Source** step.
     1. For the **condition** parameter, we'll use square brackets to reference the initialized **Source** value's **[data]** to logically test that the returned value is **not** empty, when using the **[Table.IsEmpty()](https://docs.microsoft.com//powerquery-m/table-isempty)** function.
     1. For the **next** parameter, create a record that matches the **Source** step's **fileCount**, **fileName** and **data** fields and increment the **fileCount** by it's current integer value plus **one**.
