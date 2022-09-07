@@ -561,6 +561,36 @@ Important questions we should ask next time:
 
     ![Incremental refresh menu.](./Media/IncrementalRefreshMenu.png)
 
+---
+
+# Model properties
+
+An important aspect of data modeling is usability.
+
+---
+
+1. Select the **Model** view and update the following table properties with the instructions below for each:
+    1. From the **Fields** pane select the Previous Table Name from the list.
+    1. In the **Properties** pane update the **Name**, **Description** and **Key column** fields.
+
+    | Previous Table Name | Name | Description | Key column |
+    | :---- | :---- | :---- | :---- |
+    | DimCustomer | Customers | Contains customer information including address and contact details.  | CustomerKey |
+    | DimDate | Calendar | Contains the organizational calendar including any custom days, weeks, months and years. | DateKey |
+    | DimEmployee | Employees | Contains all employee information including address and contact details. | EmployeeKey |
+    | DimStore | Stores | Contains all store information including address and contact details. | StoreKey |
+    | DimProduct | Products | Contains all product information including descriptions and categorization. | ProductKey | 
+    | FactOnlineSales | Online Sales | Contains all online sales transactions including quantities and amounts.  | OnlineSalesKey |
+    
+    ![Table properties](./Media/TableProperties.png)
+
+1. If we hover above the **Table** properties in any of the **Report**, **Data** or **Model** views we will now see the description field available in a tooltip. 
+    1. The **Description** value can also be populated for columns/fields and measures upon active selection.
+    1. For end users the **Description** fields will be available in various client applications and experiences ensuring they have a proper understanding of the property.
+
+    ![Table description](./Media/TableDescription.png)
+
+
 
 <!-- 
 # User-defined aggregations
