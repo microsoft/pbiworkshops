@@ -5,7 +5,7 @@
 
 For this portion of the lab, we've been tasked with creating a dataset that queries our data in **near-real time** for our report consumers. Based on these initial requirements we'll want to evaluate Power BI's storage mode options and monitor our performance to find the most optimal solution.
 
-# Storage modes
+# Storage modes and Performance optimization
 
 In Microsoft Power BI Desktop, we can specify the storage mode for each table individually in our model. Understanding the benefits of each storage mode can provide many advantages, including the following:
 
@@ -122,8 +122,8 @@ We can also leverage the [external tools in Power BI Desktop](https://docs.micro
         [t1].[EmailAddress] ASC
     ```
 
-✅ Lab check
----
+<font size="6">✅ Lab check</font>
+
 We've been able to confirm that as our Power BI visuals are being rendered our query will be instantly sent to our data source to retrieve new insights. With this initial requirement met, let's continue and start connecting our tables to create a dimensional model.
 
 ---
@@ -248,8 +248,8 @@ Learn more about [creating and managing relationships](https://docs.microsoft.co
 
     ![Full view of all connected tables.](./Media/FullModelView.png)
 
-✅ Lab check
----
+<font size="6">✅ Lab check</font>
+
 We've been able to create relationships between all of our data source's tables and a new requirement has come in that our data model has to be both - **near-real time** and **blazing fast**. 
 
 For this we'll want to revisit the design of our model.
@@ -332,8 +332,8 @@ It is also recommend to strive to deliver the **right number of tables** with th
 
     ![Star Schema view.](./Media/StarSchemaView.png)
 
-✅ Lab check
----
+<font size="6">✅ Lab check</font>
+
 We've been able to properly model our dataset into a proper star schema but a new requirement has come in that our data model has to be both - **near-real time** and **blazing fast**. For this we'll want to revisit our storage mode options and determine if each of our tables are configured properly.
 
 ---
@@ -436,8 +436,8 @@ A table configured as dual storage mode is both Import and DirectQuery, dependin
       )
     ```
 
-✅ Lab check
----
+<font size="6">✅ Lab check</font>
+
 We've been able to create a proper data model and tested different storage modes. After speaking directly with our end users we learned they would rather have **blazing fast** performance as the reports prepare them for their business day so they need to be able to quickly slice-and-dice their insights.
 
 We've also learned that new information only comes in overnight and as long as this information can be made fully available before they start their morning. The request for **near real-time** meant as soon as its available, as opposed to the previous wait period in the prior reporting solution.
@@ -487,8 +487,8 @@ Leverage the entire set of Data Analysis Expressions (DAX) functions when enhanc
 
     ![Store sales Direct query.](./Media/ImportDAXQuery.png)
 
-✅ Lab check
----
+<font size="6">✅ Lab check</font>
+
 At this stage in our projects development we've explored several potential benefits of each storage mode, ultimately though the most important thing we learned was that had we gone to our business users and understood their requirements directly we could choose the right solution to meet their needs.
 
 Important questions we should ask next time:
