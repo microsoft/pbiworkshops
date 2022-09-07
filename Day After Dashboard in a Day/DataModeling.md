@@ -5,7 +5,7 @@
 
 For this portion of the lab, we've been tasked with creating a dataset that queries our data in **near-real time** for our report consumers. Based on these initial requirements we'll want to evaluate Power BI's storage mode options and monitor our performance to find the most optimal solution.
 
-# Storage modes and optimization
+# Storage modes and data modeling
 
 In Microsoft Power BI Desktop, we can specify the storage mode for each table individually in our model. Understanding the benefits of each storage mode can provide many advantages, including the following:
 
@@ -134,7 +134,7 @@ We've been able to confirm that as our Power BI visuals are being rendered our q
 
 ---
 
-### Creating Relationships
+## Relationships
 
 When using multiple tables, chances are you'll do some analysis using data from all those tables. Relationships between those tables are necessary to accurately calculate results and display the correct information in your reports.
 
