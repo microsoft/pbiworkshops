@@ -5,7 +5,7 @@
 
 For this portion of the lab, we've been tasked with creating a dataset that queries our data in **near-real time** for our report consumers. Based on these initial requirements we'll want to evaluate Power BI's storage mode options and monitor our performance to find the most optimal solution.
 
-# Storage modes and Performance optimization
+# Storage modes and optimization
 
 In Microsoft Power BI Desktop, we can specify the storage mode for each table individually in our model. Understanding the benefits of each storage mode can provide many advantages, including the following:
 
@@ -75,13 +75,18 @@ There are two main reasons to consider developing a DirectQuery model:
     ```
 ---
 
+<br>
+<font size="6">Optional: Event traces</font>
+
  <b>Optional - Event traces</b>
 
 One important item that was missing from our above query is the [Transact-SQL](https://docs.microsoft.com/learn/modules/introduction-to-transact-sql/) statement for the **Direct query** value. In order to trace this event we'll leverage [SQL Server Profiler](https://docs.microsoft.com/sql/tools/sql-server-profiler/sql-server-profiler) to view our event traces.
 
 We can also leverage the [external tools in Power BI Desktop](https://docs.microsoft.com/power-bi/transform-model/desktop-external-tools) integration to easily view the event traces against our underlying Analysis Services instance.
 
-## Prerequisite - Register the SQL Server Profiler external tool
+<br>
+<font size="4">Register SQL Server Profiler external tool</font>
+
 
 1. Download and install [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
 
@@ -94,7 +99,8 @@ We can also leverage the [external tools in Power BI Desktop](https://docs.micro
     ```
 [Learn more about external tools](https://docs.microsoft.com/power-bi/transform-model/desktop-external-tools)
 
-## DirectQuery events
+<br>
+<font size="4">DirectQuery events</font>
 
 1. From the **Trace Properties** window select the **Events Selection** tab. Within the **Events** section, expand the **Query Processing** group and then select the **DirectQuery End** event. Once complete select the **Run** option in the bottom right to start tracing events.
 
