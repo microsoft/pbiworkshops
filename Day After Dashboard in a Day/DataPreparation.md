@@ -88,6 +88,16 @@ Using the enhanced compute engine provides the following advantages:
     ![Refresh now.](./Media/RefreshNow.png)
 
 ---
+
+<font size="6">✅ Lab check</font>
+
+As we progress into the Data Modeling lab, some of the most important configuration steps for DirectQuery with our dataflows are:
+- Explicitly toggling the enhanced compute engine to **On** in dataflow settings
+- **Refreshing** the dataflow before it can be consumed in DirectQuery mode
+
+Learn more about [Using DirectQuery with dataflows](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-directquery#configuration)
+
+---
 # Power Query Online
 
 ## Global options
@@ -132,7 +142,9 @@ With our dataflow successfully imported and credentials set, we'll now configure
 
 ## Data view
 
-WRITE UP FOR DATA VIEW
+The Power Query editor represents the Power Query user interface, where you can add or modify queries, manage queries by grouping or adding descriptions to query steps, or visualize your queries and their structure with different views.
+
+Learn more about the [Power Query editor](https://docs.microsoft.com/power-query/power-query-ui#the-power-query-editor-user-experience)
 
 ---
 
@@ -180,7 +192,7 @@ WRITE UP FOR DATA VIEW
 
 Now that our data is being ingested and stored in our dataflow's [Azure Data Lake Storage Gen2](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-introduction), we'll leverage [computed tables](https://docs.microsoft.com/power-query/dataflows/computed-entities-scenarios) to apply transformation logic via the enhanced compute engine.
 
-[Learn more about the benefits of loading data without transformation for Text/CSV files](https://docs.microsoft.com/power-query/dataflows/computed-entities-scenarios#load-data-without-transformation-for-textcsv-files)
+Learn more about the [benefits of loading data without transformation for Text/CSV files](https://docs.microsoft.com/power-query/dataflows/computed-entities-scenarios#load-data-without-transformation-for-textcsv-files)
 
 ---
 ## Diagram view
@@ -314,9 +326,11 @@ Learn more about [Schema view](https://docs.microsoft.com/power-query/schema-vie
 
 ---
 
-## Step identifiers
+## Applied step identifiers
 
-Something about variables
+Identifiers are names given to elements in a program like variables, functions etc. Identifiers can either be regular identifiers or quoted identifiers.
+
+Learn more about [Environments and variables](https://docs.microsoft.com/powerquery-m/m-spec-basic-concepts#environments-and-variables)
 
 ---
 
@@ -325,7 +339,7 @@ Something about variables
     ![Insert step](./Media/MergeInsertStep.png)
 
 1. To return a list of the column names in our table, we'll complete the following steps below.
-    1.  In the formula bar wrap the current #"Removed columns"" value with the [Table.ColumnNames()](https://docs.microsoft.com/powerquery-m/table-columnnames) function as displayed below.
+    1.  In the formula bar wrap the current #"Removed columns"" identifier value with the [Table.ColumnNames()](https://docs.microsoft.com/powerquery-m/table-columnnames) function as displayed below.
     1. Upon pressing **Enter** to complete the formula, select the **Switch to data preview** to view our results.
 
     ``` powerquery-m
@@ -407,61 +421,76 @@ Something about variables
 
     ![Join algorithm](./Media/JoinAlgorithm.png)
 
-## Custom functions
+---
+
+## Advanced Editor
+
+
+
+---
 
 1. From the **Home** tab select the drop-down for **Get data** and the **Blank query** option to create a new query.
     1. Keyboard shortcut: **Ctrl + M**
 
     ![New Blank Query](./Media/NewBlankQuery.png)
 
-1. Within the **Advanced editor** window, we'll create a custom function for our file name that [combines text](https://docs.microsoft.com/powerquery-m/text-combine) for our prefix, file number and file extension and converts the [text from](https://docs.microsoft.com/powerquery-m/text-from) a value. Select **Ok** when complete.
+1. Within the **Advanced editor** window either write directly or copy/paste the following function. Once complete select **OK** to proceed.
     1. You can test the return value of the function by supplying a numeric value and then selecting the **Invoke** option.
-
+  
     ```fsharp
     let
-      // A function that accept a file number value and concatenates text
-      fxFileName = (#"File number" as number) as text =>
-                    Text.Combine(
-                        {
-                            "FactOnlineSales_",
-                            Text.From(#"File number"),
-                            ".parquet"
-                        }
-                    )
+    // A function that accept a number value to create a concatenated file name.
+    fileNameUpdate =
+    (#"File number" as number) as text =>
+        Source =
+            Text.Combine(
+                {
+                    "FactOnlineSales_",
+                    Text.From(#"File number"),
+                    ".parquet"
+                }
+            )
     in
-      fxFileName
+        Source
     ```
 
-## Structured values
+    The above query creates a custom function for our full file name by [combining](https://docs.microsoft.com/powerquery-m/text-combine) the file prefix, file number and file extension. We've had to account for converting our #"File number" value to text to avoid any errors with joining non-text values.
 
-1. We'll open the **Advanced Editor** once again and complete the following:
+1. We'll open the **Advanced Editor** once again from our custom function above and complete the following:
     1. Add a comma to end of the **fXFileName** step.
     1. On a new line we'll create a step with the identifier name of **Source** which equals a [**Record**](https://docs.microsoft.com/powerquery-m/expressions-values-and-let-expression#record) type, containing the following name/value pairing as displayed below and update the return value to **Source** after the text **in**.
-    
-    | Name | Value |
-    | :--- | :---- |
-    | fileCount | 1 |
-    | fileName | fxFileName(fileCount) |
-    | data | fxGetFile(fileName) |
+
+    | | Key  |  | Value |
+    | :--- | :--- | :---- | :--- |
+    | [ | | | |
+    | | fileCount  | =  | 1, |
+    | | fileName | = | fxFileName(fileCount), |
+    | | data | =  | fxGetFile(fileName) |
+    | ] | |  |
 
     ```fsharp
     let
       // A function that accept a file number value and concatenates text
-      fxFileName = (#"File number" as number) as text =>
-                    Text.Combine(
-                        {
-                            "FactOnlineSales_",
-                            Text.From(#"File number"),
-                            ".parquet"
-                        }
-                    ),
-      Source = [
-                fileCount = 1,
-                fileName = fxFileName(fileCount),
-                data = fxGetFile(fileName)
-            ]
+        fileNameUpdate =
+            (#"File number" as number) as text =>
+                let
+                    Source =
+                        Text.Combine(
+                            {
+                                "FactOnlineSales_",
+                                Text.From(#"File number"),
+                                ".parquet"
+                            }
+                        )
+                in
+                    Source,
+        tableReturn = [
+            fileCount = 1,
+            fileName = fileNameUpdate(fileCount),
+            data = fxGetFile(fileName)
+        ]
     in
-      Source
+      tableReturn
     ```
 
 1. Enable the **Query script** view, to view the full script on your screen.
@@ -469,72 +498,80 @@ Something about variables
 
     ![Query script](./Media/QueryScript.png)
 
-## Generating a list of values
-
-1. Within the expanded **Query script** view, add a comma to the end of the **Source** step and add a new step with the step identifier name of **fileList** with the [**List.Generate**](https://docs.microsoft.com/powerquery-m/list-generate) function, and update the text after the **in** statement to **fileList** to review the functions documentation.
+1. Within the expanded **Query script** view, add a comma to the end of the **tableReturn** step and add a new step with the step identifier name of **Source** with the [**List.Generate**](https://docs.microsoft.com/powerquery-m/list-generate) function, and update the text after the **in** statement to **fileList** to review the functions documentation.
     1. Typing any function name without the open and closed parenthesis proceeding will return the function's documentation.
 
     ```fsharp
     let
       // A function that accept a file number value and concatenates text
-      fxFileName = (#"File number" as number) as text =>
-                    Text.Combine(
-                        {
-                            "FactOnlineSales_",
-                            Text.From(#"File number"),
-                            ".parquet"
-                        }
-                    ),
-      Source = [
-                fileCount = 1,
-                fileName = fxFileName(fileCount),
-                data = fxGetFile(fileName)
-            ],
-      fileList = List.Generate
+        fileNameUpdate =
+            (#"File number" as number) as text =>
+                let
+                    Source =
+                        Text.Combine(
+                            {
+                                "FactOnlineSales_",
+                                Text.From(#"File number"),
+                                ".parquet"
+                            }
+                        )
+                in
+                    Source,
+        tableReturn = [
+            fileCount = 1,
+            fileName = fileNameUpdate(fileCount),
+            data = fxGetFile(fileName)
+        ],
+        Source = List.Generate
     in
-      fileList
+      Source
     ```
 
 1. Now that we've reviewed the documentation, update the **Query script** view to the below.
-    1. For the **initial** parameter include the goes-to "**=>**" symbol and then the **Source** step.
-    1. For the **condition** parameter, we'll use square brackets to reference the initialized **Source** value's **[data]** to logically test that the returned value is **not** empty, when using the **[Table.IsEmpty()](https://docs.microsoft.com//powerquery-m/table-isempty)** function.
-    1. For the **next** parameter, create a record that matches the **Source** step's **fileCount**, **fileName** and **data** fields and increment the **fileCount** by it's current integer value plus **one**.
+    1. For the **initial** parameter include the goes-to "**=>**" symbol and then the **tableReturn** step.
+    1. For the **condition** parameter, we'll use square brackets to reference the initialized **tableReturn** value's **[data]** to logically test that the returned value is **not** empty, when using the **[Table.IsEmpty()](https://docs.microsoft.com//powerquery-m/table-isempty)** function.
+    1. For the **next** parameter, create a record that matches the **tableReturn** step's **fileCount**, **fileName** and **data** fields and increment the **fileCount** by it's current integer value plus **one**.
 
     ```fsharp
     let
       // A function that accept a file number value and concatenates text
-      fxFileName = (#"File number" as number) as text =>
-                    Text.Combine(
-                        {
-                            "FactOnlineSales_",
-                            Text.From(#"File number"),
-                            ".parquet"
-                        }
-                ),
-        Source = [
+        fileNameUpdate =
+            (#"File number" as number) as text =>
+                let
+                    Source =
+                        Text.Combine(
+                            {
+                                "FactOnlineSales_",
+                                Text.From(#"File number"),
+                                ".parquet"
+                            }
+                        )
+                in
+                    Source,
+        tableReturn = [
             fileCount = 1,
-            fileName = fxFileName(fileCount),
+            fileName = fileNameUpdate(fileCount),
             data = fxGetFile(fileName)
         ],
-        fileList =
+        Source =
             List.Generate(
-            () => tableReturn,
-            each try not Table.IsEmpty([data]) otherwise false,
-            each
-                [
-                    fileCount = [fileCount] + 1,
-                    fileName = fileNameUpdate(fileCount),
-                    data =
-                        try fxGetFile(fileName)
-                        otherwise
-                            #table(
-                                {},
-                                {}
-                            )
-                ]
-        )
+                () => tableReturn,
+                each try not Table.IsEmpty([data]) otherwise false,
+                each
+                    [
+                        fileCount = [fileCount] + 1,
+                        fileName = fileNameUpdate(fileCount),
+                        data =
+                            try fxGetFile(fileName)
+                            otherwise
+                                #table(
+                                    {},
+                                    {}
+                                )
+                    ]
+            )
     in
-        fileList
+      Source
     ```
 
 1. To convert out returned list to a table, navigate to the **List tools** tab in the ribbon and select the **To table** option.
@@ -549,7 +586,7 @@ Something about variables
 
     ![Remove other columns](./Media/RemoveOtherColumns.png)
 
-1. In the top right of the **data** column - select the expand columns icon, disable the **Use original column name as prefix** option and select **OK** when complete.
+1. In the top right of the **data** column - select the expand columns icon, disable the column **"_index_level_0__"** and if enabled thee **Use original column name as prefix** option. select **OK** when complete.
 
     ![Expand data column](./Media/ExpandDataColumn.png)
 
@@ -558,10 +595,9 @@ Something about variables
 
     ![Detect data type](./Media/DetectDataType.png)
 
-1. Within the **Query settings** pane, change the **Name** of the completed query to **FactOnlineSales_raw**.
+1. Within the **Query settings** pane, change the **Name** of the above query to **FactOnlineSales**.
 
     ![Query name](./Media/QueryName.png)
-
 
 ---
 
@@ -588,7 +624,6 @@ As we add more tables to our solutions it can often be challenging to remember w
     1. DimProduct_raw
     1. DimProductCategory_raw
     1. DimProductSubcategory_raw
-    1. FactOnlineSales_raw
 
     ![Query name](./Media/StagingGroup.png)
 
@@ -606,6 +641,7 @@ As we add more tables to our solutions it can often be challenging to remember w
     1. DimDate
     1. DimEmployee
     1. DimStore
+    1. FactOnlineSales
 
     ![Query name](./Media/NewGroupDataLoad.png)
 
@@ -617,16 +653,31 @@ As we add more tables to our solutions it can often be challenging to remember w
 
         ![New group](./Media/NewGroupDataLoadDescription.png)
 
-1. Our **Queries** pane now contains two groups to help make managing and distinguishing our queries intent more effective at a glance. For more detail we can also hover above the group's folder icon where the **description** value of each will be visible.
+1. In the **Queries** pane, while holding **ctrl**, select the following tables from the list below, once complete right click and select the **Move to group** > **New group...** option.
 
-    ![New group](./Media/GroupDescription.png)
+    
+    1. DimCustomer
+    1. DimProduct
 
-1. From the diagram view complete the following steps using the **Actions** options ( ⋮ ) for the **Merge** table.
-    1. Select the **Rename** action and update the query title to **DimProduct**.
-    1. Select the **Move to group...** action and select the **Data transformation** group.
+    ![Query name](./Media/NewGroupDataTransformation.png)
 
-    ![Queries pane completed](./Media/QueriesPaneComplete.png)
+    1. In the **New group** window set the name to **Data transformation** and the **Description** to the following text below and select **Ok** once complete.
 
+        ```
+        Data that will be ingested from the data lake storage for transformations via the enhanced compute engine.
+        ```
+
+        ![New group](./Media/NewGroupDataLoadDescription.png)
+
+1. Our **Queries** pane now contains three groups to help make managing and distinguishing our queries intent more effective at a glance. For more detail we can also hover above the group's folder icon where the **description** value of each will be visible.
+
+    ![New group](./Media/GroupDescriptionTransformation.png)
+
+1. You can now review the various query groups that now exist, if you were to hover above them the **Description** property will now be visible.
+    1. The same applies if you hover above a query where the **Description** property has been set.
+        1. To add a description for a query, right click the query name in the **Queries** pane and select **Properties**.
+
+    ![Group description](./Media/GroupDescription.png)
 ---
 
 Transforming data at scale
