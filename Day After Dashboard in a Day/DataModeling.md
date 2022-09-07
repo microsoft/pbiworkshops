@@ -1,6 +1,7 @@
 # Data Modeling
 
-## ✏️ Lab scenario
+✏️ Lab scenario
+---
 
 For this portion of the lab, we've been tasked with creating a dataset that queries our data in **near-real time** for our report consumers. Based on these initial requirements we'll want to evaluate Power BI's storage mode options and monitor our performance to find the most optimal solution.
 
@@ -74,7 +75,7 @@ There are two main reasons to consider developing a DirectQuery model:
     ```
 ---
 
-# Optional - Event traces
+ <b>Optional - Event traces</b>
 
 One important item that was missing from our above query is the [Transact-SQL](https://docs.microsoft.com/learn/modules/introduction-to-transact-sql/) statement for the **Direct query** value. In order to trace this event we'll leverage [SQL Server Profiler](https://docs.microsoft.com/sql/tools/sql-server-profiler/sql-server-profiler) to view our event traces.
 
@@ -121,12 +122,13 @@ We can also leverage the [external tools in Power BI Desktop](https://docs.micro
         [t1].[EmailAddress] ASC
     ```
 
-## ✅ Lab check
+✅ Lab check
+---
 We've been able to confirm that as our Power BI visuals are being rendered our query will be instantly sent to our data source to retrieve new insights. With this initial requirement met, let's continue and start connecting our tables to create a dimensional model.
 
 ---
 
-# Creating Relationships
+### Creating Relationships
 
 When using multiple tables, chances are you'll do some analysis using data from all those tables. Relationships between those tables are necessary to accurately calculate results and display the correct information in your reports.
 
@@ -246,15 +248,14 @@ Learn more about [creating and managing relationships](https://docs.microsoft.co
 
     ![Full view of all connected tables.](./Media/FullModelView.png)
 
-
-
-## ✅ Lab check
+✅ Lab check
+---
 We've been able to create relationships between all of our data source's tables and a new requirement has come in that our data model has to be both - **near-real time** and **blazing fast**. 
 
 For this we'll want to revisit the design of our model.
 
 ---
-# Dimensional modeling
+## Dimensional modeling
 ---
 
 A well-structured model design should include tables that are either dimension-type tables or fact-type tables and should avoid mixing the two types together into a single table.
@@ -331,11 +332,12 @@ It is also recommend to strive to deliver the **right number of tables** with th
 
     ![Star Schema view.](./Media/StarSchemaView.png)
 
-## ✅ Lab check
+✅ Lab check
+---
 We've been able to properly model our dataset into a proper star schema but a new requirement has come in that our data model has to be both - **near-real time** and **blazing fast**. For this we'll want to revisit our storage mode options and determine if each of our tables are configured properly.
 
 ---
-### Mixed (Composite) Storage Mode
+## Mixed (Composite) mode
 ---
 
 With mixed (composite) mode we can mix both Import and DirectQuery modes into a single model. Models developed in composite mode support configuring the storage mode as Import, DirectQuery, or Dual for each table.
@@ -434,13 +436,14 @@ A table configured as dual storage mode is both Import and DirectQuery, dependin
       )
     ```
 
-## ✅ Lab check
+✅ Lab check
+---
 We've been able to create a proper data model and tested different storage modes. After speaking directly with our end users we learned they would rather have **blazing fast** performance as the reports prepare them for their business day so they need to be able to quickly slice-and-dice their insights.
 
 We've also learned that new information only comes in overnight and as long as this information can be made fully available before they start their morning. The request for **near real-time** meant as soon as its available, as opposed to the previous wait period in the prior reporting solution.
 
 ---
-### Import Storage Mode
+## Import mode
 ---
 
 Import mode is the most common mode used to develop datasets. This mode delivers extremely fast performance thanks to in-memory querying. It also offers design flexibility to modelers, and support for specific Power BI service features (Q&A, Quick Insights, etc.). Because of these strengths, it's the default mode when creating a new Power BI Desktop solution.
@@ -484,7 +487,8 @@ Leverage the entire set of Data Analysis Expressions (DAX) functions when enhanc
 
     ![Store sales Direct query.](./Media/ImportDAXQuery.png)
 
-## ✅ Lab check
+✅ Lab check
+---
 At this stage in our projects development we've explored several potential benefits of each storage mode, ultimately though the most important thing we learned was that had we gone to our business users and understood their requirements directly we could choose the right solution to meet their needs.
 
 Important questions we should ask next time:
@@ -492,7 +496,7 @@ Important questions we should ask next time:
 - 
 
 ---
-### Incremental Refresh
+## Incremental Refresh
 ---
 
 1. From the **Home** tab of the **Power Query Editor** select the **Manage Parameters** and then the **New Parameter** option.
