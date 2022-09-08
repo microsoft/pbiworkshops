@@ -590,7 +590,12 @@ An important aspect of data modeling is usability.
 
     ![Table description](./Media/TableDescription.png)
 
+---
 
+# Data Analysis Expressions
+
+
+---
 
 <!-- 
 # User-defined aggregations

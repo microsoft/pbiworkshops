@@ -590,10 +590,17 @@ Learn more about [Environments and variables](https://docs.microsoft.com/powerqu
 
     ![Expand data column](./Media/ExpandDataColumn.png)
 
-1. While holding the **shift** key on our keyboard, select the **ProductKey** column and then **Freight** column to highlight all columns in our table. Navigate to the **Transform** tab and then select **Detect data type** to change the current columns [any value](https://docs.microsoft.com/power-query/data-types) (ABC123) to a more appropriate data type automatically.
-    1. We can also select any cell in our table and press **Ctrl+A** to select all cells and columns.
+1. To highlight all columns in our table press **Ctrl+A**, navigate to the **Transform** tab and then select **Detect data type** to change the current columns [any value](https://docs.microsoft.com/power-query/data-types) (ABC123) automatically. Not all columns may be appropriately type, so we'll want to complete the following steps below.
 
     ![Detect data type](./Media/DetectDataType.png)
+
+1. Select the top left of the **DateKey** column and change the type to **Date**. Select **Replace current** in the dialog prompt to accept the change.
+
+    ![DateKey type](./Media/DateKeyType.png)
+
+1. Holding **Shift** select the **ReturnAmount** and **ReturnQuantity** columns, right click and navigate to **Change type** and then **Whole number** to update both columns in a single transformation.
+
+    ![DateKey type](./Media/ReturnTypes.png)
 
 1. Within the **Query settings** pane, change the **Name** of the above query to **FactOnlineSales**.
 
@@ -611,7 +618,6 @@ let
 in
     Source
 ```
-
 
 ## Query groups
 
