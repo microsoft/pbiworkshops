@@ -220,7 +220,7 @@ let
     fxHelloWorld = () => "Hello, World",
     fxDocumentation = [
         Documentation.Name = "My first line of code",
-        Documentation.Description = "This function will return the text: Hello, World",
+        Documentation.LongDescription = "This function will return the text: Hello, World",
         Documentation.Examples = {
             [
                 Description = "The text Hello, World",
