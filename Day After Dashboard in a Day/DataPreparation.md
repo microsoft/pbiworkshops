@@ -857,5 +857,5 @@ We hope this portion of the lab has shown how dataflows can provide a self-servi
 To download the completed files from the lab instructions:
 
 - [Dataflow model](https://raw.githubusercontent.com/microsoft/pbiworkshops/main/Day%20After%20Dashboard%20in%20a%20Day/Source_Files/Dataflow%20demo%20(final).json)
-- [Power BI Desktop template file (PBIT)](https://github.com/microsoft/pbiworkshops/blob/main/Day%20After%20Dashboard%20in%20a%20Day/Source_Files/Data%20modeling%20start.pbit)
+- [Power BI Desktop template file (PBIT)](https://github.com/microsoft/pbiworkshops/raw/main/Day%20After%20Dashboard%20in%20a%20Day/Source_Files/Data%20modeling%20start.pbit)
     - You will need to update the WorkspaceId and DataflowId to those within your environment
