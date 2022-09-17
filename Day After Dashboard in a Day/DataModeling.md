@@ -532,8 +532,9 @@ Important questions we should ask next time:
 
     ![Filter rows.](./Media/FilterRows.png)
 
+    ⚠️ **Important** ⚠️
 
-    ⚠️ Because our column type is **Date** and the parameters are required to be **DateTime** we were unable to select them within the dialog window and must populate them manually. In the following step will we will edit the formula bar to utilize our parameters and transform our values to extract only the date part.
+    Because our column type is **Date** and the parameters are required to be **DateTime** we were unable to select them within the dialog window and must populate them manually. In the following step will we will edit the formula bar to utilize our parameters and transform our values to extract only the date part.
 
 1.  In the **Power Query Editor** formula bar update the current date values to utilize the **RangeStart** and **RangeEnd** parameters by updating the formula to the below.
 
@@ -562,7 +563,9 @@ Important questions we should ask next time:
 
     ![Incremental refresh menu.](./Media/IncrementalRefreshMenu.png)
 
-    ⚠️ **Important**: At the top of the Incremental refresh and real-time data window is the information section that states, **you won't be able to download it back to Power BI Desktop** once an incremental refresh policy has been applied. For this reason, we should ensure that our dataset is in a completed state prior to publishing, otherwise a full dataset refresh will be required for any subsequent re-publishing.
+    ⚠️ **Important** ⚠️
+
+    At the top of the Incremental refresh and real-time data window is the information section that states, **you won't be able to download it back to Power BI Desktop** once an incremental refresh policy has been applied. For this reason, we should ensure that our dataset is in a completed state prior to publishing, otherwise a full dataset refresh will be required for any subsequent re-publishing.
 
 ---
 
@@ -606,206 +609,6 @@ An important aspect of data modeling is usability.
 
 
 ---
-
-<!-- 
-# User-defined aggregations
-
-Aggregations in Power BI can improve query performance over very large DirectQuery datasets. By using aggregations, you cache data at the aggregated level in-memory. Aggregations in Power BI can be manually configured in the data model, as described in this article, or for Premium subscriptions, automatically by enabling the [Automatic aggregations](https://docs.microsoft.com/power-bi/admin/aggregations-auto) feature in dataset Settings.
-
-[To learn more about user-defined aggregations](https://docs.microsoft.com/power-bi/transform-model/aggregations-advanced)
-
----
-
-1. Within the **Home** tab select the **Transform data** button to return to the Power Query editor.
-
-    ![Transform data.](./Media/TransformData.png)
- 
-1. Within the Queries pane, right click the **FactOnlineSales** table and select the **Duplicate** option to create a new query.
-
-    ![Duplicate table.](./Media/DuplicateTable.png)
-
-1. Select the **Tranform** tab and then the **Group By** button.
-
-    ![Group by.](./Media/GroupBy.png)
-
-1. Within the **Group By** window, we'll first select the **Advanced** tab and create our groupings using the **Add grouping** button for the **ProductKey** and **OrderDate** fields. And for our aggregates - new field names, operations and fields use the **Add aggregation** button and the below configuration. Once complete select **OK**.
-
-    | New field name | Operator | field |
-    |:----- | :------ | :------ |
-    | SumOrderQuantity | Sum | OrderQuantity |
-    | SumSalesAmount | Sum | SalesAmount |
-    | SumTaxAmount | Sum | TaxAmount |
-    | SumFreight | Sum | Freight |
-    | SumTotalSalesAmount | Sum | TotalSalesAmount |
-
-    ![Group by menu.](./Media/GroupByMenu.png)
-
-1. Before we proceed we must ensure that our data types are consistent between our two tables. If we toggle between the **FactOnlineSales** and **FactOnlineSales (2)** table we'll notice that the **OrderQuantity** and **SumOrderQuantity** are not of the same data type.
-
-    ![Schema differences.](./Media/SchemaDifferences.png)
-
-1. Navigate to the **FactOnlineSales (2)** table and within the formula bar for the **Grouped Rows** step, update the date type for the **SumOrderQuantity** from **type nullable number** to **type nullable Int64.Type**.
-    1. Complete formula below.
-
-    ```powerquery-m
-    = Table.Group(#"Entity Name", {"ProductKey", "OrderDate"}, {{"SumOrderQuantity", each List.Sum([OrderQuantity]), type nullable Int64.Type}, {"SumSalesAmount", each List.Sum([SalesAmount]), type nullable number}, {"SumTaxAmount", each List.Sum([TaxAmount]), type nullable number}, {"SumFreight", each List.Sum([Freight]), type nullable number}, {"SumTotalSalesAmount", each List.Sum([TotalSalesAmount]), type nullable number}})
-    ```
-
-    ![Schema differences.](./Media/UpdateDataType.png)
-
-1. Within the queries pane right click the **FactOnlineSales (2)** and select **Rename** to update the table name to **FactOnlineSales_agg**.
-
-    ![Rename agg.](./Media/RenameAgg.png)
-
-1. We'll now create relationships by dragging and dropping the fields or navigating to the **Manage relationships** menu, complete the below relationships.
-
-    | Active | From: Table (field) | field | Cardinality | Assume referential integrity | Cross filter direction | 
-    | :----- |:----- | :------ | :----- | :----- | :----- |
-    | ☑ | FactOnlineSales (ProductKey) | DimProduct_raw (ProductKey) | Many to one (*:1) | ☑ | Single | 
-    | ☑ | FactOnlineSales (DateKey) | DimDate (DateKey) | Many to one (*:1) | ☑ | Single |
-
-    ![Agg relationships.](./Media/AggRelationships.png)
-
-1. Right click the **FactOnlineSales_agg** table and select the **Manage aggregations** option.
-
-    ![Manage aggregations.](./Media/ManageAggregations.png)
-
-1. Within the **Manage aggregations** window complete the following configurations and select **Apply all** once complete.
-    1. If relationships exist the **GroupBy** fields are not required.
-
-    |AGGREGATION field | SUMMARIZATION | DETAIL TABLE | DETAIL field |
-    | :-- | :-- | :-- | :-- |
-    | OrderDate | GroupBy | FactOnlineSales | OrderDate |
-    | ProductKey | GroupBy | FactOnlineSales | ProductKey |
-    | SumFreight | Sum | FactOnlineSales | Freight |
-    | SumOrderQuantity | Sum | FactOnlineSales | OrderQuantity |
-    | SumSalesAmount | Sum | FactOnlineSales | SalesAmount |
-    | SumTaxAmount | Sum | FactOnlineSales | TaxAmount |
-    | SumTotalSalesAmount | Sum | FactOnlineSales | TotalSalesAmount |
-    
-    
-    ![Manage aggregations window.](./Media/ManageAggregationsWindow.png)
-
-1. With the **FactOnlineSales_agg** selected, navigate to the **Properties** pane of the Modeling view and expand the **Advanced** section to change the **Storage mode** of our table to **Import**.
-
-    ![Storage mode import.](./Media/StorageModeImport.png)
-
-1. A **Storage mode** window is now displayed providing us with the detail that changing to **Import** is an irreversible operation and has provided us with the suggestion to set the tables with relationships to our aggregate table to **Dual** mode. We'll follow Power BI's suggestion wit the **Set affected tables to dual** option checked and select the **OK** button to proceed.
-
-    ![Storage mode warning.](./Media/StorageModeWarning.png)
-
-1. The **Refresh** window is now displayed as our tables with **Import** and **Dual** storage are cached in to our model.
-
-    ![Refresh window.](./Media/RefreshWindow.png)
-
-1. Returning to our report page, we'll complete the following steps.
-    1. Add a **Matrix** visual to our report page.
-    1. Add the **EnglishProductName**, **EnglishMonthName** and **EnglishCountryRegionName** fields to **Rows**.
-    1. Add the **Total Quantity** measure to **Values**.
-    1. Select the **Total Quantity** field header in the matrix visual to sort descending to ascending.
-
-    ![Matrix visual.](./Media/MatrixVisual.png)
-
-1. Expanding our **Performance analyzer** pane once again, we can select the **Clear** option to remove any previous results and then select the **Analyze this visual** on our table, once complete expand the **Matrix** tables results, where only a **DAX query** is now present meaning that our aggregate table is being used.
-
-    ![Agg first level.](./Media/AggFirstLevel.png)
-
-1. If we expand one of the **EnglishProductName** values in our **Matrix** the **Performance analyer** includes the **Drilled down/up** action where the second level of our hierarchy is also leveraging the speed and performance of the aggregate table.
-
-    ![Agg second level.](./Media/AggSecondLevel.png)
-
-1. If we expand one of the **EnglishMonthName** values in our **Matrix** the **Performance analyer** includes a second **Drilled down/up** action where a **Direct query** value is now present meaning that our agg table did not have the necessary information to complete the query and it's now had to utilize the **FactOnlineSales** table which is in the **DirectQuery** storage mode.
-
-    ![Agg third level.](./Media/AggThirdLevel.png)
-
----
-
-## Optional - Aggregation event traces
-
----
-
-1. If we return to the **SQL Server Profiler** window, we can select the **Pause** button to pause the existing trace and then select **File** > **Properties**.
-
-    ![New trace events.](./Media/NewTraceEvents.png)
-
-1. From the **Trace Properties** window select the **Events Selection** tab. Within the **Events** section, expand the **Query Processing** group and then select the **Aggregate Table Rewrite Query** event. Once complete select the **Run** option in the bottom right to start tracing events.
-    1. If you have an abbreviated list of events, select the **Show all events** option.
-
-    ![Agg trace events.](./Media/AggTraceEvents.png)
-
-1. Return to Power BI Desktop and select the **Analyze this visual** option to send a query to the analysis services engine.
-
-    ![Analyze agg trace events.](./Media/AnalyzeAggTraceEvent.png)
-
-1. Within the **SQL Server Profiler** three events are displayed with the **Aggregate Table Rewrite Query**, when reading thru each's **TextData** we'll notice the **matchingResult** field and in one example the **attemptFailed** was returned, indicating that the aggregate table was unable to be used, whereas the other values include a **matchFound** value.
-
-    ![Aggregate table rewrite.](./Media/AggregateTableQuery.png)
-
-    ```json
-    {
-      "table": "FactOnlineSales",
-      "matchingResult": "attemptFailed",
-      "failureReasons": [
-        {
-          "alternateSource": "FactOnlineSales_agg",
-          "reason": "no field mapping",
-          "field": "DimGeography_raw[EnglishCountryRegionName]"
-        }
-      ],
-      "dataRequest": [
-        {
-          "aggregation": "Sum",
-          "table": "FactOnlineSales",
-          "field": "OrderQuantity"
-        },
-        {
-          "table": "DimDate",
-          "field": "EnglishMonthName"
-        },
-        {
-          "table": "DimGeography_raw",
-          "field": "EnglishCountryRegionName"
-        },
-        {
-          "table": "DimProduct_raw",
-          "field": "EnglishProductName"
-        }
-      ]
-    }
-    ```
-
----
-## Optional - DAX Studio
----
-
-DAX Studio is a tool to write, execute, and analyze DAX queries in Power BI Designer, Power Pivot for Excel, and Analysis Services Tabular. It includes an Object Browser, query editing and execution, formula and measure editing, syntax highlighting and formatting, integrated event tracing and query execution breakdowns.
-
-**Important note:** DAX Studio will automatically install the external tools json file.
-
-[Learn more about DAX Studio](https://daxstudio.org)
-
----
-
-1. Within Power BI Desktop, select the **External Tools** tab and the **DAX Studio** button.
-
-    ![External tools DAX Studio.](./Media/ExternalToolsDAX.png)
-
-1. Navigate to the **Advanced** tab and select the **View Metrics** option. Within the VertiPaq Analyzer Metrics that is now displayed and the **Tables** tab, select the **% DB** field to sort the tables in descending order by the largest percentage.
-
-    ![View metrics.](./Media/ViewMetrics.png)
-
-1. Expand the **DimProduct_raw** table, to view the fields and their metrics.
-    1. One of the first items of note is that the **ProductAlternateKey** is the largest field in our table with nearly 6% of the table size and nearly 2% of the database size.
-    1. The second item is that our **ProductKey**'s cardinality matches the row count value of **606** for our entire table and is nearly 4% of the table size and nearly 2% of the database size.
-    
-    ![Product alternate key.](./Media/ProductAlternateKey.png)
-
-1. The above **ProductAlternateKey** and **ProductKey** may be good candidates for removal from our dataset if they are not currently being used in any of our table relationships. Select the **Relationships** tab and by selecting the Table name review the different relationship values to confirm if the above fields can be removed.
-    1.  **Important note:** While the size of the relationships in this lab is small, this field may be worth investigating if you have a model with a large number of snowflake dimensions that can be joined.
-
-    ![Relationships.](./Media/Relationships.png)
-
--->
 
 # Next steps
 We hope this portion of the lab has shown how various storage modes and modeling options can offer a flexible and optimized experience to build enterprise scalable solutions using Power BI Desktop.
