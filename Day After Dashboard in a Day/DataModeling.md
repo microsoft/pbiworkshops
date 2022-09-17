@@ -610,7 +610,7 @@ An important aspect of data modeling is usability.
 
 # Publish to Power BI
 
-1. From the **Home** tab, select the **Publish** icon and navigate to a non-production workspace as our destination.
+1. From the **Home** tab, select the **Publish** icon and navigate to a non-production workspace as our destination and select the **Select** button when complete.
     1. <i>This can also be the same workspace used in the data preparation lab.</i>
 
     ![Publish dataset](./Media/PublishDataset.png)
