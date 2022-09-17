@@ -608,6 +608,19 @@ An important aspect of data modeling is usability.
 # Security
 
 
+# Publish to Power BI
+
+1. From the **Home** tab, select the **Publish** icon and navigate to a non-production workspace as our destination.
+    1. <i>This can also be the same workspace used in the data preparation lab.</i>
+
+    ![Publish dataset](./Media/PublishDataset.png)
+
+    ⚠️ **Important** ⚠️
+
+    For enterprise scenarios, a recommended architectural approach may be to separate dataflows, datasets and reports into separate workspaces designated for specific use. For the purposes of this workshop we've edited/published all Power BI items in the same workspace to maintain simplicity of lab instructions.
+    
+    Learn more about [managed self-service BI](https://learn.microsoft.com/power-bi/guidance/powerbi-implementation-planning-usage-scenario-managed-self-service-bi) and for a complete overview [Power BI implementation planning](https://learn.microsoft.com/power-bi/guidance/powerbi-implementation-planning-introduction)
+
 ---
 
 # Next steps
