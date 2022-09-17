@@ -261,8 +261,8 @@ We've been able to create relationships between all of our data source's tables 
 For this we'll want to revisit the design of our model.
 
 ---
+
 ## Dimensional modeling
----
 
 A well-structured model design should include tables that are either dimension-type tables or fact-type tables and should avoid mixing the two types together into a single table.
 
@@ -320,7 +320,6 @@ It is also recommend to strive to deliver the **right number of tables** with th
 
 1. Within the **Queries** pane right click the **DimCustomer_raw** table and select the **Rename** option to update the table names to now simply be titled **DimCustomer**:
 
-
     ![Rename product](./Media/DimCustomerRename.png)
 
 1. Within the **Queries** pane while holding ctrl on your keyboard (or shift if they are adjacent), click the following tables listed below and then right click to select the **Delete** option to bulk remove the tables from our dataset.
@@ -344,7 +343,6 @@ We've been able to properly model our dataset into a proper star schema but a ne
 
 ---
 ## Mixed (Composite) mode
----
 
 With mixed (composite) mode we can mix both Import and DirectQuery modes into a single model. Models developed in composite mode support configuring the storage mode as Import, DirectQuery, or Dual for each table.
 
@@ -449,8 +447,8 @@ We've been able to create a proper data model and tested different storage modes
 We've also learned that new information only comes in overnight and as long as this information can be made fully available before they start their morning. The request for **near real-time** meant as soon as its available, as opposed to the previous wait period in the prior reporting solution.
 
 ---
+
 ## Import mode
----
 
 Import mode is the most common mode used to develop datasets. This mode delivers extremely fast performance thanks to in-memory querying. It also offers design flexibility to modelers, and support for specific Power BI service features (Q&A, Quick Insights, etc.). Because of these strengths, it's the default mode when creating a new Power BI Desktop solution.
 
@@ -463,7 +461,6 @@ Design flexibility can be achieved in three ways. Data modelers can:
 Integrate data by caching data from dataflows, and external data sources, whatever the data source type or format
 Leverage the entire set of Power Query Formula Language (informally referred to as M) functions when creating data preparation queries
 Leverage the entire set of Data Analysis Expressions (DAX) functions when enhancing the model with business logic. There's support for calculated columns, calculated tables, and measures.
-
 
 [Learn more about import mode](https://docs.microsoft.com/power-bi/connect-data/service-dataset-modes-understand#import-mode)
 
@@ -501,8 +498,9 @@ Important questions we should ask next time:
 - How often is the data updated?
 
 ---
+
 ## Incremental Refresh
----
+
 
 1. From the **Home** tab of the **Power Query Editor** select the **Manage Parameters** and then the **New Parameter** option.
 
@@ -536,7 +534,7 @@ Important questions we should ask next time:
 
     Because our column type is **Date** and the parameters are required to be **DateTime** we were unable to select them within the dialog window and must populate them manually. In the following step will we will edit the formula bar to utilize our parameters and transform our values to extract only the date part.
 
-1.  In the **Power Query Editor** formula bar update the current date values to utilize the **RangeStart** and **RangeEnd** parameters by updating the formula to the below.
+1. In the **Power Query Editor** formula bar update the current date values to utilize the **RangeStart** and **RangeEnd** parameters by updating the formula to the below.
 
     ```powerquery-m
     = Table.SelectRows(#"Entity Name", each [DateKey] >= Date.From(RangeStart) and [DateKey] < Date.From(RangeEnd))
@@ -600,13 +598,11 @@ An important aspect of data modeling is usability.
 
 # Data Analysis Expressions
 
-
----
-
 ---
 
 # Security
 
+---
 
 # Publish to Power BI
 
