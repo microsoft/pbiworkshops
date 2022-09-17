@@ -542,7 +542,7 @@ Important questions we should ask next time:
     = Table.SelectRows(#"Entity Name", each [DateKey] >= Date.From(RangeStart) and [DateKey] < Date.From(RangeEnd))
     ```
 
-    ![fxCreateKey function](./Media/fxCreateKey.png)
+    ![fxCreateKey function](./Media/FxCreateKey.png)
 
 1. Now that we're ready to return to our modeling view navigate to the **Home** tab and select the **Close & Apply** option.
 
