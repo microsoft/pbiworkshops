@@ -28,13 +28,14 @@ To start the lab, visit [Data Preparation](./DataPreparation.md)
 
 ## Data Modeling
 
-In this lab you'll learn about how to create datasets optimized for performance and usability using Power BI Desktop.
+In this lab you'll learn how to create datasets optimized for performance and usability using Power BI Desktop.
 
-1. How to configure different [Storage Modes](https://docs.microsoft.com/power-bi/transform-model/desktop-storage-mode) and create [Aggregations](https://docs.microsoft.com/power-bi/transform-model/aggregations-advanced) using Power BI Desktop.
+1. How to configure different [Storage Modes](https://docs.microsoft.com/power-bi/transform-model/desktop-storage-mode) and how to properly model your [data](https://learn.microsoft.com/power-bi/guidance/star-schema) using Power BI Desktop.
 
     Storage modes:
-    1. [DirectQuery](https://docs.microsoft.com/power-bi/connect-data/desktop-directquery-about)
+    1. [DirectQuery](https://learn.microsoft.com/power-bi/connect-data/desktop-directquery-about#directquery-connections)
     1. [Mixed](https://docs.microsoft.com/power-bi/transform-model/desktop-composite-models)
+    1. [Import](https://learn.microsoft.com/power-bi/connect-data/desktop-directquery-about#import-connections)
 1. How to use the [Performance analyzer](https://docs.microsoft.com/power-bi/create-reports/desktop-performance-analyzer) to examine report performance.
 1. How to use [External Tools](https://docs.microsoft.com/power-bi/transform-model/desktop-external-tools) for professional development.
 
@@ -42,8 +43,10 @@ To start the lab, visit [Data Modeling](./DataModeling.md)
 
 ## Data Visualization
 
-In this lab you'll learn about designing efficient and stunning reports.
+In this lab you'll learn about designing efficient and stunning reports using Power BI Desktop.
 
-**Stay tuned!!!**
+1. How to use canvas backgrounds and shape elements to create professional report layouts.
+1. How to create report level measures.
+1. How to leverage no-code artificial intelligence to find new insights in your data.
 
 To start the lab, visit [Data Visualization](./DataVisualization.md)

@@ -499,7 +499,6 @@ At this stage in our projects development we've explored several potential benef
 
 Important questions we should ask next time:
 - How often is the data updated?
-- 
 
 ---
 ## Incremental Refresh
@@ -514,8 +513,8 @@ Important questions we should ask next time:
 
     | Name | Type | Current Value |
     |:----- | :------ | :------ |
-    | RangeStart | Date/Time | 1/1/2011 |
-    | RangeEnd | Date/Time | 6/30/2021 |
+    | RangeStart | Date/Time | 1/1/2020 |
+    | RangeEnd | Date/Time | 12/31/2022 |
 
     ![RangeStart and RangeEnd.](./Media/RangeStartEnd.png)
 
@@ -528,16 +527,18 @@ Important questions we should ask next time:
     Keep rows where 'DateKey'
     | Keep Rows | |
     |:- | :- |
-    | is greater than or equal to | 20110101 |
-    | is less than | 20210701 |
+    | is greater than or equal to | 1/1/2020 |
+    | is less than | 12/31/2022 |
 
     ![Filter rows.](./Media/FilterRows.png)
 
-1. In the **Power Query Editor** formula bar update the current integer values to utilize the **RangeStart** and **RangeEnd** parameters.
 
-    1. Completed formula below.
+    ⚠️ Because our column type is **Date** and the parameters are required to be **DateTime** we were unable to select them within the dialog window and must populate them manually. In the following step will we will edit the formula bar to utilize our parameters and transform our values to extract only the date part.
+
+1.  In the **Power Query Editor** formula bar update the current date values to utilize the **RangeStart** and **RangeEnd** parameters by updating the formula to the below.
+
     ```powerquery-m
-    = Table.SelectRows(#"Entity Name", each [DateKey] >= RangeStart and [DateKey] < RangeEnd)
+    = Table.SelectRows(#"Entity Name", each [DateKey] >= Date.From(RangeStart) and [DateKey] < Date.From(RangeEnd))
     ```
 
     ![fxCreateKey function](./Media/fxCreateKey.png)
@@ -546,20 +547,22 @@ Important questions we should ask next time:
 
     ![Close apply.](./Media/CloseApply.png)
 
-1. Navigate to the **Model** view on the side-rail of Power BI Desktop, where we'll now setup our incremental refresh policy and create a new relationship between the **FactOnlineSales_agg** and our existing tables in our model.
+1. Navigate to the **Model** view on the side-rail of Power BI Desktop, where we'll now setup our incremental refresh policy on the **FactOnlineSales** table.
 
     ![Model view.](./Media/ModelView.png)
 
-1. Righ click the **FactOnlineSales** and select **Incremental refresh**.
+1. Either select the vertical ellipses ( ⋮ ) in the top right corner of the **FactOnlineSales** and or right click the table title and then select **Incremental refresh** option.
 
     ![Agg relationships.](./Media/IncrementalRefreshSelection.png)
 
 1. From the **Incremental refresh and real-time data** menu, set the following configurations below and select **Apply** once complete.
     1. ☑️Incrementally refresh this table
-    1. Archive data starting **3 Years**
-    1. Incrementally refresh data starting **1 Days**
+    1. Archive data starting **2 Years** before refresh date
+    1. Incrementally refresh data starting **1 year** before refresh date
 
     ![Incremental refresh menu.](./Media/IncrementalRefreshMenu.png)
+
+    ⚠️ **Important**: At the top of the Incremental refresh and real-time data window is the information section that states, **you won't be able to download it back to Power BI Desktop** once an incremental refresh policy has been applied. For this reason, we should ensure that our dataset is in a completed state prior to publishing, otherwise a full dataset refresh will be required for any subsequent re-publishing.
 
 ---
 
@@ -593,6 +596,13 @@ An important aspect of data modeling is usability.
 ---
 
 # Data Analysis Expressions
+
+
+---
+
+---
+
+# Security
 
 
 ---
