@@ -272,7 +272,8 @@ Learn more about [DAX Fusion](https://dax.tips/2019/08/05/dax-fusion/) from the 
 
     ![Style none](./Media/BackgroundColors.png)
 
-1. From the **Visualizations** pane add a **Slicer** visual below the **Total Items Discounted** column. Insert the **ProductCategoryName** field first and the **ProductSubcategoryName** second from the **Products** table either into the **Field** value in the **Visualizations** pane or drop directly on the slicer itself.
+1. From the **Visualizations** pane add a **Slicer** visual below the **Total Items Discounted** column and complete the following configurations.
+    1. Insert the **ProductCategoryName** field first and the **ProductSubcategoryName** second from the **Products** table either into the **Field** value in the **Visualizations** pane or drop directly on the slicer itself.
 
     ![Products slicer](./Media/ProductsSlicer.png)
 
@@ -290,7 +291,11 @@ Learn more about [DAX Fusion](https://dax.tips/2019/08/05/dax-fusion/) from the 
 
     ![Slicer dropdown analyzer](./Media/SlicerDropDownAnalyzer.png)
 
-1. 
+1. From the **Visualizations** pane add a **Slicer** visual below the **Total Returned Items** column and complete the following configurations.
+    1. Insert the **CustomerType** field from the **Customer** table either into the **Field** value in the **Visualizations** pane or drop directly on the slicer itself. 
+    1. In the top right of the slicer select the downward chevron **(V)** and change the value to **Dropdown**
+
+    ![Customer slicer](./Media/CustomerSlicer.png)
 
 ## Artificial Intelligence
 
