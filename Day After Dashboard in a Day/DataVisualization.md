@@ -195,8 +195,6 @@ As more requirements continue to be added to our report design, we want to be co
     
     ![Text color](./Media/TextColor.png)
 
-                
-
     | | |
     | :- | :- |
     | 🔍 Search term | **Values** |
@@ -258,16 +256,17 @@ Learn more about [DAX Fusion](https://dax.tips/2019/08/05/dax-fusion/) from the 
     | | |
     | :- | :- |
     | 🔍 Search term | **Header** |
+    | Slicer header > Title text | **Date** |
     | Slicer header > Font | **Segoe UI Semibold** |
     | Slicer header > Font size | **9** |
-    | Slicer header > Background | **White, 10% darker** | 
+    | Slicer header > Background | **White, 10% darker** |
 
     ![Style none](./Media/SlicerHeader.png)
 
     | | |
     | :- | :- |
     | 🔍 Search term | **Background** |
-    | Values > Background | **White** |
+    | Values > Background > Background color | **White** |
     | Effects > Background | **Off** |
 
     ![Style none](./Media/BackgroundColors.png)
@@ -278,7 +277,7 @@ Learn more about [DAX Fusion](https://dax.tips/2019/08/05/dax-fusion/) from the 
     ![Products slicer](./Media/ProductsSlicer.png)
 
 1. We'll now navigate to the **View** tab and select the **Performance analyzer** option. Within the **Performance analyzer** pane we'll select **Start recording** and then hover above our current slicer and select the **Analyze this visual** button in the top right.
-    
+
     Within our results, if we expand the **Slicer** name, a **DAX query** is present - this is because to render the current **List** configuration it must send a query to display our values.
 
     ![Analyze products slicer](./Media/AnalyzerProductsSlicer.png)
@@ -296,6 +295,79 @@ Learn more about [DAX Fusion](https://dax.tips/2019/08/05/dax-fusion/) from the 
     1. In the top right of the slicer select the downward chevron **(V)** and change the value to **Dropdown**
 
     ![Customer slicer](./Media/CustomerSlicer.png)
+
+1. We'll now select the **Date** slicer to make it our active object, navigate to the **Home** tab, select the **Format painter** button and repeat the following steps for the other two slicers.
+    1. With the **Format painter** mouse icon now active, select the **ProductCategoryName, ProductSubcategoryName** slicer to transfer the visual configurations.
+    1. With the **Format painter** mouse icon now active, select the **CustomerType*** slicer to transfer the visual configurations.
+    
+    ![Format painter](./Media/FormatPainter.png)
+
+1. We'll now click and hold the left mouse click and select both the **ProductCategoryName, ProductSubcategoryName** and **CustomerType** slicers (or press and hold Ctrl and then Click) on our page, navigate to the **Visualizations** pane's **Format your visual** section and update the following configurations below.
+
+    | | |
+    | :- | :- |
+    | 🔍 Search term | **Background** |
+    | Values > Background > Color | **White** |
+
+    ![Slicers values background](./Media/SlicersValuesBackground.png)
+
+<font size="6">✅ Lab check</font>
+
+![Finished slicer](./Media/FinishedSlicer.png)
+
+Maintaining a consistent look and feel across our report elements ensures a professional and visually appealing experiences for our end users. Utilizing features like **Format painter** (found across other Office applications) or by bulk updating configurations is a quick and easy way to ensure our designs are consistent.
+
+### Natural language
+
+1. In the bottom left corner of the canvas, double click the mouse to create the **Q&A** visual and complete the following steps.
+    1. Within the **Ask a question about your data** dialog, type the text **Total Sales Amount by manufacturer**. 
+    1. Next to the **Ask a question...** search box, select the **turn this Q&A result into a standard visual.** button.
+    1. Resize the visual to fit within the original **Background canvas** white square.
+
+    ![Natural language visual](./Media/NaturalLanguageVisual.png)
+
+1. In the top right corner of the canvas in the first rectangle, double click the mouse to create the **Q&A** visual and complete the following steps.
+    1. Within the **Ask a question about your data** dialog, type the text **Total Sales Amount by week**. 
+    1. Next to the **Ask a question...** search box, select the **turn this Q&A result into a standard visual.** button.
+    1. Resize the visual to fit within the original **Background canvas** white square.
+
+    ![Total sales by week](./Media/TotalSalesByWeek.png)
+
+1. As opposed to creating a line chart for each **Occupation** we can utilize the **Small multiples** feature to create a series of line charts within a single visual. With our current line chart as the active selection, navigate to the the **Fields** pane and add the **Occupation** field from the **Customers** table into the **Small multiples** field in the **Visualizations** pane.
+
+    ![Small multiples](./Media/SmallMultiples.png)
+
+1. Utilizing the **Visualizations** pane's **Format your visual** section, we'll update the following configurations below for our line charts small multiple properties.
+
+    **Note**: Utilize the Search box, to easily discover configurable settings.
+
+    | | |
+    | :- | :- |
+    | 🔍 Search term | **Multiples** |
+    | Small multiples > Layout > Rows | **1** |
+    | Small multiples > Border > Gridlines | **Vertical only** |
+    | Small multiples > Title > Position | **Bottom** |
+    | Small multiples > Title > Font | **Segoe UI** |
+
+    ![Small multiples properties](./Media/SmallMultiplesProperties.png)
+
+1. Utilizing the **Visualizations** pane's **Add further analyses to your visual** section, we'll update the following configurations below for our line chart to infuse additional insights.
+
+    **Note**: Utilize the Search box, to easily discover configurable settings.
+
+    | | |
+    | :- | :- |
+    | 🔍 Search term | **Median** |
+    | Median line > Apply settings to | select **Add line** |
+    | Median line > Line > Color | **Black** |
+
+    ![Median line](./Media/MedianLine.png)
+
+1. With our current small multiples line chart as the active selection and complete the following instructions by first selecting the ellipses (**...**) in the top right corner.
+    1. With the ellipses selected, navigate to the **Sort small multiples** option and select sort by **Total Sales Amount**
+    1. With the ellipses selected again, navigate to **Sort small multiples** and select the **Sort descending** option.
+
+    ![Sort small multiples](./Media/SortSmallMultiples.png)
 
 ## Artificial Intelligence
 
