@@ -140,9 +140,40 @@ Learn more about [data visualizations]()
     1. **Total Items Discounts**
     1. **Total Return Items**
     
-    ![](./Media/TableMeasures.png)
+    ![Table measures](./Media/TableMeasures.png)
 
-1. 
+1. We'll position our table to be the same size and width that spans our top horizontal section and place this visual within this section.
+
+![Table span](./Media/TableSpan.png)
+
+1. Utilizing the **Visualizations** pane's **Format your visual** section, we'll update the following configurations below.
+
+    **Note**: utilizing the Search box can be helpful.
+
+    1. Search: Style
+        1. Style presets > **None**
+
+        ![Style none](./Media/StyleNone.png)
+
+    2. Search: Effects
+        1. Effects > Background > **Off**
+
+        ![Effects off](./Media/EffectsOff.png)
+
+    2. Search: Headers
+        1. Column headers >
+            1. Font: **Segoe UI Semibold**
+            1. Font size: **12**
+            1. Text color: **#118DFF**
+                
+                <i>If the text color isn't within your default selection, select <b>More colors...</b> to enter the code manually.</i>
+                ![Text color](./Media/TextColor.png)
+            1. Header alignment: **Center**
+            1. Text wrap: **Off**
+
+        ![Column headers](./Media/ColumnHeaders.png)
+
+    1. 
 
 ## Artificial Intelligence
 
