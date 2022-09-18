@@ -226,7 +226,9 @@ As more requirements continue to be added to our report design, we want to be co
 
     ![Stretch columns](./Media/StretchColumns.png)
 
-1. We'll now navigate to our **View** tab and select the **Performance analyzer** option. Within the **Performance analyzer** pane we'll select **Start recording** and then **Refresh visuals** where we can review the results for our **Table**.
+1. We'll now navigate to our **View** tab and select the **Performance analyzer** option. Within the **Performance analyzer** pane we'll select **Start recording** and then **Refresh visuals** where we can review the results for our **Table**. 
+    1. To view the fused query, select the **Copy query** option and paste into a text editor.
+    1. Once complete, select the **Stop** option and minimize the **Performance analyzer** pane.
 
     ![Table analyzer](./Media/TableAnalyzer.png)
 
@@ -235,6 +237,60 @@ As more requirements continue to be added to our report design, we want to be co
 Using the above technique we were able to emulate the presentation of three individual card visuals, in the form of a single table - while still preserving an aesthetically pleasing presentation for our users. In Power BI, its important to reduce the amount of queries sent to our dataset to improve our report performance.
 
 Learn more about [DAX Fusion](https://dax.tips/2019/08/05/dax-fusion/) from the community resource [DAX.tips](https://dax.tips)
+
+### Slicers
+
+---
+
+1. From the **Visualizations** pane add a **Slicer** visual below the **Total Sales Amount** column. Insert the **DateKey** field from the **Calendar** table either into the **Field** value in the **Visualizations** pane or drop directly on the slicer itself and update the following configuration below.
+    1. In the top right of the date visual select the downward chevron (**V**) and change the current slicer from **Between** to **Relative Date**.
+
+    ![Relative date](./Media/RelativeDate.png)
+
+1. Update the slicer values to **Last 18 Months** to create a rolling 18 month selection. This filter now will automatically apply as each new day occurs.
+
+    ![Last 18 months](./Media/Last18Months.png)
+
+1. Utilizing the **Visualizations** pane's **Format your visual** section, we'll update the following configurations below to our slicer.
+
+    **Note**: Utilize the Search box, to easily discover configurable settings.
+
+    | | |
+    | :- | :- |
+    | 🔍 Search term | **Header** |
+    | Slicer header > Font | **Segoe UI Semibold** |
+    | Slicer header > Font size | **9** |
+    | Slicer header > Background | **White, 10% darker** | 
+
+    ![Style none](./Media/SlicerHeader.png)
+
+    | | |
+    | :- | :- |
+    | 🔍 Search term | **Background** |
+    | Values > Background | **White** |
+    | Effects > Background | **Off** |
+
+    ![Style none](./Media/BackgroundColors.png)
+
+1. From the **Visualizations** pane add a **Slicer** visual below the **Total Items Discounted** column. Insert the **ProductCategoryName** field first and the **ProductSubcategoryName** second from the **Products** table either into the **Field** value in the **Visualizations** pane or drop directly on the slicer itself.
+
+    ![Products slicer](./Media/ProductsSlicer.png)
+
+1. We'll now navigate to the **View** tab and select the **Performance analyzer** option. Within the **Performance analyzer** pane we'll select **Start recording** and then hover above our current slicer and select the **Analyze this visual** button in the top right.
+    
+    Within our results, if we expand the **Slicer** name, a **DAX query** is present - this is because to render the current **List** configuration it must send a query to display our values.
+
+    ![Analyze products slicer](./Media/AnalyzerProductsSlicer.png)
+
+1. To increase our reports performance, we'll select the downward chevron **(V)** in the top right of our slicer and change the value to **Dropdown**
+
+    ![Slicer dropdown](./Media/SlicerDropDown.png)
+
+1. Hovering above our current slicer once again, we'll select the **Analyze this visual** button in the top right and review the updated results within the **Performance analyzer** pane where the **Slicer** no longer contains a **DAX query** when collapsed, it will only be when a user selects the slicer that it will then run a query to return our list of values.
+
+    ![Slicer dropdown analyzer](./Media/SlicerDropDownAnalyzer.png)
+
+1. 
 
 ## Artificial Intelligence
 
