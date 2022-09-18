@@ -135,6 +135,16 @@ Learn more about [data visualizations]()
 
 ---
 
+### Consolidating visuals
+
+We've been asked by our users to ensure the **Total Sales Amount**, **Total Items Discounted** and **Total Returned Items** measures are prominently displayed at the top of our report as these results will be the most common discussion points.
+
+Since we've got a list of visuals, slicers and interactive elements we need to include on our report - we want to be cognizant of the number of visuals we are including on our canvas. 
+
+For this reason, we'll utilize a technique below to consolidate and present the values below to optimize our report performance.
+
+---
+
 1. From the **Visualizations** pane add a **Table** visual and insert the below measures in the following order.
     1. **Total Sales Amount**
     1. **Total Items Discounts**
@@ -173,7 +183,39 @@ Learn more about [data visualizations]()
 
         ![Column headers](./Media/ColumnHeaders.png)
 
-    1. 
+    1. Search: Values
+        1. Values > 
+            1. Font: **Segoe UI Semibold**
+            1. Font size: **16**
+        ![Values font](./Media/ValuesFont.png)
+
+    1. Search: Column
+        1. Specific column > 
+            1. Series > For each value in the drop down list, complete the below steps
+            2. Alignment: **Center**
+            
+        ![Specific column](./Media/SpecificColumn.png)
+
+    1. Search: Border
+        1. Grid > Border
+            1. Section: **Column header**
+            1. Border position: **Deselect any/all enabled options**
+
+        ![Grid border](./Media/GridBorder.png)
+
+1. Now that we've customized our table visualization to meet the aesthetic of our brand standards, we'll re-size the current columns by hovering between each column until the resize mouse icon appears and we'll align each of our columns with the current dividers in the canvas background.
+
+    ![Stretch columns](./Media/StretchColumns.png)
+
+1. We'll now navigate to our **View** tab and select the **Performance analyzer** option. Within the **Performance analyzer** pane we'll select **Start recording** and then **Refresh visuals** where we can review the results for our **Table**.
+
+    ![Table analyzer](./Media/TableAnalyzer.png)
+
+    ⚠️ **Important** ⚠️
+    
+    Using the above technique we were able to emulate the presentation of three individual card visuals, in the form of a single table. In Power BI, the more we can reduce the amount of queries sent to our dataset, while still providing a rich interactive experience for our end users - the greater the performance for our reports for our end users.
+
+    Learn more about [DAX Fusion](https://dax.tips/2019/08/05/dax-fusion/)
 
 ## Artificial Intelligence
 
