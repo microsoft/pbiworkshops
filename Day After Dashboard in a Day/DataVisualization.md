@@ -46,7 +46,7 @@ Learn more about [connecting to Power BI datasets](https://learn.microsoft.com/p
 
 Utilize PowerPoint to design backgrounds.
 
-Learn more about [themeable backgrounds](https://alluringbi.com/2020/05/05/themeable-backgrounds-for-power-bi/) from the community resource [AlluringBI.com](https://alluringbi.com)
+
 
 ---
 
@@ -89,6 +89,14 @@ Learn more about [themeable backgrounds](https://alluringbi.com/2020/05/05/theme
     ```
 
     ![File name](./Media/FileOpen.png)
+
+<font size="6">✅ Lab check</font>
+
+By leveraging PowerPoint, their design templates and shapes we were able to create a rich background that we could easily import into Power BI as the slide dimensions are the same as our report canvas. In leveraging this method we can lay out our design elements before hand to make Power BI as straight forward as sizing our visuals to the individual squares.
+
+This technique also reduces the rendering times of having additional elements on our report page, increasing the overall performance of our report.
+
+Learn more about [themeable backgrounds](https://alluringbi.com/2020/05/05/themeable-backgrounds-for-power-bi/) from the community resource [AlluringBI.com](https://alluringbi.com)
 
 ---
 
@@ -139,9 +147,7 @@ Learn more about [data visualizations]()
 
 We've been asked by our users to ensure the **Total Sales Amount**, **Total Items Discounted** and **Total Returned Items** measures are prominently displayed at the top of our report as these results will be the most common discussion points.
 
-Since we've got a list of visuals, slicers and interactive elements we need to include on our report - we want to be cognizant of the number of visuals we are including on our canvas. 
-
-For this reason, we'll utilize a technique below to consolidate and present the values below to optimize our report performance.
+As more requirements continue to be added to our report design, we want to be cognizant of the number of visuals we are including on our canvas, so we'll leverage a technique below to consolidate a more common design pattern of three **Card** visuals into a more optimized approach with a single **Table** to optimize our report performance.
 
 ---
 
@@ -158,50 +164,63 @@ For this reason, we'll utilize a technique below to consolidate and present the 
 
 1. Utilizing the **Visualizations** pane's **Format your visual** section, we'll update the following configurations below.
 
-    **Note**: utilizing the Search box can be helpful.
+    **Note**: Utilize the Search box, to easily discover configurable settings.
 
-    1. Search: Style
-        1. Style presets > **None**
+    | | |
+    | :- | :- |
+    | 🔍 Search term | **Style** |
+    | Style presets | **None** |
 
-        ![Style none](./Media/StyleNone.png)
+    ![Style none](./Media/StyleNone.png)
 
-    2. Search: Effects
-        1. Effects > Background > **Off**
+    | | |
+    | :- | :- |
+    | 🔍 Search term | **Effects** |
+    | Effects > Background | **Off** |
 
-        ![Effects off](./Media/EffectsOff.png)
+    ![Effects off](./Media/EffectsOff.png)
 
-    2. Search: Headers
-        1. Column headers >
-            1. Font: **Segoe UI Semibold**
-            1. Font size: **12**
-            1. Text color: **#118DFF**
+    | | |
+    | :- | :- |
+    | 🔍 Search term | **Headers** |
+    | Column headers > Font  | **Segoe UI Semibold** |
+    | Column headers > Font size  | **12** |
+    | Column headers > Text color | **#118DFF** |
+    | Column headers > Header alignment | **Center** |
+    | Column headers > Text wrap | **Off** |
+
+    ![Column headers](./Media/ColumnHeaders.png)
+
+    <i>If the text color isn't within your default selection, select <b>More colors...</b> to enter the code manually.</i>
+    
+    ![Text color](./Media/TextColor.png)
+
                 
-                <i>If the text color isn't within your default selection, select <b>More colors...</b> to enter the code manually.</i>
-                ![Text color](./Media/TextColor.png)
-            1. Header alignment: **Center**
-            1. Text wrap: **Off**
 
-        ![Column headers](./Media/ColumnHeaders.png)
+    | | |
+    | :- | :- |
+    | 🔍 Search term | **Values** |
+    | Values > Font  | **Segoe UI Semibold** |
+    | Values > Font size  | **16** |
 
-    1. Search: Values
-        1. Values > 
-            1. Font: **Segoe UI Semibold**
-            1. Font size: **16**
-        ![Values font](./Media/ValuesFont.png)
+    ![Values font](./Media/ValuesFont.png)
 
-    1. Search: Column
-        1. Specific column > 
-            1. Series > For each value in the drop down list, complete the below steps
-            2. Alignment: **Center**
-            
-        ![Specific column](./Media/SpecificColumn.png)
+    | | |
+    | :- | :- |
+    | 🔍 Search term | **Column** |
+    | Specific column > Series  | **For each value in the drop down list, update the alignment below** |
+    | Specific column > Alignment  | **Center** |
 
-    1. Search: Border
-        1. Grid > Border
-            1. Section: **Column header**
-            1. Border position: **Deselect any/all enabled options**
+    ![Specific column](./Media/SpecificColumn.png)
 
-        ![Grid border](./Media/GridBorder.png)
+    | | |
+    | :- | :- |
+    | 🔍 Search term | **Border** |
+    | Grid | **Border** |
+    | Section | **Column header** |
+    | Border position | **Deselect any/all enabled options** |
+
+    ![Grid border](./Media/GridBorder.png)
 
 1. Now that we've customized our table visualization to meet the aesthetic of our brand standards, we'll re-size the current columns by hovering between each column until the resize mouse icon appears and we'll align each of our columns with the current dividers in the canvas background.
 
@@ -211,11 +230,11 @@ For this reason, we'll utilize a technique below to consolidate and present the 
 
     ![Table analyzer](./Media/TableAnalyzer.png)
 
-    ⚠️ **Important** ⚠️
+<font size="6">✅ Lab check</font>
     
-    Using the above technique we were able to emulate the presentation of three individual card visuals, in the form of a single table. In Power BI, the more we can reduce the amount of queries sent to our dataset, while still providing a rich interactive experience for our end users - the greater the performance for our reports for our end users.
+Using the above technique we were able to emulate the presentation of three individual card visuals, in the form of a single table - while still preserving an aesthetically pleasing presentation for our users. In Power BI, its important to reduce the amount of queries sent to our dataset to improve our report performance.
 
-    Learn more about [DAX Fusion](https://dax.tips/2019/08/05/dax-fusion/)
+Learn more about [DAX Fusion](https://dax.tips/2019/08/05/dax-fusion/) from the community resource [DAX.tips](https://dax.tips)
 
 ## Artificial Intelligence
 
