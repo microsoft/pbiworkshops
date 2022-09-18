@@ -3,7 +3,7 @@
 ✏️ Lab scenario
 ---
 
-For this portion of the lab, we've been tasked with creating a Power BI report to unlock new insights for our users. The interactivity of our report should be both **functional** and **fast** to ensure a pleasant viewing experience for our users.
+For this portion of the lab, we've been tasked with creating a Power BI report to unlock new insights for our users. The interactivity of our report should be both **functional** and **fast** to ensure a pleasant viewing experience for our users, while adhering to the professional look and brand standards of our company.
 
 # Report design
 
@@ -129,8 +129,20 @@ Learn more about [themeable backgrounds](https://alluringbi.com/2020/05/05/theme
 
     ![Sales detail](./Media/SalesDetail.png)
 
-## Visuals
+## Visualizations
 
+Learn more about [data visualizations]()
+
+---
+
+1. From the **Visualizations** pane add a **Table** visual and insert the below measures in the following order.
+    1. **Total Sales Amount**
+    1. **Total Items Discounts**
+    1. **Total Return Items**
+    
+    ![](./Media/TableMeasures.png)
+
+1. 
 
 ## Artificial Intelligence
 
@@ -138,6 +150,6 @@ Learn more about [themeable backgrounds](https://alluringbi.com/2020/05/05/theme
 
 
 # Next steps
-We hope this portion of the lab has shown how various storage modes and modeling options can offer a flexible and optimized experience to build enterprise scalable solutions using Power BI Desktop.
+We hope this portion of the lab has shown how well designed reports can lead to increased usage and adoption.
 
 - Return to the [Day After Dashboard in a Day](./README.md) homepage
