@@ -36,13 +36,90 @@ Learn more about [connecting to Power BI datasets](https://learn.microsoft.com/p
 
     ![Data hub connect](./Media/DataHubConnect.png)
 
-## Canvas background
+1. In the bottom right corner of our current file, the text **Connected live to the Power BI dataset** is now present, including the name of the dataset and the workspace it's located within.
 
-1. 
+    ![Connected live](./Media/ConnectedLive.png)
 
-## Spacing
+---
 
-## Alignment
+## Page canvas and elements
+
+Utilize PowerPoint to design backgrounds.
+
+Learn more about [themeable backgrounds](https://alluringbi.com/2020/05/05/themeable-backgrounds-for-power-bi/) from the community resource [AlluringBI.com](https://alluringbi.com)
+
+---
+
+### Canvas background
+
+1. In the bottom left of the current file select the "**+**" icon to create a new page.
+
+    ![Create new page](./Media/CreateNewPage.png)
+
+1. Right click the following page names and select the **Rename Page** option to update to the following names in the table below.
+
+    | Previous Page Name | Renamed Page Name |
+    | :--- | :--- |
+    | Page1 | Summary |
+    | Page2 | Detail |
+
+    ![Rename page](./Media/RenamePage.png)
+
+1. For each of the pages below, we'll navigate to the **Visualizations** pane, select the **Format your report page** button and update the following settings within the **Canvas background** section from the table below
+    1. For the **Image** field select **Browse...** and then copy/paste the according url into the **File name:** field.
+
+        ![File name](./Media/FileOpen.png)
+
+    | Page | Image (file) | Image fit | Transparency |
+    | :--- | :--- | :--- | :--- |
+    | Summary | ```https://raw.githubusercontent.com/microsoft/pbiworkshops/main/Day%20After%20Dashboard%20in%20a%20Day/Media/ContosoSummary.svg``` | Fit | 0% |
+    | Detail | ```https://raw.githubusercontent.com/microsoft/pbiworkshops/main/Day%20After%20Dashboard%20in%20a%20Day/Media/ContosoDetail.svg``` | Fit | 0% |
+
+    ![Contoso Summary background](./Media/ContosoSummary.png)
+
+---
+
+### Elements
+
+1. Navigate to the **Insert** tab, select the **Text box** element and complete the following steps below.
+    1. Update the Font size to: **18**
+    1. Update the Font color to: **White, 50% Darker**
+    1. Type the text within the text box: **SALES REPORT**
+
+    ![Sales report text box](./Media/SalesReportTextBox.png)
+
+1. With the text box still active, we'll navigate to the **Format** pane and in the search box type in **background**. 
+
+    From the matching options navigate to the **Effects** group and set the **Background** property to **Off**.
+
+    ![Sales report text box](./Media/TextBoxBackgroundDisabled.png)
+
+1. Navigate to the **Insert** tab, select the **Buttons** element and then **Navigator** option. From the available choices select the **Page navigator** option. 
+
+    Reposition the buttons on the top right side of the canvas.
+
+    ![Page navigator](./Media/PageNavigator.png)
+
+1. We'll now click and hold the left mouse click and select both the text box and the page navigator elements on the **Summary** page. Once selected, we can navigate to the **Home** tab and select **Copy** or press the keyboard shortcut **Ctrl+C**
+    
+    **Note**: we can also select all elements by pressing CTRL+A or holding ctrl when clicking each item.
+
+    ![Select multiple](./Media/SelectMultiple.png)
+
+1. Navigate to the **Detail** page and from the **Home** tab select the **Paste** button or press the keyboard shortcut **Ctrl+V**. 
+    
+    This will ensure our elements are perfectly aligned between both the **Summary** and **Detail** page.
+
+    ![Paste multiple detail](./Media/PasteMultipleDetail.png)
+
+1. Select the **Text box** element on the **Detail** page and update the text from "**SALES REPORT**" to "**SALES DETAIL |**"
+
+    ![Sales detail](./Media/SalesDetail.png)
+
+## Visuals
+
+
+## Artificial Intelligence
 
 ## Tooltips
 
