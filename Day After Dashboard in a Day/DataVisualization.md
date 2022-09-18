@@ -24,7 +24,7 @@ Learn more about [connecting to Power BI datasets](https://learn.microsoft.com/p
 ---
 
 1. We'll start by creating a new Power BI file by selecting the **File** and **New** option (shortcut **Ctrl+N**) if Power BI Desktop is currently open.
-    1. If Power BI Desktop is not currently open, a new application instance will automatically create a new file upon opening.
+    1. If Power BI Desktop is not currently open, a new fill will be automatically created upon opening.
 
     ![New file](./Media/NewFile.png)
 
@@ -68,14 +68,27 @@ Learn more about [themeable backgrounds](https://alluringbi.com/2020/05/05/theme
 1. For each of the pages below, we'll navigate to the **Visualizations** pane, select the **Format your report page** button and update the following settings within the **Canvas background** section from the table below
     1. For the **Image** field select **Browse...** and then copy/paste the according url into the **File name:** field.
 
-        ![File name](./Media/FileOpen.png)
-
-    | Page | Image (file) | Image fit | Transparency |
-    | :--- | :--- | :--- | :--- |
-    | Summary | ```https://raw.githubusercontent.com/microsoft/pbiworkshops/main/Day%20After%20Dashboard%20in%20a%20Day/Media/ContosoSummary.svg``` | Fit | 0% |
-    | Detail | ```https://raw.githubusercontent.com/microsoft/pbiworkshops/main/Day%20After%20Dashboard%20in%20a%20Day/Media/ContosoDetail.svg``` | Fit | 0% |
-
     ![Contoso Summary background](./Media/ContosoSummary.png)
+
+    | Page | Image fit | Transparency |
+    | :--- |  :--- | :--- |
+    | Summary | Fit | 0% |
+
+    **Image (file)**
+    ```
+    https://raw.githubusercontent.com/microsoft/pbiworkshops/main/Day%20After%20Dashboard%20in%20a%20Day/Media/ContosoSummary.svg
+    ``` 
+
+    | Page | Image fit | Transparency |
+    | :--- |  :--- | :--- |
+    | Detail | Fit | 0% |
+
+    **Image (file)**
+    ```
+    https://raw.githubusercontent.com/microsoft/pbiworkshops/main/Day%20After%20Dashboard%20in%20a%20Day/Media/ContosoDetail.svg
+    ```
+
+    ![File name](./Media/FileOpen.png)
 
 ---
 
