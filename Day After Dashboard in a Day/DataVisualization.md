@@ -369,7 +369,82 @@ Maintaining a consistent look and feel across our report elements ensures a prof
 
     ![Sort small multiples](./Media/SortSmallMultiples.png)
 
-## Artificial Intelligence
+1. From the **Visualizations** pane add the **Azure map** visual below the small multiples line chart in the bottom right corner of our page, and complete the following configurations.
+    1. Insert the **StateProvinceName** field from the **Customers** table either into the **Location** value in the **Visualizations** pane or drop directly on the map itself.
+    1. Insert the **Total Sales Amount** measure from the **Fact Online Sales** table either into the **Size** value in the **Visualizations** pane or drop directly on the map itself.
+
+    ![Azure maps](./Media/AzureMaps.png)
+
+<font size="6">✅ Lab check</font>
+
+Whether it be creating visuals with natural language, splitting them into multiple versions of the same visual with small multiples or incorporating rich mapping capabilities - there's numerous methods in which 
+
+![Summary finish](./Media/SummaryFinish.png)
+
+---
+
+### Spark lines
+Multiple charts.
+
+---
+
+1. Navigate to the **Detail** page, either by selecting the page name in the bottom left or holding **ctrl** and clicking the **Detail** button from the page navigator in the top right of the page.
+    
+    **Pro-tip:** for reports with a large number of pages, we can also right click the page navigation arrows (**<>**) to the left of the page tabs to display a pop-up of all page names. This technique is also applicable to Excel workbooks.
+
+    ![Select detail page](./Media/SelectDetailPage.png)
+
+1. From the **Visualizations** pane add the **Matrix** visual to the top right rectangle in the **Detail** page and complete the following configurations.
+    | Field | Table | Field/Measure |
+    | :-- | :-- | :-- |
+    | Rows | Products | Manufacturer |
+    | Rows | Stores | StoreName |
+    | Rows | Products | ProductName |
+    | Values | Online Sales | Total Sales Amount |
+
+    ![Add matrix visual](./Media/AddMatrixVisual.png)
+
+1. From the **Visualizations** pane, we'll right click the **Total Sales Amount** option and select the **Add a sparkline** option.
+    1. Note: You can also add a sparkline by navigating to the **Insert** tab and then selecting the **Add a sparkline** button.
+
+    ![Add sparkline](./Media/AddSparkline.png)
+
+1. Within the **Add a sparkline** dialog window, select the drop down under the **X-axis** and select the **DateKey** filed from the **Calendar** table. Once complete select **Create** to continue.
+
+    ![Sparkline axis](./Media/SparklineAxis.png)
+
+1. From the **Visualizations** pane, we'll right click the **Total Sales Amount by DateKey** sparkline option and select the **Rename for this visual** option. For the updated title, we'll simply type the **space character** to ensure at least one character so that Power BI accepts our rename and press enter once complete.
+
+    ![Rename sparkline](./Media/RenameSparkline.png)
+
+1. From the **Visualizations** pane, we can verify our sparkline is still present, albeit with no visible characters and in our matrix, if the sparklines are not visible, resize the right most column to view.
+
+    ![Rename sparkline](./Media/ResizeSparkline.png)
+
+1. From the **Fields** pane, we'll locate the **Manufacturer** field from the **Products** table and drag-and-drop this value into the **Visualizations** pane's **Add dril-through field values here** field well.
+
+    ![Add drill-through](./Media/AddDrillthrough.png)
+
+1. In the top left side of our page an automatic button has been added to return to the previous drill page. Because we already have a page navigation button, let's select this object and press **Delete** on the keyboard to remove this element.
+
+    ![Delete drill-through](./Media/DeleteDrillthrough.png)
+
+1. Return to the **Summary** page, either by selecting the page name in the bottom left or holding **ctrl** and clicking the **Summary** button from the page navigator in the top right of the page. In the bottom left of the page right click the bar for **Contoso, Ltd** and navigate to the **Drill-through** option and then select the **Detail** page.
+
+    ![Manufacturer drill-through](./Media/ManufacturerDrillthrough.png)
+
+1. We have now returned to the **Detail** page and our matrix visual only includes the **Contoso, Ltd** manufacturer. In the bottom right of the **Visualizations** pane the **Manufacturer is Contoso, Ltd** and the current **DateKey** range from the **Date** slicer is also passed due to the **Keep all filters** toggle being enabled.
+
+    ![Verify drill-through](./Media/VerifyDrillthrough.png)
+
+## Artificial Intelligence visuals
+
+### Anomaly detection
+
+### Smart narrative
+
+### Q&A visual
+
 
 ## Tooltips
 
