@@ -421,6 +421,8 @@ Multiple charts.
 
     ![Rename sparkline](./Media/ResizeSparkline.png)
 
+### Drill-through
+
 1. From the **Fields** pane, we'll locate the **Manufacturer** field from the **Products** table and drag-and-drop this value into the **Visualizations** pane's **Add dril-through field values here** field well.
 
     ![Add drill-through](./Media/AddDrillthrough.png)
@@ -437,9 +439,101 @@ Multiple charts.
 
     ![Verify drill-through](./Media/VerifyDrillthrough.png)
 
+1. To make our drill-through selection stand out more, we're going to create a report level measure to determine our selected **Manufacturer** value and use this in our page title in the top left. Report level measures are only accessible from our report and are not part of our live connected model. 
+
+    Complete the following steps below:
+
+    1. From the **Fields** pane, right click the **Products** table and select **New measure**.
+
+    ![New measure](./Media/NewMeasure.png)
+
+    2. Within the DAX formula bar, add the following DAX query below and select the ✔️ check mark to the left of the formula to commit.
+
+    ```sql
+    Selected Manufacturer = 
+    VAR manufacturer = SELECTEDVALUE('Products'[Manufacturer])
+    RETURN
+    UPPER(manufacturer)
+    ```
+    ![Report measure](./Media/ReportMeasure.png)
+
+1. We'll now select the page title in the top left to make it the active selection and after the pipe we'll select the "**+ Value**" button to update the dynamic value options below and select **Save** once complete:
+
+    | | |
+    | :- | :- |
+    | How would you calculate this value | **selected manufacturer** |
+    | Name your value | **ManufacturerName** |
+
+    ![Dynamic value title](./Media/DynamicValueTitle.png)
+
+1. If the returned text format does not match, highlight the returned text and update the Font size to **18** and the Text color to **White, 60% darker**
+
+    ![Match title format](./Media/MatchTitleFormat.png)
+
+## Sparkline formatting
+
+1. Utilizing the **Visualizations** pane's **Format your visual** section, we'll now update our matrix with the following configurations below.
+
+    **Note**: Utilize the Search box, to easily discover configurable settings.
+
+    | | |
+    | :- | :- |
+    | 🔍 Search term | **Style** |
+    | Style presets | **None** |
+
+    ![Style none](./Media/StyleNone.png)
+
+    | | |
+    | :- | :- |
+    | 🔍 Search term | **Header** |
+    | Column headers > Text > Font | **Segoe UI Semibold** |
+    | Column headers > Text > Font size | **10** |
+    | Column headers > Text > Text color | **Black** |
+    | Column headers > Text > Text wrap | **Off** |
+    | Column headers > Options > Auto-size width | **Off** |
+
+    ![Matrix headers](./Media/MatrixHeaders.png)
+
+    | | |
+    | :- | :- |
+    | 🔍 Search term | **Pad** |
+    | Grid > Options > Row padding | **6** |
+
+    ![Row padding](./Media/RowPadding.png)
+
+    | | |
+    | :- | :- |
+    | 🔍 Search term | **icons** |
+    | Row headers > +/- icons > Color | **White, 30% darker** |
+    | Row headers > +/- icons > Size | **12** |
+
+    ![Plus minus icons](./Media/PlusMinusIcons.png)
+
+    | | |
+    | :- | :- |
+    | 🔍 Search term | **spark** |
+    | Sparklines > Sparkline > Data color | **White, 30% darker** |
+    | Sparklines > Sparkline > Show these markers | **Highest** |
+    | Sparklines > Marker > Color | **#118DFF** |
+    | Sparklines > Marker > Size | **4** |
+
+    ![Sparkline settings](./Media/SparkLineSettings.png)
+
+1. With our matrix visual now configured, let's return to visual itself and resize the columns so that they fit the complete width of our top left rectangle so that they are easy to read for our end users so that they can find new insights with our sparklines.
+
+    ![Resize matrix](./Media/ResizeMatrix.png)
+
 ## Artificial Intelligence
 
 ### Anomaly detection
+
+1. From the **Visualizations** pane we'll now add a **Line** visual to the bottom left rectangle on our canvas and insert the following fields and measures to the values below:
+    1. X-axis: **Calendar** table, **DateKey** field
+    1. Y-axis: **Total Sales Amount** measure
+
+    ![Total sales amount line chart](./Media/TotalSalesAmountLine.png)
+
+
 
 ### Smart narrative
 
