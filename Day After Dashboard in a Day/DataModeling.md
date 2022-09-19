@@ -573,6 +573,8 @@ An important aspect of data modeling is usability.
 
 ---
 
+## Descriptions
+
 1. Select the **Model** view and update the following table properties with the instructions below for each:
     1. From the **Fields** pane select the Previous Table Name from the list.
     1. In the **Properties** pane update the **Name**, **Description** and **Key column** fields.
@@ -593,6 +595,34 @@ An important aspect of data modeling is usability.
     1. For end users the **Description** fields will be available in various client applications and experiences ensuring they have a proper understanding of the property.
 
     ![Table description](./Media/TableDescription.png)
+
+## Sort by
+
+1. On the report canvas we'll create a new **Table** visual and add the following column from the table below to visualize our data. One of the first things we may notice is that the **MonthName** field is being sorted in ascending (A to Z) order. In order to update the sort order, we'll first select the **MonthName** column from the **Calendar table** and navigate to the **Column tools** tab and then the **Sort by column** button.
+
+    | Table | Column | 
+    | :---- | :----- |
+    | Calendar | MonthName |  
+    
+    ![Sort by monthname](./Media/SortByMonthName.png)
+
+1. From the available fields in our **Calendar** table, select the **Month** column (which is an integer number).
+
+    ![Sort by month](./Media/SortByMonth.png)
+
+1. If we review our **Table** visual, our months have now been sorted in the correct order.
+    
+    **Ex.** (1 = January, 2 = February, etc.)
+
+    ![Sort by month](./Media/SortedMonthName.png)
+
+    ⚠️ **Important** ⚠️
+
+    Even if your calendar does not start in January, this approach can still be utilized, you would simply want to start the name (text) with the number with the appropriate order.
+
+    **Ex.** (1 = June, 2 = July, etc.)
+
+Learn more about [Sort by column](https://learn.microsoft.com/power-bi/create-reports/desktop-sort-by-column)
 
 ---
 
