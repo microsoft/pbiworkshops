@@ -596,7 +596,11 @@ An important aspect of data modeling is usability.
 
     ![Table description](./Media/TableDescription.png)
 
+---
+
 ## Sort by
+
+---
 
 1. On the report canvas we'll create a new **Table** visual and add the following column from the table below to visualize our data. One of the first things we may notice is that the **MonthName** field is being sorted in ascending (A to Z) order. In order to update the sort order, we'll first select the **MonthName** column from the **Calendar table** and navigate to the **Column tools** tab and then the **Sort by column** button.
 
@@ -618,11 +622,33 @@ An important aspect of data modeling is usability.
 
     ⚠️ **Important** ⚠️
 
-    Even if your calendar does not start in January, this approach can still be utilized, you would simply want to start the name (text) with the number with the appropriate order.
+    Even if our organizations calendar does not start in January, we can still utilize this feature to sort order data. We would simply want to start the name (text) along with the sort by (number) in the appropriate order.
 
     **Ex.** (1 = June, 2 = July, etc.)
 
 Learn more about [Sort by column](https://learn.microsoft.com/power-bi/create-reports/desktop-sort-by-column)
+
+---
+
+# Data category
+
+
+---
+
+1. Navigate to the model view on the side-rail.
+
+    ![Full side rail.](./Media/ModelViewSideRail.png)
+
+1. From the **Fields** pane first we'll first select the field name from the table below and within the **Properties** expand the "**v Advanced**" section, to update the **Data category** value from the options below:
+
+    | Table | Field | Data category |
+    | :--- | :--- |  :--- |
+    | Customers | RegionCountryName | Country/Region |
+    | Customers | StateProvinceName | State of Province |
+
+    ![Region category](./Media/RegionCategory.png)
+
+Learn more about [data categorization](https://learn.microsoft.com/power-bi/transform-model/desktop-data-categorization)
 
 ---
 
