@@ -437,7 +437,7 @@ Multiple charts.
 
     ![Verify drill-through](./Media/VerifyDrillthrough.png)
 
-## Artificial Intelligence visuals
+## Artificial Intelligence
 
 ### Anomaly detection
 
