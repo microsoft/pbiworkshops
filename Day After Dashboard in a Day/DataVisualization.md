@@ -533,14 +533,68 @@ Multiple charts.
 
     ![Total sales amount line chart](./Media/TotalSalesAmountLine.png)
 
+1. Utilizing the **Visualizations** pane's **Add further analyses to your visual** section, we'll update the following configurations below for our line chart to infuse additional insights.
 
+    **Note**: Utilize the Search box, to easily discover configurable settings.
+
+    | | |
+    | :- | :- |
+    | 🔍 Search term | **Anomalies** |
+    | Find anomalies | **On** |
+
+    ![Find anomalies](./Media/FindAnomalies.png)
+
+1. From our line chart, anomalies have now been detected, if we were to select any of the anomaly markers a new **Anomalies** pane is then available, this same experience will be available to our end users as they view our reports within the Power BI service (cloud).
+    
+    The anomalies pane includes information information like why the anomaly was detected and possible explanations including their overall strength score as displayed in the black highlighted areas.
+
+    ![Anomalies pane](./Media/AnomaliesPane.png)
+
+Learn more about [Anomaly detection](https://learn.microsoft.com/power-bi/visuals/power-bi-visualization-anomaly-detection)
 
 ### Smart narrative
 
+1. From the **Visualizations** pane we'll now add a **Smart narrative** visual to the top right rectangle on our canvas.
+
+    ![Smart narrative](./Media/SmartNarrative.png)
+
+1. Utilizing the **Visualizations** pane's **Format your visual** section, we'll now update our matrix with the following configurations below.
+
+    **Note**: Utilize the Search box, to easily discover configurable settings.
+
+    | | |
+    | :- | :- |
+    | 🔍 Search term | **Title** |
+    | Title | **On** |
+    | Title > Text | **Sales Summary** |
+
+    ![Smart narrative title](./Media/SmartNarrativeTitle.png)
+
+1. Now as we make selections on our report pages, the **Smart narrative** visual's dynamic text will automatically rewrite and update its summary based upon its findings.
+
+    ![Smart narrative update](./Media/SmartNarrativeUpdate.png)
+
+Learn more about [Smart narrative](https://learn.microsoft.com/power-bi/visuals/power-bi-visualization-smart-narrative)
+
 ### Q&A visual
 
+1. For our last visual we'll now add the **Q&A** visual to the bottom right rectangle on our canvas by simply double clicking.
 
-## Tooltips
+    With including the **Q&A** visual, we can provide our end users the ability to find new insights by typing their own questions, for scenarios that we may not have even thought to visualize yet.
+
+    ![Add QA visual](./Media/AddQAVisual.png)
+
+Learn more about the [Q&A](https://learn.microsoft.com/power-bi/visuals/power-bi-visualization-q-and-a) visual
+
+# Lab check
+
+<i>Finished summary page</i>
+
+![Summary finish](./Media/SummaryFinish.png)
+
+<i>Finished detail page</i>
+
+![Finished detail](./Media/FinishedDetail.png)
 
 
 # Next steps
