@@ -598,9 +598,40 @@ An important aspect of data modeling is usability.
 
 ---
 
-## Sort by
+## Row label
+
+1. Let's select the **Report** view to return to our report canvas.
+
+    ![Report view](./Media/ReportView.png)
+
+1. On the report canvas we'll create a new **Table** visual and add the **Full Name** column from the **Customers** table and the **Total Sales Amount** measure from the **Online Sales** table.
+
+    Upon first inspection, everything is working as intended with returning our table but we learn that we actually have two customers that share the same name "**Abigail Barnes**" as displayed from our filters list, which is now problematic when we begin to aggregate our results as they are rolled up into this single user.
+
+    ![Duplicate names](./Media/DuplicateNames.png)
+
+1. Navigate again to the **Model** view on the side-rail.
+
+    ![Full side rail](./Media/ModelViewSideRail.png)
+
+1. From the **Fields** pane first we'll select the **Customers** table and within the **Properties** pane set the **Row label** to the **Full Name** field.
+
+    ![Row label](./Media/RowLabel.png)
+
+
+1. Return to the **Report** view once again.
+
+    ![Report view](./Media/ReportView.png)
+
+1. We'll return to our **Table** visual and remove the **Full Name** field from the **Columns** values and add the **Full Name** column back again from our **Customers** table to re-render the report.
+
+    This time both **Abigail Barnes** names are rendered from our data.
+
+    ![TwoAbigail.png](./Media/TwoAbigail.png)
 
 ---
+
+## Sort by
 
 1. On the report canvas we'll create a new **Table** visual and add the following column from the table below to visualize our data. One of the first things we may notice is that the **MonthName** field is being sorted in ascending (A to Z) order. In order to update the sort order, we'll first select the **MonthName** column from the **Calendar table** and navigate to the **Column tools** tab and then the **Sort by column** button.
 
@@ -630,25 +661,28 @@ Learn more about [Sort by column](https://learn.microsoft.com/power-bi/create-re
 
 ---
 
-# Data category
-
-
----
+## Data category
 
 1. Navigate to the model view on the side-rail.
 
     ![Full side rail.](./Media/ModelViewSideRail.png)
 
-1. From the **Fields** pane first we'll first select the field name from the table below and within the **Properties** expand the "**v Advanced**" section, to update the **Data category** value from the options below:
+1. From the **Fields** pane first we'll select the field name from the table below and within the **Properties** expand the "**v Advanced**" section, to update the **Data category** value from the options below:
 
     | Table | Field | Data category |
     | :--- | :--- |  :--- |
     | Customers | RegionCountryName | Country/Region |
-    | Customers | StateProvinceName | State of Province |
+    | Customers | StateProvinceName | State of Province |1
 
     ![Region category](./Media/RegionCategory.png)
 
 Learn more about [data categorization](https://learn.microsoft.com/power-bi/transform-model/desktop-data-categorization)
+
+---
+
+## Default summarization
+
+
 
 ---
 
