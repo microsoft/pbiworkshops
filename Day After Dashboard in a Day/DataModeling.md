@@ -682,7 +682,26 @@ Learn more about [data categorization](https://learn.microsoft.com/power-bi/tran
 
 ## Default summarization
 
+1. While still in the model view and from the **Fields** pane first we'll select the following aggregate fields from the table below.
 
+    To bulk select fields, you can hold and select **Shift** on your keyboard for adjacent fields, or hold **Ctrl** to select individual fields.
+
+    | Table | Field |
+    | :-- | :-- |
+    | Onine Sales | DiscountAmount |
+    | Onine Sales | DiscountQuantity |
+    | Onine Sales | ReturnAmount |
+    | Onine Sales | ReturnQuantity |
+    | Onine Sales | SalesAmount |
+    | Onine Sales | SalesQuantity |
+
+    ![Select fields](./Media/SelectFields.png)
+
+1. In the **Properties** pane we'll now expand the "**v Advanced**" section, to update the **Summarize by** value to **None**:
+
+    ![Summarize by](./Media/SummarizeBy.png)
+
+Learn more about [aggregate](https://learn.microsoft.com/power-bi/create-reports/service-aggregates) fields
 
 ---
 
