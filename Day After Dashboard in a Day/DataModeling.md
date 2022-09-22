@@ -703,6 +703,29 @@ Learn more about [data categorization](https://learn.microsoft.com/power-bi/tran
 
 Learn more about [aggregate](https://learn.microsoft.com/power-bi/create-reports/service-aggregates) fields
 
+## Synonyms
+
+1. Let's return to the **Report** view once again.
+
+    ![Report view](./Media/ReportView.png)
+
+1. We'll double click on the report page to add the **Q&A** visual and type in the question: **"salary by customer name"**. Unfrotunately the result wasn't quite what we were expecting, so let's select the **Add synonyms now** to include more business terminology in our dataset.
+
+    ![Add synonyms](./Media/AddSynonyms.png)
+
+1. Within the **Field synonyms** window, we'll navigate to the **Customers** table and add the following synonyms to the fields in the table below, by pressing the **"Add+"** button and typing in our text. Once complete select the **X** in the top right corner to close out of the window.
+
+    | Table | Field | Synonym |
+    | :--- | :--- | :--- |
+    | Customers | Full Name | customer |
+    | Customers | YearlyIncome | salary |
+
+    ![Field synonyms](./Media/FieldSynonyms.png)
+
+1. On the report page, we now have a table reflecting the correct fields for our synonyms **salary** and **customer name**.
+
+    ![Updated synonyms](./Media/UpdatedSynonyms.png)
+
 ---
 
 # Data Analysis Expressions
@@ -710,6 +733,43 @@ Learn more about [aggregate](https://learn.microsoft.com/power-bi/create-reports
 ---
 
 # Security
+
+1. On the report canvas we'll create a new **Table** visual and add the following column from the table below to visualize our data.
+
+    | Table | Column / Measure | 
+    | :---- | :----- |
+    | Employees | EmailAddress |
+    | Stores | StoreName |
+    | Online Sales | Total Sales Amount |  
+    
+    ![Sort by monthname](./Media/SecurityTable.png)
+
+1. From the ribbon we'll navigate to the **Modeling** tab and within the security group select the **Manage roles** button.
+
+    ![Manage roles](./Media/ManageRoles.png)
+
+
+1. From the **Manage roles** window, we'll select **Create** first and give our role the title **Employee Store**. From the available tables in our model we'll then select the ellipses next to the **Employeess** table and select the **[EmailAddress]** field.
+
+    ![Manage roles](./Media/ManageEmailAddress.png)
+
+1. Within the **Table filter DAX expression** section, we'll upate the statement to retrieve the logged in users e-mail whenever they consume content from Power BI with the following DAX expression below, once complete - we can select the checkmark to confirm and then the **Save** button to complete.
+
+    ```
+    [EmailAddress] = USERPRINCIPALNAME()
+    ```
+
+    ![UPN name](./Media/UPNDax.png)
+
+1. From the ribbon we'll navigate to the **Modeling** tab and within the security group select the **View as** button.
+
+    ![View as role](./Media/ViewAsRoles.png)
+
+
+1. Within the **View as roles** window, we'll first select the **Other user** field to view our data by passing in a test value - in this case we'll use the email address - **"andy0@contoso.com"** and choose the **Employee Store** role. Once complete select **OK** to return to the report and valide that only Andy's results are now visible. Once complete we can then select **Stop viewing**.
+
+    ![View as role](./Media/ViewAsAndy.png)
+
 
 ---
 
