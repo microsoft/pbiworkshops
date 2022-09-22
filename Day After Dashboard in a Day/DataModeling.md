@@ -684,7 +684,7 @@ Learn more about [data categorization](https://learn.microsoft.com/power-bi/tran
 
 1. While still in the model view and from the **Fields** pane first we'll select the following aggregate fields from the table below.
 
-    To bulk select fields, you can hold and select **Shift** on your keyboard for adjacent fields, or hold **Ctrl** to select individual fields.
+    To bulk select fields/measures, we can hold and select **Shift** on the keyboard for adjacent fields, or hold **Ctrl** to select individual fields.
 
     | Table | Field |
     | :-- | :-- |
@@ -702,6 +702,24 @@ Learn more about [data categorization](https://learn.microsoft.com/power-bi/tran
     ![Summarize by](./Media/SummarizeBy.png)
 
 Learn more about [aggregate](https://learn.microsoft.com/power-bi/create-reports/service-aggregates) fields
+
+## Display folder
+
+1. While still in the model view and from the **Fields** pane first we'll select the following measures from the table below and within the **Properties** pane we'll add the text **Measures** into the **Display folder** field. 
+
+    To bulk select fields/measures, we can hold and select **Shift** on the keyboard for adjacent fields, or hold **Ctrl** to select individual fields.
+
+    | Table | Field |
+    | :-- | :-- |
+    | Onine Sales | Total Items Discounted |
+    | Onine Sales | Total Returned Items |
+    | Onine Sales | Total Sales Amount |
+
+    ![Display folder](./Media/DisplayFolder.png)
+
+1. Within our **Fields** pane, our measures are now displayed within a folder - this will help with managing like items and also for users who connect to our model ensure a seamless experience in which to locate our measures. 
+
+    ![Measures folder](./Media/MeasuresFolder.png)
 
 ## Synonyms
 
@@ -729,6 +747,55 @@ Learn more about [aggregate](https://learn.microsoft.com/power-bi/create-reports
 ---
 
 # Data Analysis Expressions
+
+
+## SAMEPERIODLASTYEAR
+
+1. We'll start by completing our **[Total Sales SPLY]** measure, by leveraging our **Calendar** table and our **DateKey** column.
+
+    Within our **CALCULATE** we want to change our filtering context, by looking at the values within our current period and then previous one year.
+
+    ```
+    CALCULATE([Total Sales Amount], SAMEPERIODLASTYEAR(Calendar[DateKey]))
+    ```
+
+    Completed formula below:
+
+    ```
+    Total Sales SPLY = 
+    VAR _hassalesdata =
+        NOT ( ISBLANK ( [Total Sales Amount] ) )
+    RETURN
+        IF (
+            _hassalesdata,
+            CALCULATE ( [Total Sales Amount], SAMEPERIODLASTYEAR (Calendar[DateKey] ) ),
+            BLANK ()
+        )
+    ```
+
+Learn more about [SAMEPERIODLASTYEAR](https://learn.microsoft.com/dax/sameperiodlastyear-function-dax)
+
+
+## USERELATIONSHIP
+
+With needing to filter by the order date and the delivery date from our **Online Sales** table, we will need to be able to control the active relationship in our measure. For this we'll leverage the USERELATIONSHIP function within DAX to enable the relationship between our **Calendar** table's **DateKey** and the **Online Sales** table's **DeliveryDate** with the below formula.
+
+1. From the **Fields** pane, we'll right click the **Online Sales** table and select **New measure**
+
+    ![Sales new measure](./Media/SalesNewMeasure.png)
+
+1. In the formula bar we'll write the following DAX function and using the **CALCULATE** function, we'll change our current filtering context - with the **USERELATIONSHIP** function.
+
+    ```
+    Total Sales By Delivery Date =
+    CALCULATE (
+        [Total Sales Amount],
+        USERELATIONSHIP ( DimDate[DateKey], FactOnlineSales[DeliveryDate] )
+    )
+
+    ```
+
+Learn more about [USERELATIONSHIP](https://docs.microsoft.com/dax/userelationship-function-dax)
 
 ---
 
