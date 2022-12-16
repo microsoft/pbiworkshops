@@ -1,1 +1,3 @@
-"Hello, world"
+---
+title: "Power BI Workshops"
+---
