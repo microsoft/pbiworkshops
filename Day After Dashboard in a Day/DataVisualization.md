@@ -601,3 +601,6 @@ Learn more about the [Q&A](https://learn.microsoft.com/power-bi/visuals/power-bi
 We hope this portion of the lab has shown how well designed reports can lead to increased usage and adoption.
 
 - Return to the [Day After Dashboard in a Day](./README.md) homepage
+
+# Learn more
+[Visual Vocabulary](https://app.powerbi.com/view?r=eyJrIjoiMDA4YWIwZWEtMDE3ZS00YmFhLWE5YWMtODFlZWEzNTU1ODNiIiwidCI6IjZjMGE1YjljLTA4OWEtNDk0ZS1iMDVlLTcxNjEwOTgyOTA0NyIsImMiOjF9) from Jason Thomas

@@ -10,6 +10,9 @@ For this portion of the lab, we've been tasked with collecting and combining dai
 Before we begin, we'll want to navigate to a new, empty or non-production workspace and confirm that a capacity has been assigned, if not we'll use this opportunity to enable the option by selecting one of the below values.
 
 1. In the top right corner of the workspace, select the **Settings** option.
+
+    ![Settings selection](./Media/SettingsSelection.png)
+
 1. In the **Settings** pane, select the **Premium** tab and verify one of the following licensing modes listed below has been enabled.
 
     **License mode:**
@@ -21,7 +24,7 @@ Before we begin, we'll want to navigate to a new, empty or non-production worksp
 
 # Dataflows
 
-Using dataflows and self-service data prep supports the following scenarios by:
+Dataflows support self-service data preparation and the following scenarios by:
 
 1. Promoting a single source of the truth, with greater control over which data is accessed and exposed to creators.
 
@@ -142,22 +145,29 @@ With our dataflow successfully imported and credentials set, we'll now configure
 
 ## Data view
 
-The Power Query editor represents the Power Query user interface, where you can add or modify queries, manage queries by grouping or adding descriptions to query steps, or visualize your queries and their structure with different views.
+The Power Query Online editor represents a user interface, where we can add or modify queries, manage queries by grouping or adding descriptions to query steps, or visualize our queries and their structure with different views.
 
 Learn more about the [Power Query editor](https://docs.microsoft.com/power-query/power-query-ui#the-power-query-editor-user-experience)
 
 ---
 
-1. From the **Queries** pane, right click the **DimCustomer_raw** query and select **Reference** from the menu.
+1. From the **global search bar** in the middle of the Power Query Online editor, we'll type **Dim** to view all of our queries with the text "Dim" in their name and then select the **DimCustomer_raw** query to continue.
+    1. Shortcut: **Alt+Q**
+    1. We can navigate our results using up/down arrow keys and by pressing **Enter** to commit our selections.
+
+    ![Global search Dim tables](./Media/GlobalSearchDim.png)
+
+1. From the **Queries** pane, we'll right click the **DimCustomer_raw** query and select **Reference** from the menu.
+
     ![Reference query](./Media/DimCustomerReference.png)
 
-1. Inspect the **Queries** pane again and notice that a new query titled **DimCustomer_raw (2)** has now been created, with a lightning bolt icon (⚡) indicating that this is a computed table. 
+1. If we inspect the **Queries** pane again we'll now notice that a new query titled **DimCustomer_raw (2)** has now been created, with a lightning bolt icon (⚡) indicating that this is a computed table.
     
     This query will leverage the enhanced compute engine which can drastically reduces refresh time required for long-running data preparation steps - such as performing joins between tables.
     
     ![Computed table](./Media/ComputedTable.png)
 
-1. With the **DimCustomer_raw (2)** query selected, navigate to the **Home** tab and select the **Merge queries** option.
+1. With the **DimCustomer_raw (2)** query selected, we'll leverage the global search bar to type the text **merge** and select the **Merge queries** action.
 
     ![Computed table](./Media/MergeQueriesDimCustomer.png)
 
@@ -191,6 +201,8 @@ Learn more about the [Power Query editor](https://docs.microsoft.com/power-query
     ![Query settings DimCustomer](./Media/QuerySettingsDimCustomer.png)
 
 Now that our data is being ingested and stored in our dataflow's [Azure Data Lake Storage Gen2](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-introduction), we'll leverage [computed tables](https://docs.microsoft.com/power-query/dataflows/computed-entities-scenarios) to apply transformation logic via the enhanced compute engine.
+
+Learn more about the [Global search box](https://learn.microsoft.com/power-query/search-box)
 
 Learn more about the [benefits of loading data without transformation for Text/CSV files](https://docs.microsoft.com/power-query/dataflows/computed-entities-scenarios#load-data-without-transformation-for-textcsv-files)
 
