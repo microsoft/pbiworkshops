@@ -289,10 +289,45 @@ Learn more about [Schema view](https://docs.microsoft.com/power-query/schema-vie
 1. Select the **Merge** query and complete the following steps below:
     1. Select the **ProductSubcategoryKey** and **ProductCategoryKey** column names from the schema list.
     1. Navigate to the **Schema tools** tab and select the **Remove columns** option.
-    
+
         **Note:** You can maximize or minimize the view by selecting the chevrons next to the formula bar.
-    
+
     ![Remove columns](./Media/RemoveColumns.png)
+
+1. Select the **DimProduct_raw** query and complete the following steps below:
+    1. Select the **ProductSubcategoryKey** column name from the schema list.
+    1. Navigate to the **Schema tools** tab and select the **Mark as key** option.
+
+    ![Mark ProductSubcategoryKey](./Media/DimProductFK.png)
+
+    1. Select the **ProductKey** column name from the schema list.
+    1. Navigate to the **Schema tools** tab and select the **Mark as key** option.
+    1. Within the formula bar, update the [Table.AddKey()](https://docs.microsoft.com/powerquery-m/table-addkey) **isPrimary** value from **false** to **true**.
+
+    ``` powerquery-m
+        Table.AddKey(#"Marked key columns", {"ProductKey"}, true)
+    ```
+
+    ![Mark ProductKey true](./Media/DimProductPK.png)
+
+1. Select the **DimProductSubcategory_raw** query and complete the following steps below:
+    1. Select the **ProductSubcategoryKey** column name from the schema list.
+    1. Navigate to the **Schema tools** tab and select the **Mark as key** option.
+
+    ![Mark ProductSubcategoryKey](./Media/ProductSubcategoryKey.png)
+
+    1. Within the formula bar, update the [Table.AddKey()](https://docs.microsoft.com/powerquery-m/table-addkey) **isPrimary** value from **false** to **true**.
+
+    ``` powerquery-m
+        Table.AddKey(#"Changed column type", {"ProductSubcategoryKey"}, true)
+    ```
+    ![Mark ProductSubcategoryKey true](./Media/ProductSubcategoryKeyTrue.png)
+
+    1. Select the **ProductCategoryKey** column name from the schema list.
+    1. Navigate to the **Schema tools** tab and select the **Mark as key** option.
+        1. Since **ProductCategoryKey** is our foreign key, we'll leave the default formula value as false.
+
+    ![Mark ProductCategoryKey false](./Media/ProductCategoryKeyFalse.png)
 
 1. Select the **DimProductCategory_raw** query and complete the following steps below:
     1. Select the **ProductCategoryKey** column name from the schema list.
@@ -308,20 +343,6 @@ Learn more about [Schema view](https://docs.microsoft.com/power-query/schema-vie
 
     ![Mark ProductCategoryKey true](./Media/ProductCategoryKeyTrue.png)
 
-1. Select the **DimProductSubcategory_raw** query and complete the following steps below:
-    1. Select the **ProductSubcategoryKey** column name from the schema list.
-    1. Navigate to the **Schema tools** tab and select the **Mark as key** option.
-
-    ![Mark ProductSubcategoryKey](./Media/ProductSubcategoryKey.png)
-
-    1. Within the formula bar, update the [Table.AddKey()](https://docs.microsoft.com/powerquery-m/table-addkey) **isPrimary** value from **false** to **true**.
-
-    ``` powerquery-m
-        Table.AddKey(#"Changed column type", {"ProductSubcategoryKey"}, true)
-    ```
-
-    ![Mark ProductSubcategoryKey true](./Media/ProductSubcategoryKeyTrue.png)
-
 1. Select the **DimGeography_raw** query and complete the following steps below:
     1. Select the **GeographyKey** column name from the schema list.
     1. Navigate to the **Schema tools** tab and select the **Mark as key** option.
@@ -335,6 +356,23 @@ Learn more about [Schema view](https://docs.microsoft.com/power-query/schema-vie
     ```
 
     ![Mark GeographyKey true](./Media/GeographyKeyTrue.png)
+
+1. Select the **DimCustomer_raw** query and complete the following steps below:
+    1. Select the **GeographyKey** column name from the schema list.
+    1. Navigate to the **Schema tools** tab and select the **Mark as key** option.
+        1. Since **GeographyKey** is our foreign key, we'll leave the default formula value as false.
+
+    ![Mark ProductKey true](./Media/DimCustomerFK.png)
+
+    1. Select the **CustomerKey** column name from the schema list.
+    1. Navigate to the **Schema tools** tab and select the **Mark as key** option.
+    1. Within the formula bar, update the [Table.AddKey()](https://docs.microsoft.com/powerquery-m/table-addkey) **isPrimary** value from **false** to **true**.
+
+    ``` powerquery-m
+        Table.AddKey(#"Marked key columns", {"CustomerKey"}, true )
+    ```
+
+    ![Mark CustomerKey true](./Media/DimCustomerPK.png)
 
 ---
 
