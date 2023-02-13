@@ -3,17 +3,17 @@
 ✏️ Lab scenario
 ---
 
-For this portion of the lab, we've been tasked with collecting and combining daily files that are being shared with us in a cloud directory. The total number of files that will be added to this location will continue to grow over time, which we will need to account for when developing a [future proofed](https://docs.microsoft.com/power-query/best-practices#future-proofing-queries) data preparation solution.
+In this part of the lab, our goal is to collect and combine daily files from a cloud directory. The number of files in this directory will increase over time, so we need to create a [future proofed](https://docs.microsoft.com/power-query/best-practices#future-proofing-queries) data preparation solution that can handle this growth.
 
 ### Premium license mode
 
-Before we begin, we'll want to navigate to a new, empty or non-production workspace and confirm that a capacity has been assigned, if not we'll use this opportunity to enable the option by selecting one of the below values.
+First, we need to go to a new, empty or non-production workspace and check if it has a capacity assigned. If not, we can enable it by choosing one of these options below.
 
-1. In the top right corner of the workspace, select the **Settings** option.
+1. To access the settings, we’ll click the **Settings** option in the top right corner of the workspace.
 
     ![Settings selection](./Media/SettingsSelection.png)
 
-1. In the **Settings** pane, select the **Premium** tab and verify one of the following licensing modes listed below has been enabled.
+1. To check the licensing mode, within the **Settings** pane click the **Premium** tab. Then we’ll make sure one of the following modes is enabled.
 
     **License mode:**
     - [Premium per user](https://docs.microsoft.com/power-bi/admin/service-premium-per-user-faq)
@@ -24,13 +24,11 @@ Before we begin, we'll want to navigate to a new, empty or non-production worksp
 
 # Dataflows
 
-Dataflows support self-service data preparation and the following scenarios by:
+With dataflows, you can connect, clean, transform and store data from various sources in a self-service way. Dataflows help you to:
 
-1. Promoting a single source of the truth, with greater control over which data is accessed and exposed to creators.
-
-1. Preventing others from having direct access to the underlying data sources and reducing the load to the underlying systems. Giving administrators finer control of when the systems get loaded from refreshes.
-
-1. Enabling the ability to create reusable transformation logic and curated views of your cloud or on-premise data sources, which can then be seamlessly shared and integrated with other Microsoft services and products (Power BI, Power Apps, and Dynamics 365 Customer Insights).
+1. Share reusable transformation logic with others as a single source of truth.
+1. Protect the underlying data sources from direct access and reduce the load on the underlying systems.
+1. Connect other Azure services to the raw or transformed data by exposing it in your own Azure Data Lake Gen 2 storage (BYODL).
 
 [Learn more about dataflows and self-service data prep](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-introduction-self-service)
 
@@ -38,55 +36,66 @@ Dataflows support self-service data preparation and the following scenarios by:
 
 ## Import dataflow model
 
-For this portion of the lab, we'll use an existing dataflow model as our starting point to skip over the more familiar steps of **Get data** > from **CSV** to focus on more advanced transformation patterns.
+In this part of the lab, we’ll start with an existing dataflow model and skip the basic steps of getting data from a CSV file. Instead, we’ll focus on more advanced transformation patterns.
 
-Once our dataflow model has been imported and refreshed it will enable discovery across other Microsoft products and services. This semantic information includes the table names, column names, metadata descriptions and much more as part of a [metadata file (model.json)](https://docs.microsoft.com/common-data-model/model-json) format.
+After we import and refresh our dataflow model, we can use it across other Microsoft products and services. The dataflow model has semantic information such as table names, column names, metadata descriptions and more in a [metadata file (model.json)](https://docs.microsoft.com/common-data-model/model-json) format.
 
-1. In the top left of the workspace select **New** and then the **Dataflow** option.
 
-    ![New Dataflow](./Media/NewDataflow.png)
+To create a new dataflow from an existing model, we’ll follow these steps:
 
-1. From the **Start creating your dataflow** screen, select the **Import Model** option and import an the dataflow json file using the url below.
+1. Click **New** in the top left corner of the workspace and choose the Dataflow option.
+    
+    ![New Dataflow](./Media/NewDataflow.png) 
+
+1. On the Start creating your dataflow screen, select the **Import Model** option.
+    
+    ![Import Model](./Media/ImportModel.png)
+
+1. Enter the url of the dataflow json file that we want to import into the pop-up window.
 
     ```
     https://raw.githubusercontent.com/microsoft/pbiworkshops/main/Day%20After%20Dashboard%20in%20a%20Day/Source_Files/Dataflow%20demo.json
     ```
 
-    ![Import Model](./Media/ImportModel.png)
-
 ## Edit dataflow credentials
 
 Because the lab files are stored in a publicly accessible [GitHub repository](./Source_Files/), we will authenticate anonymously and skip our test connection to ensure that we can successfully connect to and ingest the lab data.
 
-1. Once the import has successfully completed, we can now select the **Edit credentials** button from the toast notification in the top right.
-    1. Alternatively within the workspace we can select the vertical ellipses ( ⋮ ) adjacent to the dataflow name and the **Settings** option to configure.
+To configure the data source credentials for the imported dataflow, we’ll do the following after the import is done:
+
+1. Click the **Edit credentials** button in the toast notification at the top right.
+    1. Or, in the workspace, click the vertical ellipses ( ⋮ ) next to the dataflow name and choose the **Settings** option.
 
     ![Edit credentials](./Media/EditCredentials.png)
 
-1. Within the Settings page for the dataflow, expand the **Data source credentials** section and select the **Edit credentials** link next to the **Web** source. Once in the **Configure...** dialog window we can set the following values below and **Sign in** once complete:
-    1. Authentication method | **Anonymous**
-    1. Privacy level setting for this data source | **Public**
-        1. To learn more, see [Power Query privacy level settings](https://docs.microsoft.com/power-bi/admin/desktop-privacy-levels#configure-a-privacy-level)
-    1. ☑️ **Skip test connection**
+1. On the Settings page for the dataflow, expand the **Data source credentials** section and click the **Edit credentials** link next to the Web source.
 
-    ![Edit credentials](./Media/ConfigureCredentials.png)
+    1. In the **Configure…** dialog window, enter the following values and click **Sign in** once complete:
+        1. Authentication method | **Anonymous**
+        1. Privacy level setting for this data source | **Public**
+            1. For more information, see [Power Query privacy level settings](https://docs.microsoft.com/power-bi/admin/desktop-privacy-levels#configure-a-privacy-level)
+        1. ☑️ Skip test connection
+
+    ![Configure credentials](./Media/ConfigureCredentials.png)
 
 ## Enhanced compute engine settings
 
-The enhanced compute engine in Power BI enables Power BI Premium subscribers to use their capacity to optimize the use of dataflows.
+Power BI Premium users can use the enhanced compute engine in Power BI to optimize dataflows with their capacity.
 
-Using the enhanced compute engine provides the following advantages:
+The enhanced compute engine helps you to:
 
-1. Drastically reduces the refresh time required for long-running ETL steps over computed tables, such as performing joins, distinct, filters, and group by.
-1. Performs DirectQuery queries over tables.
+1. Save refresh time for long-running ETL steps over computed tables, such as joins, distinct, filters, and group by.
+1. Run DirectQuery queries over tables.
 
 [Learn more about the enhanced compute engine](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-premium-features?tabs=gen2)
 
-1. Within the **Enhanced compute engine settings** change the setting to **On** and select the **Apply** button once complete.
+To enable the enhanced compute engine for the dataflow, we’ll follow these steps:
+
+1. On the **Settings** page for the dataflow, go to the **Enhanced compute engine settings** section and switch the setting to **On**. Then click the **Apply** button to save the change.
 
     ![Enhanced compute engine settings.](./Media/EnhancedComputeEngineSettings.png)
 
-1. Within the workspace select the **Refresh now** option of the dataflow for the change to take effect.
+1. In the workspace, click the **Refresh now** option next to the dataflow to apply the change and refresh the data.
 
     ![Refresh now.](./Media/RefreshNow.png)
 
@@ -94,9 +103,10 @@ Using the enhanced compute engine provides the following advantages:
 
 <font size="6">✅ Lab check</font>
 
-As we progress into the Data Modeling lab, some of the most important configuration steps for DirectQuery with our dataflows are:
-- Explicitly toggling the enhanced compute engine to **On** in dataflow settings
-- **Refreshing** the dataflow before it can be consumed in DirectQuery mode
+To use DirectQuery with our dataflows in the Data Modeling lab, we need to do these steps:
+
+- Turn **On** the enhanced compute engine in dataflow settings
+- **Refresh** the dataflow before using it in DirectQuery mode
 
 Learn more about [Using DirectQuery with dataflows](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-directquery#configuration)
 
@@ -105,23 +115,25 @@ Learn more about [Using DirectQuery with dataflows](https://docs.microsoft.com/p
 
 ## Global options
 
-With our dataflow successfully imported and credentials set, we'll now configure some settings for authoring in the Power Query Online interface which will also persist the next time we need to author new content.
+Now that we have imported our dataflow and set our credentials, we’ll adjust some settings for authoring in Power Query Online. These settings will stay the same when we author new content later.
 
 ---
 
-1. From the group workspace, select the ellipses (...) adjacent to the dataflow name and then the **Edit** option.
+To edit the dataflow model and enable some global options, we’ll do the following:
+
+1. In the group workspace, click the ellipses (…) next to the dataflow name and choose the **Edit** option.
 
     ![Edit dataflow](./Media/EditDataflow.png)
 
-1. To update the dataflow model in the top right we'll select the **Edit tables** option to navigate into the Power Query Online experience.
+1. In the top right, click the **Edit tables** option to go to the Power Query Online experience.
 
     ![Edit tables](./Media/EditTables.png)
 
-1. From the **Home** tab, select the **Options** > **Global options** property.
+1. On the **Home** tab, click the **Options** > **Global options** property.
 
     ![Global options](./Media/GlobalOptions.png)
-
-1. Within the **Global options** window ensure the following settings are enabled and select **OK** once complete.
+ 
+1. In the **Global options** window, make sure the following settings are enabled and click **OK** to confirm.
 
     **Steps**
     1. Enable step cost indicators
@@ -145,15 +157,15 @@ With our dataflow successfully imported and credentials set, we'll now configure
 
 ## Data view
 
-The Power Query Online editor represents a user interface, where we can add or modify queries, manage queries by grouping or adding descriptions to query steps, or visualize our queries and their structure with different views.
+The Power Query Online editor is a user interface that allows us to create and edit queries, organize queries by grouping them or adding descriptions to each step, and view our queries and their structure in different ways.
 
 Learn more about the [Power Query editor](https://docs.microsoft.com/power-query/power-query-ui#the-power-query-editor-user-experience)
 
 ---
 
-1. From the **global search bar** in the middle of the Power Query Online editor, we'll type **Dim** to view all of our queries with the text "Dim" in their name and then select the **DimCustomer_raw** query to continue.
+1. To view all of our queries with the text "Dim" in their name, we’ll type **Dim** in the **global search bar** at the center of the Power Query Online editor. Then we’ll select the **DimCustomer_raw** query to proceed.
     1. Shortcut: **Alt+Q**
-    1. We can navigate our results using up/down arrow keys and by pressing **Enter** to commit our selections.
+    1. We can use the up/down arrow keys to browse the results and press **Enter** to confirm our choices.
 
     ![Global search Dim tables](./Media/GlobalSearchDim.png)
 
@@ -209,21 +221,23 @@ Learn more about the [benefits of loading data without transformation for Text/C
 ---
 ## Diagram view
 
-The diagram view in Power Query Online offers a visual way to prepare data in the Power Query editor. With this interface it simplifies the experience of data preparation by helping users quickly understand the flow of data, both in the "big picture view" of how their queries are related and in the "detailed view" of the specific data preparation steps in a query.
+Power Query Online lets us prepare data visually in the diagram view of the Power Query editor. This interface helps us easily view the flow of data, both at the query level and at the step level to better determine how our queries are connected and what data preparation steps we have applied to each query.
 
 Learn more about [diagram view](https://docs.microsoft.com/power-query/diagram-view).
 
 ---
 
-1. In the bottom right of the **Power Query** editor, select the **Diagram view** option.
+To merge queries as a new query, we’ll do the following:
+
+1. In the bottom right of the **Power Query** editor, click the **Diagram view** option.
 
     ![Diagram view](./Media/DiagramView.png)
 
-1. Select the **Actions** option ( ⋮ ) at the top right of the **DimProduct_raw** table and select the **Merge queries as new** option.
+1. In the top right of the **DimProduct_raw** table, click the Actions option ( ⋮ ) and choose the **Merge queries as new** option.
 
     ![Merge queries as new](./Media/MergeNew.png)
 
-1. In the **Merge** window complete the following steps and then select **OK** when complete.
+1. In the Merge window, follow these steps and then click **OK** to confirm.
 
     | Merge | Table | Column |
     | :--- | :---- | :--- | 
@@ -234,27 +248,27 @@ Learn more about [diagram view](https://docs.microsoft.com/power-query/diagram-v
 
     ![Merge DimProductSubcategory](./Media/MergeDimProductSubcategory.png)
 
-1. From the **Home** tab select the drop down next to **Choose columns** and then the **Go to column** option (Shorcut: Ctrl+G). 
+1. On the **Home** tab, click the drop-down arrow next to **Choose columns** and choose the **Go to column** option (Shortcut: Ctrl+G).
 
-    Within the search dialog type the column name **DimProductSubcategory_raw** until a result has been returned, you can then either double click the name or press **OK** to continue.
+    In the search dialog, type the column name **DimProductSubcategory_raw** until it shows up. Then either double-click the name or select the column name and click OK to go to the column.
 
     ![Go to column](./Media/GoToColumn.png)
 
-1. In the top right of the **DimProductSubcategory_raw** column - we'll select the expand columns icon and complete the following steps below:
-    1. Disable the **ProductSubcategoryKey** column since this column already exists in our original **DimProduct_raw** table.
-    1. Select only the **ProductSubcategoryName** and **ProductCategoryKey** columns.
-    1. Disable the **Use original column name as prefix** option (if enabled).
-    1. Select **OK** once complete.
-    
+1. In the top right of the **DimProductSubcategory_raw** column, click the expand columns icon and follow these steps:
+    1. Uncheck the **ProductSubcategoryKey** column since we already have this column in our original DimProduct_raw table.
+    1. Check only the **ProductSubcategoryName** and **ProductCategoryKey** columns.
+    1. Uncheck the **Use original column name** as prefix option (if checked).
+    1. Click **OK** to confirm.
+   
     ![Expand product subcategory](./Media/ExpandProductSubcategory.png)
 
-1. After the **Expanded DimProduct** step, select the **"+"** icon to insert a new step and complete the following steps below.
-    1. Within the transformations search, type **Merge**.
-    1. Select the **Merge queries** option from the list.
+1. After the **Expanded DimProduct** step, click the **"+"** icon to insert a new step and follow steps:
+    1. In the transformations search, type **Merge**.
+    1. Click the **Merge queries** option from the list.
 
     ![Merge queries](./Media/MergeQueries.png)
-    
-1. In the **Merge** window complete the following steps and then select **OK** when complete.
+
+1. In the **Merge** window, follow these steps and then click **OK** to confirm.
 
     | Merge | Table | Column |
     | :--- | :---- | :--- | 
@@ -265,8 +279,6 @@ Learn more about [diagram view](https://docs.microsoft.com/power-query/diagram-v
 
     ![Merge left outer](./Media/MergeLeftOuter.png)
 
-1. In the top right of the **DimProductCategory_raw** column - we'll select the expand columns icon and disable the **ProductCategoryKey** column since this column already exists in our **DimProductSubcategory_raw** table, disable the **Use original column name as prefix** option and then select **OK** when complete.
-
 1. In the top right of the **DimProductCategory_raw** column - we'll select the expand columns icon and complete the following steps below:
     1. Deselect all columns except **ProductCategoryName**.
     1. Disable the **Use original column name as prefix** option (if enabled).
@@ -276,65 +288,57 @@ Learn more about [diagram view](https://docs.microsoft.com/power-query/diagram-v
 
 ## Schema view
 
-Schema view is designed to optimize your flow when working on schema level operations by putting your query's column information front and center. Schema view provides contextual interactions to shape your data structure, and lower latency operations as it only requires the column metadata to be computed and not the complete data results.
+Schema view helps us work on schema level operations by showing our query’s column information clearly. Schema view lets us shape our data structure with contextual interactions, and speed up our operations as it only needs the column metadata and not the full data results.
 
 Learn more about [Schema view](https://docs.microsoft.com/power-query/schema-view)
 
 ---
 
-1. In the bottom right of the **Power Query** editor, select the **Show schema view** option.
+To use the schema view and mark some columns as keys, we’ll do the following:
+
+1. In the bottom right of the Power Query editor, click the **Show schema view** option.
 
     ![Schema view](./Media/SchemaView.png)
 
-1. Select the **Merge** query and complete the following steps below:
-    1. Select the **ProductSubcategoryKey** and **ProductCategoryKey** column names from the schema list.
-    1. Navigate to the **Schema tools** tab and select the **Remove columns** option.
+1. Click the **Merge** query and follow these steps:
 
-        **Note:** You can maximize or minimize the view by selecting the chevrons next to the formula bar.
+    1. In the schema list, click the **ProductSubcategoryKey** and **ProductCategoryKey** column names and on the **Schema tools** tab, click the **Remove columns** option.
+    
+    **Note:** We can maximize or minimize the view by clicking the chevrons next to the formula bar.
 
     ![Remove columns](./Media/RemoveColumns.png)
 
-1. Select the **DimProduct_raw** query and complete the following steps below:
-    1. Select the **ProductSubcategoryKey** column name from the schema list.
-    1. Navigate to the **Schema tools** tab and select the **Mark as key** option.
+1. Click the **DimProduct_raw** query and follow these steps:
+    1. In the schema list, click the **ProductSubcategoryKey** column name and on the **Schema tools** tab, click the **Mark as key** option.
+    
+    ![Mark ProductSubcategoryKey](./Media/ProductSubcategoryKeyFalse.png)
+    
+    2. In the schema list, click the **ProductKey** column name and on the **Schema tools** tab, click the **Mark as key** option.
 
-    ![Mark ProductSubcategoryKey](./Media/DimProductFK.png)
-
-    1. Select the **ProductKey** column name from the schema list.
-    1. Navigate to the **Schema tools** tab and select the **Mark as key** option.
-    1. Within the formula bar, update the [Table.AddKey()](https://docs.microsoft.com/powerquery-m/table-addkey) **isPrimary** value from **false** to **true**.
-
+    1. In the formula bar, change the [Table.AddKey()](https://docs.microsoft.com/powerquery-m/table-addkey) isPrimary value from false to **true**.
+    
     ``` powerquery-m
         Table.AddKey(#"Marked key columns", {"ProductKey"}, true)
     ```
 
     ![Mark ProductKey true](./Media/DimProductPK.png)
 
-1. Select the **DimProductSubcategory_raw** query and complete the following steps below:
-    1. Select the **ProductSubcategoryKey** column name from the schema list.
-    1. Navigate to the **Schema tools** tab and select the **Mark as key** option.
+1. Click the **DimProductSubcategory_raw** query and follow these steps:
+    1. In the schema list, click the **ProductCategoryKey** column name and navigate to the **Schema tools** tab and select the **Mark as key** option.
+
+    ![Mark ProductCategory foreign key](./Media/ProductCategoryFK.png)
+
+    2. In the schema list, click the **ProductSubcategoryKey** column name and on the **Schema tools** tab, click the **Mark as key** option.
+    3. In the formula bar, change the Table.AddKey() isPrimary value from false to **true**.
+
+    ``` powerquery-m
+        Table.AddKey(#"Marked key columns", {"ProductSubcategoryKey"}, true )
+    ```
 
     ![Mark ProductSubcategoryKey](./Media/ProductSubcategoryKey.png)
 
-    1. Within the formula bar, update the [Table.AddKey()](https://docs.microsoft.com/powerquery-m/table-addkey) **isPrimary** value from **false** to **true**.
-
-    ``` powerquery-m
-        Table.AddKey(#"Changed column type", {"ProductSubcategoryKey"}, true)
-    ```
-    ![Mark ProductSubcategoryKey true](./Media/ProductSubcategoryKeyTrue.png)
-
-    1. Select the **ProductCategoryKey** column name from the schema list.
-    1. Navigate to the **Schema tools** tab and select the **Mark as key** option.
-        1. Since **ProductCategoryKey** is our foreign key, we'll leave the default formula value as false.
-
-    ![Mark ProductCategoryKey false](./Media/ProductCategoryKeyFalse.png)
-
-1. Select the **DimProductCategory_raw** query and complete the following steps below:
-    1. Select the **ProductCategoryKey** column name from the schema list.
-    1. Navigate to the **Schema tools** tab and select the **Mark as key** option.
-
-    ![Mark ProductCategoryKey](./Media/ProductCategoryKey.png)
-
+1. Click the **DimProductCategory_raw** query and follow these steps:
+    1. In the schema list, click the **ProductCategoryKey** column name and navigate to the **Schema tools** tab and select the **Mark as key** option.
     1. Within the formula bar, update the [Table.AddKey()](https://docs.microsoft.com/powerquery-m/table-addkey) **isPrimary** value from **false** to **true**.
     
     ``` powerquery-m
@@ -343,29 +347,22 @@ Learn more about [Schema view](https://docs.microsoft.com/power-query/schema-vie
 
     ![Mark ProductCategoryKey true](./Media/ProductCategoryKeyTrue.png)
 
-1. Select the **DimGeography_raw** query and complete the following steps below:
-    1. Select the **GeographyKey** column name from the schema list.
-    1. Navigate to the **Schema tools** tab and select the **Mark as key** option.
-
-    ![Mark GeographyKey](./Media/GeographyKey.png)
-
+1. Click the **DimGeography_raw** query and follow these steps:
+    1. In the schema list, click the **GeographyKey** column name and navigate to the **Schema tools** tab and select the **Mark as key** option.
     1. Within the formula bar, update the [Table.AddKey()](https://docs.microsoft.com/powerquery-m/table-addkey) **isPrimary** value from **false** to **true**.
 
     ``` powerquery-m
         Table.AddKey(#"Changed column type", {"GeographyKey"}, true)
     ```
-
+    
     ![Mark GeographyKey true](./Media/GeographyKeyTrue.png)
 
-1. Select the **DimCustomer_raw** query and complete the following steps below:
-    1. Select the **GeographyKey** column name from the schema list.
-    1. Navigate to the **Schema tools** tab and select the **Mark as key** option.
-        1. Since **GeographyKey** is our foreign key, we'll leave the default formula value as false.
+1. Click the **DimCustomer_raw** query and follow these steps:
+    1. In the schema list, click the **GeographyKey** column name and navigate to the **Schema tools** tab and select the **Mark as key** option.
 
-    ![Mark ProductKey true](./Media/DimCustomerFK.png)
+    ![Mark GeographyKey as key](./Media/DimCustomerFK.png)
 
-    1. Select the **CustomerKey** column name from the schema list.
-    1. Navigate to the **Schema tools** tab and select the **Mark as key** option.
+    1. In the schema list, click the **CustomerKey** column name and navigate to the **Schema tools** tab and select the **Mark as key** option.
     1. Within the formula bar, update the [Table.AddKey()](https://docs.microsoft.com/powerquery-m/table-addkey) **isPrimary** value from **false** to **true**.
 
     ``` powerquery-m
