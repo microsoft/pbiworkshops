@@ -318,7 +318,7 @@ To use the schema view and mark some columns as keys, we’ll do the following:
     1. In the formula bar, change the [Table.AddKey()](https://docs.microsoft.com/powerquery-m/table-addkey) isPrimary value from false to **true**.
     
     ``` powerquery-m
-        Table.AddKey(#"Marked key columns", {"ProductKey"}, true)
+    Table.AddKey(#"Marked key columns", {"ProductKey"}, true)
     ```
 
     ![Mark ProductKey true](./Media/DimProductPK.png)
@@ -332,7 +332,7 @@ To use the schema view and mark some columns as keys, we’ll do the following:
     3. In the formula bar, change the Table.AddKey() isPrimary value from false to **true**.
 
     ``` powerquery-m
-        Table.AddKey(#"Marked key columns", {"ProductSubcategoryKey"}, true )
+    Table.AddKey(#"Marked key columns", {"ProductSubcategoryKey"}, true )
     ```
 
     ![Mark ProductSubcategoryKey](./Media/ProductSubcategoryKey.png)
@@ -342,7 +342,7 @@ To use the schema view and mark some columns as keys, we’ll do the following:
     1. Within the formula bar, update the [Table.AddKey()](https://docs.microsoft.com/powerquery-m/table-addkey) **isPrimary** value from **false** to **true**.
     
     ``` powerquery-m
-        Table.AddKey(#"Changed column type", {"ProductCategoryKey"}, true)
+    Table.AddKey(#"Changed column type", {"ProductCategoryKey"}, true)
     ```
 
     ![Mark ProductCategoryKey true](./Media/ProductCategoryKeyTrue.png)
@@ -352,7 +352,7 @@ To use the schema view and mark some columns as keys, we’ll do the following:
     1. Within the formula bar, update the [Table.AddKey()](https://docs.microsoft.com/powerquery-m/table-addkey) **isPrimary** value from **false** to **true**.
 
     ``` powerquery-m
-        Table.AddKey(#"Changed column type", {"GeographyKey"}, true)
+    Table.AddKey(#"Changed column type", {"GeographyKey"}, true)
     ```
     
     ![Mark GeographyKey true](./Media/GeographyKeyTrue.png)
@@ -366,7 +366,7 @@ To use the schema view and mark some columns as keys, we’ll do the following:
     1. Within the formula bar, update the [Table.AddKey()](https://docs.microsoft.com/powerquery-m/table-addkey) **isPrimary** value from **false** to **true**.
 
     ``` powerquery-m
-        Table.AddKey(#"Marked key columns", {"CustomerKey"}, true )
+    Table.AddKey(#"Marked key columns", {"CustomerKey"}, true )
     ```
 
     ![Mark CustomerKey true](./Media/DimCustomerPK.png)
@@ -381,90 +381,90 @@ Learn more about [Environments and variables](https://docs.microsoft.com/powerqu
 
 ---
 
-1. Return to the query titled **Merge** and select the **Fx** button next to the formula bar to **Insert step**.
+To insert a step and get a list of the column names to be filtered out in our table, we’ll do the following:
 
-    ![Insert step](./Media/MergeInsertStep.png)
+1. Go back to the query titled **Merge** and click the **Fx** button next to the formula bar to **Insert step**
 
-1. To return a list of the column names in our table, we'll complete the following steps below.
-    1.  In the formula bar wrap the current #"Removed columns"" identifier value with the [Table.ColumnNames()](https://docs.microsoft.com/powerquery-m/table-columnnames) function as displayed below.
-    1. Upon pressing **Enter** to complete the formula, select the **Switch to data preview** to view our results.
+![Insert step](./Media/MergeInsertStep.png)
+
+To get a list of the column names in our table, we’ll follow these steps:
+
+1. In the formula bar, put the current **#“Removed columns”"** identifier value inside the [Table.ColumnNames()](https://docs.microsoft.com/powerquery-m/table-columnnames) function as shown below.
+1. Press **Enter** to finish the formula, and then click the Switch to data preview to see our results.
 
     ``` powerquery-m
-        Table.ColumnNames(#"Removed columns")
+    Table.ColumnNames(#"Removed columns")
     ```
 
     ![Table column names](./Media/TableColumnNames.png)
 
-1. We'll now want to remove any value from our list where the column name contains the text **"ID"**, to get started select the **Fx** button next to the formula bar to **Insert step** and complete the following formula below using the [List.Select()](https://docs.microsoft.com/powerquery-m/list-select) and [Text.Contains()](https://docs.microsoft.com/powerquery-m/text-contains) functions and the **not** [keyword](https://docs.microsoft.com/powerquery-m/m-spec-lexical-structure#keywords).
+To filter out any value from our list that has the text “ID” in the column name, we’ll do the following:
+
+1. Click the **Fx** button next to the formula bar to **Insert step** and write the following formula below using the [List.Select()](https://docs.microsoft.com/powerquery-m/list-select) and [Text.Contains()](https://docs.microsoft.com/powerquery-m/text-contains) functions and the **not** [keyword](https://docs.microsoft.com/powerquery-m/m-spec-lexical-structure#keywords).
 
     ``` powerquery-m
-        List.Select( Custom , each not Text.Contains( _ , "ID", Comparer.Ordinal ) )
+    List.Select( Custom , each not Text.Contains( _ , "ID", Comparer.Ordinal ) )
     ```
 
     ![List not ID](./Media/ListNotID.png)
 
-1. From the **Query settings** pane **Applied steps**, right click the **Custom** step and select **Rename**.
+1. In the **Query settings** pane **Applied steps**, right click the **Custom** step and click **Rename** and change the current value from **Custom** to **Get column names**.
 
-    ![Rename custom](./Media/RenameCustom.png)
+    ![Get column names](./Media/GetColumnNamesStep.png)
 
-    1. Change the current value from **Custom** to **Get column names**.
+1. In the **Query settings** pane **Applied steps**, right click the **Custom 1** step, click **Properties** and change the following values: **Name:** Select non-ID columns - and - **Description:** Select only columns where the text ID does not exist. Click **OK** once complete.
 
-        ![Get column names](./Media/GetColumnNamesStep.png)
+    ![Step properties documentation](./Media/StepPropertiesDocumentation.png)
 
-1. From the **Query settings** pane **Applied steps**, right click the **Custom 1** step and select **Properties**.
-
-    ![Custom 1 step properties](./Media/Custom1StepProperties.png)
-
-    1. Update the following values below and select **OK** when complete.
-        1. **Name:** Select non-ID columns
-        1. **Description:** Select only columns where the text ID does not exist.
-
-        ![Step properties documentation](./Media/StepPropertiesDocumentation.png)
-
-1. Within the **Applied steps** list, we may notice an information icon now present, if we were to hover above this value our step description is now available for an at-a-glance understanding of the transformation we performed and also our step formula is available within the **Script** field. 
+1. In the **Applied steps** list, we notice an information icon now. If we hover over this icon we can see our step description and our step formula in the **Script** field. This helps us understand the transformation we did at a glance.
 
     ![Remove ID information](./Media/RemoveIDInformation.png)
 
-1. Select the **Fx** button next to the formula bar to **Insert step** and complete the following formula below to select the non-ID table columns.
+1. To select the non-ID table columns, we'll click the **Fx** button next to the formula bar to **Insert step** and write the following formula.
+
+    ``` powerquery-m
+    Table.SelectColumns( #"Removed columns", #"Select non-ID columns" )
+    ```
 
     ![Table select columns](./Media/TableSelectColumns.png)
 
-    ``` powerquery-m
-        Table.SelectColumns( #"Removed columns", #"Select non-ID columns" )
-    ```
-
-1. From the **Applied steps** list, right click **Custom** and update the title to **Select columns**.
+1. In the **Applied steps** list, right click **Custom** and update the title to **Select columns**.
 
     ![Table select columns](./Media/RenameTableSelect.png)
 
-1. From the **Query settings** pane, update the current table name from **Merge** to **DimProduct**.
+1. In the **Query settings** pane, we'll change the current table name from **Merge** to **DimProduct**.
 
     ![DimProduct name](./Media/DimProductName.png)
 
-1. Return to the **Diagram view** and select the **Expand** option in the top right of the **DimProduct** query. It's here where we can review the visual flow of our queries and steps.
-    1. The **DimProductCategory_raw** and **DimProductSubcategory_raw** tables both display that **Key** columns exist within the tables.
-    1. For the **DimProduct** table our **Removed columns** step identifier, is split into two separate branches.
+To review the visual flow of our queries and steps, we’ll go back to the **Diagram view** and do the following:
 
-        2. One branch being used for the **Get column names** and **Select non-ID columns** steps.
-        3. The other branch to take the original **Removed columns** and combine this with the **Select non-ID columns** to return our final table result.
+1. Click the **Expand** option in the top right of the **DimProduct** query. Here we can see the following:
+    1. The **DimProductCategory_raw** and **DimProductSubcategory_raw** tables both have Key columns in them.
+    1. The **DimProduct** table has two separate branches starting from the **Removed columns** step identifier.
+        1. One branch is for the **Get column names** and **Select non-ID columns** steps.
+        1. The other branch is to combine the original **Removed columns** with the **Select non-ID columns** to get our final query result.
 
-        Because step identifiers are like variables they can be utilized throughout our queries steps to create more advanced and custom solutions that may differ from the linear top-to-bottom presentation of the **Applied steps** list.
+Step identifiers are like variables that we can use throughout our query steps to create more advanced and custom solutions that may not follow the linear order of the **Applied steps** list.
 
-    ![DiagramViewIdentifiers](./Media/DiagramViewIdentifiers.png)
+![DiagramViewIdentifiers](./Media/DiagramViewIdentifiers.png) 
 
 ---
 
 ## Query plan
 
-[Learn more about the query plan](https://docs.microsoft.com/power-query/query-plan)
+The query plan in Power Query Online provides a view of how your query is evaluated. It can help you understand what is happening under the hood of your query and why a particular query might not fold at a particular step as well as the performance and cost of each step.
+
+Learn more about [query plan](https://docs.microsoft.com/power-query/query-plan)
 
 ---
 
-1. In the **Query settings** pane on the right, navigate to the **Expanded DimProductCategory_raw** step, right click and select the **View query plan** option.
+To view the query plan for the Expanded DimProductCategory_raw step, we’ll do the following:
+
+1. In the **Query settings** pane on the right, we’ll right click the **Expanded DimProductCategory_raw** step and click the **View query plan** option.
 
     ![View query plan](./Media/ViewQueryPlan.png)
 
-1. In the **Query plan** window, navigate to the inner joined **Table.Join** Full scan and select the **View details** to determine what join algorithm is being used. Press **Close** when complete.
+1. In the **Query plan** window, we’ll click the inner joined **Table.Join** Full scan and then click the View details to see what join algorithm is being used. We’ll click **Close** when we are done.
 
     ![Join algorithm](./Media/JoinAlgorithm.png)
 
@@ -472,7 +472,7 @@ Learn more about [Environments and variables](https://docs.microsoft.com/powerqu
 
 ## Advanced Editor
 
-
+The advanced editor in Power Query is a tool that lets you see and edit the code that Power Query Editor is creating with each step. The code is written in M language, which is a powerful and flexible language that allows you to create custom transformations that are not easily achievable through the Power Query user interface.
 
 ---
 
@@ -740,8 +740,6 @@ Now that our data is being ingested and stored in our dataflow's [Azure Data Lak
 [Learn more about the benefits of loading data without transformation for Text/CSV files](https://docs.microsoft.com/power-query/dataflows/computed-entities-scenarios#load-data-without-transformation-for-textcsv-files)
 
 ---
-
-
 ## Saving and refreshing a dataflow
 
 1. Select the **Save & close** option in the bottom right to exit the Power Query editor.
