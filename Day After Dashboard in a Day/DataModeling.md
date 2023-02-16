@@ -465,48 +465,54 @@ Learn more about [import mode](https://docs.microsoft.com/power-bi/connect-data/
 
 ---
 
-1. Navigate to the model view on the side-rail.
+1. Go to the model view on the side-rail.
 
     ![Full side rail.](./Media/ModelViewSideRail.png)
 
-1. Within the model diagram view on the keyboard press **Ctrl+A** to select all tables (you can also hold ctrl and click to select them individually). Within the **Properties** pane expand the **Advanced** options and within the **Storage mode** option select **Import** to update all of our tables.
+1. In the model diagram view, press **Ctrl+A** on the keyboard to choose all tables (or hold ctrl and click to choose them one by one). In the **Properties** pane, open the **Advanced** options and in the **Storage mode** option, select **Import** to change all of our tables.
 
      ![Import storage mode.](./Media/ImportStorageMode.png)
 
-1. Within the **Storage mode** window is a warning letting us know that **Setting our storage mode to Import is an irreversible operation. You will not be able to switch it back to DirectQuery.** - select **OK** to procee.
+1. In the **Storage mode** window is a warning letting us know that **Setting our storage mode to Import is an irreversible operation. You will not be able to switch it back to DirectQuery.** - click **OK** to proceed.
 
-    Understanding our business requirements fully now, we recognize that **Import** will give us the blazing-fast performance to create an enjoyable experience for our end users as they slice-and-dice information and we can meet the overall data freshness requirements through a scheduled refresh of our results each day.
+    Now that we know our business needs well, we realize that **Import** will give us the fast performance to make a good experience for our end users as they explore information and we can keep the data fresh by refreshing our results every day.
 
     ![Storage mode window](./Media/IrreversibleImport.png)
 
-1. Select the **Report** view to return to the report canvas.
+1. Click the **Report** view to go back to the report canvas.
 
     ![Report view.](./Media/ReportView.png)
 
-1. From our previous sales by store table visual select the **Analyze this visual** button above the table visual once again and once complete, expand the new **Table** object in the **Performance analyzer** pane. We can now review our results, and determine that only a **DAX query** entry is present.
+1. From our previous sales by store table visual, click the **Analyze this visual** button above the table visual again and when it's done, open the new **Table** object in the **Performance analyzer** pane. We can now see our results, and notice there is only a **DAX query** entry.
 
-    This means that Power BI was able to determine that we have all of the available data stored in-memory to satisfy our queries requirements now.
+    This means that Power BI knew that we had all the data we needed in-memory to meet our queries needs now.
 
     ![Store sales Direct query.](./Media/ImportDAXQuery.png)
 
 <font size="6">✅ Lab check</font>
 
-At this stage in our projects development we've explored several potential benefits of each storage mode, ultimately though the most important thing we learned was that had we gone to our business users and understood their requirements directly we could choose the right solution to meet their needs.
+At this point in our project, we have seen some possible benefits of each storage mode, but the most important thing we learned was that we should have talked to our business users and understood their needs first so we could pick the right solution for them.
 
 Important questions we should ask next time:
 - How often is the data updated?
 
 ---
-
 ## Incremental Refresh
 
+Incremental refresh is a feature in Power BI that allows you to keep the existing data in your dataset and add new data to it using a policy that you define. This can make your refreshes faster and reduce the load on your data source. Incremental refresh is supported for Power BI Pro, Premium per user, Power BI Premium, and Power BI Embedded.
 
-1. From the **Home** tab of the **Power Query Editor** select the **Manage Parameters** and then the **New Parameter** option.
+To use incremental refresh, you need to have a **date/time** column in your table, and set the import and refresh ranges in the incremental refresh settings.
+
+Learn more about [incremental refresh](https://learn.microsoft.com/power-bi/connect-data/incremental-refresh-overview)
+
+---
+
+1. On the **Home** tab of the **Power Query Editor**, click the **Manage Parameters** and then the **New Parameter** option.
 
     ![New parameter.](./Media/NewParameter.png)
 
-1. From the **Manage Parameters** window, select the **New** button and create the below two values.
-    1. **Important Note**: these are case sensitive, reserved keywords and must match exactly for incremenetal refresh to properly work.
+1. In the **Manage Parameters** window, click the **New** button and make the below two values.
+    1. **Important Note**: these are case sensitive, reserved keywords and they have to match exactly for incremental refresh to work.
 
     | Name | Type | Current Value |
     |:----- | :------ | :------ |
@@ -515,7 +521,7 @@ Important questions we should ask next time:
 
     ![RangeStart and RangeEnd.](./Media/RangeStartEnd.png)
 
-1. From the **FactOnlineSales** table, select the **DateKey** field's drop down in the top right corner, the **Number Filters** option and then the **Between** value.
+1. In the **FactOnlineSales** table, select the **DateKey** field's drop down in the top right corner, the **Number Filters** option and then the **Between** value.
 
     ![Between.](./Media/Between.png)
 
@@ -531,29 +537,21 @@ Important questions we should ask next time:
 
     ⚠️ **Important** ⚠️
 
-    Because our column type is **Date** and the parameters are required to be **DateTime** we were unable to select them within the dialog window and must populate them manually. In the following step will we will edit the formula bar to utilize our parameters and transform our values to extract only the date part.
+    If your column is of **Date**, you can change the parameters in the formula bar to be date only with the Date.From() function.
 
-1. In the **Power Query Editor** formula bar update the current date values to utilize the **RangeStart** and **RangeEnd** parameters by updating the formula to the below.
-
-    ```powerquery-m
-    = Table.SelectRows(#"Entity Name", each [DateKey] >= Date.From(RangeStart) and [DateKey] < Date.From(RangeEnd))
-    ```
-
-    ![fxCreateKey function](./Media/FxCreateKey.png)
-
-1. Now that we're ready to return to our modeling view navigate to the **Home** tab and select the **Close & Apply** option.
+1. Now that we're ready to go back to our modeling view, go to the **Home** tab and click the **Close & Apply** option.
 
     ![Close apply.](./Media/CloseApply.png)
 
-1. Navigate to the **Model** view on the side-rail of Power BI Desktop, where we'll now setup our incremental refresh policy on the **FactOnlineSales** table.
+1. Go to the **Model** view on the side-rail of Power BI Desktop, where we'll now setup our incremental refresh policy on the **FactOnlineSales** table.
 
     ![Model view.](./Media/ModelView.png)
 
-1. Either select the vertical ellipses ( ⋮ ) in the top right corner of the **FactOnlineSales** and or right click the table title and then select **Incremental refresh** option.
+1. Either select the vertical ellipses ( ⋮ ) in the top right corner of the **FactOnlineSales** table or right click the table title and then click the **Incremental refresh** option.
 
     ![Agg relationships.](./Media/IncrementalRefreshSelection.png)
 
-1. From the **Incremental refresh and real-time data** menu, set the following configurations below and select **Apply** once complete.
+1. In the **Incremental refresh and real-time data** menu, make the following settings below and click **Apply** when done.
     1. ☑️Incrementally refresh this table
     1. Archive data starting **2 Years** before refresh date
     1. Incrementally refresh data starting **1 year** before refresh date
@@ -561,22 +559,23 @@ Important questions we should ask next time:
     ![Incremental refresh menu.](./Media/IncrementalRefreshMenu.png)
 
     ⚠️ **Important** ⚠️
-
-    At the top of the Incremental refresh and real-time data window is the information section that states, **you won't be able to download it back to Power BI Desktop** once an incremental refresh policy has been applied. For this reason, we should ensure that our dataset is in a completed state prior to publishing, otherwise a full dataset refresh will be required for any subsequent re-publishing.
+    At the top of the Incremental refresh and real-time data window, there is a message that says, **you won't be able to download it back to Power BI Desktop** after an incremental refresh policy has been set. For this reason, we should make sure that our dataset is finished before publishing, otherwise we will need to refresh the whole dataset for any new publishing.
 
 ---
 
 # Model properties
 
-An important aspect of data modeling is usability.
+With the model properties pane in Power BI, you can see and change the properties of your data model items, such as tables, columns, and measures. You can use the model properties pane to rename, format, type, group, describe, and adjust your data model items. The model properties pane helps you to arrange and explain your data model, and to make it look and work better.
+
+Learn more about [model properties](https://learn.microsoft.com/power-bi/transform-model/desktop-modeling-view)
 
 ---
 
 ## Descriptions
 
-1. Select the **Model** view and update the following table properties with the instructions below for each:
-    1. From the **Fields** pane select the Previous Table Name from the list.
-    1. In the **Properties** pane update the **Name**, **Description** and **Key column** fields.
+1. Go to the **Model** view and change the following table properties according to the instructions below for each:
+    1. In the **Fields** pane, click the Previous Table Name from the list.
+    1. In the **Properties** pane, change the **Name**, **Description** and **Key column** fields.
 
     | Previous Table Name | Name | Description | Key column |
     | :---- | :---- | :---- | :---- |
@@ -589,9 +588,9 @@ An important aspect of data modeling is usability.
     
     ![Table properties](./Media/TableProperties.png)
 
-1. If we hover above the **Table** properties in any of the **Report**, **Data** or **Model** views we will now see the description field available in a tooltip. 
-    1. The **Description** value can also be populated for columns/fields and measures upon active selection.
-    1. For end users the **Description** fields will be available in various client applications and experiences ensuring they have a proper understanding of the property.
+1. If we move cursor over the **Table** properties in the **Report**, **Data** or **Model** views, we will see the description field in a tooltip.
+    1. The **Description** value can also be filled for columns/fields and measures when they are selected.
+    1. For end users, the **Description** field will show up in different client applications and experiences to help them understand the property better.
 
     ![Table description](./Media/TableDescription.png)
 
