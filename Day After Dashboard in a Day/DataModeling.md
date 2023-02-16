@@ -78,8 +78,6 @@ Learn more about [DirectQuery mode](https://docs.microsoft.com/power-bi/connect-
 <br>
 <font size="6">Optional: Event traces</font>
 
- <b>Optional - Event traces</b>
-
 One important item that was missing from our above query is the [Transact-SQL](https://docs.microsoft.com/learn/modules/introduction-to-transact-sql/) statement for the **Direct query** value. In order to trace this event we'll leverage [SQL Server Profiler](https://docs.microsoft.com/sql/tools/sql-server-profiler/sql-server-profiler) to view our event traces.
 
 We can also leverage the [external tools in Power BI Desktop](https://docs.microsoft.com/power-bi/transform-model/desktop-external-tools) integration to easily view the event traces against our underlying Analysis Services instance.
@@ -283,35 +281,35 @@ Learn more about the [importance of the star schema for Power BI](https://docs.m
 
 ---
 
-1. Navigate to the model view on the side-rail.
+1. Go to the model view on the side-rail.
 
     ![Full side rail.](./Media/ModelViewSelection.png)
 
-1. In our modeling view, we notice some [snowflaked dimensions](https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/dimensional-modeling-techniques/snowflake-dimension/) between the following tables:
-    1. **DimCustomer_raw** to **DimGeography_raw**
-    1. **DimProductCategory_raw** to **DimProductSubcategory_raw** and **DimProductCategory_raw** tables
+1. In our model view, we have [snowflaked dimensions](https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/dimensional-modeling-techniques/snowflake-dimension/) between these tables:
+    1. **DimCustomer_raw** and **DimGeography_raw**
+    1. **DimProductCategory_raw** and **DimProductSubcategory_raw** and **DimProductCategory_raw**
 
     ![Snowflake dimensions](./Media/SnowflakeDimensions.png)
 
-    This type of modeling approaching may affect the duration of our datasets queries and could ultimately lead to reduced performance. To better optimize our model let's update our model to leverage the tables within our dataflow where we've already merged our tables into a correct view of our data.
+    This kind of model design can make our dataset queries take longer and hurt our performance. To make our model better, let’s use the tables from our dataflow where we’ve already combined our tables into a right view of our data.
 
-1. Within them model view we'll select the vertical ellipses ( ⋮ ) at the top right of the **DimProduct_raw** table and then the **Edit query** option to return to the Power Query Editor.
-    1. Important you can also right click the table header as opposed to selecting the ellipses.
+1. In the model view, we’ll click the vertical ellipses ( ⋮ ) at the top right of the **DimProduct_raw** table and then the **Edit query** option to go back to the Power Query Editor.
+    1. You can also right click the table header instead of clicking the ellipses.
 
     ![Edit query.](./Media/EditQueryFromTable.png)
 
-1. In the Power Query Editor - **Queries** pane we'll update the following queries to our merged table from the previous [**Data Preparation**](https://github.com/microsoft/pbiworkshops/blob/main/Day%20After%20Dashboard%20in%20a%20Day/DataPreparation.md#joining-tables-using-the-diagram-view) lab instructions.
+1. In the Power Query Editor - **Queries** pane, we'll change the following queries to our merged table from the previous [**Data Preparation**](https://github.com/microsoft/pbiworkshops/blob/main/Day%20After%20Dashboard%20in%20a%20Day/DataPreparation.md#joining-tables-using-the-diagram-view) lab instructions.
     
-    1. We'll start by selecting the **DimProduct_raw** query and then complete the following.
-        1. In the **APPLIED STEPS** next to the **Navigation** step select the settings icon.
-        1. Within the **Navigation** window, we'll now select **Workspaces** to view our dataflows stored within the Power BI service.
-            1. The Environments option, shows dataflows created with Power Apps.
-        1. We can now navigate to the workspace location where we created and saved our dataflows from the data preparation lab instructions. Once found we'll then expand our dataflow to view all the available tables and update our selection to the **DimProduct** table.
-        1. Within the **Query Settings** pane, update the **Name** value to now simply be titled **DimProduct**.
+    1. We'll start with the **DimProduct_raw** query and do the following.
+        1. Next to the **Navigation** step in the **APPLIED STEPS** section, click the settings icon.
+        1. In the **Navigation** window, we'll choose **Workspaces** to see our dataflows stored within the Power BI service.
+            1. The Environments option shows dataflows created with Power Apps.
+        1. We can now go to the workspace location where we made and saved our dataflows from the data preparation lab instructions. When we find it, we'll then expand our dataflow to see all the tables and choose the **DimProduct** table.
+        1. In the **Query Settings** pane, update the **Name** value to just **DimProduct**.
 
         ![DimProduct update](./Media/DimProductNavigation.png)
 
-    1. Now select the **DimCustomer_raw** table where we'll try a different approach by leveraging our formula bar. Within the **Query Settings** pane's **APPLIED STEPS** section, select the **Navigation** step and complete the following before and after below to remove the **"_raw"** suffix.
+    1. Then choose the **DimCustomer_raw** table where we'll use a different approach by using our formula bar. In the **APPLIED STEPS** section of the **Query Settings** pane, choose the **Navigation** step and do the following before and after below to remove the **"_raw"** suffix.
 
     | Before | After |
     | :-- | :-- |
@@ -319,41 +317,41 @@ Learn more about the [importance of the star schema for Power BI](https://docs.m
 
     ![DimProduct update](./Media/DimCustomer.png)
 
-1. Within the **Queries** pane right click the **DimCustomer_raw** table and select the **Rename** option to update the table names to now simply be titled **DimCustomer**:
+1. In the **Queries** pane, right click the **DimCustomer_raw** table and click the **Rename** option to change the table name to just **DimCustomer**.
 
     ![Rename product](./Media/DimCustomerRename.png)
 
-1. Within the **Queries** pane while holding ctrl on your keyboard (or shift if they are adjacent), click the following tables listed below and then right click to select the **Delete** option to bulk remove the tables from our dataset.
+1. In the **Queries** pane, hold ctrl on your keyboard (or shift if they are next to each other), and click the tables below. Then right click to select the **Delete** option to remove the tables from our dataset.
     1. DimGeography_raw
     1. DimProductCategory_raw
     1. DimProductSubcategory_raw
 
     ![Delete product](./Media/BulkDeleteQueries.png)
 
-1. Now that we're ready to return to our modeling view navigate to the **Home** tab and select the **Close & Apply** option.
+1. To go back to our model view, go to the **Home** tab and click the **Close & Apply** option.
 
     ![Close apply.](./Media/CloseApply.png)
 
-1. Returning to the **Model** view, our tables now resemble a star with our fact table, maintaining all of our sales records and our dimension tables which are then used to filter our results.
+1. In the **Model** view, our tables look like a star with our fact table, which has all our sales records and our dimension tables, which filter our results by our relationships.
 
     ![Star Schema view.](./Media/StarSchemaView.png)
 
 <font size="6">✅ Lab check</font>
 
-We've been able to properly model our dataset into a proper star schema but a new requirement has come in that our data model has to be both - **near-real time** and **blazing fast**. For this we'll want to revisit our storage mode options and determine if each of our tables are configured properly.
+We have modeled our dataset into a star schema, but now we need our data model to be **near-real time** and **very fast**. To do this, we’ll need to check our storage mode options and see if each of our tables are set up properly.
 
 ---
 ## Mixed (Composite) mode
 
-With mixed (composite) mode we can mix both Import and DirectQuery modes into a single model. Models developed in composite mode support configuring the storage mode as Import, DirectQuery, or Dual for each table.
+With mixed (composite) mode, we can use both Import and DirectQuery modes in one model. In composite mode, we can set the storage mode as Import, DirectQuery, or Dual for each table.
 
-A table configured as dual storage mode is both Import and DirectQuery, depending upon the query. This allows Power BI to determine the most efficient mode to use on a query-by-query basis.
+A table with dual storage mode is both Import and DirectQuery, depending on the query. This lets Power BI choose the best mode to use for each query.
 
 [Learn more about composite mode](https://docs.microsoft.com/power-bi/connect-data/service-dataset-modes-understand#composite-mode)
 
 ---
 
-1. Within the **Model** view, we'll select the following tables listed below by holding ctrl on our keyboard, navigating to the **Properties** pane and expanding the **Advanced** options. For the **Storage mode** option select the drop down and update the selection to **Import**.
+1. In the **Model** view, we’ll hold ctrl on our keyboard and choose the tables below. Then, we’ll go to the **Properties** pane and open the **Advanced** options. For the **Storage mode** option, we’ll click the drop down and change the selection to **Import**.
     1. DimDate
     1. DimProduct
     1. DimStore
@@ -361,42 +359,42 @@ A table configured as dual storage mode is both Import and DirectQuery, dependin
 
     ![Update Storage Mode.](./Media/UpdateStorageMode.png)
 
-1. Within the **Storage mode** window is some very important text that changing our tables from DirectQuery is an irreversible operation and the recommendation that instead of setting the tables to **Import** that we should leverage the **Dual** storage mode so that our returned values can either be **Import** or **DirectQuery** mode depending upon the queries being submitted.
+1. In the **Storage mode** window, there is some important text that says changing our tables from DirectQuery cannot be undone and the suggestion that we should use the **Dual** storage mode instead of **Import**. This way, our values can be either **Import** or **DirectQuery** mode depending on the queries we use.
 
     ![Storage Mode window.](./Media/StorageModeMenu.png)
 
-1. Returning to the **Model** view, there are new icons available within our tables representing **Dual** storage mode for our **DimProduct**, **DimDate** and **DimStore** tables. Our **DimEmployee** table also has an icon indicating that it is an **Import** only storage mode.
+1. Back in the **Model** view, we have new icons in our tables showing **Dual** storage mode for our **DimProduct**, **DimDate** and **DimStore** tables. Our **DimEmployee** table also has an icon indicating that it is an **Import** only storage mode.
 
     ![Mixed Storage Modes.](./Media/MixedStorageModes.png)
 
-1. On the side-rail we now see three options - **Report**, **Data** and **Model** view. With the data view we can now view imported and cached data within our Power BI file. For now, let's select the **Report** view to continue.
+1. On the side-rail we now have three options - **Report**, **Data** and **Model** view. With the data view we can see imported and cached data in our Power BI file. For now, let's go to the **Report** view to continue.
 
     ![Report view.](./Media/ReportView.png)
 
-1. On the report canvas we'll create a new table and add the following columns from the tables below to test the performance of our **Dual** and **Import** tables.
+1. On the report canvas we'll make a new table and add the columns below to check the performance of our **Dual** and **Import** tables.
 
     | Table | Column | Storage Mode |
     | :---- | :----- | :----- |
-    | DimStore | StoreName| Dual | 
-    | DimEmployee | EmailAddress | Import | 
-    
+    | DimStore | StoreName| Dual |
+    | DimEmployee | EmailAddress | Import |
+
     ![Store employees.](./Media/StoreEmployees.png)
 
-1. With results returned almost instantly, we want to understand if our query is being sent to our source via **Direct query** or if it's able to be successfully completed all thru an imported cache. To confirm we'll navigate to the **View** tab and then select **Performance analyzer**.
+1. With results coming back very fast, we want to know if our query is going to our source with **Direct query** or if it’s done with an imported cache. To find out, we’ll go to the **View** tab and click **Performance analyzer**.
 
     ![Performance analyzer.](./Media/PerformanceAnalyzer.png)
 
-1. Once the **Performance analyzer** pane is visible, we'll now select **Start recording**.
+1. When the **Performance analyzer** pane shows up, we'll click **Start recording**.
 
     ![Start recording button.](./Media/StartRecording.png)
 
-1. Select the **Analyze this visual** button above the table visual and once complete, expand the **Table** object in the **Performance analyzer** pane. We can now review our results, and determine that there is no longer a **Direct query** entry.
+1. Click the **Analyze this visual** button above the table visual and when it's done, open the **Table** object in the **Performance analyzer** pane. We can now see our results, and notice that there is no **Direct query** entry.
 
-    This means that Power BI was able to determine that we had the available data stored in-memory to satisfy our query and that we did not need return to our data source to directly obtain our results.
+    This means that Power BI knew that we had the data we needed in-memory and that we didn’t have to go back to our data source to get our results directly.
 
     ![Dax Query mixed storage.](./Media/DaxQueryMixed.png)
 
-1. On the report canvas we'll create another new table and add the following columns from the tables below to test the performance between **Dual** and **DirectQuery** tables.
+1. On the report canvas, we’ll make another new table and add the columns below from the tables to check how **Dual** and **DirectQuery** tables work. 
 
     | Table | Column | Storage Mode |
     | :---- | :----- | :----- |
@@ -405,13 +403,13 @@ A table configured as dual storage mode is both Import and DirectQuery, dependin
 
     ![Store sales.](./Media/StoreSales.png)
 
-1. Select the **Analyze this visual** button above the table visual and once complete, expand the new **Table** object in the **Performance analyzer** pane. We can now review our results, and determine that a **Direct query** entry is once again present.
+1. Click the **Analyze this visual** button above the table visual and when it’s done, open the new **Table** object in the **Performance analyzer** pane. We can now see our results, and notice that a **Direct query** entry is there again.
 
-    This means that Power BI was able to determine that we only a partial amount of data stored in-memory from our DimStore table and that it would need to transition our query to a DirectQuery method to satisfy our results.
+    This means that Power BI knew that we didn’t have all the data we needed in-memory from our DimStore table and that it had to use a DirectQuery method to get our results.
 
     ![Store sales Direct query.](./Media/StoreSalesDQ.png)
 
-1. **Optional:** Returning to the **SQL Server Profiler** application, we can locate the **DirectQuery end** event and review the SQL query that will be sent to our data source.
+1. **Optional:** Going back to the **SQL Server Profiler** application, we can find the **DirectQuery end** event and look at the SQL query that was sent to our data source.
 
     ![DirectQuery end.](./Media/DQEndEventStoreSales.png)
 
@@ -443,27 +441,27 @@ A table configured as dual storage mode is both Import and DirectQuery, dependin
 
 <font size="6">✅ Lab check</font>
 
-We've been able to create a proper data model and tested different storage modes. After speaking directly with our end users we learned they would rather have **blazing fast** performance as the reports prepare them for their business day so they need to be able to quickly slice-and-dice their insights.
+We have made a good data model and tried different storage modes. After talking to our end users, we found out they want **very fast** performance as the reports help them with their business day and they need to quickly explore their insights.
 
-We've also learned that new information only comes in overnight and as long as this information can be made fully available before they start their morning. The request for **near real-time** meant as soon as its available, as opposed to the previous wait period in the prior reporting solution.
+We also found out that new data only comes in at night and as long as this data is ready before they start their morning. The need for **near real-time** meant as soon as it’s ready, not like the previous wait time in their previous solution.
 
 ---
 
 ## Import mode
 
-Import mode is the most common mode used to develop datasets. This mode delivers extremely fast performance thanks to in-memory querying. It also offers design flexibility to modelers, and support for specific Power BI service features (Q&A, Quick Insights, etc.). Because of these strengths, it's the default mode when creating a new Power BI Desktop solution.
+Import mode is the most popular mode for making datasets. This mode gives very fast performance because of in-memory querying. It also lets modelers design flexibly, and use some Power BI service features (Q&A, Quick Insights, etc.). Because of these advantages, it’s the default mode when making a new Power BI Desktop solution.
 
-It's important to understand that imported data is always stored to disk. When queried or refreshed, the data must be fully loaded into memory of the Power BI capacity. Once in memory, Import models can then achieve very fast query results. It's also important to understand that there's no concept of an Import model being partially loaded into memory.
+It’s important to know that imported data is always saved to disk. When it’s queried or refreshed, the data has to be fully loaded into the memory of the Power BI capacity. Once in memory, Import models can get very fast query results. It’s also important to know that there’s no way for an Import model to be partly loaded into memory.
 
-When refreshed, data is compressed and optimized and then stored to disk by the VertiPaq storage engine. When loaded from disk into memory, it's possible to see 10x compression. So, it's reasonable to expect that 10 GB of source data can compress to about 1 GB in size. Storage size on disk can achieve a 20% reduction from the compressed size. (The difference in size can be determined by comparing the Power BI Desktop file size with the Task Manager memory usage of the file.)
+When refreshed, data is compressed and optimized and then saved to disk by the VertiPaq storage engine. When loaded from disk into memory, it can be 10x smaller. So, it’s possible that 10 GB of source data can be about 1 GB in size. Storage size on disk can be 20% smaller than the compressed size. (The difference in size can be seen by comparing the Power BI Desktop file size with the Task Manager memory use of the file.)
 
-Design flexibility can be achieved in three ways. Data modelers can:
+Design flexibility can be done in three ways. Data modelers can:
 
-Integrate data by caching data from dataflows, and external data sources, whatever the data source type or format
-Leverage the entire set of Power Query Formula Language (informally referred to as M) functions when creating data preparation queries
-Leverage the entire set of Data Analysis Expressions (DAX) functions when enhancing the model with business logic. There's support for calculated columns, calculated tables, and measures.
+- Integrate data by caching data from dataflows, and external data sources, whatever the data source type or format
+- Leverage the entire set of Power Query Formula Language (informally referred to as M) functions when creating data preparation queries
+- Leverage the entire set of Data Analysis Expressions (DAX) functions when enhancing the model with business logic. There's support for calculated columns, calculated tables, and measures.
 
-[Learn more about import mode](https://docs.microsoft.com/power-bi/connect-data/service-dataset-modes-understand#import-mode)
+Learn more about [import mode](https://docs.microsoft.com/power-bi/connect-data/service-dataset-modes-understand#import-mode)
 
 ---
 
