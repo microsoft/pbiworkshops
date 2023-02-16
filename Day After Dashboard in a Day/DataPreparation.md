@@ -641,10 +641,6 @@ The advanced editor in Power Query is a tool that lets you see and edit the code
 
     ![Detect data type](./Media/DetectDataType.png)
 
-1. Select the top left of the **DateKey** column and change the type to **Date**. Select **Replace current** in the dialog prompt to accept the change.
-
-    ![DateKey type](./Media/DateKeyType.png)
-
 1. Holding **Shift** select the **ReturnAmount** and **ReturnQuantity** columns, right click and navigate to **Change type** and then **Whole number** to update both columns in a single transformation.
 
     ![DateKey type](./Media/ReturnTypes.png)
@@ -659,6 +655,12 @@ The advanced editor in Power Query is a tool that lets you see and edit the code
 
 To view a complete list of Power Query function documentation, from the **Home** tab select **Get data** and **Blank query**, update the **Source** step's value to **#shared** and select **Next** to proceed. A record value will be returned including the [Power Query M function reference](https://docs.microsoft.com/powerquery-m/power-query-m-function-reference) documentation.
 
+If you want to see [Power Query functions](https://docs.microsoft.com/powerquery-m/power-query-m-function-reference) and their documentation in the editor, you can follow these steps:
+
+- On the **Home** tab, click **Get data** and choose **Blank query**.
+- In the formula bar, replace the Source step’s value with **#shared** and press Enter.
+- Click next to a record value to view the function documentation.
+
 ```powerquery-m
 let
     Source = #shared
@@ -668,9 +670,9 @@ in
 
 ## Query groups
 
-As we add more tables to our solutions it can often be challenging to remember which-queries-do-what. For this reason we'll create groups for our queries that share similar design patterns.
+When we have many tables in our solutions, it can be hard to keep track of their use. To make it easier, we can organize our queries into groups based on their design patterns.
 
-1. In the **Queries** pane, while holding **ctrl**, select the following tables from the list below, once complete right click and select the **Move to group** > **New group...** option.
+1. In the **Queries** pane, hold **ctrl** and select the tables from the list below that you want to group together. Then, right click and choose **Move to group** > **New group…**.
 
     1. DimCustomer_raw
     1. DimGeography_raw
@@ -680,7 +682,7 @@ As we add more tables to our solutions it can often be challenging to remember w
 
     ![Query name](./Media/StagingGroup.png)
 
-    1. In the **New group** window set the name to **Data staging** and the **Description** to the following text below and select **Ok** once complete.
+    1. In the **New group** window, enter **Data staging** as the name and the following text as the Description. Then, click **Ok**.
 
         ```
         Data that will be ingested from the source and referenced in computed tables for transformations via the enhanced compute engine.
@@ -688,8 +690,7 @@ As we add more tables to our solutions it can often be challenging to remember w
     
         ![New group](./Media/NewGroup.png)
 
-1. In the **Queries** pane, while holding **ctrl**, select the following tables from the list below, once complete right click and select the **Move to group** > **New group...** option.
-
+1. In the **Queries** pane, hold **ctrl** and select the tables from the list below that you want to group together. Then, right click and choose **Move to group** > **New group…**.
     
     1. DimDate
     1. DimEmployee
@@ -698,7 +699,7 @@ As we add more tables to our solutions it can often be challenging to remember w
 
     ![Query name](./Media/NewGroupDataLoad.png)
 
-    1. In the **New group** window set the name to **Data load** and the **Description** to the following text below and select **Ok** once complete.
+    1. In the **New group** window, enter **Data load** as the name and the following text as the Description. Then, click **Ok**.
 
         ```
         Data that will be ingested from the source without transformations.
@@ -706,51 +707,46 @@ As we add more tables to our solutions it can often be challenging to remember w
 
         ![New group](./Media/NewGroupDataLoadDescription.png)
 
-1. In the **Queries** pane, while holding **ctrl**, select the following tables from the list below, once complete right click and select the **Move to group** > **New group...** option.
+1. In the **Queries** pane, hold **ctrl** and select the tables from the list below that you want to group together. Then, right click and choose **Move to group** > **New group…**.
 
-    
     1. DimCustomer
     1. DimProduct
 
     ![Query name](./Media/NewGroupDataTransformation.png)
 
-    1. In the **New group** window set the name to **Data transformation** and the **Description** to the following text below and select **Ok** once complete.
+    1. In the **New group** window, enter **Data transformation** as the name and the following text as the Description. Then, click **Ok**.
 
         ```
         Data that will be ingested from the data lake storage for transformations via the enhanced compute engine.
         ```
 
-        ![New group](./Media/NewGroupDataLoadDescription.png)
+     ![New group](./Media/GroupDescriptionTransformation.png)
 
-1. Our **Queries** pane now contains three groups to help make managing and distinguishing our queries intent more effective at a glance. For more detail we can also hover above the group's folder icon where the **description** value of each will be visible.
-
-    ![New group](./Media/GroupDescriptionTransformation.png)
-
-1. You can now review the various query groups that now exist, if you were to hover above them the **Description** property will now be visible.
-    1. The same applies if you hover above a query where the **Description** property has been set.
-        1. To add a description for a query, right click the query name in the **Queries** pane and select **Properties**.
+1. We have created three groups in our **Queries** pane to help us manage and identify our queries more easily. To see more information about each group, we can hover over the group’s folder icon and read the description value.
+    1. You can also hover over a query to see its description value, if it has one and to add a description for a query, right click on the query name in the Queries pane and select **Properties**.
 
     ![Group description](./Media/GroupDescription.png)
+
 ---
 
 Transforming data at scale
 
-Now that our data is being ingested and stored in our dataflow's [Azure Data Lake Storage Gen2](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-introduction), we'll leverage [computed tables](https://docs.microsoft.com/power-query/dataflows/computed-entities-scenarios) to apply transformation logic via the enhanced compute engine.
+Now that our data is being ingested and stored in a [Azure Data Lake Storage Gen2](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-introduction), we'll leverage [computed tables](https://docs.microsoft.com/power-query/dataflows/computed-entities-scenarios) to apply transformation logic via the enhanced compute engine.
 
 [Learn more about the benefits of loading data without transformation for Text/CSV files](https://docs.microsoft.com/power-query/dataflows/computed-entities-scenarios#load-data-without-transformation-for-textcsv-files)
 
 ---
 ## Saving and refreshing a dataflow
 
-1. Select the **Save & close** option in the bottom right to exit the Power Query editor.
+1. Click **Save & close** in the bottom right corner to leave the Power Query editor.
 
     ![Save & close](./Media/SaveClose.png)
 
-1. Select the **Close** option in the top right to exit the current dataflow.
+1. Click **Close** in the top right corner to leave the current dataflow.
 
-    ![Save](./Media/Close.png)
+    ![Close](./Media/Close.png)
 
-1. Within the workspace select the **Refresh now** option of the dataflow to ingest the labs data and apply transformation logic.
+1. In the workspace, click **Refresh now** on the dataflow to load the labs data and apply the transformation logic.
 
     ![Refresh now.](./Media/RefreshNow.png)
 
@@ -766,11 +762,11 @@ Query folding is the ability for a Power Query query to generate a single query 
 
 ---
 
-1. Open **Power BI Desktop** and from the **Home** tab select the **Get data** button. Within the **Get dialog** window select the **Power Platform** section and then **Dataflows** connector. Select **Connect** to continue to the **Dataflows** navigator window.
+1. Open **Power BI Desktop** and click **Get data** on the **Home** tab. In the **Get dialog** window, go to the **Power Platform** section and choose the **Dataflows** connector. Click **Connect** to go to the Dataflows navigator window.
 
     ![Power Platform dataflows.](./Media/ppDataflows.png)
 
-1. Within the **Navigator** window, navigate to the group Workspace where the dataflow is located and select all of the tables listed below within the dataflow, once complete select the **Transform Data** option to continue.
+1. In the **Navigator** window, find the group Workspace where the dataflow is stored and select all the tables from the list below in the dataflow. Then, click **Transform Data** to proceed.
 
     | Table |
     | :---- |
@@ -786,22 +782,22 @@ Query folding is the ability for a Power Query query to generate a single query 
 
     ![Get dataflow tables.](./Media/getDataDataflow.png)
 
-1. Navigate to the **DimCustomer_raw** table, holding the **shift** key select the **FirstName**, **MiddleName** and **LastName** columns, right click one of the selected columns and choose the **Merge Columns** option.
+1. Go to the **DimCustomer_raw** table, hold the **shift** key and select the **FirstName**, **MiddleName** and **LastName** columns. Right click on any of the selected columns and choose **Merge Columns**.
 
     ![Merge Columns option.](./Media/MergeColumns.png)
 
-1. Within the **Merge columns** window change the **Separator** option to **Space**, set the **New column name (optional)** option to **Full Name** and select **OK** when complete.
+1. In the **Merge columns** window, change the **Separator** option to **Space**, enter **Full Name** as the **New column name (optional)** option and click **OK**.
 
     ![Merge columns dialog window.](./Media/MergeColumnsBox.png)
 
-1. In the **Query settings** pane on the right, navigate to the **Merge Columns** step, right click and select the **View Native Query** option.
+1. In the **Query settings** pane on the right, go to the **Merge Columns** step, right click and choose **View Native Query**.
 
     ![View Native Query.](./Media/ViewNativeQuery.png)
 
-1. Navigate to the **Add Column** tab and select the **Conditional Column** option. Within the **Add Conditional Column** dialog complete the following and select **OK** when complete:
+1. Go to the **Add Column** tab and click **Conditional Column**. In the **Add Conditional Column** dialog, do the following and click **OK**:
     1. New column name: **Gender**
-    1. Match the following conditions to the table below.
-        1. Use the **Add Clause** to add new conditions.
+    1. Match the conditions in the table below.
+        1. Use **Add Clause** to add new conditions.
 
     |  | Column Name | Operator | Value | Output | 
     | :------- | :-------| :-------| :-------| :-------|
@@ -814,12 +810,12 @@ Query folding is the ability for a Power Query query to generate a single query 
 
     ![View Native Query.](./Media/AddConditionalColumn.png)
 
-1. In the **Query settings** pane on the right, navigate to the **Add Conditional Column** step, right click and select the **View Native Query** option.
+1. In the **Query settings** pane on the right, go to the **Add Conditional Column** step, right click and choose **View Native Query**.
 
     ![View Native Query for Conditional Column.](./Media/ConditionalQuery.png)
 
-1. From the **Formula bar** select the **Add Step** button and type in the following formula below.
-    1. If the **Formula Bar** is not enabled navigate to the **View** tab and select the **Formula Bar** checkbox.
+1. In the **Formula bar** click the **Add Step** button and enter the following formula.
+    1. If you don't see the **Formula Bar**, go to the **View** tab and click the **Formula Bar** box.
 
     ![Add Step.](./Media/AddStep.png)
 
@@ -854,11 +850,13 @@ Query folding is the ability for a Power Query query to generate a single query 
             )
     ```
 
-1. In the **Query settings** pane on the right, navigate to the **Custom1** step, right click and select the **View Native Query** option to review the difference in the generated query which now uses the [IN (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/language-elements/in-transact-sql?view=sql-server-ver15) clause.
+You can also click the X on the left of the step name.
+
+1. In the **Query settings** pane on the right, go to the **Custom1** step, right click and choose **View Native Query** to see how the query has changed and now uses the [IN (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/language-elements/in-transact-sql?view=sql-server-ver15) clause.
 
     ![List contains.](./Media/ListContains.png)
 
-1. Right click the **Applied Steps** step named **Custom1** and select **Properties...** to open the **Step Properties** dialog box. Once the **Step Properties** is visible update the **Name** property to **Custom: Gender** and the **Description** field to the below text. Once complete select **OK** to complete.
+1. Right click on the **Custom1** step and select **Properties...** to open the **Step Properties** dialog box. In the dialog box, change the **Name** property to **Custom: Gender** and the **Description** field to the below text. Then, click **OK**.
 
     ```bash
     If value is Mr. or Sr. replace with Male.
@@ -868,29 +866,30 @@ Query folding is the ability for a Power Query query to generate a single query 
 
     ![Step Properties.](./Media/StepProperties.png)
 
-1. Review the new **Custom: Gender** step's properties by hovering above the step name to view the documentation.
+1. Hover over the **Custom: Gender** step name to see the documentation.
 
     ![Step documentation.](./Media/StepDocumentation.png)
 
-1. Right click the original **Added Conditional Column** step and select the **Delete** option to remove.
-    1. Selecting the adjacent **X** to the left of the step name is also an option.
+1. Right click on the original **Added Conditional Column** step and select the **Delete** option to remove it.
+    1. You can also click the **X** on the left of the step name.
 
     ![Delete.](./Media/DeleteStep.png)
 
 ## Setting the storage mode
 
-Now that we have completed all of the data preparation activities in this lab we need to create the connection between our queries and the Power BI dataset.
+We have finished all the data preparation steps in this lab and the only thing need to do is to connect our queries to the Power BI dataset.
 
-1. From the **Home** tab select **Close & apply**.
+1. Click **Close & apply** on the **Home** tab.
 
     ![Close & apply](./Media/CloseApply.png)
 
-1. Within the **Set the storage mode** window, select the **DirectQuery** storage mode for each of the tables and then select **OK** once complete.
+1. In the **Set the storage mode** window, choose the **DirectQuery** storage mode for each table and then click OK.
 
     ![List contains.](./Media/SetStorageMode.png)
 
 # Next steps
-We hope this portion of the lab has shown how dataflows can provide a self-service, cloud-based, data preparation technology that can be easily consumed in Power BI.
+
+This part of the lab has demonstrated how dataflows can help you prepare data in the cloud and use it in Power BI easily.
 
 - Continue to the [Data Modeling](./DataModeling.md) lab
 - Return to the [Day After Dashboard in a Day](./README.md) homepage

@@ -3,16 +3,16 @@
 ✏️ Lab scenario
 ---
 
-For this portion of the lab, we've been tasked with creating a dataset that queries our data in **near-real time** for our report consumers. Based on these initial requirements we'll want to evaluate Power BI's storage mode options and monitor our performance to find the most optimal solution.
+In this part of the lab, our goal is to create a dataset that can access our data quickly and efficiently for our report users in **near-real time**. To achieve this, we’ll need to compare Power BI’s storage mode options and measure our performance to find the best solution.
 
 # Storage modes and data modeling
 
-In Microsoft Power BI Desktop, we can specify the storage mode for each table individually in our model. Understanding the benefits of each storage mode can provide many advantages, including the following:
+Microsoft Power BI Desktop lets us choose the storage mode for each table in our model. Knowing the benefits of each storage mode can help us with the following:
 
-- Improved query performance
-- Supporting the development of large datasets
-- Faster dataset refreshes
-- Enabling near-real time data
+- Faster query responses
+- Developing bigger datasets
+- Quicker dataset refreshes
+- Showing near real time data
 
 [Learn more about storage modes](https://docs.microsoft.com/power-bi/transform-model/desktop-storage-mode)
 
@@ -20,22 +20,22 @@ In Microsoft Power BI Desktop, we can specify the storage mode for each table in
 
 ## DirectQuery
 
-Models developed in DirectQuery mode don't import data. Instead, they consist only of metadata defining the model structure. When the model is queried, native queries are used to retrieve data from the underlying data source.
+DirectQuery mode models do not import data. They only contain metadata that defines the model structure. When the model receives a query, it uses native queries to get data from the original data source.
 
-There are two main reasons to consider developing a DirectQuery model:
+DirectQuery mode models are suitable for two scenarios:
 
-- When data volumes are too large - even when data reduction methods are applied - to load into a model, or practically refresh
-- When reports and dashboards need to deliver "near real-time" data, beyond what can be achieved within scheduled refresh limits. (Scheduled refresh limits are eight times a day for shared capacity, and 48 times a day for a Premium capacity.)
+- When data volumes are too big to load into a model or refresh regularly, even after applying data reduction methods
+- When reports and dashboards need to show “up-to-date” data, beyond the frequency of scheduled refreshes. (Scheduled refreshes are limited to eight times a day for shared capacity, and 48 times a day for a Premium capacity.)
 
-    Learn more about [DirectQuery mode](https://docs.microsoft.com/power-bi/connect-data/service-dataset-modes-understand#directquery-mode) and [DirectQuery model guidance](https://docs.microsoft.com/power-bi/guidance/directquery-model-guidance)
+Learn more about [DirectQuery mode](https://docs.microsoft.com/power-bi/connect-data/service-dataset-modes-understand#directquery-mode) and [DirectQuery model guidance](https://docs.microsoft.com/power-bi/guidance/directquery-model-guidance)
 
 ---
 
-1. One of the first things we might notice is that on our left side-rail the **Data** view is now missing and in the bottom right corner of Power BI Desktop is the text **Storage Mode: DirectQuery**.
+1. After connecting to our dataflow, we can see that the **Data** view on the left side-rail is gone and the text **Storage Mode: DirectQuery** appears on the bottom right corner of Power BI Desktop.
 
     ![Missing data view.](./Media/MissingDataView.png)
 
-1. To confirm that our connection to our dataflow is indeed working, we'll now add the following fields below into a **Table** visual to view data on a report page.
+1. To check that our connection to our dataflow works, we’ll add the following fields to a **Table** visual on a report page.
 
     | Table | field |
     |:----- | :------ |
@@ -44,19 +44,19 @@ There are two main reasons to consider developing a DirectQuery model:
 
     ![Table visual.](./Media/TableVisual.png)
 
-1. While the visual has rendered successfully, we want to confirm that the information is being sent to our source via a **Direct query**. To confirm we'll navigate to the **View** tab and then select **Performance analyzer**.
+1. To verify that the data is coming from our source through a **Direct query**, we’ll go to the View tab and click **Performance analyzer**.
 
-    ![Performance analyzer.](./Media/PerformanceAnalyzer.png)
+![Performance analyzer.](./Media/PerformanceAnalyzer.png)
 
-1. Once the **Performance analyzer** pane is visible, we'll now select **Start recording**.
+1. To use the **Performance analyzer**, we’ll open the pane and click **Start recording**.
 
     ![Start recording button.](./Media/StartRecording.png)
 
-1. With the **Performance analyzer** recording, we'll hover above the **Table** visual and select the **Analyze this visual** option to refresh a single visual. Once complete we'll select the expand/collapse box next to the **Table** visual to confirm that a **Direct query** value is now present. We can also now select the **Copy query** option and paste our query into a text editor of our choice.
+1. While the **Performance analyzer** is recording, we’ll hover over the **Table** visual and choose the **Analyze this visual** option to refresh only that visual. After that, we’ll click the expand/collapse box next to the **Table** visual in our list to see that a **Direct query** value is there. We can also click the Copy query option and paste our query into any text editor.
 
     ![Analyze this visual.](./Media/AnalyzeThisVisual.png)
 
-1. From the copied query, we are able to view the **DAX Query** that was sent to the analysis services database engine.
+1. The pasted query shows us the **DAX Query** that the analysis services database engine received.
 
     ```dax
     // DAX Query
