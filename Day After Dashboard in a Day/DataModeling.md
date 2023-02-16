@@ -7,7 +7,7 @@ In this part of the lab, our goal is to create a dataset that can access our dat
 
 # Storage modes and data modeling
 
-Microsoft Power BI Desktop lets us choose the storage mode for each table in our model. Knowing the benefits of each storage mode can help us with the following:
+Microsoft Power BI Desktop lets us choose the storage mode for each table in our model, learning the benefits of each storage mode can help us with the following:
 
 - Faster query responses
 - Developing bigger datasets
@@ -136,19 +136,19 @@ We've been able to confirm that as our Power BI visuals are being rendered our q
 
 ## Relationships
 
-When using multiple tables, chances are you'll do some analysis using data from all those tables. Relationships between those tables are necessary to accurately calculate results and display the correct information in your reports.
+If you use more than one table, you’ll probably need data from all of them for your analysis. You need to create relationships between the tables to get the right results and show the right information in your reports.
 
 Learn more about [creating and managing relationships](https://docs.microsoft.com/power-bi/transform-model/desktop-create-and-manage-relationships)
 
 ---
 
-1. Navigate to the model view on the side-rail
+1. Go to the model view on the side-rail
 
     ![Model view.](./Media/ModelView.png)
 
-1. To create a relationship between two of our tables, we'll drag-and-drop the following field values from the table listed below.
-    1. If we hover above our table's headers we'll also get important details related to the **Storage mode**, **Data source type**, **Server name** and a visual indicator in the top left which provides indicates the **Storage mode** which in this example is **DirectQuery**.
-
+1. To link two of our tables, we’ll drag-and-drop the fields below from the table they belong to.
+    1. If we hover over our table’s headers, we’ll see more details about the **Storage mode**, **Data source type**, **Server name** and a symbol in the top left that shows the **Storage mode**, which is DirectQuery in this example.
+  
     | Table | field |
     |:----- | :------ |
     | DimCustomer_raw | CustomerKey|
@@ -156,18 +156,18 @@ Learn more about [creating and managing relationships](https://docs.microsoft.co
 
     ![Create relationship.](./Media/CreateRelationship.png)
 
-1. From the **Create relationship** window, we can confirm that the **CustomerKey** field is selected within each table (as noted by the darker shade). Once validated we can select **OK** to proceed.
+1. In the **Create relationship** window, we can check that the **CustomerKey** field is selected within each table (as noted by the darker shade). Then, we can click **OK** to continue.
 
     ![Create relationship window.](./Media/CreateRelationshipOK.png)
 
-1. Returning now to the report page view, we'll complete the following steps.
-    1. From the **FactOnlineSales** table add the **SalesAmount** field.
-    1. Select the **Clear** option in the **Performance analyzer** pane to remove previous events.
-    1. Select the **Analyze this visual** to test the performance of the added field.
+1. Back to the report page view, we'll do the following steps.
+    1. From the **FactOnlineSales** table, add the **SalesAmount** field.
+    1. Click **Clear** in the **Performance analyzer** pane to remove previous events.
+    1. Click **Analyze this visual** to test the performance of the added field.
     
     ![Add sales amount.](./Media/AddSalesAmount.png)
 
-1. **Optional:** Returning to the **SQL Server Profiler** application, we can locate the **DirectQuery end** event with the **Text data** display of the SQL query generated when using data across multiple tables. In this example a [**LEFT OUTER JOIN**](https://docs.microsoft.com/sql/relational-databases/performance/joins?view=sql-server-ver15#fundamentals) is used.
+1. **Optional:** Back to the **SQL Server Profiler** application, we can find the **DirectQuery end** event with the **Text data** that shows the SQL query generated when we needed data from more than one table. In this example a [**LEFT OUTER JOIN**](https://docs.microsoft.com/sql/relational-databases/performance/joins?view=sql-server-ver15#fundamentals) is used.
 
     ![DirectQuery left outer join.](./Media/DirectQueryLeftOuterJoin.png)
 
@@ -191,26 +191,26 @@ Learn more about [creating and managing relationships](https://docs.microsoft.co
     WHERE (NOT( ([a0] IS NULL)))
     ```
 
-1. Since all of our sales include a customer key, we can improve our performance by changing the default join. We'll navigate now to the **Modeling** tab and select the **Manage relationships** option.
+1. To improve our performance, we can change the default join because all of our sales have a customer key. We’ll go to the **Modeling** tab and click **Manage relationships**.
 
     ![Manage relationships.](./Media/ManageRelationships.png)
 
-1. In the **Manage relationships** dialog window select the **Edit...** option.
-    1. You can also double click to enter the relationship view.
+1. In the **Manage relationships** dialog window, click **Edit...**
+    1. You can also double click to go to the relationship view.
 
     ![Edit relationships.](./Media/EditRelationships.png)
 
-1. In the **Edit relationship** dialog window select the checkbox next to the [**Assume referential integrity**](https://docs.microsoft.com/power-bi/connect-data/desktop-assume-referential-integrity) property, then **OK** and close the **Manage relationships** window to return to the report page.
+1. In the **Edit relationship** dialog window, check the box next to the [**Assume referential integrity**](https://docs.microsoft.com/power-bi/connect-data/desktop-assume-referential-integrity) property. Then click **OK** and close the **Manage relationships** window to go back to the report page.
 
     ![Assume referential integrity.](./Media/AssumeReferentialIntegrity.png)
 
-1. Returning to our report page, we'll complete the following steps.
-    1. Select the **Clear** option in the **Performance analyzer** pane to remove previous events.
-    1. Select the **Analyze this visual** to test the performance of the added field.
+1. Back to the report page view, we'll do the following steps.
+    1. Click **Clear** in the **Performance analyzer** pane to remove previous events.
+    1. Click **Analyze this visual** to test the performance of the added field.
 
     ![Analyze this visual for inner join.](./Media/AnalyzeInnerJoin.png)
 
-1. **Optional:** Returning to the **SQL Server Profiler** application, we can locate the **DirectQuery end** event with the **Text data** display of the SQL query generated using an [**INNER JOIN**](https://docs.microsoft.com/sql/relational-databases/performance/joins?view=sql-server-ver15#fundamentals).
+1. **Optional:** Back to the **SQL Server Profiler** application, we can find the **DirectQuery end** event with the **Text data** that shows the SQL query generated when we needed data from more than one table. In this example a [**INNER JOIN**](https://docs.microsoft.com/sql/relational-databases/performance/joins?view=sql-server-ver15#fundamentals) is used.
 
     ![DirectQuery inner join.](./Media/DirectQueryInnerJoin.png)
 
@@ -234,8 +234,8 @@ Learn more about [creating and managing relationships](https://docs.microsoft.co
     WHERE (NOT( ([a0] IS NULL)))
     ```
 
-1. Returning to the **Model** view we'll create the below relationships by dragging and dropping our fields and setting the necessary configurations within the **Edit relationship** window.
-    1. We can also create relationships between tables by selecting the **Manage relationships** button from the **Home** tab and then **New...** option in the bottom left.
+1. Back to the **Model** view, we'll link the tables below by dragging and dropping our fields and choosing the right settings in the **Edit relationship** window.
+    1. We can also make relationships between tables by clicking the **Manage relationships** button on the **Home** tab and then **New...** option in the bottom left.
 
     | Active | From: Table (field) | field | Cardinality | Assume referential integrity | Cross filter direction | 
     | :----- |:----- | :------ | :----- | :----- | :----- |
@@ -250,35 +250,36 @@ Learn more about [creating and managing relationships](https://docs.microsoft.co
     |  | FactOnlineSales (DeliveryDate) | DimDate (DateKey) | Many to one (*:1) | ☑ | Single |
 
 
-1. Within the Modeling view's **Properties** pane, set both the **Show the database in the header when applicable** and **Pin related fields to top of card** options to **Yes**.
+1. In the **Properties** pane of the Modeling view, change both the **Show the database in the header when applicable** and **Pin related fields to top of card** options to **Yes**.
 
     ![Full view of all connected tables.](./Media/FullModelView.png)
 
 <font size="6">✅ Lab check</font>
 
-We've been able to create relationships between all of our data source's tables and a new requirement has come in that our data model has to be both - **near-real time** and **blazing fast**. 
+We have linked all of our data source’s tables, but now we need our data model to be **near-real time** and **very fast**.
 
-For this we'll want to revisit the design of our model.
+To do this, we’ll need to change the design of our model.
 
 ---
 
 ## Dimensional modeling
 
-A well-structured model design should include tables that are either dimension-type tables or fact-type tables and should avoid mixing the two types together into a single table.
+A good model design should have tables that are either dimension-type or fact-type, and not mix both types in one table.
 
-- **Dimension tables** describe business entities — the things you model.
-    - Entities can include products, people, places, and concepts including time itself.
-    - The most consistent table you'll find in a star schema is a **date** dimension table. 
-    - A dimension table contains a key column (or columns) that acts as a unique identifier, and descriptive columns.
+**Dimension tables** describe the things you model, such as products, people, places, and concepts like time.
 
-- **Fact tables** store observations or events, and can be sales orders, stock balances, exchange rates, temperatures, etc.
-    - A fact table contains dimension key columns that relate to dimension tables, and numeric measure columns. 
-    - The dimension key columns determine the dimensionality of a fact table, while the dimension key values determine the granularity of a fact table. For example, consider a fact table designed to store sale targets that has two dimension key columns Date and ProductKey. 
-    - It's easy to understand that the table has two dimensions. The granularity, however, can't be determined without considering the dimension key values. In this example, consider that the values stored in the Date column are the first day of each month. In this case, the granularity is at month-product level.
+- The most common table in a star schema is a date dimension table.
+- A dimension table has a key column (or columns) that is a unique identifier, and descriptive columns.
 
-It is also recommend to strive to deliver the **right number of tables** with the **right relationships** in place.
+**Fact tables** store data about events or observations, such as sales orders, stock balances, exchange rates, temperatures, etc.
 
-[Learn more about the star schema and the importance for Power BI](https://docs.microsoft.com/power-bi/guidance/star-schema)
+- A fact table has dimension key columns that link to dimension tables, and numeric measure columns.
+- The dimension key columns show the dimensions of a fact table, while the dimension key values show the level of detail of a fact table. For example, think of a fact table that stores sales targets with two dimension key columns Date and ProductKey.
+- You can see that the table has two dimensions. But to know the level of detail, you need to look at the dimension key values. In this example, the Date column has the first day of each month. So, the level of detail is at month-product level.
+
+You should also try to have the right number of tables with the right relationships between them.
+
+Learn more about the [importance of the star schema for Power BI](https://docs.microsoft.com/power-bi/guidance/star-schema)
 
 ---
 
