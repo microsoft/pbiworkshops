@@ -497,6 +497,7 @@ Important questions we should ask next time:
 - How often is the data updated?
 
 ---
+
 ## Incremental Refresh
 
 Incremental refresh is a feature in Power BI that allows you to keep the existing data in your dataset and add new data to it using a policy that you define. This can make your refreshes faster and reduce the load on your data source. Incremental refresh is supported for Power BI Pro, Premium per user, Power BI Premium, and Power BI Embedded.
@@ -598,32 +599,31 @@ Learn more about [model properties](https://learn.microsoft.com/power-bi/transfo
 
 ## Row label
 
-1. Let's select the **Report** view to return to our report canvas.
+Row labels in Power BI are a way to specify which field should be used to display the name of each row in a table. For example, you can choose a product name field as the row label for a table that contains product sales data.
+
+1. To go back to the report canvas, click the **Report** view.
 
     ![Report view](./Media/ReportView.png)
 
-1. On the report canvas we'll create a new **Table** visual and add the **Full Name** column from the **Customers** table and the **Total Sales Amount** measure from the **Online Sales** table.
+1. On the report canvas, create a new **Table** visual and add the **Full Name** column from the **Customers** table and the **Total Sales Amount** measure from the Online Sales table.
 
-    Upon first inspection, everything is working as intended with returning our table but we learn that we actually have two customers that share the same name "**Abigail Barnes**" as displayed from our filters list, which is now problematic when we begin to aggregate our results as they are rolled up into this single user.
+    You might notice that two customers have the same name "Abigail Barnes". This can cause problems when you aggregate your results because they are grouped into one user.
 
     ![Duplicate names](./Media/DuplicateNames.png)
 
-1. Navigate again to the **Model** view on the side-rail.
+1. To fix this issue, go to the **Model** view on the side-rail.
 
     ![Full side rail](./Media/ModelViewSideRail.png)
 
-1. From the **Fields** pane first we'll select the **Customers** table and within the **Properties** pane set the **Row label** to the **Full Name** field.
+1. In the **Fields** pane, select the **Customers** table and then set the **Row label** to the **Full Name** field in the **Properties** pane.
 
     ![Row label](./Media/RowLabel.png)
 
-
-1. Return to the **Report** view once again.
+1. Go back to the **Report** view again.
 
     ![Report view](./Media/ReportView.png)
 
-1. We'll return to our **Table** visual and remove the **Full Name** field from the **Columns** values and add the **Full Name** column back again from our **Customers** table to re-render the report.
-
-    This time both **Abigail Barnes** names are rendered from our data.
+1. In our **Table** visual, remove and add back the **Full Name** field to the **Columns** values. Now you should see both Abigail Barnes names separately in the data.
 
     ![TwoAbigail.png](./Media/TwoAbigail.png)
 
@@ -631,7 +631,9 @@ Learn more about [model properties](https://learn.microsoft.com/power-bi/transfo
 
 ## Sort by
 
-1. On the report canvas we'll create a new **Table** visual and add the following column from the table below to visualize our data. One of the first things we may notice is that the **MonthName** field is being sorted in ascending (A to Z) order. In order to update the sort order, we'll first select the **MonthName** column from the **Calendar table** and navigate to the **Column tools** tab and then the **Sort by column** button.
+Sort by in Power BI is a feature that allows you to change the order of data in your charts or tables based on a field or a measure. For example, you can sort a bar chart by sales amount or by product name.
+
+1. To create a new **Table** visual on the report canvas, add the following column from the table below. We notice that the **MonthName** field is sorted in ascending (A to Z) order. To change this order, select the **MonthName** column from the **Calendar** table and go to the **Column tools** tab. Then click the **Sort by column** button.
 
     | Table | Column | 
     | :---- | :----- |
@@ -639,11 +641,11 @@ Learn more about [model properties](https://learn.microsoft.com/power-bi/transfo
     
     ![Sort by monthname](./Media/SortByMonthName.png)
 
-1. From the available fields in our **Calendar** table, select the **Month** column (which is an integer number).
+1. In the **Calendar** table, choose the **Month** column (which is a number).
 
     ![Sort by month](./Media/SortByMonth.png)
 
-1. If we review our **Table** visual, our months have now been sorted in the correct order.
+1. Now our **Table** visual has the months sorted correctly.
     
     **Ex.** (1 = January, 2 = February, etc.)
 
@@ -651,7 +653,7 @@ Learn more about [model properties](https://learn.microsoft.com/power-bi/transfo
 
     ⚠️ **Important** ⚠️
 
-    Even if our organizations calendar does not start in January, we can still utilize this feature to sort order data. We would simply want to start the name (text) along with the sort by (number) in the appropriate order.
+    We can use this feature to sort our data even if our calendar does not start in January. Just make sure that the name (text) and the sort by (number) match the calendar order.
 
     **Ex.** (1 = June, 2 = July, etc.)
 
@@ -661,11 +663,13 @@ Learn more about [Sort by column](https://learn.microsoft.com/power-bi/create-re
 
 ## Data category
 
-1. Navigate to the model view on the side-rail.
+Data categories in Power BI are a way to specify how a column should be treated when it is used in a visualization. For example, you can choose a geographic data category for a column that contains country names, so that Power BI can display them on a map.
+
+1. Go to the **Model** view on the side-rail.
 
     ![Full side rail.](./Media/ModelViewSideRail.png)
 
-1. From the **Fields** pane first we'll select the field name from the table below and within the **Properties** expand the "**v Advanced**" section, to update the **Data category** value from the options below:
+1. In the **Fields** pane, select the field name from the table below. Then expand the **Advanced** section in the **Properties** pane and choose a **Data category** value from the options below:
 
     | Table | Field | Data category |
     | :--- | :--- |  :--- |
@@ -680,9 +684,9 @@ Learn more about [data categorization](https://learn.microsoft.com/power-bi/tran
 
 ## Default summarization
 
-1. While still in the model view and from the **Fields** pane first we'll select the following aggregate fields from the table below.
+1. In the **Model** view and the **Fields** pane, select the aggregate fields from the table below.
 
-    To bulk select fields/measures, we can hold and select **Shift** on the keyboard for adjacent fields, or hold **Ctrl** to select individual fields.
+    To select multiple fields/measures, use **Shift** for adjacent fields or **Ctrl** for individual fields.
 
     | Table | Field |
     | :-- | :-- |
@@ -695,7 +699,7 @@ Learn more about [data categorization](https://learn.microsoft.com/power-bi/tran
 
     ![Select fields](./Media/SelectFields.png)
 
-1. In the **Properties** pane we'll now expand the "**v Advanced**" section, to update the **Summarize by** value to **None**:
+1. In the **Properties** pane, expand the **Advanced** section and change the **Summarize by** value to **None**:
 
     ![Summarize by](./Media/SummarizeBy.png)
 
@@ -703,9 +707,9 @@ Learn more about [aggregate](https://learn.microsoft.com/power-bi/create-reports
 
 ## Display folder
 
-1. While still in the model view and from the **Fields** pane first we'll select the following measures from the table below and within the **Properties** pane we'll add the text **Measures** into the **Display folder** field. 
+1. In the **Model** view and the **Fields** pane, select the measures from the table below and enter **Measures** in the **Display folder** field in the **Properties** pane.
 
-    To bulk select fields/measures, we can hold and select **Shift** on the keyboard for adjacent fields, or hold **Ctrl** to select individual fields.
+    To select multiple fields/measures, use **Shift** for adjacent fields or **Ctrl** for individual fields.
 
     | Table | Field |
     | :-- | :-- |
@@ -715,21 +719,21 @@ Learn more about [aggregate](https://learn.microsoft.com/power-bi/create-reports
 
     ![Display folder](./Media/DisplayFolder.png)
 
-1. Within our **Fields** pane, our measures are now displayed within a folder - this will help with managing like items and also for users who connect to our model ensure a seamless experience in which to locate our measures. 
+1. Now our measures are in a folder in the **Fields** pane. This can help us organize our items and promote discovery when other users connect to our model.
 
     ![Measures folder](./Media/MeasuresFolder.png)
 
 ## Synonyms
 
-1. Let's return to the **Report** view once again.
+1. Go back to the **Report** view.
 
     ![Report view](./Media/ReportView.png)
 
-1. We'll double click on the report page to add the **Q&A** visual and type in the question: **"salary by customer name"**. Unfrotunately the result wasn't quite what we were expecting, so let's select the **Add synonyms now** to include more business terminology in our dataset.
+1. Double-click on the report page and add the **Q&A** visual. Type **"salary by customer name"** as the question. The result is not what we want, so click on **Add synonyms now** to use more business terms in our dataset.
 
     ![Add synonyms](./Media/AddSynonyms.png)
 
-1. Within the **Field synonyms** window, we'll navigate to the **Customers** table and add the following synonyms to the fields in the table below, by pressing the **"Add+"** button and typing in our text. Once complete select the **X** in the top right corner to close out of the window.
+1. In the **Field synonyms** window, find the **Customers** table and add these synonyms to the fields below. Use the **"Add+"** button and enter the text. To close window select the **X** in the top right corner.
 
     | Table | Field | Synonym |
     | :--- | :--- | :--- |
@@ -738,7 +742,7 @@ Learn more about [aggregate](https://learn.microsoft.com/power-bi/create-reports
 
     ![Field synonyms](./Media/FieldSynonyms.png)
 
-1. On the report page, we now have a table reflecting the correct fields for our synonyms **salary** and **customer name**.
+1. On the report page, we should see a with the right fields for our synonyms **salary** and **customer name**.
 
     ![Updated synonyms](./Media/UpdatedSynonyms.png)
 
@@ -746,12 +750,11 @@ Learn more about [aggregate](https://learn.microsoft.com/power-bi/create-reports
 
 # Data Analysis Expressions
 
-
 ## SAMEPERIODLASTYEAR
 
-1. We'll start by completing our **[Total Sales SPLY]** measure, by leveraging our **Calendar** table and our **DateKey** column.
+1. To finish our **[Total Sales SPLY]** measure, we need our **Calendar** table and our **DateKey** column.
 
-    Within our **CALCULATE** we want to change our filtering context, by looking at the values within our current period and then previous one year.
+    In our **CALCULATE**, we want to change our filtering context, by the current period and then previous year.
 
     ```
     CALCULATE([Total Sales Amount], SAMEPERIODLASTYEAR(Calendar[DateKey]))
@@ -776,13 +779,13 @@ Learn more about [SAMEPERIODLASTYEAR](https://learn.microsoft.com/dax/sameperiod
 
 ## USERELATIONSHIP
 
-With needing to filter by the order date and the delivery date from our **Online Sales** table, we will need to be able to control the active relationship in our measure. For this we'll leverage the USERELATIONSHIP function within DAX to enable the relationship between our **Calendar** table's **DateKey** and the **Online Sales** table's **DeliveryDate** with the below formula.
+To filter by the order date and the delivery date from our **Online Sales** table, we need to use the USERELATIONSHIP function in DAX. This will activate the relationship between **DateKey** in **Calendar** table and **DeliveryDate** in **Online Sales** table with this formula.
 
-1. From the **Fields** pane, we'll right click the **Online Sales** table and select **New measure**
+1. Right click the **Online Sales** table in the **Fields** pane and select **New measure**.
 
     ![Sales new measure](./Media/SalesNewMeasure.png)
 
-1. In the formula bar we'll write the following DAX function and using the **CALCULATE** function, we'll change our current filtering context - with the **USERELATIONSHIP** function.
+1. In the formula bar, write this DAX formula with the **CALCULATE** and **USERELATIONSHIP** functions.
 
     ```
     Total Sales By Delivery Date =
@@ -799,7 +802,9 @@ Learn more about [USERELATIONSHIP](https://docs.microsoft.com/dax/userelationshi
 
 # Security
 
-1. On the report canvas we'll create a new **Table** visual and add the following column from the table below to visualize our data.
+Row level security (RLS) in Power BI is a feature that allows you to restrict data access for certain users based on filters that you define within roles. For example, you can limit sales data to specific regions or departments.
+
+1. Make a new **Table** visual on the report canvas and add these columns from the table below.
 
     | Table | Column / Measure | 
     | :---- | :----- |
@@ -809,16 +814,15 @@ Learn more about [USERELATIONSHIP](https://docs.microsoft.com/dax/userelationshi
     
     ![Sort by monthname](./Media/SecurityTable.png)
 
-1. From the ribbon we'll navigate to the **Modeling** tab and within the security group select the **Manage roles** button.
+1. Go to the **Modeling** tab on the ribbon and click on **Manage roles** in the security group.
 
     ![Manage roles](./Media/ManageRoles.png)
 
-
-1. From the **Manage roles** window, we'll select **Create** first and give our role the title **Employee Store**. From the available tables in our model we'll then select the ellipses next to the **Employeess** table and select the **[EmailAddress]** field.
+1. In the **Manage roles** window, click on **Create** and name our role **Employee Store**. Then choose the ellipses next to the **Employeess** table and pick the **[EmailAddress]** field.
 
     ![Manage roles](./Media/ManageEmailAddress.png)
 
-1. Within the **Table filter DAX expression** section, we'll upate the statement to retrieve the logged in users e-mail whenever they consume content from Power BI with the following DAX expression below, once complete - we can select the checkmark to confirm and then the **Save** button to complete.
+1. In the **Table filter DAX expression**, write this DAX expression below to get the user’s email when they access Power BI content. Click on the checkmark and then on **Save**.
 
     ```
     [EmailAddress] = USERPRINCIPALNAME()
@@ -826,35 +830,35 @@ Learn more about [USERELATIONSHIP](https://docs.microsoft.com/dax/userelationshi
 
     ![UPN name](./Media/UPNDax.png)
 
-1. From the ribbon we'll navigate to the **Modeling** tab and within the security group select the **View as** button.
+1. Go to the **Modeling** tab on the ribbon and click on **View as** in the security group.
 
     ![View as role](./Media/ViewAsRoles.png)
 
-
-1. Within the **View as roles** window, we'll first select the **Other user** field to view our data by passing in a test value - in this case we'll use the email address - **"andy0@contoso.com"** and choose the **Employee Store** role. Once complete select **OK** to return to the report and valide that only Andy's results are now visible. Once complete we can then select **Stop viewing**.
+1. In the **View as roles** window, select **Other user** and enter a test value - for example, **"andy0@contoso.com"** - and choose the **Employee Store** role. Click on **OK** and check that only Andy’s results are shown. Then click on **Stop viewing** to return.
 
     ![View as role](./Media/ViewAsAndy.png)
 
+Learn more about [row level security](https://learn.microsoft.com/power-bi/enterprise/service-admin-rls)
 
 ---
 
 # Publish to Power BI
 
-1. From the **Home** tab, select the **Publish** icon and navigate to a non-production workspace as our destination and select the **Select** button when complete.
-    1. <i>This can also be the same workspace used in the data preparation lab.</i>
+1. On the **Home** tab, click on **Publish** and choose a non-production workspace. Click on **Select** button when done.
+    1. <i>We can use the same workspace as in the data preparation lab for simplicity’s sake.</i>
 
     ![Publish dataset](./Media/PublishDataset.png)
 
     ⚠️ **Important** ⚠️
 
-    For enterprise scenarios, a recommended architectural approach may be to separate dataflows, datasets and reports into separate workspaces designated for specific use. For the purposes of this workshop we've edited/published all Power BI items in the same workspace to maintain simplicity of lab instructions.
+    For enterprise scenarios, you may want to use different workspaces for dataflows, datasets and reports. For this workshop, we've used one workspace to keep it simple.
     
     Learn more about [managed self-service BI](https://learn.microsoft.com/power-bi/guidance/powerbi-implementation-planning-usage-scenario-managed-self-service-bi) and for a complete overview [Power BI implementation planning](https://learn.microsoft.com/power-bi/guidance/powerbi-implementation-planning-introduction)
 
 ---
 
 # Next steps
-We hope this portion of the lab has shown how various storage modes and modeling options can offer a flexible and optimized experience to build enterprise scalable solutions using Power BI Desktop.
+This part of the lab showed you how to use storage modes and modeling options in Power BI Desktop for scalable solutions.
 
 - Continue to the [Data Visualization](./DataVisualization.md) lab
 - Return to the [Day After Dashboard in a Day](./README.md) homepage
