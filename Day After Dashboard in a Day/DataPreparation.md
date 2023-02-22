@@ -643,7 +643,7 @@ The advanced editor in Power Query is a tool that lets you see and edit the code
 
 1. Holding **Shift** select the **ReturnAmount** and **ReturnQuantity** columns, right click and navigate to **Change type** and then **Whole number** to update both columns in a single transformation.
 
-    ![DateKey type](./Media/ReturnTypes.png)
+    ![Return type](./Media/ReturnTypes.png)
 
 1. Within the **Query settings** pane, change the **Name** of the above query to **FactOnlineSales**.
 

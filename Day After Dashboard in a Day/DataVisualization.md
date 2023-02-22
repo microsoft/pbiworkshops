@@ -472,7 +472,7 @@ Learn more about [drill-through](https://learn.microsoft.com/power-bi/create-rep
 
 ## Sparkline formatting
 
-1. Utilizing the **Visualizations** pane's **Format your visual** section, we'll now update our matrix with the following configurations below.
+1. To update our matrix with the following configurations below, we’ll use the **Format your visual** section in the **Visualizations** pane.
 
     **Note**: We can use the Search box to find specific settings quickly.
 
@@ -519,21 +519,24 @@ Learn more about [drill-through](https://learn.microsoft.com/power-bi/create-rep
 
     ![Sparkline settings](./Media/SparkLineSettings.png)
 
-1. With our matrix visual now configured, let's return to visual itself and resize the columns so that they fit the complete width of our top left rectangle so that they are easy to read for our end users so that they can find new insights with our sparklines.
+1. Next, let’s resize the matrix columns to fit the width of our top left rectangle. This will make our sparklines easier to read for our end users.
 
     ![Resize matrix](./Media/ResizeMatrix.png)
 
 ## Artificial Intelligence
 
+Power BI has AI visuals such as Key Influencers, Decomposition Tree, and Anomaly Detection. They can help us optimize our business metrics by finding out what factors affect them.
+
 ### Anomaly detection
 
-1. From the **Visualizations** pane we'll now add a **Line** visual to the bottom left rectangle on our canvas and insert the following fields and measures to the values below:
-    1. X-axis: **Calendar** table, **DateKey** field
-    1. Y-axis: **Total Sales Amount** measure
+1. We want to show how our total sales amount changed over time using a line chart. To do this, we need to follow these steps:
+    1. Go to the **Visualizations** pane and select a **Line** visual, dragging it to the bottom left rectangle on our canvas.
+    1. Add **DateKey** field from the **Calendar** table as our **X-axis**
+    1. Add **Total Sales Amount** measure as Y-axis
 
-    ![Total sales amount line chart](./Media/TotalSalesAmountLine.png)
+    ![Total sales amount line chart](./Media/TotalSalesAmountLine.png)    
 
-1. Utilizing the **Visualizations** pane's **Add further analyses to your visual** section, we'll update the following configurations below for our line chart to infuse additional insights.
+    1. Enable anomaly detection under **Add further analyses to your visual**
 
     **Note**: We can use the Search box to find specific settings quickly.
 
@@ -544,9 +547,7 @@ Learn more about [drill-through](https://learn.microsoft.com/power-bi/create-rep
 
     ![Find anomalies](./Media/FindAnomalies.png)
 
-1. From our line chart, anomalies have now been detected, if we were to select any of the anomaly markers a new **Anomalies** pane is then available, this same experience will be available to our end users as they view our reports within the Power BI service (cloud).
-    
-    The anomalies pane includes information information like why the anomaly was detected and possible explanations including their overall strength score as displayed in the black highlighted areas.
+1. Now we have a line chart that shows us unusual patterns in our sales data. We can click on any anomaly marker to see more details on a new **Anomalies** pane. This pane tells us why an anomaly was detected and possible explanations for it. Our end users can also access this feature when they view our reports on Power BI service (cloud).
 
     ![Anomalies pane](./Media/AnomaliesPane.png)
 
@@ -554,11 +555,11 @@ Learn more about [Anomaly detection](https://learn.microsoft.com/power-bi/visual
 
 ### Smart narrative
 
-1. From the **Visualizations** pane we'll now add a **Smart narrative** visual to the top right rectangle on our canvas.
+1. Go to the **Visualizations** pane and select the **Smart narrative** visual. Drag it to the top right rectangle on our canvas.
 
     ![Smart narrative](./Media/SmartNarrative.png)
 
-1. Utilizing the **Visualizations** pane's **Format your visual** section, we'll now update our matrix with the following configurations below.
+1. Adjust its format using **Format your visual** section within the **Visualizations** pane to the following:
 
     **Note**: Utilize the Search box, to easily discover configurable settings.
 
@@ -570,13 +571,18 @@ Learn more about [Anomaly detection](https://learn.microsoft.com/power-bi/visual
 
     ![Smart narrative title](./Media/SmartNarrativeTitle.png)
 
-1. Now as we make selections on our report pages, the **Smart narrative** visual's dynamic text will automatically rewrite and update its summary based upon its findings.
+1. The **Smart narrative** will automatically update its summary based on our selections on other visuals
 
     ![Smart narrative update](./Media/SmartNarrativeUpdate.png)
 
 Learn more about [Smart narrative](https://learn.microsoft.com/power-bi/visuals/power-bi-visualization-smart-narrative)
 
 ### Q&A visual
+
+1. Last, we want to add a **Q&A** visual that allows our end users to ask their own questions and find new insights. To do this, we need to follow these steps:
+    1. Double click on the bottom right rectangle on our canvas
+    1. A **Q&A** visual will appear where we can type our questions
+    1. The Q&A visual will show us relevant answers using our data
 
 1. For our last visual we'll now add the **Q&A** visual to the bottom right rectangle on our canvas by simply double clicking.
 
