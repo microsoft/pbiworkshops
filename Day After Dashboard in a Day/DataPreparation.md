@@ -286,6 +286,10 @@ To merge queries as a new query, we’ll do the following:
 
     ![Expand product category](./Media/ExpandProductCategory.png)
 
+1. In the top left of our merged queries, double click the **Merge** query text and update the table name to **DimProduct**.
+
+    ![DimProduct rename](./Media/DimProductRename.png)
+
 ## Schema view
 
 Schema view helps us work on schema level operations by showing our query’s column information clearly. Schema view lets us shape our data structure with contextual interactions, and speed up our operations as it only needs the column metadata and not the full data results.
@@ -300,7 +304,7 @@ To use the schema view and mark some columns as keys, we’ll do the following:
 
     ![Schema view](./Media/SchemaView.png)
 
-1. Click the **Merge** query and follow these steps:
+1. Click the **DimProduct** query and follow these steps:
 
     1. In the schema list, click the **ProductSubcategoryKey** and **ProductCategoryKey** column names and on the **Schema tools** tab, click the **Remove columns** option.
     
@@ -383,9 +387,9 @@ Learn more about [Environments and variables](https://docs.microsoft.com/powerqu
 
 To insert a step and get a list of the column names to be filtered out in our table, we’ll do the following:
 
-1. Go back to the query titled **Merge** and click the **Fx** button next to the formula bar to **Insert step**
+1. Go back to the query titled **DimProduct** and click the **Fx** button next to the formula bar to **Insert step**
 
-![Insert step](./Media/MergeInsertStep.png)
+    ![Insert step](./Media/MergeInsertStep.png)
 
 To get a list of the column names in our table, we’ll follow these steps:
 
@@ -431,10 +435,6 @@ To filter out any value from our list that has the text “ID” in the column n
 1. In the **Applied steps** list, right click **Custom** and update the title to **Select columns**.
 
     ![Table select columns](./Media/RenameTableSelect.png)
-
-1. In the **Query settings** pane, we'll change the current table name from **Merge** to **DimProduct**.
-
-    ![DimProduct name](./Media/DimProductName.png)
 
 To review the visual flow of our queries and steps, we’ll go back to the **Diagram view** and do the following:
 
@@ -874,6 +874,11 @@ You can also click the X on the left of the step name.
     1. You can also click the **X** on the left of the step name.
 
     ![Delete.](./Media/DeleteStep.png)
+
+## Custom function
+
+
+
 
 ## Setting the storage mode
 
