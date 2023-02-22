@@ -476,13 +476,13 @@ The advanced editor in Power Query is a tool that lets you see and edit the code
 
 ---
 
-1. From the **Home** tab select the drop-down for **Get data** and the **Blank query** option to create a new query.
-    1. Keyboard shortcut: **Ctrl + M**
+1. To create a new query from the Home tab, select the drop-down for **Get data** and choose the **Blank query** option.
+    1. We can also use the keyboard shortcut **Ctrl + M**
 
     ![New Blank Query](./Media/NewBlankQuery.png)
 
-1. Within the **Advanced editor** window either write directly or copy/paste the following function. Once complete select **OK** to proceed.
-    1. You can test the return value of the function by supplying a numeric value and then selecting the **Invoke** option.
+1. We can now write or paste the below function in the **Advanced editor** window, and select **OK** to proceed.
+    1. To test the return value of the function, supply a numeric value and then select **Invoke**.
   
     ```fsharp
     let
@@ -501,11 +501,9 @@ The advanced editor in Power Query is a tool that lets you see and edit the code
         Source
     ```
 
-    The above query creates a custom function for our full file name by [combining](https://docs.microsoft.com/powerquery-m/text-combine) the file prefix, file number and file extension. We've had to account for converting our #"File number" value to text to avoid any errors with joining non-text values.
+    The function we have written [combines](https://docs.microsoft.com/powerquery-m/text-combine) the file prefix, file number and file extension to create a custom function for the full file name. We have also converted your #"File number" value to text to avoid any errors with joining non-text values.
 
-1. We'll open the **Advanced Editor** once again from our custom function above and complete the following:
-    1. Add a comma to end of the **fXFileName** step.
-    1. On a new line we'll create a step with the identifier name of **Source** which equals a [**Record**](https://docs.microsoft.com/powerquery-m/expressions-values-and-let-expression#record) type, containing the following name/value pairing as displayed below and update the return value to **Source** after the text **in**.
+1. Open the **Advanced editor** and add a coma to the end of the **fXFileName** step. Now create a new step with the identifier name of **Source** and a [**record**](https://docs.microsoft.com/powerquery-m/expressions-values-and-let-expression#record) value. Assign the key/value pairing as displayed below and update the return value to **Source** after the text **in**.
 
     | | Key  |  | Value |
     | :--- | :--- | :---- | :--- |
@@ -540,8 +538,8 @@ The advanced editor in Power Query is a tool that lets you see and edit the code
       tableReturn
     ```
 
-1. Enable the **Query script** view, to view the full script on your screen.
-    1. **Optional:** To validate the results are updating, we can change the **fileCount** value to **2** and review the data preview's **fileName** and **data** values. If a change was made, return the **fileCount** value to **1** before proceeding.
+1. To enable the **Query script** view and see the full script on our screen, navigate to **View** and then **Query script** from the ribbon.
+    1. **Optional:** To validate that the results are updating, change the **fileCount** value to **2** and review the **fileName** and **data** values in the data preview. If a change was made, return the **fileCount** value to **1** before proceeding.
 
     ![Query script](./Media/QueryScript.png)
 
@@ -621,35 +619,35 @@ The advanced editor in Power Query is a tool that lets you see and edit the code
       Source
     ```
 
-1. To convert out returned list to a table, navigate to the **List tools** tab in the ribbon and select the **To table** option.
+1. To convert the returned list to a table, go to the **List tools** tab and click **To table**.
 
     ![List tools](./Media/ListToTable.png)
 
-1. In the top right of the **Column1** column - we'll select the expand columns icon, and disable the **Use original column name as prefix** option and select **OK** when complete.
+1. Click the expand columns icon in the top right of **Column1**. Uncheck **Use original column name as prefix** and click **OK**.
 
     ![Expand columns](./Media/ExpandColumns.png)
 
-1. Right click the **data** column and select the **Remove other columns** option to remove all other columns from the current table. 
+1. Right-click **data** and choose **Remove other columns** to delete all other columns from the table.
 
     ![Remove other columns](./Media/RemoveOtherColumns.png)
 
-1. In the top right of the **data** column - select the expand columns icon, disable the column **"_index_level_0__"** and if enabled thee **Use original column name as prefix** option. select **OK** when complete.
+1. Click the expand columns icon in the top right of **data**. Uncheck "**index_level_0_**" and **Use original column name** as prefix if checked. Click **OK**.
 
     ![Expand data column](./Media/ExpandDataColumn.png)
 
-1. To highlight all columns in our table press **Ctrl+A**, navigate to the **Transform** tab and then select **Detect data type** to change the current columns [any value](https://docs.microsoft.com/power-query/data-types) (ABC123) automatically. Not all columns may be appropriately type, so we'll want to complete the following steps below.
+1. Press **Ctrl+A** to select all columns. Go to the **Transform** tab and click **Detect data type** to change the current columns [any](https://docs.microsoft.com/power-query/data-types) value (ABC123) automatically. Some columns may not have the appropriate type, so follow these steps:
 
     ![Detect data type](./Media/DetectDataType.png)
 
-1. Holding **Shift** select the **ReturnAmount** and **ReturnQuantity** columns, right click and navigate to **Change type** and then **Whole number** to update both columns in a single transformation.
+    1. Shift-select **ReturnAmount** and **ReturnQuantity**. Right-click and go to **Change type** > **Whole number**.
 
     ![Return type](./Media/ReturnTypes.png)
 
-1. Select the **DateKey**, right click and navigate to **Change type** and then **Date** to update the column.
+    1. Shift-select the **DateKey** and **DeliveryDate**. Right-click and go to **Change type** > **Date**.
 
     ![Return type](./Media/DateKeyDateType.png)
 
-1. Within the **Query settings** pane, change the **Name** of the above query to **FactOnlineSales**.
+1. In the **Query settings** pane, rename the query as **FactOnlineSales**.
 
     ![Query name](./Media/QueryName.png)
 
