@@ -367,7 +367,7 @@ A table with dual storage mode is both Import and DirectQuery, depending on the 
 
     ![Mixed Storage Modes.](./Media/MixedStorageModes.png)
 
-1. On the side-rail we now have three options - **Report**, **Data** and **Model** view. With the data view we can see imported and cached data in our Power BI file. For now, let's go to the **Report** view to continue.
+1. On the side-rail we now have three options - **Report view**, **Data view** and **Model view**. With the Data view we can see imported and cached data in our Power BI file. For now, let's go to the **Report view** to continue.
 
     ![Report view.](./Media/ReportView.png)
 
@@ -465,7 +465,7 @@ Learn more about [import mode](https://docs.microsoft.com/power-bi/connect-data/
 
 ---
 
-1. Go to the model view on the side-rail.
+1. Go to the **Model view** on the side-rail.
 
     ![Full side rail.](./Media/ModelViewSideRail.png)
 
@@ -479,7 +479,7 @@ Learn more about [import mode](https://docs.microsoft.com/power-bi/connect-data/
 
     ![Storage mode window](./Media/IrreversibleImport.png)
 
-1. Click the **Report** view to go back to the report canvas.
+1. Click **Report view** to go back to the report canvas.
 
     ![Report view.](./Media/ReportView.png)
 
@@ -508,12 +508,17 @@ Learn more about [incremental refresh](https://learn.microsoft.com/power-bi/conn
 
 ---
 
+1. To re-enter the Power Query editor, Go to the **Home** tab and select **Transform data**.
+
+    ![New parameter.](./Media/HomeTransformData.png)
+
 1. On the **Home** tab of the **Power Query Editor**, click the **Manage Parameters** and then the **New Parameter** option.
 
     ![New parameter.](./Media/NewParameter.png)
 
 1. In the **Manage Parameters** window, click the **New** button and make the below two values.
-    1. **Important Note**: these are case sensitive, reserved keywords and they have to match exactly for incremental refresh to work.
+    
+    **Important Note**: these are **case sensitive**, **reserved keywords** and they have to match exactly for incremental refresh to work.
 
     | Name | Type | Current Value |
     |:----- | :------ | :------ |
@@ -531,14 +536,20 @@ Learn more about [incremental refresh](https://learn.microsoft.com/power-bi/conn
     Keep rows where 'DateKey'
     | Keep Rows | |
     |:- | :- |
-    | is greater than or equal to | 1/1/2020 |
-    | is less than | 12/31/2022 |
+    | is after than or equal to | 1/1/2020 |
+    | is before | 12/31/2022 |
 
     ![Filter rows.](./Media/FilterRows.png)
 
-    ⚠️ **Important** ⚠️
+⚠️ **Important** ⚠️
 
-    If your column is of **Date**, you can change the parameters in the formula bar to be date only with the Date.From() function.
+1. Because our **DateKey** is a **Date** and our parameters are of datetime, we'll update the formula using the [Date.From](https://learn.microsoft.com/powerquery-m/date-from) function, to cast our RangeStart and RangeEnd values to date only.
+
+    ```powerquery-m
+    = Table.SelectRows(#"Entity Name", each [DateKey] >= Date.From(RangeStart) and [DateKey] < Date.From(RangeEnd))
+    ```
+    
+    ![Range start and end](./Media/RangeStartEnd.png)
 
 1. Now that we're ready to go back to our modeling view, go to the **Home** tab and click the **Close & Apply** option.
 
@@ -574,8 +585,8 @@ Learn more about [model properties](https://learn.microsoft.com/power-bi/transfo
 
 ## Descriptions
 
-1. Go to the **Model** view and change the following table properties according to the instructions below for each:
-    1. In the **Fields** pane, click the Previous Table Name from the list.
+1. Go to the **Model view** and change the following table properties according to the instructions below for each:
+    1. In the **Data** pane, click the Previous Table Name from the list.
     1. In the **Properties** pane, change the **Name**, **Description** and **Key column** fields.
 
     | Previous Table Name | Name | Description | Key column |
@@ -589,7 +600,7 @@ Learn more about [model properties](https://learn.microsoft.com/power-bi/transfo
     
     ![Table properties](./Media/TableProperties.png)
 
-1. If we move cursor over the **Table** properties in the **Report**, **Data** or **Model** views, we will see the description field in a tooltip.
+1. If we move cursor over the **Table** properties in the **Report view**, **Data view** or **Model view**, we will see the description field in a tooltip.
     1. The **Description** value can also be filled for columns/fields and measures when they are selected.
     1. For end users, the **Description** field will show up in different client applications and experiences to help them understand the property better.
 
@@ -601,7 +612,7 @@ Learn more about [model properties](https://learn.microsoft.com/power-bi/transfo
 
 Row labels in Power BI are a way to specify which field should be used to display the name of each row in a table. For example, you can choose a product name field as the row label for a table that contains product sales data.
 
-1. To go back to the report canvas, click the **Report** view.
+1. To go back to the report canvas, click the **Report view**.
 
     ![Report view](./Media/ReportView.png)
 
@@ -611,11 +622,11 @@ Row labels in Power BI are a way to specify which field should be used to displa
 
     ![Duplicate names](./Media/DuplicateNames.png)
 
-1. To fix this issue, go to the **Model** view on the side-rail.
+1. To fix this issue, go to the **Model view** on the side-rail.
 
     ![Full side rail](./Media/ModelViewSideRail.png)
 
-1. In the **Fields** pane, select the **Customers** table and then set the **Row label** to the **Full Name** field in the **Properties** pane.
+1. In the **Data** pane, select the **Customers** table and then set the **Row label** to the **Full Name** field in the **Properties** pane.
 
     ![Row label](./Media/RowLabel.png)
 
@@ -665,11 +676,11 @@ Learn more about [Sort by column](https://learn.microsoft.com/power-bi/create-re
 
 Data categories in Power BI are a way to specify how a column should be treated when it is used in a visualization. For example, you can choose a geographic data category for a column that contains country names, so that Power BI can display them on a map.
 
-1. Go to the **Model** view on the side-rail.
+1. Go to the **Model view** on the side-rail.
 
     ![Full side rail.](./Media/ModelViewSideRail.png)
 
-1. In the **Fields** pane, select the field name from the table below. Then expand the **Advanced** section in the **Properties** pane and choose a **Data category** value from the options below:
+1. In the **Data** pane, select the field name from the table below. Then expand the **Advanced** section in the **Properties** pane and choose a **Data category** value from the options below:
 
     | Table | Field | Data category |
     | :--- | :--- |  :--- |
@@ -684,7 +695,7 @@ Learn more about [data categorization](https://learn.microsoft.com/power-bi/tran
 
 ## Default summarization
 
-1. In the **Model** view and the **Fields** pane, select the aggregate fields from the table below.
+1. In the **Model view** and the **Data** pane, select the aggregate fields from the table below.
 
     To select multiple fields/measures, use **Shift** for adjacent fields or **Ctrl** for individual fields.
 
@@ -707,7 +718,7 @@ Learn more about [aggregate](https://learn.microsoft.com/power-bi/create-reports
 
 ## Display folder
 
-1. In the **Model** view and the **Fields** pane, select the measures from the table below and enter **Measures** in the **Display folder** field in the **Properties** pane.
+1. In the **Model view** and the **Data** pane, select the measures from the table below and enter **Measures** in the **Display folder** field in the **Properties** pane.
 
     To select multiple fields/measures, use **Shift** for adjacent fields or **Ctrl** for individual fields.
 
@@ -719,13 +730,13 @@ Learn more about [aggregate](https://learn.microsoft.com/power-bi/create-reports
 
     ![Display folder](./Media/DisplayFolder.png)
 
-1. Now our measures are in a folder in the **Fields** pane. This can help us organize our items and promote discovery when other users connect to our model.
+1. Now our measures are in a folder in the **Data** pane. This can help us organize our items and promote discovery when other users connect to our model.
 
     ![Measures folder](./Media/MeasuresFolder.png)
 
 ## Synonyms
 
-1. Go back to the **Report** view.
+1. Go back to the **Report view**.
 
     ![Report view](./Media/ReportView.png)
 
