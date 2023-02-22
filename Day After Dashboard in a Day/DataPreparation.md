@@ -460,7 +460,7 @@ Learn more about [query plan](https://docs.microsoft.com/power-query/query-plan)
 
 To view the query plan for the Expanded DimProductCategory_raw step, we’ll do the following:
 
-1. In the **Query settings** pane on the right, we’ll right click the **Expanded DimProductCategory_raw** step and click the **View query plan** option.
+1. In the **Query settings** pane on the right, we’ll right click the **Select columns** step and click the **View query plan** option.
 
     ![View query plan](./Media/ViewQueryPlan.png)
 
@@ -644,6 +644,10 @@ The advanced editor in Power Query is a tool that lets you see and edit the code
 1. Holding **Shift** select the **ReturnAmount** and **ReturnQuantity** columns, right click and navigate to **Change type** and then **Whole number** to update both columns in a single transformation.
 
     ![Return type](./Media/ReturnTypes.png)
+
+1. Select the **DateKey**, right click and navigate to **Change type** and then **Date** to update the column.
+
+    ![Return type](./Media/DateKeyDateType.png)
 
 1. Within the **Query settings** pane, change the **Name** of the above query to **FactOnlineSales**.
 
@@ -874,11 +878,6 @@ You can also click the X on the left of the step name.
     1. You can also click the **X** on the left of the step name.
 
     ![Delete.](./Media/DeleteStep.png)
-
-## Custom function
-
-
-
 
 ## Setting the storage mode
 
