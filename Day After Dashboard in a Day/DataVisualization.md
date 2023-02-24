@@ -34,7 +34,7 @@ Learn more about [connecting to Power BI datasets](https://learn.microsoft.com/p
 
 ## Page canvas and elements
 
-A Power BI report page canvas is a single page that displays visualizations of your data. You can create and customize your report page canvas in Report view1 by adding fields, filters, and formatting options. You can also change the canvas settings2 to adjust the display ratio and size of your report page canvas.
+A Power BI report page canvas is a single page that displays visualizations of your data. You can create and customize your report page canvas in Report view1 by adding fields, filters, and formatting options. You can also change the canvas settings to adjust the display ratio and size of your report page canvas.
 
 Learn more about [report view](https://learn.microsoft.com/power-bi/create-reports/desktop-report-view)
 
