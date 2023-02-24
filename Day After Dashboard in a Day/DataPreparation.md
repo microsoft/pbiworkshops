@@ -136,7 +136,7 @@ To edit the dataflow model and enable some global options, we’ll do the follow
 1. In the **Global options** window, make sure the following settings are enabled and click **OK** to confirm.
 
     **Steps**
-    1. Enable step cost indicators
+    1. Enable query folding indicators
     1. Show script in step callout
 
     **Column profile**
@@ -903,5 +903,6 @@ This part of the lab has demonstrated how dataflows can help you prepare data in
 To download the completed files from the lab instructions:
 
 - [Dataflow model](https://raw.githubusercontent.com/microsoft/pbiworkshops/main/Day%20After%20Dashboard%20in%20a%20Day/Source_Files/Dataflow%20demo%20(final).json)
+    - [Import dataflow instructions](https://github.com/microsoft/pbiworkshops/blob/main/Day%20After%20Dashboard%20in%20a%20Day/DataPreparation.md#import-dataflow-model)
 - [Power BI Desktop template file (PBIT)](https://github.com/microsoft/pbiworkshops/raw/main/Day%20After%20Dashboard%20in%20a%20Day/Source_Files/Data%20modeling%20start.pbit)
     - You will need to update the WorkspaceId and DataflowId to those within your environment
