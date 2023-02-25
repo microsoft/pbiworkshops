@@ -141,7 +141,7 @@ To edit the dataflow model and enable some global options, we’ll do the follow
 
     **Column profile**
     1. Enable column profile
-    1. Show column value distribution in data preview
+    1. Show column quality details in data preview
     1. Show column value distribution in data preview
     1. Show column profile in details pane
 
@@ -476,174 +476,33 @@ The advanced editor in Power Query is a tool that lets you see and edit the code
 
 ---
 
-1. To create a new query from the Home tab, select the drop-down for **Get data** and choose the **Blank query** option.
-    1. We can also use the keyboard shortcut **Ctrl + M**
+1. Select the **fxGetFact** query in the **Queries** pane.
 
-    ![New Blank Query](./Media/NewBlankQuery.png)
+    ![fxGetFact query](./Media/fxGetFact.png)
 
-1. We can now write or paste the below function in the **Advanced editor** window, and select **OK** to proceed.
-    1. To test the return value of the function, supply a numeric value and then select **Invoke**.
-  
-    ```fsharp
-    let
-    // A function that accept a number value to create a concatenated file name.
-    fileNameUpdate =
-    (#"File number" as number) as text =>
-        Source =
-            Text.Combine(
-                {
-                    "FactOnlineSales_",
-                    Text.From(#"File number"),
-                    ".parquet"
-                }
-            )
-    in
-        Source
-    ```
-
-    The function we have written [combines](https://docs.microsoft.com/powerquery-m/text-combine) the file prefix, file number and file extension to create a custom function for the full file name. We have also converted your #"File number" value to text to avoid any errors with joining non-text values.
-
-1. Open the **Advanced editor** and add a coma to the end of the **fXFileName** step. Now create a new step with the identifier name of **Source** and a [**record**](https://docs.microsoft.com/powerquery-m/expressions-values-and-let-expression#record) value. Assign the key/value pairing as displayed below and update the return value to **Source** after the text **in**.
-
-    | | Key  |  | Value |
-    | :--- | :--- | :---- | :--- |
-    | [ | | | |
-    | | fileCount  | =  | 1, |
-    | | fileName | = | fxFileName(fileCount), |
-    | | data | =  | fxGetFile(fileName) |
-    | ] | |  |
-
-    ```fsharp
-    let
-      // A function that accept a file number value and concatenates text
-        fileNameUpdate =
-            (#"File number" as number) as text =>
-                let
-                    Source =
-                        Text.Combine(
-                            {
-                                "FactOnlineSales_",
-                                Text.From(#"File number"),
-                                ".parquet"
-                            }
-                        )
-                in
-                    Source,
-        tableReturn = [
-            fileCount = 1,
-            fileName = fileNameUpdate(fileCount),
-            data = fxGetFile(fileName)
-        ]
-    in
-      tableReturn
-    ```
-
-1. To enable the **Query script** view and see the full script on our screen, navigate to **View** and then **Query script** from the ribbon.
-    1. **Optional:** To validate that the results are updating, change the **fileCount** value to **2** and review the **fileName** and **data** values in the data preview. If a change was made, return the **fileCount** value to **1** before proceeding.
-
+1. Before invoking our custom function, we can enable the **Query script** view to see the full M script by selecting **Query** and then **Query script** from the ribbon in the bottom right corner.
+    
     ![Query script](./Media/QueryScript.png)
 
-1. Within the expanded **Query script** view, add a comma to the end of the **tableReturn** step and add a new step with the step identifier name of **Source** with the [**List.Generate**](https://docs.microsoft.com/powerquery-m/list-generate) function, and update the text after the **in** statement to **fileList** to review the functions documentation.
-    1. Typing any function name without the open and closed parenthesis proceeding will return the function's documentation.
+1. Select **Invoke** to create a new query.
 
-    ```fsharp
-    let
-      // A function that accept a file number value and concatenates text
-        fileNameUpdate =
-            (#"File number" as number) as text =>
-                let
-                    Source =
-                        Text.Combine(
-                            {
-                                "FactOnlineSales_",
-                                Text.From(#"File number"),
-                                ".parquet"
-                            }
-                        )
-                in
-                    Source,
-        tableReturn = [
-            fileCount = 1,
-            fileName = fileNameUpdate(fileCount),
-            data = fxGetFile(fileName)
-        ],
-        Source = List.Generate
-    in
-      Source
-    ```
+    ![Invoke function](./Media/InvokeFunction.png)
 
-1. Now that we've reviewed the documentation, update the **Query script** view to the below.
-    1. For the **initial** parameter include the goes-to "**=>**" symbol and then the **tableReturn** step.
-    1. For the **condition** parameter, we'll use square brackets to reference the initialized **tableReturn** value's **[data]** to logically test that the returned value is **not** empty, when using the **[Table.IsEmpty()](https://docs.microsoft.com//powerquery-m/table-isempty)** function.
-    1. For the **next** parameter, create a record that matches the **tableReturn** step's **fileCount**, **fileName** and **data** fields and increment the **fileCount** by it's current integer value plus **one**.
+1. Select the **Invoked funciton** query.
 
-    ```fsharp
-    let
-      // A function that accept a file number value and concatenates text
-        fileNameUpdate =
-            (#"File number" as number) as text =>
-                let
-                    Source =
-                        Text.Combine(
-                            {
-                                "FactOnlineSales_",
-                                Text.From(#"File number"),
-                                ".parquet"
-                            }
-                        )
-                in
-                    Source,
-        tableReturn = [
-            fileCount = 1,
-            fileName = fileNameUpdate(fileCount),
-            data = fxGetFile(fileName)
-        ],
-        Source =
-            List.Generate(
-                () => tableReturn,
-                each try not Table.IsEmpty([data]) otherwise false,
-                each
-                    [
-                        fileCount = [fileCount] + 1,
-                        fileName = fileNameUpdate(fileCount),
-                        data =
-                            try fxGetFile(fileName)
-                            otherwise
-                                #table(
-                                    {},
-                                    {}
-                                )
-                    ]
-            )
-    in
-      Source
-    ```
-
-1. To convert the returned list to a table, go to the **List tools** tab and click **To table**.
-
-    ![List tools](./Media/ListToTable.png)
-
-1. Click the expand columns icon in the top right of **Column1**. Uncheck **Use original column name as prefix** and click **OK**.
-
-    ![Expand columns](./Media/ExpandColumns.png)
-
-1. Right-click **data** and choose **Remove other columns** to delete all other columns from the table.
-
-    ![Remove other columns](./Media/RemoveOtherColumns.png)
-
-1. Click the expand columns icon in the top right of **data**. Uncheck "**index_level_0_**" and **Use original column name** as prefix if checked. Click **OK**.
-
-    ![Expand data column](./Media/ExpandDataColumn.png)
+    ![Invoke function](./Media/InvokeFunctionQuery.png)
 
 1. Press **Ctrl+A** to select all columns. Go to the **Transform** tab and click **Detect data type** to change the current columns [any](https://docs.microsoft.com/power-query/data-types) value (ABC123) automatically. Some columns may not have the appropriate type, so follow these steps:
 
     ![Detect data type](./Media/DetectDataType.png)
 
     1. Shift-select **ReturnAmount** and **ReturnQuantity**. Right-click and go to **Change type** > **Whole number**.
+        1. If a **Change column type** prompt occurrs, select **Replace current**
 
     ![Return type](./Media/ReturnTypes.png)
 
     1. Shift-select the **DateKey** and **DeliveryDate**. Right-click and go to **Change type** > **Date**.
+        1. If a **Change column type** prompt occurrs, select **Replace current**
 
     ![Return type](./Media/DateKeyDateType.png)
 
@@ -652,23 +511,6 @@ The advanced editor in Power Query is a tool that lets you see and edit the code
     ![Query name](./Media/QueryName.png)
 
 ---
-
-<b>Optional: Power Query M function reference</b>
-
-To view a complete list of Power Query function documentation, from the **Home** tab select **Get data** and **Blank query**, update the **Source** step's value to **#shared** and select **Next** to proceed. A record value will be returned including the [Power Query M function reference](https://docs.microsoft.com/powerquery-m/power-query-m-function-reference) documentation.
-
-If you want to see [Power Query functions](https://docs.microsoft.com/powerquery-m/power-query-m-function-reference) and their documentation in the editor, you can follow these steps:
-
-- On the **Home** tab, click **Get data** and choose **Blank query**.
-- In the formula bar, replace the Source step’s value with **#shared** and press Enter.
-- Click next to a record value to view the function documentation.
-
-```powerquery-m
-let
-    Source = #shared
-in
-    Source
-```
 
 ## Query groups
 
@@ -697,7 +539,6 @@ When we have many tables in our solutions, it can be hard to keep track of their
     1. DimDate
     1. DimEmployee
     1. DimStore
-    1. FactOnlineSales
 
     ![Query name](./Media/NewGroupDataLoad.png)
 
@@ -713,6 +554,7 @@ When we have many tables in our solutions, it can be hard to keep track of their
 
     1. DimCustomer
     1. DimProduct
+    1. FactOnlineSales
 
     ![Query name](./Media/NewGroupDataTransformation.png)
 
@@ -902,7 +744,26 @@ This part of the lab has demonstrated how dataflows can help you prepare data in
 
 To download the completed files from the lab instructions:
 
-- [Dataflow model](https://raw.githubusercontent.com/microsoft/pbiworkshops/main/Day%20After%20Dashboard%20in%20a%20Day/Source_Files/Dataflow%20demo%20(final).json)
-    - [Import dataflow instructions](https://github.com/microsoft/pbiworkshops/blob/main/Day%20After%20Dashboard%20in%20a%20Day/DataPreparation.md#import-dataflow-model)
+To import the completed dataflow from the instructions above, we’ll follow these steps:
+
+1. Click **New** in the top left corner of a workspace and choose the Dataflow option.
+    
+    ![New Dataflow](./Media/NewDataflow.png) 
+
+1. On the Start creating your dataflow screen, select the **Import Model** option.
+    
+    ![Import Model](./Media/ImportModel.png)
+
+1. Enter the url of the dataflow json file that we want to import into the pop-up window.
+
+    ```
+    https://raw.githubusercontent.com/microsoft/pbiworkshops/main/Day%20After%20Dashboard%20in%20a%20Day/Source_Files/Dataflow%20demo%20(final).json
+    ```
+And then complete the following:
+
+- [Import dataflow instructions](#import-dataflow-model)
+- [Edit dataflow credentials](#edit-dataflow-credentials)
+
+To download the completed Power BI destkop file:
 - [Power BI Desktop template file (PBIT)](https://github.com/microsoft/pbiworkshops/raw/main/Day%20After%20Dashboard%20in%20a%20Day/Source_Files/Data%20modeling%20start.pbit)
-    - You will need to update the WorkspaceId and DataflowId to those within your environment
+    - You will need to update the WorkspaceId and DataflowId to those within your workspace
