@@ -36,6 +36,7 @@ f you have already been assigned a trial user profile for this workshop, follow 
 1. In the global search bar in the middle of screen, type **Power BI** and click the result to continue.
     ![Search bar](./Media/SearchPowerBI.png)
 1. In the Power BI service, select the user profile in the top right corner and then click the **Start trial** option.
+    1. If prompted to **Start trial** in a new pop-up select **Start trial** to continue.
     ![Search bar](./Media/StartPPUTrial.png)
 
 ### Sample data
