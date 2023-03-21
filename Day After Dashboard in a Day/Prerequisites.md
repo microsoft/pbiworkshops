@@ -17,9 +17,26 @@ The following prerequisites and setup must be done for successful completion of 
 
 ### Trial tenant
 
-https://go.microsoft.com/fwlink/p/?LinkID=698279
+To create a trial tenant, please visit: https://go.microsoft.com/fwlink/p/?LinkID=698279
 
 [Microsoft 365 developer subscription in Visual Studio subscriptions](https://docs.microsoft.com/visualstudio/subscriptions/vs-m365)
+
+### Trial profile
+
+f you have already been assigned a trial user profile for this workshop, follow these steps:
+
+1. Open a **New InPrivate window** in your web browser by selecting the ellipses (**…**) and then **New InPrivate window**.
+    1.  Alternatively, you can use the keyboard shortcut **Ctrl+Shift+N**
+    ![InPrivate mode](./Media/IncognitoMode.png)
+1. Go to [Office.com](https://www.office.com) and select **Sign in**
+    ![Sign in](./Media/SignIn.png)
+1. Enter the assigned user name and password to sign into the account, and then select **Sign in**.
+    1. If prompted to **Stay signed in** select **Yes**.
+    ![Sign in demo user](./Media/SignInDemo.png)
+1. In the global search bar in the middle of screen, type **Power BI** and click the result to continue.
+    ![Search bar](./Media/SearchPowerBI.png)
+1. In the Power BI service, select the user profile in the top right corner and then click the **Start trial** option.
+    ![Search bar](./Media/StartPPUTrial.png)
 
 ### Sample data
 
