@@ -76,7 +76,7 @@ Learn more about [DirectQuery mode](https://docs.microsoft.com/power-bi/connect-
 ---
 
 <br>
-<font size="6">Optional: Event traces</font>
+<font size="6"><b>Optional: Event traces</b></font>
 
 One important item that was missing from our above query is the [Transact-SQL](https://docs.microsoft.com/learn/modules/introduction-to-transact-sql/) statement for the **Direct query** value. In order to trace this event we'll leverage [SQL Server Profiler](https://docs.microsoft.com/sql/tools/sql-server-profiler/sql-server-profiler) to view our event traces.
 
