@@ -57,6 +57,14 @@ To create a new dataflow from an existing model, we’ll follow these steps:
     https://raw.githubusercontent.com/microsoft/pbiworkshops/main/Day%20After%20Dashboard%20in%20a%20Day/Source_Files/Dataflow%20demo.json
     ```
 
+---
+
+<font size="6">✅ Lab check</font>
+
+By leveraging an existing dataflow model, we can easily import our Power Query queries and their associated metadata. Additionally, the dataflow model can be checked into source control to maintain version history.
+
+---
+
 ## Edit dataflow credentials
 
 Because the lab files are stored in a publicly accessible [GitHub repository](./Source_Files/), we will authenticate anonymously and skip our test connection to ensure that we can successfully connect to and ingest the lab data.
@@ -155,6 +163,12 @@ To edit the dataflow model and enable some global options, we’ll do the follow
 
 ---
 
+<font size="6">✅ Lab check</font>
+
+By configuring the Power Query Online environment, you can ensure that your development experience has rich capabilities to assist with auditing, data profiling, and visual step indicators such as folding indicators and step scripts in the UI menus.
+
+---
+
 ## Data view
 
 The Power Query Online editor is a user interface that allows us to create and edit queries, organize queries by grouping them or adding descriptions to each step, and view our queries and their structure in different ways.
@@ -212,6 +226,10 @@ Learn more about the [Power Query editor](https://docs.microsoft.com/power-query
 
     ![Query settings DimCustomer](./Media/QuerySettingsDimCustomer.png)
 
+---
+
+<font size="6">✅ Lab check</font>
+
 Now that our data is being ingested and stored in our dataflow's [Azure Data Lake Storage Gen2](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-introduction), we'll leverage [computed tables](https://docs.microsoft.com/power-query/dataflows/computed-entities-scenarios) to apply transformation logic via the enhanced compute engine.
 
 Learn more about the [Global search box](https://learn.microsoft.com/power-query/search-box)
@@ -221,9 +239,7 @@ Learn more about the [benefits of loading data without transformation for Text/C
 ---
 ## Diagram view
 
-Power Query Online lets us prepare data visually in the diagram view of the Power Query editor. This interface helps us easily view the flow of data, both at the query level and at the step level to better determine how our queries are connected and what data preparation steps we have applied to each query.
-
-Learn more about [diagram view](https://docs.microsoft.com/power-query/diagram-view).
+Power Query Online lets us prepare data visually in the diagram view of the Power Query editor.
 
 ---
 
@@ -290,11 +306,19 @@ To merge queries as a new query, we’ll do the following:
 
     ![DimProduct rename](./Media/DimProductRename.png)
 
+---
+
+<font size="6">✅ Lab check</font>
+
+The diagram view helps us easily view the flow of data, both at the query level and at the step level to better determine how our queries are connected and what data preparation steps we have applied to each query.
+
+Learn more about [diagram view](https://docs.microsoft.com/power-query/diagram-view).
+
+---
+
 ## Schema view
 
-Schema view helps us work on schema level operations by showing our query’s column information clearly. Schema view lets us shape our data structure with contextual interactions, and speed up our operations as it only needs the column metadata and not the full data results.
-
-Learn more about [Schema view](https://docs.microsoft.com/power-query/schema-view)
+Schema view helps us work on schema level operations by showing only our query’s column information in the editor.
 
 ---
 
@@ -374,6 +398,14 @@ To use the schema view and mark some columns as keys, we’ll do the following:
     ```
 
     ![Mark CustomerKey true](./Media/DimCustomerPK.png)
+
+---
+
+<font size="6">✅ Lab check</font>
+
+Schema view lets us shape our data structure with contextual interactions, and speed up our operations as it only needs the column metadata and not the full data results.
+
+Learn more about [Schema view](https://docs.microsoft.com/power-query/schema-view)
 
 ---
 
