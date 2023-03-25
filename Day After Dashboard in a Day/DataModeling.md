@@ -235,7 +235,7 @@ Learn more about [creating and managing relationships](https://docs.microsoft.co
 1. Back to the **Model** view, we'll link the tables below by dragging and dropping our fields and choosing the right settings in the **Edit relationship** window.
     1. We can also make relationships between tables by clicking the **Manage relationships** button on the **Home** tab and then **New...** option in the bottom left.
 
-    | Active | From: Table (field) | field | Cardinality | Assume referential integrity | Cross filter direction | 
+    | Active | From: Table (field) | To: Table (field) | Cardinality | Assume referential integrity | Cross filter direction | 
     | :----- |:----- | :------ | :----- | :----- | :----- |
     | ☑ | DimCustomer_raw (GeographyKey) | DimGeography_raw (GeographyKey) | Many to one (*:1) | ☑ | Single |
     | ☑ | DimEmployee (StoreKey) | DimStore (StoreKey) | Many to one (*:1) | ☑ | Both |
