@@ -798,4 +798,5 @@ And then complete the following:
 
 To download the completed Power BI destkop file:
 - [Power BI Desktop template file (PBIT)](https://github.com/microsoft/pbiworkshops/raw/main/Day%20After%20Dashboard%20in%20a%20Day/Source_Files/Data%20modeling%20start.pbit)
-    - You will need to update the WorkspaceId and DataflowId to those within your workspace
+    - You will need to supply the full URL for the dataflow from your web browser
+        - The full URL includes the workspace id (groups) and dataflow id (dataflows) within the string.
