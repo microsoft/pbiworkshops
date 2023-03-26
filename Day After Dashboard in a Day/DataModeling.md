@@ -802,7 +802,7 @@ To filter by the order date and the delivery date from our **Online Sales** tabl
     Total Sales By Delivery Date =
     CALCULATE (
         [Total Sales Amount],
-        USERELATIONSHIP ( DimDate[DateKey], FactOnlineSales[DeliveryDate] )
+        USERELATIONSHIP ( 'Calendar'[DateKey], 'Online Sales'[DeliveryDate])
     )
 
     ```
