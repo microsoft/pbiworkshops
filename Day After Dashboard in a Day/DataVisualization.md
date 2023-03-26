@@ -138,7 +138,7 @@ To optimize our report performance, we will use a single Table visual instead of
 
 1. Drag the **Table** visual from the **Visualizations** pane to the canvas and add the following measures to the table in this order:
     1. **Total Sales Amount**
-    1. **Total Items Discounts**
+    1. **Total Items Discounted**
     1. **Total Return Items**
     
     ![Table measures](./Media/TableMeasures.png)

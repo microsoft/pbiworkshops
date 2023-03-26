@@ -759,21 +759,35 @@ Learn more about [aggregate](https://learn.microsoft.com/power-bi/create-reports
 
 ---
 
-# Data Analysis Expressions
+# Data Analysis Expressions (DAX)
+
+DAX is a formula expression language used in Analysis Services, Power BI, and Power Pivot in Excel. DAX formulas include functions, operators, and values to perform advanced calculations and queries on data in related tables and columns in tabular data models.
+## SUM
+1. Right click the **Online Sales** table in the **Data** pane and select **New measure** and complete the formulas below.
+    
+
+    ![Sales new measure](./Media/SalesNewMeasure.png)
+
+1. In the formula bar, write the following DAX formulas:
+    1. **Note:** You'll need to follow the above instruction to create a new measure for each.
+
+    | Name | Measure |
+    | :-- | :-- |
+    | Total Sales Amount | SUM('FactOnlineSales'[SalesAmount]) |
+    | Total Items Discounted | SUM(FactOnlineSales[DiscountQuantity]) |
+    | Total Returned Items | SUM(FactOnlineSales[ReturnQuantity]) |
 
 ## SAMEPERIODLASTYEAR
 
-1. To finish our **[Total Sales SPLY]** measure, we need our **Calendar** table and our **DateKey** column.
+We need to compare sales from the previous year to the current time period. If there are no sales in the previous year, we should return a blank value.
 
-    In our **CALCULATE**, we want to change our filtering context, by the current period and then previous year.
+1. Right click the **Online Sales** table in the **Data** pane and select **New measure** and complete the formula below.
 
-    ```
-    CALCULATE([Total Sales Amount], SAMEPERIODLASTYEAR(Calendar[DateKey]))
-    ```
+    ![Sales new measure](./Media/SalesNewMeasure.png)
 
-    Completed formula below:
+1. In the formula bar, write this DAX formula with the **CALCULATE**, and **SAMEPERIODLASTYEAR** functions. Use a variable (**VAR**) and conditional logic (**IF**) to account for years where no sales data is available.
 
-    ```
+    ```powershell
     Total Sales SPLY = 
     VAR _hassalesdata =
         NOT ( ISBLANK ( [Total Sales Amount] ) )
@@ -785,7 +799,9 @@ Learn more about [aggregate](https://learn.microsoft.com/power-bi/create-reports
         )
     ```
 
-Learn more about [SAMEPERIODLASTYEAR](https://learn.microsoft.com/dax/sameperiodlastyear-function-dax)
+    The **SAMEPERIODLASTYEAR** function is a time intelligence function in DAX that returns a table that contains a column of dates shifted one year back in time from the dates in the specified dates column, in the current context.
+
+    Learn more about [SAMEPERIODLASTYEAR](https://learn.microsoft.com/dax/sameperiodlastyear-function-dax)
 
 
 ## USERELATIONSHIP
@@ -798,7 +814,7 @@ To filter by the order date and the delivery date from our **Online Sales** tabl
 
 1. In the formula bar, write this DAX formula with the **CALCULATE** and **USERELATIONSHIP** functions.
 
-    ```
+    ```powershell
     Total Sales By Delivery Date =
     CALCULATE (
         [Total Sales Amount],
@@ -807,10 +823,11 @@ To filter by the order date and the delivery date from our **Online Sales** tabl
 
     ```
 
-Learn more about [USERELATIONSHIP](https://docs.microsoft.com/dax/userelationship-function-dax)
+    The **USERELATIONSHIP** function is used to specify the relationship to be used in a specific calculation. When used, it temporarily activates the relationship between two tables for the duration of the calculation.
+    
+    Learn more about [USERELATIONSHIP](https://docs.microsoft.com/dax/userelationship-function-dax)
 
 ---
-
 # Security
 
 Row level security (RLS) in Power BI is a feature that allows you to restrict data access for certain users based on filters that you define within roles. For example, you can limit sales data to specific regions or departments.
