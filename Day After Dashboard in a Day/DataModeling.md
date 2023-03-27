@@ -587,12 +587,17 @@ DAX is a formula expression language used in Analysis Services, Power BI, and Po
 1. In the formula bar, write the following DAX formulas:
     1. **Note:** You'll need to follow the above instruction to create a new measure for each.
 
-    | Name | Measure |
-    | :-- | :-- |
-    | Total Sales Amount | SUM(FactOnlineSales[SalesAmount]) |
-    | Total Items Discounted | SUM(FactOnlineSales[DiscountQuantity]) |
-    | Total Returned Items | SUM(FactOnlineSales[ReturnQuantity]) |
+    ```powershell
+    Total Sales Amount = SUM(FactOnlineSales[SalesAmount])
+    ```
 
+    ```powershell
+    Total Items Discounted = SUM(FactOnlineSales[DiscountQuantity])
+    ```
+
+    ```powershell
+    Total Returned Items = SUM(FactOnlineSales[ReturnQuantity])
+    ```
 ## SAMEPERIODLASTYEAR
 
 We need to compare sales from the previous year to the current time period. If there are no sales in the previous year, we should return a blank value.
@@ -891,3 +896,18 @@ This part of the lab showed you how to use storage modes and modeling options in
 
 - Continue to the [Data Visualization](./DataVisualization.md) lab
 - Return to the [Day After Dashboard in a Day](./README.md) homepage
+
+# Completed files
+
+To download the completed files from the lab instructions:
+
+To download the completed Power BI destkop file:
+- [Power BI Desktop template file (PBIT)](https://github.com/microsoft/pbiworkshops/raw/main/Day%20After%20Dashboard%20in%20a%20Day/Source_Files/Data%20modeling%20end.pbit)
+    - You will need to supply the full URL for the dataflow from your web browser
+        - The full URL includes the workspace id (groups) and dataflow id (dataflows) within the string.
+        - For incremental refresh start and end times can be set to the following:
+    
+    | Name | Value |
+    |:----- |  :------ |
+    | RangeStart | 1/1/2020 |
+    | RangeEnd | 12/31/2022 |
