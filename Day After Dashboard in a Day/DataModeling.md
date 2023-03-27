@@ -575,6 +575,76 @@ Learn more about [incremental refresh](https://learn.microsoft.com/power-bi/conn
 
 ---
 
+# Data Analysis Expressions (DAX)
+
+DAX is a formula expression language used in Analysis Services, Power BI, and Power Pivot in Excel. DAX formulas include functions, operators, and values to perform advanced calculations and queries on data in related tables and columns in tabular data models.
+## SUM
+1. Right click the **FactOnlineSales** table in the **Data** pane and select **New measure** and complete the formulas below.
+    
+
+    ![Sales new measure](./Media/SalesNewMeasure.png)
+
+1. In the formula bar, write the following DAX formulas:
+    1. **Note:** You'll need to follow the above instruction to create a new measure for each.
+
+    | Name | Measure |
+    | :-- | :-- |
+    | Total Sales Amount | SUM(FactOnlineSales[SalesAmount]) |
+    | Total Items Discounted | SUM(FactOnlineSales[DiscountQuantity]) |
+    | Total Returned Items | SUM(FactOnlineSales[ReturnQuantity]) |
+
+## SAMEPERIODLASTYEAR
+
+We need to compare sales from the previous year to the current time period. If there are no sales in the previous year, we should return a blank value.
+
+1. Right click the **FactOnlineSales** table in the **Data** pane and select **New measure** and complete the formula below.
+
+    ![Sales new measure](./Media/SalesNewMeasure.png)
+
+1. In the formula bar, write this DAX formula with the **CALCULATE**, and **SAMEPERIODLASTYEAR** functions. Use a variable (**VAR**) and conditional logic (**IF**) to account for years where no sales data is available.
+
+    ```powershell
+    Total Sales SPLY = 
+    VAR _hassalesdata =
+        NOT ( ISBLANK ( [Total Sales Amount] ) )
+    RETURN
+        IF (
+            _hassalesdata,
+            CALCULATE ( [Total Sales Amount], SAMEPERIODLASTYEAR (DimDate[DateKey] ) ),
+            BLANK ()
+        )
+    ```
+
+    The **SAMEPERIODLASTYEAR** function is a time intelligence function in DAX that returns a table that contains a column of dates shifted one year back in time from the dates in the specified dates column, in the current context.
+
+    Learn more about [SAMEPERIODLASTYEAR](https://learn.microsoft.com/dax/sameperiodlastyear-function-dax)
+
+
+## USERELATIONSHIP
+
+To filter by the order date and the delivery date from our **FactOnlineSales** table, we need to use the USERELATIONSHIP function in DAX. This will activate the relationship between **DateKey** in **DimDate** table and **DeliveryDate** in **FactOnlineSales** table with this formula.
+
+1. Right click the **FactOnlineSales** table in the **Data** pane and select **New measure**.
+
+    ![Sales new measure](./Media/SalesNewMeasure.png)
+
+1. In the formula bar, write this DAX formula with the **CALCULATE** and **USERELATIONSHIP** functions.
+
+    ```powershell
+    Total Sales By Delivery Date =
+    CALCULATE (
+        [Total Sales Amount],
+        USERELATIONSHIP ( DimDate[DateKey], FactOnlineSales[DeliveryDate] )
+    )
+
+    ```
+
+    The **USERELATIONSHIP** function is used to specify the relationship to be used in a specific calculation. When used, it temporarily activates the relationship between two tables for the duration of the calculation.
+    
+    Learn more about [USERELATIONSHIP](https://docs.microsoft.com/dax/userelationship-function-dax)
+
+---
+
 # Model properties
 
 With the model properties pane in Power BI, you can see and change the properties of your data model items, such as tables, columns, and measures. You can use the model properties pane to rename, format, type, group, describe, and adjust your data model items. The model properties pane helps you to arrange and explain your data model, and to make it look and work better.
@@ -759,75 +829,6 @@ Learn more about [aggregate](https://learn.microsoft.com/power-bi/create-reports
 
 ---
 
-# Data Analysis Expressions (DAX)
-
-DAX is a formula expression language used in Analysis Services, Power BI, and Power Pivot in Excel. DAX formulas include functions, operators, and values to perform advanced calculations and queries on data in related tables and columns in tabular data models.
-## SUM
-1. Right click the **Online Sales** table in the **Data** pane and select **New measure** and complete the formulas below.
-    
-
-    ![Sales new measure](./Media/SalesNewMeasure.png)
-
-1. In the formula bar, write the following DAX formulas:
-    1. **Note:** You'll need to follow the above instruction to create a new measure for each.
-
-    | Name | Measure |
-    | :-- | :-- |
-    | Total Sales Amount | SUM('FactOnlineSales'[SalesAmount]) |
-    | Total Items Discounted | SUM(FactOnlineSales[DiscountQuantity]) |
-    | Total Returned Items | SUM(FactOnlineSales[ReturnQuantity]) |
-
-## SAMEPERIODLASTYEAR
-
-We need to compare sales from the previous year to the current time period. If there are no sales in the previous year, we should return a blank value.
-
-1. Right click the **Online Sales** table in the **Data** pane and select **New measure** and complete the formula below.
-
-    ![Sales new measure](./Media/SalesNewMeasure.png)
-
-1. In the formula bar, write this DAX formula with the **CALCULATE**, and **SAMEPERIODLASTYEAR** functions. Use a variable (**VAR**) and conditional logic (**IF**) to account for years where no sales data is available.
-
-    ```powershell
-    Total Sales SPLY = 
-    VAR _hassalesdata =
-        NOT ( ISBLANK ( [Total Sales Amount] ) )
-    RETURN
-        IF (
-            _hassalesdata,
-            CALCULATE ( [Total Sales Amount], SAMEPERIODLASTYEAR (Calendar[DateKey] ) ),
-            BLANK ()
-        )
-    ```
-
-    The **SAMEPERIODLASTYEAR** function is a time intelligence function in DAX that returns a table that contains a column of dates shifted one year back in time from the dates in the specified dates column, in the current context.
-
-    Learn more about [SAMEPERIODLASTYEAR](https://learn.microsoft.com/dax/sameperiodlastyear-function-dax)
-
-
-## USERELATIONSHIP
-
-To filter by the order date and the delivery date from our **Online Sales** table, we need to use the USERELATIONSHIP function in DAX. This will activate the relationship between **DateKey** in **Calendar** table and **DeliveryDate** in **Online Sales** table with this formula.
-
-1. Right click the **Online Sales** table in the **Fields** pane and select **New measure**.
-
-    ![Sales new measure](./Media/SalesNewMeasure.png)
-
-1. In the formula bar, write this DAX formula with the **CALCULATE** and **USERELATIONSHIP** functions.
-
-    ```powershell
-    Total Sales By Delivery Date =
-    CALCULATE (
-        [Total Sales Amount],
-        USERELATIONSHIP ( DimDate[DateKey], FactOnlineSales[DeliveryDate] )
-    )
-
-    ```
-
-    The **USERELATIONSHIP** function is used to specify the relationship to be used in a specific calculation. When used, it temporarily activates the relationship between two tables for the duration of the calculation.
-    
-    Learn more about [USERELATIONSHIP](https://docs.microsoft.com/dax/userelationship-function-dax)
-
----
 # Security
 
 Row level security (RLS) in Power BI is a feature that allows you to restrict data access for certain users based on filters that you define within roles. For example, you can limit sales data to specific regions or departments.
