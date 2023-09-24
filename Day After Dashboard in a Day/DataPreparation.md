@@ -10,113 +10,150 @@ In this part of the lab, our goal is to collect and combine daily files from a c
 First, we need to go to a new, empty or non-production workspace and check if it has a capacity assigned. If not, we can enable it by choosing one of these options below.
 
 1. To access the settings, we’ll click the **Settings** option in the top right corner of the workspace.
+    ![Workspace toolbar](./media/WorkspaceToolbar.png)
 
-    ![Settings selection](./Media/SettingsSelection.png)
-
-1. To check the licensing mode, within the **Settings** pane click the **Premium** tab. Then we’ll make sure one of the following modes is enabled.
+1. To check the licensing mode, within the **Settings** pane click the **Premium** tab. Then we’ll make sure one of the following modes is enabled before selecting our capacity within the **License capacity** drop down list and then **Apply** to save before selecting **X** to close the window.
 
     **License mode:**
-    - [Premium per user](https://docs.microsoft.com/power-bi/admin/service-premium-per-user-faq)
-    - [Premium per capacity](https://docs.microsoft.com/power-bi/admin/service-premium-gen2-faq)
-    - [Embedded](https://docs.microsoft.com/power-bi/developer/embedded/embedded-capacity)
+    - [Premium capacity](https://docs.microsoft.com/power-bi/admin/service-premium-gen2-faq)
+    - [Fabric capacity](https://learn.microsoft.com/fabric/enterprise/buy-subscription#buy-an-azure-sku)
+    - [Trial](https://learn.microsoft.com/fabric/get-started/fabric-trial)
+
+    1. Select your capacity within the **License capacity** drop down list.
+    1. Select **Apply** to continue and then the **X** in the top right corner of the window to close.
 
     ![License mode](./Media/LicenseMode.png)
 
-# Dataflows
+## Lakehouse storage
 
-With dataflows, you can connect, clean, transform and store data from various sources in a self-service way. Dataflows help you to:
+We'll start by creating a lakehouse, which is a data architecture platform for storing, managing, and analyzing structured and unstructured data in a single location. It is a flexible and scalable solution that allows organizations to handle large volumes of data using a variety of tools and frameworks to process and analyze that data.
 
-1. Share reusable transformation logic with others as a single source of truth.
-1. Protect the underlying data sources from direct access and reduce the load on the underlying systems.
-1. Connect other Azure services to the raw or transformed data by exposing it in your own Azure Data Lake Gen 2 storage (BYODL).
+Learn more about [lakehouses in Microsoft Fabric](https://learn.microsoft.com/fabric/data-engineering/lakehouse-overview)
+
+---
+
+1. With our workspace, select **New** and then **Show all**.
+
+    ![Show all items](./Media/ShowAllItems.png)
+
+2. In the **New** item creation screen, select **Lakehouse** under the Data Engineering category.
+
+    ![New lakehouse](./Media/NewLakehouse.png)
+
+3. Set the Lakehouse name to **SalesLakehouse**. Then select **Create**.
+
+    ![Name lakehouse](./Media/NameLakehouse.png)
+
+4. Once you're in the Lakehouse editor, select **New Dataflow Gen2**.
+
+    - **Important Note**: You can also select *Get data* from the ribbon and then New Dataflow Gen2.
+
+    ![New Dataflow Gen2](./Media/NewDataflowGen2.png)
+
+# Dataflow Gen2
+
+With dataflows, we can connect, clean, transform and store data from various sources in a self-service way. Dataflows help by:
+
+1. Sharing reusable transformation logic with others as a single source of truth.
+1. Protecting the underlying data sources from direct access and reduce the load on the underlying systems.
+1. Connecting other Azure services to the raw or transformed data by exposing it in OneLake or other data destination outputs.
 
 [Learn more about dataflows and self-service data prep](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-introduction-self-service)
 
 ---
 
-## Import dataflow model
+## Import a Power Query template
 
-In this part of the lab, we’ll start with an existing dataflow model and skip the basic steps of getting data from a CSV file. Instead, we’ll focus on more advanced transformation patterns.
+In this part of the lab, we'll use an existing [Power Query template](https://learn.microsoft.com/power-query/power-query-template) file and skip the basic steps of getting data from a CSV file. Instead, we’ll focus on more advanced capabilities.
 
-After we import and refresh our dataflow model, we can use it across other Microsoft products and services. The dataflow model has semantic information such as table names, column names, metadata descriptions and more in a [metadata file (model.json)](https://docs.microsoft.com/common-data-model/model-json) format.
+Once our Power Query template file has been imported and refreshed it will enable discovery across other Microsoft products and services (Excel and Power Apps).
 
+1. In the Power Query Online editor for Dataflows Gen2, select **Import from a Power Query template**
 
-To create a new dataflow from an existing model, we’ll follow these steps:
+    ![Impower Power Query template file](./Media/ImportPQT.png)
 
-1. Click **New** in the top left corner of the workspace and choose the Dataflow option.
-    
-    ![New Dataflow](./Media/NewDataflow.png) 
+1. Paste the file path below in the **File name** filed and select **Open** to continue.
 
-1. On the Start creating your dataflow screen, select the **Import Model** option.
-    
-    ![Import Model](./Media/ImportModel.png)
-
-1. Enter the url of the dataflow json file that we want to import into the pop-up window.
-
-    ```
-    https://raw.githubusercontent.com/microsoft/pbiworkshops/main/Day%20After%20Dashboard%20in%20a%20Day/Source_Files/Dataflow%20demo.json
+    ```text
+    https://github.com/microsoft/FabricCAT/raw/main/Day%20After%20Dashboard%20in%20a%20Day/Source_Files/OnlineSalesDataflow.pqt
     ```
 
----
+    ![Open PQT](./Media/OpenPQT.png)
+
+1. In the top left corner, select the Dataflow name (this title may differ) and update the **Name** field to **OnlineSalesDataflow**.
+    - **Important note:** You can also set the Sensitvity label on this screen if you have Microsoft Information Protection in your organization.
+
+    ![Dataflow name](./Media/DataflowName.png)
 
 <font size="6">✅ Lab check</font>
 
-By leveraging an existing dataflow model, we can easily import our Power Query queries and their associated metadata. Additionally, the dataflow model can be checked into source control to maintain version history.
+By leveraging an existing Power Query template, we can easily import and export our Power Query queries and their associated metadata.
+
+## Disable query staging
+
+There are various components of the Dataflow Gen2 architecture, including the Lakehouse item used to stage data being ingested, and Warehouse item used as a compute engine and means to write back results to staging or supported output destinations faster. When warehouse compute cannot be used, or when staging is disabled for a query, the mashup engine will extract, transform, or load the data to staging or a destination.
+
+Learn more about the [Dataflow Gen2 engine](https://blog.fabric.microsoft.com/blog/data-factory-spotlight-dataflows-gen2/#:~:text=The%20Dataflow%20Gen2%20Engine)
 
 ---
 
-## Edit dataflow credentials
+Because the lab files are stored in a publicly accessible [GitHub repository](./Source_Files/), we will authenticate anonymously and ensure that we can successfully connect to and ingest the lab data.
 
-Because the lab files are stored in a publicly accessible [GitHub repository](./Source_Files/), we will authenticate anonymously and skip our test connection to ensure that we can successfully connect to and ingest the lab data.
+1. Click the **Configure connection** button from the yellow banner.
 
-To configure the data source credentials for the imported dataflow, we’ll do the following after the import is done:
+    ![Configure credentials](./Media/ConfigureConnection.png)
 
-1. Click the **Edit credentials** button in the toast notification at the top right.
-    1. Or, in the workspace, click the vertical ellipses ( ⋮ ) next to the dataflow name and choose the **Settings** option.
+1. In the **Connect to data source** window, select **Anonymous** from the **Authentication kind** drop down and then click **Connect**.
 
-    ![Edit credentials](./Media/EditCredentials.png)
+    ![Connect to data source](./Media/ConnectToDataSource.png)
 
-1. On the Settings page for the dataflow, expand the **Data source credentials** section and click the **Edit credentials** link next to the Web source.
+1. In the **Queries** pane, right-click each of the queries listed below and deselect the **Enable staging** option.
 
-    1. In the **Configure…** dialog window, enter the following values and click **Sign in** once complete:
-        1. Authentication method | **Anonymous**
-        1. Privacy level setting for this data source | **Public**
-            1. For more information, see [Power Query privacy level settings](https://docs.microsoft.com/power-bi/admin/desktop-privacy-levels#configure-a-privacy-level)
-        1. ☑️ Skip test connection
+    | Table |
+    | :---- |
+    | DimEmployee |
+    | DimDate |
+    | DimStore |
 
-    ![Configure credentials](./Media/ConfigureCredentials.png)
+    ![Disable staging](./Media/DisableStaging.png)
 
-## Enhanced compute engine settings
+1. In the bottom right corner click the chevron next to **Publish**. The **Publish** or **Publish now** options are the default behavior that will publish and refresh your dataflow. Alternatively, the **Publish later** to only publish the metadata and underlying formula logic of your dataflow. Select the **Publish** option to save and close your dataflow and start the refresh.
 
-Power BI Premium users can use the enhanced compute engine in Power BI to optimize dataflows with their capacity.
+    ![Publish later](./Media/PublishLater.png)
 
-The enhanced compute engine helps you to:
+1. After publishing the dataflow and the refresh has completed, select the ellipses **(…)** next to the OnlineSalesDataflow item within the workspace. Then select **Refresh history**.
 
-1. Save refresh time for long-running ETL steps over computed tables, such as joins, distinct, filters, and group by.
-1. Run DirectQuery queries over tables.
+    ![Refresh history](./Media/RefreshHistory.png)
 
-[Learn more about the enhanced compute engine](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-premium-features?tabs=gen2)
+1. Within the Refresh history window, select the refresh under the **Start time** to drill into the refresh details.
 
-To enable the enhanced compute engine for the dataflow, we’ll follow these steps:
+    ![Refresh history start time](./Media/RefreshHistoryStartTime.png)
 
-1. On the **Settings** page for the dataflow, go to the **Enhanced compute engine settings** section and switch the setting to **On**. Then click the **Apply** button to save the change.
+1. In the Details page we can wiew the Tables and Activities that occurred within our dataflow. Once done, select the **X** in the top right corner to close.
+    - **Important note:** Selecting the text will drill into more details including timings, endpoints, the engine used and more.
 
-    ![Enhanced compute engine settings.](./Media/EnhancedComputeEngineSettings.png)
+    ![Refresh details](./Media/RefreshDetails.png)
 
-1. In the workspace, click the **Refresh now** option next to the dataflow to apply the change and refresh the data.
+## View lakehouse tables
 
-    ![Refresh now.](./Media/RefreshNow.png)
+1. In the Workspace select the eppises **(...)** next to the **Lakehouse** item called **SalesLakehouse** and choose the **View details** option.
+    
+    ![View Lakehouse details](./Media/ViewDetailsLakehouse.png)
 
----
+1. In the **Lakehouse** details page we can view the SQL connection string which allows us to use external tools like [Azure Data Studio](https://azure.microsoft.com/products/data-studio/) or [SQL Server Management Studio](https://learn.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16) to explore lakehouses and query the data. Additional information like downstream items and their Relation to the lakehouse for lineage are also include. Let's select **Open** to continue.
 
-<font size="6">✅ Lab check</font>
+    ![Open lakehouse](./Media/OpenLakehouse.png)
 
-To use DirectQuery with our dataflows in the Data Modeling lab, we need to do these steps:
+1. To view the **Tables** created from our Datalfow Gen2 in the object explorer, select any of the tables from the list (ex. select DimDate). These tables are created using the Delta Lake format (a parquet file format) which are optimized for analytics and have been optimized using [V-Order](https://learn.microsoft.com/fabric/data-engineering/delta-optimization-and-v-order?tabs=sparksql) that enables lightning-fast reads under the Microsoft Fabric compute engines, such as Power BI, SQL, Spark and others. 
 
-- Turn **On** the enhanced compute engine in dataflow settings
-- **Refresh** the dataflow before using it in DirectQuery mode
+    Once done, we’ll return to the Workspace view by selecting our workspace from the side-rail on the left.
+    - **Important note:** If you do not see your tables or they are undefined, select the **Refresh** option in the top left of the Lakehouse explorer.
 
-Learn more about [Using DirectQuery with dataflows](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-directquery#configuration)
+    ![Lakehouse view](./Media/LakehouseView.png)
+
+1. In the Workspace select the eppises **(...)** next to the **Dataflow Gen2** item called **OnlineSalesDataflow** and choose the **Edit** option.
+
+    ![Lakehouse view](./Media/EditDataflowEntry.png)
 
 ---
 # Power Query Online
@@ -127,45 +164,42 @@ Now that we have imported our dataflow and set our credentials, we’ll adjust s
 
 ---
 
-To edit the dataflow model and enable some global options, we’ll do the following:
-
-1. In the group workspace, click the ellipses (…) next to the dataflow name and choose the **Edit** option.
-
-    ![Edit dataflow](./Media/EditDataflow.png)
-
-1. In the top right, click the **Edit tables** option to go to the Power Query Online experience.
-
-    ![Edit tables](./Media/EditTables.png)
-
-1. On the **Home** tab, click the **Options** > **Global options** property.
+1. From the **Home** tab, select the **Options** > **Global options** property.
 
     ![Global options](./Media/GlobalOptions.png)
- 
-1. In the **Global options** window, make sure the following settings are enabled and click **OK** to confirm.
+
+1. Within the **Global options** windows **General** section ensure the following settings are enabled.
 
     **Steps**
-    1. Enable query folding indicators
-    1. Show script in step callout
+    - Enable step cost indicators
+    - Show script in step callout
 
     **Column profile**
-    1. Enable column profile
-    1. Show column quality details in data preview
-    1. Show column value distribution in data preview
-    1. Show column profile in details pane
+    - Enable column profile
+    - Show column value distribution in data preview
+    - Show column value distribution in data preview
+    - Show column profile in details pane
 
-    **Type detection**
-    1. Never detect column types and headers for unstructured sources
+    **Column profile evaluation**
+    - Based on top 1,000 rows
+    
+    **Data view**
+    - Enable details pane
+    - Show whitespace and newline characters
 
     **Parameters**
-    1. Always allow parameterization in data source and transformation dialogs
+    - Always allow parameterization in data source and transformation dialogs
 
     ![Global options window](./Media/GlobalOptionsWindow.png)
 
----
+
+1. Now select the **Data load** group and from the **Type detection** select **Never detect column types and headers for unstructured sources**. Select **OK** once complete.
+
+    ![Global options data load](./Media/GlobalOptionsDataLoad.png)
 
 <font size="6">✅ Lab check</font>
 
-By configuring the Power Query Online environment, you can ensure that your development experience has rich capabilities to assist with auditing, data profiling, and visual step indicators such as folding indicators and step scripts in the UI menus.
+By configuring the Power Query Online environment, you can ensure that your development experience has rich capabilities to assist with auditing, data profiling, and visual cue indicators such as folding indicators and step scripts in the UI menus.
 
 ---
 
@@ -188,37 +222,28 @@ Learn more about the [Power Query editor](https://docs.microsoft.com/power-query
     ![Reference query](./Media/DimCustomerReference.png)
 
 1. If we inspect the **Queries** pane again we'll now notice that a new query titled **DimCustomer_raw (2)** has now been created, with a lightning bolt icon (⚡) indicating that this is a computed table.
-    
-    This query will leverage the enhanced compute engine which can drastically reduces refresh time required for long-running data preparation steps - such as performing joins between tables.
-    
+
+    This query will leverage the Dataflow Gen2 compute engine which can drastically reduces refresh time required for long-running data preparation steps - such as performing joins between tables.
+
     ![Computed table](./Media/ComputedTable.png)
 
 1. With the **DimCustomer_raw (2)** query selected, we'll leverage the global search bar to type the text **merge** and select the **Merge queries** action.
 
     ![Computed table](./Media/MergeQueriesDimCustomer.png)
 
-1. In the **Merge** window complete the following steps and then select **OK** when complete.
+1. In the **Merge** window complete the following instructions below and then select **OK** when complete.
 
-    | Merge | Table | Column |
-    | :--- | :---- | :--- | 
-    | Left table for merge | DimCustomer_raw (2) | GeographyKey |
-    | Right table for merge | DimGeography_raw | GeographyKey |
+    | Merge | Table |
+    | :--- | :---- |
+    | Left table for merge | DimCustomer_raw (2) |
+    | Right table for merge | DimGeography_raw |
 
+    1. In the top right a light bulb indicator suggests that a match exists based on the shared columns from each table. Select light bulb and choose the option for the **GeographyKey** match.
     1. Set the **Join kind** to **Inner**
 
     ![Computed table](./Media/DimCustomerDimGeography.png)
 
 1. Within the data view, navigate to the **DimGeography_raw** column and select the **Expand** icon. Deselect the **GeographyKey** since we this column already exists in our original query and then select **OK**.
-
-    ![Expand DimGeography](./Media/ExpandDimGeography.png)
-
-1. From the **Home** tab select the drop down next to **Choose columns** and then the **Go to column** option (Shorcut: Ctrl+G). 
-
-    Within the search dialog type the column name **GeographyKey** until a result has been returned, you can then either double click the name or press **OK** to continue.
-
-    ![Go to column](./Media/GoToColumn.png)
-
-1. With the **GeographyKey** selected (highlighted) in the data view, right click the column and select **Remove columns**.
 
     ![Remove GeographyKey](./Media/RemoveGeographyKey.png)
 
@@ -226,16 +251,15 @@ Learn more about the [Power Query editor](https://docs.microsoft.com/power-query
 
     ![Query settings DimCustomer](./Media/QuerySettingsDimCustomer.png)
 
----
-
 <font size="6">✅ Lab check</font>
 
-Now that our data is being ingested and stored in our dataflow's [Azure Data Lake Storage Gen2](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-introduction), we'll leverage [computed tables](https://docs.microsoft.com/power-query/dataflows/computed-entities-scenarios) to apply transformation logic via the enhanced compute engine.
+Now that our data is being ingested and stored in our Lakehouse, we'll leverage [computed tables](https://docs.microsoft.com/power-query/dataflows/computed-entities-scenarios) to apply transformation logic via the enhanced compute engine.
 
 Learn more about the [Global search box](https://learn.microsoft.com/power-query/search-box)
 
 Learn more about the [benefits of loading data without transformation for Text/CSV files](https://docs.microsoft.com/power-query/dataflows/computed-entities-scenarios#load-data-without-transformation-for-textcsv-files)
 
+---
 ---
 ## Diagram view
 
@@ -255,11 +279,12 @@ To merge queries as a new query, we’ll do the following:
 
 1. In the Merge window, follow these steps and then click **OK** to confirm.
 
-    | Merge | Table | Column |
-    | :--- | :---- | :--- | 
-    | Left table for merge | DimProduct_raw | ProductSubcategoryKey |
-    | Right table for merge | DimProductSubcategory_raw | ProductSubcategoryKey |
+    | Merge | Table |
+    | :--- | :---- |
+    | Left table for merge | DimProduct_raw |
+    | Right table for merge | DimProductSubcategory_raw |
 
+    1. In the top right a light bulb indicator suggests that a match exists based on the shared columns from each table. Select light bulb and choose the option for the **ProductSubcategoryKey** match.
     1. Set the **Join kind** to **Inner**
 
     ![Merge DimProductSubcategory](./Media/MergeDimProductSubcategory.png)
@@ -286,14 +311,15 @@ To merge queries as a new query, we’ll do the following:
 
 1. In the **Merge** window, follow these steps and then click **OK** to confirm.
 
-    | Merge | Table | Column |
-    | :--- | :---- | :--- | 
-    | Left table for merge | (Current) | ProductCategoryKey |
-    | Right table for merge | DimProductCategory_raw | ProductCategoryKey |
+    | Merge | Table |
+    | :--- | :---- | 
+    | Left table for merge | (Current) |
+    | Right table for merge | DimProductCategory_raw |
 
+    1. In the top right a light bulb indicator suggests that a match exists based on the shared columns from each table. Select light bulb and choose the option for the **ProductSubcategoryKey** match.
     1. Set the **Join kind** to **Inner**
 
-    ![Merge left outer](./Media/MergeLeftOuter.png)
+    ![Merge ProductCategory_raw](./Media/MergeProductCategory.png)
 
 1. In the top right of the **DimProductCategory_raw** column - we'll select the expand columns icon and complete the following steps below:
     1. Deselect all columns except **ProductCategoryName**.
@@ -330,74 +356,25 @@ To use the schema view and mark some columns as keys, we’ll do the following:
 
 1. Click the **DimProduct** query and follow these steps:
 
-    1. In the schema list, click the **ProductSubcategoryKey** and **ProductCategoryKey** column names and on the **Schema tools** tab, click the **Remove columns** option.
-    
-    **Note:** We can maximize or minimize the view by clicking the chevrons next to the formula bar.
+    1. In the schema list, click the following column names listed below and either select the ellipses **(...)** or right click the **Remove columns** option for any any step selected.
 
-    ![Remove columns](./Media/RemoveColumns.png)
+    **Important note:** We can maximize or minimize the view by clicking the chevrons next to the formula bar.
 
-1. Click the **DimProduct_raw** query and follow these steps:
-    1. In the schema list, click the **ProductSubcategoryKey** column name and on the **Schema tools** tab, click the **Mark as key** option.
-    
-    ![Mark ProductSubcategoryKey](./Media/ProductSubcategoryKeyFalse.png)
-    
-    2. In the schema list, click the **ProductKey** column name and on the **Schema tools** tab, click the **Mark as key** option.
+    | Column |
+    | :--- |
+    | ClassID |
+    | StyleID |
+    | ColorID |
+    | WeightUnitMeasurementID |
+    | UnitOfMeasureID |
+    | StockTypeID |
+    | ProductCategoryKey |
 
-    1. In the formula bar, change the [Table.AddKey()](https://docs.microsoft.com/powerquery-m/table-addkey) isPrimary value from false to **true**.
-    
-    ``` powerquery-m
-    Table.AddKey(#"Marked key columns", {"ProductKey"}, true)
-    ```
+    ![Remove columns](./Media/RemoveSchemaView.png)
 
-    ![Mark ProductKey true](./Media/DimProductPK.png)
+1. Now that we're finished adjusting our queries schema navigate to **Schema tools** tab and select **Close schema view** to return to the data view.
 
-1. Click the **DimProductSubcategory_raw** query and follow these steps:
-    1. In the schema list, click the **ProductCategoryKey** column name and navigate to the **Schema tools** tab and select the **Mark as key** option.
-
-    ![Mark ProductCategory foreign key](./Media/ProductCategoryFK.png)
-
-    2. In the schema list, click the **ProductSubcategoryKey** column name and on the **Schema tools** tab, click the **Mark as key** option.
-    3. In the formula bar, change the Table.AddKey() isPrimary value from false to **true**.
-
-    ``` powerquery-m
-    Table.AddKey(#"Marked key columns", {"ProductSubcategoryKey"}, true )
-    ```
-
-    ![Mark ProductSubcategoryKey](./Media/ProductSubcategoryKey.png)
-
-1. Click the **DimProductCategory_raw** query and follow these steps:
-    1. In the schema list, click the **ProductCategoryKey** column name and navigate to the **Schema tools** tab and select the **Mark as key** option.
-    1. Within the formula bar, update the [Table.AddKey()](https://docs.microsoft.com/powerquery-m/table-addkey) **isPrimary** value from **false** to **true**.
-    
-    ``` powerquery-m
-    Table.AddKey(#"Changed column type", {"ProductCategoryKey"}, true)
-    ```
-
-    ![Mark ProductCategoryKey true](./Media/ProductCategoryKeyTrue.png)
-
-1. Click the **DimGeography_raw** query and follow these steps:
-    1. In the schema list, click the **GeographyKey** column name and navigate to the **Schema tools** tab and select the **Mark as key** option.
-    1. Within the formula bar, update the [Table.AddKey()](https://docs.microsoft.com/powerquery-m/table-addkey) **isPrimary** value from **false** to **true**.
-
-    ``` powerquery-m
-    Table.AddKey(#"Changed column type", {"GeographyKey"}, true)
-    ```
-    
-    ![Mark GeographyKey true](./Media/GeographyKeyTrue.png)
-
-1. Click the **DimCustomer_raw** query and follow these steps:
-    1. In the schema list, click the **GeographyKey** column name and navigate to the **Schema tools** tab and select the **Mark as key** option.
-
-    ![Mark GeographyKey as key](./Media/DimCustomerFK.png)
-
-    1. In the schema list, click the **CustomerKey** column name and navigate to the **Schema tools** tab and select the **Mark as key** option.
-    1. Within the formula bar, update the [Table.AddKey()](https://docs.microsoft.com/powerquery-m/table-addkey) **isPrimary** value from **false** to **true**.
-
-    ``` powerquery-m
-    Table.AddKey(#"Marked key columns", {"CustomerKey"}, true )
-    ```
-
-    ![Mark CustomerKey true](./Media/DimCustomerPK.png)
+    ![Close schema view](./Media/CloseSchemaView.png)
 
 ---
 
@@ -409,7 +386,7 @@ Learn more about [Schema view](https://docs.microsoft.com/power-query/schema-vie
 
 ---
 
-## Applied step identifiers
+## Applied step icons
 
 Identifiers are names given to elements in a program like variables, functions etc. Identifiers can either be regular identifiers or quoted identifiers.
 
@@ -417,68 +394,22 @@ Learn more about [Environments and variables](https://docs.microsoft.com/powerqu
 
 ---
 
-To insert a step and get a list of the column names to be filtered out in our table, we’ll do the following:
+1. In the Query settingspane Applied steps, right click the **Removed columns** step and click **Properties**.
 
-1. Go back to the query titled **DimProduct** and click the **Fx** button next to the formula bar to **Insert step**
+    ![Step properties documentation](./Media/StepProperties.png)
 
-    ![Insert step](./Media/MergeInsertStep.png)
+1. In the **Step properties** window, enter the following text below into the **Description** field and select **OK** once complete.
+    - **Important note:** A **(ℹ️)** icon will be displayed next to the step indicating a description has been added.
 
-To get a list of the column names in our table, we’ll follow these steps:
-
-1. In the formula bar, put the current **#“Removed columns”"** identifier value inside the [Table.ColumnNames()](https://docs.microsoft.com/powerquery-m/table-columnnames) function as shown below.
-1. Press **Enter** to finish the formula, and then click the Switch to data preview to see our results.
-
-    ``` powerquery-m
-    Table.ColumnNames(#"Removed columns")
+    ```text
+    Removed ProductCategoryKey and all ID columns.
     ```
 
-    ![Table column names](./Media/TableColumnNames.png)
+    ![Step properties](./Media/StepDescription.png)
 
-To filter out any value from our list that has the text “ID” in the column name, we’ll do the following:
+1. Hover above the **Removed columns** step to view details like the step name, transformation type, description, step folding indicator and formula script.
 
-1. Click the **Fx** button next to the formula bar to **Insert step** and write the following formula below using the [List.Select()](https://docs.microsoft.com/powerquery-m/list-select) and [Text.Contains()](https://docs.microsoft.com/powerquery-m/text-contains) functions and the **not** [keyword](https://docs.microsoft.com/powerquery-m/m-spec-lexical-structure#keywords).
-
-    ``` powerquery-m
-    List.Select( Custom , each not Text.Contains( _ , "ID", Comparer.Ordinal ) )
-    ```
-
-    ![List not ID](./Media/ListNotID.png)
-
-1. In the **Query settings** pane **Applied steps**, right click the **Custom** step and click **Rename** and change the current value from **Custom** to **Get column names**.
-
-    ![Get column names](./Media/GetColumnNamesStep.png)
-
-1. In the **Query settings** pane **Applied steps**, right click the **Custom 1** step, click **Properties** and change the following values: **Name:** Select non-ID columns - and - **Description:** Select only columns where the text ID does not exist. Click **OK** once complete.
-
-    ![Step properties documentation](./Media/StepPropertiesDocumentation.png)
-
-1. In the **Applied steps** list, we notice an information icon now. If we hover over this icon we can see our step description and our step formula in the **Script** field. This helps us understand the transformation we did at a glance.
-
-    ![Remove ID information](./Media/RemoveIDInformation.png)
-
-1. To select the non-ID table columns, we'll click the **Fx** button next to the formula bar to **Insert step** and write the following formula.
-
-    ``` powerquery-m
-    Table.SelectColumns( #"Removed columns", #"Select non-ID columns" )
-    ```
-
-    ![Table select columns](./Media/TableSelectColumns.png)
-
-1. In the **Applied steps** list, right click **Custom** and update the title to **Select columns**.
-
-    ![Table select columns](./Media/RenameTableSelect.png)
-
-To review the visual flow of our queries and steps, we’ll go back to the **Diagram view** and do the following:
-
-1. Click the **Expand** option in the top right of the **DimProduct** query. Here we can see the following:
-    1. The **DimProductCategory_raw** and **DimProductSubcategory_raw** tables both have Key columns in them.
-    1. The **DimProduct** table has two separate branches starting from the **Removed columns** step identifier.
-        1. One branch is for the **Get column names** and **Select non-ID columns** steps.
-        1. The other branch is to combine the original **Removed columns** with the **Select non-ID columns** to get our final query result.
-
-Step identifiers are like variables that we can use throughout our query steps to create more advanced and custom solutions that may not follow the linear order of the **Applied steps** list.
-
-![DiagramViewIdentifiers](./Media/DiagramViewIdentifiers.png) 
+    ![Step properties](./Media/StepHover.png)
 
 ---
 
@@ -490,13 +421,13 @@ Learn more about [query plan](https://docs.microsoft.com/power-query/query-plan)
 
 ---
 
-To view the query plan for the Expanded DimProductCategory_raw step, we’ll do the following:
+To view the query plan for the Removed columns step, we’ll do the following:
 
-1. In the **Query settings** pane on the right, we’ll right click the **Select columns** step and click the **View query plan** option.
+1. In the **Query settings** pane on the right, we’ll right click the **Removed columns** step and click the **View query plan** option.
 
     ![View query plan](./Media/ViewQueryPlan.png)
 
-1. In the **Query plan** window, we’ll click the inner joined **Table.Join** Full scan and then click the View details to see what join algorithm is being used. We’ll click **Close** when we are done.
+1. In the **Query plan** window, we can click any of the **Table.Join** and the **View details** to understand what join algorithm is being used. We’ll click **Close** when we are done.
 
     ![Join algorithm](./Media/JoinAlgorithm.png)
 
@@ -517,30 +448,17 @@ The advanced editor in Power Query is a tool that lets you see and edit the code
     ![Query script](./Media/QueryScript.png)
 
 1. Select **Invoke** to create a new query.
+    - **Important note:** To adjust the code block you can drag up or down on the bottom of the editor.
 
     ![Invoke function](./Media/InvokeFunction.png)
 
-1. Select the **Invoked funciton** query.
-
-    ![Invoke function](./Media/InvokeFunctionQuery.png)
-
-1. Press **Ctrl+A** to select all columns. Go to the **Transform** tab and click **Detect data type** to change the current columns [any](https://docs.microsoft.com/power-query/data-types) value (ABC123) automatically. Some columns may not have the appropriate type, so follow these steps:
-
-    ![Detect data type](./Media/DetectDataType.png)
-
-    1. Shift-select **ReturnAmount** and **ReturnQuantity**. Right-click and go to **Change type** > **Whole number**.
-        1. If a **Change column type** prompt occurrs, select **Replace current**
-
-    ![Return type](./Media/ReturnTypes.png)
-
-    1. Shift-select the **DateKey** and **DeliveryDate**. Right-click and go to **Change type** > **Date**.
-        1. If a **Change column type** prompt occurrs, select **Replace current**
-
-    ![Return type](./Media/DateKeyDateType.png)
-
-1. In the **Query settings** pane, rename the query as **FactOnlineSales**.
+1. In the **Query settings** pane, right click the **Invoked function** query and select **Rename**.
 
     ![Query name](./Media/QueryName.png)
+
+1. Update the name of the query to **FactOnlineSales**.
+
+    ![FactOnlineSales](./Media/FactOnlineSales.png)
 
 ---
 
@@ -558,10 +476,10 @@ When we have many tables in our solutions, it can be hard to keep track of their
 
     ![Query name](./Media/StagingGroup.png)
 
-    1. In the **New group** window, enter **Data staging** as the name and the following text as the Description. Then, click **Ok**.
+    1. In the **New group** window, type **Data staging** as the Name and the text below as the Description. Then, click **Ok**.
 
-        ```
-        Data that will be ingested from the source and referenced in computed tables for transformations via the enhanced compute engine.
+        ```text
+        Data that will be ingested from the source and referenced in computed tables for transformations via compute engines.
         ```
     
         ![New group](./Media/NewGroup.png)
@@ -574,9 +492,9 @@ When we have many tables in our solutions, it can be hard to keep track of their
 
     ![Query name](./Media/NewGroupDataLoad.png)
 
-    1. In the **New group** window, enter **Data load** as the name and the following text as the Description. Then, click **Ok**.
+    1. In the **New group** window, type **Data load** as the Name and the text below as the Description. Then, click **Ok**.
 
-        ```
+        ```text
         Data that will be ingested from the source without transformations.
         ```
 
@@ -592,8 +510,8 @@ When we have many tables in our solutions, it can be hard to keep track of their
 
     1. In the **New group** window, enter **Data transformation** as the name and the following text as the Description. Then, click **Ok**.
 
-        ```
-        Data that will be ingested from the data lake storage for transformations via the enhanced compute engine.
+        ```text
+        Data that will be ingested from the lake storage for transformations via compute engines.
         ```
 
      ![New group](./Media/GroupDescriptionTransformation.png)
@@ -607,161 +525,26 @@ When we have many tables in our solutions, it can be hard to keep track of their
 
 Transforming data at scale
 
-Now that our data is being ingested and stored in a [Azure Data Lake Storage Gen2](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-introduction), we'll leverage [computed tables](https://docs.microsoft.com/power-query/dataflows/computed-entities-scenarios) to apply transformation logic via the enhanced compute engine.
-
 [Learn more about the benefits of loading data without transformation for Text/CSV files](https://docs.microsoft.com/power-query/dataflows/computed-entities-scenarios#load-data-without-transformation-for-textcsv-files)
 
 ---
 ## Saving and refreshing a dataflow
 
-1. Click **Save & close** in the bottom right corner to leave the Power Query editor.
+1. In the bottom right corner click **Publish** to save and refresh the final dataflow.
+    - Reminder: **Publish later** will only publish the metadata and underlying formula logic of your dataflow. **Publish** will save and close your dataflow and start the refresh.
 
-    ![Save & close](./Media/SaveClose.png)
-
-1. Click **Close** in the top right corner to leave the current dataflow.
-
-    ![Close](./Media/Close.png)
-
-1. In the workspace, click **Refresh now** on the dataflow to load the labs data and apply the transformation logic.
-
-    ![Refresh now.](./Media/RefreshNow.png)
+    ![Publish](./Media/PublishLater.png)
 
 ---
 
-# Power Query Desktop
+# Pipelines
 
-## Query folding
+## Activities
 
-Query folding is the ability for a Power Query query to generate a single query statement to retrieve and transform source data. The Power Query mashup engine strives to achieve query folding whenever possible for reasons of efficiency.
 
-[Learn more about query folding](https://docs.microsoft.com/power-query/power-query-folding)
 
 ---
 
-1. Open **Power BI Desktop** and click **Get data** on the **Home** tab. In the **Get dialog** window, go to the **Power Platform** section and choose the **Dataflows** connector. Click **Connect** to go to the Dataflows navigator window.
-
-    ![Power Platform dataflows.](./Media/ppDataflows.png)
-
-1. In the **Navigator** window, find the group Workspace where the dataflow is stored and select all the tables from the list below in the dataflow. Then, click **Transform Data** to proceed.
-
-    | Table |
-    | :---- |
-    | DimDate |
-    | DimEmployee |
-    | DimStore |
-    | DimCustomer_raw |
-    | DimGeography_raw |
-    | DimProduct_raw |
-    | DimProductCategory_raw |
-    | DimProductSubcategory_raw |
-    | FactOnlineSales |
-
-    ![Get dataflow tables.](./Media/getDataDataflow.png)
-
-1. Go to the **DimCustomer_raw** table, hold the **shift** key and select the **FirstName**, **MiddleName** and **LastName** columns. Right click on any of the selected columns and choose **Merge Columns**.
-
-    ![Merge Columns option.](./Media/MergeColumns.png)
-
-1. In the **Merge columns** window, change the **Separator** option to **Space**, enter **Full Name** as the **New column name (optional)** option and click **OK**.
-
-    ![Merge columns dialog window.](./Media/MergeColumnsBox.png)
-
-1. In the **Query settings** pane on the right, go to the **Merge Columns** step, right click and choose **View Native Query**.
-
-    ![View Native Query.](./Media/ViewNativeQuery.png)
-
-1. Go to the **Add Column** tab and click **Conditional Column**. In the **Add Conditional Column** dialog, do the following and click **OK**:
-    1. New column name: **Gender**
-    1. Match the conditions in the table below.
-        1. Use **Add Clause** to add new conditions.
-
-    |  | Column Name | Operator | Value | Output | 
-    | :------- | :-------| :-------| :-------| :-------|
-    | If | Title | equals | Mr. | Male |
-    | If | Title | equals | Sr. | Male |
-    | If | Title | equals | Ms. | Female |
-    | If | Title | equals | Mrs. | Female |
-    | If | Title | equals | Sra. | Female |
-    | else | Not Provided | | |
-
-    ![View Native Query.](./Media/AddConditionalColumn.png)
-
-1. In the **Query settings** pane on the right, go to the **Add Conditional Column** step, right click and choose **View Native Query**.
-
-    ![View Native Query for Conditional Column.](./Media/ConditionalQuery.png)
-
-1. In the **Formula bar** click the **Add Step** button and enter the following formula.
-    1. If you don't see the **Formula Bar**, go to the **View** tab and click the **Formula Bar** box.
-
-    ![Add Step.](./Media/AddStep.png)
-
-    ```fsharp
-    = Table.AddColumn(
-                #"Merged Columns",
-                "Gender",
-                each
-                    if
-                        List.Contains(
-                            {
-                                "Mr.",
-                                "Sr."
-                            },
-                            [Title]
-                        )
-                    then
-                        "Male"
-                    else if
-                        List.Contains(
-                            {
-                                "Ms.",
-                                "Sra."
-                            },
-                            [Title]
-                        )
-                    then
-                        "Female"
-                    else
-                        "Not Provided",
-                type text
-            )
-    ```
-
-You can also click the X on the left of the step name.
-
-1. In the **Query settings** pane on the right, go to the **Custom1** step, right click and choose **View Native Query** to see how the query has changed and now uses the [IN (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/language-elements/in-transact-sql?view=sql-server-ver15) clause.
-
-    ![List contains.](./Media/ListContains.png)
-
-1. Right click on the **Custom1** step and select **Properties...** to open the **Step Properties** dialog box. In the dialog box, change the **Name** property to **Custom: Gender** and the **Description** field to the below text. Then, click **OK**.
-
-    ```bash
-    If value is Mr. or Sr. replace with Male.
-    If value is Ms. , Mrs. , or Sra. replace with Female.
-    Otherwise replace with Not Provided.
-    ```
-
-    ![Step Properties.](./Media/StepProperties.png)
-
-1. Hover over the **Custom: Gender** step name to see the documentation.
-
-    ![Step documentation.](./Media/StepDocumentation.png)
-
-1. Right click on the original **Added Conditional Column** step and select the **Delete** option to remove it.
-    1. You can also click the **X** on the left of the step name.
-
-    ![Delete.](./Media/DeleteStep.png)
-
-## Setting the storage mode
-
-We have finished all the data preparation steps in this lab and the only thing need to do is to connect our queries to the Power BI dataset.
-
-1. Click **Close & apply** on the **Home** tab.
-
-    ![Close & apply](./Media/CloseApply.png)
-
-1. In the **Set the storage mode** window, choose the **DirectQuery** storage mode for each table and then click OK.
-
-    ![List contains.](./Media/SetStorageMode.png)
 
 # Next steps
 
@@ -775,28 +558,3 @@ This part of the lab has demonstrated how dataflows can help you prepare data in
 # Completed files
 
 To download the completed files from the lab instructions:
-
-To import the completed dataflow from the instructions above, we’ll follow these steps:
-
-1. Click **New** in the top left corner of a workspace and choose the Dataflow option.
-    
-    ![New Dataflow](./Media/NewDataflow.png) 
-
-1. On the Start creating your dataflow screen, select the **Import Model** option.
-    
-    ![Import Model](./Media/ImportModel.png)
-
-1. Enter the url of the dataflow json file that we want to import into the pop-up window.
-
-    ```
-    https://raw.githubusercontent.com/microsoft/pbiworkshops/main/Day%20After%20Dashboard%20in%20a%20Day/Source_Files/Dataflow%20demo%20(final).json
-    ```
-And then complete the following:
-
-- [Import dataflow instructions](#import-dataflow-model)
-- [Edit dataflow credentials](#edit-dataflow-credentials)
-
-To download the completed Power BI destkop file:
-- [Power BI Desktop template file (PBIT)](https://github.com/microsoft/pbiworkshops/raw/main/Day%20After%20Dashboard%20in%20a%20Day/Source_Files/Data%20modeling%20start.pbit)
-    - You will need to supply the full URL for the dataflow from your web browser
-        - The full URL includes the workspace id (groups) and dataflow id (dataflows) within the string.
