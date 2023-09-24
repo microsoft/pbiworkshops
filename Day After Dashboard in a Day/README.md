@@ -1,43 +1,38 @@
-![Power BI](https://raw.githubusercontent.com/microsoft/pbiworkshops/main/_Asset%20Library/powerbi.svg)
+![Microsoft Fabric](https://raw.githubusercontent.com/microsoft/FabricCAT/main/Asset%20Library/MicrosoftFabric.png)
 </br>
 </br>
 
-# Day After Dashboard in a Day
+# Day After Dashboard in a Day with Microsoft Fabric
 
 ## Introduction
-In the Day After Dashboard in a Day you will learn about various advanced analytic features of Power BI, such as [composite models](https://docs.microsoft.com/power-bi/transform-model/desktop-composite-models), [dataflows](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-introduction-self-service), [query folding](https://docs.microsoft.com/power-query/power-query-folding), designing stunning reports and more.
+In the Day After Dashboard in a Day with Microsoft Fabric you will learn about various advanced analytics experiences, such as the [Direct Lake](https://learn.microsoft.com/power-bi/enterprise/directlake-overview) mode with Synapse Data Engineering, [data destinations](https://learn.microsoft.com/fabric/data-factory/dataflows-gen2-overview#data-destinations) with Dataflow Gen2 and [Pipelines](https://learn.microsoft.com/fabric/data-factory/create-first-pipeline-with-sample-data) in Data Factory, and designing stunning reports and more with Power BI.
 
-This course assumes that you have a working knowledge of report authoring using Power BI Desktop and content sharing via the Power BI service.
+This course assumes that you have a working knowledge of authoring using Power BI Desktop and content sharing via the Microsoft Fabric service (cloud).
 
 ### Prerequisites
-The content in this lab requires access to a **Power BI Premium** workspace within the Power BI service.
-- Premium Per User
-- or a Premium capacity subscription
+The content in this lab requires access to a **Premium** workspace within the Microsoft Fabric service.
+- Premium capacity subscription
+- **Note:** Premium Per User ***is not*** supported.
 
 For additional system requirements, see [prerequisites for the lab](./Prerequisites.md)
 
 ## Data Preparation
 
-In this lab you'll learn about how to shape data using Power Query Online.
+In this lab you'll learn about how to shape and orchestrate your data using Data Factory experiences.
 
-1. How to create a [dataflow](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-introduction-self-service) to prepare and load data using Power Query Online.
-1. How to write custom functions using the [Power Query M formula language](https://docs.microsoft.com/powerquery-m/).
-1. How to ensure [query folding](https://docs.microsoft.com/power-query/power-query-folding) is occurring when transforming data.
+1. How to create a [Dataflow Gen2](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-introduction-self-service) to prepare and load data using Power Query Online.
+1. Understanding the [storage and compute staging](https://blog.fabric.microsoft.com/blog/data-factory-spotlight-dataflows-gen2?ft=Data-factory:category) architecture for large scale data transformations.
+1. How to use [Pipelines](https://learn.microsoft.com/fabric/data-factory/activity-overview) to orchestrate and control your data movement.
 
 To start the lab, visit [Data Preparation](./DataPreparation.md)
 
 ## Data Modeling
 
-In this lab you'll learn how to create datasets optimized for performance and usability using Power BI Desktop.
+In this lab you'll learn how to create datasets optimized for scale and performance usability using  Power BI Desktop.
 
-1. How to configure different [Storage Modes](https://docs.microsoft.com/power-bi/transform-model/desktop-storage-mode) and how to properly model your [data](https://learn.microsoft.com/power-bi/guidance/star-schema) using Power BI Desktop.
-
-    Storage modes:
-    1. [DirectQuery](https://learn.microsoft.com/power-bi/connect-data/desktop-directquery-about#directquery-connections)
-    1. [Mixed](https://docs.microsoft.com/power-bi/transform-model/desktop-composite-models)
-    1. [Import](https://learn.microsoft.com/power-bi/connect-data/desktop-directquery-about#import-connections)
-1. How to use the [Performance analyzer](https://docs.microsoft.com/power-bi/create-reports/desktop-performance-analyzer) to examine report performance.
-1. How to use [External Tools](https://docs.microsoft.com/power-bi/transform-model/desktop-external-tools) for professional development.
+1. How to create a [Direct Lake](https://docs.microsoft.com/power-bi/transform-model/desktop-storage-mode) dataset and properly modeling your [data](https://learn.microsoft.com/power-bi/guidance/star-schema) using the Microsoft Fabric service (cloud).
+1. How to use the [Notebooks]() to...
+1. How to use [X](https://docs.microsoft.com/power-bi/transform-model/desktop-external-tools) for...
 
 To start the lab, visit [Data Modeling](./DataModeling.md)
 
