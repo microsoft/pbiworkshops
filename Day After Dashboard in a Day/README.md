@@ -7,7 +7,7 @@
 ## Introduction
 In the Day After Dashboard in a Day with Microsoft Fabric you will learn about various advanced analytics experiences, such as the [Direct Lake](https://learn.microsoft.com/power-bi/enterprise/directlake-overview) mode with Synapse Data Engineering, [data destinations](https://learn.microsoft.com/fabric/data-factory/dataflows-gen2-overview#data-destinations) with Dataflow Gen2 and [Pipelines](https://learn.microsoft.com/fabric/data-factory/create-first-pipeline-with-sample-data) in Data Factory, and designing stunning reports and more with Power BI.
 
-This course assumes that you have a working knowledge of authoring using Power BI Desktop and content sharing via the Microsoft Fabric service (cloud).
+This course assumes that you have a working knowledge of authoring using Power BI Desktop and content sharing via the Microsoft Fabric cloud service.
 
 ### Prerequisites
 The content in this lab requires access to a **Premium** workspace within the Microsoft Fabric service.

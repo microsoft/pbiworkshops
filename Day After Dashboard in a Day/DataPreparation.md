@@ -75,7 +75,7 @@ Once our Power Query template file has been imported and refreshed it will enabl
 1. Paste the file path below in the **File name** filed and select **Open** to continue.
 
     ```text
-    https://github.com/microsoft/FabricCAT/raw/main/Day%20After%20Dashboard%20in%20a%20Day/Source_Files/OnlineSalesDataflow.pqt
+    https://github.com/microsoft/pbiworkshops/raw/main/Day%20After%20Dashboard%20in%20a%20Day/Source_Files/OnlineSalesDataflow.pqt
     ```
 
     ![Open PQT](./Media/OpenPQT.png)
@@ -528,6 +528,12 @@ Transforming data at scale
 [Learn more about the benefits of loading data without transformation for Text/CSV files](https://docs.microsoft.com/power-query/dataflows/computed-entities-scenarios#load-data-without-transformation-for-textcsv-files)
 
 ---
+
+## Edit data destinations
+
+
+---
+
 ## Saving and refreshing a dataflow
 
 1. In the bottom right corner click **Publish** to save and refresh the final dataflow.
@@ -537,14 +543,114 @@ Transforming data at scale
 
 ---
 
-# Pipelines
+## Orchestrate a data pipeline
 
-## Activities
-
-
+Using pipelines, we will orchestrate the refresh of our dataflow. If an error occurs, we will send a customized Outlook email that includes important details.
 
 ---
 
+1. With our workspace, select **New** and then **Show all**.
+
+    ![Show all items](./Media/ShowAllItems.png)
+
+2. In the **New** item creation screen, select **Data pipeline** under the Data Factory category.
+
+    ![New data pipeline](./Media/NewDataPipeline.png)
+
+1. Set the pipeline name to **SalesPipeline**. Then select **Create**.
+
+    ![New pipeline name](./Media/new-pipeline-name.png)
+
+1. Once we’re in the pipeline editor, select **Add pipeline activity**, and then select **Dataflow**.
+
+    > [!NOTE]
+    > You can also select *Dataflow* from the Home tab.
+
+    ![Add dataflow activity](./Media/add-dataflow-activity.png)
+
+1. Select the dataflow activity within the pipeline editor and change its **Name** value to **OnlineSalesActivity** within the General section.
+
+    ![Dataflow activity name](./Media/dataflow-activity-name.png)
+
+7. With the dataflow activity still selected, select **Settings** and choose **OnlineSalesDataflow** from the Dataflow list. If necessary to update the list, select the **Refresh** icon.
+
+    ![Dataflow activity settings](./Media/dataflow-activity-dataflow.png)
+
+1. Select the **Activities** tab and then the **Office365 Outlook** activity. 
+
+    ![O365 Activity](./Media/office-365-activity.png)
+
+1. Select the **Office365 Outlook** activity within the pipeline editor and change its **Name** value to **Mail on failure** within the General section.
+
+    ![Mail on failure](./Media/office-365-activity-name.png)
+
+1. With the Office365 Outlook activity still selected, select **Settings** and update the following fieds:
+    - **To** field to your e-mail address
+    - **Subject** to **Pipeline failure**
+    - Select **Body** and the option **Add dynamic content [Alt+Shift+D]** will be presented.
+
+    ![Mail settings](./Media/office-365-activity-settings.png)
+
+    > [!NOTE]
+    > If a Sign in to Office 365 Outlook account window appears, select Sign in and use your organizational account and then select Allow access.    
+    > More e-mail configuration options such as From (Send as), Cc, Bcc, Sensitivity label and more are available with Advanced properties.
+
+1. In the **Pipeline expression builder**, paste the following expression code block:
+
+    ```text
+    @concat(
+        'Pipeline: '
+        , 
+        , '<br>'
+        , 'Workspace: '
+        , 
+        , '<br>'
+        , 'Time: '
+        , 
+    )
+    ```
+
+    ![Expression builder](./Media/expression-builder.png)
+
+1. Select **System variables** and insert the following variables by selecting the corresponding name from the following table.
+
+    | Value name | Line | System variable |
+    | :- | :- | :- |
+    | Pipeline: | 3 | Pipeline ID |
+    | Workspace: | 6 | Workspace ID |
+
+    ![System variables](./Media/system-variables.png)
+
+1. Select **Functions** and insert the following function by selecting the corresponding name from the following table. Once complete select **OK**.
+
+    | Value name | Line | System variable |
+    | :- | :- | :- |
+    | Time: | 9 | utcnow |
+
+    ![System functions](./Media/functions.png)
+
+1. Select **OnlineSalesActivity** and from the available path options, select and hold the **"X" (On fail)** to create an arrow that will be dropped on the **Mail on failure** activity. This activity will now be invoked if the **OnlineSalesActivity** fails.
+
+    ![On failure](./Media/on-failure.png)
+
+1. From the **Home** tab, select **Schedule**. Once you have updated the following configurations, select **Apply** to save your changes.
+
+     | Name | Value |
+     | :- | :- |
+     | Scheduled run | On |
+     | Repeat | Daily |
+     | Time | 12:00:00 AM |
+
+    ![Schedule](./Media/schedule.png)
+
+1. From the **Home** tab, select the **Save** option and we'll then select our workspace from the siderail to proceed with the data modeling portion of the lab.
+
+    ![Schedule](./Media/save-pipeline.png)
+
+    > [!NOTE]
+    > As we're developing our pipeline we can also select **Run** to manually trigger our pipeline. We can then monitor the pipeline’s current status from the **Output** table, which displays the current activity progress. The table will periodically refresh on its own, or we can manually select the refresh icon to update it.
+
+    ![Output window](./Media/output.png)
 
 # Next steps
 
