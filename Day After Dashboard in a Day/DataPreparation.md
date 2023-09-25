@@ -13,7 +13,7 @@ We'll begin by navigating to a new, empty, or non-production workspace to check 
 
 1. Click the **Settings** option located in the top right corner of the workspace to access the settings.
 
-    ![Workspace toolbar](./media/WorkspaceToolbar.png)
+    ![Workspace toolbar](./Media/WorkspaceToolbar.png)
 
 1. Within the **Settings** pane, navigate to the **Premium** tab to check the licensing mode. Ensure that one of the following modes is enabled:
 
@@ -101,19 +101,20 @@ By leveraging an existing Power Query template, we can easily import and export 
 
 ## Disable query staging
 
-There are various components of the Dataflow Gen2 architecture, including the Lakehouse item used to stage data being ingested, and Warehouse item used as a compute engine and means to write back results to staging or supported output destinations faster. When warehouse compute cannot be used, or when staging is disabled for a query, the mashup engine will extract, transform, or load the data to staging or a destination.
+There are several components in the Dataflow Gen2 architecture. The Lakehouse item is used to stage data being ingested, while the Warehouse item serves as a compute engine and enables faster writing back of results to staging or supported output destinations. In cases where warehouse compute is unavailable or staging is disabled for a query, the mashup engine will extract, transform, or load the data to staging or a destination.
 
 Learn more about the [Dataflow Gen2 engine](https://blog.fabric.microsoft.com/blog/data-factory-spotlight-dataflows-gen2/#:~:text=The%20Dataflow%20Gen2%20Engine)
 
 ---
 
-Because the lab files are stored in a publicly accessible [GitHub repository](./Source_Files/), we will authenticate anonymously and ensure that we can successfully connect to and ingest the lab data.
+To get started with the lab files, you can find them in a publicly accessible [GitHub repository](./Source_Files/). We will authenticate anonymously to ensure successful connection and ingestion of the lab data.
+
 
 1. Click the **Configure connection** button from the yellow banner.
 
     ![Configure credentials](./Media/ConfigureConnection.png)
 
-1. In the **Connect to data source** window, select **Anonymous** from the **Authentication kind** drop down and then click **Connect**.
+1. In the **Connect to data source** window, select **Anonymous** from the **Authentication kind** drop down menu, and then click **Connect**.
 
     ![Connect to data source](./Media/ConnectToDataSource.png)
 
@@ -127,41 +128,49 @@ Because the lab files are stored in a publicly accessible [GitHub repository](./
 
     ![Disable staging](./Media/DisableStaging.png)
 
-1. In the bottom right corner click the chevron next to **Publish**. The **Publish** or **Publish now** options are the default behavior that will publish and refresh your dataflow. Alternatively, the **Publish later** to only publish the metadata and underlying formula logic of your dataflow. Select the **Publish** option to save and close your dataflow and start the refresh.
+1. In the bottom right corner click the chevron next to **Publish** to view all options, before selecting the **Publish** option.
+
+    > [!IMPORTANT]
+    > The **Publish** (also known as **Publish now**) option is the default behavior that will publish and refresh your dataflow. Alternatively, the **Publish later** to only publish the metadata and underlying formula logic of your dataflow.
 
     ![Publish later](./Media/PublishLater.png)
 
-1. After publishing the dataflow and the refresh has completed, select the ellipses **(…)** next to the OnlineSalesDataflow item within the workspace. Then select **Refresh history**.
+1. After publishing the dataflow and once the refresh is complete, select the ellipses **(…)** next to the **OnlineSalesDataflow** item within the workspace. Then, select **Refresh history**.
 
     ![Refresh history](./Media/RefreshHistory.png)
 
-1. Within the Refresh history window, select the refresh under the **Start time** to drill into the refresh details.
+1. Within the **Refresh history** window, select a refresh under the **Start time** to view the refresh details.
 
     ![Refresh history start time](./Media/RefreshHistoryStartTime.png)
 
-1. In the Details page we can wiew the Tables and Activities that occurred within our dataflow. Once done, select the **X** in the top right corner to close.
-    - **Important note:** Selecting the text will drill into more details including timings, endpoints, the engine used and more.
+1. In the **Details** page, we can wiew the Tables and Activities that occurred within our dataflow. Once done, select the **X** in the top right corner to close.
+    > [!IMPORTANT]
+    > Selecting the linked text will drill into more details including timings, endpoints, the engine used, and more.
 
     ![Refresh details](./Media/RefreshDetails.png)
 
 ## View lakehouse tables
 
-1. In the Workspace select the eppises **(...)** next to the **Lakehouse** item called **SalesLakehouse** and choose the **View details** option.
-    
+1. In the Workspace, select the ellipsis **(…)** next to the Lakehouse item named **SalesLakehouse**, and then choose the **View details** option.
+
     ![View Lakehouse details](./Media/ViewDetailsLakehouse.png)
 
-1. In the **Lakehouse** details page we can view the SQL connection string which allows us to use external tools like [Azure Data Studio](https://azure.microsoft.com/products/data-studio/) or [SQL Server Management Studio](https://learn.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16) to explore lakehouses and query the data. Additional information like downstream items and their Relation to the lakehouse for lineage are also include. Let's select **Open** to continue.
+1. On the Lakehouse details page, you can find the SQL connection string. This connection string allows you to use external tools like [Azure Data Studio](https://azure.microsoft.com/products/data-studio/)  or [SQL Server Management Studio](https://learn.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16) to explore lakehouses and query the data. You can also find additional information about downstream items and their relation to the lakehouse for lineage. Let’s select **Open** to continue.
 
     ![Open lakehouse](./Media/OpenLakehouse.png)
 
-1. To view the **Tables** created from our Datalfow Gen2 in the object explorer, select any of the tables from the list (ex. select DimDate). These tables are created using the Delta Lake format (a parquet file format) which are optimized for analytics and have been optimized using [V-Order](https://learn.microsoft.com/fabric/data-engineering/delta-optimization-and-v-order?tabs=sparksql) that enables lightning-fast reads under the Microsoft Fabric compute engines, such as Power BI, SQL, Spark and others. 
+1. To view the **Tables** created from our Dataflow Gen2 in the object explorer, select any of the tables from the list (e.g., select DimDate). These tables are created using the Delta Lake format, which is a parquet file format optimized for analytics.
 
-    Once done, we’ll return to the Workspace view by selecting our workspace from the side-rail on the left.
-    - **Important note:** If you do not see your tables or they are undefined, select the **Refresh** option in the top left of the Lakehouse explorer.
+    They have been further optimized using [V-Order](https://learn.microsoft.com/fabric/data-engineering/delta-optimization-and-v-order?tabs=sparksql) to enable lightning-fast reads under Microsoft Fabric compute engines, such as Power BI, SQL, Spark, and others.
+
+    Once we’re done, we can return to the Workspace view by selecting our workspace from the side-rail on the left.
+
+    > [!IMPORTANT]
+    > If you do not see your tables or they are undefined, select the **Refresh** option in the top left of the Lakehouse explorer.
 
     ![Lakehouse view](./Media/LakehouseView.png)
 
-1. In the Workspace select the eppises **(...)** next to the **Dataflow Gen2** item called **OnlineSalesDataflow** and choose the **Edit** option.
+1. In the Workspace, select the eppises **(...)** next to the **Dataflow Gen2** item named **OnlineSalesDataflow**, and choose the **Edit** option.
 
     ![Lakehouse view](./Media/EditDataflowEntry.png)
 
@@ -170,7 +179,7 @@ Because the lab files are stored in a publicly accessible [GitHub repository](./
 
 ## Global options
 
-Now that we have imported our dataflow and set our credentials, we’ll adjust some settings for authoring in Power Query Online. These settings will stay the same when we author new content later.
+Now that we have imported our dataflow and set our credentials, we’ll adjust some settings for authoring in Power Query Online. These settings will stay the same when we author new content in the future.
 
 ---
 
@@ -192,7 +201,7 @@ Now that we have imported our dataflow and set our credentials, we’ll adjust s
 
     **Column profile evaluation**
     - Based on top 1,000 rows
-    
+
     **Data view**
     - Enable details pane
     - Show whitespace and newline characters
@@ -270,20 +279,20 @@ Learn more about the [Global search box](https://learn.microsoft.com/power-query
 Learn more about the [benefits of loading data without transformation for Text/CSV files](https://docs.microsoft.com/power-query/dataflows/computed-entities-scenarios#load-data-without-transformation-for-textcsv-files)
 
 ---
----
+
 ## Diagram view
 
-Power Query Online lets us prepare data visually in the diagram view of the Power Query editor.
+Diagram view in Power Query Online offers a visual way to prepare data in the Power Query editor. It simplifies the experience of getting started with data wrangling, speeds up the data preparation process, and helps you quickly understand the dataflow. With the diagram view, we can easily create queries and visualize the data preparation process. It provides both the "big picture view" of how queries are related and the "detailed view" of the specific data preparation steps in a query.
 
 ---
-
-To merge queries as a new query, we’ll do the following:
 
 1. In the bottom right of the **Power Query** editor, click the **Diagram view** option.
 
     ![Diagram view](./Media/DiagramView.png)
 
-1. In the top right of the **DimProduct_raw** table, click the Actions option ( ⋮ ) and choose the **Merge queries as new** option.
+1. To merge queries as a new query, follow these steps:
+    - In the top right of the **DimProduct_raw** table, click the Actions option **( ⋮ )**
+    - From the dropdown menu, choose the **Merge queries as new** option.
 
     ![Merge queries as new](./Media/MergeNew.png)
 
@@ -294,28 +303,30 @@ To merge queries as a new query, we’ll do the following:
     | Left table for merge | DimProduct_raw |
     | Right table for merge | DimProductSubcategory_raw |
 
-    1. In the top right a light bulb indicator suggests that a match exists based on the shared columns from each table. Select light bulb and choose the option for the **ProductSubcategoryKey** match.
-    1. Set the **Join kind** to **Inner**
+    - In the top right, select the light bulb indicator, which suggests that a match exists based on the shared columns from each table.
+    - Choose the option for the **ProductSubcategoryKey** match.
+    - Set the **Join kind** to **Inner**
 
     ![Merge DimProductSubcategory](./Media/MergeDimProductSubcategory.png)
 
 1. On the **Home** tab, click the drop-down arrow next to **Choose columns** and choose the **Go to column** option (Shortcut: Ctrl+G).
 
-    In the search dialog, type the column name **DimProductSubcategory_raw** until it shows up. Then either double-click the name or select the column name and click OK to go to the column.
+    - In the search dialog, type the column name **DimProductSubcategory_raw** until it shows up.
+    - Either double-click the name or select the column name and click OK to go to the column.
 
     ![Go to column](./Media/GoToColumn.png)
 
 1. In the top right of the **DimProductSubcategory_raw** column, click the expand columns icon and follow these steps:
-    1. Uncheck the **ProductSubcategoryKey** column since we already have this column in our original DimProduct_raw table.
-    1. Check only the **ProductSubcategoryName** and **ProductCategoryKey** columns.
-    1. Uncheck the **Use original column name** as prefix option (if checked).
-    1. Click **OK** to confirm.
-   
+    - Uncheck the **ProductSubcategoryKey** column since we already have this column in our original DimProduct_raw table.
+    - Check only the **ProductSubcategoryName** and **ProductCategoryKey** columns.
+    - Uncheck the **Use original column name** as prefix option (if checked).
+    - Click **OK** to confirm.
+
     ![Expand product subcategory](./Media/ExpandProductSubcategory.png)
 
-1. After the **Expanded DimProduct** step, click the **"+"** icon to insert a new step and follow steps:
-    1. In the transformations search, type **Merge**.
-    1. Click the **Merge queries** option from the list.
+1. After the **Expanded DimProduct** step, click the **"+"** icon to insert a new step and follow these steps:
+    - In the transformations list search, type **Merge**.
+    - Click the **Merge queries** option from the list.
 
     ![Merge queries](./Media/MergeQueries.png)
 
@@ -326,15 +337,16 @@ To merge queries as a new query, we’ll do the following:
     | Left table for merge | (Current) |
     | Right table for merge | DimProductCategory_raw |
 
-    1. In the top right a light bulb indicator suggests that a match exists based on the shared columns from each table. Select light bulb and choose the option for the **ProductSubcategoryKey** match.
-    1. Set the **Join kind** to **Inner**
+    - In the top right, select the light bulb indicator, which suggests that a match exists based on the shared columns from each table.
+    - Choose the option for the **ProductSubcategoryKey** match.
+    - Set the **Join kind** to **Inner**
 
     ![Merge ProductCategory_raw](./Media/MergeProductCategory.png)
 
-1. In the top right of the **DimProductCategory_raw** column - we'll select the expand columns icon and complete the following steps below:
-    1. Deselect all columns except **ProductCategoryName**.
-    1. Disable the **Use original column name as prefix** option (if enabled).
-    1. Select **OK** once complete.
+1. In the top right of the **DimProductCategory_raw** column, click the expand columns icon and follow these steps:
+    - Deselect all columns except **ProductCategoryName**.
+    - Disable the **Use original column name as prefix** option (if enabled).
+    - Click **OK** to confirm.
 
     ![Expand product category](./Media/ExpandProductCategory.png)
 
@@ -346,7 +358,7 @@ To merge queries as a new query, we’ll do the following:
 
 <font size="6">✅ Lab check</font>
 
-The diagram view helps us easily view the flow of data, both at the query level and at the step level to better determine how our queries are connected and what data preparation steps we have applied to each query.
+In summary, diagram view in Power Query Online is a powerful tool that offers a visual way to prepare data in the Power Query editor and helps us easily view the flow of data, both at the query level and at the step level to better determine how our queries are connected and what data preparation steps we have applied to each query.
 
 Learn more about [diagram view](https://docs.microsoft.com/power-query/diagram-view).
 
