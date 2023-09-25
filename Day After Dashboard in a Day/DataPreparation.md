@@ -3,36 +3,40 @@
 ✏️ Lab scenario
 ---
 
-In this part of the lab, our goal is to collect and combine daily files from a cloud directory. The number of files in this directory will increase over time, so we need to create a [future proofed](https://docs.microsoft.com/power-query/best-practices#future-proofing-queries) data preparation solution that can handle this growth.
+In this section of the lab, our objective is to gather and merge daily files from a cloud directory. As the number of files in this directory will grow over time, it is essential to develop a data preparation solution that can accommodate this expansion. To achieve this, we need to create a future-proofed data preparation solution that can handle this growth1.
+
+Please note that the term *future-proofed* refers to a solution that is designed to remain effective and relevant as conditions change over time. For more information on future-proofing queries, you can refer to the [Power Query best practices](https://learn.microsoft.com/power-query/best-practices#future-proofing-queries) documentation.
 
 ### Premium license mode
 
-First, we need to go to a new, empty or non-production workspace and check if it has a capacity assigned. If not, we can enable it by choosing one of these options below.
+We'll begin by navigating to a new, empty, or non-production workspace to check if a capacity has been assigned to the workspace. If not, we can enable it by following these steps:
 
-1. To access the settings, we’ll click the **Settings** option in the top right corner of the workspace.
+1. Click the **Settings** option located in the top right corner of the workspace to access the settings.
+
     ![Workspace toolbar](./media/WorkspaceToolbar.png)
 
-1. To check the licensing mode, within the **Settings** pane click the **Premium** tab. Then we’ll make sure one of the following modes is enabled before selecting our capacity within the **License capacity** drop down list and then **Apply** to save before selecting **X** to close the window.
+1. Within the **Settings** pane, navigate to the **Premium** tab to check the licensing mode. Ensure that one of the following modes is enabled:
 
     **License mode:**
     - [Premium capacity](https://docs.microsoft.com/power-bi/admin/service-premium-gen2-faq)
     - [Fabric capacity](https://learn.microsoft.com/fabric/enterprise/buy-subscription#buy-an-azure-sku)
     - [Trial](https://learn.microsoft.com/fabric/get-started/fabric-trial)
 
-    1. Select your capacity within the **License capacity** drop down list.
-    1. Select **Apply** to continue and then the **X** in the top right corner of the window to close.
+    1. Once you have verified the licensing mode, select your desired capacity from the **License capacity** drop-down list.
+
+    1. Click **Apply** to save your changes and the **X** in the top right corner of the window to close the **Settings** pane.
 
     ![License mode](./Media/LicenseMode.png)
 
 ## Lakehouse storage
 
-We'll start by creating a lakehouse, which is a data architecture platform for storing, managing, and analyzing structured and unstructured data in a single location. It is a flexible and scalable solution that allows organizations to handle large volumes of data using a variety of tools and frameworks to process and analyze that data.
+To begin, we will create a **Lakehouse**, which is a data architecture platform that enables the storage, management, and analysis of structured and unstructured data. This flexible and scalable solution allows organizations to handle large volumes of data using a variety of tools and frameworks to process and analyze that data.
 
 Learn more about [lakehouses in Microsoft Fabric](https://learn.microsoft.com/fabric/data-engineering/lakehouse-overview)
 
 ---
 
-1. With our workspace, select **New** and then **Show all**.
+1. In your workspace, select **New** and then **Show all**.
 
     ![Show all items](./Media/ShowAllItems.png)
 
@@ -40,23 +44,26 @@ Learn more about [lakehouses in Microsoft Fabric](https://learn.microsoft.com/fa
 
     ![New lakehouse](./Media/NewLakehouse.png)
 
-3. Set the Lakehouse name to **SalesLakehouse**. Then select **Create**.
+3. Set the Lakehouse name to **SalesLakehouse** and select **Create**.
 
     ![Name lakehouse](./Media/NameLakehouse.png)
 
-4. Once you're in the Lakehouse editor, select **New Dataflow Gen2**.
-
-    - **Important Note**: You can also select *Get data* from the ribbon and then New Dataflow Gen2.
+4. Once we're in the Lakehouse editor, select **New Dataflow Gen2**.
 
     ![New Dataflow Gen2](./Media/NewDataflowGen2.png)
 
+    > [!NOTE]
+    > We can also select Get data from the ribbon and then New Dataflow Gen2.
+
 # Dataflow Gen2
 
-With dataflows, we can connect, clean, transform and store data from various sources in a self-service way. Dataflows help by:
+With dataflows, we can connect, clean, transform, and prepare our data using a self-service approach. Dataflows offer several benefits, including:
 
-1. Sharing reusable transformation logic with others as a single source of truth.
-1. Protecting the underlying data sources from direct access and reduce the load on the underlying systems.
-1. Connecting other Azure services to the raw or transformed data by exposing it in OneLake or other data destination outputs.
+1. Protecting the underlying data sources by providing an abstraction layer that reduces the need for direct access. This helps to minimize the load on underlying systems and ensures data security.
+
+1. Exposing our data in OneLake or other data destination outputs, making it easily accessible for consumption by other services. This enables seamless integration and collaboration across different tools and platforms.
+
+1. Creating a single source of truth by certifying dataflows. By establishing dataflows as trusted sources, organizations can ensure consistency, accuracy, and reliability in their data analysis and decision-making processes.
 
 [Learn more about dataflows and self-service data prep](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-introduction-self-service)
 
@@ -64,15 +71,17 @@ With dataflows, we can connect, clean, transform and store data from various sou
 
 ## Import a Power Query template
 
-In this part of the lab, we'll use an existing [Power Query template](https://learn.microsoft.com/power-query/power-query-template) file and skip the basic steps of getting data from a CSV file. Instead, we’ll focus on more advanced capabilities.
+In this section of the lab, we will use an existing [Power Query template](https://learn.microsoft.com/power-query/power-query-template) file to skip the basic steps of getting data from a CSV file and focus on more advanced capabilities.
 
-Once our Power Query template file has been imported and refreshed it will enable discovery across other Microsoft products and services (Excel and Power Apps).
+Once we import and refresh our Power Query template file, it will enable discovery across other Microsoft products and services such as Excel and Power Apps.
 
-1. In the Power Query Online editor for Dataflows Gen2, select **Import from a Power Query template**
+---
+
+1. In the Power Query Online editor for Dataflows Gen2, select **Import from a Power Query template**.
 
     ![Impower Power Query template file](./Media/ImportPQT.png)
 
-1. Paste the file path below in the **File name** filed and select **Open** to continue.
+1. Paste the following file path in the **File name** field and select **Open** to continue.
 
     ```text
     https://github.com/microsoft/pbiworkshops/raw/main/Day%20After%20Dashboard%20in%20a%20Day/Source_Files/OnlineSalesDataflow.pqt
@@ -81,7 +90,8 @@ Once our Power Query template file has been imported and refreshed it will enabl
     ![Open PQT](./Media/OpenPQT.png)
 
 1. In the top left corner, select the Dataflow name (this title may differ) and update the **Name** field to **OnlineSalesDataflow**.
-    - **Important note:** You can also set the Sensitvity label on this screen if you have Microsoft Information Protection in your organization.
+    > [!NOTE]
+    > If you have Microsoft Information Protection in your organization, you can also set the Sensitivity label on this screen.
 
     ![Dataflow name](./Media/DataflowName.png)
 
