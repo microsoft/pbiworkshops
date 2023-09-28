@@ -465,12 +465,14 @@ The advanced editor in Power Query is a tool that lets you see and edit the code
 
     ![fxGetFact query](./Media/fxGetFact.png)
 
-1. Before invoking our custom function, we can enable the **Query script** view to see the full M script by selecting **Query** and then **Query script** from the ribbon in the bottom right corner.
-    
+1. Before invoking our custom function, we can enable the **Query script** view to see the full M script by selecting **Query** and then **Query script** from the ribbon in the bottom right corner. Once done, select the **Step script** to return to the normal formula view.
+
+    > [!NOTE]
+    > To adjust the code block you can drag up or down on the bottom of the editor.
+
     ![Query script](./Media/QueryScript.png)
 
 1. Select **Invoke** to create a new query.
-    - **Important note:** To adjust the code block you can drag up or down on the bottom of the editor.
 
     ![Invoke function](./Media/InvokeFunction.png)
 
