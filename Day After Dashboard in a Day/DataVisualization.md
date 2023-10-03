@@ -230,7 +230,7 @@ Learn more about [DAX Fusion](https://dax.tips/2019/08/05/dax-fusion/) from the 
 
 ---
 
-1. From the **Visualizations** pane add a **Slicer** visual to the report page and from the **DimDate** table insert the **DateKey** field into the **Field** value in the **Visualizations** pane or drop directly on the slicer itself and update the following configuration below.
+1. From the **Visualizations** pane, add a **Slicer** visual to the report page. From the **DimDate** table, insert the **DateKey** field into the **Field** value in the **Visualizations** pane or drop it directly on the slicer itself. Then, update the following configuration below.
 
     | | |
     | :- | :- |
@@ -239,13 +239,14 @@ Learn more about [DAX Fusion](https://dax.tips/2019/08/05/dax-fusion/) from the 
 
     ![Relative date](./Media/slicer-setting.png)
 
-1. Update the slicer values to **Last 18 Months** to create a rolling 18 month selection. This filter now will automatically apply as each new day occurs and position it below the **Total Sales Amount** column.
+1. Update the slicer values to **Last 18 Months** to create a rolling 18 month selection and position it below the Total Sales Amount column. This filter now will automatically apply as each new day occurs.
 
     ![Last 18 months](./Media/Last18Months.png)
 
-1. Utilizing the **Visualizations** pane's **Format your visual** section, we'll update the following configurations below to our slicer.
+1. Utilizing the **Visualizations** panes **Format your visual** section, update the following configurations below for the slicer.
 
-    **Note**: Utilize the Search box, to easily discover configurable settings.
+    > [!NOTE]
+    > Utilize the Search box to easily discover configurable settings.
 
     | | |
     | :- | :- |
@@ -265,45 +266,69 @@ Learn more about [DAX Fusion](https://dax.tips/2019/08/05/dax-fusion/) from the 
 
     ![Style none](./Media/BackgroundColors.png)
 
-1. From the **Visualizations** pane add a **Slicer** visual below the **Total Items Discounted** column and complete the following configurations.
-    1. Insert the **ProductCategoryName** field first and the **ProductSubcategoryName** second from the **Products** table either into the **Field** value in the **Visualizations** pane or drop directly on the slicer itself.
+1. From the **Visualizations** pane, add a **Slicer** visual below the **Total Items Discounted** column and complete the following configurations.
+    - Insert the **ProductCategoryName** field first and the **ProductSubcategoryName** second from the **DimProduct** table either into the **Field** value in the **Visualizations** pane or drop directly on the slicer itself.
 
-    ![Products slicer](./Media/ProductsSlicer.png)
+    ![Products slicer](./Media/product-slicer.png)
 
-1. We'll now navigate to the **View** tab and select the **Performance analyzer** option. Within the **Performance analyzer** pane we'll select **Start recording** and then hover above our current slicer and select the **Analyze this visual** button in the top right.
+1. Navigate to the **View** tab and select the **Performance analyzer** option. Within the **Performance analyzer** pane, select **Start recording**. Hover above our current slicer and select the **Analyze this visual** button in the top right.
 
-    Within our results, if we expand the **Slicer** name, a **DAX query** is present - this is because to render the current **List** configuration it must send a query to display our values.
+    Within our results, if we expand the **Slicer** name, a **DAX query** is present. This is because to render the current **List** configuration, it must send a query to display our values.
 
     ![Analyze products slicer](./Media/AnalyzerProductsSlicer.png)
 
-1. To increase our reports performance, we'll select the downward chevron **(V)** in the top right of our slicer and change the value to **Dropdown**
+1. To increase our reports performance from the **Visualizations** pane's **Format your visual** section, update the following configuration below for the product slicer.
 
-    ![Slicer dropdown](./Media/SlicerDropDown.png)
+    | | |
+    | :- | :- |
+    | 🔍 Search term | **Style** |
+    | Options > Style | **Dropdown** |
 
-1. Hovering above our current slicer once again, we'll select the **Analyze this visual** button in the top right and review the updated results within the **Performance analyzer** pane where the **Slicer** no longer contains a **DAX query** when collapsed, it will only be when a user selects the slicer that it will then run a query to return our list of values.
+    ![Slicer dropdown](./Media/product-dropdown.png)
+
+1. Hovering above our current slicer once again, select the **Analyze this visual** button in the top right. Review the updated results within the **Performance analyzer** pane where the **Slicer** no longer contains a **DAX query** when collapsed. It will only be when a user selects the slicer that it will then run a query to return our list of values.
 
     ![Slicer dropdown analyzer](./Media/SlicerDropDownAnalyzer.png)
 
-1. From the **Visualizations** pane add a **Slicer** visual below the **Total Returned Items** column and complete the following configurations.
-    1. Insert the **CustomerType** field from the **Customer** table either into the **Field** value in the **Visualizations** pane or drop directly on the slicer itself. 
-    1. In the top right of the slicer select the downward chevron **(V)** and change the value to **Dropdown**
-
-    ![Customer slicer](./Media/CustomerSlicer.png)
-
-1. We'll now select the **Date** slicer to make it our active object, navigate to the **Home** tab, select the **Format painter** button and repeat the following steps for the other two slicers.
-    1. With the **Format painter** mouse icon now active, select the **ProductCategoryName, ProductSubcategoryName** slicer to transfer the visual configurations.
-    1. With the **Format painter** mouse icon now active, select the **CustomerType*** slicer to transfer the visual configurations.
-
-    ![Format painter](./Media/FormatPainter.png)
-
-1. We'll now click and hold the left mouse click and select both the **ProductCategoryName, ProductSubcategoryName** and **CustomerType** slicers (or press and hold Ctrl and then Click) on our page, navigate to the **Visualizations** pane's **Format your visual** section and update the following configurations below.
+1. Utilizing the **Visualizations** pane's **Format your visual** section, update the following configurations below for the slicer.
 
     | | |
     | :- | :- |
     | 🔍 Search term | **Background** |
-    | Values > Background > Color | **White** |
+    | Values > Background > Background color | **White** |
+    | Effects > Background | **Off** |
 
-    ![Slicers values background](./Media/SlicersValuesBackground.png)
+    ![Effects background](./Media/effects-background.png)
+
+    | | |
+    | :- | :- |
+    | 🔍 Search term | **Background** |
+    | Values > Background > Background color | **White** |
+    | Effects > Background | **Off** |
+
+    ![Title text Products](./Media/title-text-products.png)
+
+1. From the **Visualizations** pane, add a **Slicer** visual below the **Total Returned Items** column and complete the following configurations.
+    1. Insert the **CustomerType** field from the **DimCustomer** table either into the **Field** value in the **Visualizations** pane or drop directly on the slicer itself.
+
+    ![Customer slicer](./Media/customer-slicer.png)
+
+1. Select the Products slicer to make it our active object. Navigate to the **Home** tab, select the **Format painter** button, and select the **CustomerType** slicer to transfer the visual configurations.
+
+    ![Format painter customertype](./Media/format-painter-customertype.png)
+
+1. From the **Visualizations** pane's **Format your visual** section, update the following configuration below for the customer type slicer.
+
+    | | |
+    | :- | :- |
+    | 🔍 Search term | **Style** |
+    | Options > Style | **Tile** |
+
+    ![Customer slicer](./Media/slicer-tile.png)
+
+1. With the **CustomerType** slicer selected, navigate to the **Filters** pane. For the **Filters on this visual** configuration, update the **Filter type** to **Advanced filtering** and for **Show items when the value** setting is **Is not blank** before selecting **Apply filter**.
+
+    ![Format painter](./Media/is-not-blank-customertype.png)
 
 <font size="6">✅ Lab check</font>
 

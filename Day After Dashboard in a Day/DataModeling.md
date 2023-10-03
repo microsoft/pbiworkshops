@@ -369,12 +369,6 @@ By default, OneLake automatically updates Direct Lake datasets with any data cha
     > [!IMPORTANT]
     > Once your data preparation activities have successfully completed, add an activity to refresh the Power BI dataset to ensure that it is up-to-date.
 
-1. Expand the **Q&A** setting and update the **Turn on Q&A to ask natural language questions about your data** setting to enabled by clicking the checkbox and selecting **Apply** once complete.
-
-    ![Enable Q&A](./Media/enable-qa.png)
-
-Learn more about [refreshing Direct Lake data](https://learn.microsoft.com/power-bi/enterprise/directlake-overview#refresh)
-
 ---
 
 # Next steps
