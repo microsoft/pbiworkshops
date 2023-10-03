@@ -2,31 +2,56 @@
 
 ✏️ Lab scenario
 ---
-This lab demonstrates how to create fast and professional reports that reveal new insights for our users. We will follow the best practices of report design experts to explore design ideas to develop production-ready reports.
+
+For this portion of the lab, we've been tasked with creating a Power BI report to unlock new insights for our users. The interactivity of our report should be both **functional** and **fast** to ensure a pleasant viewing experience for our users, while adhering to the professional look and brand standards of our company.
+
+# Report design
+
+The content throughout this lab utilizes the proven design processes created by leading report design experts. These processes encompasses the phases of understanding the report users and their requirements, exploring pleasing report designs, and developing reports all the way into production.
 
 Learn more about [Designing effective Power BI reports](https://docs.microsoft.com/users/heyrob/collections/o4dhk4z8xpr8q) by visiting Microsoft Learn
 
+## Enable preview features
+
+1. Select the **Settings** icon in the bottom right corner of Power BI Desktop.
+
+    ![Desktop settings](./Media/desktop-settings.png)
+
+    > [!NOTE]
+    > You can also navigate to File > Options and settings > options to get to the same menu.
+
+1. From the **Options** window, select **Preview features** and ensure the **Sparklines** and **New card visual** are enabled for the lab.
+
+    ![Preview features](./Media/preview-features.png)
+
+---
+
 ## Live Connection
 
-A good practice for enterprise scale deployments is to separate dataset development from report and dashboard development. You can do this in Power BI Desktop by creating a separate PBIX file for each. For instance, you can upload a dataset PBIX file to the development stage and then connect it to a report PBIX file using a live connection. This way, different creators can work on modeling and visualizations independently. You can also apply this method across workspaces with shared datasets.
+For enterprise scale deployments, it's recommended to separate dataset development, and the development of reports and dashboards.
+
+This approach should start from Power BI Desktop, by creating a separate PBIX file for datasets and reports. For example, you can create a dataset PBIX file and uploaded it to the development stage. Later, your report authors can create a new PBIX only for the report, and connect it to the published dataset using a live connection. This technique allows different creators to separately work on modeling and visualizations.
+
+With shared datasets, you can also use this method across workspaces.
 
 Learn more about [connecting to Power BI datasets](https://learn.microsoft.com/power-bi/connect-data/desktop-report-lifecycle-datasets).
 
 ---
 
-1. Create a new Power BI file by selecting **File** and **New** (shortcut Ctrl+N) or opening Power BI Desktop.
+1. We'll start by creating a new Power BI file by selecting the **File** and **New** option (shortcut **Ctrl+N**) if Power BI Desktop is currently open.
+    1. If Power BI Desktop is not currently open, a new fill will be automatically created upon opening.
 
     ![New file](./Media/NewFile.png)
 
-1. Select the **Data hub** option and then **Power BI datasets** from the **Home** tab to create a new live connection to an existing dataset.
+1. From the **Home** tab, we'll select the **OneLake data hub** option and then **Power BI datasets** to create a new live connection to an existing dataset in the cloud.
 
     ![Data hub](./Media/DataHub.png)
 
-1. Select the published dataset from the **Data modeling** lab and click **Connect** to create a live connection to our dataset.
+1. From the **OneLake data hub** window, we'll select the published Direct Lake dataset from the **Data modeling** lab and then the **Connect** button to create a new **Live connection** to our dataset.
 
     ![Data hub connect](./Media/DataHubConnect.png)
 
-1. The bottom right corner of our file shows **Connected live to the Power BI dataset**, with the dataset and workspace names.
+1. In the bottom right corner of our current file, the text **Connected live to the Power BI dataset** is now present, including the name of the dataset and the workspace it's located within.
 
     ![Connected live](./Media/ConnectedLive.png)
 
@@ -34,19 +59,17 @@ Learn more about [connecting to Power BI datasets](https://learn.microsoft.com/p
 
 ## Page canvas and elements
 
-A Power BI report page canvas is a single page that displays visualizations of your data. You can create and customize your report page canvas in Report view1 by adding fields, filters, and formatting options. You can also change the canvas settings to adjust the display ratio and size of your report page canvas.
-
-Learn more about [report view](https://learn.microsoft.com/power-bi/create-reports/desktop-report-view)
+By leveraging PowerPoint design templates and shapes we are able to create a rich background that we could easily import into Power BI as the PowerPoint slide dimensions are the same as our report canvas. In leveraging this method we can lay out our design elements before hand to make Power BI as straight forward as sizing our visuals to the individual squares.
 
 ---
 
 ### Canvas background
 
-1. Click the "**+**" icon at the bottom left of the current file to create a new page.
+1. In the bottom left of the current file select the "**+**" icon to create a new page.
 
     ![Create new page](./Media/CreateNewPage.png)
 
-1. Right-click on the page name at the bottom left and select **Rename Page** from the menu. Type in the new name from the table below and press Enter.
+1. Right click the following page names and select the **Rename Page** option to update to the following names in the table below.
 
     | Previous Page Name | Renamed Page Name |
     | :--- | :--- |
@@ -55,8 +78,8 @@ Learn more about [report view](https://learn.microsoft.com/power-bi/create-repor
 
     ![Rename page](./Media/RenamePage.png)
 
-1. For each page listed below, go to the **Visualizations** pane and click **Format your report page**. Under **Canvas background**, update these settings:
-    1. For **Image**, click **Browse...** and paste the corresponding URL into the **File name:** field.
+1. For each of the pages below, we'll navigate to the **Visualizations** pane, select the **Format your report page** button and update the following settings within the **Canvas background** section from the table below
+    1. For the **Image** field select **Browse...** and then copy/paste the according url into the **File name:** field.
 
     ![Contoso Summary background](./Media/ContosoSummary.png)
 
@@ -65,7 +88,7 @@ Learn more about [report view](https://learn.microsoft.com/power-bi/create-repor
     | Summary | Fit | 0% |
 
     **Image (file)**
-    ```
+    ```text
     https://raw.githubusercontent.com/microsoft/pbiworkshops/main/Day%20After%20Dashboard%20in%20a%20Day/Media/ContosoSummary.svg
     ``` 
 
@@ -74,7 +97,7 @@ Learn more about [report view](https://learn.microsoft.com/power-bi/create-repor
     | Detail | Fit | 0% |
 
     **Image (file)**
-    ```
+    ```text
     https://raw.githubusercontent.com/microsoft/pbiworkshops/main/Day%20After%20Dashboard%20in%20a%20Day/Media/ContosoDetail.svg
     ```
 
@@ -82,9 +105,7 @@ Learn more about [report view](https://learn.microsoft.com/power-bi/create-repor
 
 <font size="6">✅ Lab check</font>
 
-We used PowerPoint to create a rich background for our Power BI report. We chose PowerPoint because it has design templates and shapes that match the slide dimensions of our report canvas. This way, we could plan our design elements before importing them into Power BI. All we had to do was size our visuals to fit the individual squares.
-
-This technique can also improve the performance of our report by reducing the rendering times of having extra elements on our report page.
+This technique also reduces the rendering times on our report page by moving all elements to a single background shape as opposed to numerous items needing to be rendered on the Power BI report page.
 
 Learn more about [themeable backgrounds](https://alluringbi.com/2020/05/05/themeable-backgrounds-for-power-bi/) from the community resource [AlluringBI.com](https://alluringbi.com)
 
@@ -92,71 +113,69 @@ Learn more about [themeable backgrounds](https://alluringbi.com/2020/05/05/theme
 
 ### Elements
 
-1. Go to the **Insert** tab and select **Text box**. Then, do the following:
-    1. Change the Font size to **18** and the Font color to **White, 50% Darker**.
-    1. Type **SALES REPORT** in the text box.
+1. Navigate to the **Insert** tab, select the **Text box** element and complete the following steps below.
+    1. Update the Font size to: **18**
+    1. Update the Font color to: **White, 50% Darker**
+    1. Type the text within the text box: **SALES REPORT**
 
     ![Sales report text box](./Media/SalesReportTextBox.png)
 
-1. With the text box selected, go to the **Format** pane and type **background** in the search box. Under **Effects**, turn off the **Background** property.
+1. With the text box still active, we'll navigate to the **Format** pane and in the search box type in **background**.
+
+    From the matching options navigate to the **Effects** group and set the **Background** property to **Off**.
 
     ![Sales report text box](./Media/TextBoxBackgroundDisabled.png)
 
-1. Go to the **Insert** tab and select **Buttons**, then **Navigator** and the **Page navigator** option. Move the buttons to the top right corner of the canvas.
+1. Navigate to the **Insert** tab, select the **Buttons** element and then **Navigator** option. From the available choices select the **Page navigator** option. 
+
+    Reposition the buttons on the top right side of the canvas.
 
     ![Page navigator](./Media/PageNavigator.png)
 
-1. Select both the text box and the page navigator elements on the **Summary** page by clicking and dragging with your mouse or pressing CTRL+A. Copy them by clicking **Copy** on the Home tab or pressing CTRL+C.
+1. We'll now click the text page navigator elements on the **Summary** page. Once selected, we can navigate to the **Home** tab and select **Copy** or press the keyboard shortcut **Ctrl+C**
 
-    ![Select multiple](./Media/SelectMultiple.png)
+    > [!NOTE]
+    > We can also select all elements by pressing CTRL+A or holding ctrl when clicking each item.
 
-1. Go to the **Detail** page and paste them by clicking **Paste** on the **Home** tab or pressing CTRL+V. This will align them perfectly with those on Summary page.
+    ![Copy page navigator element](./Media/copy-element.png)
 
-    ![Paste multiple detail](./Media/PasteMultipleDetail.png)
+1. Navigate to the **Detail** page and from the **Home** tab select the **Paste** button or press the keyboard shortcut **Ctrl+V**. This will ensure our elements are perfectly aligned between both the **Summary** and **Detail** page.
 
-1. Select only text box on Detail page and change its text from "**SALES REPORT**" to "**SALES DETAIL |**"
+    ![Paste to detail](./Media/paste-to-detail.png)
 
-1. Select the **Text box** element on the **Detail** page and update the text from "**SALES REPORT**" to "**SALES DETAIL |**"
-
-    ![Sales detail](./Media/SalesDetail.png)
+1. Navigate back to the **Summary** page of your report.
 
 ## Visualizations
 
-Visualizations are ways of displaying data insights in Power BI reports. They can be charts, maps, tables, gauges, and many other types of graphics. You can create visualizations by selecting fields from your data model or by using Q&A. You can also customize your visualizations with different colors, shapes, filters, and interactions.
-
-Learn more about [data visualizations](https://learn.microsoft.com/power-bi/visuals/power-bi-report-visualizations)
+Learn more about [data visualizations]()
 
 ---
 
 ### Consolidating visuals
 
-Our users want to see **Total Sales Amount**, **Total Items Discounted** and **Total Returned Items** at the top of our report. These are the key measures often used for their team discussion.
+We've been asked by our users to ensure the **Total Sales Amount**, **Total Items Discounted** and **Total Returned Items** measures are prominently displayed at the top of our report as these results will be the most common discussion points.
 
-To optimize our report performance, we will use a single Table visual instead of three Card visuals. This will reduce the number of visuals on our canvas and save space.
+As more requirements continue to be added to our report design, we want to be cognizant of the number of visuals we are including on our canvas, so we'll leverage a technique below to consolidate a more common design pattern of three **Card** visuals into a more optimized approach with a single **Table** to optimize our report performance.
 
 ---
 
-1. Drag the **Table** visual from the **Visualizations** pane to the canvas and add the following measures to the table in this order:
+1. On the **Summary** page, select the **New Card** visual from the **Visualizations** pane to add to the canvas and add the below measures in the following order:
+
     1. **Total Sales Amount**
-    1. **Total Items Discounted**
+    1. **Total Items Discounts**
     1. **Total Return Items**
-    
-    ![Table measures](./Media/TableMeasures.png)
 
-1. Resize and position the table to fit the top horizontal section of our report.
+    ![Table measures](./Media/new-card-visual.png)
 
-![Table span](./Media/TableSpan.png)
-
-1. To format our visual, go to the **Visualizations** pane and click on **Format your visual** to adjust these settings:
-
-    **Note**: We can use the Search box to find specific settings quickly.
+1. Utilizing the **Visualizations** pane's **Format your visual** section, we'll update the following configurations below.
 
     | | |
     | :- | :- |
-    | 🔍 Search term | **Style** |
-    | Style presets | **None** |
+    | 🔍 Search term | **Cards** |
+    | Fill | **Off** |
+    | Border | **Off** |
 
-    ![Style none](./Media/StyleNone.png)
+    ![Cards none](./Media/cards-none.png)
 
     | | |
     | :- | :- |
@@ -165,83 +184,68 @@ To optimize our report performance, we will use a single Table visual instead of
 
     ![Effects off](./Media/EffectsOff.png)
 
+1. Resize and position the new card visual to fit the top horizontal section of the report.
+
+    ![New card span](./Media/card-span.png)
+
+1. Utilizing the **Visualizations** pane's **Format your visual** section, we'll update the following configurations below.
+
+    **Note**: Utilize the Search box, to easily discover configurable settings.
+
     | | |
     | :- | :- |
-    | 🔍 Search term | **Headers** |
-    | Column headers > Font  | **Segoe UI Semibold** |
-    | Column headers > Font size  | **12** |
-    | Column headers > Text color | **#118DFF** |
-    | Column headers > Header alignment | **Center** |
-    | Column headers > Text wrap | **Off** |
+    | 🔍 Search term | **Callout** |
+    | Callout > Values > Font  | **Segoe UI Semibold** |
+    | Callout > Values > Font (size)  | **28** |
+    | Callout > Values > Horizontal alignment | **Center** |
 
-    ![Column headers](./Media/ColumnHeaders.png)
+    ![Callout settings](./Media/callout-settings.png)
+
+    | | |
+    | :- | :- |
+    | 🔍 Search term | **Label** |
+    | Callout > Label > Font  | **Segoe UI Semibold** |
+    | Callout > Label > Font (size)  | **12** |
+    | Callout > Label > Color | **#118DFF** |
+
+    ![Column headers](./Media/label-settings.png)
 
     <i>If the text color isn't within your default selection, select <b>More colors...</b> to enter the code manually.</i>
     
     ![Text color](./Media/TextColor.png)
 
-    | | |
-    | :- | :- |
-    | 🔍 Search term | **Values** |
-    | Values > Font  | **Segoe UI Semibold** |
-    | Values > Font size  | **16** |
+1. We'll now navigate to our **Optimize** tab and select the **Performance analyzer** option. Within the **Performance analyzer** pane we'll select **Start recording** and then **Refresh visuals** where we can review the results for our **Card (new)**. 
+    1. To view the fused query, select the **Copy query** option and paste into a text editor.
+    1. Once complete, select the **Stop** option and minimize the **Performance analyzer** pane.
 
-    ![Values font](./Media/ValuesFont.png)
-
-    | | |
-    | :- | :- |
-    | 🔍 Search term | **Column** |
-    | Specific column > Series  | **For each value in the drop down list, update the alignment below** |
-    | Specific column > Alignment  | **Center** |
-
-    ![Specific column](./Media/SpecificColumn.png)
-
-    | | |
-    | :- | :- |
-    | 🔍 Search term | **Border** |
-    | Grid | **Border** |
-    | Section | **Column header** |
-    | Border position | **Deselect any/all enabled options** |
-
-    ![Grid border](./Media/GridBorder.png)
-
-1. Next, we’ll adjust the table columns and analyze the performance of our visual. To resize the columns, hover between them until you see the resize mouse icon. Then, drag them to align with the dividers on the canvas.
-
-    ![Stretch columns](./Media/StretchColumns.png)
-
-1. To check the performance of our table, go to the **View** tab and click on **Performance analyzer**. Then, click on **Start recording** and **Refresh** visuals. You can see the results for our table in the pane.
-    1. To copy the query that was sent to our dataset, click on **Copy query** and paste it into a text editor.
-    1. When you are done, click on **Stop** and minimize the **Performance analyzer** pane.
-
-    ![Table analyzer](./Media/TableAnalyzer.png)
+    ![Table analyzer](./Media/card-analyzer.png)
 
 <font size="6">✅ Lab check</font>
-
-We have created a table visual that looks like three card visuals but uses only one query. This improves our report performance and makes it more appealing for our users. Reducing queries is important in Power BI.
+    
+Using the above technique we were able to emulate the presentation of three individual card visuals, in the form of a single table - while still preserving an aesthetically pleasing presentation for our users. In Power BI, its important to reduce the amount of queries sent to our dataset to improve our report performance.
 
 Learn more about [DAX Fusion](https://dax.tips/2019/08/05/dax-fusion/) from the community resource [DAX.tips](https://dax.tips)
 
 ### Slicers
 
-Slicers are a type of visual that filters the other visuals on a report page. They let you select values from a field and see how they affect your data. You can use slicers to create customized charts and reports that show only the information you want3.
-
-There are different types of slicers in Power BI, such as relative date slicer, numeric range slicer, dropdown slicer, etc. You can add slicers from the Visualizations pane and sync them across multiple pages.
-
-Learn more about [slicers](https://learn.microsoft.com/power-bi/visuals/power-bi-visualization-slicers?tabs=powerbi-desktop)
-
 ---
 
-1. Drag the **Slicer** visual from the **Visualizations** pane to the canvas below the **Total Sales Amount** column. Add the **DateKey** field from the **Calendar** table to the slicer and then click on the downward chevron (**V**) on the top right of the slicer and change it from **Between** to **Relative Date**.
+1. From the **Visualizations** pane add a **Slicer** visual to the report page and from the **DimDate** table insert the **DateKey** field into the **Field** value in the **Visualizations** pane or drop directly on the slicer itself and update the following configuration below.
 
-    ![Relative date](./Media/RelativeDate.png)
+    | | |
+    | :- | :- |
+    | 🔍 Search term | **Style** |
+    | Options > Style | **Relative** |
 
-1. Set the slicer value to **Last 18 Months**. This will filter our data for the past 18 months and update automatically every day.
+    ![Relative date](./Media/slicer-setting.png)
+
+1. Update the slicer values to **Last 18 Months** to create a rolling 18 month selection. This filter now will automatically apply as each new day occurs and position it below the **Total Sales Amount** column.
 
     ![Last 18 months](./Media/Last18Months.png)
 
-1. To format our slicer, go to the **Visualizations** pane and click on **Format your visual**. Then, adjust these settings:
+1. Utilizing the **Visualizations** pane's **Format your visual** section, we'll update the following configurations below to our slicer.
 
-    **Note**: We can use the Search box to find specific settings quickly.
+    **Note**: Utilize the Search box, to easily discover configurable settings.
 
     | | |
     | :- | :- |
@@ -261,30 +265,35 @@ Learn more about [slicers](https://learn.microsoft.com/power-bi/visuals/power-bi
 
     ![Style none](./Media/BackgroundColors.png)
 
-1. Add a **Slicer** visual from the **Visualizations** pane below the **Total Items Discounted** column. Add the **ProductCategoryName** and **ProductSubcategoryName** fields from the **Products** table to the slicer.
+1. From the **Visualizations** pane add a **Slicer** visual below the **Total Items Discounted** column and complete the following configurations.
+    1. Insert the **ProductCategoryName** field first and the **ProductSubcategoryName** second from the **Products** table either into the **Field** value in the **Visualizations** pane or drop directly on the slicer itself.
 
     ![Products slicer](./Media/ProductsSlicer.png)
 
-1. To check how this slicer affects the performance of your report, go to the **View** tab and click on **Performance analyzer**. Then, click on **Start recording** and hover over the slicer. We will see an **Analyze this visual** button on the top right. Click on it and expand the Slicer name in the pane. We will see a **DAX query** that was sent to display the values in the slicer.
+1. We'll now navigate to the **View** tab and select the **Performance analyzer** option. Within the **Performance analyzer** pane we'll select **Start recording** and then hover above our current slicer and select the **Analyze this visual** button in the top right.
+
+    Within our results, if we expand the **Slicer** name, a **DAX query** is present - this is because to render the current **List** configuration it must send a query to display our values.
 
     ![Analyze products slicer](./Media/AnalyzerProductsSlicer.png)
 
-1. To improve our report performance, we'll change our slicer from a list to a dropdown. Click on the downward chevron (**V**) on the top right of the slicer and select **Dropdown**. This will reduce the number of queries sent to your dataset.
+1. To increase our reports performance, we'll select the downward chevron **(V)** in the top right of our slicer and change the value to **Dropdown**
 
     ![Slicer dropdown](./Media/SlicerDropDown.png)
 
-1. To verify this improvement, hover over the slicer again and click on **Analyze this visual**. We will notice that there is no longer a **DAX query** under the Slicer name when it is collapsed. The query will only run when you click on the slicer to see its values.
+1. Hovering above our current slicer once again, we'll select the **Analyze this visual** button in the top right and review the updated results within the **Performance analyzer** pane where the **Slicer** no longer contains a **DAX query** when collapsed, it will only be when a user selects the slicer that it will then run a query to return our list of values.
 
     ![Slicer dropdown analyzer](./Media/SlicerDropDownAnalyzer.png)
 
-1. From the **Visualizations** pane add a **Slicer** visual below the **Total Returned Items** column. Insert the **CustomerType** field from the **Customer** table either into the **Field** value in the **Visualizations** pane or the slicer itself and in the top right of the slicer select the downward chevron **(V)** and change the value to **Dropdown**.
+1. From the **Visualizations** pane add a **Slicer** visual below the **Total Returned Items** column and complete the following configurations.
+    1. Insert the **CustomerType** field from the **Customer** table either into the **Field** value in the **Visualizations** pane or drop directly on the slicer itself. 
+    1. In the top right of the slicer select the downward chevron **(V)** and change the value to **Dropdown**
 
     ![Customer slicer](./Media/CustomerSlicer.png)
 
-1. To transfer visual configurations, select the **Date** slicer and then navigate to the **Home** tab to select the **Format painter** button. Repeat the following steps for the other two slicers.
-    1. Paste to the **ProductCategoryName, ProductSubcategoryName** slicer.
-    1. Paste to the **CustomerType** slicer.
-    
+1. We'll now select the **Date** slicer to make it our active object, navigate to the **Home** tab, select the **Format painter** button and repeat the following steps for the other two slicers.
+    1. With the **Format painter** mouse icon now active, select the **ProductCategoryName, ProductSubcategoryName** slicer to transfer the visual configurations.
+    1. With the **Format painter** mouse icon now active, select the **CustomerType*** slicer to transfer the visual configurations.
+
     ![Format painter](./Media/FormatPainter.png)
 
 1. We'll now click and hold the left mouse click and select both the **ProductCategoryName, ProductSubcategoryName** and **CustomerType** slicers (or press and hold Ctrl and then Click) on our page, navigate to the **Visualizations** pane's **Format your visual** section and update the following configurations below.
@@ -300,37 +309,31 @@ Learn more about [slicers](https://learn.microsoft.com/power-bi/visuals/power-bi
 
 ![Finished slicer](./Media/FinishedSlicer.png)
 
-Maintaining a consistent look across report elements ensures a professional experience for end users. Utilizing features like **Format painter** (found across Office applications) or by bulk updating configurations is quick way to ensure our configurations are consistent.
+Maintaining a consistent look and feel across our report elements ensures a professional and visually appealing experiences for our end users. Utilizing features like **Format painter** (found across other Office applications) or by bulk updating configurations is a quick and easy way to ensure our designs are consistent.
 
 ### Natural language
 
-Q&A in Power BI is a feature that lets you explore your data using natural language. You can type questions in the Q&A box and get answers in the form of visuals. You can also use Q&A to create visuals for your reports by asking questions about your data. Q&A recognizes the words you type and figures out where and how to find the answer.
-
-Learn more about [Q&A](https://learn.microsoft.com/power-bi/create-reports/power-bi-tutorial-q-and-a?tabs=powerbi-desktop)
-
----
-
-1. Double click the bottom left corner of the canvas to create a **Q&A** visual. Then complete the following:
-    1. Type **Total Sales Amount by manufacturer** in the dialog box.
-    1. Select **turn this Q&A result into a standard visual** next to the search box. 
-    1. Resize the visual to fit within the white square.
+1. In the bottom left corner of the canvas, double click the mouse to create the **Q&A** visual and complete the following steps.
+    1. Within the **Ask a question about your data** dialog, type the text **Total Sales Amount by manufacturer**. 
+    1. Next to the **Ask a question...** search box, select the **turn this Q&A result into a standard visual.** button.
+    1. Resize the visual to fit within the original **Background canvas** white square.
 
     ![Natural language visual](./Media/NaturalLanguageVisual.png)
 
-1. Double click the top right corner of the canvas to create a **Q&A** visual. Then complete the following:
-    1. Type **Total Sales Amount by week** in the dialog box.
-    1. Select **turn this Q&A result into a standard visual** next to the search box.
-    1. Resize the visual to fit within the white square.
+1. In the top right corner of the canvas in the first rectangle, double click the mouse to create the **Q&A** visual and complete the following steps.
+    1. Within the **Ask a question about your data** dialog, type the text **Total Sales Amount by week**. 
+    1. Next to the **Ask a question...** search box, select the **turn this Q&A result into a standard visual.** button.
+    1. Resize the visual to fit within the original **Background canvas** white square.
 
     ![Total sales by week](./Media/TotalSalesByWeek.png)
 
-1. To create a line chart for each **Occupation**, add **Occupation** from **Customers table** into **Small multiples** field in Visualizations pane with our current line chart selected. To update our line charts small multiple properties, use **Format your visual** section in **Visualizations** pane.
+1. As opposed to creating a line chart for each **Occupation** we can utilize the **Small multiples** feature to create a series of line charts within a single visual. With our current line chart as the active selection, navigate to the the **Fields** pane and add the **Occupation** field from the **Customers** table into the **Small multiples** field in the **Visualizations** pane.
 
     ![Small multiples](./Media/SmallMultiples.png)
 
-1. In the **Visualizations** pane’s **Format your visual** section, update these settings for our line charts small multiple properties.
+1. Utilizing the **Visualizations** pane's **Format your visual** section, we'll update the following configurations below for our line charts small multiple properties.
 
-    **Note**: We can use the Search box to find specific settings quickly.
+    **Note**: Utilize the Search box, to easily discover configurable settings.
 
     | | |
     | :- | :- |
@@ -342,9 +345,9 @@ Learn more about [Q&A](https://learn.microsoft.com/power-bi/create-reports/power
 
     ![Small multiples properties](./Media/SmallMultiplesProperties.png)
 
-1. In the **Visualizations** pane’s **Add further analyses to your visual** section, update these settings for our line chart to add more insights.
+1. Utilizing the **Visualizations** pane's **Add further analyses to your visual** section, we'll update the following configurations below for our line chart to infuse additional insights.
 
-    **Note**: We can use the Search box to find specific settings quickly.
+    **Note**: Utilize the Search box, to easily discover configurable settings.
 
     | | |
     | :- | :- |
@@ -353,42 +356,39 @@ Learn more about [Q&A](https://learn.microsoft.com/power-bi/create-reports/power
     | Median line > Line > Color | **Black** |
 
     ![Median line](./Media/MedianLine.png)
-1. Select the ellipses (**…**) in the top right corner of our current small multiples line chart.
-    1. Choose **Sort small multiples** and sort by **Total Sales Amount**
-    1. Choose **Sort small multiples** again and select **Sort descending**
+
+1. With our current small multiples line chart as the active selection and complete the following instructions by first selecting the ellipses (**...**) in the top right corner.
+    1. With the ellipses selected, navigate to the **Sort small multiples** option and select sort by **Total Sales Amount**
+    1. With the ellipses selected again, navigate to **Sort small multiples** and select the **Sort descending** option.
 
     ![Sort small multiples](./Media/SortSmallMultiples.png)
 
-1. Add the **Azure map** visual below the small multiples line chart in the bottom right corner of our page, and configure it like this:
-    1. Drag the **StateProvinceName** field from the **Customers** table into the **Location** value in the **Visualizations** pane or the map itself.
-    1. Drag the **Total Sales Amount** measure from the **Fact Online Sales** table into the **Size** value in the **Visualizations** pane or on the map itself.
+1. From the **Visualizations** pane add the **Azure map** visual below the small multiples line chart in the bottom right corner of our page, and complete the following configurations.
+    1. Insert the **StateProvinceName** field from the **Customers** table either into the **Location** value in the **Visualizations** pane or drop directly on the map itself.
+    1. Insert the **Total Sales Amount** measure from the **Fact Online Sales** table either into the **Size** value in the **Visualizations** pane or drop directly on the map itself.
 
     ![Azure maps](./Media/AzureMaps.png)
 
 <font size="6">✅ Lab check</font>
 
-You can create visuals with natural language, split them into multiple versions with small multiples or use rich mapping capabilities - there are many ways to visualize your data in Power BI by typing a description.
+Whether it be creating visuals with natural language, splitting them into multiple versions of the same visual with small multiples or incorporating rich mapping capabilities - there's numerous methods in which 
 
 ![Summary finish](./Media/SummaryFinish.png)
 
 ---
 
 ### Spark lines
-
-Sparklines are mini charts that you can add to a table or matrix visual in Power BI. They help you see trends and patterns in your data without creating separate visuals. You can add up to five sparklines per visual and choose between line or column charts.
-
-Learn more about [sparklines](https://learn.microsoft.com/power-bi/create-reports/power-bi-sparklines-tables)
+Multiple charts.
 
 ---
 
-1. Go to the **Detail** page by selecting its name in the bottom left or holding ctrl and clicking the **Detail** button in the top right.
-
-    **Pro-tip:** For reports with many pages, right click the arrows (<>) next to the page tabs to see all page names. This also works in Excel.
+1. Navigate to the **Detail** page, either by selecting the page name in the bottom left or holding **ctrl** and clicking the **Detail** button from the page navigator in the top right of the page.
+    
+    **Pro-tip:** for reports with a large number of pages, we can also right click the page navigation arrows (**<>**) to the left of the page tabs to display a pop-up of all page names. This technique is also applicable to Excel workbooks.
 
     ![Select detail page](./Media/SelectDetailPage.png)
 
-1. Add the **Matrix** visual from the **Visualizations** pane to the top right rectangle on the **Detail** page and configure it like this.
-
+1. From the **Visualizations** pane add the **Matrix** visual to the top right rectangle in the **Detail** page and complete the following configurations.
     | Field | Table | Field/Measure |
     | :-- | :-- | :-- |
     | Rows | Products | Manufacturer |
@@ -398,56 +398,50 @@ Learn more about [sparklines](https://learn.microsoft.com/power-bi/create-report
 
     ![Add matrix visual](./Media/AddMatrixVisual.png)
 
-1. Right click **Total Sales Amount** in the **Visualizations** pane and select **Add a sparkline**.
-
-    **Note:** You can also add a sparkline by going to the **Insert** tab and clicking **Add a sparkline**.
+1. From the **Visualizations** pane, we'll right click the **Total Sales Amount** option and select the **Add a sparkline** option.
+    1. Note: You can also add a sparkline by navigating to the **Insert** tab and then selecting the **Add a sparkline** button.
 
     ![Add sparkline](./Media/AddSparkline.png)
 
-1. In the **Add a sparkline** window, choose **DateKey** from the Calendar table under **X-axis**, then click **Create**.
+1. Within the **Add a sparkline** dialog window, select the drop down under the **X-axis** and select the **DateKey** filed from the **Calendar** table. Once complete select **Create** to continue.
 
     ![Sparkline axis](./Media/SparklineAxis.png)
 
-1. Right click **Total Sales Amount** by **DateKey** sparkline in the **Visualizations** pane and select **Rename** for this visual, then type a space character as a new title.
+1. From the **Visualizations** pane, we'll right click the **Total Sales Amount by DateKey** sparkline option and select the **Rename for this visual** option. For the updated title, we'll simply type the **space character** to ensure at least one character so that Power BI accepts our rename and press enter once complete.
 
     ![Rename sparkline](./Media/RenameSparkline.png)
 
-1. Check your sparkline is still there but invisible in the pane, then resize your matrix column if you can’t see your sparklines.
+1. From the **Visualizations** pane, we can verify our sparkline is still present, albeit with no visible characters and in our matrix, if the sparklines are not visible, resize the right most column to view.
 
     ![Rename sparkline](./Media/ResizeSparkline.png)
 
 ### Drill-through
 
-Drillthrough is a feature in Power BI that lets you create a target page in your report that focuses on a specific entity, such as a supplier, customer, or manufacturer1. You can then right-click on a data point in another page and drill through to the target page to see details that are filtered to that context. To set up drillthrough, you need to create a target page with the visuals you want and add fields to the Drillthrough filter well. You can also customize your back button image and pass all filters in drillthrough.
-
-Learn more about [drill-through](https://learn.microsoft.com/power-bi/create-reports/desktop-drillthrough)
-
----
-
-1. Drag-and-drop **Manufacturer** from the **Products** table in the **Fields** pane to **Add drill-through field values here** in the Visualizations pane.
+1. From the **Fields** pane, we'll locate the **Manufacturer** field from the **Products** table and drag-and-drop this value into the **Visualizations** pane's **Add dril-through field values here** field well.
 
     ![Add drill-through](./Media/AddDrillthrough.png)
 
-1. **Delete** the automatic back button in the top left corner of our page. We already have a page navigation button.
+1. In the top left side of our page an automatic button has been added to return to the previous drill page. Because we already have a page navigation button, let's select this object and press **Delete** on the keyboard to remove this element.
 
     ![Delete drill-through](./Media/DeleteDrillthrough.png)
 
-1. Go back to the **Summary** page by selecting its name in the bottom left or holding **ctrl** and clicking the **Summary** button in the top right. Right click **Contoso, Ltd** bar in the bottom left corner of our page, choose **Drill-through**, then select **Detail**.
+1. Return to the **Summary** page, either by selecting the page name in the bottom left or holding **ctrl** and clicking the **Summary** button from the page navigator in the top right of the page. In the bottom left of the page right click the bar for **Contoso, Ltd** and navigate to the **Drill-through** option and then select the **Detail** page.
 
     ![Manufacturer drill-through](./Media/ManufacturerDrillthrough.png)
 
-1. We’re now on the **Detail** page with only **Contoso, Ltd** manufacturer data in our matrix visual. The bottom right corner of our pane shows that both **Manufacturer is Contoso, Ltd** and current date range from slicer are passed because you enabled **Keep all filters**.
+1. We have now returned to the **Detail** page and our matrix visual only includes the **Contoso, Ltd** manufacturer. In the bottom right of the **Visualizations** pane the **Manufacturer is Contoso, Ltd** and the current **DateKey** range from the **Date** slicer is also passed due to the **Keep all filters** toggle being enabled.
 
     ![Verify drill-through](./Media/VerifyDrillthrough.png)
 
-1. To highlight your drill-through selection more, create a report level measure for selected manufacturer value and use it as your page title in top left corner. Report level measures are only for this report and not part of live connected model.
+1. To make our drill-through selection stand out more, we're going to create a report level measure to determine our selected **Manufacturer** value and use this in our page title in the top left. Report level measures are only accessible from our report and are not part of our live connected model. 
 
-    Follow these steps:
-    1. Right click **Products** table in the **Fields** pane and select **New measure**.
+    Complete the following steps below:
+
+    1. From the **Fields** pane, right click the **Products** table and select **New measure**.
 
     ![New measure](./Media/NewMeasure.png)
 
-    2. Enter this DAX query in the formula bar and click ✔️ on the left to commit.
+    2. Within the DAX formula bar, add the following DAX query below and select the ✔️ check mark to the left of the formula to commit.
 
     ```sql
     Selected Manufacturer = 
@@ -457,7 +451,7 @@ Learn more about [drill-through](https://learn.microsoft.com/power-bi/create-rep
     ```
     ![Report measure](./Media/ReportMeasure.png)
 
-1. Select the page title in the top left corner. After the pipe, click "**+ Value**" to update dynamic value options below. Click **Save** when done.
+1. We'll now select the page title in the top left to make it the active selection and after the pipe we'll select the "**+ Value**" button to update the dynamic value options below and select **Save** once complete:
 
     | | |
     | :- | :- |
@@ -466,15 +460,15 @@ Learn more about [drill-through](https://learn.microsoft.com/power-bi/create-rep
 
     ![Dynamic value title](./Media/DynamicValueTitle.png)
 
-1. If text format doesn’t match, highlight text and change Font size to **18** and Text color to **White, 60% darker**.
+1. If the returned text format does not match, highlight the returned text and update the Font size to **18** and the Text color to **White, 60% darker**
 
     ![Match title format](./Media/MatchTitleFormat.png)
 
 ## Sparkline formatting
 
-1. To update our matrix with the following configurations below, we’ll use the **Format your visual** section in the **Visualizations** pane.
+1. Utilizing the **Visualizations** pane's **Format your visual** section, we'll now update our matrix with the following configurations below.
 
-    **Note**: We can use the Search box to find specific settings quickly.
+    **Note**: Utilize the Search box, to easily discover configurable settings.
 
     | | |
     | :- | :- |
@@ -519,26 +513,23 @@ Learn more about [drill-through](https://learn.microsoft.com/power-bi/create-rep
 
     ![Sparkline settings](./Media/SparkLineSettings.png)
 
-1. Next, let’s resize the matrix columns to fit the width of our top left rectangle. This will make our sparklines easier to read for our end users.
+1. With our matrix visual now configured, let's return to visual itself and resize the columns so that they fit the complete width of our top left rectangle so that they are easy to read for our end users so that they can find new insights with our sparklines.
 
     ![Resize matrix](./Media/ResizeMatrix.png)
 
 ## Artificial Intelligence
 
-Power BI has AI visuals such as Key Influencers, Decomposition Tree, and Anomaly Detection. They can help us optimize our business metrics by finding out what factors affect them.
-
 ### Anomaly detection
 
-1. We want to show how our total sales amount changed over time using a line chart. To do this, we need to follow these steps:
-    1. Go to the **Visualizations** pane and select a **Line** visual, dragging it to the bottom left rectangle on our canvas.
-    1. Add **DateKey** field from the **Calendar** table as our **X-axis**
-    1. Add **Total Sales Amount** measure as Y-axis
+1. From the **Visualizations** pane we'll now add a **Line** visual to the bottom left rectangle on our canvas and insert the following fields and measures to the values below:
+    1. X-axis: **Calendar** table, **DateKey** field
+    1. Y-axis: **Total Sales Amount** measure
 
-    ![Total sales amount line chart](./Media/TotalSalesAmountLine.png)    
+    ![Total sales amount line chart](./Media/TotalSalesAmountLine.png)
 
-    1. Enable anomaly detection under **Add further analyses to your visual**
+1. Utilizing the **Visualizations** pane's **Add further analyses to your visual** section, we'll update the following configurations below for our line chart to infuse additional insights.
 
-    **Note**: We can use the Search box to find specific settings quickly.
+    **Note**: Utilize the Search box, to easily discover configurable settings.
 
     | | |
     | :- | :- |
@@ -547,7 +538,9 @@ Power BI has AI visuals such as Key Influencers, Decomposition Tree, and Anomaly
 
     ![Find anomalies](./Media/FindAnomalies.png)
 
-1. Now we have a line chart that shows us unusual patterns in our sales data. We can click on any anomaly marker to see more details on a new **Anomalies** pane. This pane tells us why an anomaly was detected and possible explanations for it. Our end users can also access this feature when they view our reports on Power BI service (cloud).
+1. From our line chart, anomalies have now been detected, if we were to select any of the anomaly markers a new **Anomalies** pane is then available, this same experience will be available to our end users as they view our reports within the Power BI service (cloud).
+    
+    The anomalies pane includes information information like why the anomaly was detected and possible explanations including their overall strength score as displayed in the black highlighted areas.
 
     ![Anomalies pane](./Media/AnomaliesPane.png)
 
@@ -555,11 +548,11 @@ Learn more about [Anomaly detection](https://learn.microsoft.com/power-bi/visual
 
 ### Smart narrative
 
-1. Go to the **Visualizations** pane and select the **Smart narrative** visual. Drag it to the top right rectangle on our canvas.
+1. From the **Visualizations** pane we'll now add a **Smart narrative** visual to the top right rectangle on our canvas.
 
     ![Smart narrative](./Media/SmartNarrative.png)
 
-1. Adjust its format using **Format your visual** section within the **Visualizations** pane to the following:
+1. Utilizing the **Visualizations** pane's **Format your visual** section, we'll now update our matrix with the following configurations below.
 
     **Note**: Utilize the Search box, to easily discover configurable settings.
 
@@ -571,18 +564,13 @@ Learn more about [Anomaly detection](https://learn.microsoft.com/power-bi/visual
 
     ![Smart narrative title](./Media/SmartNarrativeTitle.png)
 
-1. The **Smart narrative** will automatically update its summary based on our selections on other visuals
+1. Now as we make selections on our report pages, the **Smart narrative** visual's dynamic text will automatically rewrite and update its summary based upon its findings.
 
     ![Smart narrative update](./Media/SmartNarrativeUpdate.png)
 
 Learn more about [Smart narrative](https://learn.microsoft.com/power-bi/visuals/power-bi-visualization-smart-narrative)
 
 ### Q&A visual
-
-1. Last, we want to add a **Q&A** visual that allows our end users to ask their own questions and find new insights. To do this, we need to follow these steps:
-    1. Double click on the bottom right rectangle on our canvas
-    1. A **Q&A** visual will appear where we can type our questions
-    1. The Q&A visual will show us relevant answers using our data
 
 1. For our last visual we'll now add the **Q&A** visual to the bottom right rectangle on our canvas by simply double clicking.
 
@@ -607,6 +595,3 @@ Learn more about the [Q&A](https://learn.microsoft.com/power-bi/visuals/power-bi
 We hope this portion of the lab has shown how well designed reports can lead to increased usage and adoption.
 
 - Return to the [Day After Dashboard in a Day](./README.md) homepage
-
-# Learn more
-[Visual Vocabulary](https://app.powerbi.com/view?r=eyJrIjoiMDA4YWIwZWEtMDE3ZS00YmFhLWE5YWMtODFlZWEzNTU1ODNiIiwidCI6IjZjMGE1YjljLTA4OWEtNDk0ZS1iMDVlLTcxNjEwOTgyOTA0NyIsImMiOjF9) from Jason Thomas

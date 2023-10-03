@@ -348,7 +348,7 @@ Learn more about [organizing your measures](https://learn.microsoft.com/power-bi
 
 ---
 
-# Reframing
+# Dataset settings
 
 By default, OneLake automatically updates Direct Lake datasets with any data changes. However, you may want to disable this feature if you need to complete data preparation jobs before exposing new data to consumers of the dataset. To disable this feature, follow the steps below:
 
@@ -362,12 +362,16 @@ By default, OneLake automatically updates Direct Lake datasets with any data cha
 
     ![Select workspace](./Media/dataset-settings.png)
 
-1. Expand the **Refresh** settings and update the **Keep your Direct Lake data up to date** setting from the default **On** to **Off**.
+1. Expand the **Refresh** settings and update the **Keep your Direct Lake data up to date** setting from the default **On** to **Off** and select **Apply** within the group once complete.
 
     ![Keep your data up to date](./Media/keep-your-data-up-to-date.png)
 
     > [!IMPORTANT]
     > Once your data preparation activities have successfully completed, add an activity to refresh the Power BI dataset to ensure that it is up-to-date.
+
+1. Expand the **Q&A** setting and update the **Turn on Q&A to ask natural language questions about your data** setting to enabled by clicking the checkbox and selecting **Apply** once complete.
+
+    ![Enable Q&A](./Media/enable-qa.png)
 
 Learn more about [refreshing Direct Lake data](https://learn.microsoft.com/power-bi/enterprise/directlake-overview#refresh)
 
