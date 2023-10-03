@@ -503,10 +503,10 @@ Learn more about [sparklines](https://learn.microsoft.com/power-bi/create-report
 1. From the **Visualizations** pane add the **Matrix** visual to the top right rectangle in the **Detail** page and complete the following configurations.
     | Field | Table | Field/Measure |
     | :-- | :-- | :-- |
-    | Rows | Products | Manufacturer |
-    | Rows | Stores | StoreName |
-    | Rows | Products | ProductName |
-    | Values | Online Sales | Total Sales Amount |
+    | Rows | DimProduct | Manufacturer |
+    | Rows | DimStore | StoreName |
+    | Rows | DimProduct | ProductName |
+    | Values | FactOnlineSales | Total Sales Amount |
 
     ![Add matrix visual](./Media/AddMatrixVisual.png)
 
@@ -515,7 +515,7 @@ Learn more about [sparklines](https://learn.microsoft.com/power-bi/create-report
 
     ![Add sparkline](./Media/AddSparkline.png)
 
-1. Within the **Add a sparkline** dialog window, select the drop down under the **X-axis** and select the **DateKey** filed from the **Calendar** table. Once complete select **Create** to continue.
+1. Within the **Add a sparkline** dialog window, select the drop down under the **X-axis** and select the **DateKey** filed from the **DimDate** table. Once complete select **Create** to continue.
 
     ![Sparkline axis](./Media/SparklineAxis.png)
 
@@ -585,7 +585,7 @@ Learn more about [sparklines](https://learn.microsoft.com/power-bi/create-report
 ### Anomaly detection
 
 1. From the **Visualizations** pane we'll now add a **Line** visual to the bottom left rectangle on our canvas and insert the following fields and measures to the values below:
-    1. X-axis: **Calendar** table, **DateKey** field
+    1. X-axis: **DimDate** table, **DateKey** field
     1. Y-axis: **Total Sales Amount** measure
 
     ![Total sales amount line chart](./Media/TotalSalesAmountLine.png)
@@ -602,7 +602,7 @@ Learn more about [sparklines](https://learn.microsoft.com/power-bi/create-report
     ![Find anomalies](./Media/FindAnomalies.png)
 
 1. From our line chart, anomalies have now been detected, if we were to select any of the anomaly markers a new **Anomalies** pane is then available, this same experience will be available to our end users as they view our reports within the Power BI service (cloud).
-    
+
     The anomalies pane includes information information like why the anomaly was detected and possible explanations including their overall strength score as displayed in the black highlighted areas.
 
     ![Anomalies pane](./Media/AnomaliesPane.png)
@@ -641,7 +641,7 @@ Learn more about [Smart narrative](https://learn.microsoft.com/power-bi/visuals/
 
     ![Add QA visual](./Media/AddQAVisual.png)
 
-Learn more about the [Q&A](https://learn.microsoft.com/power-bi/visuals/power-bi-visualization-q-and-a) visual
+Learn more about the [Q&A](https://learn.microsoft.com/power-bi/visuals/power-bi-visualization-q-and-a) visual.
 
 # Lab check
 
