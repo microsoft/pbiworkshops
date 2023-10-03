@@ -505,11 +505,11 @@ When we have many tables in our solutions, it can be hard to keep track of their
         ```text
         Data that will be ingested from the source and referenced in computed tables for transformations via compute engines.
         ```
-    
+
         ![New group](./Media/NewGroup.png)
 
 1. In the **Queries** pane, hold **ctrl** and select the tables from the list below that you want to group together. Then, right click and choose **Move to group** > **New group…**.
-    
+
     1. DimDate
     1. DimEmployee
     1. DimStore
@@ -555,6 +555,52 @@ Transforming data at scale
 
 ## Edit data destinations
 
+The data destination logic in Dataflows Gen2 is configured as an additional step at the end of a chosen query. When you select the query, you’ll find the **Output destination** option available in the ribbon, diagram view, or applied steps section. Currently, users have two choices for handling their destination outputs:
+
+- **Replace**: Users can replace existing data in the destination.
+- **Append**: Users can append new data to the existing destination.
+
+---
+
+1. With any query in our dataflow selected, locate the **Data destination** field in the bottom right corner. This field includes an information icon indicator. The current configuration is set because in our earlier lab instructions, we entered the Dataflow Gen2 authoring experience from our Lakehouse. This setting applies to all queries in your editor and can be modified by:
+    - To remove the configuration, select the **X**.
+    - To customize the settings, click the settings icon.
+
+1. With any query in our dataflow selected, in the bottom right corner there is a **Data destination** field well including an information icon indicator. This configuration is set because in our earlier lab instructions we entered the Dataflow Gen2 authoring experience from our Lakehouse. This setting is applied to all queries in your editor and can also be removed by selecting the **X** or configured by selecting the settings icon.
+
+    ![Default append](./Media/default-append.png)
+
+    > [!IMPORTANT]
+    > As of the time of the lab instruction, the default setting is **Append**.
+
+1. Select the **DimProduct_raw** query, and in the bottom right corner of the editor, locate the **Data destination** field well, and click the **Settings** icon.
+
+    ![Edit destination settings](./Media/default-append.png)
+
+1. If prompted, authenticate into your Lakehouse and within the **Choose destination target** window, ensure **Existing table** is selected and click **Next**.
+
+    ![Existing table target settings](./Media/existing-table-target.png)
+
+1. In the **Choose destination settings** window, select the **Replace** update method. This method removes all rows from the table and loads new results with each subsequent refresh.
+
+    > [!NOTE]
+    > If you prefer to keep the previously loaded results in your table, you can choose the **Append** update method.
+
+    ![Replace method](./Media/replace-method.png)
+
+1. Follow the above instructions for each of the additional tables listed below.
+
+    | Table name | Destination target | Update method |
+    | :--- | :--- | :--- |
+    | DimProductCategory_raw | Existing | Update |
+    | DimProductSubcategory_raw | Existing | Update |
+    | DimCustomer_raw | Existing | Update |
+    | DimGeography_raw | Existing | Update |
+    | DimDate | Existing | Update |
+    | DimEmployee | Existing | Update |
+    | DimStore | Existing | Update |
+    | DimCustomer | Existing | Update |
+    | DimProduct | Existing | Update |
 
 ---
 
@@ -577,7 +623,7 @@ Using pipelines, we will orchestrate the refresh of our dataflow. If an error oc
 
     ![Show all items](./Media/ShowAllItems.png)
 
-2. In the **New** item creation screen, select **Data pipeline** under the Data Factory category.
+1. In the **New** item creation screen, select **Data pipeline** under the Data Factory category.
 
     ![New data pipeline](./Media/NewDataPipeline.png)
 
@@ -596,7 +642,7 @@ Using pipelines, we will orchestrate the refresh of our dataflow. If an error oc
 
     ![Dataflow activity name](./Media/dataflow-activity-name.png)
 
-7. With the dataflow activity still selected, select **Settings** and choose **OnlineSalesDataflow** from the Dataflow list. If necessary to update the list, select the **Refresh** icon.
+1. With the dataflow activity still selected, select **Settings** and choose **OnlineSalesDataflow** from the Dataflow list. If necessary to update the list, select the **Refresh** icon.
 
     ![Dataflow activity settings](./Media/dataflow-activity-dataflow.png)
 
