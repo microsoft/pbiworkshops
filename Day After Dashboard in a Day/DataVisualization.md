@@ -302,9 +302,8 @@ Learn more about [DAX Fusion](https://dax.tips/2019/08/05/dax-fusion/) from the 
 
     | | |
     | :- | :- |
-    | 🔍 Search term | **Background** |
-    | Values > Background > Background color | **White** |
-    | Effects > Background | **Off** |
+    | 🔍 Search term | **Title** |
+    | Text > Title text | **Products** |
 
     ![Title text Products](./Media/title-text-products.png)
 
@@ -336,29 +335,34 @@ Learn more about [DAX Fusion](https://dax.tips/2019/08/05/dax-fusion/) from the 
 
 Maintaining a consistent look and feel across our report elements ensures a professional and visually appealing experiences for our end users. Utilizing features like **Format painter** (found across other Office applications) or by bulk updating configurations is a quick and easy way to ensure our designs are consistent.
 
-### Natural language
+### Data storytelling
 
-1. In the bottom left corner of the canvas, double click the mouse to create the **Q&A** visual and complete the following steps.
-    1. Within the **Ask a question about your data** dialog, type the text **Total Sales Amount by manufacturer**. 
-    1. Next to the **Ask a question...** search box, select the **turn this Q&A result into a standard visual.** button.
-    1. Resize the visual to fit within the original **Background canvas** white square.
+1. In the bottom left corner of the canvas, add a **Clustered bar chart** from the **Visualizations** pane and drag-and-drop the following fields onto the visual, and resize the visual to fit within the original **Background canvas** white square.
 
-    ![Natural language visual](./Media/NaturalLanguageVisual.png)
+    | Table | Field |
+    | :-- | :-- |
+    | DimProduct | Manufacturer |
+    | FactOnlineSales | Total Sales Amount |
 
-1. In the top right corner of the canvas in the first rectangle, double click the mouse to create the **Q&A** visual and complete the following steps.
-    1. Within the **Ask a question about your data** dialog, type the text **Total Sales Amount by week**. 
-    1. Next to the **Ask a question...** search box, select the **turn this Q&A result into a standard visual.** button.
-    1. Resize the visual to fit within the original **Background canvas** white square.
+    ![Natural language visual](./Media/bar-chart-manufacturer.png)
 
-    ![Total sales by week](./Media/TotalSalesByWeek.png)
+1. In the top right corner of the canvas, add a **Line chart** from the **Visualizations** pane and drag-and-drop the following fields onto the visual, and resize the visual to fit within the original **Background canvas** white square.
 
-1. As opposed to creating a line chart for each **Occupation** we can utilize the **Small multiples** feature to create a series of line charts within a single visual. With our current line chart as the active selection, navigate to the the **Fields** pane and add the **Occupation** field from the **Customers** table into the **Small multiples** field in the **Visualizations** pane.
+    | Table | Field |
+    | :-- | :-- |
+    | DimDate | Week |
+    | FactOnlineSales | Total Sales Amount |
 
-    ![Small multiples](./Media/SmallMultiples.png)
+    ![Total sales by week](./Media/total-sales-by-week.png)
+
+1. As opposed to creating a line chart for each **Occupation** we can utilize the **Small multiples** feature to create a series of line charts within a single visual. With our current line chart as the active selection, navigate to the the **Data** pane and add the **Occupation** field from the **DimCustomer** table into the **Small multiples** field in the **Visualizations** pane.
+
+    ![Small multiples](./Media/small-multiples.png)
 
 1. Utilizing the **Visualizations** pane's **Format your visual** section, we'll update the following configurations below for our line charts small multiple properties.
 
-    **Note**: Utilize the Search box, to easily discover configurable settings.
+    > [!NOTE]
+    > Utilize the Search box, to easily discover configurable settings.
 
     | | |
     | :- | :- |
@@ -372,7 +376,8 @@ Maintaining a consistent look and feel across our report elements ensures a prof
 
 1. Utilizing the **Visualizations** pane's **Add further analyses to your visual** section, we'll update the following configurations below for our line chart to infuse additional insights.
 
-    **Note**: Utilize the Search box, to easily discover configurable settings.
+    > [!NOTE]
+    > Utilize the Search box, to easily discover configurable settings.
 
     | | |
     | :- | :- |
@@ -389,27 +394,109 @@ Maintaining a consistent look and feel across our report elements ensures a prof
     ![Sort small multiples](./Media/SortSmallMultiples.png)
 
 1. From the **Visualizations** pane add the **Azure map** visual below the small multiples line chart in the bottom right corner of our page, and complete the following configurations.
-    1. Insert the **StateProvinceName** field from the **Customers** table either into the **Location** value in the **Visualizations** pane or drop directly on the map itself.
-    1. Insert the **Total Sales Amount** measure from the **Fact Online Sales** table either into the **Size** value in the **Visualizations** pane or drop directly on the map itself.
+    1. Insert the **StateProvinceName** field from the **DimCustomer** table either into the **Location** value in the **Visualizations** pane or drop directly on the map itself.
+    1. Insert the **Total Sales Amount** measure from the **FactOnlineSales** table either into the **Size** value in the **Visualizations** pane or drop directly on the map itself.
 
-    ![Azure maps](./Media/AzureMaps.png)
+    ![Azure maps](./Media/azure-maps.png)
 
 <font size="6">✅ Lab check</font>
 
-Whether it be creating visuals with natural language, splitting them into multiple versions of the same visual with small multiples or incorporating rich mapping capabilities - there's numerous methods in which 
+Whether it be creating visuals out of the box, splitting them into multiple versions of the same visual with small multiples or incorporating rich mapping capabilities - there's numerous methods in which to visually tell your story with data in a clean and concise format.
 
 ![Summary finish](./Media/SummaryFinish.png)
 
 ---
 
+### Drill-through
+
+1. To make a drill-through selection that can stand out in our page title, we're going to create a report level measure to determine our selected **Manufacturer** value and display this in the top left. Report level measures are only accessible from our report and are not part of our live connected model.
+
+    Complete the following steps below:
+
+    1. From the **Data** pane, right click the **DimProduct** table and select **New measure**.
+
+    ![New measure](./Media/NewMeasure.png)
+
+    1. Within the DAX formula bar, add the following DAX query below and select the ✔️ check mark to the left of the formula to commit.
+
+    ```sql
+    Selected Manufacturer = 
+    VAR manufacturer = SELECTEDVALUE('DimProduct'[Manufacturer])
+    RETURN
+    UPPER(manufacturer)
+    ```
+
+    ![Report measure](./Media/ReportMeasure.png)
+
+1. Select the measure **Selected Manufacturer** and in the **Measure tools** tab, update the **Data type** to **Text**.
+
+    ![Measure data type](./Media/measure-data-type.png)
+
+    > [!IMPORTANT]
+    > The measure must be set as a **Text** data type in order to be added to the button text field in the next step of instructions.
+
+1. From the ribbon select the **Insert** tab and in the **Buttons** options a **Blank** button, position this in the top left side of the page adjacent to the company logo.
+
+    ![Insert blank button](./Media/insert-blank-button.png)
+
+1. Utilizing the **Visualizations** pane's **Format your visual** section, we'll update the following configurations below for our blank button properties.
+
+    > [!NOTE]
+    > Utilize the Search box, to easily discover configurable settings.
+
+    | | |
+    | :- | :- |
+    | 🔍 Search term | **Style** |
+    | Style > Text > Font (size) | **18** |
+    | Style > Text > Font color | **White, 50% darker** |
+    | Style > Text > Horizontal alignment | **Left** |
+
+    ![Style settings](./Media/style-settings.png)
+
+    | 🔍 Search term | **Style** |
+    | Style > Text > Text | **Fx** |
+
+    - Once in the **Text - state** window, set the value for the **What field should we base this on?** to the **Selected Manufactruer** measure located in the **DimProduct** table.
+
+    ![Style settings](./Media/text-fx-selected-manufacturer.png)
+
+    | | |
+    | :- | :- |
+    | 🔍 Search term | **Border** |
+    | Style > Border | **Off** |
+
+    ![Border off](./Media/border-off.png)
+
+    - Stretch the width of the button as necessary along the top of the page.
+
+1. From the **Data** pane, we'll locate the **Manufacturer** field from the **DimProduct** table and drag-and-drop this value into the **Visualizations** pane's **Add dril-through field values here** field well.
+
+    ![Add drill-through](./Media/AddDrillthrough.png)
+
+1. In the top left side of our page an automatic button has been added to return to the previous drill page. Because we already have a page navigation button, let's select this object and press **Delete** on the keyboard to remove this element.
+
+    ![Delete drill-through](./Media/DeleteDrillthrough.png)
+
+1. Return to the **Summary** page, either by selecting the page name in the bottom left or holding **ctrl** and clicking the **Summary** button from the page navigator in the top right of the page. In the bottom left of the page right click the bar for **Contoso, Ltd** and navigate to the **Drill-through** option and then select the **Detail** page.
+
+    ![Manufacturer drill-through](./Media/ManufacturerDrillthrough.png)
+
+1. We have now returned to the **Detail** page and our matrix visual only includes the **Contoso, Ltd** manufacturer. In the bottom right of the **Visualizations** pane the **Manufacturer is Contoso, Ltd** and the current **DateKey** range from the **Date** slicer is also passed due to the **Keep all filters** toggle being enabled.
+
+    ![Verify drill-through](./Media/VerifyDrillthrough.png)
+
 ### Spark lines
-Multiple charts.
+
+Sparklines are tiny charts shown within cells of a table or matrix that make it easy to see and compare trends quickly. You can use them to show trends in a series of values, such as seasonal increases or decreases, economic cycles, or to highlight max and min values. Sparklines are currently in public preview.
+
+Learn more about [sparklines](https://learn.microsoft.com/power-bi/create-reports/power-bi-sparklines-tables)
 
 ---
 
-1. Navigate to the **Detail** page, either by selecting the page name in the bottom left or holding **ctrl** and clicking the **Detail** button from the page navigator in the top right of the page.
-    
-    **Pro-tip:** for reports with a large number of pages, we can also right click the page navigation arrows (**<>**) to the left of the page tabs to display a pop-up of all page names. This technique is also applicable to Excel workbooks.
+1. Return to the **Detail** page if not already selected, either by clicking the page name in the bottom left or holding **ctrl** and clicking the **Detail** button from the page navigator in the top right of the page.
+
+    > [!NOTE]
+    > For reports with a large number of pages, we can also right click the page navigation arrows (**<>**) to the left of the page tabs to display a pop-up of all page names. This technique is also applicable to Excel workbooks.
 
     ![Select detail page](./Media/SelectDetailPage.png)
 
@@ -439,55 +526,6 @@ Multiple charts.
 1. From the **Visualizations** pane, we can verify our sparkline is still present, albeit with no visible characters and in our matrix, if the sparklines are not visible, resize the right most column to view.
 
     ![Rename sparkline](./Media/ResizeSparkline.png)
-
-### Drill-through
-
-1. From the **Fields** pane, we'll locate the **Manufacturer** field from the **Products** table and drag-and-drop this value into the **Visualizations** pane's **Add dril-through field values here** field well.
-
-    ![Add drill-through](./Media/AddDrillthrough.png)
-
-1. In the top left side of our page an automatic button has been added to return to the previous drill page. Because we already have a page navigation button, let's select this object and press **Delete** on the keyboard to remove this element.
-
-    ![Delete drill-through](./Media/DeleteDrillthrough.png)
-
-1. Return to the **Summary** page, either by selecting the page name in the bottom left or holding **ctrl** and clicking the **Summary** button from the page navigator in the top right of the page. In the bottom left of the page right click the bar for **Contoso, Ltd** and navigate to the **Drill-through** option and then select the **Detail** page.
-
-    ![Manufacturer drill-through](./Media/ManufacturerDrillthrough.png)
-
-1. We have now returned to the **Detail** page and our matrix visual only includes the **Contoso, Ltd** manufacturer. In the bottom right of the **Visualizations** pane the **Manufacturer is Contoso, Ltd** and the current **DateKey** range from the **Date** slicer is also passed due to the **Keep all filters** toggle being enabled.
-
-    ![Verify drill-through](./Media/VerifyDrillthrough.png)
-
-1. To make our drill-through selection stand out more, we're going to create a report level measure to determine our selected **Manufacturer** value and use this in our page title in the top left. Report level measures are only accessible from our report and are not part of our live connected model. 
-
-    Complete the following steps below:
-
-    1. From the **Fields** pane, right click the **Products** table and select **New measure**.
-
-    ![New measure](./Media/NewMeasure.png)
-
-    2. Within the DAX formula bar, add the following DAX query below and select the ✔️ check mark to the left of the formula to commit.
-
-    ```sql
-    Selected Manufacturer = 
-    VAR manufacturer = SELECTEDVALUE('Products'[Manufacturer])
-    RETURN
-    UPPER(manufacturer)
-    ```
-    ![Report measure](./Media/ReportMeasure.png)
-
-1. We'll now select the page title in the top left to make it the active selection and after the pipe we'll select the "**+ Value**" button to update the dynamic value options below and select **Save** once complete:
-
-    | | |
-    | :- | :- |
-    | How would you calculate this value | **selected manufacturer** |
-    | Name your value | **ManufacturerName** |
-
-    ![Dynamic value title](./Media/DynamicValueTitle.png)
-
-1. If the returned text format does not match, highlight the returned text and update the Font size to **18** and the Text color to **White, 60% darker**
-
-    ![Match title format](./Media/MatchTitleFormat.png)
 
 ## Sparkline formatting
 
