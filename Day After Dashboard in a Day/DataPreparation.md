@@ -599,8 +599,8 @@ The data destination logic in Dataflows Gen2 is configured as an additional step
     | DimDate | Existing | Update |
     | DimEmployee | Existing | Update |
     | DimStore | Existing | Update |
-    | DimCustomer | Existing | Update |
-    | DimProduct | Existing | Update |
+    | DimCustomer | New | Update |
+    | DimProduct | New | Update |
 
 ---
 
