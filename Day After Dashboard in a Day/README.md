@@ -38,10 +38,10 @@ To start the lab, visit [Data Preparation](./DataPreparation.md)
 
 ## Data Modeling
 
-In this lab you'll learn how to create datasets optimized for scale and performance usability using  Power BI Desktop.
+In this lab you'll learn how to create datasets optimized for scale and performance usability using web model editing in the Microsoft Fabric service (cloud).
 
 1. How to create a [Direct Lake](https://docs.microsoft.com/power-bi/transform-model/desktop-storage-mode) semantic model.
-1. How to properly model your [data](https://learn.microsoft.com/power-bi/guidance/star-schema) using the web model editing in the Microsoft Fabric service (cloud).
+1. How to properly model your [data](https://learn.microsoft.com/power-bi/guidance/star-schema) using the web model editing experience.
 1. How to add metadata to your [semantic model](https://learn.microsoft.com/en-us/power-bi/transform-model/) for deeper analysis and insights.
 
 To start the lab, visit [Data Modeling](./DataModeling.md)
