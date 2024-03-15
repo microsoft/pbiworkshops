@@ -159,20 +159,30 @@ To get started with the lab files, you can find them in a publicly accessible [G
 
     ![Open lakehouse](./Media/OpenLakehouse.png)
 
-1. To view the **Tables** created from our Dataflow Gen2 in the object explorer, select any of the tables from the list (e.g., select DimDate). These tables are created using the Delta Lake format, which is a parquet file format optimized for analytics.
-
-    They have been further optimized using [V-Order](https://learn.microsoft.com/fabric/data-engineering/delta-optimization-and-v-order?tabs=sparksql) to enable lightning-fast reads under Microsoft Fabric compute engines, such as Power BI, SQL, Spark, and others.
-
-    Once we’re done, we can return to the Workspace view by selecting our workspace from the side-rail on the left.
+1. To view the created tables in the object explorer, select any of the tables from the list (e.g., choose DimDate). These tables are created using the Delta Lake format, which is a parquet file format optimized for analytics. They have been further optimized using [V-Order](https://learn.microsoft.com/fabric/data-engineering/delta-optimization-and-v-order?tabs=sparksql) to enable lightning-fast reads under Microsoft Fabric compute engines (such as Power BI, SQL, Spark, and others).
 
     > [!IMPORTANT]
     > If you do not see your tables or they are undefined, select the **Refresh** option in the top left of the Lakehouse explorer.
 
+    When you right-click either the Tables or the Files section folder, you’ll find additional options like:
+
+    - **New shortcut**: This option allows you to create a shortcut that can access tables or files in another location within your organization, helping avoid data duplication.
+    - **Properties**: In this section, you’ll find details such as the Azure Blob File Storage (ABFSS) path. You can use this path to connect external tools like Azure Storage Explorer or for writing files from external systems.
+
+    ![Lakehouse properties](./Media/LakehouseProperties.png)
+
+    When you right-click the tables directlty, you'll find common oprations such as Delete and Rename, and additional options like:
+    - **Maintenance**: the table maintenance feature efficiently manages delta tables and keeps them always ready for analytics with three operations (Optimize, V-Order, Vaccum).
+
+        Learn more about [table maintenance](https://learn.microsoft.com/fabric/data-engineering/lakehouse-table-maintenance)
+
+    ![Lakehouse maintenance](./Media/LakehouseMaintenance.png)
+
+1. Once we’re done, we can return to the Workspace view by selecting our workspace from the side-rail on the left.
+
     ![Lakehouse view](./Media/LakehouseView.png)
 
 1. In the Workspace, select the eppises **(...)** next to the **Dataflow Gen2** item named **OnlineSalesDataflow**, and choose the **Edit** option.
-
-    ![Lakehouse view](./Media/EditDataflowEntry.png)
 
 ---
 # Power Query Online
