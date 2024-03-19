@@ -572,45 +572,37 @@ The data destination logic in Dataflows Gen2 is configured as an additional step
 
 ---
 
-1. With any query in our dataflow selected, locate the **Data destination** field in the bottom right corner. This field includes an information icon indicator. The current configuration is set because in our earlier lab instructions, we entered the Dataflow Gen2 authoring experience from our Lakehouse. This setting applies to all queries in your editor and can be modified by:
-    - To remove the configuration, select the **X**.
-    - To customize the settings, click the settings icon.
+1. With any query in our dataflow selected, in the bottom right corner there is a **Data destination** field well including an information icon indicator. This configuration is set because in our earlier lab instructions we entered the Dataflow Gen2 authoring experience from our Lakehouse. This setting is applied to all queries in the editor and can also be removed by selecting the **X** or configured by selecting the settings icon.
 
-1. With any query in our dataflow selected, in the bottom right corner there is a **Data destination** field well including an information icon indicator. This configuration is set because in our earlier lab instructions we entered the Dataflow Gen2 authoring experience from our Lakehouse. This setting is applied to all queries in your editor and can also be removed by selecting the **X** or configured by selecting the settings icon.
-
-    ![Default append](./Media/default-append.png)
+    ![Default append](./Media/default-replace.png)
 
     > [!IMPORTANT]
-    > As of the time of the lab instruction, the default setting is **Append**.
+    > The default setting is **Replace** and **Auto mapping** for column shcema changes.
+    >
+    > Default destinations configurations are also available when using the Lakehouse, Warehouse or Kusto DB as the Get data entry point when authoring a dataflow.
 
-1. Select the **DimProduct_raw** query, and in the bottom right corner of the editor, locate the **Data destination** field well, and click the **Settings** icon.
+1. Select the **FactOnlineSales** query, and in the bottom right corner of the editor, locate the **Data destination** field well, and click the **Settings** icon.
 
-    ![Edit destination settings](./Media/default-append.png)
+    For the dimension tables, which are small and undergo infrequent changes, we will leave the default **Replace** method to delete rows and insert their values during each run. However, for our larger fact tables, we want to **Append** our new sales data during subsequent runs.
 
-1. If prompted, authenticate into your Lakehouse and within the **Choose destination target** window, ensure **Existing table** is selected and click **Next**.
+    ![Edit destination settings](./Media/destination-setting.png)
 
-    ![Existing table target settings](./Media/existing-table-target.png)
+1. If prompted, authenticate into your Lakehouse and within the **Choose destination target** window, ensure **New table** is selected, along with the **SalesLakehouse** in the lab workspace and click **Next**.
 
-1. In the **Choose destination settings** window, select the **Replace** update method. This method removes all rows from the table and loads new results with each subsequent refresh.
+    ![Existing table target settings](./Media/new-table-target.png)
 
-    > [!NOTE]
-    > If you prefer to keep the previously loaded results in your table, you can choose the **Append** update method.
+1. In the **Choose destination settings** window, deselect the **Use automatic settings** option. With the newly visible options change the update method to **Append** and then click **Save settings**.
 
-    ![Replace method](./Media/replace-method.png)
+    > [!IMPORTANT]
+    > The update method **Replace** includes **Schema options** on publish, **Dynamic schema** ensures that any time you add or remove columns in your dataflow the subsequent created table automatically inherits these changes. For **Fixed schema** you will need to manually configure the changes via the destination configuration window.
 
-1. Follow the above instructions for each of the additional tables listed below.
+    ![Append method](./Media/append-method.png)
 
-    | Table name | Destination target | Update method |
-    | :--- | :--- | :--- |
-    | DimProductCategory_raw | Existing | Update |
-    | DimProductSubcategory_raw | Existing | Update |
-    | DimCustomer_raw | Existing | Update |
-    | DimGeography_raw | Existing | Update |
-    | DimDate | Existing | Update |
-    | DimEmployee | Existing | Update |
-    | DimStore | Existing | Update |
-    | DimCustomer | New | Update |
-    | DimProduct | New | Update |
+1. With the **FactOnlineSales** query still selected, and in the bottom right corner of the editor, locate the **Data destination** field well to easily review the updated configurations. You'll also notice the default destination indicator has been removed as this was manually configured and allows for **Dynamic schema** changes.
+
+    ![Append method](./Media/append-factonlinesales.png)
+
+Lean more about [data destination settings and configurations](https://learn.microsoft.com/fabric/data-factory/dataflow-gen2-data-destinations-and-managed-settings)
 
 ---
 
