@@ -3,7 +3,7 @@
 ✏️ Lab scenario
 ---
 
-In this section of the lab, our objective is to gather and merge daily files from a cloud directory. As the number of files in this directory will grow over time, it is essential to develop a data preparation solution that can accommodate this expansion. To achieve this, we need to create a future-proofed data preparation solution that can handle this growth1.
+In this section of the lab, our objective is to gather and merge daily files from a cloud directory. As the number of files in this directory will grow over time, it is essential to develop a data preparation solution that can accommodate this expansion. To achieve this, we need to create a future-proofed data preparation solution that can handle this growth.
 
 Please note that the term *future-proofed* refers to a solution that is designed to remain effective and relevant as conditions change over time. For more information on future-proofing queries, you can refer to the [Power Query best practices](https://learn.microsoft.com/power-query/best-practices#future-proofing-queries) documentation.
 
@@ -30,7 +30,7 @@ We'll begin by navigating to a new, empty, or non-production workspace to check 
 
 ## Lakehouse storage
 
-To begin, we will create a **Lakehouse**, which is a data architecture platform that enables the storage, management, and analysis of structured and unstructured data. This flexible and scalable solution allows organizations to handle large volumes of data using a variety of tools and frameworks to process and analyze that data.
+We'll start by creating a **Lakehouse**, which is a data architecture platform that enables the storage, management, and analysis of structured and unstructured data. This flexible and scalable solution allows organizations to handle large volumes of data using a variety of tools and frameworks to process and analyze that data.
 
 Learn more about [lakehouses in Microsoft Fabric](https://learn.microsoft.com/fabric/data-engineering/lakehouse-overview)
 

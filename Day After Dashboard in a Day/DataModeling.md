@@ -61,7 +61,7 @@ We'll begin by enabling the setting to allow for editing data models in the clou
 
 <font size="6">✅ Lab check</font>
 
-With the SQL endpoint we are able to run ad-hoc SQL queries atop of our tables and visualize our results all within a browser session. In the next section we want to focus on modeling our data and preparing it for analysis.
+With the SQL endpoint we are able to run ad-hoc SQL queries atop of our tables and visualize our results using DirectQuery mode all within a browser session. In the next section we want to focus on modeling our data and preparing it for analysis.
 
 ### Create relationships
 
@@ -73,9 +73,12 @@ It is also recommend to strive to deliver the **right number of tables** with th
 
 ---
 
-1. From the ribbon, select **Reporting** and then **New Power BI dataset**.
+1. From the ribbon, select **Reporting** and then **New semantic model**.
 
     ![New Power BI dataset](./Media/new-powerbi-dataset.png)
+
+    > [!NOTE]
+    > The **New semantic model** option is also visible from the Lakehouse explorer's **Home** tab.
 
 1. In the **New dataset** window, update the **Name** to **SalesDirectLakeModel**. Seelct the following objects listed below and then click **Confirm**:
 
@@ -109,7 +112,9 @@ It is also recommend to strive to deliver the **right number of tables** with th
     > The **Assume referential integrity** selection, enables running more efficient queries by using INNER JOIN statements rather than OUTER JOIN. This feature is only available when using Direct Lake and DirectQuery connectivity modes.
     > Learn more about [Referential integrity](https://docs.microsoft.com/power-bi/connect-data/desktop-assume-referential-integrity)
 
-1. Perform these same steps for each of the remaining tables and columns listed in the following table to create relationships.
+1. From the **Home** tab, select the **Manage relationships** option, and for each of the items listed below select **New relationship** and configure the relationships for each of the remaining tables and columns. Once complete select **Close**.
+
+    ![Manage relationships](./Media/manage-relationships.png)
 
     | Make this relationship active | From: Table 1 (column) | To: Table 2 (column) | Cardinality | Assume referential integrity | Cross filter direction |
     | :----- |:----- | :------ | :----- | :----- | :----- |
