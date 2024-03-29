@@ -122,7 +122,7 @@ It is also recommend to strive to deliver the **right number of tables** with th
     | ☑ | FactOnlineSales (StoreKey) | DimStore (StoreKey) | Many to one (*:1) | ☑ | Single |
     | ☑ | FactOnlineSales (DateKey) | DimDate (DateKey) | Many to one (*:1) | ☑ | Single |
     |  | FactOnlineSales (DeliveryDate) | DimDate (DateKey) | Many to one (*:1) | ☑ | Single |
-    | ☑ | DimStore (StoreKey) | DimEmployee (StoreKey) | Many to one (*:1) | ☑ | Both |
+    | ☑ | DimEmployee (StoreKey) | DimStore (StoreKey) | Many to one (*:1) | ☑ | Both |
 
      The following image shows a finished view of the semantic model with all the created relationships included.
 
