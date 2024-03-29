@@ -736,3 +736,6 @@ This part of the lab has demonstrated how dataflows can help you prepare data in
 # Completed files
 
 To download the completed files from the lab instructions:
+```text
+https://github.com/microsoft/pbiworkshops/raw/main/Day%20After%20Dashboard%20in%20a%20Day/Source_Files/DayAfterDataflow.pqt
+```
