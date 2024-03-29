@@ -189,7 +189,7 @@ Learn more about [time intelligence functions](https://learn.microsoft.com/dax/t
 1. To add a **[Total Sales SPLY]** measure, leveraging our **DimDate** table and our DateKey column, select the **FactOnlineSales** table in the Tables list. On the Home tab, select **New measure** and in the formula editor, copy and paste or type the following measure to calculate the total sales amount. Select the **check mark** to commit.
 
     ```dax
-    CALCULATE([Total Sales Amount], SAMEPERIODLASTYEAR(DimDate[DateKey]))
+    Total Sales SPLY = CALCULATE([Total Sales Amount], SAMEPERIODLASTYEAR(DimDate[DateKey]))
     ```
 
     > [!NOTE]
