@@ -285,7 +285,7 @@ Data categorization is a feature in Power BI that allows you to specify the data
     | Field | Data category |
     | :--- |  :--- |
     | RegionCountryName | Country/Region |
-    | StateProvinceName | State of Province |
+    | StateProvinceName | State or Province |
 
     ![Region category](./Media/data-category.png)
 
