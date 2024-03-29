@@ -246,7 +246,7 @@ An important aspect of data modeling is usability and extending our semantic mod
 
 The Row label property is a field that identifies the column that represents a single row in a table. As an example, the Row label property can be used to ensure that two users with the same name are not aggregated into a single record. By setting the Row label property to a field in your data that uniquely identifies each user, such as an ID number, you can keep their records separate.
 
-1. From the **Data** pane select the **DimEmployee** table and within the **Properties** pane set the **Row label** to the **FullName** field.
+1. From the **Data** pane select the **DimEmployee** table and within the **Properties** pane set the **Row label** to the **EmployeeKey** field.
 
     ![Row label](./Media/row-label.png)
 
