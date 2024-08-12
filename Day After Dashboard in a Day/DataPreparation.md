@@ -15,7 +15,7 @@ We'll begin by navigating to a new, empty, or non-production workspace to check 
 
     ![Workspace toolbar](./Media/WorkspaceToolbar.png)
 
-1. Within the **Settings** pane, navigate to the **Premium** tab to check the licensing mode. Ensure that one of the following modes is enabled:
+1. Within the **Settings** pane, navigate to the **License info** tab to check the license configuration. Ensure that one of the following modes is enabled:
 
     **License mode:**
     - [Premium capacity](https://docs.microsoft.com/power-bi/admin/service-premium-gen2-faq)
@@ -24,9 +24,9 @@ We'll begin by navigating to a new, empty, or non-production workspace to check 
 
     1. Once you have verified the licensing mode, select your desired capacity from the **License capacity** drop-down list.
 
-    1. Click **Apply** to save your changes and the **X** in the top right corner of the window to close the **Settings** pane.
+    1. Click **Select license** to save your changes and the **X** in the top right corner of the window to close the **Workspace settings** pane.
 
-    ![License mode](./Media/LicenseMode.png)
+    ![License mode](./Media/license-mode.png)
 
 ## Lakehouse storage
 
