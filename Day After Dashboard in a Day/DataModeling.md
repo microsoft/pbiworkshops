@@ -122,7 +122,7 @@ It is also recommend to strive to deliver the **right number of tables** with th
     | ☑ | FactOnlineSales (StoreKey) | DimStore (StoreKey) | Many to one (*:1) | ☑ | Single |
     | ☑ | FactOnlineSales (DateKey) | DimDate (DateKey) | Many to one (*:1) | ☑ | Single |
     |  | FactOnlineSales (DeliveryDate) | DimDate (DateKey) | Many to one (*:1) | ☑ | Single |
-    | ☑ | DimStore (StoreKey) | DimEmployee (StoreKey) | Many to one (*:1) | ☑ | Both |
+    | ☑ | DimEmployee (StoreKey) | DimStore (StoreKey) | Many to one (*:1) | ☑ | Both |
 
      The following image shows a finished view of the semantic model with all the created relationships included.
 
@@ -189,7 +189,7 @@ Learn more about [time intelligence functions](https://learn.microsoft.com/dax/t
 1. To add a **[Total Sales SPLY]** measure, leveraging our **DimDate** table and our DateKey column, select the **FactOnlineSales** table in the Tables list. On the Home tab, select **New measure** and in the formula editor, copy and paste or type the following measure to calculate the total sales amount. Select the **check mark** to commit.
 
     ```dax
-    CALCULATE([Total Sales Amount], SAMEPERIODLASTYEAR(Calendar[DateKey]))
+    Total Sales SPLY = CALCULATE([Total Sales Amount], SAMEPERIODLASTYEAR(DimDate[DateKey]))
     ```
 
     > [!NOTE]
@@ -246,7 +246,7 @@ An important aspect of data modeling is usability and extending our semantic mod
 
 The Row label property is a field that identifies the column that represents a single row in a table. As an example, the Row label property can be used to ensure that two users with the same name are not aggregated into a single record. By setting the Row label property to a field in your data that uniquely identifies each user, such as an ID number, you can keep their records separate.
 
-1. From the **Data** pane select the **DimEmployee** table and within the **Properties** pane set the **Row label** to the **FullName** field.
+1. From the **Data** pane select the **DimEmployee** table and within the **Properties** pane set the **Row label** to the **EmployeeKey** field.
 
     ![Row label](./Media/row-label.png)
 
@@ -285,7 +285,7 @@ Data categorization is a feature in Power BI that allows you to specify the data
     | Field | Data category |
     | :--- |  :--- |
     | RegionCountryName | Country/Region |
-    | StateProvinceName | State of Province |
+    | StateProvinceName | State or Province |
 
     ![Region category](./Media/data-category.png)
 
