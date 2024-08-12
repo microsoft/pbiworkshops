@@ -1,4 +1,4 @@
-![Microsoft Fabric](https://raw.githubusercontent.com/microsoft/FabricCAT/main/Asset%20Library/MicrosoftFabric.png)
+![Microsoft Fabric](./Media/data_factory_48_color.svg)
 </br>
 </br>
 
@@ -37,32 +37,17 @@ In this lab, you will learn how to create a project task flow and understand the
 
 To start the lab, visit [Getting started](./GettingStarted.md)
 
-## Data pipelines
+## Data pipeline
+
+
+To start the lab, visit [Data pipeline](./DataPipeline.md)
+
+## Dataflow Gen2
 
 In this lab you'll learn about how to shape and orchestrate your data using Data Factory experiences.
 
 1. How to create a [Dataflow Gen2](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-introduction-self-service) to prepare and load data using Power Query Online.
 1. Understanding the [storage and compute staging](https://blog.fabric.microsoft.com/blog/data-factory-spotlight-dataflows-gen2?ft=Data-factory:category) architecture for large scale data transformations.
-1. How to use [Pipelines](https://learn.microsoft.com/fabric/data-factory/activity-overview) to orchestrate and control your data movement.
+1. Configuring [data destination outputs](https://learn.microsoft.com/fabric/data-factory/dataflow-gen2-data-destinations-and-managed-settings).
 
-To start the lab, visit [Data Preparation](./DataPreparation.md)
-
-## Dataflow Gen2
-
-In this lab you'll learn how to create datasets optimized for scale and performance usability using web model editing in the Microsoft Fabric service (cloud).
-
-1. How to create a [Direct Lake](https://docs.microsoft.com/power-bi/transform-model/desktop-storage-mode) semantic model.
-1. How to properly model your [data](https://learn.microsoft.com/power-bi/guidance/star-schema) using the web model editing experience.
-1. How to add metadata to your [semantic model](https://learn.microsoft.com/en-us/power-bi/transform-model/) for deeper analysis and insights.
-
-To start the lab, visit [Data Modeling](./DataModeling.md)
-
-## Data Visualization
-
-In this lab you'll learn about designing efficient and stunning reports using Power BI Desktop.
-
-1. How to use canvas backgrounds and shape elements to create professional report layouts.
-1. How to create report level measures for dynamic report elements.
-1. How to leverage no-code artificial intelligence to find new insights in your data.
-
-To start the lab, visit [Data Visualization](./DataVisualization.md)
+To start the lab, visit [Dataflow Gen2](./DataflowGen2.md)
