@@ -1,4 +1,4 @@
-![Microsoft Fabric](./Media/data_factory_48_color.svg)
+![Microsoft Fabric](./Media/DataFactory.png)
 </br>
 </br>
 
@@ -39,6 +39,9 @@ To start the lab, visit [Getting started](./GettingStarted.md)
 
 ## Data pipeline
 
+1. Creating a dynamic pipeline using variables to manage and copy data efficiently through reusable components.
+1. Setting up conditional paths to handle different scenarios and ensure logical flow within your pipeline.
+1. Moving data between medallion layers, specifically the bronze and silver layers, to optimize data storage and retrieval for analysis.
 
 To start the lab, visit [Data pipeline](./DataPipeline.md)
 
