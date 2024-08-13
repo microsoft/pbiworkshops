@@ -337,6 +337,20 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
     ![Validate save and run the pipeline](./Media/final-pipeline-monitor.png)
 
+### Attach data pipleine to task flow
+
+1. Return to the workspace by selecting the workspace name on the left side-rail. This step ensures that you can continue working on other aspects of your project while the lakehouse is being set up.
+
+    ![Workspace selection](./Media/return-to-workspace.png)
+
+1. From the task flow select the **Initial process** task and the paper clip to assign a previously created item.
+
+    ![Attach initial process](./Media/attach-initial-process.png)
+
+1. Select the **createContosoTables** item and then press **Select**.
+
+    ![Attach initial process](./Media/attach-createcontosotables.png)
+
 # Next steps
 
 In this lab, we explored the process of creating dynamic data pipelines using Microsoft Fabric. Throughout the lab, we configured various activities, including setting variables, retrieving metadata, and using the ForEach and Switch activities to handle different scenarios. We also learned how to validate and run the pipeline, ensuring that the data ingestion process is successful and that the data is correctly organized in the lakehouse.
