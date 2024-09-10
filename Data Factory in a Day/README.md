@@ -14,12 +14,9 @@ This tutorial assumes that you have a working knowledge of accessing content and
 The content in this lab requires enablement of select tenant settings and licensing assignment within the Microsoft Fabric service. Please ensure that you have the following prerequisites before proceeding:
 - **Microsoft Fabric enabled in your tenant:** To enable Microsoft Fabric, [follow the instructions provided in this link](https://learn.microsoft.com/fabric/admin/fabric-switch).
 
-- **Premium capacity subscription:** You need a premium capacity subscription to use Microsoft Fabric. 
+- **Premium capacity subscription:** You need a premium capacity subscription to use Microsoft Fabric.
     - You can either use a [paid capacity (P or F SKUs)](https://learn.microsoft.com/power-bi/enterprise/service-premium-what-is) or a [Microsoft Fabric trial (preview)](https://learn.microsoft.com/fabric/get-started/fabric-trial).
-
     - **Note:** Premium Per User is not a supported license type to create Microsoft Fabric items.
-
-For additional system requirements or to create a M365 developer trial tenant, see [additional prerequisites for the lab](./Prerequisites.md).
 
 ## Presentation material
 
@@ -27,7 +24,7 @@ To view or download the latest PowerPoint presentation of the lab material, visi
 
 ## Getting started
 
-In this lab, you will learn how to create a project task flow and understand the basics of Data Factory experiences. This tutorial is designed to provide you with hands-on experience in building and managing data workflows using Microsoft Fabric. By the end of this lab, you will have a foundational understanding of key concepts and tools that are essential for efficient data management and transformation.
+In this lab, you will learn how to create a project task flow and understand the basics of Data Factory experiences. This tutorial is designed to provide you with hands-on experience in building and managing your solution using Microsoft Fabric. By the end of this lab, you will have a foundational understanding of key concepts and tools that are essential for efficient data management and transformation.
 
 1. First, you will learn how to create a medallion architecture [task flow](https://learn.microsoft.com/fabric/get-started/task-flow-overview) within a workspace. The medallion architecture is a design pattern that organizes data into different layers, such as bronze, silver, and gold, to improve data quality and accessibility. This task flow will help you understand how to structure and manage your data effectively.
 
@@ -38,6 +35,8 @@ In this lab, you will learn how to create a project task flow and understand the
 To start the lab, visit [Getting started](./GettingStarted.md)
 
 ## Data pipeline
+
+In this lab you'll learn how to orchestrate your data movement, including creating dynamic expressions and conditional paths using Data Factory experiences.
 
 1. Creating a dynamic pipeline using variables to manage and copy data efficiently through reusable components.
 1. Setting up conditional paths to handle different scenarios and ensure logical flow within your pipeline.

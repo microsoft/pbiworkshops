@@ -165,15 +165,15 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
     ![File directory variable](./Media/filedirectory-variable.png)
 
-1. With the Get metadata activity still selected, navigate to the **Settings** tab. Add new Field list values by selecting **New** twice. Within each of the drop-downs, configure the values as **Child items** and **Item name**. This ensures that the metadata activity retrieves information about the child items and their names within the specified directory.
+1. With the Get metadata activity still selected, navigate to the **Settings** tab. Add new Field list values by selecting **New** twice. Within each of the drop-downs, configure the values as **Child items**. This ensures that the metadata activity retrieves information about the child items and their names within the specified directory.
 
     ![Get metadata field list](./Media/get-metadata-field-list.png)
 
-1. Next, navigate to the General tab with the Get metadata activity selected. Update the **Name** field with the text "**Get child items in folder**". This step helps in identifying and managing the activity within your pipeline, making it easier to understand its purpose and functionality.
+1. Next, navigate to the General tab with the Get metadata activity selected. Update the **Name** field with the text "**Get items in folder**". This step helps in identifying and managing the activity within your pipeline, making it easier to understand its purpose and functionality.
 
     ![Get child items in folder name](./Media/get-child-items-in-folder.png)
 
-1. Create a conditional path by dragging and dropping the **On completion** option between the **Set file directory** activity and the **Get child items in folder** activity. This step establishes a logical flow in your pipeline, ensuring that the metadata retrieval occurs only after the file directory has been set. 
+1. Create a conditional path by dragging and dropping the **On completion** option between the **Set file directory** activity and the **Get items in folder** activity. This step establishes a logical flow in your pipeline, ensuring that the metadata retrieval occurs only after the file directory has been set. 
 
     Once complete, select **Validate** on the **Home** tab to ensure there are no errors within the pipeline. After validation, select **Run** to start the pipeline.
 
@@ -184,6 +184,8 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 1. Deselect any previously selected activities within the authoring canvas and navigate to the **Output** view. This view allows you to monitor the current status of your pipeline both during and after its run. In this example, both the Pipeline status and the Activity status should show a **Succeeded** status. This indicates that everything ran as intended, confirming that your data ingestion process was successful.
 
     From the **Get child items in folder** activity, select the last column called **Output** to review the contents of the activity. This step allows you to verify that the filenames from your directory have been correctly retrieved and included in the output.
+
+    Of note, the output contains two keys one for **name** and another for **type** which we will access in the next portion of the tutorial.
 
     ![Output window file names](./Media/output-window-filenames.png)
 
@@ -197,7 +199,7 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
     ![Output window file names](./Media/foreach-conditional-path-name.png)
 
-1. With the For each file activity still active, navigate to the **Settings** tab. Check the option for **Sequential** order and then select the Items text input box. This will display the **Add dynamic content [Alt+Shift+D]** property. Select this text to open the pipeline expression builder. The sequential order ensures that the items are processed one after another, maintaining the order of execution.
+1. With the For each file activity still active, navigate to the **Settings** tab. Select the **Items** text input box. This will display the **Add dynamic content [Alt+Shift+D]** property. Select this text to open the pipeline expression builder. The sequential order ensures that the items are processed one after another, maintaining the order of execution.
 
     ![Output item name](./Media/foreach-settings.png)
 
@@ -205,121 +207,87 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
     ![Output item name](./Media/get-child-items-output.png)
 
-1. With all the activities deselected on your canvas, navigate to the project's **Variables** tab at the bottom. Select **New** and add two new variables from the table below. This step allows you to define additional variables that will be used in your pipeline.
+1. Selct the add option on the For each activity and then select **Copy data**. This step will allow us to repeatedly execute the copy data activity for each item in the array.
 
-    | Name | Type |
-    | :-- | :-- |
-    | fileName | String |
-    | tableName | String |
-
-    ![Add two new variables](./Media/two-new-variables-created.png)
-
-1. Select the variable activities in the For each file activity and update their configurations according to the table below. For the **Value** option, select the text input box, which will display the **Add dynamic content [Alt+Shift+D]** property. Select this text to open the pipeline expression builder.
-
-    **Set variable1**
-
-    | Tab | Setting | Value  |
-    | :-- | :-- | :-- |
-    | General | Name | Set fileName |
-    | Settings | Name | fileName |
-    | Settings | Value | ``@item().name`` |
-
-    **Set variable1**
-
-    | Tab | Setting | Value  |
-    | :-- | :-- | :-- |
-    | General | Name | Set tableName |
-    | Settings | Name | tableName |
-    | Settings | Value | ``@split(variables('fileName'),'.')[0]`` |
-
-    ![Set variable properties](./Media/set-variable-properties.png)
+    ![For each copy data](./Media/for-each-copy-data.png)
 
 1. Select the **Edit** option on the For each activity to drill into the nested authoring canvas. This step allows you to configure the activities that will be executed for each item in the collection.
 
     ![Nested authoring edit](./Media/foreach-nested-edit.png)
 
-1. From the **Activities** tab, select the ellipses (**...**) and then the **Switch** activity to add this to the authoring canvas. The Switch activity allows you to define different execution paths based on the value of an expression, providing flexibility in handling different scenarios.
+1. Navigate to the General tab with the Copy data activity selected. Update the **Name** field with the text "**Copy tables**". This step helps in identifying and managing the activity within your pipeline, making it easier to understand its purpose and functionality.
 
-    ![Add switch activity](./Media/more-activities-switch.png)
+    ![Update copy data activity name](./Media/for-each-copy-data-name.png)
 
-1. With the **Switch** activity selected, navigate to the **Activities** tab and select the **Expression** text input box. This will display the **Add dynamic content [Alt+Shift+D]** property. Select this text to open the pipeline expression builder.
-
-    Copy and paste the code block below into the expression input box. Press **Ok** when complete.
-
-    ```text
-    @if(
-        contains(variables('fileName'), 'Dim'),
-        'Dim',
-        'Fact'
-    )
-    ```
-
-    ![Switch expression builder](./Media/switch-expression-builder.png)
-
-1. Still within the **Activities** tab, select the **Add case** option to add two cases: one for **Dim** and another for **Fact**. These cases will handle different scenarios based on the contents of the fileName variable, distinguishing between dimension tables and fact tables.
-
-    ![Add switch ase](./Media/switch-add-case.png)
-
-1. Navigate to the **General** tab with the Switch activity selected. Update the **Name** field with the text **Switch by Prefix**.
-
-    ![Switch by prefix name](./Media/switch-name.png)
-
-1. Select the **Add activity** option within the Dim switch condition and add the **Copy data** activity. This step defines the actions to be taken when the fileName variable indicates a dimension table.
-
-    ![Dim edit](./Media/switch-dim-copy.png)
-
-1. With the **Copy data** activity selected within the Dim switch condition, configure the following options in the **Source** tab:
+1. With the **Copy data** activity still selected, configure the following options in the **Source** tab. Once complete select the **Directory** text input box. This will display the **Add dynamic content [Alt+Shift+D]** property. Select this text to open the pipeline expression builder. :
 
     | Property | Value |
     | :-- | :-- |
     | Source | Select the previously configured **b_IADLake** lakehouse. |
     | Root folder | Files |
     | File path | File path |
-    | Directory | Select the variable **fileDirectory** within the expression builder's Variables section. |
-    | File name | Select the variable **fileName** within the expression builder's Variables section. |
     | File format | Parquet |
 
-    ![Update variable selection](./Media/variables-selection.png)
+    ![For each settings](./Media/for-each-source-settings.png)
 
-    The final configuration will match the image below.
+1. Select the variable **fileDirectory** within the expression builder's Variables section and **OK** to continue.
 
-    ![Copy data configuraiton](./Media/configure-copy-dim.png)
+    ![For each settings](./Media/for-each-variable-filedirectory.png)
 
-1. With the **Copy data** activity selected within the Dim switch condition, configure the following options in the **Destination** tab:
+1. Select the **File name** text input box. This will display the **Add dynamic content [Alt+Shift+D]** property. Select this text to open the pipeline expression builder.
+
+    ![For each file name](./Media/for-each-file-name.png)
+
+1. Select the item **For each file** within the expression builder's ForEach iterator section. Within the expression builder, add the suffix ".name" to access the name property of the current items array and then **OK** to continue once complete.
+
+    Copy and paste the code block below into the expression input box.
+
+    ```text
+    @item().name
+    ```
+
+    ![For each settings](./Media/for-each-item-name.png)
+
+1. With the **Copy data** activity selected, configure the following options in the **Destination** tab. Once complete select the **Table** text input box. This will display the **Add dynamic content [Alt+Shift+D]** property. Select this text to open the pipeline expression builder.
+
     | Property | Value |
     | :-- | :-- |
     | Source | Select the previously configured **s_IADLake** lakehouse. |
     | Destination | Tables |
-    | Table name | Select the variable **tableName** within the expression builder's Variables section. |
-    | Table action | Overwrite |
 
-    ![Destination configuration](./Media/destination-table-name.png)
+    ![Destination configuration](./Media/for-each-destination-settings.png)
 
-1. Navigate to the General tab with the Copy data activity selected. Update the **Name** with the text **Copy dimensions**.
+1. Within the expression builder, we'll use the split function from the string functions group to split each item name based on the period delimiter "**.**" and then select the first item from the created array. Once complete select **OK** to continue.
 
-    ![Update name of copy data](./Media/name-copy-dimensions.png)
+    Copy and paste the code block below into the expression input box.
 
-1. Right-click the **Copy dimensions** activity and select the **Copy** option. Using the breadcrumb trail, select the **For each file** to return to the parent canvas. This step allows you to duplicate existing activities.
+    ```text
+    @split(item().name, '.')[0]
+    ```
 
-    ![Copy copy dimensions](./Media/copy-copy-dimensions.png)
+    As an example DimCustomer.parquet would become ['DimCustomer','Parquet'] with two items in the returned array. To select the first item we use a zero based index to select the value DimCustomer.
 
-1. From the Switch activity, select the **Edit** option to go into the authoring canvas. This step allows you to configure the activities within the nested switch conditions.
+    ![Table name splitter](./Media/for-each-table-name-split.png)
 
-    ![Edit fact condition](./Media/edit-fact-condition.png)
+1. Next, with the Copy data activity still selected and the Source tab displayed, expand the **Advanced** section. Hover above either of the **Table action** values to display the **Add dynamic content [Alt+Shift+D]** property. Select this text to open the pipeline expression builder.
 
-1. Within the **Fact** condition, right-click the authoring canvas and select **Paste**. This step adds the previously copied Copy dimensions activity to the Fact condition authoring canvas.
+    ![Table action](./Media/for-each-copy-table-action.png)
 
-    ![Paste activity on authoring canvas](./Media/paste-authoring-canvas.png)
+1. Within the expression builder, we'll use the if condition from the logical functions group and the startswith function from the string functions group to determine if the string starts with the prefix of **Dim** for our dimension tables. If true, we'll set the value to **Overwrite**, if false **Append**. Once complete select **OK** to continue.
 
-1. Navigate to the General tab with the Copy data activity selected. Update the **Name** with the text **Copy facts**.
+    Copy and paste the code block below into the expression input box.
 
-    ![Update copy facts name](./Media/paste-copy-facts.png)
+    ```text
+    @if(
+        startswith(item().name, 'Dim'),
+        'Overwrite',
+        'Append'
+    )
+    ```
 
-1. Select the **Destinations** tab and update the following **Table action** to the **Append** option. This ensures that the data is appended to the existing table, rather than overwriting it. Then, select the **For each** option from the breadcrumb trail to return to the top level of your pipeline.
+    ![Table action logical expression](./Media/for-each-table-action.png)
 
-    ![Append table action](./Media/append-table-action.png)
-
-1. Set the conditional path activity to **On success** from the **Set tableName** variable activity to the **Switch by Prefix activity**. Then, select the **Main canvas** option from the breadcrumb trail to return to the top level of your pipeline.
+1. Select the **Main canvas** option from the breadcrumb trail to return to the top level of your pipeline.
 
     ![Switch conditional path](./Media/foreach-condition-switch.png)
 
@@ -337,7 +305,7 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
     ![Validate save and run the pipeline](./Media/final-pipeline-monitor.png)
 
-### Attach data pipleine to task flow
+### Attach data pipeline to task flow
 
 1. Return to the workspace by selecting the workspace name on the left side-rail. This step ensures that you can continue working on other aspects of your project while the lakehouse is being set up.
 
