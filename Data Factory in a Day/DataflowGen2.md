@@ -56,8 +56,6 @@
 
 1. Navigate to the far right of the **DimCustomer** table and select the joined **DimGeography** table column's top right corner to expand the table. From the available column selections, deselect **GeographyKey** since this column is what we used to merge on and already exists in the dataset. Select **OK** to continue.
 
-1. Navigate to the far right fo the **DimCustomer** table and select the joined **DimGeography** table column's top right corner to expand the table, from the avaialble column selections deselect **GeographyKey** since this column is what we used to merge on and already exists in the dataset before selecting **OK** to continue.
-
     ![Expand DimGeography](./Media/merge-dimcustomer-expand.png)
 
 1. On the right-hand side, you can review the Applied steps list, which indicates that our queries are successfully folding back to the lakehouse's SQL endpoint. The options View data source query and View query plan also exist to review the SQL generated or the execution plan for the query. This step allows you to verify that the data transformations are being applied correctly and efficiently, ensuring the integrity and performance of your data pipeline.
