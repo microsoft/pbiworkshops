@@ -1,17 +1,18 @@
 # Data Visualization
 
-✏️ Lab scenario
 ---
 
-For this portion of the lab, we've been tasked with creating a Power BI report to unlock new insights for our users. The interactivity of our report should be both **functional** and **fast** to ensure a pleasant viewing experience for our users, while adhering to the professional look and brand standards of our company.
+For this portion of the lab, our task is to create a Power BI report that unlocks new insights for our users. The interactivity of our report should be both functional and fast to ensure a pleasant viewing experience, while also adhering to the professional look and brand standards of our company.
 
-# Report design
+## Report design
 
-The content throughout this lab utilizes the proven design processes created by leading report design experts. These processes encompasses the phases of understanding the report users and their requirements, exploring pleasing report designs, and developing reports all the way into production.
+Throughout this lab, we will utilize proven design processes created by leading report design experts. These processes encompass understanding the report users and their requirements, exploring aesthetically pleasing report designs, and developing reports all the way into production.
 
 Learn more about [Designing effective Power BI reports](https://docs.microsoft.com/users/heyrob/collections/o4dhk4z8xpr8q) by visiting Microsoft Learn
 
-## Enable preview features
+### (Optional) Enable preview features
+
+1. Start by launching Power BI Desktop.
 
 1. Select the **Settings** icon in the bottom right corner of Power BI Desktop.
 
@@ -26,13 +27,11 @@ Learn more about [Designing effective Power BI reports](https://docs.microsoft.c
 
 ---
 
-## Live Connection
+### Live Connection
 
-For enterprise scale deployments, it's recommended to separate dataset development, and the development of reports and dashboards.
+For enterprise-scale deployments, it's recommended to separate semantic model development from report and dashboard development. This approach allows different creators to work independently on modeling and visualizations, ensuring consistency and efficiency. 
 
-This approach should start from Power BI Desktop, by creating a separate PBIX file for datasets and reports. For example, you can create a dataset PBIX file and uploaded it to the development stage. Later, your report authors can create a new PBIX only for the report, and connect it to the published dataset using a live connection. This technique allows different creators to separately work on modeling and visualizations.
-
-With shared datasets, you can also use this method across workspaces.
+By creating separate PBIX files for semantic models and reports, and using live connections, you can streamline the development process and facilitate collaboration across workspaces.
 
 Learn more about [connecting to Power BI datasets](https://learn.microsoft.com/power-bi/connect-data/desktop-report-lifecycle-datasets).
 
@@ -43,15 +42,15 @@ Learn more about [connecting to Power BI datasets](https://learn.microsoft.com/p
 
     ![New file](./Media/NewFile.png)
 
-1. From the **Home** tab, we'll select the **OneLake data hub** option and then **Power BI datasets** to create a new live connection to an existing dataset in the cloud.
+1. From the **Home** tab, we'll select the **OneLake data hub** option and then **Power BI semantic models** to create a new live connection to an existing semantic model in the cloud.
 
     ![Data hub](./Media/DataHub.png)
 
-1. From the **OneLake data hub** window, we'll select the published Direct Lake dataset from the **Data modeling** lab and then the **Connect** button to create a new **Live connection** to our dataset.
+1. From the **OneLake data hub** window, we'll select the published Direct Lake semantic model from the **Data modeling** lab and then the **Connect** button to create a new **Live connection** to our semantic model.
 
     ![Data hub connect](./Media/DataHubConnect.png)
 
-1. In the bottom right corner of our current file, the text **Connected live to the Power BI dataset** is now present, including the name of the dataset and the workspace it's located within.
+1. In the bottom right corner of our current file, the text **Connected live to the Power BI dataset** is now present, including the name of the semantic model and the workspace it's located within.
 
     ![Connected live](./Media/ConnectedLive.png)
 
@@ -147,8 +146,6 @@ Learn more about [themeable backgrounds](https://alluringbi.com/2020/05/05/theme
 
 ## Visualizations
 
-Learn more about [data visualizations]()
-
 ---
 
 ### Consolidating visuals
@@ -211,7 +208,7 @@ As more requirements continue to be added to our report design, we want to be co
     ![Column headers](./Media/label-settings.png)
 
     <i>If the text color isn't within your default selection, select <b>More colors...</b> to enter the code manually.</i>
-    
+
     ![Text color](./Media/TextColor.png)
 
 1. We'll now navigate to our **Optimize** tab and select the **Performance analyzer** option. Within the **Performance analyzer** pane we'll select **Start recording** and then **Refresh visuals** where we can review the results for our **Card (new)**. 

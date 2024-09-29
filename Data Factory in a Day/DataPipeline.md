@@ -155,9 +155,11 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
     ![Set variable name](./Media/set-file-directory-name.png)
 
-1. Select the **Activities** tab and then the **Get metadata** activity to add this to your canvas.
+1. Navigate to the **Activities** tab and select the **Get metadata** activity to add it to your canvas. Make sure it is your active selection.
 
-    Within the **Settings** options, select the **Files** option and then the **Directory** file path text input box. This will display the **Add dynamic content [Alt+Shift+D]** property. Select this text to open the pipeline expression builder.
+    Next, within the **Settings** options, set the **Connection** to **b_IADLake** from the available connection options.
+
+    Choose the **Files** option and then click on the **Directory** file path text input box. This will display the Add dynamic content [Alt+Shift+D] property. Click on this text to open the pipeline expression builder.
 
     ![Add get metadata activity](./Media/add-get-metadata-activity.png)
 
@@ -171,7 +173,7 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
 1. Next, navigate to the General tab with the Get metadata activity selected. Update the **Name** field with the text "**Get items in folder**". This step helps in identifying and managing the activity within your pipeline, making it easier to understand its purpose and functionality.
 
-    ![Get child items in folder name](./Media/get-child-items-in-folder.png)
+    ![Get items in folder name](./Media/get-child-items-in-folder.png)
 
 1. Create a conditional path by dragging and dropping the **On completion** option between the **Set file directory** activity and the **Get items in folder** activity. This step establishes a logical flow in your pipeline, ensuring that the metadata retrieval occurs only after the file directory has been set. 
 
@@ -183,7 +185,7 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
 1. Deselect any previously selected activities within the authoring canvas and navigate to the **Output** view. This view allows you to monitor the current status of your pipeline both during and after its run. In this example, both the Pipeline status and the Activity status should show a **Succeeded** status. This indicates that everything ran as intended, confirming that your data ingestion process was successful.
 
-    From the **Get child items in folder** activity, select the last column called **Output** to review the contents of the activity. This step allows you to verify that the filenames from your directory have been correctly retrieved and included in the output.
+    From the **Get items in folder** activity, select the last column called **Output** to review the contents of the activity. This step allows you to verify that the filenames from your directory have been correctly retrieved and included in the output.
 
     Of note, the output contains two keys one for **name** and another for **type** which we will access in the next portion of the tutorial.
 
@@ -195,7 +197,7 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
     With the **ForEach** activity selected, navigate to the General tab and update the **Name** field with the text **For each file**. Naming your activities helps in identifying their purpose and makes it easier to manage your pipeline.
 
-    Next, create a conditional path by dragging and dropping the **On success** option between the **Get child items in folder activity** and the **For each file activity**. This step establishes a logical flow in your pipeline, ensuring that the ForEach retrieval occurs only after the file directory has been successfully completed.
+    Next, create a conditional path by dragging and dropping the **On success** option between the **Get items in folder activity** and the **For each file activity**. This step establishes a logical flow in your pipeline, ensuring that the ForEach retrieval occurs only after the file directory has been successfully completed.
 
     ![Output window file names](./Media/foreach-conditional-path-name.png)
 
@@ -203,7 +205,7 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
     ![Output item name](./Media/foreach-settings.png)
 
-1. Within the Pipeline expression builder window, select the **Activity outputs** section. Then, choose the **Get child items in folder** output of **childItems**. The full option title is **Get child items in folder childItems**. This step ensures that the ForEach activity iterates over the child items retrieved from the specified directory.
+1. Within the Pipeline expression builder window, select the **Activity outputs** section. Then, choose the **Get items in folder** output of **childItems**. The full option title is **Get items in folder childItems**. This step ensures that the ForEach activity iterates over the child items retrieved from the specified directory.
 
     ![Output item name](./Media/get-child-items-output.png)
 

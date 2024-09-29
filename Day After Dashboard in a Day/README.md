@@ -26,13 +26,23 @@ For additional system requirements or to create a M365 developer trial tenant, s
 
 To view or download the latest PowerPoint presentation of the lab material, visit the following link: [Day After Dashboard in a Day with Microsoft Fabric](https://github.com/microsoft/pbiworkshops/raw/main/Day%20After%20Dashboard%20in%20a%20Day/Day%20After%20Dashboard%20in%20a%20Day.pptx).
 
+## Getting started
+
+In this lab, you will learn how to create a project task flow and understand the basics of navigating Microsoft Fabric experiences. This tutorial is designed to provide you with hands-on experience in building and managing the foundation of your solution using Microsoft Fabric.
+
+1. First, you will learn how to create a basic data analytics [task flow](https://learn.microsoft.com/fabric/get-started/task-flow-overview) within a workspace. This pattern enables you to gather batch data, process it, build a semantic model, and ultimately generate quick insights through visualizations.
+
+1. Next, you will create a [lakehouse](https://learn.microsoft.com/fabric/data-engineering/lakehouse-overview) item for data storage. A lakehouse combines the best features of data lakes and data warehouses, providing a unified platform for storing and analyzing large volumes of data. This step is crucial for setting up a scalable and efficient data solution that supports various data processing and analytics tasks.
+
+To start the lab, visit [Getting started](./GettingStarted.md)
+
 ## Data Preparation
 
-In this lab you'll learn about how to shape and orchestrate your data using Data Factory experiences.
+In this lab, you'll learn how to orchestrate your data movement and shape your data using Data Factory experiences.
 
-1. How to create a [Dataflow Gen2](https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-introduction-self-service) to prepare and load data using Power Query Online.
-1. Understanding the [storage and compute staging](https://blog.fabric.microsoft.com/blog/data-factory-spotlight-dataflows-gen2?ft=Data-factory:category) architecture for large scale data transformations.
-1. How to use [Pipelines](https://learn.microsoft.com/fabric/data-factory/activity-overview) to orchestrate and control your data movement.
+1. Create a [data pipeline](https://learn.microsoft.com/fabric/data-factory/activity-overview) to efficiently copy raw data into the lakehouse files section and orchestrate your solution's activities.
+1. Use [dataflow gen2]((https://docs.microsoft.com/power-bi/transform-model/dataflows/dataflows-introduction-self-service)) to prepare and load your data into Delta tables in the lakehouse optimized for analysis.
+1. Understanding the [storage and compute staging](https://blog.fabric.microsoft.com/blog/data-factory-spotlight-dataflows-gen2?ft=Data-factory:category) architecture for large-scale data transformations with dataflow gen2.
 
 To start the lab, visit [Data Preparation](./DataPreparation.md)
 
