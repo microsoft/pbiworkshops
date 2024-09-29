@@ -327,5 +327,5 @@ In this lab, we explored the process of creating dynamic data pipelines using Mi
 
 By moving data across the bronze and silver data lakehouse layers, we demonstrated how to manage and optimize data workflows. The use of delta parquet tables, optimized with v-Order, highlighted the importance of efficient data storage and retrieval for analytical workloads. These optimizations enhance performance, scalability, and overall productivity, enabling more effective data analysis and decision-making.
 
-- Continue to the [Dataflow Gen2](./DataPipeline.md) lab
+- Continue to the [Dataflow Gen2](./DataflowGen2.md) lab
 - Return to the [Data Factory in a Day](./README.md) homepage

@@ -20,7 +20,7 @@ The content in this lab requires enablement of select tenant settings and licens
 
 ## Presentation material
 
-To view or download the latest PowerPoint presentation of the lab material, visit the following link: [Data Factory in a Day with Microsoft Fabric]().
+To view or download the latest PowerPoint presentation of the lab material, visit the following link: [Data Factory in a Day with Microsoft Fabric](https://github.com/microsoft/pbiworkshops/blob/main/Data%20Factory%20in%20a%20Day/Data%20Factory%20in%20a%20Day%20with%20Microsoft%20Fabric.pdf).
 
 ## Getting started
 
