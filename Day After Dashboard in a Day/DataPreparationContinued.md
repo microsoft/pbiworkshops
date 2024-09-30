@@ -98,8 +98,6 @@
 
 1. Next, select the **DimProduct** table and from the **Home** tab, navigate to the **Merge queries** group and select **Merge queries**.
 
-1. Select the **DimProduct** table and from the **Home** tab navigate to the **Merge queries** group and select **Merge queries**.
-
     ![Merge dimproduct](./Media/merge-dimproduct.png)
 
 1. From the Merge query window, set the **Right table for merge** to **DimProductSubcategory**. In the top right corner, select the lightbulb which has detected a possible column match. In this example, both tables contain a column titled **ProductSubcategoryKey**. Select this option to set the columns to be merged on. For the join kind, select **Inner** and then **OK** to proceed.

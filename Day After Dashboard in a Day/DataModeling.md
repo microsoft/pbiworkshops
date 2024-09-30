@@ -371,11 +371,13 @@ By default, OneLake automatically updates Direct Lake semantic models with any d
 
     ![Select workspace](./Media/select-workspace.png)
 
-attach-semantic-model-to-task
+1. Within the workspace, our semantic model is not yet attached to a task. Select the paperclip on the **Curated data** task.
 
-assign-model-to-curated-item
+    ![Attach semantic model to task](./Media/attach-semantic-model-to-task.png)
 
+1. Within the Assign item window select the checkbox next to **SalesDirectLakeModel** and then the **Select** option to complete.
 
+    ![Attach semantic model to task](./Media/assign-model-to-curated-item.png)
 
 1. Select the ellipses **(...)** next to **SalesDirectLakeModel** and click **Settings**.
 
