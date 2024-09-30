@@ -29,7 +29,7 @@ With the SQL endpoint, you can run ad-hoc SQL queries on your tables and visuali
     > [!NOTE]
     > Your queries will be saved in the My queries group. If you want to share these queries with collaborators in your workspace, right-click them and select the option Move to shared queries to move them to the Shared queries section.
 
-1. You can now drag and drop fields from your ad-hoc query and design an exploration with Power BI visuals. For example, add **CityName** to the x-axis and **YearlyIncome** to the y-axis. Then, select the caret next to **YearlyIncome** to change the **Summarization** to **Average** to answer the question, "What is the average yearly income by city?" (based ont the TOP 100 results from our query).
+1. You can now drag and drop fields from your ad-hoc query and design an exploration with Power BI visuals. For example, add **CityName** to the y-axis and **YearlyIncome** to the x-axis. Then, select the caret next to **YearlyIncome** to change the **Summarization** to **Average** to answer the question, "What is the average yearly income by city?" (based ont the TOP 100 results from our query).
 
     Once complete, select the **X** in the top right to exit.
 
