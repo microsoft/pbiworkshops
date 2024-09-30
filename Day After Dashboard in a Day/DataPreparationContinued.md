@@ -84,8 +84,6 @@
 
     ![Merge dim customer window](./Media/merge-dimcustomer-window.png)
 
-1. Navigate to the far right of the **DimCustomer** table and select the joined **DimGeography** table column's top right corner to expand the table. From the available column selections, deselect **GeographyKey** since this column is what we used to merge on and already exists in the dataset. Select **OK** to continue.
-
 1. Navigate to the far right fo the **DimCustomer** table and select the joined **DimGeography** table column's top right corner to expand the table, from the avaialble column selections deselect **GeographyKey** since this column is what we used to merge on and already exists in the dataset before selecting **OK** to continue.
 
     ![Expand DimGeography](./Media/merge-dimcustomer-expand.png)
