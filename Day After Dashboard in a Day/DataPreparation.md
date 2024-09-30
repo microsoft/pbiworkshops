@@ -30,7 +30,7 @@ By the end of this lab, you will have a solid understanding of how to efficientl
 
     ![Copy data connection more option](./Media/source-connection-more.png)
 
-1. From the Get data navigator, select **Add** from the left side-rail and then choose the **Http** connector. The Http connector allows you to connect to web-based data sources, providing flexibility in accessing data from various online resources.
+1. From the Get data navigator, select **New** from the left side-rail and then choose the **Http** connector. The Http connector allows you to connect to web-based data sources, providing flexibility in accessing data from various online resources.
 
     ![Get data http](./Media/get-data-http.png)
 
@@ -76,7 +76,7 @@ By the end of this lab, you will have a solid understanding of how to efficientl
 
     ![Destination folder](./Media/expression-builder-date-and-folder.png)
 
-1. With the Copy data activity and Destination settings still selected, select the drop-down for the **Copy behavior** and then choose the **Preserve hierarchy** option. This option maintains the original file names as they are within the zip file, ensuring that the file structure is preserved during the copy process.
+1. With the Copy data activity and Destination settings still selected, expand the **Advanced** section and in the drop-down for the **Copy behavior** choose the **Preserve hierarchy** option. This option maintains the original file names as they are within the zip file, ensuring that the file structure is preserved during the copy process.
 
     ![Destination folder](./Media/copy-behavior-preserve.png)
 
@@ -171,9 +171,9 @@ By the end of this lab, you will have a solid understanding of how to efficientl
 
     ![Get child items in folder name](./Media/get-child-items-in-folder.png)
 
-1. Create a conditional path by dragging and dropping the **On completion** option between the **Get and unzip files** activity and the **Get items in folder** activity. This step establishes a logical flow in your pipeline, ensuring that the metadata retrieval occurs only after the file directory has been set.
+1. Create a conditional path by dragging and dropping the **On success** option between the **Get and unzip files** activity and the **Get items in folder** activity. This step establishes a logical flow in your pipeline, ensuring that the metadata retrieval occurs only after the file directory has been set.
 
-    **Note:** Our activity Get and unzip files is currently deactivated but its activity state is marked as **On success** during testing and building. Before releasing to production we will want to set the property back to **Activate**.
+    **Note:** Our activity Get and unzip files is currently deactivated but its activity state is marked as **On success** during testing and building. Before releasing to production you would want to reset the property back to **Activate**.
 
     ![Conditional path on success](./Media/conditional-path-on-success.png)
 
@@ -183,9 +183,9 @@ By the end of this lab, you will have a solid understanding of how to efficientl
 
     ![Validate and run](./Media/validate-and-run.png)
 
-1. Deselect any previously selected activities within the authoring canvas and navigate to the **Output** view. This view allows you to monitor the current status of your pipeline both during and after its run. In this example, both the Pipeline status and the individual activitiy statuses should show a **Succeeded** status. This indicates that everything ran as intended, confirming that your data ingestion process was successful.
+1. Deselect any previously selected activities within the authoring canvas and navigate to the **Output** view. This view allows you to monitor the current status of your pipeline both during and after its run. In this example, both the Pipeline status and the individual activity statuses should show a **Succeeded** status. This indicates that everything ran as intended, confirming that your data ingestion process was successful.
 
-    From the **Get child items in folder** activity, select the last column called **Output** to review the contents of the activity. This step allows you to verify that the filenames from your directory have been correctly retrieved and included in the output.
+    From the **Get items in folder** activity, select the last column called **Output** to review the contents of the activity. This step allows you to verify that the filenames from your directory have been correctly retrieved and included in the output.
 
     Of note, the output contains two keys one for **name** and another for **type** which we will access in the next portion of the tutorial.
 
@@ -267,9 +267,9 @@ By the end of this lab, you will have a solid understanding of how to efficientl
     @split(item().name, '.')[0]
     ```
 
-    As an example DimCustomer.parquet would become ['DimCustomer','Parquet'] with two items in the returned array. To select the first item we use a zero based index to select the value DimCustomer.
-
     ![Table name splitter](./Media/for-each-table-name-split.png)
+
+    **Note:** As an example DimCustomer.parquet would become ['DimCustomer','Parquet'] with two items in the returned array. To select the first item we use a zero based index to select the value DimCustomer.
 
 1. Next, with the Copy data activity still selected and the Source tab displayed, expand the **Advanced** section. Hover above either of the **Table action** values to display the **Add dynamic content [Alt+Shift+D]** property. Select this text to open the pipeline expression builder.
 
