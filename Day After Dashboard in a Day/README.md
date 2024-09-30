@@ -24,7 +24,7 @@ For additional system requirements or to create a M365 developer trial tenant, s
 
 ## Presentation material
 
-To view or download the latest PowerPoint presentation of the lab material, visit the following link: [Day After Dashboard in a Day with Microsoft Fabric](https://github.com/microsoft/pbiworkshops/raw/main/Day%20After%20Dashboard%20in%20a%20Day/Day%20After%20Dashboard%20in%20a%20Day.pptx).
+To view or download the latest presentation of the lab material, visit the following link: [Day After Dashboard in a Day with Microsoft Fabric](https://github.com/microsoft/pbiworkshops/raw/main/Day%20After%20Dashboard%20in%20a%20Day/Day%20After%20Dashboard%20in%20a%20Day.pdf).
 
 ## Getting started
 
