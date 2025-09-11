@@ -49,7 +49,7 @@ We'll begin by navigating to a new, empty, or non-production workspace to check 
 
     ![Workspace selection](./Media/return-to-workspace.png)
 
-1. Within the workspace, you will notice that three items have now been created and are associated with your lakehouse. These items include the lakehouse (storage), SQL analytics endpoint, and a default Semantic model. As you continue to add more items to your projects and select different tasks, the workspace item view list will filter to show only those components associated with each task. This filtering helps you stay organized and focused on the relevant parts of your project.
+1. Within the workspace, you will notice that two items have now been created and are associated with your lakehouse. These items include the lakehouse (storage) and the SQL analytics endpoint. As you continue to add more items to your projects and select different tasks, the workspace item view list will filter to show only those components associated with each task. This filtering helps you stay organized and focused on the relevant parts of your project.
 
     To proceed, select **New item** from the **High-volume data ingest** task. This task is crucial for handling large volumes of data efficiently, ensuring that your data ingestion processes are scalable and robust.
 
