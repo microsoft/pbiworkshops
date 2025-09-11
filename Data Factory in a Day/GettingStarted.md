@@ -53,7 +53,7 @@ We'll begin by navigating to a new, empty, or non-production workspace to check 
 
     To proceed, select **New item** from the **High-volume data ingest** task. This task is crucial for handling large volumes of data efficiently, ensuring that your data ingestion processes are scalable and robust.
 
-    ![Low volume new item](./Media/high-volume-new-item.png)
+    ![Low volume new item](./Media/high-volume-new-item_.png)
 
 1. Within the Create an item window, the available options within Microsoft Fabric have been filtered down to **Recommended items** only again. Select the **Data pipeline** item which is essential for automating the movement and transformation of data from various sources to destinations.
 
