@@ -24,7 +24,7 @@ Throughout the lab, you will validate and run the pipeline, ensuring that the da
 
     ![Copy data from watermark](./Media/pipeline-activity-copy-data.png)
 
-1. With the **Copy data** activity selected, navigate to the **Source** tab. Within the **Connection** drop-down menu, select the **More** option to launch the Get data navigator. This navigator provides a comprehensive interface for connecting to various data sources, ensuring that you can easily integrate different data streams into your pipeline.
+1. With the **Copy data** activity selected, navigate to the **Source** tab. Within the **Connection** drop-down menu, select the **Browse all** option to launch the Get data navigator. This navigator provides a comprehensive interface for connecting to various data sources, ensuring that you can easily integrate different data streams into your pipeline.
 
     ![Copy data connection more option](./Media/source-connection-more.png)
 
