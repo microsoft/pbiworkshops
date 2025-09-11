@@ -133,6 +133,8 @@
 
 ### Outputting data to the warehouse destination
 
+1. From the **Home tab**, select **Default data destination** and then schoose the **Remove** option.
+   
 1. Select the **FactOnlineSales** query and from the **Home** tab, select **Add data destination** and then choose the **Warehouse** option.
 
     ![Add warehouse destination](./Media/add-warehouse-destination.png)
